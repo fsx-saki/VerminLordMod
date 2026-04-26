@@ -1,0 +1,52 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Rider / .NET IDE
+.idea/
+*.sln.iml
+
+# Build results
+bin/
+obj/
+[Bb]in/
+[Oo]bj/
+
+# NuGet
+*.nupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+*.nuget.props
+*.nuget.targets
+
+# tModLoader
+Localization/*.hjson
+!Localization/zh-Hans_Mods.VerminLordMod.hjson
+!Localization/en-US_Mods.VerminLordMod.hjson
+
+# Workshop / Build artifacts
+icon.png~
+icon_small.png~
+icon_workshop.png~
+
+# Database / raw data
+helps/novel.db
+helps/raw_entities/
+helps/novel_chunks_fine/
+
+# Workflow database
+.db/
+
+# MCP / workflow
+.mcp/
+.roo/
+
+# OS files
+Thumbs.db
+*.DS_Store
+
+# Logs
+*.log

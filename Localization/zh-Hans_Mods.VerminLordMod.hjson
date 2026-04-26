@@ -1,0 +1,2711 @@
+Projectiles: {
+	// WaterCircle.DisplayName: Water Circle
+	// WaterBall.DisplayName: Water Ball
+	// ThunderBall.DisplayName: Thunder Ball
+	// MoonlightProj.DisplayName: Moonlight Proj
+	// BoneSpear.DisplayName: Bone Spear
+	// StoneCJB.DisplayName: Stone C J B
+	// MoonlightProjS.DisplayName: Moonlight Proj S
+	// CycloneProj.DisplayName: Cyclone Proj
+	// DarkArrow.DisplayName: Dark Arrow
+	// WidowSpiderProj.DisplayName: Widow Spider Proj
+	// RedNeedle.DisplayName: Red Needle
+	// WaterArrowProj.DisplayName: Water Arrow Proj
+	// StarDartProj.DisplayName: Star Dart Proj
+	// StarArrowProj.DisplayName: Star Arrow Proj
+	// MeteorProj.DisplayName: Meteor Proj
+	// Dog.DisplayName: Dog
+	// LoveToLeaveProj.DisplayName: Love To Leave Proj
+	// IceKnife.DisplayName: Ice Knife
+	// IceAwl.DisplayName: Ice Awl
+	// LightningSpear.DisplayName: Lightning Spear
+	// AcidWaterProj.DisplayName: Acid Water Proj
+	// PoisonNeedle.DisplayName: Poison Needle
+	// GhostFireProj.DisplayName: Ghost Fire Proj
+	// PlasmaProj.DisplayName: Plasma Proj
+	// MoonlightProjG.DisplayName: Moonlight Proj G
+	// BlueBird.DisplayName: Blue Bird
+	// MoonlightProjH.DisplayName: Moonlight Proj H
+	// GoldMoonCutProj.DisplayName: Gold Moon Cut Proj
+	// MoonlightProjC.DisplayName: Moonlight Proj C
+	// Spout.DisplayName: Spout
+	// ShuangXiProj.DisplayName: Shuang Xi Proj
+	// IceSpout.DisplayName: Ice Spout
+	// KnifeLight.DisplayName: Knife Light
+	// SwordShadow.DisplayName: Sword Shadow
+	// SoulShockWave.DisplayName: Soul Shock Wave
+	// BloodSkullProj.DisplayName: Blood Skull Proj
+	// FrostArrowProj.DisplayName: Frost Arrow Proj
+	// DingShenProj.DisplayName: Ding Shen Proj
+	// SwordQiProj.DisplayName: Sword Qi Proj
+	// DogControlGuMinion.DisplayName: Dog Control Gu Minion
+	// QingTengGuProj.DisplayName: Qing Teng Gu Proj
+	// WarBoneWheelProj.DisplayName: War Bone Wheel Proj
+	// YanTongBeam.DisplayName: Yan Tong Beam
+	// YanTongHoldout.DisplayName: Yan Tong Holdout
+	// BloodHandprintsProj.DisplayName: Blood Handprints Proj
+	// TianDiHongYinProj.DisplayName: Tian Di Hong Yin Proj
+	// StoveProj.DisplayName: Stove Proj
+	// WaterDrillProj.DisplayName: Water Drill Proj
+	// SpiralBoneSpear.DisplayName: Spiral Bone Spear
+	// PineNeedleProj.DisplayName: Pine Needle Proj
+	// InvitingMoonProjA.DisplayName: Inviting Moon Proj A
+	// InvitingMoonProjB.DisplayName: Inviting Moon Proj B
+	// InvitingMoonProjC.DisplayName: Inviting Moon Proj C
+	// FlyingSwordProj.DisplayName: Flying Sword Proj
+	// MeleeSwordProj.DisplayName: Melee Sword Proj
+	// GoldNeedleProj.DisplayName: Gold Needle Proj
+	// JiaoLeiPotatoProj.DisplayName: Jiao Lei Potato Proj
+	// StarfireProj.DisplayName: Starfire Proj
+	// StarRiverProj.DisplayName: Star River Proj
+	// MoonPoisonProj.DisplayName: Moon Poison Proj
+	// BloodMoonProj.DisplayName: Blood Moon Proj
+	// SawtoothGoldenWuProj.DisplayName: Sawtooth Golden Wu Proj
+	// SoundbyteProj.DisplayName: Soundbyte Proj
+	// ElectricTeethKillingWubuff.DisplayName: Electric Teeth Killing Wubuff
+	// ElectricTeethKillingWuProj.DisplayName: Electric Teeth Killing Wu Proj
+	// WhiteLightProj.DisplayName: White Light Proj
+	// ShiningProj.DisplayName: Shining Proj
+	// MoonlightProjEnemy.DisplayName: Moonlight Proj Enemy
+	// MuMeiAttack.DisplayName: Mu Mei Attack
+	// MuMeiAttackN.DisplayName: Mu Mei Attack N
+	// GratingProj.DisplayName: Grating Proj
+	// FireTrailDemo.DisplayName: Fire Trail Demo
+	// GeometricTrailDemo.DisplayName: Geometric Trail Demo
+	// MagicTrailDemo.DisplayName: Magic Trail Demo
+	// LiquidFlameProjectile.DisplayName: Liquid Flame Projectile
+	// StarfireArcProj.DisplayName: Starfire Arc Proj
+	// IceFlameProjectile.DisplayName: Ice Flame Projectile
+}
+
+Prefixes: {
+	StretchPrefix.DisplayName: 伸展
+	ShyPrefix.DisplayName: 羞怯
+	SharpTeethPrefix.DisplayName: 尖牙
+	SharpClawPrefix.DisplayName: 利爪
+	MildPrefix.DisplayName: 温和
+	IntrovertPrefix.DisplayName: 内向
+	ExtroversionPrefix.DisplayName: 外向
+	ExtremePrefix.DisplayName: 极端
+	DyingPrefix.DisplayName: 垂死
+	CurlingUpPrefix.DisplayName: 蜷缩
+	CrustaceaPrefix.DisplayName: 甲壳
+	ColeopteraPrefix.DisplayName: 鞘翅
+	AutismPrefix.DisplayName: 自闭
+	ActivePrefix.DisplayName: 活跃
+}
+
+NPCs: {
+	XueTangJiaLao: {
+		TownNPCMood: {
+			// Princess_LovesNPC: I like {NPCName}.
+			// LikeNPC_Princess: I like {NPCName}.
+			HateNPC: 我讨厌{NPCName}，原因显而易见。
+			DislikeNPC: 我不喜欢{NPCName}，古月家族的人才不会这么没教养。
+			LikeNPC: 我喜欢{NPCName}，在你还未拥有蛊虫的强大力量时，他帮助你活了下来。
+			LoveNPC: 我非常喜欢{NPCName}，蛊是天地之精，只有像{NPCName}一样敬畏自然，才能真正掌握蛊的力量。
+			DislikeBiome: 我不喜欢{BiomeName},这里不适合蛊虫存活。
+			LikeBiome: 我喜欢{BiomeName}，这里很适合蛊虫存活。
+			HateCrowded: 我讨厌这么拥挤，特别是和这些凡人住在一起。
+			DislikeCrowded: 我不喜欢这么拥挤，这里甚至有凡人居住。
+			LoveSpace: 我非常喜欢有这么大的空间，蛊师就该有体面的住所。
+			FarFromHome: 我离家太远了，或许我的族人们正需要我。
+			NoHome: 古月山寨在哪？我的族人们还需要我。
+			Content: 我很满足。
+			LoveBiome: 我非常喜欢{BiomeName}，这里是我的故乡。
+			HateBiome: 我讨厌{BiomeName}，这里让我回忆起一些不好的往事。
+		}
+
+		DisplayName: 学堂家老
+	}
+
+	JiasTravelingMerchant: {
+		TownNPCMood: {
+			// Princess_LovesNPC: I like {NPCName}.
+			// LikeNPC_Princess: I like {NPCName}.
+			// HateNPC: 我讨厌{NPCName}。
+			// DislikeNPC: 我不喜欢{NPCName}。
+			// LikeNPC: 我喜欢{NPCName}。
+			// LoveNPC: 我非常喜欢{NPCName}。
+			// DislikeBiome: 我不喜欢{BiomeName}。
+			LikeBiome: 我喜欢{BiomeName}，这里充满生机。
+			// HateCrowded: 我讨厌这么拥挤。
+			// DislikeCrowded: 我不喜欢这么拥挤。
+			// LoveSpace: 我非常喜欢有这么大的空间。
+			// FarFromHome: 我离家太远了。
+			// NoHome: 我讨厌没有家。
+			// Content: 我很满足。
+			LoveBiome: 我非常喜欢{BiomeName}，这里很安全。
+		}
+
+		DisplayName: 贾家商人
+	}
+
+	ElectricWolf.DisplayName: 电狼
+	// TryBossBody.DisplayName: Try Boss Body
+	// TryBossMinion.DisplayName: Try Boss Minion
+	ElectricWolfKing.DisplayName: 雷冠头狼
+
+	YaoTangJiaLao: {
+		DisplayName: 药堂家老
+
+		TownNPCMood: {
+			Content: 我很满足。
+			NoHome: 古月山寨在哪？我的族人们还需要我。
+			FarFromHome: 我离家太远了，或许我的族人们正需要我。
+			LoveSpace: 我非常喜欢有这么大的空间，蛊师就该有体面的住所。
+			DislikeCrowded: 我不喜欢这么拥挤，这里甚至有凡人居住。
+			HateCrowded: 我讨厌这么拥挤，特别是和这些凡人住在一起。
+			LoveBiome: 我非常喜欢{BiomeName}，这里是我的故乡。
+			LikeBiome: 我喜欢{BiomeName}，这里很适合蛊虫存活。
+			LoveNPC: 我非常喜欢{NPCName}。只是觉得她性格很好而已...furry什么的，根本没听说过。
+			LikeNPC: 我喜欢{NPCName}，治疗蛊虫的作用在ta身上会发生神奇的变化。
+			DislikeNPC: 我不喜欢{NPCName}，原因显而易见。
+			HateNPC: 我讨厌{NPCName}，她是个治标不治本的庸医。
+			// LikeNPC_Princess: I like {NPCName}.
+			// Princess_LovesNPC: I like {NPCName}.
+			DislikeBiome: 我不喜欢{BiomeName},这里不适合蛊虫存活。
+			HateBiome: 我讨厌{BiomeName}，这里不利于伤口恢复。
+		}
+	}
+
+	YuTangJiaLao: {
+		DisplayName: 御堂家老
+
+		TownNPCMood: {
+			Content: 我很满足。
+			NoHome: 给我干哪来了这是，这还是国内吗。
+			FarFromHome: 给我干哪来了这是，这还是国内吗。
+			LoveSpace: 这地儿真真清净。
+			DislikeCrowded: 咋这多人呢我说。
+			HateCrowded: 其实我是社恐，嗯。
+			LoveBiome: 我非常喜欢{BiomeName}。
+			LikeBiome: 我喜欢{BiomeName}。
+			LoveNPC: 我非常喜欢{NPCName}。
+			LikeNPC: 我喜欢{NPCName}。
+			DislikeNPC: 我不喜欢{NPCName}。
+			HateNPC: 我讨厌{NPCName}。
+			// LikeNPC_Princess: I like {NPCName}.
+			// Princess_LovesNPC: I like {NPCName}.
+			// DislikeBiome: 我不喜欢{BiomeName}。
+			// HateBiome: 我讨厌{BiomeName}。
+		}
+	}
+
+	BaiA: {
+		DisplayName: 白家长老
+
+		TownNPCMood: {
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LoveBiome: 我非常喜欢{BiomeName}，这里很湿润。
+			LikeBiome: 我喜欢{BiomeName}，这里比较湿润。
+			LoveNPC: 我非常喜欢{NPCName}。
+			LikeNPC: 我喜欢{NPCName}。
+			DislikeNPC: 我不喜欢{NPCName}。
+			HateNPC: 我讨厌{NPCName}。
+			// LikeNPC_Princess: I like {NPCName}.
+			// Princess_LovesNPC: I like {NPCName}.
+			DislikeBiome: 我不喜欢{BiomeName}，这里比较干燥。
+			HateBiome: 我讨厌{BiomeName}，这里很干燥。
+		}
+	}
+
+	GuYuePatrolGuMaster: {
+		DisplayName: 古月巡逻蛊师
+
+		TownNPCMood: {
+			Content: 我在巡逻，别打扰我。
+			NoHome: 古月山寨在哪？我得回去报到。
+			FarFromHome: 我离开巡逻区域太远了。
+			LoveSpace: 这地方视野开阔，适合警戒。
+			DislikeCrowded: 人太多了，不利于警戒。
+			HateCrowded: 太拥挤了，我无法保持警惕。
+			LoveBiome: 我非常喜欢{BiomeName}，这里很安全。
+			LikeBiome: 我喜欢{BiomeName}，适合巡逻。
+			LikeNPC: 我喜欢{NPCName}，他/她是个可靠的同伴。
+			DislikeNPC: 我不喜欢{NPCName}，他/她鬼鬼祟祟的。
+			HateNPC: 我讨厌{NPCName}，他/她一看就不是好人。
+			// LikeNPC_Princess: 我喜欢 {NPCName}。
+			// Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	BladeBloodBatGu.DisplayName: 刀翅血蝠蛊
+	LegionAnt.DisplayName: 军团蚁
+	StrongElectricWolf.DisplayName: 豪电狼
+}
+
+Items: {
+	ThunderBallGu: {
+		Tooltip: 释放一枚凝聚着大量电气的雷球，一般寄居于狂电狼身上
+		DisplayName: 炸雷蛊
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	RiverStream: {
+		Tooltip:
+			'''
+			白家寨独门蛊虫
+			使用召唤一道潺潺溪流围绕自身，攻防兼备
+			[c/ff0000:发动攻击时额外消耗真元]
+			[c/00ff00:食性：细沙]
+			[c/d1eeee:天下莫柔弱于水，而攻坚强者莫之能胜。]
+			'''
+		DisplayName: 溪流蛊
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	MoonlightPro: {
+		Tooltip:
+			'''
+			由两只小光蛊和一只月光蛊合练而成
+			[c/1e90ff:甩手一记，脸盆大小的幽蓝月刃飞出，穿透空气，发出呼啸之音。]
+			'''
+		DisplayName: 月芒蛊
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元消耗"
+	}
+
+	Moonlight: {
+		Tooltip:
+			'''
+
+			古月一族镇族蛊虫
+			[c/00ff00:食性：月兰花瓣]
+			[c/00ffff:“淡蓝色的光芒，清澈如水，在家老的手中幽幽闪烁，乍一眼看过去，仿佛学堂家老手中掬着一捧月光。”]
+			'''
+		DisplayName: 月光蛊
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元消耗"
+	}
+
+	Minilight: {
+		Tooltip:
+			'''
+			此蛊主要是配合月光蛊使用，是月光蛊最常见的一种辅助蛊虫
+			[c/eeee00:“单用月光蛊催发出的月刃，只有一巴掌的大小。但是加上了小光蛊的辅助之后，这片月刃整个体积扩大了一倍，攻击力也扩大了一倍！”]
+			'''
+		DisplayName: 小光蛊
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元消耗"
+	}
+
+	GuWeaponItem: {
+		Tooltip: ""
+		DisplayName: Gu Weapon Item
+		GuLevel: Mods.VerminLordMod.Items.GuWeaponItem.GuLevel
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元消耗"
+	}
+
+	BoneSpearGu: {
+		Tooltip: 攻击类蛊虫，可凝结骨枪。
+		DisplayName: 骨枪蛊
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元消耗"
+	}
+
+	PoemAMusicBox: {
+		Tooltip: 启动！
+		DisplayName: 蛊诗
+	}
+
+	NLMusicBox: {
+		Tooltip: "[c/1e90ff:仙※尊※小※曲 正※在※播※放]"
+		DisplayName: 仙尊的小曲
+	}
+
+	SetMax: {
+		Tooltip: 调试物品，回满真元
+		DisplayName: Full
+	}
+
+	PeppaPig: {
+		Tooltip: 小猪佩奇
+		DisplayName: 调试物品
+		UsesXQi: 不消耗真元
+	}
+
+	Info: {
+		Tooltip: 调试物品，查看蛊师信息
+		DisplayName: Info
+	}
+
+	Gua: {
+		Tooltip: 纪狗，气死我了
+		DisplayName: 挂
+	}
+
+	ChunQiuChan: {
+		Tooltip:
+			'''
+			死亡时若时光能量>5%,自动触发回溯，按时光能量比例恢复生命和真元
+			自动记录过去4分钟内经过的位置，回溯时随机回到其中一处
+			[c/ffd700:宙道仙蛊，逆转光阴，重生之舟]
+			'''
+		DisplayName: 春秋蝉
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+		RebirthTriggered: 春秋蝉·回溯成功！恢复 {0}%
+		Energy: 时光能量：{0}/{1}（{2}%）
+		EnergyLow: 春秋蝉的时光能量不足！
+		PositionHistory: 已记录 {0} 个时光坐标
+	}
+
+	ChunQiuChanna: {
+		Tooltip: 调试物品，将属性全部清除
+		DisplayName: 春秋馋
+	}
+
+	ZizhiYi: {
+		Tooltip: 获得乙等资质
+		DisplayName: 乙等资质
+	}
+
+	ZizhiJia: {
+		Tooltip: 成为古月方正
+		DisplayName: 甲等资质
+	}
+
+	ZizhiDing: {
+		Tooltip: 盗天魔尊同款资质
+		DisplayName: 丁等资质
+	}
+
+	ZizhiBing: {
+		Tooltip: 大爱仙尊同款资质
+		DisplayName: 丙等资质
+	}
+
+	YuanS: {
+		Tooltip: 珍贵物品
+		DisplayName: 元石
+	}
+
+	WhitePig: {
+		Tooltip: 改造蛊师的身躯，从根本上增长蛊师的气力
+		DisplayName: 白豕蛊
+		UsesXQi: "{0} 真元需求"
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+	}
+
+	WanShi: {
+		Tooltip: 右键可能开出蛊虫
+		DisplayName: 顽石
+	}
+
+	StrengthLongicorn: {
+		Tooltip: 使用获得五息的巨大力量，仅对近战生效
+		DisplayName: 蛮力天牛蛊
+		UsesXQi: "{0} 真元消耗"
+		// GuLevel: Mods.VerminLordMod.Items.StrengthLongicorn.GuLevel
+	}
+
+	Hopeness: {
+		Tooltip: 右键把心交给希望
+		DisplayName: 希望蛊
+	}
+
+	FlowerPig: {
+		Tooltip: 使用获得十息的较大力量，仅对近战生效
+		DisplayName: 花豕蛊
+		UsesXQi: "{0} 真元消耗"
+		// GuLevel: Mods.VerminLordMod.Items.FlowerPig.GuLevel
+	}
+
+	ThunderWings: {
+		Tooltip: 凝聚出一对雷光羽翼
+		DisplayName: 雷翼蛊
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+		GuLevel: 转数：{0}
+	}
+
+	StoneSkin: {
+		Tooltip: 为蛊师增加少量防御力
+		DisplayName: 石皮蛊
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+		GuLevel: 转数：{0}
+	}
+
+	JadeSkin: {
+		Tooltip: 为蛊师增加大量防御力
+		DisplayName: 玉皮蛊
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+		GuLevel: 转数：{0}
+	}
+
+	IronSkin: {
+		Tooltip: 为蛊师增加一些防御力
+		DisplayName: 铁皮蛊
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+		GuLevel: 转数：{0}
+	}
+
+	GuAccessoryItem: {
+		// Tooltip: ""
+		// DisplayName: Gu Accessory Item
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	CopperSkin: {
+		Tooltip: 为蛊师增加一些防御力
+		DisplayName: 铜皮蛊
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+		GuLevel: 转数：{0}
+	}
+
+	BearPower: {
+		Tooltip:
+			'''
+			熊家寨标志蛊虫
+			显著增加防御，使近战伤害翻倍但攻速减半
+			[c/00ff00:食性：蜂蜜]
+			[c/b8860b:一熊之力！]
+			'''
+		DisplayName: 熊力蛊
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+		GuLevel: 转数：{0}
+	}
+
+	FirstToSecond: {
+		DisplayName: 二转凭证
+		Tooltip: 使用以提升至二转
+	}
+
+	SecondToThird: {
+		DisplayName: 三转凭证
+		Tooltip: 使用以提升至三转
+	}
+
+	WineBug: {
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+		DisplayName: 酒虫
+		Tooltip: 十分珍贵的蛊虫。使用凝练一转蛊师真元，永久增加一点真元恢复速度
+	}
+
+	ScaleGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 鱼鳞蛊
+		Tooltip: 为蛊师增加少量防御力
+	}
+
+	InvisibleStoneGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 隐石蛊
+		Tooltip: 隐身了吗？如隐。
+	}
+
+	InvisibleScaleGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 隐鳞蛊
+		Tooltip: 提供隐身效果并提升防御力
+	}
+
+	MoonLuminousTextile: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 月霓裳
+		Tooltip: 发动月光冲击并提升你、附近玩家和附近城镇npc的防御力
+	}
+
+	TraceStoneGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 痕石蛊
+		Tooltip: 发动很弱的石痕攻击
+	}
+
+	MoonTrace: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 月痕蛊
+		Tooltip: 比起月光蛊伤害不变，攻击范围翻倍
+	}
+
+	MoonSpinning: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 月旋蛊
+		Tooltip: 发射可以追踪鼠标指针的月光冲击
+	}
+
+	Cyclone: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 旋风蛊
+		Tooltip: 发射可以追踪鼠标指针的旋风
+	}
+
+	WineBagFlowerGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 酒囊花蛊
+		Tooltip: 产出酒
+	}
+
+	RiceBagGrassGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 饭袋草蛊
+		Tooltip: 产出食物
+	}
+
+	GrassPuppet: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 草傀蛊
+		Tooltip: 生成一个...弱小(?)的草系敌人，并暂时略微增加生命恢复
+	}
+
+	BlackHair: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 青丝蛊
+		Tooltip: 提供短暂的高额防御
+	}
+
+	HundredLifeGu: {
+		UsesXQi: "{0} 真元需求"
+		DisplayName: 百年寿蛊
+		Tooltip: 使用增加100点额外生命值
+		GuLevel: 转数：{0}
+	}
+
+	TenLifeGu: {
+		UsesXQi: "{0} 真元需求"
+		DisplayName: 十年寿蛊
+		Tooltip: 使用增加10点额外生命值
+		GuLevel: 转数：{0}
+	}
+
+	ThousandLifeGu: {
+		UsesXQi: "{0} 真元需求"
+		DisplayName: 千年寿蛊
+		Tooltip: 使用增加1000点额外生命值
+		GuLevel: 转数：{0}
+	}
+
+	DarkArrowGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 暗箭
+		Tooltip: 暗箭难防
+	}
+
+	CopperSkinS: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 二转铜皮蛊
+		Tooltip: 为蛊师增加一些防御力
+	}
+
+	CopperSkinSS: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 三转铜皮蛊
+		Tooltip: 为蛊师增加一些防御力
+	}
+
+	WolfWaveCard: {
+		// DisplayName: Wolf Wave Card
+		// Tooltip: ""
+	}
+
+	HuangLuoLongicorn: {
+		Tooltip: 暂时提示真元和魔力值回复速度
+		DisplayName: 黄骆天牛蛊
+		UsesXQi: "{0} 真元消耗"
+		// GuLevel: Mods.VerminLordMod.Items.HuangLuoLongicorn.GuLevel
+	}
+
+	DragonBallCricket: {
+		Tooltip: 永久增加移动速度和加速度
+		DisplayName: 龙丸蛐蛐蛊
+		UsesXQi: "{0} 真元消耗"
+		// GuLevel: Mods.VerminLordMod.Items.DragonBallCricket.GuLevel
+	}
+
+	MoonlightCreeper.DisplayName: 月光爬山虎
+
+	LivingLeaf: {
+		UsesXQi: "{0} 真元消耗"
+		DisplayName: 生机叶
+		Tooltip: 瞬间恢复大量生命值
+		// GuLevel: Mods.VerminLordMod.Items.LivingLeaf.GuLevel
+	}
+
+	LivingGrass: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 生息草
+		Tooltip: 恢复生命值
+	}
+
+	NineLeavesLivingGrass: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 九叶生机草
+		Tooltip: 产出一片生机叶
+	}
+
+	WidowSpider: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 寡妇蛛
+		Tooltip: 发射蛛形纲动物
+	}
+
+	RedNeedleScorpion: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 红针蝎
+		Tooltip: 发射蛰刺攻击
+	}
+
+	DirtGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 泥蛊
+		Tooltip: 地势坤，君子以厚德载物
+	}
+
+	OneMinion: {
+		UsesXQi: "{0} 真元消耗"
+		DisplayName: 一胎蛊
+		Tooltip: 增加一个召唤栏，只能使用一次
+		// GuLevel: Mods.VerminLordMod.Items.OneMinion.GuLevel
+	}
+
+	BreezeWheelGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 清风轮蛊
+		Tooltip: 使两只小腿上，各缠绕着一圈淡绿色的旋风
+	}
+
+	FifthToSixth: {
+		DisplayName: 六转凭证
+		Tooltip: 使用以提升至六转（你或许能够获得它）
+	}
+
+	ForthToFifth: {
+		DisplayName: 五转凭证
+		Tooltip: 使用以提升至五转
+	}
+
+	ThirdToForth: {
+		DisplayName: 四转凭证
+		Tooltip: 使用以提升至四转
+	}
+
+	SpiritSalivaGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 灵涎蛊
+		Tooltip: 短时间增加生命恢复
+	}
+
+	WaterArrowGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 水箭蛊
+		Tooltip: 发射水箭
+	}
+
+	ABitGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 一星半点蛊
+		Tooltip: 较大地增强星蛊的效果
+	}
+
+	StarDartGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 星镖蛊
+		Tooltip: 发射星镖
+	}
+
+	StarArrowGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 星箭蛊
+		Tooltip: 发射星箭
+	}
+
+	MeteorGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 流星蛊
+		Tooltip: 发射流星
+	}
+
+	WarmStringSpider: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 温丝蛛
+		Tooltip: 蛛网有什么用？
+	}
+
+	DogControlGu: {
+		// UsesXQi: Mods.VerminLordMod.Items.DogControlGu.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.DogControlGu.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.DogControlGu.GuLevel
+		// DisplayName: Dog Control Gu
+		// Tooltip: ""
+	}
+
+	BlackPig: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 黑豕蛊
+		Tooltip: 改造蛊师的身躯，从根本上增长蛊师的气力
+	}
+
+	LoveToLeave: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 爱生离
+		Tooltip: 问世间情为何物，直教人生死相许
+	}
+
+	KsitigarbhaFlowerGu: {
+		DisplayName: 地藏花蛊
+		Tooltip: 右键开出蛊虫
+	}
+
+	BlackMane: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 黑鬃蛊
+		Tooltip: 提供短暂的高额防御并小幅提升伤害
+	}
+
+	RockGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 磐石蛊
+		Tooltip: 提供短暂的超高额防御，但极大地降低移速
+	}
+
+	FourFlavorWineBug: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 四味酒虫
+		Tooltip: 为二转蛊师永久提升真元恢复速度
+	}
+
+	WhiteChrysalis: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 白虫茧
+		Tooltip: 没有任何作用
+	}
+
+	JinLiGu: {
+		Tooltip: 消耗蛊虫可增长蛊师一斤之力
+		DisplayName: 斤力蛊
+		GuLevel: 转数：{0}
+		UsesXQi: "{0} 真元消耗"
+	}
+
+	BoneBanbooBlock: {
+		DisplayName: 骨竹块
+		Tooltip: 骨竹掉落
+	}
+
+	IceKnifeGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 冰刀蛊
+		Tooltip: 发射冰刀
+	}
+
+	IceAwlGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 冰锥蛊
+		Tooltip: 散射一片冰锥
+	}
+
+	BronzeShari: {
+		GuLevel: 转数：{0}
+		DisplayName: 青铜舍利蛊
+		Tooltip: 为一转蛊师提升一个小境界
+	}
+
+	GoldShari: {
+		GuLevel: 转数：{0}
+		DisplayName: 黄金舍利蛊
+		Tooltip: 为四转蛊师提升一个小境界
+	}
+
+	PurpleCrystalShari: {
+		GuLevel: 转数：{0}
+		DisplayName: 紫晶舍利蛊
+		Tooltip: 为五转蛊师提升一个小境界
+	}
+
+	RedSteelShari: {
+		GuLevel: 转数：{0}
+		DisplayName: 赤铁舍利蛊
+		Tooltip: 为二转蛊师提升一个小境界
+	}
+
+	SliverShari: {
+		GuLevel: 转数：{0}
+		DisplayName: 白银舍利蛊
+		Tooltip: 为三转蛊师提升一个小境界
+	}
+
+	TwistedHeelGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 旋踵蛊
+		Tooltip: 显著增加转身速度
+	}
+
+	LightningSpearGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 电矛蛊
+		Tooltip: 凝聚电矛发动攻击
+	}
+
+	AcidWaterGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 酸水蛊
+		Tooltip: 抛射削减防御的酸水液滴
+	}
+
+	PoisonNeedleGu: {
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+		DisplayName: 毒针蛊
+		Tooltip: 发射毒针
+	}
+
+	GhostFireGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 鬼火蛊
+		Tooltip: 牵引一团鬼火进行攻击
+	}
+
+	PlasmaGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 电浆蛊
+		Tooltip: 扔出一阵电浆
+	}
+
+	GoldMoon: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 黄金月
+		Tooltip: 月光啊，闪爆他们！
+	}
+
+	BluebirdIceCoffinGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 蓝鸟冰棺蛊
+		Tooltip: 凛冬已至 大寒无雪
+	}
+
+	MoonHandKnife: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 月手刀
+		Tooltip: 地 狱 葬 送
+	}
+
+	ShuangLinMoonGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 霜霖月蛊
+		Tooltip: 高处不胜寒 起舞弄清影
+	}
+
+	IceCrystalGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 冰晶蛊
+		Tooltip: 一念，永恒
+	}
+
+	SpoutGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 龙卷蛊
+		Tooltip: 是无坚不摧的啸风！
+	}
+
+	ShuangXiGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 霜息蛊
+		Tooltip: 冰寒吐息
+	}
+
+	GhostFireGuPro: {
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+		DisplayName: 鬼炎蛊
+		Tooltip: 牵引一团强大的鬼炎进行攻击
+	}
+
+	KnifeLightGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 刀光蛊
+		Tooltip: 产生高伤害刀光
+	}
+
+	SwordShadowGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 剑影蛊
+		Tooltip: 产生高伤害剑影
+	}
+
+	CareerGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 横冲蛊
+		Tooltip: 我将以泥头车的形态出击！
+	}
+
+	StraightCollisionGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 直撞蛊
+		Tooltip: 亡了亡了我没有史莱姆ang
+	}
+
+	GhostlyCallingGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 鬼叫蛊
+		Tooltip: 啊——
+	}
+
+	RageGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 狂暴蛊
+		Tooltip: 一键红温
+	}
+
+	JunLiGu: {
+		UsesXQi: "{0} 真元需求"
+		GuLevel: 转数：{0}
+		DisplayName: 一钧之力蛊
+		Tooltip: 增长蛊师三十斤力气
+	}
+
+	ShiJinLiGu: {
+		UsesXQi: "{0} 真元需求"
+		GuLevel: 转数：{0}
+		DisplayName: 十斤之力蛊
+		Tooltip: 增长蛊师十斤力气
+	}
+
+	NineWineBug: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 九眼酒虫
+		Tooltip: 为四转蛊师永久提升真元恢复速度
+	}
+
+	SevenWineBug: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 七香酒虫
+		Tooltip: 为三转蛊师永久提升真元恢复速度
+	}
+
+	BloodSkullGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 血颅蛊
+		Tooltip: 全族晋升甲等！
+	}
+
+	ZZSetting: {
+		// DisplayName: Z Z Setting
+		// Tooltip: ""
+	}
+
+	Bugger: {
+		// DisplayName: Bugger
+		// Tooltip: ""
+	}
+
+	FrostArrowGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 霜箭蛊
+		Tooltip: 发射霜冻箭矢
+	}
+
+	RampageGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 横冲直撞蛊
+		Tooltip: 是的，想去哪就去哪
+	}
+
+	ToilGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 苦力蛊
+		Tooltip: 血量越低伤害越高...事胡堂主！（智将
+	}
+
+	DingShenGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 定身蛊
+		Tooltip: ？
+	}
+
+	SwordQiGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 剑气蛊
+		Tooltip: 聚能剑柄
+	}
+
+	TianyuanBaolianGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		yuanRateText: 积累元石：{0}
+		DisplayName: 天元宝莲蛊
+		Tooltip:
+			'''
+			移动元泉
+			左键将积累的元石转化为真元补充(不会溢出)
+			右键提取元石
+			'''
+	}
+
+	DogControlGuItem: {
+		DisplayName: 驭犬蛊
+		Tooltip: 召唤一只小狗为你作战
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+	}
+
+	TYBL: {
+		// DisplayName: T Y B L
+		// Tooltip: ""
+	}
+
+	QingMaoStoneBed: {
+		DisplayName: 青茅石床
+		Tooltip: 青茅山地区石头打造的床，古月山寨制式家具
+	}
+
+	QingMaoStoneChair: {
+		DisplayName: 青茅石椅
+		Tooltip: 青茅山地区石头打造的椅子，古月山寨制式家具
+	}
+
+	QingMaoStoneChest: {
+		DisplayName: 青茅石箱
+		Tooltip: 青茅山地区石头打造的箱子，没什么特别的
+	}
+
+	QingMaoStoneChestKey: {
+		DisplayName: 青茅石钥匙
+		Tooltip: 青茅山地区石头打造的钥匙，没有什么用
+	}
+
+	QingMaoStoneClock: {
+		DisplayName: 青茅石钟
+		Tooltip: 青茅山地区石头打造的座钟，提醒古月一族之人珍惜时间
+	}
+
+	QingMaoStoneDoor: {
+		DisplayName: 青茅石门
+		Tooltip: 青茅山地区石头打造的门，古月山寨制式家具
+	}
+
+	QingMaoStoneDresser: {
+		DisplayName: 青茅石梳妆台
+		Tooltip: 青茅山地区石头打造的梳妆台，古月山寨制式家具
+	}
+
+	QingMaoStonePlatform: {
+		DisplayName: 青茅石平台
+		Tooltip: 青茅山地区石头打造的平台，用于建筑
+	}
+
+	QingMaoStoneSink: {
+		DisplayName: 青茅石盥洗盆
+		Tooltip: 青茅山地区石头打造的盥洗盆，古月山寨制式家具
+	}
+
+	QingMaoStoneTable: {
+		DisplayName: 青茅石桌
+		Tooltip: 青茅山地区石头打造的桌子，古月山寨制式家具
+	}
+
+	QingMaoStoneToilet: {
+		DisplayName: 青茅石马桶
+		Tooltip: 青茅山地区石头打造的马桶，似乎不是这个时代应该有的东西
+	}
+
+	QingMaoStoneWorkbench: {
+		DisplayName: 青茅石工作台
+		Tooltip: 青茅山地区石头打造的工作台，古月山寨制式家具
+	}
+
+	QingMaoStoneBlock: {
+		DisplayName: 青茅石块
+		Tooltip: 青茅山地区的石块
+	}
+
+	YuanSOre: {
+		DisplayName: 元石矿
+		Tooltip: 地下出产的矿物，用于合成元石
+	}
+
+	QingTengGu: {
+		DisplayName: 青藤蛊
+		Tooltip: 挥舞青藤攻击敌人
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+	}
+
+	WarBoneWheel: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 战骨车轮
+		Tooltip: 碾碎一切来犯之敌
+	}
+
+	GoldenThreadCloakGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 金缕衣蛊
+		Tooltip: 增添大量防御
+	}
+
+	ChasingWindGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 追风蛊
+		Tooltip: 短时间增加大量移速
+	}
+
+	TengClawGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 藤爪蛊
+		Tooltip: 挥舞藤蔓攻击
+	}
+
+	YanTongGu: {
+		DisplayName: 炎瞳蛊
+		Tooltip: 请...好好地看着我
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+	}
+
+	BloodHandprintGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 血手印蛊
+		Tooltip: 使攻击到的目标化为脓血
+	}
+
+	TianDiHongYinGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 天地宏音蛊
+		Tooltip: 一经催发，能形成音浪攻势
+	}
+
+	LittleSoulGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 小魂蛊
+		Tooltip: 短时间增加一格召唤栏位
+	}
+
+	BigSoulGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 大魂蛊
+		Tooltip: 短时间增加两格召唤栏位
+	}
+
+	GiantSpiritBodyGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 巨灵身蛊
+		Tooltip: 近战、远程伤害翻三倍啊三倍
+	}
+
+	GiantSpiritHeartGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 巨灵心蛊
+		Tooltip: 召唤栏翻三倍啊三倍
+	}
+
+	GiantSpiritIntentGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 巨灵意蛊
+		Tooltip: 魔法、蛊术伤害翻三倍啊三倍
+	}
+
+	JinXiaGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 金霞蛊
+		Tooltip: 形成金光加快蛊师移动速度
+	}
+
+	WolfRunGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 狼奔蛊
+		Tooltip: 增加最大移速和跳跃高度，但减小加速度
+	}
+
+	BoneWings: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 骨翼蛊
+		Tooltip: 生长出骨翼
+	}
+
+	TengYunWings: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 腾云蛊
+		Tooltip: 缺少水平机动性的翅膀
+	}
+
+	EagleYangGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 鹰扬蛊
+		Tooltip: 必须让你飞起来
+	}
+
+	EagleWingGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 鹰翼蛊
+		Tooltip: 略有失重感
+	}
+
+	FireClothesGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 火衣蛊
+		Tooltip: 是用来防护，结成一片火焰衣裳，倒也有一些灼伤敌人的微弱效用。
+	}
+
+	StoveGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 单窍火炭蛊
+		Tooltip: 可蕴藏火气，用于进攻
+	}
+
+	FiveStarLinkedBeadGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 五星连珠蛊
+		Tooltip: 特别大地增强星蛊效果
+	}
+
+	FourStarCubeGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 四星立方蛊
+		Tooltip: 极大地增强星蛊效果
+	}
+
+	ThreeStarsSkyGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 三星在天蛊
+		Tooltip: 很大地增强星蛊效果
+	}
+
+	TwoStarRadianceReflectingGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 二星辉映蛊
+		Tooltip: 大幅地增强星蛊效果
+	}
+
+	WhiteJadeGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 白玉蛊
+		Tooltip: 短暂增强防御
+	}
+
+	WaterDrillGu: {
+		DisplayName: 水钻蛊
+		Tooltip: 持续性伤害
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+	}
+
+	YingShangGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 影殇蛊
+		Tooltip: 反弹二分之一的伤害，反弹的伤害无视防御
+	}
+
+	SpiralBoneSpearGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 螺旋骨枪蛊
+		Tooltip: 释放旋转骨枪，反复打击敌人
+	}
+
+	PineNeedleGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 松针蛊
+		Tooltip: 释放松针攻击
+	}
+
+	InvitingMoonGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 邀月蛊
+		Tooltip: 集中月刃能量造成大量伤害
+	}
+
+	BloodQiGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 血气蛊
+		Tooltip: 提供缓慢流失的临时生命值
+	}
+
+	XiongHaoGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 熊豪蛊
+		Tooltip: 临时提升一熊之力
+	}
+
+	GoldNeedleGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 金针蛊
+		Tooltip: 发射金针
+	}
+
+	BigStrengthGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 大力蛊
+		Tooltip: 短暂提升一倍气力
+	}
+
+	WaterShellGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 水罩蛊
+		Tooltip: 水行防御蛊
+	}
+
+	JiaoLeiPotatoGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 焦雷土豆蛊
+		Tooltip:
+			'''
+			扔出一颗土豆地雷
+			消耗品
+			'''
+	}
+
+	StarfireGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 星火蛊
+		Tooltip: 喷吐九天之上的火焰
+	}
+
+	SkyMeteorGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 流星天陨蛊
+		Tooltip: 一颗明星从天堂坠陨......
+	}
+
+	StarRiverGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 星河蛊
+		Tooltip: 此刻，群星之河拱卫于你
+	}
+
+	ThreeStepGrassGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 三步芳草蛊
+		Tooltip: 草，忽略，走
+	}
+
+	ShiJunLiGu: {
+		UsesXQi: "{0} 真元需求"
+		GuLevel: 转数：{0}
+		DisplayName: 十钧之力蛊
+		Tooltip: 我说你在健身房练死劲，不好用
+	}
+
+	StarWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.StarWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.StarWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.StarWeapon.GuLevel
+		// DisplayName: Star Weapon
+		// Tooltip: ""
+	}
+
+	BanWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.BanWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.BanWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.BanWeapon.GuLevel
+		// DisplayName: Ban Weapon
+		// Tooltip: ""
+	}
+
+	BloodWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.BloodWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.BloodWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.BloodWeapon.GuLevel
+		// DisplayName: Blood Weapon
+		// Tooltip: ""
+	}
+
+	BoneWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.BoneWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.BoneWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.BoneWeapon.GuLevel
+		// DisplayName: Bone Weapon
+		// Tooltip: ""
+	}
+
+	CharmWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.CharmWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.CharmWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.CharmWeapon.GuLevel
+		// DisplayName: Charm Weapon
+		// Tooltip: ""
+	}
+
+	CloudWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.CloudWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.CloudWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.CloudWeapon.GuLevel
+		// DisplayName: Cloud Weapon
+		// Tooltip: ""
+	}
+
+	DarkWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.DarkWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.DarkWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.DarkWeapon.GuLevel
+		// DisplayName: Dark Weapon
+		// Tooltip: ""
+	}
+
+	DrawWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.DrawWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.DrawWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.DrawWeapon.GuLevel
+		// DisplayName: Draw Weapon
+		// Tooltip: ""
+	}
+
+	DreamWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.DreamWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.DreamWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.DreamWeapon.GuLevel
+		// DisplayName: Dream Weapon
+		// Tooltip: ""
+	}
+
+	EatingWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.EatingWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.EatingWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.EatingWeapon.GuLevel
+		// DisplayName: Eating Weapon
+		// Tooltip: ""
+	}
+
+	FireWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.FireWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.FireWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.FireWeapon.GuLevel
+		// DisplayName: Fire Weapon
+		// Tooltip: ""
+	}
+
+	FlyingWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.FlyingWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.FlyingWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.FlyingWeapon.GuLevel
+		// DisplayName: Flying Weapon
+		// Tooltip: ""
+	}
+
+	GoldWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.GoldWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.GoldWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.GoldWeapon.GuLevel
+		// DisplayName: Gold Weapon
+		// Tooltip: ""
+	}
+
+	IceSnowWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.IceSnowWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.IceSnowWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.IceSnowWeapon.GuLevel
+		// DisplayName: Ice Snow Weapon
+		// Tooltip: ""
+	}
+
+	InfoWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.InfoWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.InfoWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.InfoWeapon.GuLevel
+		// DisplayName: Info Weapon
+		// Tooltip: ""
+	}
+
+	KillingWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.KillingWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.KillingWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.KillingWeapon.GuLevel
+		// DisplayName: Killing Weapon
+		// Tooltip: ""
+	}
+
+	KnifeWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.KnifeWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.KnifeWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.KnifeWeapon.GuLevel
+		// DisplayName: Knife Weapon
+		// Tooltip: ""
+	}
+
+	LifeDeathWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.LifeDeathWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.LifeDeathWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.LifeDeathWeapon.GuLevel
+		// DisplayName: Life Death Weapon
+		// Tooltip: ""
+	}
+
+	LightningWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.LightningWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.LightningWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.LightningWeapon.GuLevel
+		// DisplayName: Lightning Weapon
+		// Tooltip: ""
+	}
+
+	LightWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.LightWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.LightWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.LightWeapon.GuLevel
+		// DisplayName: Light Weapon
+		// Tooltip: ""
+	}
+
+	LoveWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.LoveWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.LoveWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.LoveWeapon.GuLevel
+		// DisplayName: Love Weapon
+		// Tooltip: ""
+	}
+
+	LuckWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.LuckWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.LuckWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.LuckWeapon.GuLevel
+		// DisplayName: Luck Weapon
+		// Tooltip: ""
+	}
+
+	MoonWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.MoonWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.MoonWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.MoonWeapon.GuLevel
+		// DisplayName: Moon Weapon
+		// Tooltip: ""
+	}
+
+	MudWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.MudWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.MudWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.MudWeapon.GuLevel
+		// DisplayName: Mud Weapon
+		// Tooltip: ""
+	}
+
+	PelletWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.PelletWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.PelletWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.PelletWeapon.GuLevel
+		// DisplayName: Pellet Weapon
+		// Tooltip: ""
+	}
+
+	PersonWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.PersonWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.PersonWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.PersonWeapon.GuLevel
+		// DisplayName: Person Weapon
+		// Tooltip: ""
+	}
+
+	PoisonWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.PoisonWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.PoisonWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.PoisonWeapon.GuLevel
+		// DisplayName: Poison Weapon
+		// Tooltip: ""
+	}
+
+	PowerDuatWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.PowerDuatWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.PowerDuatWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.PowerDuatWeapon.GuLevel
+		// DisplayName: Power Duat Weapon
+		// Tooltip: ""
+	}
+
+	PractiseWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.PractiseWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.PractiseWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.PractiseWeapon.GuLevel
+		// DisplayName: Practise Weapon
+		// Tooltip: ""
+	}
+
+	QiWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.QiWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.QiWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.QiWeapon.GuLevel
+		// DisplayName: Qi Weapon
+		// Tooltip: ""
+	}
+
+	RuleWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.RuleWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.RuleWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.RuleWeapon.GuLevel
+		// DisplayName: Rule Weapon
+		// Tooltip: ""
+	}
+
+	ShadowWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.ShadowWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.ShadowWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.ShadowWeapon.GuLevel
+		// DisplayName: Shadow Weapon
+		// Tooltip: ""
+	}
+
+	SkyWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.SkyWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.SkyWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.SkyWeapon.GuLevel
+		// DisplayName: Sky Weapon
+		// Tooltip: ""
+	}
+
+	SlaveWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.SlaveWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.SlaveWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.SlaveWeapon.GuLevel
+		// DisplayName: Slave Weapon
+		// Tooltip: ""
+	}
+
+	SoulWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.SoulWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.SoulWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.SoulWeapon.GuLevel
+		// DisplayName: Soul Weapon
+		// Tooltip: ""
+	}
+
+	SpaceWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.SpaceWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.SpaceWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.SpaceWeapon.GuLevel
+		// DisplayName: Space Weapon
+		// Tooltip: ""
+	}
+
+	StealingWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.StealingWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.StealingWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.StealingWeapon.GuLevel
+		// DisplayName: Stealing Weapon
+		// Tooltip: ""
+	}
+
+	SuccessFailureWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.SuccessFailureWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.SuccessFailureWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.SuccessFailureWeapon.GuLevel
+		// DisplayName: Success Failure Weapon
+		// Tooltip: ""
+	}
+
+	SwordWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.SwordWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.SwordWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.SwordWeapon.GuLevel
+		// DisplayName: Sword Weapon
+		// Tooltip: ""
+	}
+
+	TacticalWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.TacticalWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.TacticalWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.TacticalWeapon.GuLevel
+		// DisplayName: Tactical Weapon
+		// Tooltip: ""
+	}
+
+	TimeWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.TimeWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.TimeWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.TimeWeapon.GuLevel
+		// DisplayName: Time Weapon
+		// Tooltip: ""
+	}
+
+	UnrealWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.UnrealWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.UnrealWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.UnrealWeapon.GuLevel
+		// DisplayName: Unreal Weapon
+		// Tooltip: ""
+	}
+
+	VariationWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.VariationWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.VariationWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.VariationWeapon.GuLevel
+		// DisplayName: Variation Weapon
+		// Tooltip: ""
+	}
+
+	VoiceWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.VoiceWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.VoiceWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.VoiceWeapon.GuLevel
+		// DisplayName: Voice Weapon
+		// Tooltip: ""
+	}
+
+	VoidWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.VoidWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.VoidWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.VoidWeapon.GuLevel
+		// DisplayName: Void Weapon
+		// Tooltip: ""
+	}
+
+	WarWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.WarWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.WarWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.WarWeapon.GuLevel
+		// DisplayName: War Weapon
+		// Tooltip: ""
+	}
+
+	WaterWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.WaterWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.WaterWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.WaterWeapon.GuLevel
+		// DisplayName: Water Weapon
+		// Tooltip: ""
+	}
+
+	WindWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.WindWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.WindWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.WindWeapon.GuLevel
+		// DisplayName: Wind Weapon
+		// Tooltip: ""
+	}
+
+	WisdomWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.WisdomWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.WisdomWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.WisdomWeapon.GuLevel
+		// DisplayName: Wisdom Weapon
+		// Tooltip: ""
+	}
+
+	WoodWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.WoodWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.WoodWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.WoodWeapon.GuLevel
+		// DisplayName: Wood Weapon
+		// Tooltip: ""
+	}
+
+	YinYangWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.YinYangWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.YinYangWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.YinYangWeapon.GuLevel
+		// DisplayName: Yin Yang Weapon
+		// Tooltip: ""
+	}
+
+	PowerWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.PowerWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.PowerWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.PowerWeapon.GuLevel
+		// DisplayName: Power Weapon
+		// Tooltip: ""
+	}
+
+	MoonPoisonGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 月毒蛊
+		Tooltip: 发射幽毒之月
+	}
+
+	BloodMoonGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 血月蛊
+		Tooltip: 我死了可以复活，你呢
+	}
+
+	CanopyGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 天蓬蛊
+		Tooltip: 天蓬会削弱对你的伤害效果
+	}
+
+	WaterJiaGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 水甲蛊
+		Tooltip: 使流转的水之力遍及全身
+	}
+
+	SawtoothGoldenWuGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 锯齿金蜈蛊
+		Tooltip: 飞速旋转的金齿绞碎一切来犯之敌
+	}
+
+	SoundbyteGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 音浪蛊
+		Tooltip: 发射音浪攻击
+	}
+
+	YanZhouGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 炎胄蛊
+		Tooltip: 火焰的力量围绕周围
+	}
+
+	PotatoMotherGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 焦雷土豆母蛊
+		Tooltip: 生成焦雷土豆蛊
+	}
+
+	ThunderShieldGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 雷盾蛊
+		Tooltip: 雷霆之力结成护盾
+	}
+
+	ElectricTeethKillingWuGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 电齿杀人蜈蛊
+		Tooltip: 你敢跟电干？！
+	}
+
+	EternalLifeGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 生生不息蛊
+		Tooltip: 使用进行持续治疗
+	}
+
+	ShitGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 屙屎蛊
+		Tooltip: 哼哼 啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊
+	}
+
+	Posioner: {
+		DisplayName: 冰
+		// Tooltip: ""
+	}
+
+	FireHeartGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 炎心蛊
+		Tooltip: 无时无刻不在散发着火焰的气息
+	}
+
+	ReWaterGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 背水一战蛊
+		Tooltip: 我已是 完全之龙！
+	}
+
+	ShiningGu: {
+		Tooltip: 你 抓 不 住
+		DisplayName: 闪光蛊
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：不需要炼化
+		UsesXQi: "{0} 真元需求"
+	}
+
+	TaiGuangGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 太光蛊
+		Tooltip: 难以想象的光明
+	}
+
+	MuMeiGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 木魅蛊
+		Tooltip: 临时变为树人，提升生命恢复和防御力，只能使用木道蛊虫
+	}
+
+	BigBelliedFrogGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 大肚蛙
+		Tooltip:
+			'''
+			左键单击存入背包最靠前的物品，右键单击吐出最后存入的物品
+			最多存入10组物品，不能存入蛊虫
+			'''
+	}
+
+	GratingGu: {
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 光栅蛊
+		Tooltip: 使用光栅控制敌人
+	}
+
+	Enter: {
+		// DisplayName: Enter
+		// Tooltip: ""
+	}
+
+	UITester: {
+		// DisplayName: U I Tester
+		// Tooltip: ""
+	}
+
+	FireTrailWeapon: {
+		// DisplayName: Fire Trail Weapon
+		// Tooltip: ""
+	}
+
+	GeometricTrailWeapon: {
+		// DisplayName: Geometric Trail Weapon
+		// Tooltip: ""
+	}
+
+	MagicTrailWeapon: {
+		// DisplayName: Magic Trail Weapon
+		// Tooltip: ""
+	}
+
+	TrailDemoItems: {
+		// DisplayName: Trail Demo Items
+		// Tooltip: ""
+	}
+
+	LiquidFlameGu: {
+		// UsesXQi: Mods.VerminLordMod.Items.LiquidFlameGu.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.LiquidFlameGu.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.LiquidFlameGu.GuLevel
+		// DisplayName: Liquid Flame Gu
+		// Tooltip: ""
+	}
+
+	QuickQi: {
+		// DisplayName: Quick Qi
+		// Tooltip: ""
+	}
+
+	DanmakuTestWeapon: {
+		// DisplayName: Danmaku Test Weapon
+		// Tooltip: ""
+	}
+
+	BlackPigGu: {
+		// UsesXQi: Mods.VerminLordMod.Items.BlackPigGu.UsesXQi
+		// GuLevel: Mods.VerminLordMod.Items.BlackPigGu.GuLevel
+		// DisplayName: Black Pig Gu
+		// Tooltip: ""
+	}
+
+	WhitePigGu: {
+		// UsesXQi: Mods.VerminLordMod.Items.WhitePigGu.UsesXQi
+		// GuLevel: Mods.VerminLordMod.Items.WhitePigGu.GuLevel
+		// DisplayName: White Pig Gu
+		// Tooltip: ""
+	}
+
+	NineWineBugWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.NineWineBugWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.NineWineBugWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.NineWineBugWeapon.GuLevel
+		// DisplayName: Nine Wine Bug Weapon
+		// Tooltip: ""
+	}
+
+	WineBugWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.WineBugWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.WineBugWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.WineBugWeapon.GuLevel
+		// DisplayName: Wine Bug Weapon
+		// Tooltip: ""
+	}
+
+	SevenWineBugWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.SevenWineBugWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.SevenWineBugWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.SevenWineBugWeapon.GuLevel
+		// DisplayName: Seven Wine Bug Weapon
+		// Tooltip: ""
+	}
+
+	FourFlavorWineBugWeapon: {
+		// UsesXQi: Mods.VerminLordMod.Items.FourFlavorWineBugWeapon.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.FourFlavorWineBugWeapon.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.FourFlavorWineBugWeapon.GuLevel
+		// DisplayName: Four Flavor Wine Bug Weapon
+		// Tooltip: ""
+	}
+
+	BladeBloodBatGuBanner: {
+		DisplayName: 刀翅血蝠蛊旗
+		Tooltip: ""
+	}
+
+	LegionAntBanner: {
+		DisplayName: 军团蚁旗
+		Tooltip: ""
+	}
+
+	StrongElectricWolfBanner: {
+		DisplayName: 豪电狼旗
+		Tooltip: ""
+	}
+
+	NpcDebugger: {
+		// DisplayName: Npc Debugger
+		// Tooltip: ""
+	}
+
+	ReputationReset: {
+		// DisplayName: Reputation Reset
+		// Tooltip: ""
+	}
+}
+
+Buffs: {
+	WaterCirclebuff: {
+		Description: 溪流正环绕着你，防御力和生命回复提升，并自动攻击附近的敌人
+		DisplayName: 潺潺溪流
+	}
+
+	StrengthLongicornbuff: {
+		Description: 蛮力天牛蛊正赋予你强大的力量
+		DisplayName: 天牛蛮力
+	}
+
+	Minilightbuff: {
+		Description: 小光蛊正在加持月光蛊
+		DisplayName: 小光蛊
+	}
+
+	FlowerPigbuff: {
+		Description: 花豕蛊正赋予你一猪之力
+		DisplayName: 花豕力
+	}
+
+	MoonLuminousTextilebuff: {
+		DisplayName: 月华霓裳曲
+		Description: 月光将吸收一部分伤害
+	}
+
+	GrassPuppetbuff: {
+		DisplayName: 草傀
+		Description: 那么，代价是什么呢？
+	}
+
+	BlackHairbuff: {
+		DisplayName: 青丝
+		Description: 青丝为你提供短暂的高额防御
+	}
+
+	HuangLuoLongicornbuff: {
+		Description: 黄骆天牛提升了你的持续作战能力
+		DisplayName: 虫之呼吸
+	}
+
+	LivingGrassCDbuff: {
+		DisplayName: 生息草冷却
+		Description: 生息草不能为你恢复生命值
+	}
+
+	LivingLeaveCDbuff: {
+		DisplayName: 生机叶冷却
+		Description: 你不能使用更多生机叶
+	}
+
+	NineLeavesCDbuff: {
+		DisplayName: 九叶生机草冷却
+		Description: 你不能使用九叶生机草催生更多生机叶
+	}
+
+	WidowSpiderbuff: {
+		// DisplayName: Widow Spiderbuff
+		// Description: Mods.VerminLordMod.Buffs.WidowSpiderbuff.Description
+	}
+
+	BreezeWheelbuff: {
+		DisplayName: 好风凭借力
+		Description: 清风轮蛊让你飞起来！
+	}
+
+	SpiritSalivaGubuff: {
+		DisplayName: 灵涎
+		Description: 我听到了【生生不息】的回响！
+	}
+
+	ABitGubuff: {
+		DisplayName: 星星点灯
+		Description: 照亮~我的前程~
+	}
+
+	Dogbuff: {
+		// DisplayName: Dogbuff
+		// Description: Mods.VerminLordMod.Buffs.Dogbuff.Description
+	}
+
+	LoveToLeavebuff: {
+		// DisplayName: Love To Leavebuff
+		// Description: Mods.VerminLordMod.Buffs.LoveToLeavebuff.Description
+	}
+
+	BlackManebuff: {
+		DisplayName: 黑鬃蛊
+		Description: 防御、伤害提升
+	}
+
+	Rockbuff: {
+		DisplayName: 玉璋护盾
+		Description: 欲买桂花同载酒，只可惜故人...
+	}
+
+	TwistedHeelbuff: {
+		DisplayName: 旋踵蛊
+		Description: 七步以内......枪又快又准
+	}
+
+	Acidicbuff: {
+		// DisplayName: Acidicbuff
+		// Description: Mods.VerminLordMod.Buffs.Acidicbuff.Description
+	}
+
+	TwoPoisonbuff: {
+		// DisplayName: Two Poisonbuff
+		// Description: Mods.VerminLordMod.Buffs.TwoPoisonbuff.Description
+	}
+
+	BlueBirdbuff: {
+		// DisplayName: Blue Birdbuff
+		// Description: Mods.VerminLordMod.Buffs.BlueBirdbuff.Description
+	}
+
+	GoldMoonCutbuff: {
+		DisplayName: 组合技：黄金月
+		Description: 憋了个大的（指大招
+	}
+
+	ShuangLinbuff: {
+		// DisplayName: Shuang Linbuff
+		// Description: Mods.VerminLordMod.Buffs.ShuangLinbuff.Description
+	}
+
+	IceCrystalbuff: {
+		DisplayName: 冰封
+		Description: 我的心是冰冰的
+	}
+
+	ShuangXibuff: {
+		// DisplayName: Shuang Xibuff
+		// Description: Mods.VerminLordMod.Buffs.ShuangXibuff.Description
+	}
+
+	IceBladeStorm1: {
+		DisplayName: 冰
+		Description: 我超，冰！
+	}
+
+	IceBladeStorm2: {
+		DisplayName: 刃
+		Description: 彼岸 葬送
+	}
+
+	IceBladeStorm3: {
+		DisplayName: 风
+		Description: 俺就是扭断你脖子的那股狂风！
+	}
+
+	IceBladeStorm4: {
+		DisplayName: 暴
+		Description: 【冰刃风暴】已装填。准备发射。
+	}
+
+	SoulOscillationbuff: {
+		// DisplayName: Soul Oscillationbuff
+		// Description: Mods.VerminLordMod.Buffs.SoulOscillationbuff.Description
+	}
+
+	Ragebuff: {
+		DisplayName: 红温
+		Description: 怒发冲冠，凭栏处！
+	}
+
+	DingShenbuff: {
+		// DisplayName: Ding Shenbuff
+		// Description: Mods.VerminLordMod.Buffs.DingShenbuff.Description
+	}
+
+	DogControlGuBuff: {
+		DisplayName: 狗
+		Description: 道士十五狗，全区横着走
+	}
+
+	ChasingWindbuff: {
+		DisplayName: 追风
+		Description: 我想要像风一样自由
+	}
+
+	BloodHandprintsbuff: {
+		// DisplayName: Blood Handprintsbuff
+		// Description: Mods.VerminLordMod.Buffs.BloodHandprintsbuff.Description
+	}
+
+	TianDiHongYinbuff: {
+		DisplayName: 耳鸣
+		Description: 你感觉不适
+	}
+
+	TianDiHongYinCDbuff: {
+		DisplayName: 头晕眼花
+		Description: 你不能继续催动天地宏音蛊
+	}
+
+	LittleSoulbuff: {
+		DisplayName: 小魂
+		Description: 你可以和额外一个仆从订立契约
+	}
+
+	BigSoulbuff: {
+		DisplayName: 大魂
+		Description: 你可以和额外两个仆从订立契约
+	}
+
+	GiantSpiritBodybuff: {
+		DisplayName: 巨灵身
+		Description: 你感觉力大无穷
+	}
+
+	GiantSpiritHeartbuff: {
+		DisplayName: 巨灵心
+		Description: 要么服从，要么毁灭
+	}
+
+	GiantSpiritIntentbuff: {
+		DisplayName: 巨灵意
+		Description: 古代如尼文字从未如此浅显易懂
+	}
+
+	JinXiabuff: {
+		DisplayName: 金霞
+		Description: 冲刺！
+	}
+
+	WolfRunbuff: {
+		DisplayName: 狼奔
+		Description: 狼的速度
+	}
+
+	FireClothesbuff: {
+		DisplayName: 火衣
+		Description: 它为什么不会烧到自己呢？
+	}
+
+	OneStarbuff: {
+		DisplayName: 一星半点
+		Description: 半浦夜歌闻盪桨，一星幽火照叉鱼。
+	}
+
+	Starbuff: {
+		// DisplayName: Starbuff
+		// Description: Mods.VerminLordMod.Buffs.Starbuff.Description
+	}
+
+	FiveStarbuff: {
+		DisplayName: 五星连珠
+		Description: 连五星上将麦克阿瑟都承认它的强大
+	}
+
+	FourStarbuff: {
+		DisplayName: 四星立方
+		Description: 四连 举世皆惊！
+	}
+
+	ThreeStarbuff: {
+		DisplayName: 三星在天
+		Description: 三，三日凌空？脱水——
+	}
+
+	TwoStarbuff: {
+		DisplayName: 二星辉映
+		Description: R1+R2=LGMm/L^2=m（2π/T)^2R1
+	}
+
+	WhiteJadebuff: {
+		DisplayName: 白玉
+		Description: 一片冰心在玉壶
+	}
+
+	YingShangbuff: {
+		DisplayName: 影殇
+		Description: 以牙还牙
+	}
+
+	BloodQibuff: {
+		DisplayName: 血气蛊
+		Description: O型就可以随便输了？！
+	}
+
+	XiongHaobuff: {
+		DisplayName: 熊豪之力
+		Description: 熊的力量
+	}
+
+	Waterbuff: {
+		// DisplayName: Waterbuff
+		// Description: Mods.VerminLordMod.Buffs.Waterbuff.Description
+	}
+
+	BigStrengthbuff: {
+		DisplayName: 大力
+		Description: 傻小子就是有把子力气
+	}
+
+	WaterShellbuff: {
+		DisplayName: 水罩
+		Description: 莫之能胜
+	}
+
+	ThreeStepGrassGuCDbuff: {
+		DisplayName: 三步芳草蛊冷却
+		Description: 没活了，拉跨了
+	}
+
+	ThreeStepGrassbuff: {
+		DisplayName: 清香
+		Description: 意义不明的香气
+	}
+
+	MoonPoisonbuff: {
+		// DisplayName: Moon Poisonbuff
+		// Description: Mods.VerminLordMod.Buffs.MoonPoisonbuff.Description
+	}
+
+	Canopybuff: {
+		DisplayName: 天蓬蛊
+		Description: 天蓬之力削弱了对你的伤害效果
+	}
+
+	WaterJiabuff: {
+		DisplayName: 水甲
+		Description: 遍布全身的水流之力化解了攻击
+	}
+
+	YanZhoubuff: {
+		DisplayName: 炎胄
+		Description: 放心，它烫不到自己
+	}
+
+	ThunderShieldbuff: {
+		DisplayName: 雷盾
+		Description: 你现在是等势体
+	}
+
+	FireHeartbuff: {
+		DisplayName: 炎心
+		Description: 你的心脏中似乎流淌着熔岩
+	}
+
+	ReWaterbuff: {
+		DisplayName: 背水一战
+		Description: 撕裂...形骸...解放
+	}
+
+	MuMeibuff: {
+		DisplayName: 木魅
+		Description: 十年树木，百年树人
+	}
+
+	Gratingbuff: {
+		// DisplayName: Gratingbuff
+		// Description: Mods.VerminLordMod.Buffs.Gratingbuff.Description
+	}
+}
+
+DamageClasses.InsectDamageClass.DisplayName: 蛊术伤害
+
+UI: {
+	// WolfWave: Mods.VerminLordMod.UI.WolfWave
+	// Qi: Mods.VerminLordMod.UI.Qi
+}
+
+Biomes: {
+	QingMaoSurfaceBiome: {
+		DisplayName: 青茅山
+		TownNPCDialogueName: 青茅山
+	}
+
+	QingmaoUndergroundBiome: {
+		DisplayName: 青茅山地下部分
+		TownNPCDialogueName: 青茅山地下部分
+	}
+
+	GuYueCompoundBiome: {
+		// DisplayName: Gu Yue Compound Biome
+		// TownNPCDialogueName: the Gu Yue Compound Biome
+	}
+}
+
+Tiles: {
+	QingMaoStoneChest: {
+		MapEntry0: 青茅石箱
+		MapEntry1: 青茅石箱
+	}
+
+	QingMaoStoneDresser.MapEntry: 青茅石梳妆台
+	// YuanSOre.MapEntry: Yuan S Ore
+}
+
+WorldGen: {
+	// ExampleOrePassMessage: Mods.VerminLordMod.WorldGen.ExampleOrePassMessage
+	// BlessedWithExampleOreMessage: Mods.VerminLordMod.WorldGen.BlessedWithExampleOreMessage
+}
+
+Configs: {
+	VerminLordModConfig: {
+		// DisplayName: Vermin Lord Mod Config
+		// Headers.设置: 设置 Header
+
+		LimitSth: {
+			// Label: 等级限制
+			// Tooltip: 限制每转蛊师可以获取的额外血量、力量、防御加成，提升平衡性
+		}
+	}
+}

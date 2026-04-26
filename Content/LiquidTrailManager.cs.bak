@@ -1,0 +1,787 @@
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using Terraria;
+using Terraria.GameContent;
+using Terraria.ID;
+using Terraria.ModLoader;
+
+namespace VerminLordMod.Content
+{
+	/// <summary>
+	/// 液态拖尾管理器 - 为弹幕添加液态火焰效果的碎片拖尾
+	/// </summary>
+	public class LiquidTrailManager
+	{
+		/// <summary>
+		/// 碎片类
+		/// </summary>
+		public class Fragment
+		{
+			public Vector2 Position;
+			public Vector2 Velocity;
+			public float Scale;
+			public int Life;
+			public int MaxLife;
+			public float Rotation;
+			public float RotSpeed;
+
+			public Fragment(Vector2 position, Vector2 velocity, int life, float scale, float rotSpeed) {
+				Position = position;
+				Velocity = velocity;
+				MaxLife = life;
+				Life = life;
+				Scale = scale;
+				RotSpeed = rotSpeed;
+				Rotation = Main.rand.NextFloat(MathHelper.TwoPi);
+			}
+		}
+
+		private List<Fragment> fragments = new List<Fragment>();
+		private int spawnCounter = 0;
+
+		/// <summary>
+		/// 独立的爆炸效果（不依赖弹幕生命周期）
+		/// </summary>
+		private class ExplosionEffect
+		{
+			public List<Fragment> Fragments = new List<Fragment>();
+			public Vector2 Center;
+			public float SizeMultiplier;
+			public Color ColorStart;
+			public Color ColorEnd;
+			public Texture2D Texture;
+			public int TotalLife;
+			public int MaxLife;
+
+			public ExplosionEffect(Vector2 center, float sizeMult, Color colorStart, Color colorEnd, Texture2D tex, int life) {
+				Center = center;
+				SizeMultiplier = sizeMult;
+				ColorStart = colorStart;
+				ColorEnd = colorEnd;
+				Texture = tex;
+				TotalLife = life;
+				MaxLife = life;
+			}
+
+			public bool Update() {
+				for (int i = Fragments.Count - 1; i >= 0; i--) {
+					var f = Fragments[i];
+					f.Velocity *= 0.92f;
+					f.Velocity.Y -= 0.08f;
+					f.Position += f.Velocity;
+					f.Rotation += f.RotSpeed;
+					f.Life--;
+					if (f.Life <= 0) {
+						Fragments.RemoveAt(i);
+					}
+				}
+				TotalLife--;
+				return TotalLife > 0 || Fragments.Count > 0;
+			}
+
+			public void Draw(SpriteBatch sb) {
+				if (Fragments.Count == 0) return;
+
+				sb.End();
+				sb.Begin(SpriteSortMode.Deferred, BlendState.Additive, SamplerState.AnisotropicClamp,
+					DepthStencilState.None, RasterizerState.CullNone, null, Main.GameViewMatrix.TransformationMatrix);
+
+				var sorted = Fragments.OrderBy(f => f.Life);
+				foreach (var f in sorted) {
+					float progress = 1f - (float)f.Life / f.MaxLife;
+					Color fragColor = Color.Lerp(ColorStart, ColorEnd, progress);
+					float scale = f.Scale * (1f - progress * progress);
+
+					sb.Draw(Texture, f.Position - Main.screenPosition, null, fragColor,
+						f.Rotation, Texture.Size() * 0.5f, scale, SpriteEffects.None, 0);
+				}
+
+				sb.End();
+				sb.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.AnisotropicClamp,
+					DepthStencilState.None, RasterizerState.CullNone, null, Main.GameViewMatrix.TransformationMatrix);
+			}
+		}
+
+		private static List<ExplosionEffect> activeExplosions = new List<ExplosionEffect>();
+
+		/// <summary>
+		/// 碎片容器
+		/// </summary>
+		public IReadOnlyList<Fragment> Fragments => fragments;
+
+		/// <summary>
+		/// 最大碎片数量
+		/// </summary>
+		public int MaxFragments { get; set; } = 40;
+
+		/// <summary>
+		/// 碎片存活时间（帧数）
+		/// </summary>
+		public int FragmentLife { get; set; } = 30;
+
+		/// <summary>
+		/// 生成间隔（帧数）
+		/// </summary>
+		public int SpawnInterval { get; set; } = 2;
+
+		/// <summary>
+		/// 碎片大小倍率
+		/// </summary>
+		public float SizeMultiplier { get; set; } = 1f;
+
+		/// <summary>
+		/// 碎片贴图（null则使用弹幕贴图）
+		/// </summary>
+		public Texture2D TrailTexture { get; set; } = null;
+
+		/// <summary>
+		/// 碎片初始颜色（年轻）
+		/// </summary>
+		public Color ColorStart { get; set; } = new Color(255, 80, 30, 255);
+
+		/// <summary>
+		/// 碎片结束颜色（年老）
+		/// </summary>
+		public Color ColorEnd { get; set; } = new Color(60, 10, 20, 0);
+
+		/// <summary>
+		/// 空气阻力系数
+		/// </summary>
+		public float AirResistance { get; set; } = 0.92f;
+
+		/// <summary>
+		/// 浮力系数（正值向上）
+		/// </summary>
+		public float Buoyancy { get; set; } = 0.08f;
+
+		/// <summary>
+		/// 反向惯性系数
+		/// </summary>
+		public float InertiaFactor { get; set; } = 0.25f;
+
+		/// <summary>
+		/// 侧向飞溅系数
+		/// </summary>
+		public float SplashFactor { get; set; } = 0.3f;
+
+		/// <summary>
+		/// 侧向飞溅角度范围
+		/// </summary>
+		public float SplashAngle { get; set; } = 0.8f;
+
+		/// <summary>
+		/// 随机扩散范围
+		/// </summary>
+		public float RandomSpread { get; set; } = 1.2f;
+
+		/// <summary>
+		/// 爆炸效果使用的贴图（null则使用TrailTexture）
+		/// </summary>
+		public Texture2D ExplosionTexture { get; set; } = null;
+
+		/// <summary>
+		/// 生成位置偏移
+		/// </summary>
+		public Vector2 SpawnOffset { get; set; } = Vector2.Zero;
+
+		/// <summary>
+		/// 生成一个碎片
+		/// </summary>
+		public void SpawnFragment(Vector2 projCenter, Vector2 projVelocity) {
+			// (a) 反向惯性
+			Vector2 inertia = -projVelocity * InertiaFactor;
+			// (b) 侧向飞溅
+			Vector2 splash = projVelocity.RotatedByRandom(SplashAngle) * SplashFactor;
+			// (c) 随机扩散
+			Vector2 random = Main.rand.NextVector2Circular(RandomSpread, RandomSpread);
+
+			Vector2 vel = inertia + splash + random;
+			float scale = Main.rand.NextFloat(0.6f, 1.0f) * SizeMultiplier;
+			float rotSpeed = Main.rand.NextFloat(-0.15f, 0.15f);
+
+			fragments.Add(new Fragment(projCenter + SpawnOffset, vel, FragmentLife, scale, rotSpeed));
+		}
+
+		/// <summary>
+		/// 更新所有碎片
+		/// </summary>
+		public void Update(Vector2 projCenter, Vector2 projVelocity) {
+			// 生成碎片
+			spawnCounter++;
+			if (spawnCounter % SpawnInterval == 0 && fragments.Count < MaxFragments) {
+				SpawnFragment(projCenter, projVelocity);
+			}
+
+			// 更新所有碎片
+			for (int i = fragments.Count - 1; i >= 0; i--) {
+				var f = fragments[i];
+				// 空气阻力
+				f.Velocity *= AirResistance;
+				// 浮力
+				f.Velocity.Y -= Buoyancy;
+				// 更新位置
+				f.Position += f.Velocity;
+				// 更新旋转
+				f.Rotation += f.RotSpeed;
+				// 生命减少
+				f.Life--;
+				// 移除死亡的碎片
+				if (f.Life <= 0) {
+					fragments.RemoveAt(i);
+				}
+			}
+		}
+
+		/// <summary>
+		/// 绘制液态拖尾
+		/// </summary>
+		/// <param name="sb">SpriteBatch</param>
+		/// <param name="proj">弹幕实例（用于获取贴图和位置）</param>
+		/// <param name="trailTex">拖尾贴图，null则使用弹幕贴图</param>
+		/// <param name="fragScale">碎片大小倍率</param>
+		/// <returns>是否绘制了内容</returns>
+		public bool Draw(SpriteBatch sb, Projectile proj, Texture2D trailTex = null, float fragScale = 1f) {
+			if (fragments.Count == 0)
+				return false;
+
+			Texture2D tex = trailTex ?? TextureAssets.Projectile[proj.type].Value;
+
+			// 保存当前混合状态
+			sb.End();
+			sb.Begin(SpriteSortMode.Deferred, BlendState.Additive, SamplerState.AnisotropicClamp,
+				DepthStencilState.None, RasterizerState.CullNone, null, Main.GameViewMatrix.TransformationMatrix);
+
+			// 按生命排序（老的先画）
+			var sorted = fragments.OrderBy(f => f.Life);
+
+			// 绘制碎片
+			foreach (var f in sorted) {
+				float progress = 1f - (float)f.Life / f.MaxLife;
+				Color fragColor = Color.Lerp(ColorStart, ColorEnd, progress);
+				float scale = f.Scale * (1f - progress * progress) * fragScale;
+
+				sb.Draw(tex, f.Position - Main.screenPosition, null, fragColor,
+					f.Rotation, tex.Size() * 0.5f, scale, SpriteEffects.None, 0);
+			}
+
+			// 恢复 AlphaBlend 状态
+			sb.End();
+			sb.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.AnisotropicClamp,
+				DepthStencilState.None, RasterizerState.CullNone, null, Main.GameViewMatrix.TransformationMatrix);
+
+			return true;
+		}
+
+		/// <summary>
+		/// 清空所有碎片
+		/// </summary>
+		public void Clear() {
+			fragments.Clear();
+		}
+
+		/// <summary>
+		/// 生成爆炸碎片效果（独立于弹幕生命周期）
+		/// </summary>
+		/// <param name="center">爆炸中心位置</param>
+		/// <param name="count">爆炸碎片数量</param>
+		/// <param name="speed">爆炸速度范围</param>
+		/// <param name="life">碎片存活时间</param>
+		/// <param name="scale">碎片大小</param>
+		/// <param name="skipChance">跳过概率（0-1），用于减少碎片数量</param>
+		public void SpawnExplosion(Vector2 center, int count = 20, float speed = 4f, int? life = null, float scale = 1f, float skipChance = 0f) {
+			int lifeTime = life ?? FragmentLife;
+			Texture2D tex = ExplosionTexture ?? TrailTexture ?? TextureAssets.Projectile[ProjectileID.HolyArrow].Value;
+			var explosion = new ExplosionEffect(center, scale, ColorStart, ColorEnd, tex, lifeTime * 2);
+
+			for (int i = 0; i < count; i++) {
+				if (skipChance > 0 && Main.rand.NextFloat() < skipChance)
+					continue;
+				Vector2 vel = Main.rand.NextVector2Circular(speed, speed);
+				float fragScale = Main.rand.NextFloat(0.6f, 1.0f) * SizeMultiplier;
+				float rotSpeed = Main.rand.NextFloat(-0.2f, 0.2f);
+				explosion.Fragments.Add(new Fragment(center, vel, lifeTime, fragScale, rotSpeed));
+			}
+
+			activeExplosions.Add(explosion);
+		}
+
+		/// <summary>
+		/// 更新所有活跃的爆炸效果（需要在 ModSystem 的PreUpdateMods 或 PostUpdateEverything 中调用）
+		/// </summary>
+		public static void UpdateAll() {
+			for (int i = activeExplosions.Count - 1; i >= 0; i--) {
+				if (!activeExplosions[i].Update()) {
+					activeExplosions.RemoveAt(i);
+				}
+			}
+		}
+
+		/// <summary>
+		/// 绘制所有活跃的爆炸效果（需要在 ModSystem 的PostDrawInterface 或类似位置调用）
+		/// </summary>
+		public static void DrawAll(SpriteBatch sb) {
+			foreach (var exp in activeExplosions) {
+				exp.Draw(sb);
+			}
+		}
+	}
+
+	/// <summary>
+	/// 寒冰拖尾管理器 - 前面凝结，后面碎裂
+	/// </summary>
+	public class IceTrailManager
+	{
+		public class IceShard
+		{
+			public Vector2 Position;
+			public Vector2 Velocity;
+			public float Size;
+			public float Life;
+			public float MaxLife;
+			public float Rotation;
+			public float RotSpeed;
+			public float SpawnAge;
+			public int Generation;
+			public float SparkleSeed;
+			public float FrostSeed;  // 冰霜纹理变化
+
+			public IceShard(Vector2 position, Vector2 velocity, int life, float size, float rotSpeed, int gen) {
+				Position = position;
+				Velocity = velocity;
+				MaxLife = life;
+				Life = life;
+				Size = size;
+				RotSpeed = rotSpeed;
+				Rotation = Main.rand.NextFloat(MathHelper.TwoPi);
+				SpawnAge = 0;
+				Generation = gen;
+				SparkleSeed = Main.rand.NextFloat(100f);
+				FrostSeed = Main.rand.NextFloat(10f);
+			}
+		}
+
+		private List<IceShard> shards = new List<IceShard>();
+		private int spawnCounter = 0;
+		private int frameCounter = 0;
+
+		public IReadOnlyList<IceShard> Shards => shards;
+
+		public int MaxShards { get; set; } = 120;
+		public int ShardLife { get; set; } = 25;
+		public int SpawnInterval { get; set; } = 1;
+		public float SizeMultiplier { get; set; } = 0.5f;
+		public Texture2D TrailTexture { get; set; } = null;
+
+		// 冰晶颜色 - 更冷、更透明
+		public Color FrostColor { get; set; } = new Color(180, 230, 255, 200);
+		public Color CoreColor { get; set; } = new Color(220, 250, 255, 180);
+		public Color HighlightColor { get; set; } = new Color(255, 255, 255, 255);
+
+		public float Gravity { get; set; } = 0.08f;
+		public float AirResistance { get; set; } = 0.95f;
+		public float ShatterProbability { get; set; } = 0.12f;
+		public int MaxGeneration { get; set; } = 2;
+
+		// 生成位置偏移
+		public Vector2 SpawnOffset { get; set; } = Vector2.Zero;
+
+		public void SpawnShard(Vector2 projCenter, Vector2 projVelocity) {
+			// 生成在弹幕后方（反方向），模拟冰在身后凝结
+			float speed = projVelocity.Length();
+			
+			// 速度方向的反方向 + 轻微横向扩散
+			float baseAngle = (float)Math.Atan2(-projVelocity.Y, -projVelocity.X);
+			float spreadAngle = baseAngle + Main.rand.NextFloat(-0.6f, 0.6f);
+			
+			// 后方速度较弱
+			float backSpeed = Main.rand.NextFloat(0.15f, 0.35f) * speed;
+			Vector2 vel = new Vector2((float)Math.Cos(spreadAngle), (float)Math.Sin(spreadAngle)) * backSpeed;
+			
+			// 添加一些随机飘动
+			vel += Main.rand.NextVector2Circular(0.3f, 0.3f);
+			
+			// 尺寸
+			float size = Main.rand.NextFloat(0.4f, 0.7f) * SizeMultiplier;
+			float rotSpeed = Main.rand.NextFloat(-0.08f, 0.08f);
+
+			shards.Add(new IceShard(projCenter + SpawnOffset, vel, ShardLife, size, rotSpeed, 0));
+		}
+
+		public void Update(Vector2 projCenter, Vector2 projVelocity) {
+			frameCounter++;
+			spawnCounter++;
+			
+			if (spawnCounter % SpawnInterval == 0 && shards.Count < MaxShards) {
+				SpawnShard(projCenter, projVelocity);
+			}
+
+			for (int i = shards.Count - 1; i >= 0; i--) {
+				var s = shards[i];
+				s.SpawnAge++;
+				s.Life--;
+
+				// 物理更新 - 下坠效果
+				s.Velocity *= AirResistance;
+				s.Velocity.Y += Gravity;
+				s.Position += s.Velocity;
+				s.Rotation += s.RotSpeed;
+
+				// 碎裂判定 - 越老越容易碎裂（后方碎裂效果）
+				float ageRatio = s.SpawnAge / s.MaxLife;
+				if (ageRatio > 0.5f && s.Generation < MaxGeneration) {
+					// 越老碎裂概率越高
+					float shatterChance = ShatterProbability * (ageRatio - 0.5f) * 2f;
+					if (Main.rand.NextFloat() < shatterChance) {
+						int pieces = Main.rand.Next(2, 4);
+						for (int j = 0; j < pieces; j++) {
+							// 碎片向四周飞散
+							Vector2 pieceVel = Main.rand.NextVector2Circular(1.5f, 1.5f);
+							pieceVel += s.Velocity * 0.3f;
+							pieceVel.Y += 0.5f;
+							float pieceSize = s.Size * Main.rand.NextFloat(0.25f, 0.4f);
+							float rotSpeed = Main.rand.NextFloat(-0.15f, 0.15f);
+							int newLife = (int)(s.Life * Main.rand.NextFloat(0.3f, 0.5f));
+							shards.Add(new IceShard(s.Position, pieceVel, newLife, pieceSize, rotSpeed, s.Generation + 1));
+						}
+						shards.RemoveAt(i);
+						continue;
+					}
+				}
+
+				if (s.Life <= 0) {
+					// 死亡时产生小碎片
+					if (s.Generation < MaxGeneration && Main.rand.NextFloat() < 0.5f) {
+						int pieces = Main.rand.Next(1, 3);
+						for (int j = 0; j < pieces; j++) {
+							Vector2 pieceVel = Main.rand.NextVector2Circular(1.5f, 1.5f);
+							pieceVel.Y += 0.5f;
+							float pieceSize = s.Size * 0.25f;
+							shards.Add(new IceShard(s.Position, pieceVel, 10, pieceSize, 0, s.Generation + 1));
+						}
+					}
+					shards.RemoveAt(i);
+				}
+			}
+		}
+
+		public void AddShard(Vector2 position, Vector2 velocity, int life, float size, float rotSpeed, int gen = 0) {
+			if (shards.Count < MaxShards + 40) {
+				shards.Add(new IceShard(position, velocity, life, size, rotSpeed, gen));
+			}
+		}
+
+		/// <summary>
+		/// 弹幕死亡时的冰碎爆发效果
+		/// </summary>
+		/// <param name="center">爆发中心位置</param>
+		/// <param name="bigCount">大碎片数量</param>
+		/// <param name="smallCount">小碎片数量</param>
+		public void DeathBurst(Vector2 center, int bigCount = 20, int smallCount = 15) {
+			// 大碎片
+			for (int i = 0; i < bigCount; i++) {
+				Vector2 vel = Main.rand.NextVector2Circular(5f, 5f);
+				vel.Y += 1f;
+				float size = Main.rand.NextFloat(0.4f, 0.8f) * SizeMultiplier;
+				AddShard(center, vel, 20, size, Main.rand.NextFloat(-0.2f, 0.2f), 0);
+			}
+			// 小碎片
+			for (int i = 0; i < smallCount; i++) {
+				Vector2 vel = Main.rand.NextVector2Circular(8f, 8f);
+				vel.Y += 2f;
+				float size = Main.rand.NextFloat(0.15f, 0.3f) * SizeMultiplier;
+				AddShard(center, vel, 12, size, Main.rand.NextFloat(-0.3f, 0.3f), 1);
+			}
+		}
+
+		public bool Draw(SpriteBatch sb, Projectile proj, Texture2D trailTex = null, float fragScale = 1f) {
+			if (shards.Count == 0)
+				return false;
+
+			Texture2D tex = trailTex ?? TextureAssets.Projectile[proj.type].Value;
+
+			// 按生命排序，活的先画
+			var sorted = shards.OrderBy(s => s.Life).ToList();
+
+			// 第一层：外层冰雾（淡蓝色）
+			sb.End();
+			sb.Begin(SpriteSortMode.Deferred, BlendState.Additive, SamplerState.AnisotropicClamp,
+				DepthStencilState.None, RasterizerState.CullNone, null, Main.GameViewMatrix.TransformationMatrix);
+
+			foreach (var s in sorted) {
+				float lifeRatio = s.Life / s.MaxLife;
+				float frostVar = (float)Math.Sin(s.FrostSeed * 2f) * 0.2f + 0.8f;
+				
+				float glowAlpha = lifeRatio * 0.25f * frostVar;
+				Color glowColor = new Color(150, 210, 255, 0) * glowAlpha;
+				float glowScale = s.Size * 2.5f * fragScale;
+				
+				sb.Draw(tex, s.Position - Main.screenPosition, null, glowColor,
+					s.Rotation, tex.Size() * 0.5f, glowScale, SpriteEffects.None, 0);
+			}
+
+			// 第二层：冰晶核心（AlphaBlend，半透明）
+			sb.End();
+			sb.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.AnisotropicClamp,
+				DepthStencilState.None, RasterizerState.CullNone, null, Main.GameViewMatrix.TransformationMatrix);
+
+			foreach (var s in sorted) {
+				float lifeRatio = s.Life / s.MaxLife;
+				float ageRatio = s.SpawnAge / s.MaxLife;
+				
+				// 越老越透明
+				float alpha = lifeRatio * (1f - ageRatio * 0.5f) * 0.7f;
+				Color coreColor = Color.Lerp(CoreColor, FrostColor, ageRatio);
+				coreColor *= alpha;
+				float coreScale = s.Size * fragScale;
+				
+				sb.Draw(tex, s.Position - Main.screenPosition, null, coreColor,
+					s.Rotation, tex.Size() * 0.5f, coreScale, SpriteEffects.None, 0);
+			}
+
+			// 第三层：高光闪烁（冰的折射感）
+			sb.End();
+			sb.Begin(SpriteSortMode.Deferred, BlendState.Additive, SamplerState.AnisotropicClamp,
+				DepthStencilState.None, RasterizerState.CullNone, null, Main.GameViewMatrix.TransformationMatrix);
+
+			foreach (var s in sorted) {
+				float lifeRatio = s.Life / s.MaxLife;
+				
+				// 快速闪烁的高光
+				float sparkle = (float)Math.Sin(frameCounter * 0.5f + s.SparkleSeed * 3f) * 0.5f + 0.5f;
+				sparkle = (float)Math.Pow(sparkle, 3);
+				
+				float highlightAlpha = lifeRatio * sparkle * 0.6f;
+				Color highlightColor = HighlightColor * highlightAlpha;
+				float highlightScale = s.Size * 0.25f * fragScale;
+				
+				sb.Draw(tex, s.Position - Main.screenPosition, null, highlightColor,
+					0f, tex.Size() * 0.5f, highlightScale, SpriteEffects.None, 0);
+			}
+
+			sb.End();
+			sb.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.AnisotropicClamp,
+				DepthStencilState.None, RasterizerState.CullNone, null, Main.GameViewMatrix.TransformationMatrix);
+
+			return true;
+		}
+
+		public void Clear() {
+			shards.Clear();
+		}
+	}
+
+	/// <summary>
+	/// 星系拖尾管理器 - 小点之间由半透明细线连接
+	/// </summary>
+	public class GalaxyTrailManager
+	{
+		public class StarPoint
+		{
+			public Vector2 Position;
+			public Vector2 Velocity;
+			public float Life;
+			public float MaxLife;
+			public float Size;
+			public float Brightness;
+
+			public StarPoint(Vector2 position, Vector2 velocity, int life, float size) {
+				Position = position;
+				Velocity = velocity;
+				MaxLife = life;
+				Life = life;
+				Size = size;
+				Brightness = 1f;
+			}
+		}
+
+		private List<StarPoint> points = new List<StarPoint>();
+		private int spawnCounter = 0;
+
+		public IReadOnlyList<StarPoint> Points => points;
+
+		public int MaxPoints { get; set; } = 50;
+		public int PointLife { get; set; } = 120;  // 加长生命周期，像画卷一样缓慢展开
+		public int SpawnInterval { get; set; } = 2;
+		public float SizeMultiplier { get; set; } = 1f;
+		/// <summary>连线最大像素距离，超过则不连线</summary>
+		public float LineMaxDistance { get; set; } = 20f;
+		/// <summary>最大连线数量</summary>
+		public int MaxLineCount { get; set; } = 30;
+		/// <summary>保持高亮的时间比例（这段时间内不淡化）</summary>
+		public float FadeDelayRatio { get; set; } = 0.4f;
+
+		public Color ColorCore { get; set; } = new Color(255, 255, 200, 255);
+		public Color ColorEdge { get; set; } = new Color(100, 80, 200, 0);
+
+		public float AirResistance { get; set; } = 0.995f;  // 更小的阻力，让扩散更缓慢
+		public float DriftSpeed { get; set; } = 0.008f;  // 更慢的扩散速度
+
+		/// <summary>
+		/// 生成位置偏移
+		/// </summary>
+		public Vector2 SpawnOffset { get; set; } = Vector2.Zero;
+
+		/// <summary>
+		/// 拖尾贴图（null则使用弹幕贴图）
+		/// </summary>
+		public Texture2D TrailTexture { get; set; } = null;
+
+		public void SpawnPoint(Vector2 projCenter, Vector2 projVelocity) {
+			Vector2 drift = projVelocity * -0.15f;
+			drift += Main.rand.NextVector2Circular(0.5f, 0.5f);
+			float size = Main.rand.NextFloat(0.3f, 0.6f) * SizeMultiplier;
+
+			points.Add(new StarPoint(projCenter + SpawnOffset, drift, PointLife, size));
+		}
+
+		public void Update(Vector2 projCenter, Vector2 projVelocity) {
+			spawnCounter++;
+			if (spawnCounter % SpawnInterval == 0 && points.Count < MaxPoints) {
+				SpawnPoint(projCenter, projVelocity);
+			}
+
+			for (int i = points.Count - 1; i >= 0; i--) {
+				var p = points[i];
+				
+				// 限制最大速度，防止飘向无限远
+				if (p.Velocity.Length() > 4f) {
+					p.Velocity.Normalize();
+					p.Velocity *= 4f;
+				}
+				
+				p.Velocity *= AirResistance;
+				p.Position += p.Velocity;
+				p.Life--;
+
+				float progress = 1f - p.Life / p.MaxLife;
+				// 画卷效果：先保持高亮，然后缓慢淡化
+				if (progress < FadeDelayRatio) {
+					// 前40%时间保持全亮
+					p.Brightness = 1f;
+				} else {
+					// 之后才开始缓慢淡化（使用二次方曲线，更柔和）
+					float fadeProgress = (progress - FadeDelayRatio) / (1f - FadeDelayRatio);
+					p.Brightness = MathHelper.Lerp(1f, 0f, fadeProgress * fadeProgress);
+				}
+
+				if (p.Life <= 0) {
+					points.RemoveAt(i);
+				}
+			}
+		}
+
+		public bool Draw(SpriteBatch sb, Projectile proj, Texture2D trailTex = null) {
+			if (points.Count < 2)
+				return false;
+
+			Texture2D tex = trailTex ?? TextureAssets.Projectile[proj.type].Value;
+
+			sb.End();
+			sb.Begin(SpriteSortMode.Deferred, BlendState.Additive, SamplerState.AnisotropicClamp,
+				DepthStencilState.None, RasterizerState.CullNone, null, Main.GameViewMatrix.TransformationMatrix);
+
+			// 只连接位置很近的相邻点，细细淡淡
+			int lineCount = 0;
+			
+			for (int i = 1; i < points.Count && lineCount < MaxLineCount; i++) {
+				var p0 = points[i - 1];
+				var p1 = points[i];
+
+				float dist = (p1.Position - p0.Position).Length();
+
+				// 只连接很近的点，避免延伸到屏幕外
+				if (dist > 0 && dist < LineMaxDistance) {
+					// 画卷效果：保持亮一段时间后才淡化，连线也需要这个效果
+					float alpha0 = p0.Brightness;
+					float alpha1 = p1.Brightness;
+					// 连线透明度稍微提高，但保持柔和
+					float alpha = alpha0 * alpha1 * 0.35f;
+					// 距离越近越亮
+					alpha *= (1f - dist / LineMaxDistance);
+
+					Color lineColor = Color.Lerp(ColorCore, ColorEdge, (p0.Life / p0.MaxLife + p1.Life / p1.MaxLife) * 0.5f);
+					lineColor *= alpha;
+
+					DrawLine(sb, p0.Position - Main.screenPosition, p1.Position - Main.screenPosition, lineColor, 0.4f);
+					lineCount++;
+				}
+			}
+
+			foreach (var p in points) {
+				float progress = 1f - p.Life / p.MaxLife;
+				Color starColor = Color.Lerp(ColorCore, ColorEdge, progress);
+				starColor *= p.Brightness;
+
+				float scale = p.Size;
+				sb.Draw(tex, p.Position - Main.screenPosition, null, starColor,
+					0f, tex.Size() * 0.5f, scale, SpriteEffects.None, 0);
+			}
+
+			sb.End();
+			sb.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.AnisotropicClamp,
+				DepthStencilState.None, RasterizerState.CullNone, null, Main.GameViewMatrix.TransformationMatrix);
+
+			return true;
+		}
+
+		private void DrawLine(SpriteBatch sb, Vector2 start, Vector2 end, Color color, float thickness) {
+			float angle = (float)Math.Atan2(end.Y - start.Y, end.X - start.X);
+			float length = (end - start).Length();
+
+			sb.Draw(TextureAssets.MagicPixel.Value, start, null, color,
+				angle, new Vector2(0, 0.5f), new Vector2(length, thickness), SpriteEffects.None, 0);
+		}
+
+		public void Clear() {
+			points.Clear();
+		}
+	}
+
+	/// <summary>
+	/// 风拖尾管理器 - 模拟气流的半透明连续白色渐变条带
+	/// </summary>
+	public class WindTrailManager
+	{
+		public class WindSegment
+		{
+			public Vector2 Position;
+			public Vector2 PreviousPosition;
+			public float Width;
+			public float Life;
+			public float MaxLife;
+			public float Curve;
+
+			public WindSegment(Vector2 position, Vector2 prevPosition, float width, int life) {
+				Position = position;
+				PreviousPosition = prevPosition;
+				Width = width;
+				MaxLife = life;
+				Life = life;
+				Curve = 0f;
+			}
+		}
+
+		private List<WindSegment> segments = new List<WindSegment>();
+		private int spawnCounter = 0;
+
+		public IReadOnlyList<WindSegment> Segments => segments;
+
+		public int MaxSegments { get; set; } = 120;
+		public int SegmentLife { get; set; } = 60;
+		public int SpawnInterval { get; set; } = 1;
+		public float WidthMultiplier { get; set; } = 1f;
+		public float InitialWidth { get; set; } = 8f;
+		public float FinalWidth { get; set; } = 20f;
+
+		public Color ColorStart { get; set; } = new Color(255, 255, 255, 180);
+		public Color ColorEnd { get; set; } = new Color(200, 220, 255, 0);
+
+		public float WindSpeed { get; set; } = 1f;
+		public float CurveStrength { get; set; } = 0.3f;
+		public float SpreadFactor { get; set; } = 0.5f;
+
+		/// <summary>
+		

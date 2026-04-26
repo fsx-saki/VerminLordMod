@@ -1,0 +1,2674 @@
+Projectiles: {
+	WaterCircle.DisplayName: Water Circle
+	WaterBall.DisplayName: Water Ball
+	ThunderBall.DisplayName: Thunder Ball
+	MoonlightProj.DisplayName: Moonlight Proj
+	BoneSpear.DisplayName: Bone Spear
+	StoneCJB.DisplayName: Stone C J B
+	MoonlightProjS.DisplayName: Moonlight Proj S
+	CycloneProj.DisplayName: Cyclone Proj
+	DarkArrow.DisplayName: Dark Arrow
+	WidowSpiderProj.DisplayName: Widow Spider Proj
+	RedNeedle.DisplayName: Red Needle
+	WaterArrowProj.DisplayName: Water Arrow Proj
+	StarDartProj.DisplayName: Star Dart Proj
+	StarArrowProj.DisplayName: Star Arrow Proj
+	MeteorProj.DisplayName: Meteor Proj
+	Dog.DisplayName: Dog
+	LoveToLeaveProj.DisplayName: Love To Leave Proj
+	IceKnife.DisplayName: Ice Knife
+	IceAwl.DisplayName: Ice Awl
+	LightningSpear.DisplayName: Lightning Spear
+	AcidWaterProj.DisplayName: Acid Water Proj
+	PoisonNeedle.DisplayName: Poison Needle
+	GhostFireProj.DisplayName: Ghost Fire Proj
+	PlasmaProj.DisplayName: Plasma Proj
+	MoonlightProjG.DisplayName: Moonlight Proj G
+	BlueBird.DisplayName: Blue Bird
+	MoonlightProjH.DisplayName: Moonlight Proj H
+	GoldMoonCutProj.DisplayName: Gold Moon Cut Proj
+	MoonlightProjC.DisplayName: Moonlight Proj C
+	Spout.DisplayName: Spout
+	ShuangXiProj.DisplayName: Shuang Xi Proj
+	IceSpout.DisplayName: Ice Spout
+	KnifeLight.DisplayName: Knife Light
+	SwordShadow.DisplayName: Sword Shadow
+	SoulShockWave.DisplayName: Soul Shock Wave
+	BloodSkullProj.DisplayName: Blood Skull Proj
+	FrostArrowProj.DisplayName: Frost Arrow Proj
+	DingShenProj.DisplayName: Ding Shen Proj
+	SwordQiProj.DisplayName: Sword Qi Proj
+	DogControlGuMinion.DisplayName: Dog Control Gu Minion
+	QingTengGuProj.DisplayName: Qing Teng Gu Proj
+	WarBoneWheelProj.DisplayName: War Bone Wheel Proj
+	YanTongBeam.DisplayName: Yan Tong Beam
+	YanTongHoldout.DisplayName: Yan Tong Holdout
+	BloodHandprintsProj.DisplayName: Blood Handprints Proj
+	TianDiHongYinProj.DisplayName: Tian Di Hong Yin Proj
+	StoveProj.DisplayName: Stove Proj
+	WaterDrillProj.DisplayName: Water Drill Proj
+	SpiralBoneSpear.DisplayName: Spiral Bone Spear
+	PineNeedleProj.DisplayName: Pine Needle Proj
+	InvitingMoonProjA.DisplayName: Inviting Moon Proj A
+	InvitingMoonProjB.DisplayName: Inviting Moon Proj B
+	InvitingMoonProjC.DisplayName: Inviting Moon Proj C
+	FlyingSwordProj.DisplayName: Flying Sword Proj
+	MeleeSwordProj.DisplayName: Melee Sword Proj
+	GoldNeedleProj.DisplayName: Gold Needle Proj
+	JiaoLeiPotatoProj.DisplayName: Jiao Lei Potato Proj
+	StarfireProj.DisplayName: Starfire Proj
+	StarRiverProj.DisplayName: Star River Proj
+	MoonPoisonProj.DisplayName: Moon Poison Proj
+	BloodMoonProj.DisplayName: Blood Moon Proj
+	SawtoothGoldenWuProj.DisplayName: Sawtooth Golden Wu Proj
+	SoundbyteProj.DisplayName: Soundbyte Proj
+	ElectricTeethKillingWubuff.DisplayName: Electric Teeth Killing Wubuff
+	ElectricTeethKillingWuProj.DisplayName: Electric Teeth Killing Wu Proj
+	WhiteLightProj.DisplayName: White Light Proj
+	ShiningProj.DisplayName: Shining Proj
+	MoonlightProjEnemy.DisplayName: Moonlight Proj Enemy
+	MuMeiAttack.DisplayName: Mu Mei Attack
+	MuMeiAttackN.DisplayName: Mu Mei Attack N
+	GratingProj.DisplayName: Grating Proj
+	FireTrailDemo.DisplayName: Fire Trail Demo
+	GeometricTrailDemo.DisplayName: Geometric Trail Demo
+	MagicTrailDemo.DisplayName: Magic Trail Demo
+	LiquidFlameProjectile.DisplayName: Liquid Flame Projectile
+	StarfireArcProj.DisplayName: Starfire Arc Proj
+	IceFlameProjectile.DisplayName: Ice Flame Projectile
+}
+
+Prefixes: {
+	StretchPrefix.DisplayName: Stretch Prefix
+	ShyPrefix.DisplayName: Shy Prefix
+	SharpTeethPrefix.DisplayName: Sharp Teeth Prefix
+	SharpClawPrefix.DisplayName: Sharp Claw Prefix
+	MildPrefix.DisplayName: Mild Prefix
+	IntrovertPrefix.DisplayName: Introvert Prefix
+	ExtroversionPrefix.DisplayName: Extroversion Prefix
+	ExtremePrefix.DisplayName: Extreme Prefix
+	DyingPrefix.DisplayName: Dying Prefix
+	CurlingUpPrefix.DisplayName: Curling Up Prefix
+	CrustaceaPrefix.DisplayName: Crustacea Prefix
+	ColeopteraPrefix.DisplayName: Coleoptera Prefix
+	AutismPrefix.DisplayName: Autism Prefix
+	ActivePrefix.DisplayName: Active Prefix
+}
+
+NPCs: {
+	XueTangJiaLao: {
+		TownNPCMood: {
+			Princess_LovesNPC: I like {NPCName}.
+			LikeNPC_Princess: I like {NPCName}.
+			HateNPC: 我讨厌{NPCName}。
+			DislikeNPC: 我不喜欢{NPCName}。
+			LikeNPC: 我喜欢{NPCName}。
+			LoveNPC: 我非常喜欢{NPCName}。
+			DislikeBiome: 我不喜欢{BiomeName}。
+			LikeBiome: 我喜欢{BiomeName}。
+			HateCrowded: 我讨厌这么拥挤。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			FarFromHome: 我离家太远了。
+			NoHome: 我讨厌没有家。
+			Content: 我很满足。
+			LoveBiome: 我非常喜欢{BiomeName}。
+			HateBiome: 我讨厌{BiomeName}。
+		}
+
+		DisplayName: Xue Tang Jia Lao
+	}
+
+	JiasTravelingMerchant: {
+		TownNPCMood: {
+			Princess_LovesNPC: I like {NPCName}.
+			LikeNPC_Princess: I like {NPCName}.
+			HateNPC: 我讨厌{NPCName}。
+			DislikeNPC: 我不喜欢{NPCName}。
+			LikeNPC: 我喜欢{NPCName}。
+			LoveNPC: 我非常喜欢{NPCName}。
+			DislikeBiome: 我不喜欢{BiomeName}。
+			LikeBiome: 我喜欢{BiomeName}。
+			HateCrowded: 我讨厌这么拥挤。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			FarFromHome: 我离家太远了。
+			NoHome: 我讨厌没有家。
+			Content: 我很满足。
+			LoveBiome: 我非常喜欢{BiomeName}。
+		}
+
+		DisplayName: Jia's Shop
+	}
+
+	ElectricWolf.DisplayName: Electric Wolf
+	TryBossBody.DisplayName: Try Boss Body
+	TryBossMinion.DisplayName: Try Boss Minion
+	ElectricWolfKing.DisplayName: Electric Wolf King
+
+	YaoTangJiaLao: {
+		DisplayName: Yao Tang Jia Lao
+
+		TownNPCMood: {
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LoveBiome: 我非常喜欢{BiomeName}。
+			LikeBiome: 我喜欢{BiomeName}。
+			LoveNPC: 我非常喜欢{NPCName}。
+			LikeNPC: 我喜欢{NPCName}。
+			DislikeNPC: 我不喜欢{NPCName}。
+			HateNPC: 我讨厌{NPCName}。
+			LikeNPC_Princess: I like {NPCName}.
+			Princess_LovesNPC: I like {NPCName}.
+			DislikeBiome: 我不喜欢{BiomeName}。
+			HateBiome: 我讨厌{BiomeName}。
+		}
+	}
+
+	YuTangJiaLao: {
+		DisplayName: Yu Tang Jia Lao
+
+		TownNPCMood: {
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LoveBiome: 我非常喜欢{BiomeName}。
+			LikeBiome: 我喜欢{BiomeName}。
+			LoveNPC: 我非常喜欢{NPCName}。
+			LikeNPC: 我喜欢{NPCName}。
+			DislikeNPC: 我不喜欢{NPCName}。
+			HateNPC: 我讨厌{NPCName}。
+			LikeNPC_Princess: I like {NPCName}.
+			Princess_LovesNPC: I like {NPCName}.
+			DislikeBiome: 我不喜欢{BiomeName}。
+			HateBiome: 我讨厌{BiomeName}。
+		}
+	}
+
+	BaiA: {
+		DisplayName: Bai A
+
+		TownNPCMood: {
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LoveBiome: 我非常喜欢{BiomeName}。
+			LikeBiome: 我喜欢{BiomeName}。
+			LoveNPC: 我非常喜欢{NPCName}。
+			LikeNPC: 我喜欢{NPCName}。
+			DislikeNPC: 我不喜欢{NPCName}。
+			HateNPC: 我讨厌{NPCName}。
+			LikeNPC_Princess: I like {NPCName}.
+			Princess_LovesNPC: I like {NPCName}.
+			DislikeBiome: 我不喜欢{BiomeName}。
+			HateBiome: 我讨厌{BiomeName}。
+		}
+	}
+
+	GuYuePatrolGuMaster: {
+		DisplayName: Gu Yue Patrol Gu Master
+
+		TownNPCMood: {
+			Content: I am on patrol, do not disturb me.
+			NoHome: Where is Gu Yue Village? I need to report back.
+			FarFromHome: I have strayed too far from my patrol area.
+			LoveSpace: This place has a good view, suitable for警戒.
+			DislikeCrowded: Too many people,不利于警戒.
+			HateCrowded: Too crowded, I cannot stay alert.
+			LoveBiome: I love {BiomeName}, it is very safe here.
+			LikeBiome: I like {BiomeName}, suitable for patrol.
+			LikeNPC: I like {NPCName}, he/she is a reliable companion.
+			DislikeNPC: I dislike {NPCName}, he/she is sneaky.
+			HateNPC: I hate {NPCName}, he/she looks suspicious.
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	BladeBloodBatGu.DisplayName: Blade Blood Bat Gu
+	LegionAnt.DisplayName: Legion Ant
+	StrongElectricWolf.DisplayName: Strong Electric Wolf
+}
+
+Items: {
+	ThunderBallGu: {
+		Tooltip: ""
+		DisplayName: Thunder Ball Gu
+		GuLevel: Mods.VerminLordMod.Items.ThunderBallGu.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.ThunderBallGu.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.ThunderBallGu.UsesXQi
+	}
+
+	RiverStream: {
+		Tooltip: ""
+		DisplayName: River Stream
+		GuLevel: Mods.VerminLordMod.Items.RiverStream.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.RiverStream.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.RiverStream.UsesXQi
+	}
+
+	MoonlightPro: {
+		Tooltip: ""
+		DisplayName: Moonlight Pro
+		GuLevel: Mods.VerminLordMod.Items.MoonlightPro.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.MoonlightPro.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.MoonlightPro.UsesXQi
+	}
+
+	Moonlight: {
+		Tooltip: ""
+		DisplayName: Moonlight
+		GuLevel: Mods.VerminLordMod.Items.Moonlight.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.Moonlight.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.Moonlight.UsesXQi
+	}
+
+	Minilight: {
+		Tooltip: ""
+		DisplayName: Minilight
+		GuLevel: Mods.VerminLordMod.Items.Minilight.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.Minilight.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.Minilight.UsesXQi
+	}
+
+	GuWeaponItem: {
+		Tooltip: ""
+		DisplayName: Gu Weapon Item
+		GuLevel: Mods.VerminLordMod.Items.GuWeaponItem.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.GuWeaponItem.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.GuWeaponItem.UsesXQi
+	}
+
+	BoneSpearGu: {
+		Tooltip: ""
+		DisplayName: Bone Spear Gu
+		GuLevel: Mods.VerminLordMod.Items.BoneSpearGu.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.BoneSpearGu.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.BoneSpearGu.UsesXQi
+	}
+
+	PoemAMusicBox: {
+		Tooltip: ""
+		DisplayName: Poem A Music Box
+	}
+
+	NLMusicBox: {
+		Tooltip: ""
+		DisplayName: N L Music Box
+	}
+
+	SetMax: {
+		Tooltip: ""
+		DisplayName: Set Max
+	}
+
+	PeppaPig: {
+		Tooltip: ""
+		DisplayName: Peppa Pig
+		UsesXQi: Mods.VerminLordMod.Items.PeppaPig.UsesXQi
+	}
+
+	Info: {
+		Tooltip: ""
+		DisplayName: Info
+	}
+
+	Gua: {
+		Tooltip: ""
+		DisplayName: Gua
+	}
+
+	ChunQiuChan: {
+		Tooltip:
+			'''
+			Rank 6 Time Dao Gu - Spring Autumn Cicada
+			Automatically triggers rebirth on lethal damage, retains inventory
+			Heals HP and Qi proportional to Time Energy stored
+			Auto-records positions from the last 4 minutes, returns to a random one on rebirth
+			5-second slow-motion rotating flight with time-rewind effects
+			[c/ffd700:Time Dao Immortal Gu, Reverse Time and Space, Ship of Rebirth]
+			'''
+		DisplayName: Spring Autumn Cicada
+		GuLevel: Gu Level: {0}
+		ControlRate: Refining Progress: {0}
+		UsesXQi: "{0} Qi Cost"
+		RebirthTriggered: Spring Autumn Cicada - Rebirth Successful! Restored {0}%
+		Energy: Time Energy: {0}/{1} ({2}%)
+		EnergyLow: Spring Autumn Cicada's Time Energy is insufficient!
+		PositionHistory: "{0} time coordinates recorded"
+	}
+
+	ChunQiuChanna: {
+		Tooltip: ""
+		DisplayName: Chun Qiu Channa
+	}
+
+	ZizhiYi: {
+		Tooltip: ""
+		DisplayName: Zizhi Yi
+	}
+
+	ZizhiJia: {
+		Tooltip: ""
+		DisplayName: Zizhi Jia
+	}
+
+	ZizhiDing: {
+		Tooltip: ""
+		DisplayName: Zizhi Ding
+	}
+
+	ZizhiBing: {
+		Tooltip: ""
+		DisplayName: Zizhi Bing
+	}
+
+	YuanS: {
+		Tooltip: ""
+		DisplayName: Yuan S
+	}
+
+	WhitePig: {
+		Tooltip: ""
+		DisplayName: White Pig
+		UsesXQi: Mods.VerminLordMod.Items.WhitePig.UsesXQi
+		GuLevel: Mods.VerminLordMod.Items.WhitePig.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.WhitePig.ControlRate
+	}
+
+	WanShi: {
+		Tooltip: ""
+		DisplayName: Wan Shi
+	}
+
+	StrengthLongicorn: {
+		Tooltip: ""
+		DisplayName: Strength Longicorn
+		UsesXQi: Mods.VerminLordMod.Items.StrengthLongicorn.UsesXQi
+		GuLevel: Mods.VerminLordMod.Items.StrengthLongicorn.GuLevel
+	}
+
+	Hopeness: {
+		Tooltip: ""
+		DisplayName: Hopeness
+	}
+
+	FlowerPig: {
+		Tooltip: ""
+		DisplayName: Flower Pig
+		UsesXQi: Mods.VerminLordMod.Items.FlowerPig.UsesXQi
+		GuLevel: Mods.VerminLordMod.Items.FlowerPig.GuLevel
+	}
+
+	ThunderWings: {
+		Tooltip: ""
+		DisplayName: Thunder Wings
+		ControlRate: Mods.VerminLordMod.Items.ThunderWings.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.ThunderWings.UsesXQi
+		GuLevel: Mods.VerminLordMod.Items.ThunderWings.GuLevel
+	}
+
+	StoneSkin: {
+		Tooltip: ""
+		DisplayName: Stone Skin
+		ControlRate: Mods.VerminLordMod.Items.StoneSkin.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.StoneSkin.UsesXQi
+		GuLevel: Mods.VerminLordMod.Items.StoneSkin.GuLevel
+	}
+
+	JadeSkin: {
+		Tooltip: ""
+		DisplayName: Jade Skin
+		ControlRate: Mods.VerminLordMod.Items.JadeSkin.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.JadeSkin.UsesXQi
+		GuLevel: Mods.VerminLordMod.Items.JadeSkin.GuLevel
+	}
+
+	IronSkin: {
+		Tooltip: ""
+		DisplayName: Iron Skin
+		ControlRate: Mods.VerminLordMod.Items.IronSkin.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.IronSkin.UsesXQi
+		GuLevel: Mods.VerminLordMod.Items.IronSkin.GuLevel
+	}
+
+	GuAccessoryItem: {
+		Tooltip: ""
+		DisplayName: Gu Accessory Item
+		ControlRate: Mods.VerminLordMod.Items.GuAccessoryItem.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.GuAccessoryItem.UsesXQi
+	}
+
+	CopperSkin: {
+		Tooltip: ""
+		DisplayName: Copper Skin
+		ControlRate: Mods.VerminLordMod.Items.CopperSkin.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.CopperSkin.UsesXQi
+		GuLevel: Mods.VerminLordMod.Items.CopperSkin.GuLevel
+	}
+
+	BearPower: {
+		Tooltip: ""
+		DisplayName: Bear Power
+		ControlRate: Mods.VerminLordMod.Items.BearPower.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.BearPower.UsesXQi
+		GuLevel: Mods.VerminLordMod.Items.BearPower.GuLevel
+	}
+
+	FirstToSecond: {
+		DisplayName: First To Second
+		Tooltip: ""
+	}
+
+	SecondToThird: {
+		DisplayName: Second To Third
+		Tooltip: ""
+	}
+
+	WineBug: {
+		GuLevel: Mods.VerminLordMod.Items.WineBug.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.WineBug.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.WineBug.UsesXQi
+		DisplayName: Wine Bug
+		Tooltip: ""
+	}
+
+	ScaleGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ScaleGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ScaleGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ScaleGu.GuLevel
+		DisplayName: Scale Gu
+		Tooltip: ""
+	}
+
+	InvisibleStoneGu: {
+		UsesXQi: Mods.VerminLordMod.Items.InvisibleStoneGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.InvisibleStoneGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.InvisibleStoneGu.GuLevel
+		DisplayName: Invisible Stone Gu
+		Tooltip: ""
+	}
+
+	InvisibleScaleGu: {
+		UsesXQi: Mods.VerminLordMod.Items.InvisibleScaleGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.InvisibleScaleGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.InvisibleScaleGu.GuLevel
+		DisplayName: Invisible Scale Gu
+		Tooltip: ""
+	}
+
+	MoonLuminousTextile: {
+		UsesXQi: Mods.VerminLordMod.Items.MoonLuminousTextile.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.MoonLuminousTextile.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.MoonLuminousTextile.GuLevel
+		DisplayName: Moon Luminous Textile
+		Tooltip: ""
+	}
+
+	TraceStoneGu: {
+		UsesXQi: Mods.VerminLordMod.Items.TraceStoneGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.TraceStoneGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.TraceStoneGu.GuLevel
+		DisplayName: Trace Stone Gu
+		Tooltip: ""
+	}
+
+	MoonTrace: {
+		UsesXQi: Mods.VerminLordMod.Items.MoonTrace.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.MoonTrace.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.MoonTrace.GuLevel
+		DisplayName: Moon Trace
+		Tooltip: ""
+	}
+
+	MoonSpinning: {
+		UsesXQi: Mods.VerminLordMod.Items.MoonSpinning.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.MoonSpinning.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.MoonSpinning.GuLevel
+		DisplayName: Moon Spinning
+		Tooltip: ""
+	}
+
+	Cyclone: {
+		UsesXQi: Mods.VerminLordMod.Items.Cyclone.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.Cyclone.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.Cyclone.GuLevel
+		DisplayName: Cyclone
+		Tooltip: ""
+	}
+
+	WineBagFlowerGu: {
+		UsesXQi: Mods.VerminLordMod.Items.WineBagFlowerGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.WineBagFlowerGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.WineBagFlowerGu.GuLevel
+		DisplayName: Wine Bag Flower Gu
+		Tooltip: ""
+	}
+
+	RiceBagGrassGu: {
+		UsesXQi: Mods.VerminLordMod.Items.RiceBagGrassGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.RiceBagGrassGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.RiceBagGrassGu.GuLevel
+		DisplayName: Rice Bag Grass Gu
+		Tooltip: ""
+	}
+
+	GrassPuppet: {
+		UsesXQi: Mods.VerminLordMod.Items.GrassPuppet.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.GrassPuppet.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.GrassPuppet.GuLevel
+		DisplayName: Grass Puppet
+		Tooltip: ""
+	}
+
+	BlackHair: {
+		UsesXQi: Mods.VerminLordMod.Items.BlackHair.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BlackHair.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BlackHair.GuLevel
+		DisplayName: Black Hair
+		Tooltip: ""
+	}
+
+	HundredLifeGu: {
+		UsesXQi: Mods.VerminLordMod.Items.HundredLifeGu.UsesXQi
+		DisplayName: Hundred Life Gu
+		Tooltip: ""
+		GuLevel: Mods.VerminLordMod.Items.HundredLifeGu.GuLevel
+	}
+
+	TenLifeGu: {
+		UsesXQi: Mods.VerminLordMod.Items.TenLifeGu.UsesXQi
+		DisplayName: Ten Life Gu
+		Tooltip: ""
+		GuLevel: Mods.VerminLordMod.Items.TenLifeGu.GuLevel
+	}
+
+	ThousandLifeGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ThousandLifeGu.UsesXQi
+		DisplayName: Thousand Life Gu
+		Tooltip: ""
+		GuLevel: Mods.VerminLordMod.Items.ThousandLifeGu.GuLevel
+	}
+
+	DarkArrowGu: {
+		UsesXQi: Mods.VerminLordMod.Items.DarkArrowGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.DarkArrowGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.DarkArrowGu.GuLevel
+		DisplayName: Dark Arrow Gu
+		Tooltip: ""
+	}
+
+	CopperSkinS: {
+		UsesXQi: Mods.VerminLordMod.Items.CopperSkinS.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.CopperSkinS.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.CopperSkinS.GuLevel
+		DisplayName: Copper Skin S
+		Tooltip: ""
+	}
+
+	CopperSkinSS: {
+		UsesXQi: Mods.VerminLordMod.Items.CopperSkinSS.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.CopperSkinSS.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.CopperSkinSS.GuLevel
+		DisplayName: Copper Skin S S
+		Tooltip: ""
+	}
+
+	WolfWaveCard: {
+		DisplayName: Wolf Wave Card
+		Tooltip: ""
+	}
+
+	HuangLuoLongicorn: {
+		Tooltip: ""
+		DisplayName: Huang Luo Longicorn
+		UsesXQi: Mods.VerminLordMod.Items.HuangLuoLongicorn.UsesXQi
+		GuLevel: Mods.VerminLordMod.Items.HuangLuoLongicorn.GuLevel
+	}
+
+	DragonBallCricket: {
+		Tooltip: ""
+		DisplayName: Dragon Ball Cricket
+		UsesXQi: Mods.VerminLordMod.Items.DragonBallCricket.UsesXQi
+		GuLevel: Mods.VerminLordMod.Items.DragonBallCricket.GuLevel
+	}
+
+	MoonlightCreeper.DisplayName: Moonlight Creeper
+
+	LivingLeaf: {
+		UsesXQi: Mods.VerminLordMod.Items.LivingLeaf.UsesXQi
+		DisplayName: Living Leaf
+		Tooltip: ""
+		GuLevel: Mods.VerminLordMod.Items.LivingLeaf.GuLevel
+	}
+
+	LivingGrass: {
+		UsesXQi: Mods.VerminLordMod.Items.LivingGrass.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.LivingGrass.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.LivingGrass.GuLevel
+		DisplayName: Living Grass
+		Tooltip: ""
+	}
+
+	NineLeavesLivingGrass: {
+		UsesXQi: Mods.VerminLordMod.Items.NineLeavesLivingGrass.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.NineLeavesLivingGrass.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.NineLeavesLivingGrass.GuLevel
+		DisplayName: Nine Leaves Living Grass
+		Tooltip: ""
+	}
+
+	WidowSpider: {
+		UsesXQi: Mods.VerminLordMod.Items.WidowSpider.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.WidowSpider.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.WidowSpider.GuLevel
+		DisplayName: Widow Spider
+		Tooltip: ""
+	}
+
+	RedNeedleScorpion: {
+		UsesXQi: Mods.VerminLordMod.Items.RedNeedleScorpion.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.RedNeedleScorpion.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.RedNeedleScorpion.GuLevel
+		DisplayName: Red Needle Scorpion
+		Tooltip: ""
+	}
+
+	DirtGu: {
+		UsesXQi: Mods.VerminLordMod.Items.DirtGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.DirtGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.DirtGu.GuLevel
+		DisplayName: Dirt Gu
+		Tooltip: ""
+	}
+
+	OneMinion: {
+		UsesXQi: Mods.VerminLordMod.Items.OneMinion.UsesXQi
+		DisplayName: One Minion
+		Tooltip: ""
+		GuLevel: Mods.VerminLordMod.Items.OneMinion.GuLevel
+	}
+
+	BreezeWheelGu: {
+		UsesXQi: Mods.VerminLordMod.Items.BreezeWheelGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BreezeWheelGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BreezeWheelGu.GuLevel
+		DisplayName: Breeze Wheel Gu
+		Tooltip: ""
+	}
+
+	FifthToSixth: {
+		DisplayName: Fifth To Sixth
+		Tooltip: ""
+	}
+
+	ForthToFifth: {
+		DisplayName: Forth To Fifth
+		Tooltip: ""
+	}
+
+	ThirdToForth: {
+		DisplayName: Third To Forth
+		Tooltip: ""
+	}
+
+	SpiritSalivaGu: {
+		UsesXQi: Mods.VerminLordMod.Items.SpiritSalivaGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.SpiritSalivaGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.SpiritSalivaGu.GuLevel
+		DisplayName: Spirit Saliva Gu
+		Tooltip: ""
+	}
+
+	WaterArrowGu: {
+		UsesXQi: Mods.VerminLordMod.Items.WaterArrowGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.WaterArrowGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.WaterArrowGu.GuLevel
+		DisplayName: Water Arrow Gu
+		Tooltip: ""
+	}
+
+	ABitGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ABitGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ABitGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ABitGu.GuLevel
+		DisplayName: A Bit Gu
+		Tooltip: ""
+	}
+
+	StarDartGu: {
+		UsesXQi: Mods.VerminLordMod.Items.StarDartGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.StarDartGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.StarDartGu.GuLevel
+		DisplayName: Star Dart Gu
+		Tooltip: ""
+	}
+
+	StarArrowGu: {
+		UsesXQi: Mods.VerminLordMod.Items.StarArrowGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.StarArrowGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.StarArrowGu.GuLevel
+		DisplayName: Star Arrow Gu
+		Tooltip: ""
+	}
+
+	MeteorGu: {
+		UsesXQi: Mods.VerminLordMod.Items.MeteorGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.MeteorGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.MeteorGu.GuLevel
+		DisplayName: Meteor Gu
+		Tooltip: ""
+	}
+
+	WarmStringSpider: {
+		UsesXQi: Mods.VerminLordMod.Items.WarmStringSpider.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.WarmStringSpider.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.WarmStringSpider.GuLevel
+		DisplayName: Warm String Spider
+		Tooltip: ""
+	}
+
+	DogControlGu: {
+		UsesXQi: Mods.VerminLordMod.Items.DogControlGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.DogControlGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.DogControlGu.GuLevel
+		DisplayName: Dog Control Gu
+		Tooltip: ""
+	}
+
+	BlackPig: {
+		UsesXQi: Mods.VerminLordMod.Items.BlackPig.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BlackPig.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BlackPig.GuLevel
+		DisplayName: Black Pig
+		Tooltip: ""
+	}
+
+	LoveToLeave: {
+		UsesXQi: Mods.VerminLordMod.Items.LoveToLeave.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.LoveToLeave.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.LoveToLeave.GuLevel
+		DisplayName: Love To Leave
+		Tooltip: ""
+	}
+
+	KsitigarbhaFlowerGu: {
+		DisplayName: Ksitigarbha Flower Gu
+		Tooltip: ""
+	}
+
+	BlackMane: {
+		UsesXQi: Mods.VerminLordMod.Items.BlackMane.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BlackMane.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BlackMane.GuLevel
+		DisplayName: Black Mane
+		Tooltip: ""
+	}
+
+	RockGu: {
+		UsesXQi: Mods.VerminLordMod.Items.RockGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.RockGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.RockGu.GuLevel
+		DisplayName: Rock Gu
+		Tooltip: ""
+	}
+
+	FourFlavorWineBug: {
+		UsesXQi: Mods.VerminLordMod.Items.FourFlavorWineBug.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.FourFlavorWineBug.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.FourFlavorWineBug.GuLevel
+		DisplayName: Four Flavor Wine Bug
+		Tooltip: ""
+	}
+
+	WhiteChrysalis: {
+		UsesXQi: Mods.VerminLordMod.Items.WhiteChrysalis.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.WhiteChrysalis.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.WhiteChrysalis.GuLevel
+		DisplayName: White Chrysalis
+		Tooltip: ""
+	}
+
+	JinLiGu: {
+		Tooltip: ""
+		DisplayName: Jin Li Gu
+		GuLevel: Mods.VerminLordMod.Items.JinLiGu.GuLevel
+		UsesXQi: Mods.VerminLordMod.Items.JinLiGu.UsesXQi
+	}
+
+	BoneBanbooBlock: {
+		DisplayName: Bone Banboo Block
+		Tooltip: ""
+	}
+
+	IceKnifeGu: {
+		UsesXQi: Mods.VerminLordMod.Items.IceKnifeGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.IceKnifeGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.IceKnifeGu.GuLevel
+		DisplayName: Ice Knife Gu
+		Tooltip: ""
+	}
+
+	IceAwlGu: {
+		UsesXQi: Mods.VerminLordMod.Items.IceAwlGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.IceAwlGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.IceAwlGu.GuLevel
+		DisplayName: Ice Awl Gu
+		Tooltip: ""
+	}
+
+	BronzeShari: {
+		GuLevel: Mods.VerminLordMod.Items.BronzeShari.GuLevel
+		DisplayName: Bronze Shari
+		Tooltip: ""
+	}
+
+	GoldShari: {
+		GuLevel: Mods.VerminLordMod.Items.GoldShari.GuLevel
+		DisplayName: Gold Shari
+		Tooltip: ""
+	}
+
+	PurpleCrystalShari: {
+		GuLevel: Mods.VerminLordMod.Items.PurpleCrystalShari.GuLevel
+		DisplayName: Purple Crystal Shari
+		Tooltip: ""
+	}
+
+	RedSteelShari: {
+		GuLevel: Mods.VerminLordMod.Items.RedSteelShari.GuLevel
+		DisplayName: Red Steel Shari
+		Tooltip: ""
+	}
+
+	SliverShari: {
+		GuLevel: Mods.VerminLordMod.Items.SliverShari.GuLevel
+		DisplayName: Sliver Shari
+		Tooltip: ""
+	}
+
+	TwistedHeelGu: {
+		UsesXQi: Mods.VerminLordMod.Items.TwistedHeelGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.TwistedHeelGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.TwistedHeelGu.GuLevel
+		DisplayName: Twisted Heel Gu
+		Tooltip: ""
+	}
+
+	LightningSpearGu: {
+		UsesXQi: Mods.VerminLordMod.Items.LightningSpearGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.LightningSpearGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.LightningSpearGu.GuLevel
+		DisplayName: Lightning Spear Gu
+		Tooltip: ""
+	}
+
+	AcidWaterGu: {
+		UsesXQi: Mods.VerminLordMod.Items.AcidWaterGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.AcidWaterGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.AcidWaterGu.GuLevel
+		DisplayName: Acid Water Gu
+		Tooltip: ""
+	}
+
+	PoisonNeedleGu: {
+		GuLevel: Mods.VerminLordMod.Items.PoisonNeedleGu.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.PoisonNeedleGu.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.PoisonNeedleGu.UsesXQi
+		DisplayName: Poison Needle Gu
+		Tooltip: ""
+	}
+
+	GhostFireGu: {
+		UsesXQi: Mods.VerminLordMod.Items.GhostFireGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.GhostFireGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.GhostFireGu.GuLevel
+		DisplayName: Ghost Fire Gu
+		Tooltip: ""
+	}
+
+	PlasmaGu: {
+		UsesXQi: Mods.VerminLordMod.Items.PlasmaGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.PlasmaGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.PlasmaGu.GuLevel
+		DisplayName: Plasma Gu
+		Tooltip: ""
+	}
+
+	GoldMoon: {
+		UsesXQi: Mods.VerminLordMod.Items.GoldMoon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.GoldMoon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.GoldMoon.GuLevel
+		DisplayName: Gold Moon
+		Tooltip: ""
+	}
+
+	BluebirdIceCoffinGu: {
+		UsesXQi: Mods.VerminLordMod.Items.BluebirdIceCoffinGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BluebirdIceCoffinGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BluebirdIceCoffinGu.GuLevel
+		DisplayName: Bluebird Ice Coffin Gu
+		Tooltip: ""
+	}
+
+	MoonHandKnife: {
+		UsesXQi: Mods.VerminLordMod.Items.MoonHandKnife.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.MoonHandKnife.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.MoonHandKnife.GuLevel
+		DisplayName: Moon Hand Knife
+		Tooltip: ""
+	}
+
+	ShuangLinMoonGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ShuangLinMoonGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ShuangLinMoonGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ShuangLinMoonGu.GuLevel
+		DisplayName: Shuang Lin Moon Gu
+		Tooltip: ""
+	}
+
+	IceCrystalGu: {
+		UsesXQi: Mods.VerminLordMod.Items.IceCrystalGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.IceCrystalGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.IceCrystalGu.GuLevel
+		DisplayName: Ice Crystal Gu
+		Tooltip: ""
+	}
+
+	SpoutGu: {
+		UsesXQi: Mods.VerminLordMod.Items.SpoutGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.SpoutGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.SpoutGu.GuLevel
+		DisplayName: Spout Gu
+		Tooltip: ""
+	}
+
+	ShuangXiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ShuangXiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ShuangXiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ShuangXiGu.GuLevel
+		DisplayName: Shuang Xi Gu
+		Tooltip: ""
+	}
+
+	GhostFireGuPro: {
+		GuLevel: Mods.VerminLordMod.Items.GhostFireGuPro.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.GhostFireGuPro.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.GhostFireGuPro.UsesXQi
+		DisplayName: Ghost Fire Gu Pro
+		Tooltip: ""
+	}
+
+	KnifeLightGu: {
+		UsesXQi: Mods.VerminLordMod.Items.KnifeLightGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.KnifeLightGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.KnifeLightGu.GuLevel
+		DisplayName: Knife Light Gu
+		Tooltip: ""
+	}
+
+	SwordShadowGu: {
+		UsesXQi: Mods.VerminLordMod.Items.SwordShadowGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.SwordShadowGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.SwordShadowGu.GuLevel
+		DisplayName: Sword Shadow Gu
+		Tooltip: ""
+	}
+
+	CareerGu: {
+		UsesXQi: Mods.VerminLordMod.Items.CareerGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.CareerGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.CareerGu.GuLevel
+		DisplayName: Career Gu
+		Tooltip: ""
+	}
+
+	StraightCollisionGu: {
+		UsesXQi: Mods.VerminLordMod.Items.StraightCollisionGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.StraightCollisionGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.StraightCollisionGu.GuLevel
+		DisplayName: Straight Collision Gu
+		Tooltip: ""
+	}
+
+	GhostlyCallingGu: {
+		UsesXQi: Mods.VerminLordMod.Items.GhostlyCallingGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.GhostlyCallingGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.GhostlyCallingGu.GuLevel
+		DisplayName: Ghostly Calling Gu
+		Tooltip: ""
+	}
+
+	RageGu: {
+		UsesXQi: Mods.VerminLordMod.Items.RageGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.RageGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.RageGu.GuLevel
+		DisplayName: Rage Gu
+		Tooltip: ""
+	}
+
+	JunLiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.JunLiGu.UsesXQi
+		GuLevel: Mods.VerminLordMod.Items.JunLiGu.GuLevel
+		DisplayName: Jun Li Gu
+		Tooltip: ""
+	}
+
+	ShiJinLiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ShiJinLiGu.UsesXQi
+		GuLevel: Mods.VerminLordMod.Items.ShiJinLiGu.GuLevel
+		DisplayName: Shi Jin Li Gu
+		Tooltip: ""
+	}
+
+	NineWineBug: {
+		UsesXQi: Mods.VerminLordMod.Items.NineWineBug.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.NineWineBug.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.NineWineBug.GuLevel
+		DisplayName: Nine Wine Bug
+		Tooltip: ""
+	}
+
+	SevenWineBug: {
+		UsesXQi: Mods.VerminLordMod.Items.SevenWineBug.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.SevenWineBug.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.SevenWineBug.GuLevel
+		DisplayName: Seven Wine Bug
+		Tooltip: ""
+	}
+
+	BloodSkullGu: {
+		UsesXQi: Mods.VerminLordMod.Items.BloodSkullGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BloodSkullGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BloodSkullGu.GuLevel
+		DisplayName: Blood Skull Gu
+		Tooltip: ""
+	}
+
+	ZZSetting: {
+		DisplayName: Z Z Setting
+		Tooltip: ""
+	}
+
+	Bugger: {
+		DisplayName: Bugger
+		Tooltip: ""
+	}
+
+	FrostArrowGu: {
+		UsesXQi: Mods.VerminLordMod.Items.FrostArrowGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.FrostArrowGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.FrostArrowGu.GuLevel
+		DisplayName: Frost Arrow Gu
+		Tooltip: ""
+	}
+
+	RampageGu: {
+		UsesXQi: Mods.VerminLordMod.Items.RampageGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.RampageGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.RampageGu.GuLevel
+		DisplayName: Rampage Gu
+		Tooltip: ""
+	}
+
+	ToilGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ToilGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ToilGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ToilGu.GuLevel
+		DisplayName: Toil Gu
+		Tooltip: ""
+	}
+
+	DingShenGu: {
+		UsesXQi: Mods.VerminLordMod.Items.DingShenGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.DingShenGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.DingShenGu.GuLevel
+		DisplayName: Ding Shen Gu
+		Tooltip: ""
+	}
+
+	SwordQiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.SwordQiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.SwordQiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.SwordQiGu.GuLevel
+		DisplayName: Sword Qi Gu
+		Tooltip: ""
+	}
+
+	TianyuanBaolianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.TianyuanBaolianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.TianyuanBaolianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.TianyuanBaolianGu.GuLevel
+		yuanRateText: Mods.VerminLordMod.Items.TianyuanBaolianGu.yuanRateText
+		DisplayName: Tianyuan Baolian Gu
+		Tooltip: ""
+	}
+
+	DogControlGuItem: {
+		DisplayName: Dog Control Gu Item
+		Tooltip: ""
+		UsesXQi: Mods.VerminLordMod.Items.DogControlGuItem.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.DogControlGuItem.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.DogControlGuItem.GuLevel
+	}
+
+	TYBL: {
+		DisplayName: T Y B L
+		Tooltip: ""
+	}
+
+	QingMaoStoneBed: {
+		DisplayName: Qing Mao Stone Bed
+		Tooltip: ""
+	}
+
+	QingMaoStoneChair: {
+		DisplayName: Qing Mao Stone Chair
+		Tooltip: ""
+	}
+
+	QingMaoStoneChest: {
+		DisplayName: Qing Mao Stone Chest
+		Tooltip: ""
+	}
+
+	QingMaoStoneChestKey: {
+		DisplayName: Qing Mao Stone Chest Key
+		Tooltip: ""
+	}
+
+	QingMaoStoneClock: {
+		DisplayName: Qing Mao Stone Clock
+		Tooltip: ""
+	}
+
+	QingMaoStoneDoor: {
+		DisplayName: Qing Mao Stone Door
+		Tooltip: ""
+	}
+
+	QingMaoStoneDresser: {
+		DisplayName: Qing Mao Stone Dresser
+		Tooltip: ""
+	}
+
+	QingMaoStonePlatform: {
+		DisplayName: Qing Mao Stone Platform
+		Tooltip: ""
+	}
+
+	QingMaoStoneSink: {
+		DisplayName: Qing Mao Stone Sink
+		Tooltip: ""
+	}
+
+	QingMaoStoneTable: {
+		DisplayName: Qing Mao Stone Table
+		Tooltip: ""
+	}
+
+	QingMaoStoneToilet: {
+		DisplayName: Qing Mao Stone Toilet
+		Tooltip: ""
+	}
+
+	QingMaoStoneWorkbench: {
+		DisplayName: Qing Mao Stone Workbench
+		Tooltip: ""
+	}
+
+	QingMaoStoneBlock: {
+		DisplayName: Qing Mao Stone Block
+		Tooltip: ""
+	}
+
+	YuanSOre: {
+		DisplayName: Yuan S Ore
+		Tooltip: ""
+	}
+
+	QingTengGu: {
+		DisplayName: Qing Teng Gu
+		Tooltip: ""
+		UsesXQi: Mods.VerminLordMod.Items.QingTengGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.QingTengGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.QingTengGu.GuLevel
+	}
+
+	WarBoneWheel: {
+		UsesXQi: Mods.VerminLordMod.Items.WarBoneWheel.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.WarBoneWheel.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.WarBoneWheel.GuLevel
+		DisplayName: War Bone Wheel
+		Tooltip: ""
+	}
+
+	GoldenThreadCloakGu: {
+		UsesXQi: Mods.VerminLordMod.Items.GoldenThreadCloakGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.GoldenThreadCloakGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.GoldenThreadCloakGu.GuLevel
+		DisplayName: Golden Thread Cloak Gu
+		Tooltip: ""
+	}
+
+	ChasingWindGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ChasingWindGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ChasingWindGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ChasingWindGu.GuLevel
+		DisplayName: Chasing Wind Gu
+		Tooltip: ""
+	}
+
+	TengClawGu: {
+		UsesXQi: Mods.VerminLordMod.Items.TengClawGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.TengClawGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.TengClawGu.GuLevel
+		DisplayName: Teng Claw Gu
+		Tooltip: ""
+	}
+
+	YanTongGu: {
+		DisplayName: Yan Tong Gu
+		Tooltip: ""
+		UsesXQi: Mods.VerminLordMod.Items.YanTongGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.YanTongGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.YanTongGu.GuLevel
+	}
+
+	BloodHandprintGu: {
+		UsesXQi: Mods.VerminLordMod.Items.BloodHandprintGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BloodHandprintGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BloodHandprintGu.GuLevel
+		DisplayName: Blood Handprint Gu
+		Tooltip: ""
+	}
+
+	TianDiHongYinGu: {
+		UsesXQi: Mods.VerminLordMod.Items.TianDiHongYinGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.TianDiHongYinGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.TianDiHongYinGu.GuLevel
+		DisplayName: Tian Di Hong Yin Gu
+		Tooltip: ""
+	}
+
+	LittleSoulGu: {
+		UsesXQi: Mods.VerminLordMod.Items.LittleSoulGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.LittleSoulGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.LittleSoulGu.GuLevel
+		DisplayName: Little Soul Gu
+		Tooltip: ""
+	}
+
+	BigSoulGu: {
+		UsesXQi: Mods.VerminLordMod.Items.BigSoulGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BigSoulGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BigSoulGu.GuLevel
+		DisplayName: Big Soul Gu
+		Tooltip: ""
+	}
+
+	GiantSpiritBodyGu: {
+		UsesXQi: Mods.VerminLordMod.Items.GiantSpiritBodyGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.GiantSpiritBodyGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.GiantSpiritBodyGu.GuLevel
+		DisplayName: Giant Spirit Body Gu
+		Tooltip: ""
+	}
+
+	GiantSpiritHeartGu: {
+		UsesXQi: Mods.VerminLordMod.Items.GiantSpiritHeartGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.GiantSpiritHeartGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.GiantSpiritHeartGu.GuLevel
+		DisplayName: Giant Spirit Heart Gu
+		Tooltip: ""
+	}
+
+	GiantSpiritIntentGu: {
+		UsesXQi: Mods.VerminLordMod.Items.GiantSpiritIntentGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.GiantSpiritIntentGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.GiantSpiritIntentGu.GuLevel
+		DisplayName: Giant Spirit Intent Gu
+		Tooltip: ""
+	}
+
+	JinXiaGu: {
+		UsesXQi: Mods.VerminLordMod.Items.JinXiaGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.JinXiaGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.JinXiaGu.GuLevel
+		DisplayName: Jin Xia Gu
+		Tooltip: ""
+	}
+
+	WolfRunGu: {
+		UsesXQi: Mods.VerminLordMod.Items.WolfRunGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.WolfRunGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.WolfRunGu.GuLevel
+		DisplayName: Wolf Run Gu
+		Tooltip: ""
+	}
+
+	BoneWings: {
+		UsesXQi: Mods.VerminLordMod.Items.BoneWings.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BoneWings.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BoneWings.GuLevel
+		DisplayName: Bone Wings
+		Tooltip: ""
+	}
+
+	TengYunWings: {
+		UsesXQi: Mods.VerminLordMod.Items.TengYunWings.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.TengYunWings.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.TengYunWings.GuLevel
+		DisplayName: Teng Yun Wings
+		Tooltip: ""
+	}
+
+	EagleYangGu: {
+		UsesXQi: Mods.VerminLordMod.Items.EagleYangGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.EagleYangGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.EagleYangGu.GuLevel
+		DisplayName: Eagle Yang Gu
+		Tooltip: ""
+	}
+
+	EagleWingGu: {
+		UsesXQi: Mods.VerminLordMod.Items.EagleWingGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.EagleWingGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.EagleWingGu.GuLevel
+		DisplayName: Eagle Wing Gu
+		Tooltip: ""
+	}
+
+	FireClothesGu: {
+		UsesXQi: Mods.VerminLordMod.Items.FireClothesGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.FireClothesGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.FireClothesGu.GuLevel
+		DisplayName: Fire Clothes Gu
+		Tooltip: ""
+	}
+
+	StoveGu: {
+		UsesXQi: Mods.VerminLordMod.Items.StoveGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.StoveGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.StoveGu.GuLevel
+		DisplayName: Stove Gu
+		Tooltip: ""
+	}
+
+	FiveStarLinkedBeadGu: {
+		UsesXQi: Mods.VerminLordMod.Items.FiveStarLinkedBeadGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.FiveStarLinkedBeadGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.FiveStarLinkedBeadGu.GuLevel
+		DisplayName: Five Star Linked Bead Gu
+		Tooltip: ""
+	}
+
+	FourStarCubeGu: {
+		UsesXQi: Mods.VerminLordMod.Items.FourStarCubeGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.FourStarCubeGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.FourStarCubeGu.GuLevel
+		DisplayName: Four Star Cube Gu
+		Tooltip: ""
+	}
+
+	ThreeStarsSkyGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ThreeStarsSkyGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ThreeStarsSkyGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ThreeStarsSkyGu.GuLevel
+		DisplayName: Three Stars Sky Gu
+		Tooltip: ""
+	}
+
+	TwoStarRadianceReflectingGu: {
+		UsesXQi: Mods.VerminLordMod.Items.TwoStarRadianceReflectingGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.TwoStarRadianceReflectingGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.TwoStarRadianceReflectingGu.GuLevel
+		DisplayName: Two Star Radiance Reflecting Gu
+		Tooltip: ""
+	}
+
+	WhiteJadeGu: {
+		UsesXQi: Mods.VerminLordMod.Items.WhiteJadeGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.WhiteJadeGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.WhiteJadeGu.GuLevel
+		DisplayName: White Jade Gu
+		Tooltip: ""
+	}
+
+	WaterDrillGu: {
+		DisplayName: Water Drill Gu
+		Tooltip: ""
+		UsesXQi: Mods.VerminLordMod.Items.WaterDrillGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.WaterDrillGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.WaterDrillGu.GuLevel
+	}
+
+	YingShangGu: {
+		UsesXQi: Mods.VerminLordMod.Items.YingShangGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.YingShangGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.YingShangGu.GuLevel
+		DisplayName: Ying Shang Gu
+		Tooltip: ""
+	}
+
+	SpiralBoneSpearGu: {
+		UsesXQi: Mods.VerminLordMod.Items.SpiralBoneSpearGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.SpiralBoneSpearGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.SpiralBoneSpearGu.GuLevel
+		DisplayName: Spiral Bone Spear Gu
+		Tooltip: ""
+	}
+
+	PineNeedleGu: {
+		UsesXQi: Mods.VerminLordMod.Items.PineNeedleGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.PineNeedleGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.PineNeedleGu.GuLevel
+		DisplayName: Pine Needle Gu
+		Tooltip: ""
+	}
+
+	InvitingMoonGu: {
+		UsesXQi: Mods.VerminLordMod.Items.InvitingMoonGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.InvitingMoonGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.InvitingMoonGu.GuLevel
+		DisplayName: Inviting Moon Gu
+		Tooltip: ""
+	}
+
+	BloodQiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.BloodQiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BloodQiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BloodQiGu.GuLevel
+		DisplayName: Blood Qi Gu
+		Tooltip: ""
+	}
+
+	XiongHaoGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XiongHaoGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XiongHaoGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XiongHaoGu.GuLevel
+		DisplayName: Xiong Hao Gu
+		Tooltip: ""
+	}
+
+	GoldNeedleGu: {
+		UsesXQi: Mods.VerminLordMod.Items.GoldNeedleGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.GoldNeedleGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.GoldNeedleGu.GuLevel
+		DisplayName: Gold Needle Gu
+		Tooltip: ""
+	}
+
+	BigStrengthGu: {
+		UsesXQi: Mods.VerminLordMod.Items.BigStrengthGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BigStrengthGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BigStrengthGu.GuLevel
+		DisplayName: Big Strength Gu
+		Tooltip: ""
+	}
+
+	WaterShellGu: {
+		UsesXQi: Mods.VerminLordMod.Items.WaterShellGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.WaterShellGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.WaterShellGu.GuLevel
+		DisplayName: Water Shell Gu
+		Tooltip: ""
+	}
+
+	JiaoLeiPotatoGu: {
+		UsesXQi: Mods.VerminLordMod.Items.JiaoLeiPotatoGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.JiaoLeiPotatoGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.JiaoLeiPotatoGu.GuLevel
+		DisplayName: Jiao Lei Potato Gu
+		Tooltip: ""
+	}
+
+	StarfireGu: {
+		UsesXQi: Mods.VerminLordMod.Items.StarfireGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.StarfireGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.StarfireGu.GuLevel
+		DisplayName: Starfire Gu
+		Tooltip: ""
+	}
+
+	SkyMeteorGu: {
+		UsesXQi: Mods.VerminLordMod.Items.SkyMeteorGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.SkyMeteorGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.SkyMeteorGu.GuLevel
+		DisplayName: Sky Meteor Gu
+		Tooltip: ""
+	}
+
+	StarRiverGu: {
+		UsesXQi: Mods.VerminLordMod.Items.StarRiverGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.StarRiverGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.StarRiverGu.GuLevel
+		DisplayName: Star River Gu
+		Tooltip: ""
+	}
+
+	ThreeStepGrassGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ThreeStepGrassGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ThreeStepGrassGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ThreeStepGrassGu.GuLevel
+		DisplayName: Three Step Grass Gu
+		Tooltip: ""
+	}
+
+	ShiJunLiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ShiJunLiGu.UsesXQi
+		GuLevel: Mods.VerminLordMod.Items.ShiJunLiGu.GuLevel
+		DisplayName: Shi Jun Li Gu
+		Tooltip: ""
+	}
+
+	StarWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.StarWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.StarWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.StarWeapon.GuLevel
+		DisplayName: Star Weapon
+		Tooltip: ""
+	}
+
+	BanWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.BanWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BanWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BanWeapon.GuLevel
+		DisplayName: Ban Weapon
+		Tooltip: ""
+	}
+
+	BloodWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.BloodWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BloodWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BloodWeapon.GuLevel
+		DisplayName: Blood Weapon
+		Tooltip: ""
+	}
+
+	BoneWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.BoneWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BoneWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BoneWeapon.GuLevel
+		DisplayName: Bone Weapon
+		Tooltip: ""
+	}
+
+	CharmWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.CharmWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.CharmWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.CharmWeapon.GuLevel
+		DisplayName: Charm Weapon
+		Tooltip: ""
+	}
+
+	CloudWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.CloudWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.CloudWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.CloudWeapon.GuLevel
+		DisplayName: Cloud Weapon
+		Tooltip: ""
+	}
+
+	DarkWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.DarkWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.DarkWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.DarkWeapon.GuLevel
+		DisplayName: Dark Weapon
+		Tooltip: ""
+	}
+
+	DrawWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.DrawWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.DrawWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.DrawWeapon.GuLevel
+		DisplayName: Draw Weapon
+		Tooltip: ""
+	}
+
+	DreamWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.DreamWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.DreamWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.DreamWeapon.GuLevel
+		DisplayName: Dream Weapon
+		Tooltip: ""
+	}
+
+	EatingWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.EatingWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.EatingWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.EatingWeapon.GuLevel
+		DisplayName: Eating Weapon
+		Tooltip: ""
+	}
+
+	FireWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.FireWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.FireWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.FireWeapon.GuLevel
+		DisplayName: Fire Weapon
+		Tooltip: ""
+	}
+
+	FlyingWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.FlyingWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.FlyingWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.FlyingWeapon.GuLevel
+		DisplayName: Flying Weapon
+		Tooltip: ""
+	}
+
+	GoldWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.GoldWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.GoldWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.GoldWeapon.GuLevel
+		DisplayName: Gold Weapon
+		Tooltip: ""
+	}
+
+	IceSnowWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.IceSnowWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.IceSnowWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.IceSnowWeapon.GuLevel
+		DisplayName: Ice Snow Weapon
+		Tooltip: ""
+	}
+
+	InfoWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.InfoWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.InfoWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.InfoWeapon.GuLevel
+		DisplayName: Info Weapon
+		Tooltip: ""
+	}
+
+	KillingWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.KillingWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.KillingWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.KillingWeapon.GuLevel
+		DisplayName: Killing Weapon
+		Tooltip: ""
+	}
+
+	KnifeWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.KnifeWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.KnifeWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.KnifeWeapon.GuLevel
+		DisplayName: Knife Weapon
+		Tooltip: ""
+	}
+
+	LifeDeathWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.LifeDeathWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.LifeDeathWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.LifeDeathWeapon.GuLevel
+		DisplayName: Life Death Weapon
+		Tooltip: ""
+	}
+
+	LightningWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.LightningWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.LightningWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.LightningWeapon.GuLevel
+		DisplayName: Lightning Weapon
+		Tooltip: ""
+	}
+
+	LightWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.LightWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.LightWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.LightWeapon.GuLevel
+		DisplayName: Light Weapon
+		Tooltip: ""
+	}
+
+	LoveWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.LoveWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.LoveWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.LoveWeapon.GuLevel
+		DisplayName: Love Weapon
+		Tooltip: ""
+	}
+
+	LuckWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.LuckWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.LuckWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.LuckWeapon.GuLevel
+		DisplayName: Luck Weapon
+		Tooltip: ""
+	}
+
+	MoonWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.MoonWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.MoonWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.MoonWeapon.GuLevel
+		DisplayName: Moon Weapon
+		Tooltip: ""
+	}
+
+	MudWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.MudWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.MudWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.MudWeapon.GuLevel
+		DisplayName: Mud Weapon
+		Tooltip: ""
+	}
+
+	PelletWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.PelletWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.PelletWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.PelletWeapon.GuLevel
+		DisplayName: Pellet Weapon
+		Tooltip: ""
+	}
+
+	PersonWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.PersonWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.PersonWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.PersonWeapon.GuLevel
+		DisplayName: Person Weapon
+		Tooltip: ""
+	}
+
+	PoisonWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.PoisonWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.PoisonWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.PoisonWeapon.GuLevel
+		DisplayName: Poison Weapon
+		Tooltip: ""
+	}
+
+	PowerDuatWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.PowerDuatWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.PowerDuatWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.PowerDuatWeapon.GuLevel
+		DisplayName: Power Duat Weapon
+		Tooltip: ""
+	}
+
+	PractiseWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.PractiseWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.PractiseWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.PractiseWeapon.GuLevel
+		DisplayName: Practise Weapon
+		Tooltip: ""
+	}
+
+	QiWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.QiWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.QiWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.QiWeapon.GuLevel
+		DisplayName: Qi Weapon
+		Tooltip: ""
+	}
+
+	RuleWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.RuleWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.RuleWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.RuleWeapon.GuLevel
+		DisplayName: Rule Weapon
+		Tooltip: ""
+	}
+
+	ShadowWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.ShadowWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ShadowWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ShadowWeapon.GuLevel
+		DisplayName: Shadow Weapon
+		Tooltip: ""
+	}
+
+	SkyWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.SkyWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.SkyWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.SkyWeapon.GuLevel
+		DisplayName: Sky Weapon
+		Tooltip: ""
+	}
+
+	SlaveWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.SlaveWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.SlaveWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.SlaveWeapon.GuLevel
+		DisplayName: Slave Weapon
+		Tooltip: ""
+	}
+
+	SoulWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.SoulWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.SoulWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.SoulWeapon.GuLevel
+		DisplayName: Soul Weapon
+		Tooltip: ""
+	}
+
+	SpaceWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.SpaceWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.SpaceWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.SpaceWeapon.GuLevel
+		DisplayName: Space Weapon
+		Tooltip: ""
+	}
+
+	StealingWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.StealingWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.StealingWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.StealingWeapon.GuLevel
+		DisplayName: Stealing Weapon
+		Tooltip: ""
+	}
+
+	SuccessFailureWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.SuccessFailureWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.SuccessFailureWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.SuccessFailureWeapon.GuLevel
+		DisplayName: Success Failure Weapon
+		Tooltip: ""
+	}
+
+	SwordWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.SwordWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.SwordWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.SwordWeapon.GuLevel
+		DisplayName: Sword Weapon
+		Tooltip: ""
+	}
+
+	TacticalWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.TacticalWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.TacticalWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.TacticalWeapon.GuLevel
+		DisplayName: Tactical Weapon
+		Tooltip: ""
+	}
+
+	TimeWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.TimeWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.TimeWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.TimeWeapon.GuLevel
+		DisplayName: Time Weapon
+		Tooltip: ""
+	}
+
+	UnrealWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.UnrealWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.UnrealWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.UnrealWeapon.GuLevel
+		DisplayName: Unreal Weapon
+		Tooltip: ""
+	}
+
+	VariationWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.VariationWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.VariationWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.VariationWeapon.GuLevel
+		DisplayName: Variation Weapon
+		Tooltip: ""
+	}
+
+	VoiceWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.VoiceWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.VoiceWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.VoiceWeapon.GuLevel
+		DisplayName: Voice Weapon
+		Tooltip: ""
+	}
+
+	VoidWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.VoidWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.VoidWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.VoidWeapon.GuLevel
+		DisplayName: Void Weapon
+		Tooltip: ""
+	}
+
+	WarWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.WarWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.WarWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.WarWeapon.GuLevel
+		DisplayName: War Weapon
+		Tooltip: ""
+	}
+
+	WaterWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.WaterWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.WaterWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.WaterWeapon.GuLevel
+		DisplayName: Water Weapon
+		Tooltip: ""
+	}
+
+	WindWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.WindWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.WindWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.WindWeapon.GuLevel
+		DisplayName: Wind Weapon
+		Tooltip: ""
+	}
+
+	WisdomWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.WisdomWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.WisdomWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.WisdomWeapon.GuLevel
+		DisplayName: Wisdom Weapon
+		Tooltip: ""
+	}
+
+	WoodWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.WoodWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.WoodWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.WoodWeapon.GuLevel
+		DisplayName: Wood Weapon
+		Tooltip: ""
+	}
+
+	YinYangWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.YinYangWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.YinYangWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.YinYangWeapon.GuLevel
+		DisplayName: Yin Yang Weapon
+		Tooltip: ""
+	}
+
+	PowerWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.PowerWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.PowerWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.PowerWeapon.GuLevel
+		DisplayName: Power Weapon
+		Tooltip: ""
+	}
+
+	MoonPoisonGu: {
+		UsesXQi: Mods.VerminLordMod.Items.MoonPoisonGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.MoonPoisonGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.MoonPoisonGu.GuLevel
+		DisplayName: Moon Poison Gu
+		Tooltip: ""
+	}
+
+	BloodMoonGu: {
+		UsesXQi: Mods.VerminLordMod.Items.BloodMoonGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BloodMoonGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BloodMoonGu.GuLevel
+		DisplayName: Blood Moon Gu
+		Tooltip: ""
+	}
+
+	CanopyGu: {
+		UsesXQi: Mods.VerminLordMod.Items.CanopyGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.CanopyGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.CanopyGu.GuLevel
+		DisplayName: Canopy Gu
+		Tooltip: ""
+	}
+
+	WaterJiaGu: {
+		UsesXQi: Mods.VerminLordMod.Items.WaterJiaGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.WaterJiaGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.WaterJiaGu.GuLevel
+		DisplayName: Water Jia Gu
+		Tooltip: ""
+	}
+
+	SawtoothGoldenWuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.SawtoothGoldenWuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.SawtoothGoldenWuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.SawtoothGoldenWuGu.GuLevel
+		DisplayName: Sawtooth Golden Wu Gu
+		Tooltip: ""
+	}
+
+	SoundbyteGu: {
+		UsesXQi: Mods.VerminLordMod.Items.SoundbyteGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.SoundbyteGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.SoundbyteGu.GuLevel
+		DisplayName: Soundbyte Gu
+		Tooltip: ""
+	}
+
+	YanZhouGu: {
+		UsesXQi: Mods.VerminLordMod.Items.YanZhouGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.YanZhouGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.YanZhouGu.GuLevel
+		DisplayName: Yan Zhou Gu
+		Tooltip: ""
+	}
+
+	PotatoMotherGu: {
+		UsesXQi: Mods.VerminLordMod.Items.PotatoMotherGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.PotatoMotherGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.PotatoMotherGu.GuLevel
+		DisplayName: Potato Mother Gu
+		Tooltip: ""
+	}
+
+	ThunderShieldGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ThunderShieldGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ThunderShieldGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ThunderShieldGu.GuLevel
+		DisplayName: Thunder Shield Gu
+		Tooltip: ""
+	}
+
+	ElectricTeethKillingWuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ElectricTeethKillingWuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ElectricTeethKillingWuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ElectricTeethKillingWuGu.GuLevel
+		DisplayName: Electric Teeth Killing Wu Gu
+		Tooltip: ""
+	}
+
+	EternalLifeGu: {
+		UsesXQi: Mods.VerminLordMod.Items.EternalLifeGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.EternalLifeGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.EternalLifeGu.GuLevel
+		DisplayName: Eternal Life Gu
+		Tooltip: ""
+	}
+
+	ShitGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ShitGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ShitGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ShitGu.GuLevel
+		DisplayName: Shit Gu
+		Tooltip: ""
+	}
+
+	Posioner: {
+		DisplayName: Posioner
+		Tooltip: ""
+	}
+
+	FireHeartGu: {
+		UsesXQi: Mods.VerminLordMod.Items.FireHeartGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.FireHeartGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.FireHeartGu.GuLevel
+		DisplayName: Fire Heart Gu
+		Tooltip: ""
+	}
+
+	ReWaterGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ReWaterGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ReWaterGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ReWaterGu.GuLevel
+		DisplayName: Re Water Gu
+		Tooltip: ""
+	}
+
+	ShiningGu: {
+		Tooltip: ""
+		DisplayName: Shining Gu
+		GuLevel: Mods.VerminLordMod.Items.ShiningGu.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.ShiningGu.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.ShiningGu.UsesXQi
+	}
+
+	TaiGuangGu: {
+		UsesXQi: Mods.VerminLordMod.Items.TaiGuangGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.TaiGuangGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.TaiGuangGu.GuLevel
+		DisplayName: Tai Guang Gu
+		Tooltip: ""
+	}
+
+	MuMeiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.MuMeiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.MuMeiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.MuMeiGu.GuLevel
+		DisplayName: Mu Mei Gu
+		Tooltip: ""
+	}
+
+	BigBelliedFrogGu: {
+		UsesXQi: Mods.VerminLordMod.Items.BigBelliedFrogGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BigBelliedFrogGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BigBelliedFrogGu.GuLevel
+		DisplayName: Big Bellied Frog Gu
+		Tooltip: ""
+	}
+
+	GratingGu: {
+		UsesXQi: Mods.VerminLordMod.Items.GratingGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.GratingGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.GratingGu.GuLevel
+		DisplayName: Grating Gu
+		Tooltip: ""
+	}
+
+	Enter: {
+		DisplayName: Enter
+		Tooltip: ""
+	}
+
+	UITester: {
+		DisplayName: U I Tester
+		Tooltip: ""
+	}
+
+	FireTrailWeapon: {
+		DisplayName: Fire Trail Weapon
+		Tooltip: ""
+	}
+
+	GeometricTrailWeapon: {
+		DisplayName: Geometric Trail Weapon
+		Tooltip: ""
+	}
+
+	MagicTrailWeapon: {
+		DisplayName: Magic Trail Weapon
+		Tooltip: ""
+	}
+
+	TrailDemoItems: {
+		DisplayName: Trail Demo Items
+		Tooltip: ""
+	}
+
+	LiquidFlameGu: {
+		UsesXQi: Mods.VerminLordMod.Items.LiquidFlameGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.LiquidFlameGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.LiquidFlameGu.GuLevel
+		DisplayName: Liquid Flame Gu
+		Tooltip: ""
+	}
+
+	QuickQi: {
+		DisplayName: Quick Qi
+		Tooltip: ""
+	}
+
+	DanmakuTestWeapon: {
+		DisplayName: Danmaku Test Weapon
+		Tooltip: ""
+	}
+
+	BlackPigGu: {
+		UsesXQi: Mods.VerminLordMod.Items.BlackPigGu.UsesXQi
+		GuLevel: Mods.VerminLordMod.Items.BlackPigGu.GuLevel
+		DisplayName: Black Pig Gu
+		Tooltip: ""
+	}
+
+	WhitePigGu: {
+		UsesXQi: Mods.VerminLordMod.Items.WhitePigGu.UsesXQi
+		GuLevel: Mods.VerminLordMod.Items.WhitePigGu.GuLevel
+		DisplayName: White Pig Gu
+		Tooltip: ""
+	}
+
+	NineWineBugWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.NineWineBugWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.NineWineBugWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.NineWineBugWeapon.GuLevel
+		DisplayName: Nine Wine Bug Weapon
+		Tooltip: ""
+	}
+
+	WineBugWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.WineBugWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.WineBugWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.WineBugWeapon.GuLevel
+		DisplayName: Wine Bug Weapon
+		Tooltip: ""
+	}
+
+	SevenWineBugWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.SevenWineBugWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.SevenWineBugWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.SevenWineBugWeapon.GuLevel
+		DisplayName: Seven Wine Bug Weapon
+		Tooltip: ""
+	}
+
+	FourFlavorWineBugWeapon: {
+		UsesXQi: Mods.VerminLordMod.Items.FourFlavorWineBugWeapon.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.FourFlavorWineBugWeapon.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.FourFlavorWineBugWeapon.GuLevel
+		DisplayName: Four Flavor Wine Bug Weapon
+		Tooltip: ""
+	}
+
+	BladeBloodBatGuBanner: {
+		DisplayName: Blade Blood Bat Gu Banner
+		Tooltip: ""
+	}
+
+	LegionAntBanner: {
+		DisplayName: Legion Ant Banner
+		Tooltip: ""
+	}
+
+	StrongElectricWolfBanner: {
+		DisplayName: Strong Electric Wolf Banner
+		Tooltip: ""
+	}
+
+	NpcDebugger: {
+		DisplayName: Npc Debugger
+		Tooltip: ""
+	}
+
+	ReputationReset: {
+		DisplayName: Reputation Reset
+		Tooltip: ""
+	}
+}
+
+Buffs: {
+	WaterCirclebuff: {
+		Description: Mods.VerminLordMod.Buffs.WaterCirclebuff.Description
+		DisplayName: Water Circlebuff
+	}
+
+	StrengthLongicornbuff: {
+		Description: Mods.VerminLordMod.Buffs.StrengthLongicornbuff.Description
+		DisplayName: Strength Longicornbuff
+	}
+
+	Minilightbuff: {
+		Description: Mods.VerminLordMod.Buffs.Minilightbuff.Description
+		DisplayName: Minilightbuff
+	}
+
+	FlowerPigbuff: {
+		Description: Mods.VerminLordMod.Buffs.FlowerPigbuff.Description
+		DisplayName: Flower Pigbuff
+	}
+
+	MoonLuminousTextilebuff: {
+		DisplayName: Moon Luminous Textilebuff
+		Description: Mods.VerminLordMod.Buffs.MoonLuminousTextilebuff.Description
+	}
+
+	GrassPuppetbuff: {
+		DisplayName: Grass Puppetbuff
+		Description: Mods.VerminLordMod.Buffs.GrassPuppetbuff.Description
+	}
+
+	BlackHairbuff: {
+		DisplayName: Black Hairbuff
+		Description: Mods.VerminLordMod.Buffs.BlackHairbuff.Description
+	}
+
+	HuangLuoLongicornbuff: {
+		Description: Mods.VerminLordMod.Buffs.HuangLuoLongicornbuff.Description
+		DisplayName: Huang Luo Longicornbuff
+	}
+
+	LivingGrassCDbuff: {
+		DisplayName: Living Grass C Dbuff
+		Description: Mods.VerminLordMod.Buffs.LivingGrassCDbuff.Description
+	}
+
+	LivingLeaveCDbuff: {
+		DisplayName: Living Leave C Dbuff
+		Description: Mods.VerminLordMod.Buffs.LivingLeaveCDbuff.Description
+	}
+
+	NineLeavesCDbuff: {
+		DisplayName: Nine Leaves C Dbuff
+		Description: Mods.VerminLordMod.Buffs.NineLeavesCDbuff.Description
+	}
+
+	WidowSpiderbuff: {
+		DisplayName: Widow Spiderbuff
+		Description: Mods.VerminLordMod.Buffs.WidowSpiderbuff.Description
+	}
+
+	BreezeWheelbuff: {
+		DisplayName: Breeze Wheelbuff
+		Description: Mods.VerminLordMod.Buffs.BreezeWheelbuff.Description
+	}
+
+	SpiritSalivaGubuff: {
+		DisplayName: Spirit Saliva Gubuff
+		Description: Mods.VerminLordMod.Buffs.SpiritSalivaGubuff.Description
+	}
+
+	ABitGubuff: {
+		DisplayName: A Bit Gubuff
+		Description: Mods.VerminLordMod.Buffs.ABitGubuff.Description
+	}
+
+	Dogbuff: {
+		DisplayName: Dogbuff
+		Description: Mods.VerminLordMod.Buffs.Dogbuff.Description
+	}
+
+	LoveToLeavebuff: {
+		DisplayName: Love To Leavebuff
+		Description: Mods.VerminLordMod.Buffs.LoveToLeavebuff.Description
+	}
+
+	BlackManebuff: {
+		DisplayName: Black Manebuff
+		Description: Mods.VerminLordMod.Buffs.BlackManebuff.Description
+	}
+
+	Rockbuff: {
+		DisplayName: Rockbuff
+		Description: Mods.VerminLordMod.Buffs.Rockbuff.Description
+	}
+
+	TwistedHeelbuff: {
+		DisplayName: Twisted Heelbuff
+		Description: Mods.VerminLordMod.Buffs.TwistedHeelbuff.Description
+	}
+
+	Acidicbuff: {
+		DisplayName: Acidicbuff
+		Description: Mods.VerminLordMod.Buffs.Acidicbuff.Description
+	}
+
+	TwoPoisonbuff: {
+		DisplayName: Two Poisonbuff
+		Description: Mods.VerminLordMod.Buffs.TwoPoisonbuff.Description
+	}
+
+	BlueBirdbuff: {
+		DisplayName: Blue Birdbuff
+		Description: Mods.VerminLordMod.Buffs.BlueBirdbuff.Description
+	}
+
+	GoldMoonCutbuff: {
+		DisplayName: Gold Moon Cutbuff
+		Description: Mods.VerminLordMod.Buffs.GoldMoonCutbuff.Description
+	}
+
+	ShuangLinbuff: {
+		DisplayName: Shuang Linbuff
+		Description: Mods.VerminLordMod.Buffs.ShuangLinbuff.Description
+	}
+
+	IceCrystalbuff: {
+		DisplayName: Ice Crystalbuff
+		Description: Mods.VerminLordMod.Buffs.IceCrystalbuff.Description
+	}
+
+	ShuangXibuff: {
+		DisplayName: Shuang Xibuff
+		Description: Mods.VerminLordMod.Buffs.ShuangXibuff.Description
+	}
+
+	IceBladeStorm1: {
+		DisplayName: Ice Blade Storm1
+		Description: Mods.VerminLordMod.Buffs.IceBladeStorm1.Description
+	}
+
+	IceBladeStorm2: {
+		DisplayName: Ice Blade Storm2
+		Description: Mods.VerminLordMod.Buffs.IceBladeStorm2.Description
+	}
+
+	IceBladeStorm3: {
+		DisplayName: Ice Blade Storm3
+		Description: Mods.VerminLordMod.Buffs.IceBladeStorm3.Description
+	}
+
+	IceBladeStorm4: {
+		DisplayName: Ice Blade Storm4
+		Description: Mods.VerminLordMod.Buffs.IceBladeStorm4.Description
+	}
+
+	SoulOscillationbuff: {
+		DisplayName: Soul Oscillationbuff
+		Description: Mods.VerminLordMod.Buffs.SoulOscillationbuff.Description
+	}
+
+	Ragebuff: {
+		DisplayName: Ragebuff
+		Description: Mods.VerminLordMod.Buffs.Ragebuff.Description
+	}
+
+	DingShenbuff: {
+		DisplayName: Ding Shenbuff
+		Description: Mods.VerminLordMod.Buffs.DingShenbuff.Description
+	}
+
+	DogControlGuBuff: {
+		DisplayName: Dog Control Gu Buff
+		Description: Mods.VerminLordMod.Buffs.DogControlGuBuff.Description
+	}
+
+	ChasingWindbuff: {
+		DisplayName: Chasing Windbuff
+		Description: Mods.VerminLordMod.Buffs.ChasingWindbuff.Description
+	}
+
+	BloodHandprintsbuff: {
+		DisplayName: Blood Handprintsbuff
+		Description: Mods.VerminLordMod.Buffs.BloodHandprintsbuff.Description
+	}
+
+	TianDiHongYinbuff: {
+		DisplayName: Tian Di Hong Yinbuff
+		Description: Mods.VerminLordMod.Buffs.TianDiHongYinbuff.Description
+	}
+
+	TianDiHongYinCDbuff: {
+		DisplayName: Tian Di Hong Yin C Dbuff
+		Description: Mods.VerminLordMod.Buffs.TianDiHongYinCDbuff.Description
+	}
+
+	LittleSoulbuff: {
+		DisplayName: Little Soulbuff
+		Description: Mods.VerminLordMod.Buffs.LittleSoulbuff.Description
+	}
+
+	BigSoulbuff: {
+		DisplayName: Big Soulbuff
+		Description: Mods.VerminLordMod.Buffs.BigSoulbuff.Description
+	}
+
+	GiantSpiritBodybuff: {
+		DisplayName: Giant Spirit Bodybuff
+		Description: Mods.VerminLordMod.Buffs.GiantSpiritBodybuff.Description
+	}
+
+	GiantSpiritHeartbuff: {
+		DisplayName: Giant Spirit Heartbuff
+		Description: Mods.VerminLordMod.Buffs.GiantSpiritHeartbuff.Description
+	}
+
+	GiantSpiritIntentbuff: {
+		DisplayName: Giant Spirit Intentbuff
+		Description: Mods.VerminLordMod.Buffs.GiantSpiritIntentbuff.Description
+	}
+
+	JinXiabuff: {
+		DisplayName: Jin Xiabuff
+		Description: Mods.VerminLordMod.Buffs.JinXiabuff.Description
+	}
+
+	WolfRunbuff: {
+		DisplayName: Wolf Runbuff
+		Description: Mods.VerminLordMod.Buffs.WolfRunbuff.Description
+	}
+
+	FireClothesbuff: {
+		DisplayName: Fire Clothesbuff
+		Description: Mods.VerminLordMod.Buffs.FireClothesbuff.Description
+	}
+
+	OneStarbuff: {
+		DisplayName: One Starbuff
+		Description: Mods.VerminLordMod.Buffs.OneStarbuff.Description
+	}
+
+	Starbuff: {
+		DisplayName: Starbuff
+		Description: Mods.VerminLordMod.Buffs.Starbuff.Description
+	}
+
+	FiveStarbuff: {
+		DisplayName: Five Starbuff
+		Description: Mods.VerminLordMod.Buffs.FiveStarbuff.Description
+	}
+
+	FourStarbuff: {
+		DisplayName: Four Starbuff
+		Description: Mods.VerminLordMod.Buffs.FourStarbuff.Description
+	}
+
+	ThreeStarbuff: {
+		DisplayName: Three Starbuff
+		Description: Mods.VerminLordMod.Buffs.ThreeStarbuff.Description
+	}
+
+	TwoStarbuff: {
+		DisplayName: Two Starbuff
+		Description: Mods.VerminLordMod.Buffs.TwoStarbuff.Description
+	}
+
+	WhiteJadebuff: {
+		DisplayName: White Jadebuff
+		Description: Mods.VerminLordMod.Buffs.WhiteJadebuff.Description
+	}
+
+	YingShangbuff: {
+		DisplayName: Ying Shangbuff
+		Description: Mods.VerminLordMod.Buffs.YingShangbuff.Description
+	}
+
+	BloodQibuff: {
+		DisplayName: Blood Qibuff
+		Description: Mods.VerminLordMod.Buffs.BloodQibuff.Description
+	}
+
+	XiongHaobuff: {
+		DisplayName: Xiong Haobuff
+		Description: Mods.VerminLordMod.Buffs.XiongHaobuff.Description
+	}
+
+	Waterbuff: {
+		DisplayName: Waterbuff
+		Description: Mods.VerminLordMod.Buffs.Waterbuff.Description
+	}
+
+	BigStrengthbuff: {
+		DisplayName: Big Strengthbuff
+		Description: Mods.VerminLordMod.Buffs.BigStrengthbuff.Description
+	}
+
+	WaterShellbuff: {
+		DisplayName: Water Shellbuff
+		Description: Mods.VerminLordMod.Buffs.WaterShellbuff.Description
+	}
+
+	ThreeStepGrassGuCDbuff: {
+		DisplayName: Three Step Grass Gu C Dbuff
+		Description: Mods.VerminLordMod.Buffs.ThreeStepGrassGuCDbuff.Description
+	}
+
+	ThreeStepGrassbuff: {
+		DisplayName: Three Step Grassbuff
+		Description: Mods.VerminLordMod.Buffs.ThreeStepGrassbuff.Description
+	}
+
+	MoonPoisonbuff: {
+		DisplayName: Moon Poisonbuff
+		Description: Mods.VerminLordMod.Buffs.MoonPoisonbuff.Description
+	}
+
+	Canopybuff: {
+		DisplayName: Canopybuff
+		Description: Mods.VerminLordMod.Buffs.Canopybuff.Description
+	}
+
+	WaterJiabuff: {
+		DisplayName: Water Jiabuff
+		Description: Mods.VerminLordMod.Buffs.WaterJiabuff.Description
+	}
+
+	YanZhoubuff: {
+		DisplayName: Yan Zhoubuff
+		Description: Mods.VerminLordMod.Buffs.YanZhoubuff.Description
+	}
+
+	ThunderShieldbuff: {
+		DisplayName: Thunder Shieldbuff
+		Description: Mods.VerminLordMod.Buffs.ThunderShieldbuff.Description
+	}
+
+	FireHeartbuff: {
+		DisplayName: Fire Heartbuff
+		Description: Mods.VerminLordMod.Buffs.FireHeartbuff.Description
+	}
+
+	ReWaterbuff: {
+		DisplayName: Re Waterbuff
+		Description: Mods.VerminLordMod.Buffs.ReWaterbuff.Description
+	}
+
+	MuMeibuff: {
+		DisplayName: Mu Meibuff
+		Description: Mods.VerminLordMod.Buffs.MuMeibuff.Description
+	}
+
+	Gratingbuff: {
+		DisplayName: Gratingbuff
+		Description: Mods.VerminLordMod.Buffs.Gratingbuff.Description
+	}
+}
+
+DamageClasses.InsectDamageClass.DisplayName: Insect Damage Class
+
+UI: {
+	WolfWave: Mods.VerminLordMod.UI.WolfWave
+	Qi: Mods.VerminLordMod.UI.Qi
+}
+
+Biomes: {
+	QingMaoSurfaceBiome: {
+		DisplayName: Qing Mao Surface Biome
+		TownNPCDialogueName: the Qing Mao Surface Biome
+	}
+
+	QingmaoUndergroundBiome: {
+		DisplayName: Qingmao Underground Biome
+		TownNPCDialogueName: the Qingmao Underground Biome
+	}
+
+	GuYueCompoundBiome: {
+		DisplayName: Gu Yue Compound Biome
+		TownNPCDialogueName: the Gu Yue Compound Biome
+	}
+}
+
+Tiles: {
+	QingMaoStoneChest: {
+		MapEntry0: Mods.VerminLordMod.Tiles.QingMaoStoneChest.MapEntry0
+		MapEntry1: Mods.VerminLordMod.Tiles.QingMaoStoneChest.MapEntry1
+	}
+
+	QingMaoStoneDresser.MapEntry: Qing Mao Stone Dresser
+	YuanSOre.MapEntry: Yuan S Ore
+}
+
+WorldGen: {
+	ExampleOrePassMessage: Mods.VerminLordMod.WorldGen.ExampleOrePassMessage
+	BlessedWithExampleOreMessage: Mods.VerminLordMod.WorldGen.BlessedWithExampleOreMessage
+}
+
+Configs: {
+	VerminLordModConfig: {
+		DisplayName: Vermin Lord Mod Config
+		Headers.设置: 设置 Header
+
+		LimitSth: {
+			Label: 等级限制
+			Tooltip: 限制每转蛊师可以获取的额外血量、力量、防御加成，提升平衡性
+		}
+	}
+}
