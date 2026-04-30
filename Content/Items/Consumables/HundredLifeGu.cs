@@ -14,7 +14,7 @@ namespace VerminLordMod.Content.Items.Consumables
         public override int QiCost => 100;
         public override int GuLevel => 3;
 
-        protected override void ApplyEffect(Player player, QiPlayer qiPlayer)
+        protected override void ApplyEffect(Player player, QiResourcePlayer qiResource)
         {
             var guPerk = player.GetModPlayer<GuPerkSystem>();
             guPerk.AddExtraAges(100);

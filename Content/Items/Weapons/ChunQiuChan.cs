@@ -211,8 +211,8 @@ namespace VerminLordMod.Content.Items.Weapons
 		// ===== 使用物品 =====
 		public override bool? UseItem(Player player)
 		{
-			var qiPlayer = player.GetModPlayer<QiPlayer>();
-			qiPlayer.qiCurrent -= qiCost;
+			var qiResource = player.GetModPlayer<QiResourcePlayer>();
+			qiResource.ConsumeQi(qiCost);
 
 			for (int i = 0; i < 10; i++)
 			{
@@ -275,7 +275,7 @@ namespace VerminLordMod.Content.Items.Weapons
 		/// </summary>
 		public void TriggerRebirth(Player player)
 		{
-			var qiPlayer = player.GetModPlayer<QiPlayer>();
+			var qiResource = player.GetModPlayer<QiResourcePlayer>();
 
 			// 1. 获取当前能量百分比
 			float energyPercent = rebirthEnergy / MAX_REBIRTH_ENERGY; // 0.0 ~ 1.0
@@ -289,8 +289,8 @@ namespace VerminLordMod.Content.Items.Weapons
 			}
 
 			// 3. 按能量百分比设置真元（直接设为最大值的 energyPercent 比例）
-			int targetQi = (int)(qiPlayer.qiMax2 * energyPercent);
-			qiPlayer.qiCurrent = Math.Min(qiPlayer.qiMax2, targetQi);
+			int targetQi = (int)(qiResource.QiMaxCurrent * energyPercent);
+			qiResource.QiCurrent = Math.Min(qiResource.QiMaxCurrent, targetQi);
 
 			// 4. 清除有害Debuff
 			ClearHarmfulBuffs(player);

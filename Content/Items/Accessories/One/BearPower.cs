@@ -41,8 +41,8 @@ namespace VerminLordMod.Content.Items.Accessories.One
 		public override void UpdateAccessory(Player player, bool hideVisual) {
 			player.GetDamage(DamageClass.Melee) += 1f; // 玩家全伤害增加10%
 			player.GetAttackSpeed(DamageClass.Melee) -= 0.5f; // 玩家近战攻速减少50%
-			var qiPlayer = player.GetModPlayer<QiPlayer>();
-			qiPlayer.qiMax2 -= qiCost;
+			var qiResource = player.GetModPlayer<QiResourcePlayer>();
+			qiResource.QiMaxCurrent -= qiCost;
 		}
 	}
 

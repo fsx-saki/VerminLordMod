@@ -39,9 +39,9 @@ namespace VerminLordMod.Content.Projectiles
 		private int frametime = 0;
 		public override void AI() {
 			var modPlayer = player.GetModPlayer<Bais>();
-			var qiPlayer=player.GetModPlayer<QiPlayer>();
+			var qiResource = player.GetModPlayer<QiResourcePlayer>();
 			// 玩家死亡会让召唤物消失
-			if (player.dead||qiPlayer.qiCurrent==0) {
+			if (player.dead || qiResource.QiCurrent == 0) {
 				modPlayer.WaterCircle = false;
 			}
 			if (modPlayer.WaterCircle) {
@@ -57,7 +57,7 @@ namespace VerminLordMod.Content.Projectiles
 			float i = 50 - player.maxMinions * 3 + player.slotsMinions * 3;
 			i = Utils.Clamp(i, 1, 50);
 			if (npc != null&& frametime % i == 0) {
-				qiPlayer.qiCurrent -= 5;
+				qiResource.ConsumeQi(5);
 				Projectile p = Projectile.NewProjectileDirect(null, Projectile.Center, Vector2.UnitY, ModContent.ProjectileType<WaterBall>(),15,2);
 			}
 			//if(frametime % 30 == 0) qiPlayer.qiCurrent-=1;

@@ -33,8 +33,19 @@ namespace VerminLordMod.Content.Items.Debuggers
 		}
 
 		public override bool? UseItem(Player player) {
-			QiPlayer qiPlayer = player.GetModPlayer<QiPlayer>();
-			QiPlayer.showInfo(qiPlayer);
+			QiResourcePlayer qiResource = player.GetModPlayer<QiResourcePlayer>();
+			QiRealmPlayer qiRealm = player.GetModPlayer<QiRealmPlayer>();
+			QiTalentPlayer qiTalent = player.GetModPlayer<QiTalentPlayer>();
+			GuPerkSystem guPerk = player.GetModPlayer<GuPerkSystem>();
+
+			Main.NewText($"=== 玩家信息 ===");
+			Main.NewText($"境界：{qiRealm.GuLevel}转 阶段：{qiRealm.LevelStage}");
+			Main.NewText($"资质：{qiTalent.Grade} 倍率：{qiTalent.GetZiZhiMultiplier():F2}");
+			Main.NewText($"真元：{qiResource.QiCurrent}/{qiResource.QiMaxCurrent} 占用：{qiResource.QiOccupied}");
+			Main.NewText($"恢复速率：基础={qiResource.BaseQiRegenRate} 额外={qiResource.ExtraQiRegen}");
+			Main.NewText($"白豕={guPerk.whitePigPower} 黑豕={guPerk.blackPigPower} 斤力={guPerk.jinLiPower} 钧力={guPerk.junLiPower}");
+			Main.NewText($"寿蛊加成={guPerk.extraAges} 移速加成={guPerk.extraSpeed:F2}");
+			Main.NewText($"酒虫等级={guPerk.wineBugLevel} 召唤栏={guPerk.hasOneMinion}");
 			return true;
 		}
 	}

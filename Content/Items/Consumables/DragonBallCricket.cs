@@ -14,11 +14,11 @@ namespace VerminLordMod.Content.Items.Consumables
         public override int QiCost => 20;
         public override int GuLevel => 1;
 
-        protected override void ApplyEffect(Player player, QiPlayer qiPlayer)
+        protected override void ApplyEffect(Player player, QiResourcePlayer qiResource)
         {
             var guPerk = player.GetModPlayer<GuPerkSystem>();
-            guPerk.AddExtraSpeed(0.2f, 0.2f);
-            CombatText.NewText(player.getRect(), Color.Cyan, "移速+0.2");
+            guPerk.AddExtraSpeed(0.05f, 0.005f);
+            CombatText.NewText(player.getRect(), Color.Cyan, "移速+5%");
         }
     }
 }

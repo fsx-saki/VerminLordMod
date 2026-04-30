@@ -71,23 +71,27 @@ namespace VerminLordMod.Content.Items.Accessories
 			return true;
 		}
 		public override bool CanUseItem(Player player) {
-			QiPlayer qiPlayer = player.GetModPlayer<QiPlayer>();
+			QiResourcePlayer qiResource = player.GetModPlayer<QiResourcePlayer>();
 			if (player.altFunctionUse == 2) {
-				//Main.NewText($"qiCurrent{qiPlayer.qiCurrent}");
-				//Main.NewText($"controlQiCost{controlQiCost}");
 				Item.useTime = 5;
 				Item.useAnimation = 5;
 				Item.useStyle = ItemUseStyleID.HoldUp;
 				if (hasBeenControlled) {
-					Text.ShowTextRed(player, "您已经完全炼化该蛊虫");
-
-					return false;
+					// 已炼化 → 尝试炼入空窍
+					var kongQiao = player.GetModPlayer<KongQiaoPlayer>();
+					if (kongQiao.TryRefineGu(Item)) {
+						return false; // 炼化成功，物品已销毁
+					}
+					else {
+						Text.ShowTextRed(player, "空窍已满或真元不足，无法炼入空窍");
+						return false;
+					}
 				}
-				if (qiPlayer.qiCurrent < controlQiCost) {
+				if (qiResource.QiCurrent < controlQiCost) {
 					Text.ShowTextRed(player, "炼化失败 真元不足");
 					return false;
 				}
-				qiPlayer.qiCurrent -= controlQiCost;
+				qiResource.ConsumeQi(controlQiCost);
 				controlRate += unitConntrolRate;
 				Text.ShowTextRed(player,$"炼化中......当前进度{controlRate}%");
 				return true;
@@ -111,7 +115,6 @@ namespace VerminLordMod.Content.Items.Accessories
 		//	}
 		//}
 		public override void UpdateInventory(Player player) {
-			QiPlayer qiPlayer= player.GetModPlayer<QiPlayer>();
 			if (controlRate == 100) {
 				hasBeenControlled = true;
 			}
@@ -124,9 +127,10 @@ namespace VerminLordMod.Content.Items.Accessories
 		
 
 		public override bool CanEquipAccessory(Player player, int slot, bool modded) {
-			QiPlayer qiPlayer = player.GetModPlayer<QiPlayer>();
+			QiResourcePlayer qiResource = player.GetModPlayer<QiResourcePlayer>();
+			QiRealmPlayer qiRealm = player.GetModPlayer<QiRealmPlayer>();
 			if (ModContent.GetInstance<VerminLordModConfig>().LimitSth) {
-				if (!qiPlayer.qiEnabled || player.statDefense >= qiPlayer.qiLevel * 25+qiPlayer.levelStage*5) {
+				if (qiRealm.GuLevel <= 0 || player.statDefense >= qiRealm.GuLevel * 25 + qiRealm.LevelStage * 5) {
 					Text.ShowTextRed(player,"当前不能从蛊虫中获取更多防御");
 					return false;
 				}
@@ -136,7 +140,7 @@ namespace VerminLordMod.Content.Items.Accessories
 				Text.ShowTextRed(player, "该蛊虫还未炼化，右键使用开始炼化");
 				return false;
 			}
-			if (qiPlayer.qiCurrent < qiCost) {
+			if (qiResource.QiCurrent < qiCost) {
 				return false;
 			}
 			return true;

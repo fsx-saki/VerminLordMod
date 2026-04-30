@@ -27,6 +27,10 @@ namespace VerminLordMod.Content.NPCs.Town
 		public const string ShopName = "Shop";
 		public int NumberOfTimesTalkedTo = 0;
 		private static Profiles.StackedNPCProfile NPCProfile;
+
+		// 使用古月家族统一贴图
+		public override string Texture => "VerminLordMod/Content/NPCs/GuMasters/GuYuePatrolGuMaster";
+		public override string HeadTexture => "VerminLordMod/Content/NPCs/GuMasters/GuYuePatrolGuMaster_Head";
 		public override void SetStaticDefaults() {
 			//base.SetStaticDefaults();
 			Main.npcFrameCount[Type] = 25;//帧图数量
@@ -125,8 +129,8 @@ namespace VerminLordMod.Content.NPCs.Town
 				//if (player.inventory.Any(item => item.type == ModContent.ItemType<ExampleItem>() || item.type == ModContent.ItemType<Items.Placeable.ExampleBlock>())) {
 				//	return true;
 				//}
-				QiPlayer qiPlayer = player.GetModPlayer<QiPlayer>();
-				if (qiPlayer.qiEnabled)
+				QiRealmPlayer qiRealm = player.GetModPlayer<QiRealmPlayer>();
+				if (qiRealm.GuLevel > 0)
 					return true;
 			}
 

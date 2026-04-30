@@ -142,27 +142,15 @@ namespace VerminLordMod.Common.Systems
         }
     }
 
-    /// <summary> 世界级事件 </summary>
-    public class WorldEvent
-    {
-        public WorldEventType Type;
-        public string Description;
-        public int Duration;        // 持续 tick
-        public FactionID RelatedFaction;
-        public bool IsActive;
-    }
-
     // ============================================================
     // GuWorldSystem - 世界级数据持有者
-    // 保存所有家族状态、世界事件等
+    // 保存所有家族状态
+    // TODO: D-01 将与 WorldEventSystem 合并为 WorldStateMachine
     // ============================================================
     public class GuWorldSystem : ModSystem
     {
         /// <summary> 所有已知家族 </summary>
         public static Dictionary<FactionID, FactionState> AllFactions = new();
-
-        /// <summary> 当前活跃的世界事件 </summary>
-        public static List<WorldEvent> ActiveEvents = new();
 
         /// <summary> 家族显示名称映射 </summary>
         public static string GetFactionDisplayName(FactionID id) => id switch

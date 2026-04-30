@@ -76,6 +76,8 @@ Projectiles: {
 	// LiquidFlameProjectile.DisplayName: Liquid Flame Projectile
 	// StarfireArcProj.DisplayName: Starfire Arc Proj
 	// IceFlameProjectile.DisplayName: Ice Flame Projectile
+	// ShaZhaoJiuYueZhan.DisplayName: Sha Zhao Jiu Yue Zhan
+	// NpcCorpse.DisplayName: Npc Corpse
 }
 
 Prefixes: {
@@ -2300,6 +2302,21 @@ Items: {
 		// DisplayName: Reputation Reset
 		// Tooltip: ""
 	}
+
+	KongQiaoStone: {
+		// DisplayName: Kong Qiao Stone
+		// Tooltip: ""
+	}
+
+	UnbindGuItem: {
+		// DisplayName: Unbind Gu Item
+		// Tooltip: ""
+	}
+
+	GuMediumWeapon: {
+		// DisplayName: Gu Medium Weapon
+		// Tooltip: ""
+	}
 }
 
 Buffs: {
@@ -2656,6 +2673,11 @@ Buffs: {
 	Gratingbuff: {
 		// DisplayName: Gratingbuff
 		// Description: Mods.VerminLordMod.Buffs.Gratingbuff.Description
+	}
+
+	YanTongbuff: {
+		// DisplayName: Yan Tongbuff
+		// Description: Mods.VerminLordMod.Buffs.YanTongbuff.Description
 	}
 }
 

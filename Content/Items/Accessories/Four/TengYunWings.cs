@@ -69,12 +69,13 @@ namespace VerminLordMod.Content.Items.Accessories.Four
 			if (Main.netMode == NetmodeID.Server)
 				return;
 
-			var qiPlayer = player.GetModPlayer<QiPlayer>();
-			if (_guLevel > qiPlayer.qiLevel && Randommer.Roll(10)) {
+			var qiRealm = player.GetModPlayer<QiRealmPlayer>();
+			var qiResource = player.GetModPlayer<QiResourcePlayer>();
+			if (_guLevel > qiRealm.GuLevel && Randommer.Roll(10)) {
 				Text.ShowTextRed(player, "您正在强行调动高转蛊虫！！！");
-				player.Hurt(PlayerDeathReason.LegacyDefault(), (_guLevel - qiPlayer.qiLevel) * Main.LocalPlayer.statLifeMax2 / 20, 0);
+				player.Hurt(PlayerDeathReason.LegacyDefault(), (_guLevel - qiRealm.GuLevel) * Main.LocalPlayer.statLifeMax2 / 20, 0);
 			}
-			qiPlayer.qiMax2 -= qiCost;
+			qiResource.QiMaxCurrent -= qiCost;
 		}
 	}
 }

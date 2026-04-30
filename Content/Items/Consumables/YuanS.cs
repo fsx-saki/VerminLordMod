@@ -28,14 +28,15 @@ namespace VerminLordMod.Content.Items.Consumables
 		}
 
 		public override bool? UseItem(Player player) {
-			QiPlayer qiPlayer = player.GetModPlayer<QiPlayer>();
+			QiResourcePlayer qiResource = player.GetModPlayer<QiResourcePlayer>();
+			QiRealmPlayer qiRealm = player.GetModPlayer<QiRealmPlayer>();
 
-			if (qiPlayer.qiCurrent >= qiPlayer.qiMax2&&qiPlayer.levelStage<3) {
-				qiPlayer.levelStageUpRate += 7 / (qiPlayer.qiLevel + qiPlayer.levelStage * 0.2f);
-				Text.ShowTextGreen(player, $"正在尝试破境...当前进度{qiPlayer.levelStageUpRate}%");
+			if (qiResource.QiCurrent >= qiResource.QiMaxCurrent && qiRealm.LevelStage < 3) {
+				qiRealm.BreakthroughProgress += 7 / (qiRealm.GuLevel + qiRealm.LevelStage * 0.2f);
+				Text.ShowTextGreen(player, $"正在尝试破境...当前进度{qiRealm.BreakthroughProgress}%");
 			}
 			else {
-				qiPlayer.qiCurrent += 16;
+				qiResource.QiCurrent += 16;
 			}
 		
 			return true;

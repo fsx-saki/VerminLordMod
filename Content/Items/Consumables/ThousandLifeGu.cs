@@ -11,10 +11,10 @@ namespace VerminLordMod.Content.Items.Consumables
     /// </summary>
     internal class ThousandLifeGu : GuConsumableItem
     {
-        public override int QiCost => 1000;
+        public override int QiCost => 500;
         public override int GuLevel => 4;
 
-        protected override void ApplyEffect(Player player, QiPlayer qiPlayer)
+        protected override void ApplyEffect(Player player, QiResourcePlayer qiResource)
         {
             var guPerk = player.GetModPlayer<GuPerkSystem>();
             guPerk.AddExtraAges(1000);

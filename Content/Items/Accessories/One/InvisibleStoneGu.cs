@@ -43,8 +43,8 @@ namespace VerminLordMod.Content.Items.Accessories.One
 				player.AddBuff(BuffID.Invisibility, 2);
 
 			}
-			var qiPlayer = player.GetModPlayer<QiPlayer>();
-			qiPlayer.qiMax2 -= qiCost;
+			var qiResource = player.GetModPlayer<QiResourcePlayer>();
+			qiResource.QiMaxCurrent -= qiCost;
 		}
 	}
 

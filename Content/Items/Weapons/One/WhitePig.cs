@@ -33,21 +33,22 @@ namespace VerminLordMod.Content.Items.Weapons.One
 			if (player.altFunctionUse == 2) {
 				return false;
 			}
-			var qiPlayer = player.GetModPlayer<QiPlayer>();
-			if (qiPlayer.whitePigs >= 100) {
-				Text.ShowTextRed(player, $"当前使用了 {qiPlayer.whitePigs} 次白豕蛊,该蛊已经不能为你提升力量。");
+			var guPerk = player.GetModPlayer<GuPerkSystem>();
+			if (guPerk.whitePigPower >= 100) {
+				Text.ShowTextRed(player, $"当前使用了 {guPerk.whitePigPower} 次白豕蛊,该蛊已经不能为你提升力量。");
 				return false;
 			}
 
 			var random = new Random();
 			if (Randommer.Roll(66)) {
-				Main.LocalPlayer.Hurt(PlayerDeathReason.LegacyDefault(), 3 * qiPlayer.whitePigs, 0);
+				Main.LocalPlayer.Hurt(PlayerDeathReason.LegacyDefault(), 3 * guPerk.whitePigPower, 0);
 			}
 
-			qiPlayer.whitePigs += 1;
-			qiPlayer.qiCurrent -= qiCost;
+			guPerk.TryAddWhitePigPower(1);
+			var qiResource = player.GetModPlayer<QiResourcePlayer>();
+			qiResource.ConsumeQi(qiCost);
 			//player.GetDamage<DamageClass.Melee>()+=0.01f
-			Text.ShowTextGreen(player, $"使用白豕蛊，你的力量有所增加。当前使用了 {qiPlayer.whitePigs} 次白豕蛊。");
+			Text.ShowTextGreen(player, $"使用白豕蛊，你的力量有所增加。当前使用了 {guPerk.whitePigPower} 次白豕蛊。");
 			return true;
 
 		}

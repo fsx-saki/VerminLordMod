@@ -32,8 +32,8 @@ namespace VerminLordMod.Content.Items.Debuggers
 		}
 
 		public override bool? UseItem(Player player) {
-			QiPlayer qiPlayer = player.GetModPlayer<QiPlayer>();
-			qiPlayer.qiCurrent = qiPlayer.qiMax2;
+			QiResourcePlayer qiResource = player.GetModPlayer<QiResourcePlayer>();
+			qiResource.QiCurrent = qiResource.QiMaxCurrent;
 			return true;
 		}
 	}

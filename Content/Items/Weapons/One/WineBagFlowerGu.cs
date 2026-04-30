@@ -30,8 +30,8 @@ namespace VerminLordMod.Content.Items.Weapons.One
 				return false;
 
 			//Main.NewText("secc");
-			QiPlayer qiPlayer = player.GetModPlayer<QiPlayer>();
-			qiPlayer.qiCurrent -= qiCost;
+			var qiResource = player.GetModPlayer<QiResourcePlayer>();
+			qiResource.ConsumeQi(qiCost);
 			if (Randommer.Roll(5)) {
 				player.QuickSpawnItemDirect(player.GetSource_ItemUse(Item), ItemID.Eggnog);
 			}

@@ -46,12 +46,13 @@ namespace VerminLordMod.Content.Items.Accessories.Two
 		}
 		public override void UpdateAccessory(Player player, bool hideVisual) {
 			if(Main.netMode==NetmodeID.Server)return;
-			var qiPlayer = player.GetModPlayer<QiPlayer>();
-			if (_guLevel > qiPlayer.qiLevel && Randommer.Roll(10)) {
+			var qiRealm = player.GetModPlayer<QiRealmPlayer>();
+			var qiResource = player.GetModPlayer<QiResourcePlayer>();
+			if (_guLevel > qiRealm.GuLevel && Randommer.Roll(10)) {
 				Text.ShowTextRed(player, "您正在强行调动高转蛊虫！！！");
-				player.Hurt(PlayerDeathReason.LegacyDefault(), (_guLevel - qiPlayer.qiLevel) * Main.LocalPlayer.statLifeMax2 / 20, 0);
+				player.Hurt(PlayerDeathReason.LegacyDefault(), (_guLevel - qiRealm.GuLevel) * Main.LocalPlayer.statLifeMax2 / 20, 0);
 			}
-			qiPlayer.qiMax2 -= qiCost;
+			qiResource.QiMaxCurrent -= qiCost;
 		}
 		public override void AddRecipes() {// 这个括号里有一个默认的参数1，你可以填任何大于0的整数。它代表了这个合成表会生成多少个物品
 			CreateRecipe()

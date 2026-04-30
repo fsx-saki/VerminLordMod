@@ -32,8 +32,17 @@ namespace VerminLordMod.Content.Items.Debuggers
 		}
 
 		public override bool? UseItem(Player player) {
-			QiPlayer qiPlayer = player.GetModPlayer<QiPlayer>();
-			QiPlayer.resetAll(qiPlayer);
+			QiResourcePlayer qiResource = player.GetModPlayer<QiResourcePlayer>();
+			QiRealmPlayer qiRealm = player.GetModPlayer<QiRealmPlayer>();
+			QiTalentPlayer qiTalent = player.GetModPlayer<QiTalentPlayer>();
+			GuPerkSystem guPerk = player.GetModPlayer<GuPerkSystem>();
+			KongQiaoPlayer kongQiao = player.GetModPlayer<KongQiaoPlayer>();
+
+			qiResource.ResetAll();
+			qiRealm.ResetAll();
+			qiTalent.ResetAll();
+			guPerk.ResetAll();
+			kongQiao.KongQiao.Clear();
 			return true;
 		}
 	}

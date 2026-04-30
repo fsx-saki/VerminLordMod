@@ -49,5 +49,6 @@ namespace VerminLordMod.Content.Buffs.AddToSelf.Pobuff
 				dust.noGravity = true;
 			}
 		}
+
 	}
 }

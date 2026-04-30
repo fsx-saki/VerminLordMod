@@ -68,9 +68,11 @@ namespace VerminLordMod.Common.UI.QiUI
 		protected override void DrawSelf(SpriteBatch spriteBatch) {
 			base.DrawSelf(spriteBatch);
 
-			var modPlayer = Main.LocalPlayer.GetModPlayer<QiPlayer>();
+			var qiResource = Main.LocalPlayer.GetModPlayer<QiResourcePlayer>();
+			var qiRealm = Main.LocalPlayer.GetModPlayer<QiRealmPlayer>();
+			var qiTalent = Main.LocalPlayer.GetModPlayer<QiTalentPlayer>();
 			// Calculate quotient
-			float quotient = modPlayer.kongQiaoMax == 0 ? 0 : (float)modPlayer.qiCurrent / modPlayer.kongQiaoMax; // Creating a quotient that represents the difference of your currentResource vs your maximumResource, resulting in a float of 0-1f.
+			float quotient = qiResource.QiMaxCurrent == 0 ? 0 : (float)qiResource.QiCurrent / qiResource.QiMaxCurrent; // Creating a quotient that represents the difference of your currentResource vs your maximumResource, resulting in a float of 0-1f.
 			quotient = Utils.Clamp(quotient, 0f, 1f); // Clamping it to 0-1f so it doesn't go over that.
 
 			// Here we get the screen dimensions of the barFrame element, then tweak the resulting rectangle to arrive at a rectangle within the barFrame texture that we will draw the gradient. These values were measured in a drawing program.
@@ -81,7 +83,7 @@ namespace VerminLordMod.Common.UI.QiUI
 			hitbox.Height -= 16;
 
 			// Now, using this hitbox, we draw a gradient by drawing vertical lines while slowly interpolating between the 2 colors.
-			switch (modPlayer.qiLevel) {
+			switch (qiRealm.GuLevel) {
 				case 1://一转青铜
 					gradientA = new Color(192, 255, 62); 
 					gradientB = new Color(102, 205, 0); 
@@ -134,16 +136,18 @@ namespace VerminLordMod.Common.UI.QiUI
 		}
 
 		public override void Update(GameTime gameTime) {
-			var modPlayer = Main.LocalPlayer.GetModPlayer<QiPlayer>();
+			var qiResource = Main.LocalPlayer.GetModPlayer<QiResourcePlayer>();
+			var qiRealm = Main.LocalPlayer.GetModPlayer<QiRealmPlayer>();
+			var qiTalent = Main.LocalPlayer.GetModPlayer<QiTalentPlayer>();
 
 			// Setting the text per tick to update and show our resource values.
 			string str;
-			//float r = (float)(modPlayer.qiCurrent / modPlayer.qiMax2) * 10;
+			//float r = (float)(qiResource.QiCurrent / qiResource.QiMaxCurrent) * 10;
 			//int rr = (int)r;
-			int rr = modPlayer.kongQiaoMax == 0 ? -1 : modPlayer.qiCurrent * 10 / modPlayer.kongQiaoMax;
-			if (!modPlayer.qiEnabled)
+			int rr = qiResource.QiMaxCurrent == 0 ? -1 : (int)(qiResource.QiCurrent * 10 / qiResource.QiMaxCurrent);
+			if (qiRealm.GuLevel <= 0)
 				rr = -1;
-			if (modPlayer.qiLevel >= 6) {
+			if (qiRealm.GuLevel >= 6) {
 				yuan = "仙元";
 				qiao = "仙窍";
 			}
@@ -192,13 +196,13 @@ namespace VerminLordMod.Common.UI.QiUI
 					str = "未知"+yuan;
 					break;
 			}
-			//text.SetText(modPlayer.qiCurrent.ToString()+"/"+modPlayer.qiMax2.ToString());
-			text.SetText(qiao+"：" + str + "[" + modPlayer.qiCurrent.ToString() + "/" + modPlayer.qiMax2.ToString() + "/" + modPlayer.kongQiaoMax.ToString() + "]");
+			//text.SetText(qiResource.QiCurrent.ToString()+"/"+qiResource.QiMaxCurrent.ToString());
+			text.SetText(qiao+"：" + str + "[" + qiResource.QiCurrent.ToString() + "/" + qiResource.QiMaxCurrent.ToString() + "]");
 
 
 
 			string str2 = "";
-			switch (modPlayer.levelStage) {
+			switch (qiRealm.LevelStage) {
 				case 0:
 					str2 = "初期";
 					break;
@@ -214,28 +218,25 @@ namespace VerminLordMod.Common.UI.QiUI
 			}
 			string str3 = "";
 
-			switch (modPlayer.PlayerZiZhi) {
-				case ZiZhi.RJIA:
+			switch (qiTalent.Grade) {
+				case QiTalentPlayer.TalentGrade.Jia:
 					str3 = "甲等";
 					break;
-				case ZiZhi.RYI:
+				case QiTalentPlayer.TalentGrade.Yi:
 					str3 = "乙等";
 					break;
-				case ZiZhi.RBING:
+				case QiTalentPlayer.TalentGrade.Bing:
 					str3 = "丙等";
 					break;
-				case ZiZhi.RDING:
+				case QiTalentPlayer.TalentGrade.Ding:
 					str3 = "丁等";
 					break;
-				case ZiZhi.RO:
+				default:
 					str3 = "未知";
-					break;
-				case ZiZhi.GUA:
-					str3 = "开发者";
 					break;
 			}
 
-			text2.SetText($"资质：{str3}  境界：{modPlayer.qiLevel}转{str2}");
+			text2.SetText($"资质：{str3}  境界：{qiRealm.GuLevel}转{str2}");
 			base.Update(gameTime);
 		}
 	}

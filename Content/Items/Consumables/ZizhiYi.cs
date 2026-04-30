@@ -33,13 +33,13 @@ namespace VerminLordMod.Content.Items.Consumables
 		}
 
 		public override bool? UseItem(Player player) {
-			QiPlayer qiPlayer = player.GetModPlayer<QiPlayer>();
-			if (qiPlayer.qiEnabled)
+			QiRealmPlayer qiRealm = player.GetModPlayer<QiRealmPlayer>();
+			QiTalentPlayer qiTalent = player.GetModPlayer<QiTalentPlayer>();
+			if (qiRealm.GuLevel > 0)
 				return false;
-			qiPlayer.qiEnabled = true;
-			qiPlayer.PlayerZiZhi = ZiZhi.RYI;
-			qiPlayer.qiLevel = 1;
-			QiPlayer.SetQis(qiPlayer);
+			qiTalent.Grade = QiTalentPlayer.TalentGrade.Yi;
+			qiTalent.CalculateEffects();
+			qiRealm.OnAwakening();
 			return true;
 		}
 	}

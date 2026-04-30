@@ -12,7 +12,7 @@ namespace VerminLordMod.Content.Items.Consumables
     /// <summary>
     /// 蛊虫消耗品基类
     /// 统一处理：真元消耗、蛊虫等级检查、强行调动惩罚
-    /// 子类只需重写 <see cref="ApplyEffect(Player, QiPlayer)"/> 实现具体效果
+    /// 子类只需重写 <see cref="ApplyEffect(Player, QiResourcePlayer)"/> 实现具体效果
     /// </summary>
     public abstract class GuConsumableItem : ModItem
     {
@@ -68,39 +68,40 @@ namespace VerminLordMod.Content.Items.Consumables
 
         public override bool CanUseItem(Player player)
         {
-            var qiPlayer = player.GetModPlayer<QiPlayer>();
-            if (qiPlayer.qiCurrent < QiCost)
+            var qiResource = player.GetModPlayer<QiResourcePlayer>();
+            if (qiResource.QiCurrent < QiCost)
                 return false;
 
             // 让子类有机会阻止使用
-            return CanApplyEffect(player, qiPlayer);
+            return CanApplyEffect(player, qiResource);
         }
 
         /// <summary>
         /// 子类可重写此方法添加额外的使用条件
         /// </summary>
-        protected virtual bool CanApplyEffect(Player player, QiPlayer qiPlayer)
+        protected virtual bool CanApplyEffect(Player player, QiResourcePlayer qiResource)
         {
             return true;
         }
 
         public override bool? UseItem(Player player)
         {
-            var qiPlayer = player.GetModPlayer<QiPlayer>();
+            var qiResource = player.GetModPlayer<QiResourcePlayer>();
+            var qiRealm = player.GetModPlayer<QiRealmPlayer>();
 
             // 强行调动高转蛊虫惩罚
-            if (GuLevel > qiPlayer.qiLevel)
+            if (GuLevel > qiRealm.GuLevel)
             {
                 Text.ShowTextRed(player, "您正在强行调动高转蛊虫！！！");
-                int damage = (GuLevel - qiPlayer.qiLevel) * player.statLifeMax2 / 10;
+                int damage = (GuLevel - qiRealm.GuLevel) * player.statLifeMax2 / 10;
                 player.Hurt(PlayerDeathReason.LegacyDefault(), damage, 0);
             }
 
             // 扣除真元
-            qiPlayer.qiCurrent -= QiCost;
+            qiResource.QiCurrent -= QiCost;
 
             // 应用具体效果
-            ApplyEffect(player, qiPlayer);
+            ApplyEffect(player, qiResource);
 
             return true;
         }
@@ -108,6 +109,6 @@ namespace VerminLordMod.Content.Items.Consumables
         /// <summary>
         /// 子类实现具体的蛊虫效果
         /// </summary>
-        protected abstract void ApplyEffect(Player player, QiPlayer qiPlayer);
+        protected abstract void ApplyEffect(Player player, QiResourcePlayer qiResource);
     }
 }

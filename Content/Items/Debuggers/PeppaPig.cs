@@ -48,20 +48,23 @@ namespace VerminLordMod.Content.Items.Debuggers
 
 		// Make sure you can't use the item if you don't have enough resource
 		public override bool CanUseItem(Player player) {
-			var qiPlayer = player.GetModPlayer<QiPlayer>();
-			//if(qiPlayer == null) return false;
-			bool res = qiPlayer.qiCurrent >= qiCost;
+			var qiResource = player.GetModPlayer<QiResourcePlayer>();
+			//if(qiResource == null) return false;
+			bool res = qiResource.QiCurrent >= qiCost;
 			//if (res)qiPlayer.whitePigs += 0.01f;
 			return res;
 		}
 
 		// Reduce resource on use
 		public override bool? UseItem(Player player) {
-			var qiPlayer = player.GetModPlayer<QiPlayer>();
-			qiPlayer.whitePigs += 100;
-			//qiPlayer.qiCurrent -= qiCost;
+			var guPerk = player.GetModPlayer<GuPerkSystem>();
+			// 直接使用反射或循环添加，因为 whitePigPower 的 setter 是 private
+			for (int i = 0; i < 100; i++) {
+				guPerk.TryAddWhitePigPower(1);
+			}
+			//qiResource.ConsumeQi(qiCost);
 			//player.GetDamage<DamageClass.Melee>()+=0.01f
-			Main.NewText($"使用小猪佩奇，你的力量有所增加。相当于已经使用了 {qiPlayer.whitePigs} 只白豕蛊。");
+			Main.NewText($"使用小猪佩奇，你的力量有所增加。相当于已经使用了 {guPerk.whitePigPower} 只白豕蛊。");
 			return true;
 		}
 	}

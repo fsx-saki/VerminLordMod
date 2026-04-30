@@ -50,10 +50,9 @@ namespace VerminLordMod.Content.NPCs.GuMasters
         // 静态配置
         // ============================================================
 
-        // 使用学堂家老（XueTangJiaLao）的身体贴图和动画
-        // 这样古月巡逻蛊师在野外看起来和学堂家老一样，但行为完全不同（敌对、掠夺）
-        // 头像必须显式指向自己的文件，因为 Texture 重写后 HeadTexture 默认会追加 "_Head"
-        public override string Texture => "VerminLordMod/Content/NPCs/Town/XueTangJiaLao";
+        // 使用古月家族统一贴图
+        // 所有古月家族NPC共享同一套贴图资源
+        public override string Texture => "VerminLordMod/Content/NPCs/GuMasters/GuYuePatrolGuMaster";
         public override string HeadTexture => "VerminLordMod/Content/NPCs/GuMasters/GuYuePatrolGuMaster_Head";
 
         public override void SetStaticDefaults()
@@ -593,8 +592,8 @@ namespace VerminLordMod.Content.NPCs.GuMasters
 
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            var qiPlayer = spawnInfo.Player.GetModPlayer<QiPlayer>();
-            if (!qiPlayer.qiEnabled) return 0f;
+            var qiRealm = spawnInfo.Player.GetModPlayer<QiRealmPlayer>();
+            if (qiRealm.GuLevel <= 0) return 0f;
 
             // 只在古月驻地生物群系中刷新
             if (spawnInfo.Player.InModBiome<GuYueCompoundBiome>())

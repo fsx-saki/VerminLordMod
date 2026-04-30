@@ -21,8 +21,8 @@ namespace VerminLordMod.Common.Systems
 		public static bool hasSummonesKing = false;
 		public override void PreUpdateNPCs() {
 			Player player = Main.LocalPlayer;
-			QiPlayer qiPlayer=player.GetModPlayer<QiPlayer>();
-			if (player.statLifeMax >= 150 && qiPlayer.qiEnabled) {
+			QiRealmPlayer qiRealm = player.GetModPlayer<QiRealmPlayer>();
+			if (player.statLifeMax >= 150 && qiRealm.GuLevel > 0) {
 				if (Main.time == 0d) {
 					if (Main.dayTime) {
 						//Main.NewText($"尝试生成狼潮{Main.time}");

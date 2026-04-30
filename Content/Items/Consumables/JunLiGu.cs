@@ -6,20 +6,19 @@ using VerminLordMod.Common.Players;
 namespace VerminLordMod.Content.Items.Consumables
 {
     /// <summary>
-    /// 钧力蛊 - 三转力道蛊
-    /// 原文："有斤力蛊、钧力蛊等，增长蛊师力气。"
-    /// 效果：永久增加近战伤害（每只+30%）
+    /// 钧力蛊 - 二转力道蛊
+    /// 效果：永久增加近战伤害（每只+10%）
     /// </summary>
     internal class JunLiGu : GuConsumableItem
     {
-        public override int QiCost => 300;
-        public override int GuLevel => 3;
+        public override int QiCost => 100;
+        public override int GuLevel => 2;
 
-        protected override void ApplyEffect(Player player, QiPlayer qiPlayer)
+        protected override void ApplyEffect(Player player, QiResourcePlayer qiResource)
         {
             var guPerk = player.GetModPlayer<GuPerkSystem>();
-            guPerk.AddJunLiPower(30);
-            CombatText.NewText(player.getRect(), Color.Gold, "钧力+30");
+            guPerk.AddJunLiPower(1);
+            CombatText.NewText(player.getRect(), Color.Gold, "钧力+1");
         }
     }
 }

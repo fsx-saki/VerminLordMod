@@ -321,7 +321,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SubworldLibrary">
-      <HintPath>..\SubworldLibrary\bin\Debug\net8.0\SubworldLibrary.dll</HintPath>
+      <HintPath>SubworldLibrary.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>

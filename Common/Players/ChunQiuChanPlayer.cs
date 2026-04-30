@@ -68,11 +68,11 @@ namespace VerminLordMod.Common.Players
 					}
 					Player.dead = false;
 
-					// 保护真元不被 QiPlayer.Kill() 减半
-					var qiPlayer = Player.GetModPlayer<QiPlayer>();
-					if (qiPlayer.qiCurrent < 0)
+					// 保护真元不被死亡清空
+					var qiResource = Player.GetModPlayer<QiResourcePlayer>();
+					if (qiResource.QiCurrent < 0)
 					{
-						qiPlayer.qiCurrent = 0;
+						qiResource.QiCurrent = 0;
 					}
 
 					// 保持无敌

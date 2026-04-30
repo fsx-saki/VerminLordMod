@@ -18,9 +18,9 @@ namespace VerminLordMod.Content.Items.Weapons.Four
 		protected override float unitConntrolRate => 5;
 		protected override int controlQiCost => 5;
 		protected override int _guLevel => 4;
-		public static LocalizedText UsesXQiText { get; private set; }
-		public static LocalizedText ControlRate { get; private set; }
-		public static LocalizedText GuLevel { get; private set; }
+		public new static LocalizedText UsesXQiText { get; private set; }
+		public new static LocalizedText ControlRate { get; private set; }
+		public new static LocalizedText GuLevel { get; private set; }
 		public override void SetStaticDefaults() {
 			UsesXQiText = this.GetLocalization("UsesXQi");
 			ControlRate = this.GetLocalization("ControlRate");
@@ -53,23 +53,25 @@ namespace VerminLordMod.Content.Items.Weapons.Four
 		}
 
 		public override bool CanUseItem(Player player) {
-			var qiPlayer = player.GetModPlayer<QiPlayer>();
+			var qiResource = player.GetModPlayer<QiResourcePlayer>();
+			var qiRealm = player.GetModPlayer<QiRealmPlayer>();
+			var guPerk = player.GetModPlayer<GuPerkSystem>();
 
 			if (player.altFunctionUse == 2) {
 				Item.useTime = 5;
 				Item.useAnimation = 5;
 				Item.useStyle = ItemUseStyleID.HoldUp;
-				//Main.NewText($"qiCurrent{qiPlayer.qiCurrent}");
+				//Main.NewText($"qiCurrent{qiResource.QiCurrent}");
 				//Main.NewText($"controlQiCost{controlQiCost}");
 				if (hasBeenControlled) {
 					Text.ShowTextRed(player, "您已经完全炼化该蛊虫");
 					return false;
 				}
-				if (qiPlayer.qiCurrent < controlQiCost) {
+				if (qiResource.QiCurrent < controlQiCost) {
 					Text.ShowTextRed(player, "炼化失败 真元不足");
 					return false;
 				}
-				qiPlayer.qiCurrent -= controlQiCost;
+				qiResource.ConsumeQi(controlQiCost);
 				controlRate += unitConntrolRate;
 				Text.ShowTextGreen(player, $"炼化中......当前进度{controlRate}%");
 				return true;
@@ -83,20 +85,20 @@ namespace VerminLordMod.Content.Items.Weapons.Four
 				Text.ShowTextRed(player, "该蛊虫还未炼化，右键使用开始炼化");
 				return false;
 			}
-			if (_guLevel > qiPlayer.qiLevel) {
+			if (_guLevel > qiRealm.GuLevel) {
 				Text.ShowTextRed(player, "您正在强行调动高转蛊虫！！！");
-				Main.LocalPlayer.Hurt(PlayerDeathReason.LegacyDefault(), (_guLevel - qiPlayer.qiLevel) * Main.LocalPlayer.statLifeMax2 / 20, 0);
+				Main.LocalPlayer.Hurt(PlayerDeathReason.LegacyDefault(), (_guLevel - qiRealm.GuLevel) * Main.LocalPlayer.statLifeMax2 / 20, 0);
 			}
 			//
-			if (qiPlayer.qiLevel != 4) {
+			if (qiRealm.GuLevel != 4) {
 				Text.ShowTextRed(player, $"您不是四转蛊师,该蛊不能为你提升真元恢复速度。");
 				return false;
 			}
-			if (qiPlayer.hasNineWineBug == true) {
+			if (guPerk.wineBugLevel >= GuPerkSystem.WineBugLevel.NineEye) {
 				Text.ShowTextRed(player, $"您已经使用过九眼酒虫,该蛊不能为你提升真元恢复速度。");
 				return false;
 			}
-			return qiPlayer.qiCurrent >= qiCost;
+			return qiResource.QiCurrent >= qiCost;
 		}
 
 		// Reduce resource on use
@@ -104,15 +106,15 @@ namespace VerminLordMod.Content.Items.Weapons.Four
 			if (player.altFunctionUse == 2) {
 				return false;
 			}
-			var qiPlayer = player.GetModPlayer<QiPlayer>();
+			var guPerk = player.GetModPlayer<GuPerkSystem>();
+			var qiResource = player.GetModPlayer<QiResourcePlayer>();
 
 			//var random = new Random();
 
-			qiPlayer.hasNineWineBug = true;
-			qiPlayer.extraQiRegen += 9;
-			qiPlayer.qiCurrent -= qiCost;
+			guPerk.UpgradeWineBug(GuPerkSystem.WineBugLevel.NineEye);
+			qiResource.ConsumeQi(qiCost);
 			//player.GetDamage<DamageClass.Melee>()+=0.01f
-			Text.ShowTextRed(player,$"使用九眼酒虫，真元恢复永久提升9点。");
+			Text.ShowTextRed(player,$"使用九眼酒虫，真元恢复永久提升。");
 			return true;
 
 

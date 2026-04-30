@@ -46,9 +46,9 @@ namespace VerminLordMod.Content.Projectiles.Minions
 		protected override int _useTime => 26;
 		protected override int _guLevel => 1;
 
-		public static LocalizedText UsesXQiText { get; private set; }
-		public static LocalizedText ControlRate { get; private set; }
-		public static LocalizedText GuLevel { get; private set; }
+		public new static LocalizedText UsesXQiText { get; private set; }
+		public new static LocalizedText ControlRate { get; private set; }
+		public new static LocalizedText GuLevel { get; private set; }
 		public override void ModifyTooltips(List<TooltipLine> tooltips) {
 			
 			tooltips.Insert(2, new TooltipLine(Mod, "QiCost", UsesXQiText.Format(qiCost)));
@@ -72,14 +72,14 @@ namespace VerminLordMod.Content.Projectiles.Minions
 		}
 
 		public override void SetDefaults() {
-			//¾²Ì¬ÊôÐÔ
+			//ï¿½ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½
 			Item.width = 24;
 			Item.height = 24;
 			Item.rare = ItemRarityID.White;
 			Item.maxStack = 1;
 			Item.value = 50000;
 
-			//Ê¹ÓÃÊôÐÔ
+			//Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			Item.useStyle = ItemUseStyleID.HoldUp;
 			Item.autoReuse = true;
 			Item.useTurn = true;

@@ -165,21 +165,21 @@ namespace VerminLordMod.Content.NPCs.GuMasters
         {
             var player = Main.LocalPlayer;
             float dist = Vector2.Distance(npc.Center, player.Center);
-            var qiPlayer = player.GetModPlayer<QiPlayer>();
+            var qiRealm = player.GetModPlayer<QiRealmPlayer>();
 
             return new PerceptionContext
             {
                 TargetPlayer = player,
                 DistanceToPlayer = dist,
                 PlayerLifePercent = (int)((float)player.statLife / player.statLifeMax2 * 100),
-                PlayerHasQiEnabled = qiPlayer.qiEnabled,
+                PlayerHasQiEnabled = qiRealm.GuLevel > 0,
                 NearbyAlliesCount = CountNearbyAllies(npc, 400f),
                 NearbyEnemiesCount = CountNearbyEnemies(npc, 400f),
                 IsInOwnTerritory = false, // 后续由小世界系统提供
                 TimeOfDay = (float)Main.time,
                 IsRaining = Main.raining,
                 PlayerInfamy = player.GetModPlayer<GuWorldPlayer>().InfamyPoints,
-                PlayerQiLevel = qiPlayer.qiLevel,
+                PlayerQiLevel = qiRealm.GuLevel,
                 PlayerDamage = player.HeldItem.damage
             };
         }
@@ -508,35 +508,53 @@ namespace VerminLordMod.Content.NPCs.GuMasters
 
         public virtual void GetChatButtons(NPC npc, ref string button, ref string button2)
         {
-            button = "对话";
-            if (CurrentAttitude != GuAttitude.Hostile && CurrentAttitude != GuAttitude.Wary)
+            // 集成 DialogueSystem：生成对话选项
+            var dialogueSystem = ModContent.GetInstance<DialogueSystem>();
+            dialogueSystem.GenerateDialogueOptions(Main.LocalPlayer, npc, ref button, ref button2);
+
+            // 如果 DialogueSystem 没有覆盖按钮，使用默认值
+            if (string.IsNullOrEmpty(button))
+                button = "对话";
+            if (string.IsNullOrEmpty(button2))
             {
-                // 根据弹幕保护状态显示不同的按钮文本
-                if (ProjectileProtectionEnabled)
-                    button2 = "去除保护";
-                else
-                    button2 = "开启保护";
+                if (CurrentAttitude != GuAttitude.Hostile && CurrentAttitude != GuAttitude.Wary)
+                {
+                    // 根据弹幕保护状态显示不同的按钮文本
+                    if (ProjectileProtectionEnabled)
+                        button2 = "去除保护";
+                    else
+                        button2 = "开启保护";
+                }
             }
         }
 
         public virtual void OnChatButtonClicked(NPC npc, bool firstButton, ref string shop)
         {
+            var dialogueSystem = ModContent.GetInstance<DialogueSystem>();
+
             if (firstButton)
             {
-                // 对话
+                // 对话（主按钮）
+                dialogueSystem.OnDialogueChoice(Main.LocalPlayer, npc, 0);
                 Main.npcChatText = GetDialogue(npc, CurrentAttitude);
             }
             else
             {
-                // 切换弹幕保护状态
-                ProjectileProtectionEnabled = !ProjectileProtectionEnabled;
-                if (ProjectileProtectionEnabled)
+                // 副按钮：尝试 DialogueSystem 的第二个选项
+                dialogueSystem.OnDialogueChoice(Main.LocalPlayer, npc, 1);
+
+                // 如果 DialogueSystem 没有处理，回退到弹幕保护切换
+                if (CurrentAttitude != GuAttitude.Hostile && CurrentAttitude != GuAttitude.Wary)
                 {
-                    Main.npcChatText = "你重新开启了弹幕保护。";
-                }
-                else
-                {
-                    Main.npcChatText = "你悄悄去除了弹幕保护。";
+                    ProjectileProtectionEnabled = !ProjectileProtectionEnabled;
+                    if (ProjectileProtectionEnabled)
+                    {
+                        Main.npcChatText = "你重新开启了弹幕保护。";
+                    }
+                    else
+                    {
+                        Main.npcChatText = "你悄悄去除了弹幕保护。";
+                    }
                 }
             }
         }
@@ -637,8 +655,8 @@ namespace VerminLordMod.Content.NPCs.GuMasters
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
             // 默认：地表，玩家已开启空窍
-            var qiPlayer = spawnInfo.Player.GetModPlayer<QiPlayer>();
-            if (!qiPlayer.qiEnabled) return 0f;
+            var qiRealm = spawnInfo.Player.GetModPlayer<QiRealmPlayer>();
+            if (qiRealm.GuLevel <= 0) return 0f;
             return 0.03f;
         }
 

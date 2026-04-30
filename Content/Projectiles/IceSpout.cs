@@ -40,7 +40,7 @@ namespace VerminLordMod.Content.Projectiles
 									 // 以及写一些关于无敌帧的设定
 		}
 
-		private int frametime = 0;
+		//private int frametime = 0;
 		public override void AI() {
 			
 			Vector2 offset = new Vector2(-24, 0);

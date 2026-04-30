@@ -19,9 +19,9 @@ namespace VerminLordMod.Content.Items.Weapons.Three
 		protected override int _guLevel => 3;
 		protected override int _useTime => 50;
 		protected override int qiCost => 40;
-		public static LocalizedText UsesXQiText { get; private set; }
-		public static LocalizedText ControlRate { get; private set; }
-		public static LocalizedText GuLevel { get; private set; }
+		public new static LocalizedText UsesXQiText { get; private set; }
+		public new static LocalizedText ControlRate { get; private set; }
+		public new static LocalizedText GuLevel { get; private set; }
 		public static LocalizedText yuanRateText { get; private set; }
 		public override void SetStaticDefaults() {
 			UsesXQiText = this.GetLocalization("UsesXQi");
@@ -80,11 +80,12 @@ namespace VerminLordMod.Content.Items.Weapons.Three
 			}
 			else {
 				if (controlRate >= 100) {
-					QiPlayer qiPlayer=player.GetModPlayer<QiPlayer>();
-					int currQi=qiPlayer.qiCurrent;
-					qiPlayer.qiCurrent+=(int)this.yuanRate*16;
-					this.yuanRate -= (qiPlayer.qiCurrent - currQi)/16;
-					Text.ShowTextGreen(player, $"补充{qiPlayer.qiCurrent - currQi}真元");
+					var qiResource = player.GetModPlayer<QiResourcePlayer>();
+					int currQi = (int)qiResource.QiCurrent;
+					qiResource.RefundQi((int)this.yuanRate * 16);
+					int gained = (int)(qiResource.QiCurrent - currQi);
+					this.yuanRate -= gained / 16;
+					Text.ShowTextGreen(player, $"补充{gained}真元");
 				}
 				return false;
 			}

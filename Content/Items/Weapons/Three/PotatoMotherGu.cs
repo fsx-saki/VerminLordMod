@@ -1,18 +1,16 @@
 ﻿using Terraria;
 using Terraria.ID;
-using Terraria.ModLoader;
 using VerminLordMod.Common.Players;
 using VerminLordMod.Content.Items.Weapons.Daos;
-using VerminLordMod.Content.Items.Weapons.Two;
 
 namespace VerminLordMod.Content.Items.Weapons.Three
 {
 	class PotatoMotherGu : EatingWeapon
 	{
-		protected override int qiCost => 50;
-		protected override int _useTime => 17;
+		protected override int qiCost => 10;
+		protected override int _useTime => 5;
 
-		protected override int _guLevel => 3;
+
 		protected override int controlQiCost => 5;
 		protected override float unitConntrolRate => 25;
 		public override void SetDefaults() {
@@ -32,9 +30,9 @@ namespace VerminLordMod.Content.Items.Weapons.Three
 				return false;
 
 			//Main.NewText("secc");
-			QiPlayer qiPlayer = player.GetModPlayer<QiPlayer>();
-			qiPlayer.qiCurrent -= qiCost;
-			player.QuickSpawnItemDirect(player.GetSource_ItemUse(Item), ModContent.ItemType<JiaoLeiPotatoGu>());
+			var qiResource = player.GetModPlayer<QiResourcePlayer>();
+			qiResource.ConsumeQi(qiCost);
+			player.QuickSpawnItemDirect(player.GetSource_ItemUse(Item), ItemID.GoldBar);
 
 			return true;
 		}

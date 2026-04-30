@@ -50,8 +50,8 @@ namespace VerminLordMod.Content.Items.Weapons.Three
 		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback) {
 			if (player.altFunctionUse == 2) {
 				if (controlRate >= 100&&player.HasBuff(ModContent.BuffType<GoldMoonCutbuff>())) {
-					QiPlayer qiPlayer=player.GetModPlayer<QiPlayer>();
-					if (qiPlayer.qiCurrent <= 100) {
+					var qiResource = player.GetModPlayer<QiResourcePlayer>();
+					if (qiResource.QiCurrent <= 100) {
 						Text.ShowTextRed(player, "真元不足！你已遭到组合技反噬！");
 						for (int i = 0; i < 50; i++) {
 							Dust.NewDust(position, player.width, player.height, DustID.RedMoss);
@@ -60,7 +60,7 @@ namespace VerminLordMod.Content.Items.Weapons.Three
 						player.ClearBuff(ModContent.BuffType<GoldMoonCutbuff>());
 						return false;
 					}
-					qiPlayer.qiCurrent -= 100;
+					qiResource.ConsumeQi(100);
 					var p1 = Projectile.NewProjectileDirect(source, position, velocity*0.3f, ModContent.ProjectileType<GoldMoonCutProj>(), 430, knockback, player.whoAmI);
 					p1.scale = 4.5f;
 					player.ClearBuff(ModContent.BuffType<GoldMoonCutbuff>());

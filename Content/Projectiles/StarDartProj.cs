@@ -35,7 +35,7 @@ namespace VerminLordMod.Content.Projectiles
 
 		private Texture2D mainTexture;
 		private readonly TrailManager trailManager = new TrailManager();
-		private bool gravityAffected = false;
+		//private bool gravityAffected = false;
 
 		public override void AI() {
 			trailManager.Update(Projectile.Center, Projectile.velocity);
@@ -63,7 +63,7 @@ namespace VerminLordMod.Content.Projectiles
 				Projectile.velocity.Y = -Projectile.velocity.Y;
 			}
 			
-			gravityAffected = true;
+			// gravityAffected = true;
 			Projectile.ai[0]++;
 			Projectile.netUpdate = true;
 			

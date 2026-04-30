@@ -244,10 +244,7 @@ namespace VerminLordMod.Content.NPCs.Boss
 			*/
 		}
 
-		public override void BossLoot(ref string name, ref int potionType) {
-			// Here you'd want to change the potion type that drops when the boss is defeated. Because this boss is early pre-hardmode, we keep it unchanged
-			// (Lesser Healing Potion). If you wanted to change it, simply write "potionType = ItemID.HealingPotion;" or any other potion type
-		}
+		// BossLoot is obsolete; loot is handled via ModifyNPCLoot above
 
 		public override bool CanHitPlayer(Player target, ref int cooldownSlot) {
 			cooldownSlot = ImmunityCooldownID.Bosses; // use the boss immunity cooldown counter, to prevent ignoring boss attacks by taking damage from other sources

@@ -17,9 +17,9 @@ namespace VerminLordMod.Content.Items.Weapons.Two
 		protected override int _useTime => 26;
 		protected override int _guLevel => 2;
 
-		public static LocalizedText UsesXQiText { get; private set; }
-		public static LocalizedText ControlRate { get; private set; }
-		public static LocalizedText GuLevel { get; private set; }
+		public new static LocalizedText UsesXQiText { get; private set; }
+		public new static LocalizedText ControlRate { get; private set; }
+		public new static LocalizedText GuLevel { get; private set; }
 
 		public override void SetStaticDefaults() {
 			// These are all related to gamepad controls and don't seem to affect anything else

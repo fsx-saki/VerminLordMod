@@ -193,14 +193,14 @@ namespace VerminLordMod.Common.Players
 			qiCurrent += regenAmount;
 			qiCurrent = Utils.Clamp(qiCurrent, 0, qiMax2);
 
-			// 每帧的破境处理
+			// 每帧的破境处理（已迁移到 QiRealmPlayer）
 			if (levelStageUpRate <= 100) {
 				levelStageUpRate -= 0.01f;
 			}
 			else {
 				levelStageUpRate = 0;
-				QiPlayer qiPlayer = Player.GetModPlayer<QiPlayer>();
-				StageUp(qiPlayer);
+				var qiRealm = Player.GetModPlayer<QiRealmPlayer>();
+				qiRealm.StageUp();
 			}
 
 			levelStageUpRate=Utils.Clamp(levelStageUpRate, 0, 100);
@@ -306,10 +306,18 @@ namespace VerminLordMod.Common.Players
 				return false;
 			}
 			else {
-				if (item.ModItem is GuWeaponItem && Player.altFunctionUse!=2 && Player.GetModPlayer<QiPlayer>().qiLevel >= 6) {
-					var gu =item.ModItem as GuWeaponItem;
-					if (gu.GetGuLevel() < 6) {
-						Player.GetModPlayer<QiPlayer>().qiCurrent += gu.GetQiCost();
+				// 六转以上使用低阶蛊虫返还真元（已迁移到新系统引用）
+				if (item.ModItem is GuWeaponItem && Player.altFunctionUse != 2)
+				{
+					var qiRealm = Player.GetModPlayer<QiRealmPlayer>();
+					if (qiRealm.GuLevel >= 6)
+					{
+						var gu = item.ModItem as GuWeaponItem;
+						if (gu.GetGuLevel() < 6)
+						{
+							var qiResource = Player.GetModPlayer<QiResourcePlayer>();
+							qiResource.RefundQi(gu.GetQiCost());
+						}
 					}
 				}
 				return base.CanUseItem(item);

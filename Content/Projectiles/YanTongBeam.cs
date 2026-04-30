@@ -113,9 +113,9 @@ namespace VerminLordMod.Content.Projectiles
 				return;
 			}
 			Player player = Main.player[Projectile.owner];
-			QiPlayer qiPlayer = player.GetModPlayer<QiPlayer>();
+			QiResourcePlayer qiResource = player.GetModPlayer<QiResourcePlayer>();
 			if (Randommer.Roll(33)) {
-				qiPlayer.qiCurrent -= 1;
+				qiResource.ConsumeQi(1);
 			}
 			
 			// Grab some variables from the host Prism.

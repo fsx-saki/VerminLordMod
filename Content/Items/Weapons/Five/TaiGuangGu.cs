@@ -5,13 +5,14 @@ using VerminLordMod.Content.Items.Weapons.Daos;
 
 namespace VerminLordMod.Content.Items.Weapons.Five
 {
-	class TaiGuangGu : WaterWeapon
+	class TaiGuangGu : EatingWeapon
 	{
-		protected override int controlQiCost => 15;
+		protected override int qiCost => 10;
 		protected override int _useTime => 5;
-		protected override int qiCost => 2;
-		protected override int _guLevel => 5;
-		protected override float unitConntrolRate => 15;
+
+
+		protected override int controlQiCost => 5;
+		protected override float unitConntrolRate => 25;
 		public override void SetDefaults() {
 			Item.width = 24;//碰撞箱宽度 一般设置为贴图宽度
 			Item.height = 24;//碰撞箱高度 一般设置为贴图高度
@@ -20,23 +21,17 @@ namespace VerminLordMod.Content.Items.Weapons.Five
 			Item.value = 50000;//价值 为购买价格 从右向左为铜币银币金币铂金币 卖出价格是购买价格的五分之一
 
 			Item.useStyle = ItemUseStyleID.HoldUp;
-			Item.autoReuse = true;
+			Item.autoReuse = false;
 			Item.useTurn = true;
 			Item.UseSound = SoundID.Item1;
 		}
-
 		public override bool? UseItem(Player player) {
-
-			if (player.altFunctionUse == 2)
+			if (player.altFunctionUse == 2) {
 				return false;
-
-
-			var qiPlayer = player.GetModPlayer<QiPlayer>();
-			
-			Lighting.AddLight(player.position, 50f, 50f, 50f);
-			qiPlayer.qiCurrent -= qiCost;
-			//player.GetDamage<DamageClass.Melee>()+=0.01f
-
+			}
+			var qiResource = player.GetModPlayer<QiResourcePlayer>();
+			qiResource.ConsumeQi(qiCost);
+			player.AddBuff(BuffID.Sunflower, 3600);
 			return true;
 		}
 	}

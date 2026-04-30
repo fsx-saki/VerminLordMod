@@ -30,29 +30,26 @@ namespace VerminLordMod.Content.Items.Debuggers
 			Item.UseSound = SoundID.Item1;
 
 		}
-		ZiZhi ZiZhi = ZiZhi.RO;
+		QiTalentPlayer.TalentGrade currentGrade = QiTalentPlayer.TalentGrade.Ding;
 		public override bool? UseItem(Player player) {
 			if (player.altFunctionUse == 2) {
-				if (ZiZhi == ZiZhi.RO) {
-					ZiZhi = ZiZhi.RDING;
-				}else if (ZiZhi == ZiZhi.RDING) {
-					ZiZhi = ZiZhi.RBING;
+				if (currentGrade == QiTalentPlayer.TalentGrade.Ding) {
+					currentGrade = QiTalentPlayer.TalentGrade.Bing;
+				}else if (currentGrade == QiTalentPlayer.TalentGrade.Bing) {
+					currentGrade = QiTalentPlayer.TalentGrade.Yi;
 				}
-				else if (ZiZhi == ZiZhi.RBING) {
-					ZiZhi = ZiZhi.RYI;
+				else if (currentGrade == QiTalentPlayer.TalentGrade.Yi) {
+					currentGrade = QiTalentPlayer.TalentGrade.Jia;
 				}
-				else if (ZiZhi == ZiZhi.RYI) {
-					ZiZhi = ZiZhi.RJIA;
+				else if (currentGrade == QiTalentPlayer.TalentGrade.Jia) {
+					currentGrade = QiTalentPlayer.TalentGrade.Ding;
 				}
-				else if (ZiZhi == ZiZhi.RJIA) {
-					ZiZhi = ZiZhi.RO;
-				}
-				Main.NewText(ZiZhi);
+				Main.NewText(currentGrade.ToString());
 			}
 			else {
-				QiPlayer qiPlayer = player.GetModPlayer<QiPlayer>();
-				qiPlayer.PlayerZiZhi = ZiZhi;
-				QiPlayer.SetQis(qiPlayer);
+				QiTalentPlayer qiTalent = player.GetModPlayer<QiTalentPlayer>();
+				qiTalent.Grade = currentGrade;
+				qiTalent.CalculateEffects();
 			}
 			return true;
 		}

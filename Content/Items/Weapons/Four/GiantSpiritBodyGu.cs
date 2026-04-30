@@ -2,17 +2,18 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 using VerminLordMod.Common.Players;
-using VerminLordMod.Content.Buffs.AddToSelf.Pobuff;
 using VerminLordMod.Content.Items.Weapons.Daos;
 
 namespace VerminLordMod.Content.Items.Weapons.Four
 {
-	class GiantSpiritBodyGu : PersonWeapon
+	class GiantSpiritBodyGu : EatingWeapon
 	{
-		protected override int controlQiCost => 50;
-		protected override int _guLevel => 4;
-		protected override int qiCost => 5000;
-		protected override float unitConntrolRate => 12;
+		protected override int qiCost => 10;
+		protected override int _useTime => 5;
+
+
+		protected override int controlQiCost => 5;
+		protected override float unitConntrolRate => 25;
 		public override void SetDefaults() {
 			Item.width = 24;//碰撞箱宽度 一般设置为贴图宽度
 			Item.height = 24;//碰撞箱高度 一般设置为贴图高度
@@ -26,10 +27,12 @@ namespace VerminLordMod.Content.Items.Weapons.Four
 			Item.UseSound = SoundID.Item1;
 		}
 		public override bool? UseItem(Player player) {
-			var qiPlayer = player.GetModPlayer<QiPlayer>();
-
-			qiPlayer.qiCurrent -= qiCost;
-			player.AddBuff(ModContent.BuffType<GiantSpiritBodybuff>(), 7200);
+			if (player.altFunctionUse == 2) {
+				return false;
+			}
+			var qiResource = player.GetModPlayer<QiResourcePlayer>();
+			qiResource.ConsumeQi(qiCost);
+			player.AddBuff(ModContent.BuffType<Content.Buffs.AddToSelf.Pobuff.GiantSpiritBodybuff>(), 3600);
 			return true;
 		}
 	}

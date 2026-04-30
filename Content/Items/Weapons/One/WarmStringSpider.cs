@@ -1,14 +1,13 @@
-﻿using System;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using VerminLordMod.Common.Players;
 using VerminLordMod.Content.Items.Weapons.Daos;
 
 namespace VerminLordMod.Content.Items.Weapons.One
 {
-	class WarmStringSpider : PractiseWeapon
+	class WarmStringSpider : EatingWeapon
 	{
-		protected override int qiCost => 5;
+		protected override int qiCost => 10;
 		protected override int _useTime => 5;
 
 
@@ -31,11 +30,9 @@ namespace VerminLordMod.Content.Items.Weapons.One
 				return false;
 
 			//Main.NewText("secc");
-			QiPlayer qiPlayer = player.GetModPlayer<QiPlayer>();
-			qiPlayer.qiCurrent -= qiCost;
-
-			Random random = new Random();
-			player.QuickSpawnItemDirect(player.GetSource_ItemUse(Item), ItemID.Cobweb,random.Next(1,10));
+			var qiResource = player.GetModPlayer<QiResourcePlayer>();
+			qiResource.ConsumeQi(qiCost);
+			player.QuickSpawnItemDirect(player.GetSource_ItemUse(Item), ItemID.Cobweb);
 
 			return true;
 		}

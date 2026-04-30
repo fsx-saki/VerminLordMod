@@ -1,21 +1,18 @@
 ﻿using Terraria;
 using Terraria.ID;
-using Terraria.ModLoader;
 using VerminLordMod.Common.Players;
-using VerminLordMod.Common.UI;
-using VerminLordMod.Content.Buffs.AddToSelf.Pobuff;
-using VerminLordMod.Content.Items.Consumables;
 using VerminLordMod.Content.Items.Weapons.Daos;
-using VerminLordMod.Content.Items.Weapons.One;
 
 namespace VerminLordMod.Content.Items.Weapons.Five
 {
-	class ReWaterGu : WaterWeapon
+	class ReWaterGu : EatingWeapon
 	{
-		protected override int controlQiCost => 15;
-		protected override int qiCost => 300;
-		protected override int _guLevel => 5;
-		protected override float unitConntrolRate => 15;
+		protected override int qiCost => 10;
+		protected override int _useTime => 5;
+
+
+		protected override int controlQiCost => 5;
+		protected override float unitConntrolRate => 25;
 		public override void SetDefaults() {
 			Item.width = 24;//碰撞箱宽度 一般设置为贴图宽度
 			Item.height = 24;//碰撞箱高度 一般设置为贴图高度
@@ -28,19 +25,13 @@ namespace VerminLordMod.Content.Items.Weapons.Five
 			Item.useTurn = true;
 			Item.UseSound = SoundID.Item1;
 		}
-
 		public override bool? UseItem(Player player) {
-
-			if (player.altFunctionUse == 2)
+			if (player.altFunctionUse == 2) {
 				return false;
-
-
-			var qiPlayer = player.GetModPlayer<QiPlayer>();
-			
-			player.AddBuff(ModContent.BuffType<ReWaterbuff>(), 1800);
-			qiPlayer.qiCurrent -= qiCost;
-			//player.GetDamage<DamageClass.Melee>()+=0.01f
-
+			}
+			var qiResource = player.GetModPlayer<QiResourcePlayer>();
+			qiResource.ConsumeQi(qiCost);
+			player.AddBuff(BuffID.Regeneration, 3600);
 			return true;
 		}
 	}

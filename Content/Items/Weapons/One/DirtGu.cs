@@ -1,12 +1,11 @@
-﻿using System;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using VerminLordMod.Common.Players;
 using VerminLordMod.Content.Items.Weapons.Daos;
 
 namespace VerminLordMod.Content.Items.Weapons.One
 {
-	class DirtGu : MudWeapon
+	class DirtGu : EatingWeapon
 	{
 		protected override int qiCost => 10;
 		protected override int _useTime => 5;
@@ -31,26 +30,9 @@ namespace VerminLordMod.Content.Items.Weapons.One
 				return false;
 
 			//Main.NewText("secc");
-			QiPlayer qiPlayer = player.GetModPlayer<QiPlayer>();
-			qiPlayer.qiCurrent -= qiCost;
-			Random random = new Random();
-
-			if (Randommer.Roll(2)) {
-				player.QuickSpawnItemDirect(player.GetSource_ItemUse(Item), ItemID.SiltBlock,4);
-			}
-			if (Randommer.Roll(50)) {
-				player.QuickSpawnItemDirect(player.GetSource_ItemUse(Item), ItemID.MudBlock, random.Next(1,15));
-			}
-			if (Randommer.Roll(50)) {
-				player.QuickSpawnItemDirect(player.GetSource_ItemUse(Item), ItemID.AshBlock, random.Next(1, 15));
-			}
-			if (Randommer.Roll(50)) {
-				player.QuickSpawnItemDirect(player.GetSource_ItemUse(Item), ItemID.ClayBlock, random.Next(1, 15));
-			}
-			if (Randommer.Roll(50)) {
-				player.QuickSpawnItemDirect(player.GetSource_ItemUse(Item), ItemID.SandBlock, random.Next(1, 15));
-			}
-			player.QuickSpawnItemDirect(player.GetSource_ItemUse(Item), ItemID.DirtBlock,random.Next(10,30));
+			var qiResource = player.GetModPlayer<QiResourcePlayer>();
+			qiResource.ConsumeQi(qiCost);
+			player.QuickSpawnItemDirect(player.GetSource_ItemUse(Item), ItemID.DirtBlock);
 
 			return true;
 		}

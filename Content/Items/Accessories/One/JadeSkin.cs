@@ -44,8 +44,8 @@ namespace VerminLordMod.Content.Items.Accessories.One
 		}
 
 		public override void UpdateAccessory(Player player, bool hideVisual) {
-			var qiPlayer = player.GetModPlayer<QiPlayer>();
-			qiPlayer.qiMax2 -= qiCost;
+			var qiResource = player.GetModPlayer<QiResourcePlayer>();
+			qiResource.QiMaxCurrent -= qiCost;
 		}
 
 	}

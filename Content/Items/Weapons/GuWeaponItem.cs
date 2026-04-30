@@ -73,9 +73,9 @@ namespace VerminLordMod.Content.Items.Weapons
 			return qiCost;
 		}
 		public override bool? UseItem(Player player) {
-			var qiPlayer = player.GetModPlayer<QiPlayer>();
+			var qiResource = player.GetModPlayer<QiResourcePlayer>();
 
-			qiPlayer.qiCurrent -= qiCost;
+			qiResource.ConsumeQi(qiCost);
 
 			return true;
 		}
@@ -99,24 +99,31 @@ namespace VerminLordMod.Content.Items.Weapons
 			}
 		}
 		public override bool CanUseItem(Player player) {
-			var qiPlayer = player.GetModPlayer<QiPlayer>();
+			var qiResource = player.GetModPlayer<QiResourcePlayer>();
+			var qiRealm = player.GetModPlayer<QiRealmPlayer>();
 
 			if (player.altFunctionUse == 2) {
 				Item.useTime = 5;
 				Item.useAnimation = 5;
 				Item.useStyle = ItemUseStyleID.HoldUp;
-				//Main.NewText($"qiCurrent{qiPlayer.qiCurrent}");
-				//Main.NewText($"controlQiCost{controlQiCost}");
-				if (hasBeenControlled) {
-					//Text.ShowTextRed(player, "您已经完全炼化该蛊虫");
-					return true;
-				}
-				if (qiPlayer.qiCurrent < controlQiCost) {
-					Text.ShowTextRed(player, "炼化失败 真元不足");	
 
+				// 已炼化 → 尝试炼入空窍
+				if (hasBeenControlled) {
+					var kongQiao = player.GetModPlayer<KongQiaoPlayer>();
+					if (kongQiao.TryRefineGu(Item)) {
+						return false; // 炼化成功，物品已销毁
+					}
+					else {
+						Text.ShowTextRed(player, "空窍已满或真元不足，无法炼入空窍");
+						return false;
+					}
+				}
+
+				if (qiResource.QiCurrent < controlQiCost) {
+					Text.ShowTextRed(player, "炼化失败 真元不足");
 					return false;
 				}
-				qiPlayer.qiCurrent -= controlQiCost;
+				qiResource.ConsumeQi(controlQiCost);
 				controlRate += unitConntrolRate;
 				Text.ShowTextGreen(player, $"炼化中......当前进度{controlRate}%");
 				return false;
@@ -128,14 +135,13 @@ namespace VerminLordMod.Content.Items.Weapons
 			}
 			if (!hasBeenControlled&&needCtrl) {
 				Text.ShowTextRed(player, "该蛊虫还未炼化，右键使用开始炼化");
-
 				return false;
 			}
-			if (_guLevel > qiPlayer.qiLevel) {
+			if (_guLevel > qiRealm.GuLevel) {
 				Text.ShowTextRed(player, "您正在强行调动高转蛊虫！！！");
-				Main.LocalPlayer.Hurt(PlayerDeathReason.LegacyDefault(), (_guLevel-qiPlayer.qiLevel)*Main.LocalPlayer.statLifeMax2 / 10, 0);
+				Main.LocalPlayer.Hurt(PlayerDeathReason.LegacyDefault(), (_guLevel - qiRealm.GuLevel) * Main.LocalPlayer.statLifeMax2 / 10, 0);
 			}
-			return qiPlayer.qiCurrent >= qiCost;
+			return qiResource.QiCurrent >= qiCost;
 		}
 		public override void UpdateInventory(Player player) {
 			if (player.HeldItem.type != Item.type) {

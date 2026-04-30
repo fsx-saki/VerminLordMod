@@ -33,9 +33,9 @@ namespace VerminLordMod.Content.Items.Consumables
 		}
 
 		public override bool? UseItem(Player player) {
-			QiPlayer qiPlayer = player.GetModPlayer<QiPlayer>();
-			if (qiPlayer.qiLevel==2 && qiPlayer.levelStage == 3) {
-				QiPlayer.LevelUp(qiPlayer);
+			QiRealmPlayer qiRealm = player.GetModPlayer<QiRealmPlayer>();
+			if (qiRealm.GuLevel == 2 && qiRealm.LevelStage == 3) {
+				qiRealm.LevelUp();
 				Text.ShowTextGreen(player, $"您已经升至三转！");
 				return true;
 			}

@@ -17,7 +17,7 @@ namespace VerminLordMod.Content.Items.Consumables
         public override int QiCost => 100;
         public override int GuLevel => 4;
 
-        protected override bool CanApplyEffect(Player player, QiPlayer qiPlayer)
+        protected override bool CanApplyEffect(Player player, QiResourcePlayer qiResource)
         {
             var guPerk = player.GetModPlayer<GuPerkSystem>();
             if (guPerk.wineBugLevel < GuPerkSystem.WineBugLevel.SevenScent)
@@ -33,7 +33,7 @@ namespace VerminLordMod.Content.Items.Consumables
             return true;
         }
 
-        protected override void ApplyEffect(Player player, QiPlayer qiPlayer)
+        protected override void ApplyEffect(Player player, QiResourcePlayer qiResource)
         {
             var guPerk = player.GetModPlayer<GuPerkSystem>();
             guPerk.UpgradeWineBug(GuPerkSystem.WineBugLevel.NineEye);

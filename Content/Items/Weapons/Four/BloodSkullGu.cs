@@ -52,10 +52,12 @@ namespace VerminLordMod.Content.Items.Weapons.Four
 		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback) {
 			if (player.altFunctionUse == 2) {
 				if (hasBeenControlled) {
-					QiPlayer qiPlayer = player.GetModPlayer<QiPlayer>();
-					if (deads >= 100 && qiPlayer.PlayerZiZhi == ZiZhi.RDING) {
-						qiPlayer.PlayerZiZhi = ZiZhi.RBING;
-						QiPlayer.SetQis(qiPlayer);
+					var qiTalent = player.GetModPlayer<QiTalentPlayer>();
+					var qiRealm = player.GetModPlayer<QiRealmPlayer>();
+					if (deads >= 100 && qiTalent.Grade == QiTalentPlayer.TalentGrade.Ding) {
+						qiTalent.Grade = QiTalentPlayer.TalentGrade.Bing;
+						qiTalent.CalculateEffects();
+						qiRealm.OnAwakening();
 						for (int i = 0; i <= 50; i++) {
 							Dust dust = Dust.NewDustDirect(player.position, player.width, player.height, DustID.Blood);
 							dust.velocity = Vector2.Normalize(dust.position - player.Center) * 7;
@@ -64,9 +66,10 @@ namespace VerminLordMod.Content.Items.Weapons.Four
 						Main.instance.CameraModifiers.Add(modifier);
 						Text.ShowTextGreen(player, "资质提升成功！");
 					}
-					else if (deads >= 200 && qiPlayer.PlayerZiZhi == ZiZhi.RBING) {
-						qiPlayer.PlayerZiZhi = ZiZhi.RYI;
-						QiPlayer.SetQis(qiPlayer);
+					else if (deads >= 200 && qiTalent.Grade == QiTalentPlayer.TalentGrade.Bing) {
+						qiTalent.Grade = QiTalentPlayer.TalentGrade.Yi;
+						qiTalent.CalculateEffects();
+						qiRealm.OnAwakening();
 						for (int i = 0; i <= 50; i++) {
 							Dust dust = Dust.NewDustDirect(player.position, player.width, player.height, DustID.Blood);
 							dust.velocity = Vector2.Normalize(dust.position - player.Center) * 7;
@@ -75,9 +78,10 @@ namespace VerminLordMod.Content.Items.Weapons.Four
 						Main.instance.CameraModifiers.Add(modifier);
 						Text.ShowTextGreen(player, "资质提升成功！");
 					}
-					else if (deads >= 500 && qiPlayer.PlayerZiZhi == ZiZhi.RYI) {
-						qiPlayer.PlayerZiZhi = ZiZhi.RJIA;
-						QiPlayer.SetQis(qiPlayer);
+					else if (deads >= 500 && qiTalent.Grade == QiTalentPlayer.TalentGrade.Yi) {
+						qiTalent.Grade = QiTalentPlayer.TalentGrade.Jia;
+						qiTalent.CalculateEffects();
+						qiRealm.OnAwakening();
 						for (int i = 0; i <= 50; i++) {
 							Dust dust = Dust.NewDustDirect(player.position, player.width, player.height, DustID.Blood);
 							dust.velocity = Vector2.Normalize(dust.position - player.Center) * 7;

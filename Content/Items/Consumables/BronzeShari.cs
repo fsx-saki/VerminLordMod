@@ -37,17 +37,17 @@ namespace VerminLordMod.Content.Items.Consumables
 			Item.consumable = true;
 		}
 		public override bool CanUseItem(Player player) {
-			var qiPlayer = player.GetModPlayer<QiPlayer>();
+			var qiRealm = player.GetModPlayer<QiRealmPlayer>();
 			//舍利蛊不能跨越阶段使用
-			bool res = qiPlayer.qiLevel == _guLevel;
+			bool res = qiRealm.GuLevel == _guLevel;
 			//不能在巅峰的时候用
-			bool res2 = qiPlayer.levelStage < 3;
+			bool res2 = qiRealm.LevelStage < 3;
 			return res && res2;
 		}
 		public override bool? UseItem(Player player) {
-			var qiPlayer = player.GetModPlayer<QiPlayer>();
-			qiPlayer.levelStageUpRate = 0;
-			qiPlayer.levelStage += 1;
+			var qiRealm = player.GetModPlayer<QiRealmPlayer>();
+			qiRealm.BreakthroughProgress = 0;
+			qiRealm.StageUp();
 			Text.ShowTextGreen(player,"晋升成功！");
 			return true;
 		}

@@ -30,23 +30,9 @@ namespace VerminLordMod.Content.Items.Weapons.One
 				return false;
 
 			//Main.NewText("secc");
-			QiPlayer qiPlayer = player.GetModPlayer<QiPlayer>();
-			qiPlayer.qiCurrent -= qiCost;
-
-
-			if (Randommer.Roll(1)) {
-				player.QuickSpawnItemDirect(player.GetSource_ItemUse(Item), ItemID.GoldenDelight);
-			}
-			else if (Randommer.Roll(10)) {
-				player.QuickSpawnItemDirect(player.GetSource_ItemUse(Item), ItemID.SeafoodDinner);
-			}
-			else {
-				player.QuickSpawnItemDirect(player.GetSource_ItemUse(Item), ItemID.FruitSalad);
-			}
-
-
-
-
+			var qiResource = player.GetModPlayer<QiResourcePlayer>();
+			qiResource.ConsumeQi(qiCost);
+			player.QuickSpawnItemDirect(player.GetSource_ItemUse(Item), ItemID.RichMahogany);
 
 			return true;
 		}
