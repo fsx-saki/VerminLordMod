@@ -12,6 +12,12 @@
     <None Remove="Content\Tiles\Plants\**" />
   </ItemGroup>
   <ItemGroup>
+    <!-- MiroonOS_Reference 目录仅作为参考备份，不参与编译 -->
+    <Compile Remove="MiroonOS_Reference\**\*.cs" />
+    <EmbeddedResource Remove="MiroonOS_Reference\**\*" />
+    <None Include="MiroonOS_Reference\**\*" />
+  </ItemGroup>
+  <ItemGroup>
     <None Remove="Common\UI\WolfWaveUI\WolfWaveFrame.png" />
     <None Remove="Content\Buffs\ABitGubuff.png" />
     <None Remove="Content\Buffs\Acidicbuff.png" />
@@ -322,6 +328,9 @@
   <ItemGroup>
     <Reference Include="SubworldLibrary">
       <HintPath>SubworldLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="ParticleLibrary">
+      <HintPath>ParticleLibrary.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>

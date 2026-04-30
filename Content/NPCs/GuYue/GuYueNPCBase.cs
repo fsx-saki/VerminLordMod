@@ -39,9 +39,10 @@ namespace VerminLordMod.Content.NPCs.GuYue
         // ============================================================
         // 贴图：所有古月NPC统一使用古月巡逻蛊师的贴图
         // 子类无需重写，如需自定义贴图可重写 Texture/HeadTexture
+        // HeadTexture 使用子类实际类型名构造路径，确保每个子类有独立的头部纹理
         // ============================================================
         public override string Texture => "VerminLordMod/Content/NPCs/GuMasters/GuYuePatrolGuMaster";
-        public override string HeadTexture => "VerminLordMod/Content/NPCs/GuMasters/GuYuePatrolGuMaster_Head";
+        public override string HeadTexture => "VerminLordMod/Content/NPCs/GuYue/" + GetType().Name + "_Head";
 
         // ============================================================
         // 配置缓存
@@ -105,7 +106,7 @@ namespace VerminLordMod.Content.NPCs.GuYue
             // 后续可根据场景（主世界/小世界）动态切换
             NPC.townNPC = true;
             NPC.friendly = true;
-            NPC.aiStyle = 7; // 城镇NPC AI
+            NPC.aiStyle = NPCAIStyleID.Passive; // 城镇NPC AI
             NPC.damage = GuMasterDamage;
             NPC.lifeMax = GuMasterLife;
             NPC.defense = GuMasterDefense;

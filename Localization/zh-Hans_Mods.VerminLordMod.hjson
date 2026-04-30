@@ -240,6 +240,186 @@ NPCs: {
 	BladeBloodBatGu.DisplayName: 刀翅血蝠蛊
 	LegionAnt.DisplayName: 军团蚁
 	StrongElectricWolf.DisplayName: 豪电狼
+
+	GuYueChief: {
+		// DisplayName: Gu Yue Chief
+
+		TownNPCMood: {
+			// Content: 我很满足。
+			// NoHome: 我讨厌没有家。
+			// FarFromHome: 我离家太远了。
+			// LoveSpace: 我非常喜欢有这么大的空间。
+			// DislikeCrowded: 我不喜欢这么拥挤。
+			// HateCrowded: 我讨厌这么拥挤。
+			// LikeNPC_Princess: 我喜欢 {NPCName}。
+			// Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	GuYueChiElder: {
+		// DisplayName: Gu Yue Chi Elder
+
+		TownNPCMood: {
+			// Content: 我很满足。
+			// NoHome: 我讨厌没有家。
+			// FarFromHome: 我离家太远了。
+			// LoveSpace: 我非常喜欢有这么大的空间。
+			// DislikeCrowded: 我不喜欢这么拥挤。
+			// HateCrowded: 我讨厌这么拥挤。
+			// LikeNPC_Princess: 我喜欢 {NPCName}。
+			// Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	GuYueCommoner: {
+		// DisplayName: Gu Yue Commoner
+
+		TownNPCMood: {
+			// Content: 我很满足。
+			// NoHome: 我讨厌没有家。
+			// FarFromHome: 我离家太远了。
+			// LoveSpace: 我非常喜欢有这么大的空间。
+			// DislikeCrowded: 我不喜欢这么拥挤。
+			// HateCrowded: 我讨厌这么拥挤。
+			// LikeNPC_Princess: 我喜欢 {NPCName}。
+			// Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	GuYueDefenseElder: {
+		// DisplayName: Gu Yue Defense Elder
+
+		TownNPCMood: {
+			// Content: 我很满足。
+			// NoHome: 我讨厌没有家。
+			// FarFromHome: 我离家太远了。
+			// LoveSpace: 我非常喜欢有这么大的空间。
+			// DislikeCrowded: 我不喜欢这么拥挤。
+			// HateCrowded: 我讨厌这么拥挤。
+			// LikeNPC_Princess: 我喜欢 {NPCName}。
+			// Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	GuYueFirstTurnGuMaster: {
+		// DisplayName: Gu Yue First Turn Gu Master
+
+		TownNPCMood: {
+			// Content: 我很满足。
+			// NoHome: 我讨厌没有家。
+			// FarFromHome: 我离家太远了。
+			// LoveSpace: 我非常喜欢有这么大的空间。
+			// DislikeCrowded: 我不喜欢这么拥挤。
+			// HateCrowded: 我讨厌这么拥挤。
+			// LikeNPC_Princess: 我喜欢 {NPCName}。
+			// Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	GuYueFistInstructor: {
+		// DisplayName: Gu Yue Fist Instructor
+
+		TownNPCMood: {
+			// Content: 我很满足。
+			// NoHome: 我讨厌没有家。
+			// FarFromHome: 我离家太远了。
+			// LoveSpace: 我非常喜欢有这么大的空间。
+			// DislikeCrowded: 我不喜欢这么拥挤。
+			// HateCrowded: 我讨厌这么拥挤。
+			// LikeNPC_Princess: 我喜欢 {NPCName}。
+			// Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	GuYueMedicineElder: {
+		// DisplayName: Gu Yue Medicine Elder
+
+		TownNPCMood: {
+			// Content: 我很满足。
+			// NoHome: 我讨厌没有家。
+			// FarFromHome: 我离家太远了。
+			// LoveSpace: 我非常喜欢有这么大的空间。
+			// DislikeCrowded: 我不喜欢这么拥挤。
+			// HateCrowded: 我讨厌这么拥挤。
+			// LikeNPC_Princess: 我喜欢 {NPCName}。
+			// Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	GuYueMedicinePulseElder: {
+		// DisplayName: Gu Yue Medicine Pulse Elder
+
+		TownNPCMood: {
+			// Content: 我很满足。
+			// NoHome: 我讨厌没有家。
+			// FarFromHome: 我离家太远了。
+			// LoveSpace: 我非常喜欢有这么大的空间。
+			// DislikeCrowded: 我不喜欢这么拥挤。
+			// HateCrowded: 我讨厌这么拥挤。
+			// LikeNPC_Princess: 我喜欢 {NPCName}。
+			// Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	GuYueMoElder: {
+		// DisplayName: Gu Yue Mo Elder
+
+		TownNPCMood: {
+			// Content: 我很满足。
+			// NoHome: 我讨厌没有家。
+			// FarFromHome: 我离家太远了。
+			// LoveSpace: 我非常喜欢有这么大的空间。
+			// DislikeCrowded: 我不喜欢这么拥挤。
+			// HateCrowded: 我讨厌这么拥挤。
+			// LikeNPC_Princess: 我喜欢 {NPCName}。
+			// Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	GuYueSchoolElder: {
+		// DisplayName: Gu Yue School Elder
+
+		TownNPCMood: {
+			// Content: 我很满足。
+			// NoHome: 我讨厌没有家。
+			// FarFromHome: 我离家太远了。
+			// LoveSpace: 我非常喜欢有这么大的空间。
+			// DislikeCrowded: 我不喜欢这么拥挤。
+			// HateCrowded: 我讨厌这么拥挤。
+			// LikeNPC_Princess: 我喜欢 {NPCName}。
+			// Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	GuYueSecondTurnGuMaster: {
+		// DisplayName: Gu Yue Second Turn Gu Master
+
+		TownNPCMood: {
+			// Content: 我很满足。
+			// NoHome: 我讨厌没有家。
+			// FarFromHome: 我离家太远了。
+			// LoveSpace: 我非常喜欢有这么大的空间。
+			// DislikeCrowded: 我不喜欢这么拥挤。
+			// HateCrowded: 我讨厌这么拥挤。
+			// LikeNPC_Princess: 我喜欢 {NPCName}。
+			// Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	GuYueServant: {
+		// DisplayName: Gu Yue Servant
+
+		TownNPCMood: {
+			// Content: 我很满足。
+			// NoHome: 我讨厌没有家。
+			// FarFromHome: 我离家太远了。
+			// LoveSpace: 我非常喜欢有这么大的空间。
+			// DislikeCrowded: 我不喜欢这么拥挤。
+			// HateCrowded: 我讨厌这么拥挤。
+			// LikeNPC_Princess: 我喜欢 {NPCName}。
+			// Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
 }
 
 Items: {
@@ -587,6 +767,11 @@ Items: {
 		GuLevel: 转数：{0}
 		DisplayName: 饭袋草蛊
 		Tooltip: 产出食物
+	}
+
+	RiceBagGrass: {
+		// DisplayName: Rice Bag Grass
+		// Tooltip: ""
 	}
 
 	GrassPuppet: {
@@ -2317,6 +2502,116 @@ Items: {
 		// DisplayName: Gu Medium Weapon
 		// Tooltip: ""
 	}
+
+	MiZongZhenItem: {
+		// DisplayName: Mi Zong Zhen Item
+		// Tooltip: ""
+	}
+
+	SubworldPortalGuYue: {
+		// DisplayName: Subworld Portal Gu Yue
+		// Tooltip: ""
+	}
+
+	AncestorTablet: {
+		DisplayName: 先祖牌位
+		Tooltip: 古月一族供奉先祖的牌位
+	}
+
+	AncestralHall: {
+		DisplayName: 宗族祠堂
+		Tooltip: 古月一族祭祀先祖的祠堂
+	}
+
+	BlackLacquerAltar: {
+		DisplayName: 黑漆台案
+		Tooltip: 古月一族祭祀用的黑漆台案
+	}
+
+	BrownYellowFloor: {
+		DisplayName: 棕黄地板
+		Tooltip: 古月一族建筑常用的棕黄色地板
+	}
+
+	DragonCricketJar: {
+		DisplayName: 龙丸蛐蛐罐
+		Tooltip: 里面似乎有蛐蛐在叫
+	}
+
+	GlowingStalactite: {
+		DisplayName: 七彩钟乳石
+		Tooltip: 散发着七彩光芒的钟乳石
+	}
+
+	GreenBambooWineJar: {
+		DisplayName: 青竹酒坛
+		Tooltip: 装着青竹酒的酒坛
+	}
+
+	MoonOrchid: {
+		DisplayName: 月兰花
+		Tooltip: 月光下盛开的兰花，是月光蛊的食物
+	}
+
+	PatriarchPavilion: {
+		DisplayName: 家主阁
+		Tooltip: 古月一族家主的居所
+	}
+
+	RedCopperIncenseBurner: {
+		DisplayName: 赤铜香炉
+		Tooltip: 赤铜铸造的香炉，青烟袅袅
+	}
+
+	SchoolDesk: {
+		DisplayName: 古月学堂书桌
+		Tooltip: 古月学堂使用的书桌
+	}
+
+	SpearBamboo: {
+		DisplayName: 青矛竹
+		Tooltip: 青茅山特有的竹子，笔直如矛
+	}
+
+	SpiritSpring: {
+		DisplayName: 灵泉
+		Tooltip: 蕴含灵气的泉水
+	}
+
+	StiltedHouse: {
+		DisplayName: 高脚吊楼
+		Tooltip: 古月一族特色的高脚吊楼
+	}
+
+	WineGourdFlower: {
+		DisplayName: 酒囊花蛊
+		Tooltip: 形似酒囊的花蛊，散发着酒香
+	}
+
+	TestUIOpener: {
+		DisplayName: UI测试器
+		Tooltip: 右键点击打开/关闭 ModernUI 测试面板
+	}
+
+	SimpleUIToggle: {
+		// DisplayName: Simple U I Toggle
+		// Tooltip: ""
+	}
+
+	SearchChairItem: {
+		// DisplayName: Search Chair Item
+		// Tooltip: ""
+	}
+}
+
+MapObject: {
+	BlackLacquerAltar: 黑漆台案
+	RedCopperIncenseBurner: 赤铜香炉
+	AncestorTablet: 先祖牌位
+	StiltedHouse: 高脚吊楼
+	AncestralHall: 宗族祠堂
+	SchoolDesk: 古月学堂书桌
+	PatriarchPavilion: 家主阁
 }
 
 Buffs: {
@@ -2679,6 +2974,11 @@ Buffs: {
 		// DisplayName: Yan Tongbuff
 		// Description: Mods.VerminLordMod.Buffs.YanTongbuff.Description
 	}
+
+	MiZongBuff: {
+		// DisplayName: Mi Zong Buff
+		// Description: Mods.VerminLordMod.Buffs.MiZongBuff.Description
+	}
 }
 
 DamageClasses.InsectDamageClass.DisplayName: 蛊术伤害
@@ -2713,6 +3013,16 @@ Tiles: {
 
 	QingMaoStoneDresser.MapEntry: 青茅石梳妆台
 	// YuanSOre.MapEntry: Yuan S Ore
+	// MiZongZhenTile.MapEntry: Mi Zong Zhen Tile
+	BrownYellowFloor.MapEntry: 棕黄地板
+	DragonCricketJar.MapEntry: 龙丸蛐蛐罐
+	GlowingStalactite.MapEntry: 七彩钟乳石
+	GreenBambooWineJar.MapEntry: 青竹酒坛
+	MoonOrchid.MapEntry: 月兰花
+	RiceBagGrass.MapEntry: 饭袋草蛊
+	SpearBamboo.MapEntry: 青矛竹
+	SpiritSpring.MapEntry: 灵泉
+	WineGourdFlower.MapEntry: 酒囊花蛊
 }
 
 WorldGen: {
@@ -2728,6 +3038,15 @@ Configs: {
 		LimitSth: {
 			// Label: 等级限制
 			// Tooltip: 限制每转蛊师可以获取的额外血量、力量、防御加成，提升平衡性
+		}
+	}
+
+	UILayoutConfig: {
+		// DisplayName: U I Layout Config
+
+		PanelLayouts: {
+			// Label: Panel Layouts
+			// Tooltip: ""
 		}
 	}
 }

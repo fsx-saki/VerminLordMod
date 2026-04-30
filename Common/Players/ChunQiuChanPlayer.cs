@@ -5,6 +5,7 @@ using Terraria.DataStructures;
 using Terraria.ModLoader;
 using VerminLordMod.Content;
 using VerminLordMod.Content.Items.Weapons;
+using VerminLordMod.Content.Items.Weapons.Six;
 using VerminLordMod.Content.NPCs.GuMasters;
 
 namespace VerminLordMod.Common.Players

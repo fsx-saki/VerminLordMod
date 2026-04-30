@@ -170,7 +170,7 @@ namespace VerminLordMod.Common.Players
         {
             // 优先使用蛊虫武器自身的 Item.shoot
             // 注意：Mod 弹幕的 type ID >= ProjectileID.Count，所以只检查 > 0
-            if (guItem.shoot > 0)
+            if (guItem.shoot > ProjectileID.None)
             {
                 return guItem.shoot;
             }

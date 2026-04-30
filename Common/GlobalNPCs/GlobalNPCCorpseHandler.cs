@@ -125,24 +125,21 @@ namespace VerminLordMod.Common.GlobalNPCs
             // 这些是原版掉落之外的额外物品，玩家搜尸可获得
             // P1 可改为劫持原版掉落表
 
-            // 1. 基础奖励：根据 NPC 强度生成元石
-            // 使用 lifeMax 和 damage 估算 NPC 价值，避免依赖 npc.value（可能为 0）
+            // 1. 基础奖励：每个尸体保底元石
+            // 使用 lifeMax 和 damage 估算 NPC 价值
             int npcPower = npc.lifeMax + npc.damage * 10;
-            int yuanStoneAmount = System.Math.Max(1, npcPower / 200);
-            if (Main.rand.NextFloat() < storageRate && yuanStoneAmount > 0)
-            {
-                int yuanCount = Main.rand.Next(1, System.Math.Max(2, yuanStoneAmount / 5 + 1));
-                var yuanS = new Item(ModContent.ItemType<Content.Items.Consumables.YuanS>());
-                yuanS.stack = yuanCount;
-                items.Add(yuanS);
-            }
+            int baseYuan = System.Math.Max(1, npcPower / 500); // 保底元石数量
+            int extraYuan = Main.rand.Next(0, System.Math.Max(1, npcPower / 200)); // 额外随机元石
+
+            var yuanS = new Item(ModContent.ItemType<Content.Items.Consumables.YuanS>());
+            yuanS.stack = baseYuan + extraYuan;
+            items.Add(yuanS);
 
             // 2. 稀有奖励：Boss 有更高概率
             float rareChance = npc.boss ? 0.3f : 0.05f;
             if (Main.rand.NextFloat() < rareChance * storageRate)
             {
                 // 从原版掉落中随机选一个物品类型（仅示例，P1 可完善）
-                // MVA 简化：不实际复制原版掉落，而是给一些通用材料
                 int[] commonDrops = {
                     ItemID.GoldCoin,
                     ItemID.SilverCoin,

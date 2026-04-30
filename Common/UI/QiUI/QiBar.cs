@@ -8,274 +8,209 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.UI;
 using VerminLordMod.Common.Players;
+using VerminLordMod.Common.UI.UIUtils;
 
 namespace VerminLordMod.Common.UI.QiUI
 {
-	// This custom UI will show whenever the player is holding the ExampleCustomResourceWeapon item and will display the player's custom resource amounts that are tracked in ExampleResourcePlayer
-	public class QiBar : UIState
-	{
-		// For this bar we'll be using a frame texture and then a gradient inside bar, as it's one of the more simpler approaches while still looking decent.
-		// Once this is all set up make sure to go and do the required stuff for most UI's in the ModSystem class.
-		private UIText text;
-		private UIText text2;
-		private UIElement area;
-		private UIImage barFrame;
-		private Color gradientA;
-		private Color gradientB;
+    /// <summary>
+    /// 真元/仙元条 — 现代化扁平轻量风格
+    /// 显示当前真元/仙元值、境界、资质信息
+    /// </summary>
+    public class QiBar : UIState
+    {
+        private UIText text;
+        private UIText text2;
+        private UIElement area;
+        private Color gradientA;
+        private Color gradientB;
 
-		public override void OnInitialize() {
-			// Create a UIElement for all the elements to sit on top of, this simplifies the numbers as nested elements can be positioned relative to the top left corner of this element. 
-			// UIElement is invisible and has no padding.
-			area = new UIElement();
-			area.Left.Set(-area.Width.Pixels - 600, 1f); // Place the resource bar to the left of the hearts.
-			area.Top.Set(30, 0f); // Placing it just a bit below the top of the screen.
-			area.Width.Set(182, 0f); // We will be placing the following 2 UIElements within this 182x60 area.
-			area.Height.Set(60, 0f);
+        public override void OnInitialize()
+        {
+            area = new UIElement();
+            area.Left.Set(-600, 1f);
+            area.Top.Set(30, 0f);
+            area.Width.Set(200, 0f);
+            area.Height.Set(72, 0f);
 
-			barFrame = new UIImage(ModContent.Request<Texture2D>("VerminLordMod/Common/UI/QiUI/QiFrame")); // Frame of our resource bar
-			barFrame.Left.Set(22, 0f);
-			barFrame.Top.Set(0, 0f);
-			barFrame.Width.Set(138, 0f);
-			barFrame.Height.Set(34, 0f);
+            text = new UIText("未开元海", 0.8f);
+            text.Width.Set(200, 0f);
+            text.Height.Set(24, 0f);
+            text.Top.Set(44, 0f);
+            text.Left.Set(0, 0f);
+            text.TextColor = UIStyles.TextMain;
 
-			text = new UIText("0/0", 0.8f); // text to show stat
-			text.Width.Set(138, 0f);
-			text.Height.Set(34, 0f);
-			text.Top.Set(40, 0f);
-			text.Left.Set(0, 0f);
+            text2 = new UIText("", 0.7f);
+            text2.Width.Set(200, 0f);
+            text2.Height.Set(20, 0f);
+            text2.Top.Set(64, 0f);
+            text2.Left.Set(0, 0f);
+            text2.TextColor = UIStyles.TextSecondary;
 
-			text2 = new UIText("0", 0.8f); // text to show stat
-			text2.Width.Set(138, 0f);
-			text2.Height.Set(34, 0f);
-			text2.Top.Set(60, 0f);
-			text2.Left.Set(0, 0f);
+            gradientA = UIStyles.TextSuccess;
+            gradientB = new Color(80, 160, 100);
 
-			gradientA = new Color(123, 25, 138); // A dark purple
-			gradientB = new Color(187, 91, 201); // A light purple
+            area.Append(text);
+            area.Append(text2);
+            Append(area);
+        }
 
-			area.Append(text);
-			area.Append(text2);
-			area.Append(barFrame);
-			Append(area);
-		}
+        public override void Draw(SpriteBatch spriteBatch)
+        {
+            base.Draw(spriteBatch);
+        }
 
-		public override void Draw(SpriteBatch spriteBatch) {
-			base.Draw(spriteBatch);
-		}
-		string yuan = "真元";
-		string qiao = "空窍";
-		// Here we draw our UI
-		protected override void DrawSelf(SpriteBatch spriteBatch) {
-			base.DrawSelf(spriteBatch);
+        string yuan = "真元";
+        string qiao = "空窍";
 
-			var qiResource = Main.LocalPlayer.GetModPlayer<QiResourcePlayer>();
-			var qiRealm = Main.LocalPlayer.GetModPlayer<QiRealmPlayer>();
-			var qiTalent = Main.LocalPlayer.GetModPlayer<QiTalentPlayer>();
-			// Calculate quotient
-			float quotient = qiResource.QiMaxCurrent == 0 ? 0 : (float)qiResource.QiCurrent / qiResource.QiMaxCurrent; // Creating a quotient that represents the difference of your currentResource vs your maximumResource, resulting in a float of 0-1f.
-			quotient = Utils.Clamp(quotient, 0f, 1f); // Clamping it to 0-1f so it doesn't go over that.
+        protected override void DrawSelf(SpriteBatch spriteBatch)
+        {
+            base.DrawSelf(spriteBatch);
 
-			// Here we get the screen dimensions of the barFrame element, then tweak the resulting rectangle to arrive at a rectangle within the barFrame texture that we will draw the gradient. These values were measured in a drawing program.
-			var hitbox = barFrame.GetInnerDimensions().ToRectangle();
-			hitbox.X += 12;
-			hitbox.Width -= 24;
-			hitbox.Y += 8;
-			hitbox.Height -= 16;
+            var qiResource = Main.LocalPlayer.GetModPlayer<QiResourcePlayer>();
+            var qiRealm = Main.LocalPlayer.GetModPlayer<QiRealmPlayer>();
+            var qiTalent = Main.LocalPlayer.GetModPlayer<QiTalentPlayer>();
 
-			// Now, using this hitbox, we draw a gradient by drawing vertical lines while slowly interpolating between the 2 colors.
-			switch (qiRealm.GuLevel) {
-				case 1://一转青铜
-					gradientA = new Color(192, 255, 62); 
-					gradientB = new Color(102, 205, 0); 
-					break;
-				case 2:
-					gradientA = new Color(205, 155, 155);
-					gradientB = new Color(205, 92, 92); 
-					break;
-				case 3:
-					gradientA = new Color(112, 128, 144); 
-					gradientB = new Color(0, 0, 0); 
-					break;
-				case 4:
-					gradientA = new Color(255,255, 0); 
-					gradientB = new Color(220, 220, 0); 
-					break;
-				case 5:
-					gradientA = new Color(123, 25, 138); 
-					gradientB = new Color(187, 91, 201); 
-					break;
-				case 6:
-					gradientA = new Color(0, 250, 154); 
-					gradientB = new Color(0 ,255, 255); 
-					break;
-				case 7:
-					gradientA = new Color(255, 240, 245); 
-					gradientB = new Color(255, 106, 106);
-					break;
-				case 8:
-					gradientA = new Color(74, 112, 139); 
-					gradientB = new Color(0, 0, 0); 
-					break;
-				case 9:
-					gradientA = new Color(255, 127, 0); 
-					gradientB = new Color(238, 201, 0); 
-					break;
-				case 10:
-					gradientA = new Color(255,255,255); 
-					gradientB = new Color(0, 0, 0); 
-					break;
-			}
-			int left = hitbox.Left;
-			int right = hitbox.Right;
-			int steps = (int)((right - left) * quotient);
-			for (int i = 0; i < steps; i += 1) {
-				// float percent = (float)i / steps; // Alternate Gradient Approach
-				float percent = (float)i / (right - left);
-				spriteBatch.Draw(TextureAssets.MagicPixel.Value, new Rectangle(left + i, hitbox.Y, 1, hitbox.Height), Color.Lerp(gradientA, gradientB, percent));
-			}
-		}
+            float quotient = qiResource.QiMaxCurrent == 0 ? 0 : (float)qiResource.QiCurrent / qiResource.QiMaxCurrent;
+            quotient = Utils.Clamp(quotient, 0f, 1f);
 
-		public override void Update(GameTime gameTime) {
-			var qiResource = Main.LocalPlayer.GetModPlayer<QiResourcePlayer>();
-			var qiRealm = Main.LocalPlayer.GetModPlayer<QiRealmPlayer>();
-			var qiTalent = Main.LocalPlayer.GetModPlayer<QiTalentPlayer>();
+            // 绘制扁平背景条
+            var bgRect = area.GetInnerDimensions().ToRectangle();
+            bgRect.X += 0;
+            bgRect.Width = 200;
+            bgRect.Y += 0;
+            bgRect.Height = 36;
 
-			// Setting the text per tick to update and show our resource values.
-			string str;
-			//float r = (float)(qiResource.QiCurrent / qiResource.QiMaxCurrent) * 10;
-			//int rr = (int)r;
-			int rr = qiResource.QiMaxCurrent == 0 ? -1 : (int)(qiResource.QiCurrent * 10 / qiResource.QiMaxCurrent);
-			if (qiRealm.GuLevel <= 0)
-				rr = -1;
-			if (qiRealm.GuLevel >= 6) {
-				yuan = "仙元";
-				qiao = "仙窍";
-			}
-			else {
-				yuan = "真元";
-				qiao = "空窍";
-			}
-			switch (rr) {
-				case -1:
-					str = "未开元海";
-					break;
-				case 0:
-					str = yuan+"耗尽";
-					break;
-				case 1:
-					str = "一成"+yuan;
-					break;
-				case 2:
-					str = "二成" + yuan;
-					break;
-				case 3:
-					str = "三成" + yuan;
-					break;
-				case 4:
-					str = "四成" + yuan;
-					break;
-				case 5:
-					str = "五成" + yuan;
-					break;
-				case 6:
-					str = "六成"+yuan;
-					break;
-				case 7:
-					str = "七成"+yuan;
-					break;
-				case 8:
-					str = "八成"+yuan;
-					break;
-				case 9:
-					str = "九成"+yuan;
-					break;
-				case 10:
-					str = "十成"+yuan;
-					break;
-				default:
-					str = "未知"+yuan;
-					break;
-			}
-			//text.SetText(qiResource.QiCurrent.ToString()+"/"+qiResource.QiMaxCurrent.ToString());
-			text.SetText(qiao+"：" + str + "[" + qiResource.QiCurrent.ToString() + "/" + qiResource.QiMaxCurrent.ToString() + "]");
+            // 背景
+            UIHelper.DrawRoundedRect(spriteBatch, bgRect, UIStyles.QiBarBg, 6);
+            // 边框
+            var borderRect = bgRect;
+            borderRect.Inflate(1, 1);
+            UIHelper.DrawBorder(spriteBatch, borderRect, 1, UIStyles.QiBarBorder);
 
+            // 根据境界选择颜色
+            switch (qiRealm.GuLevel)
+            {
+                case 1: gradientA = new Color(130, 215, 130); gradientB = new Color(80, 170, 80); break;
+                case 2: gradientA = new Color(200, 130, 130); gradientB = new Color(160, 80, 80); break;
+                case 3: gradientA = new Color(130, 150, 170); gradientB = new Color(80, 100, 120); break;
+                case 4: gradientA = new Color(220, 210, 90); gradientB = new Color(180, 170, 60); break;
+                case 5: gradientA = new Color(180, 110, 200); gradientB = new Color(140, 70, 160); break;
+                case 6: gradientA = new Color(100, 220, 180); gradientB = new Color(60, 180, 140); break;
+                case 7: gradientA = new Color(230, 150, 160); gradientB = new Color(190, 100, 110); break;
+                case 8: gradientA = new Color(100, 150, 190); gradientB = new Color(60, 110, 150); break;
+                case 9: gradientA = new Color(240, 180, 60); gradientB = new Color(200, 140, 30); break;
+                case 10: gradientA = new Color(220, 220, 230); gradientB = new Color(180, 180, 190); break;
+                default: gradientA = UIStyles.TextDim; gradientB = new Color(60, 60, 70); break;
+            }
 
+            // 填充条
+            int fillWidth = (int)((bgRect.Width - 4) * quotient);
+            if (fillWidth > 0)
+            {
+                var fillRect = new Rectangle(bgRect.X + 2, bgRect.Y + 2, fillWidth, bgRect.Height - 4);
+                Color fillColor = Color.Lerp(gradientA, gradientB, quotient * 0.5f + 0.25f);
+                spriteBatch.Draw(TextureAssets.MagicPixel.Value, fillRect, fillColor);
+            }
+        }
 
-			string str2 = "";
-			switch (qiRealm.LevelStage) {
-				case 0:
-					str2 = "初期";
-					break;
-				case 1:
-					str2 = "中期";
-					break;
-				case 2:
-					str2 = "后期";
-					break;
-				case 3:
-					str2 = "巅峰";
-					break;
-			}
-			string str3 = "";
+        public override void Update(GameTime gameTime)
+        {
+            var qiResource = Main.LocalPlayer.GetModPlayer<QiResourcePlayer>();
+            var qiRealm = Main.LocalPlayer.GetModPlayer<QiRealmPlayer>();
+            var qiTalent = Main.LocalPlayer.GetModPlayer<QiTalentPlayer>();
 
-			switch (qiTalent.Grade) {
-				case QiTalentPlayer.TalentGrade.Jia:
-					str3 = "甲等";
-					break;
-				case QiTalentPlayer.TalentGrade.Yi:
-					str3 = "乙等";
-					break;
-				case QiTalentPlayer.TalentGrade.Bing:
-					str3 = "丙等";
-					break;
-				case QiTalentPlayer.TalentGrade.Ding:
-					str3 = "丁等";
-					break;
-				default:
-					str3 = "未知";
-					break;
-			}
+            string str;
+            int rr = qiResource.QiMaxCurrent == 0 ? -1 : (int)(qiResource.QiCurrent * 10 / qiResource.QiMaxCurrent);
+            if (qiRealm.GuLevel <= 0)
+                rr = -1;
+            if (qiRealm.GuLevel >= 6)
+            {
+                yuan = "仙元";
+                qiao = "仙窍";
+            }
+            else
+            {
+                yuan = "真元";
+                qiao = "空窍";
+            }
+            str = rr switch
+            {
+                -1 => "未开元海",
+                0 => yuan + "耗尽",
+                1 => "一成" + yuan,
+                2 => "二成" + yuan,
+                3 => "三成" + yuan,
+                4 => "四成" + yuan,
+                5 => "五成" + yuan,
+                6 => "六成" + yuan,
+                7 => "七成" + yuan,
+                8 => "八成" + yuan,
+                9 => "九成" + yuan,
+                10 => "十成" + yuan,
+                _ => "未知" + yuan,
+            };
+            text.SetText(qiao + "：" + str + " [" + qiResource.QiCurrent + "/" + qiResource.QiMaxCurrent + "]");
 
-			text2.SetText($"资质：{str3}  境界：{qiRealm.GuLevel}转{str2}");
-			base.Update(gameTime);
-		}
-	}
+            string str2 = qiRealm.LevelStage switch
+            {
+                0 => "初期",
+                1 => "中期",
+                2 => "后期",
+                3 => "巅峰",
+                _ => "",
+            };
 
-	// This class will only be autoloaded/registered if we're not loading on a server
-	[Autoload(Side = ModSide.Client)]
-	public class ExampleResourceUISystem : ModSystem
-	{
-		private UserInterface QiBarUserInterface;
+            string str3 = qiTalent.Grade switch
+            {
+                QiTalentPlayer.TalentGrade.Jia => "甲等",
+                QiTalentPlayer.TalentGrade.Yi => "乙等",
+                QiTalentPlayer.TalentGrade.Bing => "丙等",
+                QiTalentPlayer.TalentGrade.Ding => "丁等",
+                _ => "未知",
+            };
 
-		public QiBar QiBar;
+            text2.SetText($"资质：{str3}  境界：{qiRealm.GuLevel}转{str2}");
+            base.Update(gameTime);
+        }
+    }
 
-		public static LocalizedText QiText { get; private set; }
+    [Autoload(Side = ModSide.Client)]
+    public class ExampleResourceUISystem : ModSystem
+    {
+        private UserInterface QiBarUserInterface;
+        public QiBar QiBar;
+        public static LocalizedText QiText { get; private set; }
 
-		public override void Load() {
-			QiBar = new();
-			QiBarUserInterface = new();
-			QiBarUserInterface.SetState(QiBar);
+        public override void Load()
+        {
+            QiBar = new();
+            QiBarUserInterface = new();
+            QiBarUserInterface.SetState(QiBar);
 
-			string category = "UI";
-			QiText ??= Mod.GetLocalization($"{category}.Qi");
-		}
+            string category = "UI";
+            QiText ??= Mod.GetLocalization($"{category}.Qi");
+        }
 
-		public override void UpdateUI(GameTime gameTime) {
-			QiBarUserInterface?.Update(gameTime);
-		}
+        public override void UpdateUI(GameTime gameTime)
+        {
+            QiBarUserInterface?.Update(gameTime);
+        }
 
-		public override void ModifyInterfaceLayers(List<GameInterfaceLayer> layers) {
-			int resourceBarIndex = layers.FindIndex(layer => layer.Name.Equals("Vanilla: Resource Bars"));
-			if (resourceBarIndex != -1) {
-				layers.Insert(resourceBarIndex, new LegacyGameInterfaceLayer(
-					"VerminLordMod: Qi Bar",
-					delegate {
-						QiBarUserInterface.Draw(Main.spriteBatch, new GameTime());
-						return true;
-					},
-					InterfaceScaleType.UI)
-				);
-			}
-		}
-	}
+        public override void ModifyInterfaceLayers(List<GameInterfaceLayer> layers)
+        {
+            int resourceBarIndex = layers.FindIndex(layer => layer.Name.Equals("Vanilla: Resource Bars"));
+            if (resourceBarIndex != -1)
+            {
+                layers.Insert(resourceBarIndex, new LegacyGameInterfaceLayer(
+                    "VerminLordMod: Qi Bar",
+                    delegate
+                    {
+                        QiBarUserInterface.Draw(Main.spriteBatch, new GameTime());
+                        return true;
+                    },
+                    InterfaceScaleType.UI)
+                );
+            }
+        }
+    }
 }

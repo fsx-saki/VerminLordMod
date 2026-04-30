@@ -240,6 +240,186 @@ NPCs: {
 	BladeBloodBatGu.DisplayName: Blade Blood Bat Gu
 	LegionAnt.DisplayName: Legion Ant
 	StrongElectricWolf.DisplayName: Strong Electric Wolf
+
+	GuYueChief: {
+		DisplayName: Gu Yue Chief
+
+		TownNPCMood: {
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	GuYueChiElder: {
+		DisplayName: Gu Yue Chi Elder
+
+		TownNPCMood: {
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	GuYueCommoner: {
+		DisplayName: Gu Yue Commoner
+
+		TownNPCMood: {
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	GuYueDefenseElder: {
+		DisplayName: Gu Yue Defense Elder
+
+		TownNPCMood: {
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	GuYueFirstTurnGuMaster: {
+		DisplayName: Gu Yue First Turn Gu Master
+
+		TownNPCMood: {
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	GuYueFistInstructor: {
+		DisplayName: Gu Yue Fist Instructor
+
+		TownNPCMood: {
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	GuYueMedicineElder: {
+		DisplayName: Gu Yue Medicine Elder
+
+		TownNPCMood: {
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	GuYueMedicinePulseElder: {
+		DisplayName: Gu Yue Medicine Pulse Elder
+
+		TownNPCMood: {
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	GuYueMoElder: {
+		DisplayName: Gu Yue Mo Elder
+
+		TownNPCMood: {
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	GuYueSchoolElder: {
+		DisplayName: Gu Yue School Elder
+
+		TownNPCMood: {
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	GuYueSecondTurnGuMaster: {
+		DisplayName: Gu Yue Second Turn Gu Master
+
+		TownNPCMood: {
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	GuYueServant: {
+		DisplayName: Gu Yue Servant
+
+		TownNPCMood: {
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
 }
 
 Items: {
@@ -562,6 +742,11 @@ Items: {
 		ControlRate: Mods.VerminLordMod.Items.RiceBagGrassGu.ControlRate
 		GuLevel: Mods.VerminLordMod.Items.RiceBagGrassGu.GuLevel
 		DisplayName: Rice Bag Grass Gu
+		Tooltip: ""
+	}
+
+	RiceBagGrass: {
+		DisplayName: Rice Bag Grass
 		Tooltip: ""
 	}
 
@@ -2280,6 +2465,116 @@ Items: {
 		DisplayName: Gu Medium Weapon
 		Tooltip: ""
 	}
+
+	MiZongZhenItem: {
+		DisplayName: Mi Zong Zhen Item
+		Tooltip: ""
+	}
+
+	SubworldPortalGuYue: {
+		DisplayName: Subworld Portal Gu Yue
+		Tooltip: ""
+	}
+
+	AncestorTablet: {
+		DisplayName: Ancestor Tablet
+		Tooltip: An ancestral tablet worshipped by the Gu Yue clan
+	}
+
+	AncestralHall: {
+		DisplayName: Ancestral Hall
+		Tooltip: The ancestral hall of the Gu Yue clan for worship ceremonies
+	}
+
+	BlackLacquerAltar: {
+		DisplayName: Black Lacquer Altar
+		Tooltip: A black lacquer altar used for sacrifices by the Gu Yue clan
+	}
+
+	BrownYellowFloor: {
+		DisplayName: Brown Yellow Floor
+		Tooltip: Brown-yellow floor tiles commonly used in Gu Yue architecture
+	}
+
+	DragonCricketJar: {
+		DisplayName: Dragon Cricket Jar
+		Tooltip: A cricket seems to be chirping inside
+	}
+
+	GlowingStalactite: {
+		DisplayName: Glowing Stalactite
+		Tooltip: A stalactite glowing with colorful light
+	}
+
+	GreenBambooWineJar: {
+		DisplayName: Green Bamboo Wine Jar
+		Tooltip: A wine jar filled with green bamboo wine
+	}
+
+	MoonOrchid: {
+		DisplayName: Moon Orchid
+		Tooltip: An orchid blooming under moonlight, food for the Moonlight Gu
+	}
+
+	PatriarchPavilion: {
+		DisplayName: Patriarch Pavilion
+		Tooltip: The residence of the Gu Yue clan patriarch
+	}
+
+	RedCopperIncenseBurner: {
+		DisplayName: Red Copper Incense Burner
+		Tooltip: A red copper incense burner with curling smoke
+	}
+
+	SchoolDesk: {
+		DisplayName: School Desk
+		Tooltip: A desk used in the Gu Yue clan school
+	}
+
+	SpearBamboo: {
+		DisplayName: Spear Bamboo
+		Tooltip: A bamboo unique to Qing Mao Mountain, straight as a spear
+	}
+
+	SpiritSpring: {
+		DisplayName: Spirit Spring
+		Tooltip: A spring imbued with spiritual energy
+	}
+
+	StiltedHouse: {
+		DisplayName: Stilted House
+		Tooltip: A characteristic stilted house of the Gu Yue clan
+	}
+
+	WineGourdFlower: {
+		DisplayName: Wine Gourd Flower
+		Tooltip: A flower gu shaped like a wine gourd, exuding the aroma of wine
+	}
+
+	TestUIOpener: {
+		DisplayName: UI Tester
+		Tooltip: Right-click to open/close the ModernUI test panel
+	}
+
+	SimpleUIToggle: {
+		DisplayName: Simple U I Toggle
+		Tooltip: ""
+	}
+
+	SearchChairItem: {
+		DisplayName: Search Chair Item
+		Tooltip: ""
+	}
+}
+
+MapObject: {
+	BlackLacquerAltar: Black Lacquer Altar
+	RedCopperIncenseBurner: Red Copper Incense Burner
+	AncestorTablet: Ancestor Tablet
+	StiltedHouse: Stilted House
+	AncestralHall: Ancestral Hall
+	SchoolDesk: School Desk
+	PatriarchPavilion: Patriarch Pavilion
 }
 
 Buffs: {
@@ -2642,6 +2937,11 @@ Buffs: {
 		DisplayName: Yan Tongbuff
 		Description: Mods.VerminLordMod.Buffs.YanTongbuff.Description
 	}
+
+	MiZongBuff: {
+		DisplayName: Mi Zong Buff
+		Description: Mods.VerminLordMod.Buffs.MiZongBuff.Description
+	}
 }
 
 DamageClasses.InsectDamageClass.DisplayName: Insect Damage Class
@@ -2676,6 +2976,16 @@ Tiles: {
 
 	QingMaoStoneDresser.MapEntry: Qing Mao Stone Dresser
 	YuanSOre.MapEntry: Yuan S Ore
+	MiZongZhenTile.MapEntry: Mi Zong Zhen Tile
+	BrownYellowFloor.MapEntry: Brown Yellow Floor
+	DragonCricketJar.MapEntry: Dragon Cricket Jar
+	GlowingStalactite.MapEntry: Glowing Stalactite
+	GreenBambooWineJar.MapEntry: Green Bamboo Wine Jar
+	MoonOrchid.MapEntry: Moon Orchid
+	RiceBagGrass.MapEntry: Rice Bag Grass
+	SpearBamboo.MapEntry: Spear Bamboo
+	SpiritSpring.MapEntry: Spirit Spring
+	WineGourdFlower.MapEntry: Wine Gourd Flower
 }
 
 WorldGen: {
@@ -2691,6 +3001,15 @@ Configs: {
 		LimitSth: {
 			Label: 等级限制
 			Tooltip: 限制每转蛊师可以获取的额外血量、力量、防御加成，提升平衡性
+		}
+	}
+
+	UILayoutConfig: {
+		DisplayName: U I Layout Config
+
+		PanelLayouts: {
+			Label: Panel Layouts
+			Tooltip: ""
 		}
 	}
 }

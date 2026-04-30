@@ -30,7 +30,7 @@ namespace VerminLordMod.Content.NPCs.Town
 
 		// 使用古月家族统一贴图
 		public override string Texture => "VerminLordMod/Content/NPCs/GuMasters/GuYuePatrolGuMaster";
-		public override string HeadTexture => "VerminLordMod/Content/NPCs/GuMasters/GuYuePatrolGuMaster_Head";
+		public override string HeadTexture => "VerminLordMod/Content/NPCs/Town/BaiA_Head";
 		public override void SetStaticDefaults() {
 			//base.SetStaticDefaults();
 			Main.npcFrameCount[Type] = 25;//帧图数量
@@ -76,7 +76,7 @@ namespace VerminLordMod.Content.NPCs.Town
 			NPC.friendly = true; // NPC Will not attack player
 			NPC.width = 18;
 			NPC.height = 40;
-			NPC.aiStyle = 7;
+			NPC.aiStyle = NPCAIStyleID.Passive;
 			NPC.damage = 100;
 			NPC.defense = 15;
 			NPC.lifeMax = 250;

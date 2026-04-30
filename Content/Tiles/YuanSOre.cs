@@ -26,7 +26,7 @@ namespace VerminLordMod.Content.Tiles
 			LocalizedText name = CreateMapEntryName();
 			AddMapEntry(new Color(152, 171, 198), name);
 
-			DustType = 84;
+			DustType = DustID.Platinum;
 			HitSound = SoundID.Tink;
 			// MineResist = 4f;
 			// MinPick = 200;

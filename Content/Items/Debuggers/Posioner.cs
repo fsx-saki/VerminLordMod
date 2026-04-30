@@ -37,13 +37,13 @@ namespace VerminLordMod.Content.Items.Debuggers
 		//	return true;
 		//}
 		public override bool? UseItem(Player player) {
-			player.AddBuff(30, 3600);
-			player.AddBuff(20, 3600);
-			player.AddBuff(24, 3600);
-			player.AddBuff(32, 3600);
-			player.AddBuff(69, 3600);
-			player.AddBuff(46, 3600);
-			player.AddBuff(148, 3600);
+			player.AddBuff(BuffID.Bleeding, 3600);
+			player.AddBuff(BuffID.Poisoned, 3600);
+			player.AddBuff(BuffID.OnFire, 3600);
+			player.AddBuff(BuffID.Slow, 3600);
+			player.AddBuff(BuffID.Ichor, 3600);
+			player.AddBuff(BuffID.Chilled, 3600);
+			player.AddBuff(BuffID.Rabies, 3600);
 			Text.ShowTextRed(player, "孩子们，别吸毒！");
 			return true;
 		}

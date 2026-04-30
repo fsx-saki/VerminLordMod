@@ -170,7 +170,7 @@ namespace VerminLordMod.Content.Tiles.Furniture
 			MouseOverNearAndFarSharedLogic(player, i, j);
 			if (player.cursorItemIconText == "") {
 				player.cursorItemIconEnabled = false;
-				player.cursorItemIconID = 0;
+				player.cursorItemIconID = ItemID.None;
 			}
 		}
 

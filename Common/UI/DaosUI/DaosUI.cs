@@ -1,4 +1,7 @@
-﻿using Microsoft.Xna.Framework;
+﻿// ============================================================
+// DaosUI - 道痕面板 UI（现代化扁平轻量风格）
+// ============================================================
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
 using Terraria;
@@ -6,107 +9,111 @@ using Terraria.GameContent;
 using Terraria.GameContent.UI.Elements;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using Terraria.ModLoader.UI;
 using Terraria.UI;
 using VerminLordMod.Common.Players;
-using VerminLordMod.Common.UI.QiUI;
-using VerminLordMod.Content;
+using VerminLordMod.Common.UI.UIUtils;
 
 namespace VerminLordMod.Common.UI.DaosUI
 {
+    /// <summary>
+    /// 道痕面板 UI — 显示玩家已领悟的道痕
+    /// </summary>
+    public class DaosUI : UIState
+    {
+        private UIPanel _mainPanel;
+        private UIText _titleText;
+        private UITextPanel<string> _closeButton;
+        private UIList _daosList;
+        private bool _escapeWasDown;
 
-	public class DaosUI:UIState
-	{
-		public override void OnInitialize() {
-			var panel = new UIPanel();
-			panel.Width.Set(400f, 0f);  // 宽度400像素
-			panel.Height.Set(300f, 0f); // 高度300像素
+        public override void OnInitialize()
+        {
+            _mainPanel = UIHelper.CreatePanel(380f, 280f);
+            _mainPanel.BackgroundColor = UIStyles.PanelBg;
+            _mainPanel.BorderColor = UIStyles.Border;
+            Append(_mainPanel);
 
-			// 计算居中位置
-			panel.Left.Set(Main.screenWidth / 2f - 200f, 0f); // (屏幕宽度/2 - 元素宽度/2)
-			panel.Top.Set(Main.screenHeight / 2f - 150f, 0f); // (屏幕高度/2 - 元素高度/2)
+            // 标题栏
+            var titleBar = UIHelper.CreateTitleBar(370f);
+            titleBar.Left.Set(5f, 0f);
+            titleBar.Top.Set(5f, 0f);
+            _mainPanel.Append(titleBar);
 
-			Append(panel);
+            _titleText = UIHelper.CreateTitle("道痕", 12f, 6f);
+            titleBar.Append(_titleText);
 
-		}
-		public void RecalculatePosition() {
-			foreach (var element in Elements) {
-				if (element is UIPanel panel) {
-					panel.Left.Set(Main.screenWidth / 2f - panel.Width.Pixels / 2f, 0f);
-					panel.Top.Set(Main.screenHeight / 2f - panel.Height.Pixels / 2f, 0f);
-				}
-			}
-			Recalculate();
-		}
-	}
-	public class CustomButton : UIButton<Texture2D>  // 明确指定泛型参数为 Texture2D
-	{
-		public UIText ButtonText { get; private set; }
-		public CustomButton(string texture, string text) : base(Main.Assets.Request<Texture2D>("Assets/Textures/UI/Button").Value) {
-			SetText( Main.Assets.Request<Texture2D>(texture).Value);
-			Width.Set(100f, 0f);
-			Height.Set(30f, 0f);
-			// 创建文本元素
-			ButtonText = new UIText(text);
-			ButtonText.HAlign = 0.5f; // 水平居中
-			ButtonText.VAlign = 0.5f; // 垂直居中
-			ButtonText.Top.Set(-2f, 0f); // 微调垂直位置
+            // 关闭按钮
+            _closeButton = UIHelper.CreateCloseButton(370f);
+            _closeButton.OnLeftClick += (evt, listener) => CloseUI();
+            titleBar.Append(_closeButton);
 
-			Append(ButtonText); // 将文本添加为按钮的子元素
+            // 道痕列表
+            _daosList = UIHelper.CreateUIList(10f, 48f, 360f, 220f);
+            _mainPanel.Append(_daosList);
 
-			// 可选：添加悬停效果
-			OnMouseOver += (evt, listener) => BackgroundColor = Color.LightGray;
-		}
-		public void ChangeText(string newText) {
-			ButtonText.SetText(newText);
-		}
-		public override void LeftClick(UIMouseEvent evt) {
-			Main.NewText("按钮被点击了！");
-			// 在这里添加点击逻辑
-		}
-	}
-	public class DaosUISystem : ModSystem
-	{
-		private UserInterface _daosUI;
-		public static DaosUI DaosUIInstance;
+            // 占位内容
+            var placeholder = UIHelper.CreateText("道痕系统开发中...", 10f, 10f, UIStyles.TextDim, 0.85f);
+            _daosList.Add(placeholder);
+        }
 
-		public override void Load() {
-			if (!Main.dedServ) // 确保不在服务器端运行
-			{
-				_daosUI = new UserInterface();
-				DaosUIInstance = new DaosUI();
-				DaosUIInstance.Activate();
-			}
-		}
+        public override void Update(GameTime gameTime)
+        {
+            base.Update(gameTime);
+            UIHelper.UpdatePanelCenter(_mainPanel, 380f, 280f);
+            if (UIHelper.CheckEscapeReleased(ref _escapeWasDown))
+                CloseUI();
+        }
 
-		public override void UpdateUI(GameTime gameTime) {
-			_daosUI?.Update(gameTime);
-		}
-		// 显示/隐藏的公共方法
-		public void ToggleUI() {
-			if (_daosUI.CurrentState == null) {
-				_daosUI.SetState(DaosUIInstance); // 显示UI
-			}
-			else {
-				_daosUI.SetState(null); // 隐藏UI
-			}
-		}
-		public override void ModifyInterfaceLayers(List<GameInterfaceLayer> layers) {
-			int mouseTextIndex = layers.FindIndex(layer => layer.Name == "Vanilla: Mouse Text");
-			if (mouseTextIndex != -1) {
-				layers.Insert(mouseTextIndex, new LegacyGameInterfaceLayer(
-					"VerminLordMod: Daos UI",
-					() => {
-						_daosUI.Draw(Main.spriteBatch, new GameTime());
-						return true;
-					},
-					InterfaceScaleType.UI)
-				);
-			}
-			// 当屏幕尺寸变化时重新计算位置
-			if (_daosUI?.CurrentState is DaosUI ui) {
-				ui.RecalculatePosition();
-			}
-		}
-	}
+        private void CloseUI()
+        {
+            ModContent.GetInstance<DaosUISystem>().ToggleUI();
+        }
+    }
+
+    public class DaosUISystem : ModSystem
+    {
+        private UserInterface _daosUI;
+        public static DaosUI DaosUIInstance;
+
+        public override void Load()
+        {
+            if (!Main.dedServ)
+            {
+                _daosUI = new UserInterface();
+                DaosUIInstance = new DaosUI();
+                DaosUIInstance.Activate();
+            }
+        }
+
+        public override void UpdateUI(GameTime gameTime)
+        {
+            _daosUI?.Update(gameTime);
+        }
+
+        public void ToggleUI()
+        {
+            if (_daosUI.CurrentState == null)
+                _daosUI.SetState(DaosUIInstance);
+            else
+                _daosUI.SetState(null);
+        }
+
+        public override void ModifyInterfaceLayers(List<GameInterfaceLayer> layers)
+        {
+            int mouseTextIndex = layers.FindIndex(layer => layer.Name == "Vanilla: Mouse Text");
+            if (mouseTextIndex != -1)
+            {
+                layers.Insert(mouseTextIndex, new LegacyGameInterfaceLayer(
+                    "VerminLordMod: Daos UI",
+                    () =>
+                    {
+                        if (_daosUI?.CurrentState != null)
+                            _daosUI.Draw(Main.spriteBatch, new GameTime());
+                        return true;
+                    },
+                    InterfaceScaleType.UI)
+                );
+            }
+        }
+    }
 }

@@ -73,7 +73,7 @@ namespace VerminLordMod.Content.Items.Debuggers
 			Item.shootSpeed = 10f;
 
 			// 必须设置 shoot > 0 才能触发 Shoot() 回调
-			Item.shoot = 1;
+			Item.shoot = ProjectileID.WoodenArrowFriendly;
 		}
 
 		public override bool AltFunctionUse(Player player)

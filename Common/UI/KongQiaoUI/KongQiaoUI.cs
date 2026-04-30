@@ -9,11 +9,12 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.UI;
 using VerminLordMod.Common.Players;
+using VerminLordMod.Common.UI.UIUtils;
 
 namespace VerminLordMod.Common.UI.KongQiaoUI
 {
     /// <summary>
-    /// 空窍面板 UI — 显示所有空窍格子、蛊虫图标、启用/休眠切换、取出按钮
+    /// 空窍面板 UI — 现代化扁平轻量风格
     /// </summary>
     public class KongQiaoUI : UIState
     {
@@ -26,83 +27,57 @@ namespace VerminLordMod.Common.UI.KongQiaoUI
 
         public override void OnInitialize()
         {
-            // 主面板
-            _mainPanel = new UIPanel();
-            _mainPanel.Width.Set(520f, 0f);
-            _mainPanel.Height.Set(480f, 0f);
-            _mainPanel.Left.Set(Main.screenWidth / 2f - 260f, 0f);
-            _mainPanel.Top.Set(Main.screenHeight / 2f - 240f, 0f);
-            _mainPanel.BackgroundColor = new Color(20, 30, 50, 230);
-            _mainPanel.BorderColor = new Color(60, 100, 180, 255);
+            _mainPanel = UIHelper.CreatePanel(500f, 460f);
+            _mainPanel.BackgroundColor = UIStyles.PanelBg;
+            _mainPanel.BorderColor = UIStyles.Border;
             Append(_mainPanel);
 
-            // 标题
-            _titleText = new UIText("空窍", 1.3f);
-            _titleText.Left.Set(20f, 0f);
-            _titleText.Top.Set(10f, 0f);
-            _titleText.TextColor = Color.Gold;
-            _mainPanel.Append(_titleText);
+            // 标题栏
+            var titleBar = UIHelper.CreateTitleBar(490f);
+            titleBar.Left.Set(5f, 0f);
+            titleBar.Top.Set(5f, 0f);
+            _mainPanel.Append(titleBar);
 
-            // 信息文本（格子数/真元占用）
-            _infoText = new UIText("", 0.8f);
-            _infoText.Left.Set(20f, 0f);
-            _infoText.Top.Set(40f, 0f);
-            _infoText.TextColor = Color.LightGray;
-            _mainPanel.Append(_infoText);
+            _titleText = UIHelper.CreateTitle("空窍", 12f, 6f);
+            titleBar.Append(_titleText);
+
+            // 信息文本
+            _infoText = UIHelper.CreateText("", 80f, 8f, UIStyles.TextSecondary, 0.75f);
+            titleBar.Append(_infoText);
+
+            // 合炼按钮
+            var craftBtn = UIHelper.CreateButton("合炼", 50f, 26f, 330f, 5f, UIStyles.BtnPrimary, 0.75f);
+            craftBtn.OnLeftClick += (evt, listener) => OpenCraftUI();
+            titleBar.Append(craftBtn);
 
             // 关闭按钮
-            _closeButton = new UITextPanel<string>("关闭 [ESC]", 0.9f);
-            _closeButton.Width.Set(120f, 0f);
-            _closeButton.Height.Set(30f, 0f);
-            _closeButton.Left.Set(380f, 0f);
-            _closeButton.Top.Set(10f, 0f);
-            _closeButton.BackgroundColor = new Color(80, 30, 30);
+            _closeButton = UIHelper.CreateCloseButton(490f);
             _closeButton.OnLeftClick += (evt, listener) => CloseUI();
-            _mainPanel.Append(_closeButton);
-
-            // 合炼台按钮
-            var craftButton = new UITextPanel<string>("合炼", 0.8f);
-            craftButton.Width.Set(60f, 0f);
-            craftButton.Height.Set(30f, 0f);
-            craftButton.Left.Set(260f, 0f);
-            craftButton.Top.Set(10f, 0f);
-            craftButton.BackgroundColor = new Color(40, 60, 40);
-            craftButton.OnLeftClick += (evt, listener) => OpenCraftUI();
-            _mainPanel.Append(craftButton);
+            titleBar.Append(_closeButton);
 
             // 滚动条
-            _scrollbar = new UIScrollbar();
-            _scrollbar.Left.Set(490f, 0f);
-            _scrollbar.Top.Set(80f, 0f);
-            _scrollbar.Height.Set(380f, 0f);
-            _scrollbar.Width.Set(16f, 0f);
+            _scrollbar = UIHelper.CreateScrollbar(480f, 48f, 400f, 10f);
             _mainPanel.Append(_scrollbar);
 
             // 格子列表
-            _slotList = new UIList();
-            _slotList.Left.Set(10f, 0f);
-            _slotList.Top.Set(80f, 0f);
-            _slotList.Width.Set(480f, 0f);
-            _slotList.Height.Set(380f, 0f);
+            _slotList = UIHelper.CreateUIList(8f, 48f, 472f, 400f);
             _slotList.SetScrollbar(_scrollbar);
             _mainPanel.Append(_slotList);
         }
 
-        /// <summary>
-        /// 刷新空窍面板内容
-        /// </summary>
         public void Refresh()
         {
             var kongQiao = Main.LocalPlayer.GetModPlayer<KongQiaoPlayer>();
             var qiResource = Main.LocalPlayer.GetModPlayer<QiResourcePlayer>();
 
-            _infoText.SetText($"格子: {kongQiao.UsedSlots}/{kongQiao.MaxSlots}  |  真元占用: {kongQiao.GetTotalQiOccupation()}  |  可用真元: {qiResource.QiAvailable}");
+            _infoText.SetText($"格子: {kongQiao.UsedSlots}/{kongQiao.MaxSlots}  |  真元: {kongQiao.GetTotalQiOccupation()}/{qiResource.QiAvailable}");
 
             _slotList.Clear();
 
             if (kongQiao.KongQiao.Count == 0)
             {
-                _slotList.Add(new UIText("空窍空空如也... 右键蛊虫炼化入窍", 0.9f));
+                var empty = UIHelper.CreateText("空窍空空如也... 右键蛊虫炼化入窍", 8f, 8f, UIStyles.TextDim, 0.85f);
+                _slotList.Add(empty);
                 return;
             }
 
@@ -129,37 +104,22 @@ namespace VerminLordMod.Common.UI.KongQiaoUI
             Refresh();
         }
 
-        private void CloseUI()
-        {
-            ModContent.GetInstance<KongQiaoUISystem>().ToggleUI();
-        }
-
-        private void OpenCraftUI()
-        {
-            ModContent.GetInstance<KongQiaoUISystem>().ToggleGuCraftUI();
-        }
+        private void CloseUI() => ModContent.GetInstance<KongQiaoUISystem>().ToggleUI();
+        private void OpenCraftUI() => ModContent.GetInstance<KongQiaoUISystem>().ToggleGuCraftUI();
 
         private bool _escapeWasDown = false;
 
         public override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
-
-            bool escapeDown = Main.keyState.IsKeyDown(Microsoft.Xna.Framework.Input.Keys.Escape);
-            if (!escapeDown && _escapeWasDown)
-            {
+            if (UIHelper.CheckEscapeReleased(ref _escapeWasDown))
                 CloseUI();
-            }
-            _escapeWasDown = escapeDown;
-
-            // 跟随屏幕
-            _mainPanel.Left.Set(Main.screenWidth / 2f - 260f, 0f);
-            _mainPanel.Top.Set(Main.screenHeight / 2f - 240f, 0f);
+            UIHelper.UpdatePanelCenter(_mainPanel, 500f, 460f);
         }
     }
 
     /// <summary>
-    /// 单个空窍格子的UI元素
+    /// 单个空窍格子的UI元素 — 扁平风格
     /// </summary>
     public class KongQiaoSlotUI : UIPanel
     {
@@ -176,19 +136,17 @@ namespace VerminLordMod.Common.UI.KongQiaoUI
             _onExtract = onExtract;
 
             Width.Set(460f, 0f);
-            Height.Set(60f, 0f);
-            MarginTop = 4f;
+            Height.Set(56f, 0f);
+            MarginTop = 3f;
 
             BackgroundColor = slot.IsActive
-                ? new Color(30, 60, 40, 200)
-                : new Color(40, 30, 30, 200);
+                ? new Color(35, 55, 42, 210)
+                : new Color(42, 35, 35, 210);
             BorderColor = slot.IsMainGu
-                ? new Color(255, 215, 0, 200)
-                : new Color(60, 60, 80, 200);
+                ? UIStyles.BorderHighlight
+                : UIStyles.BorderLight;
 
-            // === 在构造函数中直接创建子元素（不依赖 OnInitialize） ===
-
-            // 蛊虫图标（物品图标）
+            // 蛊虫图标
             Texture2D iconTex;
             if (slot.GuItem.type < TextureAssets.Item.Length && slot.GuItem.type > 0)
                 iconTex = TextureAssets.Item[slot.GuItem.type].Value;
@@ -196,8 +154,8 @@ namespace VerminLordMod.Common.UI.KongQiaoUI
                 iconTex = ModContent.Request<Texture2D>("Terraria/Images/Item_0").Value;
 
             var icon = new UIImage(iconTex);
-            icon.Left.Set(6f, 0f);
-            icon.Top.Set(6f, 0f);
+            icon.Left.Set(5f, 0f);
+            icon.Top.Set(4f, 0f);
             icon.Width.Set(48f, 0f);
             icon.Height.Set(48f, 0f);
             icon.ScaleToFit = true;
@@ -206,43 +164,43 @@ namespace VerminLordMod.Common.UI.KongQiaoUI
             // 蛊虫名称
             string nameText = slot.GuItem.Name;
             if (slot.IsMainGu) nameText += " [本命]";
-            var name = new UIText(nameText, 0.9f);
-            name.Left.Set(60f, 0f);
-            name.Top.Set(6f, 0f);
-            name.TextColor = slot.IsMainGu ? Color.Gold : Color.White;
+            var name = new UIText(nameText, 0.85f);
+            name.Left.Set(58f, 0f);
+            name.Top.Set(5f, 0f);
+            name.TextColor = slot.IsMainGu ? UIStyles.TitleText : UIStyles.TextMain;
             Append(name);
 
             // 状态信息
             string statusText = slot.IsActive ? "已启用" : "已休眠";
             statusText += $"  |  忠诚: {slot.Loyalty:F1}%  |  占窍: {slot.QiOccupation}";
-            var status = new UIText(statusText, 0.7f);
-            status.Left.Set(60f, 0f);
+            var status = new UIText(statusText, 0.65f);
+            status.Left.Set(58f, 0f);
             status.Top.Set(30f, 0f);
-            status.TextColor = slot.IsActive ? Color.LightGreen : Color.Gray;
+            status.TextColor = slot.IsActive ? UIStyles.TextSuccess : UIStyles.TextDim;
             Append(status);
 
-            // 启用/休眠切换按钮
-            var toggleBtn = new UITextPanel<string>(slot.IsActive ? "休眠" : "启用", 0.7f);
-            toggleBtn.Width.Set(50f, 0f);
-            toggleBtn.Height.Set(26f, 0f);
+            // 切换按钮
+            var toggleBtn = new UITextPanel<string>(slot.IsActive ? "休眠" : "启用", 0.65f);
+            toggleBtn.Width.Set(46f, 0f);
+            toggleBtn.Height.Set(24f, 0f);
             toggleBtn.Left.Set(320f, 0f);
-            toggleBtn.Top.Set(6f, 0f);
-            toggleBtn.BackgroundColor = slot.IsActive
-                ? new Color(80, 40, 40)
-                : new Color(40, 80, 40);
+            toggleBtn.Top.Set(5f, 0f);
+            toggleBtn.BackgroundColor = slot.IsActive ? UIStyles.BtnDanger : UIStyles.BtnPrimary;
+            toggleBtn.BorderColor = UIStyles.BorderLight;
             int capturedIndex = slotIndex;
             toggleBtn.OnLeftClick += (evt, listener) => _onToggleActive?.Invoke(capturedIndex);
             Append(toggleBtn);
 
-            // 取出按钮（本命蛊不可取出）
+            // 取出按钮
             if (!slot.IsMainGu)
             {
-                var extractBtn = new UITextPanel<string>("取出", 0.7f);
-                extractBtn.Width.Set(50f, 0f);
-                extractBtn.Height.Set(26f, 0f);
-                extractBtn.Left.Set(380f, 0f);
-                extractBtn.Top.Set(6f, 0f);
-                extractBtn.BackgroundColor = new Color(40, 40, 80);
+                var extractBtn = new UITextPanel<string>("取出", 0.65f);
+                extractBtn.Width.Set(46f, 0f);
+                extractBtn.Height.Set(24f, 0f);
+                extractBtn.Left.Set(372f, 0f);
+                extractBtn.Top.Set(5f, 0f);
+                extractBtn.BackgroundColor = UIStyles.BtnSecondary;
+                extractBtn.BorderColor = UIStyles.BorderLight;
                 extractBtn.OnLeftClick += (evt, listener) => _onExtract?.Invoke(capturedIndex);
                 Append(extractBtn);
             }

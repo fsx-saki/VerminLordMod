@@ -201,13 +201,8 @@ namespace VerminLordMod.Content.Items.Weapons
                 // 速度随机波动
                 shootVel *= 0.8f + Main.rand.NextFloat(0.4f);
 
-                // 使用蛊虫对应的弹幕类型（炼化时已从原始物品获取并存入 ProjectileType）
-                int projectileType = gu.ProjectileType;
-                if (projectileType <= 0)
-                {
-                    // 未设置弹幕类型，使用默认木箭
-                    projectileType = ProjectileID.WoodenArrowFriendly;
-                }
+                // 动态获取蛊虫的弹幕类型（不依赖炼化时缓存的 ProjectileType）
+                int projectileType = GetGuProjectileType(gu);
 
                 // 发射弹幕
                 Projectile.NewProjectile(source, position, shootVel,
@@ -217,6 +212,30 @@ namespace VerminLordMod.Content.Items.Weapons
                 float cost = gu.QiOccupation * 0.1f;
                 ConsumeQiSafe(qiResource, cost);
             }
+        }
+
+        #endregion
+
+        #region 动态弹幕类型获取
+
+        /// <summary>
+        /// 动态获取蛊虫的弹幕类型（不依赖炼化时缓存的 ProjectileType）。
+        /// 优先使用蛊虫武器自身的 Item.shoot，回退到类型匹配。
+        /// </summary>
+        private static int GetGuProjectileType(KongQiaoSlot gu)
+        {
+            // 优先使用蛊虫武器自身的 Item.shoot
+            if (gu.GuItem.shoot > 0)
+            {
+                return gu.GuItem.shoot;
+            }
+            // 回退：使用 ModItem 类型进行匹配
+            return gu.GuItem.ModItem switch
+            {
+                Content.Items.Weapons.One.Moonlight _ => ModContent.ProjectileType<MoonlightProj>(),
+                Content.Items.Weapons.One.BoneSpearGu _ => ModContent.ProjectileType<BoneSpear>(),
+                _ => ProjectileID.WoodenArrowFriendly  // 默认占位：木箭
+            };
         }
 
         #endregion

@@ -12,7 +12,7 @@ using VerminLordMod.Common.Players;
 using VerminLordMod.Content.DamageClasses;
 using VerminLordMod.Content.Dusts;
 
-namespace VerminLordMod.Content.Items.Weapons
+namespace VerminLordMod.Content.Items.Weapons.Six
 {
 	/// <summary>
 	/// 春秋蝉 - 六转宙道本命蛊

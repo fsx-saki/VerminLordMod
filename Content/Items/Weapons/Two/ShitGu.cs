@@ -50,26 +50,26 @@ namespace VerminLordMod.Content.Items.Weapons.Two
 			if (player.altFunctionUse == 2)
 				return false;
 			Projectile projectile =Projectile.NewProjectileDirect(source, player.Center, Vector2.Zero, ProjectileID.ToiletEffect,0,0);
-			if (player.HasBuff(30)) {
-				player.ClearBuff(30);
+			if (player.HasBuff(BuffID.Bleeding)) {
+				player.ClearBuff(BuffID.Bleeding);
 			}
-			else if (player.HasBuff(20)) {
-				player.ClearBuff(20);
+			else if (player.HasBuff(BuffID.Poisoned)) {
+				player.ClearBuff(BuffID.Poisoned);
 			}
-			else if (player.HasBuff(24)) {
-				player.ClearBuff(24);
+			else if (player.HasBuff(BuffID.OnFire)) {
+				player.ClearBuff(BuffID.OnFire);
 			}
-			else if (player.HasBuff(32)) {
-				player.ClearBuff(32);
+			else if (player.HasBuff(BuffID.Slow)) {
+				player.ClearBuff(BuffID.Slow);
 			}
-			else if (player.HasBuff(69)) {
-				player.ClearBuff(69);
+			else if (player.HasBuff(BuffID.Ichor)) {
+				player.ClearBuff(BuffID.Ichor);
 			}
-			else if (player.HasBuff(46)) {
-				player.ClearBuff(46);
+			else if (player.HasBuff(BuffID.Chilled)) {
+				player.ClearBuff(BuffID.Chilled);
 			}
-			else if (player.HasBuff(148)) {
-				player.ClearBuff(148);
+			else if (player.HasBuff(BuffID.Rabies)) {
+				player.ClearBuff(BuffID.Rabies);
 			}
 			return false;
 		}

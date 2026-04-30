@@ -25,7 +25,7 @@ namespace VerminLordMod.Content.Projectiles
             Projectile.tileCollide = true;
             Projectile.penetrate = 99;
             Projectile.timeLeft = 60;
-            Projectile.alpha = 255;
+            Projectile.alpha = 0;
             Projectile.friendly = true;
             Projectile.hostile = false;
             Projectile.DamageType = ModContent.GetInstance<InsectDamageClass>();
@@ -58,8 +58,22 @@ namespace VerminLordMod.Content.Projectiles
 
         public override bool PreDraw(ref Color lightColor)
         {
-            trailManager.Draw(Main.spriteBatch);
-            return true;
+        	trailManager.Draw(Main.spriteBatch);
+      
+        	// 绘制弹幕主纹理
+        	if (mainTexture != null)
+        	{
+        		Vector2 drawPos = Projectile.Center - Main.screenPosition;
+        		Rectangle? sourceRect = null;
+        		Color drawColor = Projectile.GetAlpha(lightColor);
+        		Vector2 origin = mainTexture.Size() * 0.5f;
+        		float scale = Projectile.scale;
+      
+        		Main.spriteBatch.Draw(mainTexture, drawPos, sourceRect, drawColor,
+        			Projectile.rotation, origin, scale, SpriteEffects.None, 0f);
+        	}
+      
+        	return true;
         }
 
         public override void OnKill(int timeLeft)
