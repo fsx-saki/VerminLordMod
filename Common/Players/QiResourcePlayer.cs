@@ -2,7 +2,9 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
+using Terraria.Utilities;
 using VerminLordMod.Common.Events;
+using VerminLordMod.Content.Buffs.AddToSelf.Pobuff;
 
 namespace VerminLordMod.Common.Players
 {
@@ -13,6 +15,10 @@ namespace VerminLordMod.Common.Players
     /// </summary>
     public class QiResourcePlayer : ModPlayer
     {
+        // ===== 常量 =====
+        /// <summary>真元颜色（从 QiPlayer 迁移）</summary>
+        public static readonly Color HealQi = new(187, 91, 201);
+
         // ===== 核心字段 =====
         /// <summary>基础真元上限（由 QiRealmPlayer 写入）</summary>
         public float QiMaxBase;
@@ -105,6 +111,16 @@ namespace VerminLordMod.Common.Players
             {
                 regenPerTick = (int)(effectiveRegen / 60f);
                 interval = 1;
+            }
+
+            // 黄罗天牛Buff额外真元恢复（从 QiPlayer.UpdateResource 迁移）
+            // 原 Randommer.Roll(2) = 2%概率
+            if (Player.HasBuff(ModContent.BuffType<HuangLuoLongicornbuff>()))
+            {
+                if (Main.rand.NextBool(50))
+                {
+                    regenPerTick += 1;
+                }
             }
 
             if (regenTimer >= interval)

@@ -1,69 +1,86 @@
-﻿using VerminLordMod.Content.DamageClasses;
+﻿using VerminLordMod.Common.BulletBehaviors;
+using VerminLordMod.Content.Buffs.AddToEnemy;
+using VerminLordMod.Content.DamageClasses;
+using VerminLordMod.Content.Trails;
 using Microsoft.Xna.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Terraria;
-using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
-using VerminLordMod.Content.Buffs.AddToEnemy;
 
 namespace VerminLordMod.Content.Projectiles
 {
-	class BlueBird : ModProjectile
-	{
-		public override void SetDefaults() {
-			Projectile.width = 16; // 弹幕的碰撞箱宽度
-			Projectile.height = 16; // 弹幕的碰撞箱高度
-									// 这两个字段不赋值弹幕会射不出来！16*16的碰撞箱相当于泰拉里一个物块那么大
-									// 特别注意，请不要搞什么碰撞箱大小设为贴图大小的骚操作，那会造成奇怪的后果
-			Projectile.scale = 1f; // 弹幕缩放倍率，会影响碰撞箱大小，默认1f
-			Projectile.ignoreWater = true; // 弹幕是否忽视水
-			Projectile.tileCollide = false; // 弹幕撞到物块会创死吗
-			Projectile.penetrate = 1; // 弹幕的穿透数，默认1次
-			Projectile.timeLeft = 100; // 弹幕的存活时间，它会从弹幕生成开始每次更新减1，为零时弹幕会被kill，默认3600
-			Projectile.alpha = 100; // 弹幕的透明度，0 ~ 255，0是完全不透明（int）
-								  // Projectile.Opacity = 1; // 弹幕的不透明度，0 ~ 1，0是完全透明，1是完全不透明(float)，用哪个你们自己挑，这两是互相影响的
-			Projectile.friendly = true; // 弹幕是否攻击敌方，默认false
-			Projectile.hostile = false; // 弹幕是否攻击友方和城镇NPC，默认false
-			Projectile.DamageType = ModContent.GetInstance<InsectDamageClass>(); // 弹幕的伤害类型，默认default，npc射的弹幕用这种，玩家的什么类型武器就设为什么吧
-														 // Projectile.aiStyle = ProjAIStyleID.Arrow; // 弹幕使用原版哪种弹幕AI类型
-														 // AIType = ProjectileID.FireArrow; // 弹幕模仿原版哪种弹幕的行为
-														 // 上面两条，第一条是某种行为类型，可以查源码看看，这里是箭矢，第二条要有第一条才有效果，是让这个弹幕能执行对应弹幕的特殊判定行为
-			Projectile.aiStyle = -1; // 不用原版的就写这个，也可以不写
-									 // Projectile.extraUpdates = 0; // 弹幕每帧的额外更新次数，默认0，这个之后细讲
-									 // 以及写一些关于无敌帧的设定
-		}
-		int pre=0;
-		public override void AI() {
+    /// <summary>
+    /// 蓝鸟弹幕 — 追踪敌人，命中后在敌人位置生成冰霜法阵。
+    /// 法阵旋转并召唤冰碎片汇聚向敌人，最终冻结敌人。
+    /// </summary>
+    public class BlueBird : BaseBullet
+    {
+        protected override void RegisterBehaviors()
+        {
+            Behaviors.Add(new HomingBehavior(speed: 10f, trackingWeight: 1f / 11f)
+            {
+                Range = 8000f,
+                AutoRotate = true,
+                RotationOffset = MathHelper.PiOver2,
+            });
+            Behaviors.Add(new TrailBehavior()
+            {
+                AutoDraw = true,
+                SuppressDefaultDraw = false,
+            });
+            Behaviors.Add(new DustKillBehavior(DustID.Ice, 20, 5f, 1.5f));
+        }
 
-			NPC tar = Finder.FindCloestEnemy(Projectile.Center, 8000f, (n) => {
-				return n.CanBeChasedBy() &&
-				!n.dontTakeDamage && Collision.CanHitLine(Projectile.Center, 1, 1, n.Center, 1, 1);
-			});
-			if (tar != null) {
-				Vector2 targetPos = tar.Center;
-				var targetVel = Vector2.Normalize(targetPos - Projectile.Center) * 10f;
-				// 加权平均 1份目标速度和10份当前速度
-				Projectile.velocity = (targetVel + Projectile.velocity * 10) / 11f;
-			}
-			Projectile.rotation = (float)Math.Atan2(Projectile.velocity.X, -Projectile.velocity.Y);
-			pre++;
-		}
+        public override void SetDefaults()
+        {
+            Projectile.width = 16;
+            Projectile.height = 16;
+            Projectile.scale = 1f;
+            Projectile.ignoreWater = true;
+            Projectile.tileCollide = false;
+            Projectile.penetrate = 1;
+            Projectile.timeLeft = 100;
+            Projectile.alpha = 100;
+            Projectile.friendly = true;
+            Projectile.hostile = false;
+            Projectile.DamageType = ModContent.GetInstance<InsectDamageClass>();
+            Projectile.aiStyle = -1;
+        }
 
-		public override void OnSpawn(IEntitySource source) {
+        protected override void OnSpawned(IEntitySource source)
+        {
+            Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.PiOver2;
 
-			Projectile.rotation = (float)Math.Atan2(Projectile.velocity.X, -Projectile.velocity.Y);
+            // 配置拖尾
+            var trailBehavior = Behaviors.Find(b => b is TrailBehavior) as TrailBehavior;
+            if (trailBehavior != null)
+            {
+                trailBehavior.TrailManager.AddGhostTrail(
+                    trailTex: Terraria.GameContent.TextureAssets.Projectile[Projectile.type].Value,
+                    color: new Color(150, 200, 255),
+                    maxPositions: 16,
+                    widthScale: 0.5f,
+                    lengthScale: 1.0f,
+                    alpha: 0.5f,
+                    recordInterval: 2);
+            }
+        }
 
+        protected override void OnHit(NPC target, NPC.HitInfo hit, int damageDone)
+        {
+            // 在敌人位置生成冰霜法阵
+            Projectile.NewProjectile(
+                Projectile.GetSource_FromThis(),
+                target.Center,
+                Vector2.Zero,
+                ModContent.ProjectileType<BlueBirdCircleProj>(),
+                0, 0f, Projectile.owner,
+                ai0: target.whoAmI  // 记录目标 NPC 索引
+            );
 
-		}
-
-		public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone) {
-			target.AddBuff(ModContent.BuffType<BlueBirdbuff>(),300);
-		}
-	}
+            // 添加冻结 buff
+            target.AddBuff(ModContent.BuffType<BlueBirdbuff>(), 300);
+        }
+    }
 }

@@ -8,7 +8,7 @@ namespace VerminLordMod.Content.Trails
 	/// <summary>
 	/// 拖尾管理器 - 管理多个 ITrail 实例的统一容器
 	/// 可用于弹幕（ModProjectile）和玩家（ModPlayer）
-	/// 
+	///
 	/// 使用示例（弹幕）：
 	///   private TrailManager trailManager = new TrailManager();
 	///   public override void AI() {
@@ -18,7 +18,7 @@ namespace VerminLordMod.Content.Trails
 	///       trailManager.Draw(Main.spriteBatch);
 	///       return true;
 	///   }
-	/// 
+	///
 	/// 使用示例（玩家）：
 	///   private TrailManager trailManager = new TrailManager();
 	///   public override void PostUpdate() {
@@ -113,13 +113,39 @@ namespace VerminLordMod.Content.Trails
 		}
 
 		/// <summary>
-		/// 绘制所有拖尾
+		/// 绘制所有拖尾（统一管理SpriteBatch状态）
+		/// TrailManager 负责开关 Additive 混合模式，
+		/// 各 ITrail.Draw() 内部不再自行管理 SpriteBatch。
 		/// </summary>
 		public void Draw(SpriteBatch sb)
 		{
+			if (trails.Count == 0) return;
+
+			// 检查是否需要 Additive 混合模式
+			bool needsAdditive = false;
+			foreach (var t in trails)
+			{
+				if (t is GhostTrail gt && gt.UseAdditiveBlend) { needsAdditive = true; break; }
+				if (t is LiquidTrail) { needsAdditive = true; break; }
+			}
+
+			if (needsAdditive)
+			{
+				sb.End();
+				sb.Begin(SpriteSortMode.Immediate, BlendState.Additive, SamplerState.LinearClamp,
+					DepthStencilState.None, RasterizerState.CullNone, null, Main.GameViewMatrix.TransformationMatrix);
+			}
+
 			foreach (var t in trails)
 			{
 				t.Draw(sb);
+			}
+
+			if (needsAdditive)
+			{
+				sb.End();
+				sb.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.AnisotropicClamp,
+					DepthStencilState.None, RasterizerState.CullNone, null, Main.GameViewMatrix.TransformationMatrix);
 			}
 		}
 

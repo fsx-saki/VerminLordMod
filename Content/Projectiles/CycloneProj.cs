@@ -48,7 +48,7 @@ namespace VerminLordMod.Content.Projectiles
 
 			Texture2D trailTex = ModContent.Request<Texture2D>("VerminLordMod/Content/Projectiles/MoonlightProjTail").Value;
 
-			// 初始化虚影拖尾（带发光效果，兼容原5层发光）
+			// 初始化虚影拖尾（发光效果在PreDraw中手动控制）
 			trailManager.AddGhostTrail(trailTex,
 				color: new Color(70, 255, 160),
 				maxPositions: 20,
@@ -56,12 +56,43 @@ namespace VerminLordMod.Content.Projectiles
 				lengthScale: 1.8f,
 				alpha: 0.6f,
 				recordInterval: 2,
-				enableGlow: true);
+				enableGlow: false);
 		}
 
 		public override bool PreDraw(ref Color lightColor) {
+			// 先绘制拖尾（TrailManager统一管理Additive混合模式）
 			trailManager.Draw(Main.spriteBatch);
-			return true;
+			
+			// 手动绘制发光层 + 本体（避免引擎默认绘制导致的重复）
+			Texture2D tex = Terraria.GameContent.TextureAssets.Projectile[Projectile.type].Value;
+			if (tex != null)
+			{
+				Vector2 drawPos = Projectile.Center - Main.screenPosition;
+				Vector2 origin = tex.Size() * 0.5f;
+				float scale = Projectile.scale;
+				
+				// 发光层（Additive混合，由TrailManager的Draw已开启）
+				Color glowColor = new Color(70, 255, 160) * 0.3f;
+				for (int i = 0; i < 3; i++)
+				{
+					float gs = scale * (1.2f + i * 0.4f);
+					float ga = 0.5f - i * 0.15f;
+					Main.spriteBatch.Draw(tex, drawPos, null, glowColor * ga,
+						Projectile.rotation, origin, gs, SpriteEffects.None, 0f);
+				}
+				
+				// 结束Additive，切回正常混合绘制本体
+				Main.spriteBatch.End();
+				Main.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.AnisotropicClamp,
+					DepthStencilState.None, RasterizerState.CullNone, null, Main.GameViewMatrix.TransformationMatrix);
+				
+				// 绘制本体（正常混合，只绘制一次）
+				Color drawColor = Projectile.GetAlpha(lightColor);
+				Main.spriteBatch.Draw(tex, drawPos, null, drawColor,
+					Projectile.rotation, origin, scale, SpriteEffects.None, 0f);
+			}
+			
+			return false; // 阻止引擎默认绘制
 		}
 
 		public override void OnKill(int timeLeft) {

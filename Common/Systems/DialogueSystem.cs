@@ -1,6 +1,7 @@
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
+using VerminLordMod.Common.DialogueTree;
 using VerminLordMod.Common.Players;
 using VerminLordMod.Common.Systems;
 using VerminLordMod.Content.NPCs.GuMasters;
@@ -9,21 +10,23 @@ namespace VerminLordMod.Common.Systems
 {
     /// <summary>
     /// DialogueSystem — 对话树与情报战（P2 MVA 阶段）
-    /// 
+    ///
     /// 职责：
     /// 1. 劫持 GuMasterBase.SetChatButtons，扩展为三层菜单（公开/暗面/杀招）
     /// 2. 处理对话选择，影响 NPC 对玩家的信念（RiskThreshold / ConfidenceLevel）
     /// 3. 提供情报获取接口（通过对话试探 NPC 的信念状态）
-    /// 
+    /// 4. 集成 DialogueTreeManager，支持注册的对话树 NPC
+    ///
     /// MVA 阶段：
     /// - 只实现第一层（公开交互）：询问 / 交易
     /// - 第二层（暗面操作）和第三层（杀招）留 P1 扩展
     /// - 信念影响通过 InteractionResult 结构体传递
-    /// 
+    ///
     /// 依赖：
     /// - GuMasterBase（NPC 基类，提供 GetBelief / UpdateBelief）
     /// - GuWorldPlayer（声望系统）
     /// - EventBus（事件发布）
+    /// - DialogueTreeManager（对话树系统）
     /// </summary>
     public class DialogueSystem : ModSystem
     {
@@ -43,9 +46,22 @@ namespace VerminLordMod.Common.Systems
         /// <summary>
         /// 为指定 NPC 生成对话选项。
         /// 由 GuMasterBase.SetChatButtons 调用。
+        /// 优先检查是否有注册的对话树，如果有则使用对话树系统。
         /// </summary>
         public void GenerateDialogueOptions(Player player, NPC npc, ref string button, ref string button2)
         {
+            // 优先检查是否有注册的对话树
+            if (DialogueTreeManager.Instance.HasTree(npc))
+            {
+                var options = DialogueTreeManager.Instance.GetCurrentOptions(player);
+                if (options != null && options.Count > 0)
+                {
+                    button = options.Count > 0 ? options[0].Text : "对话";
+                    button2 = options.Count > 1 ? options[1].Text : "";
+                    return;
+                }
+            }
+
             if (!(npc.ModNPC is GuMasterBase guMaster))
             {
                 // 非蛊师 NPC：使用原版对话
@@ -86,9 +102,17 @@ namespace VerminLordMod.Common.Systems
         /// <summary>
         /// 处理对话选择，影响信念。
         /// 由 GuMasterBase.OnChatButtonClicked 调用。
+        /// 优先处理对话树系统的选择。
         /// </summary>
         public void OnDialogueChoice(Player player, NPC npc, int choiceIndex)
         {
+            // 优先处理对话树系统的选择
+            if (DialogueTreeManager.Instance.HasActiveSession(player))
+            {
+                DialogueTreeManager.Instance.SelectOption(player, choiceIndex);
+                return;
+            }
+
             if (!(npc.ModNPC is GuMasterBase guMaster)) return;
 
             switch (choiceIndex)
@@ -108,6 +132,30 @@ namespace VerminLordMod.Common.Systems
                 case 4: // 贿赂（P1 扩展）
                     HandleBribe(player, npc, guMaster);
                     break;
+            }
+        }
+
+        /// <summary>
+        /// 开始与NPC的对话树对话。
+        /// 由 NPC 的 CanChat / GetChat 调用。
+        /// </summary>
+        public bool StartDialogueTree(Player player, NPC npc)
+        {
+            if (!DialogueTreeManager.Instance.HasTree(npc))
+                return false;
+
+            DialogueTreeManager.Instance.StartDialogue(npc, player);
+            return true;
+        }
+
+        /// <summary>
+        /// 结束对话树对话。
+        /// </summary>
+        public void EndDialogueTree(Player player)
+        {
+            if (DialogueTreeManager.Instance.HasActiveSession(player))
+            {
+                DialogueTreeManager.Instance.EndDialogue(player);
             }
         }
 

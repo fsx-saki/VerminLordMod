@@ -5,6 +5,8 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using VerminLordMod.Common.Entities;
 using VerminLordMod.Common.Events;
+using VerminLordMod.Common.Search;
+using VerminLordMod.Common.Search.Searchables;
 using VerminLordMod.Common.Systems;
 
 namespace VerminLordMod.Common.GlobalNPCs
@@ -95,6 +97,13 @@ namespace VerminLordMod.Common.GlobalNPCs
             if (isBoss)
             {
                 corpse.Projectile.timeLeft = 36000;
+            }
+
+            // 注册到搜索系统（仅在客户端）
+            if (!Main.dedServ)
+            {
+                var searchable = new CorpseSearchable(corpse);
+                SearchSystem.Instance.Register(searchable);
             }
 
             _lastSpawnTick = Main.GameUpdateCount;

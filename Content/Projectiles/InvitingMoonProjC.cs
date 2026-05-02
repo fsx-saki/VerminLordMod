@@ -1,10 +1,12 @@
 ﻿using VerminLordMod.Content.DamageClasses;
+using VerminLordMod.Content.Trails;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
+using Terraria.GameContent;
 
 namespace VerminLordMod.Content.Projectiles
 {
@@ -15,31 +17,26 @@ namespace VerminLordMod.Content.Projectiles
 		}
 
 		public override void SetDefaults() {
-			Projectile.width = 16; // 弹幕的碰撞箱宽度
-			Projectile.height = 16; // 弹幕的碰撞箱高度
-									// 这两个字段不赋值弹幕会射不出来！16*16的碰撞箱相当于泰拉里一个物块那么大
-									// 特别注意，请不要搞什么碰撞箱大小设为贴图大小的骚操作，那会造成奇怪的后果
-			Projectile.scale = 1.5f; // 弹幕缩放倍率，会影响碰撞箱大小，默认1f
-			Projectile.ignoreWater = true; // 弹幕是否忽视水
-			Projectile.tileCollide = true; // 弹幕撞到物块会创死吗
-			Projectile.penetrate = 3; // 弹幕的穿透数，默认1次
-			Projectile.timeLeft = 300; // 弹幕的存活时间，它会从弹幕生成开始每次更新减1，为零时弹幕会被kill，默认3600
-			Projectile.alpha = 0; // 弹幕的透明度，0 ~ 255，0是完全不透明（int）
-								  // Projectile.Opacity = 1; // 弹幕的不透明度，0 ~ 1，0是完全透明，1是完全不透明(float)，用哪个你们自己挑，这两是互相影响的
-			Projectile.friendly = true; // 弹幕是否攻击敌方，默认false
-			Projectile.hostile = false; // 弹幕是否攻击友方和城镇NPC，默认false
-			Projectile.DamageType = ModContent.GetInstance<InsectDamageClass>(); // 弹幕的伤害类型，默认default，npc射的弹幕用这种，玩家的什么类型武器就设为什么吧
-														 // Projectile.aiStyle = ProjAIStyleID.Arrow; // 弹幕使用原版哪种弹幕AI类型
-														 // AIType = ProjectileID.FireArrow; // 弹幕模仿原版哪种弹幕的行为
-														 // 上面两条，第一条是某种行为类型，可以查源码看看，这里是箭矢，第二条要有第一条才有效果，是让这个弹幕能执行对应弹幕的特殊判定行为
-			Projectile.aiStyle = -1; // 不用原版的就写这个，也可以不写
-									 // Projectile.extraUpdates = 0; // 弹幕每帧的额外更新次数，默认0，这个之后细讲
-									 // 以及写一些关于无敌帧的设定
-
-
+			Projectile.width = 16;
+			Projectile.height = 16;
+			Projectile.scale = 1.5f;
+			Projectile.ignoreWater = true;
+			Projectile.tileCollide = true;
+			Projectile.penetrate = 3;
+			Projectile.timeLeft = 300;
+			Projectile.alpha = 0;
+			Projectile.friendly = true;
+			Projectile.hostile = false;
+			Projectile.DamageType = ModContent.GetInstance<InsectDamageClass>();
+			Projectile.aiStyle = -1;
 		}
+
+		private Texture2D mainTexture;
+		private readonly TrailManager trailManager = new TrailManager();
 		private int frametime = 0;
+
 		public override void AI() {
+			trailManager.Update(Projectile.Center, Projectile.velocity);
 			NPC tar = Finder.FindCloestEnemy(Projectile.Center, 8000f, (n) => {
 				return n.CanBeChasedBy() &&
 				!n.dontTakeDamage && Collision.CanHitLine(Projectile.Center, 1, 1, n.Center, 1, 1);
@@ -47,22 +44,63 @@ namespace VerminLordMod.Content.Projectiles
 			if (tar != null) {
 				Vector2 targetPos = tar.Center;
 				var targetVel = Vector2.Normalize(targetPos - Projectile.Center) * 10f;
-				// 加权平均 1份目标速度和10份当前速度
 				Projectile.velocity = (targetVel + Projectile.velocity * 10) / 11f;
 			}
 			Projectile.rotation = (float)Math.Atan2(Projectile.velocity.X, -Projectile.velocity.Y);
-			Projectile.rotation = Projectile.velocity.ToRotation() + (float)(0.5 * MathHelper.Pi);  //弹幕方向对正
+			Projectile.rotation = Projectile.velocity.ToRotation() + (float)(0.5 * MathHelper.Pi);
 			frametime++;
 		}
 
-
 		public override void OnSpawn(IEntitySource source) {
-
+			mainTexture = TextureAssets.Projectile[Projectile.type].Value;
 			Projectile.rotation = (float)Math.Atan2(Projectile.velocity.X, -Projectile.velocity.Y);
-			
-			
+
+			// 紫色虚影拖尾 — 参照月光弹幕方式
+			Texture2D trailTex = ModContent.Request<Texture2D>("VerminLordMod/Content/Projectiles/MoonlightProjTailP").Value;
+			var ghost = trailManager.AddGhostTrail(trailTex,
+				color: new Color(205, 135, 255),
+				maxPositions: 16,
+				widthScale: 3f,
+				lengthScale: 1f,
+				alpha: 1f,
+				recordInterval: 2,
+				enableGlow: false);
+			ghost.Offset = -Projectile.velocity.SafeNormalize(Vector2.Zero) * 7f;
 		}
 
-		
+		public override bool PreDraw(ref Color lightColor) {
+			// 先绘制拖尾（TrailManager统一管理Additive混合模式）
+			trailManager.Draw(Main.spriteBatch);
+
+			// 手动绘制发光层 + 本体（避免引擎默认绘制导致的重复）
+			if (mainTexture != null)
+			{
+				Vector2 drawPos = Projectile.Center - Main.screenPosition;
+				Vector2 origin = mainTexture.Size() * 0.5f;
+				float scale = Projectile.scale;
+				Color drawColor = Projectile.GetAlpha(lightColor);
+
+				// 发光层（Additive混合，由TrailManager的Draw已开启）
+				Color glowColor = new Color(205, 135, 255) * 0.3f;
+				for (int i = 0; i < 3; i++)
+				{
+					float gs = scale * (1.2f + i * 0.4f);
+					float ga = 0.5f - i * 0.15f;
+					Main.spriteBatch.Draw(mainTexture, drawPos, null, glowColor * ga,
+						Projectile.rotation, origin, gs, SpriteEffects.None, 0f);
+				}
+
+				// 结束Additive，切回正常混合绘制本体
+				Main.spriteBatch.End();
+				Main.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.AnisotropicClamp,
+					DepthStencilState.None, RasterizerState.CullNone, null, Main.GameViewMatrix.TransformationMatrix);
+
+				// 绘制本体（正常混合，只绘制一次）
+				Main.spriteBatch.Draw(mainTexture, drawPos, null, drawColor,
+					Projectile.rotation, origin, scale, SpriteEffects.None, 0f);
+			}
+
+			return false; // 返回false，阻止引擎默认绘制
+		}
 	}
 }

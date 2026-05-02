@@ -128,9 +128,8 @@ namespace VerminLordMod.Content.Trails
 			Texture2D tex = TrailTexture;
 			if (tex == null) return;
 
-			sb.End();
-			sb.Begin(SpriteSortMode.Deferred, BlendState.Additive, SamplerState.AnisotropicClamp,
-				DepthStencilState.None, RasterizerState.CullNone, null, Main.GameViewMatrix.TransformationMatrix);
+			// 注意：Additive 混合模式由 TrailManager.Draw() 统一管理
+			// 此处不再自行开关 SpriteBatch
 
 			var sorted = fragments.OrderBy(f => f.Life);
 			foreach (var f in sorted)
@@ -141,10 +140,6 @@ namespace VerminLordMod.Content.Trails
 				sb.Draw(tex, f.Position - Main.screenPosition, null, fragColor,
 					f.Rotation, tex.Size() * 0.5f, scale, SpriteEffects.None, 0);
 			}
-
-			sb.End();
-			sb.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.AnisotropicClamp,
-				DepthStencilState.None, RasterizerState.CullNone, null, Main.GameViewMatrix.TransformationMatrix);
 		}
 
 		public void Clear()

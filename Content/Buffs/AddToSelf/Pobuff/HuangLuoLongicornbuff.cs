@@ -37,7 +37,7 @@ namespace VerminLordMod.Content.Buffs.AddToSelf.Pobuff
 		// 这里给的第二个buffIndex是buff在玩家身上的索引
 		public override void Update(Player player, ref int buffIndex) {
 			// 皇酪天牛蛊：临时增加真元恢复，持续120秒
-			// 实际效果在 QiPlayer.UpdateResource() 中通过 HasBuff 检测实现
+			// 实际效果在 QiResourcePlayer.PostUpdate() 中通过 HasBuff 检测实现
 			if (Main.rand.NextBool(3)) {
 				var d = Dust.NewDustDirect(player.position, player.width, player.height, DustID.GreenFairy);
 				d.velocity *= 0.5f;

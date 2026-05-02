@@ -71,7 +71,7 @@ namespace VerminLordMod.Common.UI.ReputationUI
             foreach (var (fid, rel) in worldPlayer.FactionRelations)
             {
                 string displayName = GuWorldSystem.GetFactionDisplayName(fid);
-                string levelName = GetRepLevelName(rel.GetLevel());
+                string levelName = GuiEnumHelper.GetRepLevelName(rel.GetLevel());
                 string points = rel.ReputationPoints >= 0
                     ? $"+{rel.ReputationPoints}"
                     : $"{rel.ReputationPoints}";
@@ -105,16 +105,6 @@ namespace VerminLordMod.Common.UI.ReputationUI
             fameText.TextColor = UIStyles.TextInfo;
             _factionList.Add(fameText);
         }
-
-        private static string GetRepLevelName(RepLevel level) => level switch
-        {
-            RepLevel.Hostile => "敌对",
-            RepLevel.Unfriendly => "不友好",
-            RepLevel.Neutral => "中立",
-            RepLevel.Friendly => "友善",
-            RepLevel.Allied => "盟友",
-            _ => "未知"
-        };
 
         public override void Update(GameTime gameTime)
         {

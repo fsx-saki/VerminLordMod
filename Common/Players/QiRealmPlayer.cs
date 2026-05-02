@@ -158,6 +158,29 @@ namespace VerminLordMod.Common.Players
             BreakthroughProgress = 0;
         }
 
+        /// <summary>
+        /// 每帧自动积累突破进度，满100时触发破境。
+        /// 从 QiPlayer.UpdateResource 迁移。
+        /// </summary>
+        public override void PostUpdateMiscEffects()
+        {
+            if (GuLevel <= 0) return; // 未开窍
+
+            // 突破进度自然衰减（未满时）
+            if (BreakthroughProgress <= 100)
+            {
+                BreakthroughProgress -= 0.01f;
+            }
+            else
+            {
+                // 满100触发破境
+                BreakthroughProgress = 0;
+                StageUp();
+            }
+
+            BreakthroughProgress = Utils.Clamp(BreakthroughProgress, 0, 100);
+        }
+
         // ===== 数据持久化 =====
         public override void SaveData(TagCompound tag)
         {

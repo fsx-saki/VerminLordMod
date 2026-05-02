@@ -14,6 +14,8 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
+using VerminLordMod.Common.Search;
+using VerminLordMod.Common.Search.Searchables;
 using VerminLordMod.Common.UI.SimpleUI;
 using VerminLordMod.Content.Items.Debuggers.SearchChair;
 
@@ -119,16 +121,20 @@ public class SearchChairTile : ModTile
             player.cursorItemIconReversed = true;
         }
 
-        // 计算 Tile 在屏幕上的位置（用于 UI 定位在椅子上方）
-        // Tile 坐标 → 世界坐标 → 屏幕坐标
+        // 计算 Tile 的世界坐标
         float worldX = i * 16f;
         float worldY = j * 16f;
-        Vector2 tileScreenPos = new Vector2(
-            worldX - Main.screenPosition.X,
-            worldY - Main.screenPosition.Y
-        );
+        Vector2 tileWorldPos = new Vector2(worldX, worldY);
 
-        // 玩家靠近椅子时，触发搜索 UI，传递 Tile 屏幕位置
-        SearchChairHandler.OnPlayerNearChair(tileScreenPos);
+        // 注册搜索椅到搜索系统（如果尚未注册）
+        var searchSystem = SearchSystem.Instance;
+        var existing = searchSystem.Find<SearchChairSearchable>(
+            chair => chair.WorldPosition == tileWorldPos);
+
+        if (existing == null)
+        {
+            var chairSearchable = new SearchChairSearchable(tileWorldPos);
+            searchSystem.Register(chairSearchable);
+        }
     }
 }

@@ -64,6 +64,11 @@ namespace VerminLordMod.Content.Trails
 
 		public bool HasContent => positions != null && positions.Length > 0;
 
+		/// <summary>
+		/// 获取内部位置数组（用于自定义绘制）
+		/// </summary>
+		public Vector2[] GetPositions() => positions;
+
 		public void Update(Vector2 center, Vector2 velocity)
 		{
 			if (positions == null || positions.Length != MaxPositions)
@@ -87,12 +92,8 @@ namespace VerminLordMod.Content.Trails
 			Texture2D tex = TrailTexture;
 			if (tex == null) return;
 
-			if (UseAdditiveBlend)
-			{
-				sb.End();
-				sb.Begin(SpriteSortMode.Immediate, BlendState.Additive, SamplerState.LinearClamp,
-					DepthStencilState.None, RasterizerState.CullNone, null, Main.GameViewMatrix.TransformationMatrix);
-			}
+			// 注意：Additive 混合模式由 TrailManager.Draw() 统一管理
+			// 此处不再自行开关 SpriteBatch
 
 			// 绘制拖尾段
 			for (int i = 1; i < positions.Length; i++)
@@ -111,6 +112,9 @@ namespace VerminLordMod.Content.Trails
 
 				Vector2 scale = new Vector2(LengthScale, WidthScale);
 				Vector2 drawPos = (start + end) / 2f - Main.screenPosition;
+				Vector2 backward = diff.SafeNormalize(Vector2.Zero);
+				if (backward != Vector2.Zero)
+					drawPos -= backward * Math.Min(segLength * 0.25f, 12f);
 				sb.Draw(tex, drawPos, null, drawColor, rotation,
 					tex.Size() * 0.5f, scale, SpriteEffects.None, 0);
 			}
@@ -127,13 +131,6 @@ namespace VerminLordMod.Content.Trails
 					float ga = 0.5f - i * 0.15f;
 					sb.Draw(tex, pos, null, glowColor * ga, 0f, origin, gs, SpriteEffects.None, 0);
 				}
-			}
-
-			if (UseAdditiveBlend)
-			{
-				sb.End();
-				sb.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.AnisotropicClamp,
-					DepthStencilState.None, RasterizerState.CullNone, null, Main.GameViewMatrix.TransformationMatrix);
 			}
 		}
 

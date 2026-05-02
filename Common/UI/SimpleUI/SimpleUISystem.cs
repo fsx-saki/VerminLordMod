@@ -1,7 +1,7 @@
 // ============================================================
 // SimpleUISystem - 完全独立设计的UI系统注册
 // 不依赖任何现有UI系统（ModernUI等）
-// 管理 SimplePanel / SimpleInfoBox / SearchChairItem 的生命周期、更新和绘制
+// 管理 SimplePanel / SimpleInfoBox / SearchChairItem / CorpseLootUI / SearchSystem / DialogueTreeUI 的生命周期、更新和绘制
 // ============================================================
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
@@ -10,7 +10,10 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.UI;
+using VerminLordMod.Common.Search;
 using VerminLordMod.Content.Items.Debuggers.SearchChair;
+// DialogueTreeUI 类与命名空间同名，使用类型别名
+using DialogueTreeUIPanel = VerminLordMod.Common.UI.DialogueTreeUI.DialogueTreeUI;
 
 namespace VerminLordMod.Common.UI.SimpleUI;
 
@@ -62,6 +65,28 @@ public class SimpleUISystem : ModSystem
 
         // 更新 SearchChairHandler 的信息提示框和搜索面板
         SearchChairHandler.Update();
+
+        // 更新尸体战利品 UI
+        CorpseLootUI.Instance.Update();
+
+        // 更新搜索系统（检测附近目标、更新搜索过程）
+        if (!Main.dedServ)
+        {
+            SearchSystem.Instance.UpdateUI(gameTime);
+        }
+
+        // 更新对话树 UI
+        if (!Main.dedServ)
+        {
+            DialogueTreeUIPanel.Instance.Update();
+
+            // 当对话树UI打开时，标记鼠标被UI使用
+            // 这确保在 SetTalkNPC(-1) 关闭原版对话后鼠标指针仍然可见
+            if (DialogueTreeUIPanel.Instance.IsOpen)
+            {
+                Main.LocalPlayer.mouseInterface = true;
+            }
+        }
     }
 
     /// <summary>
@@ -361,6 +386,39 @@ public class SimpleUISystem : ModSystem
                     // 绘制 SearchChairHandler 的信息提示框和搜索面板
                     SearchChairHandler.Draw(Main.spriteBatch);
 
+                    return true;
+                },
+                InterfaceScaleType.UI
+            ));
+
+            // 在鼠标文本层之后绘制尸体战利品 UI（确保在鼠标文本之上）
+            layers.Insert(mouseTextIndex + 1, new LegacyGameInterfaceLayer(
+                "VerminLordMod: Corpse Loot UI",
+                () =>
+                {
+                    CorpseLootUI.Instance.Draw(Main.spriteBatch);
+                    return true;
+                },
+                InterfaceScaleType.UI
+            ));
+
+            // 在尸体战利品 UI 之后绘制搜索系统 UI
+            layers.Insert(mouseTextIndex + 2, new LegacyGameInterfaceLayer(
+                "VerminLordMod: Search UI",
+                () =>
+                {
+                    SearchSystem.Instance.DrawUI(Main.spriteBatch);
+                    return true;
+                },
+                InterfaceScaleType.UI
+            ));
+
+            // 在最上层绘制对话树 UI（确保在所有UI之上）
+            layers.Insert(mouseTextIndex + 3, new LegacyGameInterfaceLayer(
+                "VerminLordMod: Dialogue Tree UI",
+                () =>
+                {
+                    DialogueTreeUIPanel.Instance.Draw(Main.spriteBatch);
                     return true;
                 },
                 InterfaceScaleType.UI

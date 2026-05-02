@@ -16,7 +16,7 @@ namespace VerminLordMod.Content.NPCs.GuMasters
     // - IGuMasterAI 智能接口（感知/信念/决策/行为）
     // - BeliefState 信念黑箱（替代确定性态度计算）
     // - GuWorldPlayer 声望系统（交互处理）
-    // - 修为系统（QiPlayer 真元关联）
+    // - 修为系统（QiResourcePlayer 真元关联）
     // - 对话/战斗双模式
     //
     // 子类只需重写：

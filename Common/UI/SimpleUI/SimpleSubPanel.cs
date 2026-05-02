@@ -234,14 +234,18 @@ public class SimpleSubPanel
     // ==================== 滚动状态 ====================
     private float _scrollX;          // 水平滚动偏移
     private float _scrollY;          // 垂直滚动偏移
-    private float _scrollXVelocity;
-    private float _scrollYVelocity;
     private bool _isDraggingScrollH; // 是否正在拖动水平滑块
     private bool _isDraggingScrollV; // 是否正在拖动垂直滑块
     private float _scrollDragOffset; // 拖动偏移量
     private bool _lastMouseLeft;
     private bool _isHovered;
     private int _lastScrollValue;
+
+    // ==================== 滚轮惯性动画 ====================
+    private float _targetScrollY;         // 垂直滚动目标值
+    private float _targetScrollX;         // 水平滚动目标值
+    private const float ScrollInertia = 0.88f;    // 惯性衰减系数
+    private const float ScrollFriction = 0.12f;   // 摩擦系数（越接近1越灵敏）
 
     // ==================== 动画 ====================
     private float _hoverAnim;
@@ -369,19 +373,8 @@ public class SimpleSubPanel
         maxRight += ScrollMargin;
         maxBottom += ScrollMargin;
 
-        // 当内容超出可视区域时，确保虚拟尺寸至少为可视区域的 2 倍，
-        // 这样滚动范围 >= 可视区域大小，滑块大小合理，拖动顺畅。
-        // 如果内容未超出，保持原值（不触发滚动条）。
-        if (maxRight > contentRect.Width)
-        {
-            int minVirtualW = contentRect.Width * 2;
-            if (maxRight < minVirtualW) maxRight = minVirtualW;
-        }
-        if (maxBottom > contentRect.Height)
-        {
-            int minVirtualH = contentRect.Height * 2;
-            if (maxBottom < minVirtualH) maxBottom = minVirtualH;
-        }
+        // 直接使用实际内容尺寸，不再强制 2 倍规则。
+        // 余量已通过 ScrollMargin 添加，滑块最小尺寸由 GetVScrollThumbRect 保证。
 
         return new Point(maxRight, maxBottom);
     }
@@ -409,7 +402,7 @@ public class SimpleSubPanel
         // 滚动条拖动：放在悬停检查之前，这样即使鼠标移出面板仍能拉住滚动条
         UpdateScrollbarDrag(subRect, contentRect, virtualSize, needHScroll, needVScroll);
 
-        // 鼠标滚轮滚动
+        // 鼠标滚轮滚动（带惯性动画）
         int currentScroll = Mouse.GetState().ScrollWheelValue;
         if (_isHovered)
         {
@@ -419,26 +412,55 @@ public class SimpleSubPanel
             {
                 if (needVScroll)
                 {
-                    _scrollY -= delta * 0.3f;
+                    _targetScrollY += delta * 0.3f;
                 }
                 else if (needHScroll)
                 {
-                    _scrollX -= delta * 0.3f;
+                    _targetScrollX += delta * 0.3f;
                 }
             }
         }
         _lastScrollValue = currentScroll;
 
+        // 应用惯性动画
+        if (needVScroll)
+        {
+            _scrollY += (_targetScrollY - _scrollY) * ScrollFriction;
+            _targetScrollY *= ScrollInertia;
+            // 当目标值接近当前值时，直接对齐
+            if (Math.Abs(_targetScrollY - _scrollY) < 0.5f)
+            {
+                _scrollY = _targetScrollY;
+                _targetScrollY = 0;
+            }
+        }
+        if (needHScroll)
+        {
+            _scrollX += (_targetScrollX - _scrollX) * ScrollFriction;
+            _targetScrollX *= ScrollInertia;
+            if (Math.Abs(_targetScrollX - _scrollX) < 0.5f)
+            {
+                _scrollX = _targetScrollX;
+                _targetScrollX = 0;
+            }
+        }
+
         // 限制滚动范围
         if (needHScroll)
             _scrollX = Math.Clamp(_scrollX, 0, virtualSize.X - contentRect.Width);
         else
+        {
             _scrollX = 0;
+            _targetScrollX = 0;
+        }
 
         if (needVScroll)
             _scrollY = Math.Clamp(_scrollY, 0, virtualSize.Y - contentRect.Height);
         else
+        {
             _scrollY = 0;
+            _targetScrollY = 0;
+        }
 
         // 更新子元素（仅在悬停时处理交互）
         if (_isHovered)
@@ -798,14 +820,10 @@ public class SimpleSubPanel
     // ==================== 滚动条计算 ====================
     private Rectangle GetVScrollTrackRect(Rectangle subRect, Rectangle contentRect)
     {
-        int top = subRect.Y + BorderWidth;
-        if (!string.IsNullOrEmpty(Title))
-            top += TitleHeight;
-        top += Padding;
-
-        int bottom = subRect.Bottom - BorderWidth - Padding;
+        // 直接使用 contentRect 的 Y 和 Height，确保与内容区域对齐
+        int top = contentRect.Y;
+        int bottom = contentRect.Bottom;
         // 如果有水平滚动条，留出空间
-        // 简单起见，总是预留
         bottom -= ScrollbarSize;
 
         int trackX = subRect.Right - BorderWidth - ScrollbarSize;
@@ -819,7 +837,10 @@ public class SimpleSubPanel
         float viewH = contentRect.Height;
         if (contentH <= viewH) return Rectangle.Empty;
 
-        float thumbHeight = Math.Max(ScrollbarSize, track.Height * (viewH / contentH));
+        // 最小滑块高度：至少 ScrollbarSize 像素，且至少为轨道高度的 15%
+        // 避免内容远大于可视区域时滑块变得极小难以拖动
+        float minThumbHeight = Math.Max(ScrollbarSize, track.Height * 0.15f);
+        float thumbHeight = Math.Max(minThumbHeight, track.Height * (viewH / contentH));
         float maxScroll = contentH - viewH;
         float scrollRatio = maxScroll > 0 ? _scrollY / maxScroll : 0;
         float thumbY = track.Y + scrollRatio * (track.Height - thumbHeight);
@@ -845,7 +866,9 @@ public class SimpleSubPanel
         float viewW = contentRect.Width;
         if (contentW <= viewW) return Rectangle.Empty;
 
-        float thumbWidth = Math.Max(ScrollbarSize, track.Width * (viewW / contentW));
+        // 最小滑块宽度：至少 ScrollbarSize 像素，且至少为轨道宽度的 15%
+        float minThumbWidth = Math.Max(ScrollbarSize, track.Width * 0.15f);
+        float thumbWidth = Math.Max(minThumbWidth, track.Width * (viewW / contentW));
         float maxScroll = contentW - viewW;
         float scrollRatio = maxScroll > 0 ? _scrollX / maxScroll : 0;
         float thumbX = track.X + scrollRatio * (track.Width - thumbWidth);

@@ -384,8 +384,7 @@ namespace VerminLordMod.Common.Systems
 
         public override void Load()
         {
-            // 初始化轻量 UI
-            CorpseLootUI.Instance.Initialize();
+            // CorpseLootUI 不再需要手动初始化，由 SimpleUISystem 自动管理
         }
 
         public override void PostUpdateWorld()

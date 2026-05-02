@@ -15,6 +15,7 @@ namespace VerminLordMod.Content
         /// <summary>
         /// 将值压入数组开头（从后往前移，新值放在index 0）
         /// </summary>
+        [Obsolete("请使用 TrailManager + GhostTrail 替代。参考: trailManager.AddGhostTrail(...); trailManager.Update(...);")]
         public static void Push<T>(T value, ref T[] array) where T : struct
         {
             for (int i = array.Length - 1; i > 0; i--)
@@ -27,6 +28,7 @@ namespace VerminLordMod.Content
         /// <summary>
         /// 更新拖尾数组 - 在AI中调用
         /// </summary>
+        [Obsolete("请使用 TrailManager.Update() 替代。")]
         public static void UpdateProjectileTrail(Projectile projectile, Vector2[] oldPosi, ref int frametime, int recordInterval = 2)
         {
             oldPosi[0] = projectile.Center;
@@ -51,6 +53,7 @@ namespace VerminLordMod.Content
         /// <param name="color">拖尾颜色</param>
         /// <param name="alpha">整体透明度(0-1)</param>
         /// <param name="offset">固定偏移量（全局XY偏移，用于修正贴图宽度导致的视觉效果偏移）</param>
+        [Obsolete("请使用 TrailManager + GhostTrail 替代。拖尾绘制由 GhostTrail.Draw() 自动处理。")]
         public static void DrawProjectileTrail(SpriteBatch sb, Vector2[] oldPosi, Texture2D trailTex, float width, float length, Color color, float alpha = 1f, Vector2 offset = default)
         {
             for (int i = 1; i < oldPosi.Length; i++)
@@ -83,6 +86,7 @@ namespace VerminLordMod.Content
         /// <param name="scale">缩放</param>
         /// <param name="color">颜色</param>
         /// <param name="glowLayers">发光层数</param>
+        [Obsolete("请使用 TrailManager + GhostTrail (EnableGlow=true) 替代。")]
         public static void DrawProjectileGlow(SpriteBatch sb, Texture2D mainTexture, Vector2 position, float rotation, float scale, Color color, int glowLayers = 5)
         {
             Vector2 origin = mainTexture.Size() * 0.5f;
@@ -98,6 +102,7 @@ namespace VerminLordMod.Content
         /// <summary>
         /// 开始Additive混合模式绘制
         /// </summary>
+        [Obsolete("Additive 模式由 TrailManager.Draw() 统一管理。如需手动控制，请直接使用 sb.Begin/End。")]
         public static void BeginAdditive(SpriteBatch sb)
         {
             sb.End();
@@ -115,6 +120,7 @@ namespace VerminLordMod.Content
         /// <summary>
         /// 结束Additive混合模式
         /// </summary>
+        [Obsolete("Additive 模式由 TrailManager.Draw() 统一管理。如需手动控制，请直接使用 sb.Begin/End。")]
         public static void EndAdditive(SpriteBatch sb)
         {
             sb.End();
@@ -137,6 +143,7 @@ namespace VerminLordMod.Content
         /// <param name="trailAlpha">拖尾透明度</param>
         /// <param name="glowLayers">发光层数</param>
         /// <param name="trailOffset">拖尾固定偏移量（全局XY偏移，用于修正贴图宽度导致的视觉效果偏移）</param>
+        [Obsolete("请使用 TrailManager + GhostTrail (EnableGlow=true) 替代。")]
         public static void DrawGlowingProjectile(SpriteBatch sb, Projectile projectile, Texture2D mainTexture,
             Texture2D trailTex, Vector2[] oldPosi, Color icolor, Color tcolor, float trailWidth = 1f, float trailLength = 1f,
             float trailAlpha = 1f, int glowLayers = 5, Vector2 trailOffset = default)

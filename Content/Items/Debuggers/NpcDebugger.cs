@@ -4,6 +4,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using VerminLordMod.Common.Players;
 using VerminLordMod.Common.Systems;
+using VerminLordMod.Common.UI.UIUtils;
 using VerminLordMod.Content.NPCs.GuMasters;
 
 namespace VerminLordMod.Content.Items.Debuggers
@@ -95,7 +96,7 @@ namespace VerminLordMod.Content.Items.Debuggers
             foreach (var (fid, rel) in worldPlayer.FactionRelations)
             {
                 string displayName = GuWorldSystem.GetFactionDisplayName(fid);
-                string levelName = GetRepLevelName(rel.GetLevel());
+                string levelName = GuiEnumHelper.GetRepLevelName(rel.GetLevel());
                 Color color = rel.GetLevel() switch
                 {
                     RepLevel.Hostile => Color.Red,
@@ -118,8 +119,8 @@ namespace VerminLordMod.Content.Items.Debuggers
 
             // 基础属性
             string factionName = GuWorldSystem.GetFactionDisplayName(guMaster.GetFaction());
-            string rankName = GetRankName(guMaster.GetRank());
-            string personalityName = GetPersonalityName(guMaster.GetPersonality());
+            string rankName = GuiEnumHelper.GetRankName(guMaster.GetRank());
+            string personalityName = GuiEnumHelper.GetPersonalityName(guMaster.GetPersonality());
             Main.NewText($"势力: {factionName} | 修为: {rankName} | 性格: {personalityName}", Color.White);
 
             // 运行时状态
@@ -134,17 +135,7 @@ namespace VerminLordMod.Content.Items.Debuggers
                 GuMasterAIState.CallForHelp => "呼叫支援",
                 _ => "未知"
             };
-            string attitudeName = guMaster.CurrentAttitude switch
-            {
-                GuAttitude.Ignore => "无视",
-                GuAttitude.Wary => "警惕",
-                GuAttitude.Hostile => "敌对",
-                GuAttitude.Fearful => "恐惧",
-                GuAttitude.Contemptuous => "轻蔑",
-                GuAttitude.Friendly => "友好",
-                GuAttitude.Respectful => "尊敬",
-                _ => "未知"
-            };
+            string attitudeName = GuiEnumHelper.GetAttitudeName(guMaster.CurrentAttitude);
             Main.NewText($"当前状态: {stateName} | 态度: {attitudeName}", Color.White);
             Main.NewText($"被攻击标记: {guMaster.HasBeenHitByPlayer} | 仇恨计时: {guMaster.AggroTimer}", Color.White);
             Main.NewText($"弹幕保护: {(guMaster.ProjectileProtectionEnabled ? "开启" : "关闭")}", Color.White);
@@ -161,58 +152,5 @@ namespace VerminLordMod.Content.Items.Debuggers
             Main.NewText($"上次交互日: {belief.LastInteractionDay}", Color.White);
         }
 
-        private static string GetRankName(GuRank rank)
-        {
-            return rank switch
-            {
-                GuRank.Zhuan1_Chu => "一转初阶",
-                GuRank.Zhuan1_Zhong => "一转中阶",
-                GuRank.Zhuan1_Gao => "一转高阶",
-                GuRank.Zhuan1_DianFeng => "一转巅峰",
-                GuRank.Zhuan2_Chu => "二转初阶",
-                GuRank.Zhuan2_Zhong => "二转中阶",
-                GuRank.Zhuan2_Gao => "二转高阶",
-                GuRank.Zhuan2_DianFeng => "二转巅峰",
-                GuRank.Zhuan3_Chu => "三转初阶",
-                GuRank.Zhuan3_Zhong => "三转中阶",
-                GuRank.Zhuan3_Gao => "三转高阶",
-                GuRank.Zhuan3_DianFeng => "三转巅峰",
-                GuRank.Zhuan4_Chu => "四转初阶",
-                GuRank.Zhuan4_Zhong => "四转中阶",
-                GuRank.Zhuan4_Gao => "四转高阶",
-                GuRank.Zhuan4_DianFeng => "四转巅峰",
-                GuRank.Zhuan5_Chu => "五转初阶",
-                GuRank.Zhuan5_Zhong => "五转中阶",
-                GuRank.Zhuan5_Gao => "五转高阶",
-                GuRank.Zhuan5_DianFeng => "五转巅峰",
-                _ => "未知"
-            };
-        }
-
-        private static string GetPersonalityName(GuPersonality personality)
-        {
-            return personality switch
-            {
-                GuPersonality.Aggressive => "好斗",
-                GuPersonality.Cautious => "谨慎",
-                GuPersonality.Greedy => "贪婪",
-                GuPersonality.Proud => "傲慢",
-                GuPersonality.Benevolent => "仁慈",
-                _ => "未知"
-            };
-        }
-
-        private static string GetRepLevelName(RepLevel level)
-        {
-            return level switch
-            {
-                RepLevel.Hostile => "敌对",
-                RepLevel.Unfriendly => "不友好",
-                RepLevel.Neutral => "中立",
-                RepLevel.Friendly => "友善",
-                RepLevel.Allied => "盟友",
-                _ => "未知"
-            };
-        }
     }
 }

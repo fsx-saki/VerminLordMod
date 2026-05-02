@@ -1,6 +1,6 @@
 // ============================================================
 // DeepLootUI - 尸体战利品 UI（轻量版）
-// 使用 UIManager 框架，显示在尸体上方
+// 独立绘制，通过 SimpleUISystem 注册到游戏界面层
 // ============================================================
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -19,7 +19,8 @@ namespace VerminLordMod.Common.UI
     /// 尸体战利品 UI — 轻量版
     /// 
     /// 设计原则：
-    /// - 使用 UIManager 框架（BaseUI/BasePanel），不依赖 UIState/UserInterface
+    /// - 独立绘制，不依赖 UIManager/UIState/SimplePanel 框架
+    /// - 通过 SimpleUISystem.ModifyInterfaceLayers 注册绘制层
     /// - 显示在尸体上方，跟随尸体位置
     /// - 纯像素绘制，无纹理依赖
     /// - 仅在有尸体打开时显示
@@ -39,8 +40,6 @@ namespace VerminLordMod.Common.UI
         private static CorpseLootUI _instance;
         public static CorpseLootUI Instance => _instance ??= new CorpseLootUI();
 
-        private BaseUI _baseUI;
-        private BasePanel _mainPanel;
         private List<Item> _cachedItems = new();
         private int _corpseWhoAmI = -1;
         private bool _isOpen;
@@ -50,42 +49,10 @@ namespace VerminLordMod.Common.UI
         private readonly List<Rectangle> _slotRects = new();
         private readonly List<int> _slotIndices = new();
 
+        // 鼠标状态追踪（上升沿检测）
+        private bool _lastMouseLeftRelease = true;
+
         private CorpseLootUI() { }
-
-        /// <summary>
-        /// 初始化 UI（由 LootSystem 在加载时调用）
-        /// </summary>
-        public void Initialize()
-        {
-            if (_baseUI != null) return;
-
-            _baseUI = UIManager.NewUI("CorpseLootUI");
-            if (_baseUI == null)
-            {
-                // 已存在同名 UI，查找并复用
-                _baseUI = UIManager.FindUI("CorpseLootUI");
-                if (_baseUI == null) return;
-            }
-
-            _mainPanel = _baseUI.NewPanel(
-                texture: null,
-                PanleRot: 0f,
-                Pos: Vector2.Zero,
-                Size: Vector2.One,
-                Visible: true,
-                CanDraw: true,
-                FullScreen: false,
-                PanelName: "CorpseLootMainPanel",
-                DrawColor: Color.White,
-                Draw: () => { }
-            );
-
-            if (_mainPanel != null)
-            {
-                _mainPanel.DrawAct = DrawPanel;
-                _mainPanel.Update = UpdatePanel;
-            }
-        }
 
         /// <summary>
         /// 打开尸体 UI
@@ -96,11 +63,6 @@ namespace VerminLordMod.Common.UI
             _isOpen = true;
             _corpseWhoAmI = corpse.Projectile.whoAmI;
             _cachedItems = new List<Item>(corpse.RemainingItems);
-            if (_mainPanel != null)
-            {
-                _mainPanel.Visible = true;
-                _mainPanel.CanDraw = true;
-            }
         }
 
         /// <summary>
@@ -113,17 +75,12 @@ namespace VerminLordMod.Common.UI
             _cachedItems.Clear();
             _slotRects.Clear();
             _slotIndices.Clear();
-            if (_mainPanel != null)
-            {
-                _mainPanel.Visible = false;
-                _mainPanel.CanDraw = false;
-            }
         }
 
         /// <summary>
-        /// 每帧更新面板状态
+        /// 每帧更新（由 SimpleUISystem 在 UpdateUI 中调用）
         /// </summary>
-        private void UpdatePanel()
+        public void Update()
         {
             if (!_isOpen) return;
 
@@ -174,8 +131,9 @@ namespace VerminLordMod.Common.UI
             if (_cachedItems.Count == 0)
                 return;
 
-            // ===== 点击检测 =====
-            if (UIManager.LeftClicked)
+            // ===== 点击检测（上升沿检测） =====
+            bool leftClicked = DetectLeftClick();
+            if (leftClicked)
             {
                 Point mouse = new(Main.mouseX, Main.mouseY);
 
@@ -199,9 +157,21 @@ namespace VerminLordMod.Common.UI
         }
 
         /// <summary>
-        /// 绘制面板（在尸体上方）
+        /// 鼠标左键上升沿检测
         /// </summary>
-        private void DrawPanel()
+        private bool DetectLeftClick()
+        {
+            bool currentRelease = Main.mouseLeftRelease;
+            bool clicked = !currentRelease && _lastMouseLeftRelease;
+            _lastMouseLeftRelease = currentRelease;
+            return clicked;
+        }
+
+        /// <summary>
+        /// 绘制面板（在尸体上方）
+        /// 由 SimpleUISystem 在 ModifyInterfaceLayers 中调用
+        /// </summary>
+        public void Draw(SpriteBatch sb)
         {
             if (!_isOpen) return;
 
@@ -222,7 +192,6 @@ namespace VerminLordMod.Common.UI
                 return;
             }
 
-            SpriteBatch sb = Main.spriteBatch;
             int itemCount = _cachedItems.Count;
             if (itemCount == 0) return; // 无物品不绘制（由 LootSystem 负责关闭）
 

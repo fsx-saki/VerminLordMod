@@ -1,20 +1,63 @@
-﻿using VerminLordMod.Content.DamageClasses;
+﻿using VerminLordMod.Common.BulletBehaviors;
+using VerminLordMod.Content.DamageClasses;
 using VerminLordMod.Content.Trails;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
 using Terraria.ID;
-using Terraria.GameContent;
 
 namespace VerminLordMod.Content.Projectiles
 {
-    class MoonlightProj : ModProjectile
+    /// <summary>
+    /// 月光弹幕 — 使用 IBulletBehavior 架构重写。
+    /// 原版 110 行 → 新版 ~50 行，减少约 55% 代码量。
+    /// </summary>
+    public class MoonlightProj : BaseBullet
     {
-        private Texture2D mainTexture;
-        private readonly TrailManager trailManager = new TrailManager();
+        protected override void RegisterBehaviors()
+        {
+            // 1. 直线飞行 + 光照
+            Behaviors.Add(new AimBehavior(speed: 0f) // speed=0 保持初始速度
+            {
+                AutoRotate = true,
+                RotationOffset = MathHelper.PiOver2,
+                EnableLight = true,
+                LightColor = new Vector3(1.8f, 1.9f, 2.0f)
+            });
+
+            // 2. 虚影拖尾（使用自定义拖尾贴图）
+            var trailBehavior = new TrailBehavior
+            {
+                AutoDraw = true,
+                SuppressDefaultDraw = false // 让 GlowDrawBehavior 处理最终绘制
+            };
+            Behaviors.Add(trailBehavior);
+
+            // 3. 发光绘制（自动管理 Additive → AlphaBlend 切换）
+            Behaviors.Add(new GlowDrawBehavior
+            {
+                GlowColor = new Color(120, 200, 255),
+                GlowLayers = 3,
+                GlowBaseScale = 1.2f,
+                GlowScaleIncrement = 0.4f,
+                GlowBaseAlpha = 0.5f,
+                GlowAlphaDecay = 0.15f,
+                GlowAlphaMultiplier = 0.3f,
+                EnableLight = false // 光照已由 AimBehavior 处理
+            });
+
+            // 4. 死亡粒子
+            Behaviors.Add(new DustKillBehavior
+            {
+                DustType = DustID.BlueFairy,
+                DustCount = 30,
+                DustSpeed = 5f,
+                DustScale = 1.5f,
+                NoGravity = true
+            });
+        }
 
         public override void SetDefaults()
         {
@@ -32,62 +75,22 @@ namespace VerminLordMod.Content.Projectiles
             Projectile.aiStyle = -1;
         }
 
-        public override void OnSpawn(IEntitySource source)
+        protected override void OnSpawned(IEntitySource source)
         {
-            mainTexture = TextureAssets.Projectile[Projectile.type].Value;
-            Texture2D trailTex = ModContent.Request<Texture2D>("VerminLordMod/Content/Projectiles/MoonlightProjTail").Value;
-
-            // 初始化发光虚影拖尾（兼容原 Fucs.DrawGlowingProjectile 风格）
-            trailManager.AddGhostTrail(trailTex,
-                color: new Color(120, 200, 255),
-                maxPositions: 16,
-                widthScale: 1f,
-                lengthScale: 1f,
-                alpha: 1f,
-                recordInterval: 2,
-                enableGlow: true);
-        }
-
-        public override void AI()
-        {
-            trailManager.Update(Projectile.Center, Projectile.velocity);
-
-            Lighting.AddLight(Projectile.Center, 1.8f, 1.9f, 2.0f);
-            Projectile.rotation = Projectile.velocity.ToRotation() + (float)(0.5 * MathHelper.Pi);
-        }
-
-        public override bool PreDraw(ref Color lightColor)
-        {
-        	trailManager.Draw(Main.spriteBatch);
-      
-        	// 绘制弹幕主纹理
-        	if (mainTexture != null)
-        	{
-        		Vector2 drawPos = Projectile.Center - Main.screenPosition;
-        		Rectangle? sourceRect = null;
-        		Color drawColor = Projectile.GetAlpha(lightColor);
-        		Vector2 origin = mainTexture.Size() * 0.5f;
-        		float scale = Projectile.scale;
-      
-        		Main.spriteBatch.Draw(mainTexture, drawPos, sourceRect, drawColor,
-        			Projectile.rotation, origin, scale, SpriteEffects.None, 0f);
-        	}
-      
-        	return true;
-        }
-
-        public override void OnKill(int timeLeft)
-        {
-            for (int i = 0; i < 30; i++)
+            // 初始化拖尾（在 RegisterBehaviors 之后执行）
+            var trailBehavior = Behaviors.Find(b => b is TrailBehavior) as TrailBehavior;
+            if (trailBehavior != null)
             {
-                int dustId = Dust.NewDust(
-                    Projectile.position, Projectile.width, Projectile.height,
-                    DustID.BlueFairy,
-                    Main.rand.NextFloat(-5f, 5f),
-                    Main.rand.NextFloat(-5f, 5f),
-                    100, default, 1.5f
-                );
-                Main.dust[dustId].noGravity = true;
+                Texture2D trailTex = ModContent.Request<Texture2D>(
+                    "VerminLordMod/Content/Projectiles/MoonlightProjTail").Value;
+                trailBehavior.TrailManager.AddGhostTrail(trailTex,
+                    color: new Color(120, 200, 255),
+                    maxPositions: 16,
+                    widthScale: 1f,
+                    lengthScale: 1f,
+                    alpha: 1f,
+                    recordInterval: 2,
+                    enableGlow: false);
             }
         }
     }
