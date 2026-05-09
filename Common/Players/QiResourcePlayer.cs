@@ -79,10 +79,15 @@ namespace VerminLordMod.Common.Players
         }
 
         /// <summary>
-        /// D-20: 死亡完全清空真元（覆盖旧版的减半行为）。
+        /// D-09/D-20: 死亡完全清空真元（覆盖旧版的减半行为）。
+        /// 防止 UpdateDead 每帧重复清空。
         /// </summary>
+        private bool _deathCleared = false;
+
         public void OnDeathClearQi()
         {
+            if (_deathCleared) return;
+            _deathCleared = true;
             float oldQi = QiCurrent;
             QiCurrent = 0;
             EventBus.Publish(new PlayerQiChangedEvent
@@ -138,6 +143,9 @@ namespace VerminLordMod.Common.Players
         {
             QiMaxCurrent = QiMaxBase;
             ExtraQiRegen = 0;
+            // 复活后重置死亡清空标记
+            if (!Player.dead)
+                _deathCleared = false;
         }
 
         /// <summary>
@@ -159,6 +167,8 @@ namespace VerminLordMod.Common.Players
         /// </summary>
         public override void UpdateDead()
         {
+            // D-09: 死亡清空已由 CorpsePlayer 统一处理链调用
+            // 此处保留 UpdateDead 作为后备（防止 CorpsePlayer 未注册的情况）
             OnDeathClearQi();
         }
 

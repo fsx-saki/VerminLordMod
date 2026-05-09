@@ -1,4 +1,5 @@
 using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.ModLoader;
 using VerminLordMod.Common.DialogueTree;
@@ -83,16 +84,18 @@ namespace VerminLordMod.Common.Systems
             button2 = BUTTON_TRADE;
 
             // 第二层：暗面操作（置信度 > 0.3 时解锁）
-            // MVA 阶段：只显示提示，P1 再实现具体功能
+            // D-21: 实现第二层暗面交易
             if (belief.ConfidenceLevel > 0.3f)
             {
-                // 将 button2 改为暗面交易（覆盖交易）
-                // 注意：实际 MVA 简化版只保留公开交互
-                // P1 扩展为三层菜单
+                button2 = BUTTON_DARK_DEAL;
             }
 
-            // 第三层：杀招准备（私下相处 + 玩家有杀意标记时解锁）
-            // MVA 阶段不实现
+            // 第三层：杀招准备（置信度 > 0.7 + 私下相处时解锁）
+            // D-21: 实现第三层杀招准备
+            if (belief.ConfidenceLevel > 0.7f && !HasWitnesses(npc, 400f))
+            {
+                button = BUTTON_KILL_PREP;
+            }
         }
 
         // ============================================================
@@ -126,11 +129,17 @@ namespace VerminLordMod.Common.Systems
                 case 2: // 拒绝回答
                     HandleRefusal(player, npc, guMaster);
                     break;
-                case 3: // 威胁（P1 扩展）
+                case 3: // 威胁
                     HandleThreat(player, npc, guMaster);
                     break;
-                case 4: // 贿赂（P1 扩展）
+                case 4: // 贿赂
                     HandleBribe(player, npc, guMaster);
+                    break;
+                case 5: // 暗面交易（D-21 第二层）
+                    HandleDarkDeal(player, npc, guMaster);
+                    break;
+                case 6: // 杀招准备（D-21 第三层）
+                    HandleKillPrep(player, npc, guMaster);
                     break;
             }
         }
@@ -253,6 +262,114 @@ namespace VerminLordMod.Common.Systems
             {
                 Main.npcChatText = result.Message;
             }
+        }
+
+        // ============================================================
+        // 第二层：暗面交易（D-21）
+        // ============================================================
+
+        /// <summary>
+        /// 暗面交易：情报买卖、雇佣刺杀、背叛交易。
+        /// 置信度 > 0.3 时解锁。
+        /// </summary>
+        private void HandleDarkDeal(Player player, NPC npc, GuMasterBase guMaster)
+        {
+            var belief = guMaster.GetBelief(player.name);
+            if (belief == null) return;
+
+            // 暗面交易选项
+            string[] dealOptions = new string[]
+            {
+                "购买情报",
+                "雇佣刺杀",
+                "背叛交易",
+                "算了"
+            };
+
+            // 简化实现：使用 Main.npcChatText 显示选项
+            // 完整实现需要 UI 支持（P2）
+            Main.npcChatText = guMaster.GuMasterDisplayName + "压低声音：\"你想做什么交易？\"\n" +
+                "1. 购买情报\n" +
+                "2. 雇佣刺杀\n" +
+                "3. 背叛交易\n" +
+                "4. 算了";
+
+            // 根据玩家选择处理
+            // 注意：这里简化处理，实际需要多轮对话支持
+            // 此处仅做信念影响
+            belief.ConfidenceLevel = MathHelper.Min(1f, belief.ConfidenceLevel + 0.05f);
+            belief.RiskThreshold = MathHelper.Max(0f, belief.RiskThreshold - 0.03f);
+
+            // 尝试获取情报
+            var intelNetwork = ModContent.GetInstance<IntelligenceNetwork>();
+            var intel = intelNetwork.GatherIntel(player, IntelligenceNetwork.IntelType.NPCAttitude, npc);
+            if (intel != null)
+            {
+                Main.NewText(intel.GetSummary(), Color.LightBlue);
+            }
+        }
+
+        // ============================================================
+        // 第三层：杀招准备（D-21）
+        // ============================================================
+
+        /// <summary>
+        /// 杀招准备：下毒、设陷阱、策反。
+        /// 置信度 > 0.7 + 私下相处时解锁。
+        /// </summary>
+        private void HandleKillPrep(Player player, NPC npc, GuMasterBase guMaster)
+        {
+            var belief = guMaster.GetBelief(player.name);
+            if (belief == null) return;
+
+            string[] prepOptions = new string[]
+            {
+                "下毒",
+                "设陷阱",
+                "策反",
+                "取消"
+            };
+
+            Main.npcChatText = guMaster.GuMasterDisplayName + "信任地看着你：\"有什么需要我帮忙的？\"\n" +
+                "1. 下毒（对目标 NPC 下毒）\n" +
+                "2. 设陷阱（在目标区域设陷阱）\n" +
+                "3. 策反（策反目标 NPC）\n" +
+                "4. 取消";
+
+            // 杀招准备会大幅影响信念
+            belief.ConfidenceLevel = MathHelper.Min(1f, belief.ConfidenceLevel + 0.1f);
+            belief.RiskThreshold = MathHelper.Max(0f, belief.RiskThreshold - 0.08f);
+
+            // 标记玩家有杀意（供其他系统使用）
+            var tacticalPlayer = player.GetModPlayer<TacticalTriggerPlayer>();
+            // 杀招准备增加背刺判定窗口
+            tacticalPlayer.ActivatePerfectDodgeWindow();
+        }
+
+        // ============================================================
+        // 辅助方法
+        // ============================================================
+
+        /// <summary>
+        /// 检查 NPC 附近是否有同势力的目击者。
+        /// </summary>
+        private static bool HasWitnesses(NPC npc, float range)
+        {
+            if (npc.ModNPC is not GuMasterBase self) return false;
+
+            for (int i = 0; i < Main.maxNPCs; i++)
+            {
+                var other = Main.npc[i];
+                if (other.active && other.whoAmI != npc.whoAmI && other.ModNPC is GuMasterBase witness)
+                {
+                    if (witness.GetFaction() == self.GetFaction() &&
+                        Vector2.Distance(npc.Center, other.Center) < range)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
         }
 
         // ============================================================

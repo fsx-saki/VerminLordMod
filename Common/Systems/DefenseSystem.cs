@@ -5,25 +5,34 @@ using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 using Terraria.DataStructures;
 using VerminLordMod.Common.Players;
+using VerminLordMod.Content.Items.Consumables;
 
 namespace VerminLordMod.Common.Systems
 {
     /// <summary>
     /// DefenseSystem — 迷踪阵与守卫（P2 MVA 阶段）
-    /// 
+    ///
     /// 职责：
     /// 1. 迷踪阵 Tile：降低 NPC 对玩家位置的感知精度
     /// 2. 守卫 NPC：提高 NPC 对玩家的风险阈值（让 NPC 更谨慎）
     /// 3. DefensePlayer：玩家状态标记（是否在迷踪阵中、守卫数量）
-    /// 
+    ///
     /// MVA 阶段：
     /// - 迷踪阵：放置后范围内玩家获得 Buff，NPC 感知距离 -50%
     /// - 守卫：通过 DefensePlayer 标记，P1 再实现具体 NPC
     /// - 无 NPC 感知精度修改（P1 扩展）
-    /// 
+    ///
+    /// D-37 扩展（防御工事经济）：
+    /// - 每个迷踪阵有维护成本（元石消耗）
+    /// - 每 MAINTENANCE_INTERVAL 帧消耗 MAINTENANCE_COST 个元石
+    /// - 消耗从放置者的背包中扣除
+    /// - 元石不足时迷踪阵失效（buff 停止工作）
+    /// - 失效后玩家靠近迷踪阵会收到提示
+    ///
     /// 依赖：
     /// - GuMasterBase（NPC 感知系统）
     /// - ModTile / ModBuff 系统
+    /// - YuanS（元石物品，用于维护消耗）
     /// </summary>
     public class DefenseSystem : ModSystem
     {
@@ -46,26 +55,58 @@ namespace VerminLordMod.Common.Systems
         /// <summary> 守卫最大数量 </summary>
         public const int MAX_GUARDS = 5;
 
+        // ===== D-37：维护成本配置 =====
+        /// <summary> 维护间隔（帧数，约 1 游戏日 = 36000 帧的 1/3） </summary>
+        public const int MAINTENANCE_INTERVAL = 12000; // ~2 分钟现实时间
+
+        /// <summary> 每次维护消耗的元石数量 </summary>
+        public const int MAINTENANCE_COST = 1;
+
+        /// <summary> 元石不足时迷踪阵失效的最大连续帧数 </summary>
+        public const int MAINTENANCE_GRACE_PERIOD = 600; // 10 秒宽限期
+
         // ============================================================
         // 运行时数据
         // ============================================================
 
-        /// <summary> 所有活跃的迷踪阵位置列表 </summary>
-        public System.Collections.Generic.List<Point> ActiveMiZongPositions = new();
+        /// <summary> 迷踪阵所有者信息（D-37） </summary>
+        public struct MiZongInstance
+        {
+            public Point TilePos;
+            public int OwnerPlayerID;       // 放置者的 player.whoAmI
+            public int MaintenanceTimer;     // 距下次维护的剩余帧数
+            public int InsufficientTimer;    // 元石不足的连续帧数
+            public bool IsActive;            // 是否因维护不足而失效
+
+            public MiZongInstance(Point pos, int ownerID)
+            {
+                TilePos = pos;
+                OwnerPlayerID = ownerID;
+                MaintenanceTimer = MAINTENANCE_INTERVAL;
+                InsufficientTimer = 0;
+                IsActive = true;
+            }
+        }
+
+        /// <summary> 所有迷踪阵实例（D-37：替换 ActiveMiZongPositions） </summary>
+        public System.Collections.Generic.List<MiZongInstance> ActiveMiZongs = new();
 
         // ============================================================
         // 迷踪阵管理
         // ============================================================
 
         /// <summary>
-        /// 注册迷踪阵位置。
+        /// 注册迷踪阵位置（D-37：记录所有者）。
         /// </summary>
-        public void RegisterMiZong(Point tilePos)
+        public void RegisterMiZong(Point tilePos, int ownerPlayerID = -1)
         {
-            if (!ActiveMiZongPositions.Contains(tilePos))
+            // 检查是否已存在
+            foreach (var mz in ActiveMiZongs)
             {
-                ActiveMiZongPositions.Add(tilePos);
+                if (mz.TilePos == tilePos)
+                    return;
             }
+            ActiveMiZongs.Add(new MiZongInstance(tilePos, ownerPlayerID));
         }
 
         /// <summary>
@@ -73,17 +114,21 @@ namespace VerminLordMod.Common.Systems
         /// </summary>
         public void UnregisterMiZong(Point tilePos)
         {
-            ActiveMiZongPositions.Remove(tilePos);
+            ActiveMiZongs.RemoveAll(mz => mz.TilePos == tilePos);
         }
 
         /// <summary>
-        /// 检查玩家是否在迷踪阵范围内。
+        /// 检查玩家是否在活跃的迷踪阵范围内（D-37：只考虑 IsActive 的迷踪阵）。
         /// </summary>
         public bool IsPlayerInMiZong(Player player)
         {
-            foreach (var pos in ActiveMiZongPositions)
+            for (int i = 0; i < ActiveMiZongs.Count; i++)
             {
-                Vector2 tileCenter = new Vector2(pos.X * 16 + 8, pos.Y * 16 + 8);
+                var mz = ActiveMiZongs[i];
+                if (!mz.IsActive)
+                    continue; // 维护不足的迷踪阵失效
+
+                Vector2 tileCenter = new Vector2(mz.TilePos.X * 16 + 8, mz.TilePos.Y * 16 + 8);
                 if (Vector2.Distance(player.Center, tileCenter) < MIZONG_RANGE_PIXELS)
                     return true;
             }
@@ -113,36 +158,169 @@ namespace VerminLordMod.Common.Systems
         }
 
         // ============================================================
+        // D-37：维护成本逻辑
+        // ============================================================
+
+        /// <summary>
+        /// 从玩家背包中扣除指定数量的元石。
+        /// </summary>
+        private static bool TryConsumeYuanStones(Player player, int amount)
+        {
+            if (player == null || !player.active)
+                return false;
+
+            int total = 0;
+            foreach (var item in player.inventory)
+            {
+                if (item.IsAir) continue;
+                if (item.type == ModContent.ItemType<YuanS>())
+                {
+                    total += item.stack;
+                }
+            }
+
+            if (total < amount)
+                return false;
+
+            int remaining = amount;
+            for (int i = 0; i < player.inventory.Length && remaining > 0; i++)
+            {
+                var item = player.inventory[i];
+                if (item.IsAir) continue;
+                if (item.type == ModContent.ItemType<YuanS>())
+                {
+                    int take = System.Math.Min(remaining, item.stack);
+                    item.stack -= take;
+                    remaining -= take;
+                    if (item.stack <= 0)
+                        item.TurnToAir();
+                }
+            }
+            return true;
+        }
+
+        /// <summary>
+        /// 每帧更新维护计时器（D-37）。
+        /// </summary>
+        public override void PreUpdateWorld()
+        {
+            for (int i = 0; i < ActiveMiZongs.Count; i++)
+            {
+                var mz = ActiveMiZongs[i];
+                mz.MaintenanceTimer--;
+
+                if (mz.MaintenanceTimer <= 0)
+                {
+                    // 到达维护时间点
+                    Player owner = null;
+                    if (mz.OwnerPlayerID >= 0 && mz.OwnerPlayerID < Main.maxPlayers)
+                    {
+                        owner = Main.player[mz.OwnerPlayerID];
+                    }
+
+                    if (owner != null && owner.active)
+                    {
+                        if (TryConsumeYuanStones(owner, MAINTENANCE_COST))
+                        {
+                            // 维护成功
+                            mz.MaintenanceTimer = MAINTENANCE_INTERVAL;
+                            mz.InsufficientTimer = 0;
+                            if (!mz.IsActive)
+                            {
+                                mz.IsActive = true;
+                                if (Main.netMode == NetmodeID.SinglePlayer)
+                                {
+                                    Main.NewText("迷踪阵恢复运转。", Color.Cyan);
+                                }
+                            }
+                        }
+                        else
+                        {
+                            // 元石不足
+                            mz.InsufficientTimer++;
+                            if (mz.InsufficientTimer >= MAINTENANCE_GRACE_PERIOD)
+                            {
+                                if (mz.IsActive)
+                                {
+                                    mz.IsActive = false;
+                                    if (Main.netMode == NetmodeID.SinglePlayer)
+                                    {
+                                        Main.NewText("迷踪阵因缺乏元石维护而失效。", Color.OrangeRed);
+                                    }
+                                }
+                            }
+                            // 继续尝试（每帧减到 0 以下会继续尝试）
+                            mz.MaintenanceTimer = 60; // 1 秒后重试
+                        }
+                    }
+                    else
+                    {
+                        // 所有者不在线，迷踪阵进入待机状态
+                        mz.MaintenanceTimer = MAINTENANCE_INTERVAL;
+                        if (mz.IsActive)
+                        {
+                            mz.IsActive = false;
+                        }
+                    }
+                }
+
+                ActiveMiZongs[i] = mz; // 写回 struct
+            }
+        }
+
+        // ============================================================
         // ModSystem 生命周期
         // ============================================================
 
         public override void OnWorldLoad()
         {
-            ActiveMiZongPositions.Clear();
+            ActiveMiZongs.Clear();
         }
 
         public override void SaveWorldData(TagCompound tag)
         {
             var posData = new System.Collections.Generic.List<TagCompound>();
-            foreach (var pos in ActiveMiZongPositions)
+            foreach (var mz in ActiveMiZongs)
             {
                 posData.Add(new TagCompound
                 {
-                    ["x"] = pos.X,
-                    ["y"] = pos.Y
+                    ["x"] = mz.TilePos.X,
+                    ["y"] = mz.TilePos.Y,
+                    ["owner"] = mz.OwnerPlayerID,
+                    ["timer"] = mz.MaintenanceTimer,
+                    ["insufficient"] = mz.InsufficientTimer,
+                    ["active"] = mz.IsActive
                 });
             }
-            tag["miZongPositions"] = posData;
+            tag["miZongInstances"] = posData;
         }
 
         public override void LoadWorldData(TagCompound tag)
         {
-            ActiveMiZongPositions.Clear();
-            if (tag.TryGet("miZongPositions", out System.Collections.Generic.List<TagCompound> posData))
+            ActiveMiZongs.Clear();
+            if (tag.TryGet("miZongInstances", out System.Collections.Generic.List<TagCompound> posData))
             {
                 foreach (var entry in posData)
                 {
-                    ActiveMiZongPositions.Add(new Point(entry.GetInt("x"), entry.GetInt("y")));
+                    ActiveMiZongs.Add(new MiZongInstance
+                    {
+                        TilePos = new Point(entry.GetInt("x"), entry.GetInt("y")),
+                        OwnerPlayerID = entry.GetInt("owner"),
+                        MaintenanceTimer = entry.GetInt("timer"),
+                        InsufficientTimer = entry.GetInt("insufficient"),
+                        IsActive = entry.GetBool("active")
+                    });
+                }
+            }
+            // 兼容旧格式（D-37 之前）
+            else if (tag.TryGet("miZongPositions", out System.Collections.Generic.List<TagCompound> oldData))
+            {
+                foreach (var entry in oldData)
+                {
+                    ActiveMiZongs.Add(new MiZongInstance(
+                        new Point(entry.GetInt("x"), entry.GetInt("y")),
+                        -1 // 旧数据无所有者信息
+                    ));
                 }
             }
         }
@@ -167,10 +345,23 @@ namespace VerminLordMod.Common.Systems
         /// <summary> 守卫提供的风险阈值加成 </summary>
         public float GuardRiskBonus;
 
+        // ===== D-37：维护状态 =====
+        /// <summary> 玩家拥有的迷踪阵是否因维护不足而失效 </summary>
+        public bool HasInactiveMiZong;
+
+        /// <summary> 玩家拥有的迷踪阵数量 </summary>
+        public int OwnedMiZongCount;
+
+        /// <summary> 下次维护还需的帧数（仅当只有一个迷踪阵时显示） </summary>
+        public int NextMaintenanceIn;
+
         public override void ResetEffects()
         {
             IsInMiZong = false;
             GuardRiskBonus = 0f;
+            HasInactiveMiZong = false;
+            OwnedMiZongCount = 0;
+            NextMaintenanceIn = int.MaxValue;
         }
 
         public override void PostUpdate()
@@ -181,8 +372,22 @@ namespace VerminLordMod.Common.Systems
                 GuardRiskBonus = DefenseSystem.Instance.GetGuardRiskBonus(GuardCount);
             }
 
-            // 迷踪阵效果：由 MiZongBuff 设置 IsInMiZong
-            // 此处预留扩展点
+            // D-37：检查玩家拥有的迷踪阵维护状态
+            OwnedMiZongCount = 0;
+            HasInactiveMiZong = false;
+            NextMaintenanceIn = int.MaxValue;
+
+            foreach (var mz in DefenseSystem.Instance.ActiveMiZongs)
+            {
+                if (mz.OwnerPlayerID == Player.whoAmI)
+                {
+                    OwnedMiZongCount++;
+                    if (!mz.IsActive)
+                        HasInactiveMiZong = true;
+                    if (mz.MaintenanceTimer < NextMaintenanceIn)
+                        NextMaintenanceIn = mz.MaintenanceTimer;
+                }
+            }
         }
 
         public override void SaveData(TagCompound tag)
@@ -258,12 +463,31 @@ namespace VerminLordMod.Common.Systems
 
         public override void PlaceInWorld(int i, int j, Item item)
         {
-            // 注册迷踪阵位置
-            DefenseSystem.Instance.RegisterMiZong(new Point(i, j));
+            // D-37：注册迷踪阵，记录放置者作为所有者（用于维护扣费）
+            int ownerID = -1;
+            // 尝试从 Main.LocalPlayer 获取放置者
+            if (Main.LocalPlayer != null && Main.LocalPlayer.active && !Main.LocalPlayer.dead)
+            {
+                // 检查玩家是否持有该物品
+                for (int p = 0; p < Main.maxPlayers; p++)
+                {
+                    var player = Main.player[p];
+                    if (player != null && player.active && player.HeldItem.type == item.type)
+                    {
+                        ownerID = p;
+                        break;
+                    }
+                }
+                // 兜底：使用本地玩家
+                if (ownerID < 0)
+                    ownerID = Main.myPlayer;
+            }
+
+            DefenseSystem.Instance.RegisterMiZong(new Point(i, j), ownerID);
 
             if (Main.netMode == NetmodeID.SinglePlayer)
             {
-                Main.NewText("迷踪阵已布置。附近的 NPC 将难以感知你的精确位置。", Color.Cyan);
+                Main.NewText("迷踪阵已布置。消耗元石维持运转。", Color.Cyan);
             }
         }
 

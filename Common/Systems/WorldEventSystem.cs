@@ -47,6 +47,7 @@ namespace VerminLordMod.Common.Systems
         }
     }
 
+    [System.Obsolete("请使用 WorldStateMachine 替代 WorldEventSystem")]
     public class WorldEventSystem : ModSystem
     {
         // ===== 事件队列 =====

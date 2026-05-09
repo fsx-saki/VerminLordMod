@@ -1,9 +1,11 @@
 using Microsoft.Xna.Framework;
 using System;
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 using VerminLordMod.Common.Events;
+using VerminLordMod.Content.Items.Consumables;
 using VerminLordMod.Content.Items.Weapons;
 
 namespace VerminLordMod.Common.Players
@@ -69,11 +71,83 @@ namespace VerminLordMod.Common.Players
         }
 
         /// <summary>
+        /// 获取突破所需的元石数量（D-33：元石经济闭环）。
+        /// </summary>
+        private int GetBreakthroughCost()
+        {
+            // 小境界突破：10/20/30
+            // 大境界突破：50 + 转数 * 10
+            if (LevelStage < 3)
+            {
+                return (LevelStage + 1) * 10;
+            }
+            else
+            {
+                return 50 + GuLevel * 10;
+            }
+        }
+
+        /// <summary>
+        /// 消耗玩家背包中的元石。
+        /// </summary>
+        private bool ConsumeYuanStones(int amount)
+        {
+            if (amount <= 0) return true;
+
+            int totalStones = 0;
+            int yuanSItemType = ModContent.ItemType<YuanS>();
+
+            // 先统计背包中的元石总数
+            for (int i = 0; i < Player.inventory.Length; i++)
+            {
+                if (Player.inventory[i].type == yuanSItemType)
+                {
+                    totalStones += Player.inventory[i].stack;
+                }
+            }
+
+            if (totalStones < amount)
+            {
+                Main.NewText($"元石不足！需要 {amount} 块元石，当前仅有 {totalStones} 块。", Color.Red);
+                return false;
+            }
+
+            // 消耗元石
+            int remaining = amount;
+            for (int i = 0; i < Player.inventory.Length && remaining > 0; i++)
+            {
+                if (Player.inventory[i].type == yuanSItemType)
+                {
+                    int toRemove = System.Math.Min(remaining, Player.inventory[i].stack);
+                    Player.inventory[i].stack -= toRemove;
+                    remaining -= toRemove;
+                    if (Player.inventory[i].stack <= 0)
+                    {
+                        Player.inventory[i].TurnToAir();
+                    }
+                }
+            }
+
+            Main.NewText($"消耗了 {amount} 块元石用于突破。", Color.Cyan);
+            return true;
+        }
+
+        /// <summary>
         /// 小阶段突破。保留旧代码的破境提示和真元回满。
+        /// D-33：突破时消耗元石。
         /// </summary>
         public void StageUp()
         {
             if (LevelStage >= 3) return;
+
+            // D-33：检查并消耗元石
+            int cost = GetBreakthroughCost();
+            if (!ConsumeYuanStones(cost))
+            {
+                Main.NewText($"元石不足，无法突破！需要 {cost} 块元石。", Color.Red);
+                return;
+            }
+
             LevelStage++;
 
             string stageName = LevelStage switch
@@ -101,9 +175,18 @@ namespace VerminLordMod.Common.Players
 
         /// <summary>
         /// 大境界突破。
+        /// D-33：突破时消耗元石。
         /// </summary>
         public void LevelUp()
         {
+            // D-33：检查并消耗元石
+            int cost = GetBreakthroughCost();
+            if (!ConsumeYuanStones(cost))
+            {
+                Main.NewText($"元石不足，无法突破！需要 {cost} 块元石。", Color.Red);
+                return;
+            }
+
             GuLevel++;
             LevelStage = 0;
             ApplyRealmEffects(initialFill: false);

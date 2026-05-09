@@ -1,5 +1,6 @@
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
+using Terraria;
 using VerminLordMod.Common.Systems;
 
 namespace VerminLordMod.Common.Events
@@ -22,6 +23,24 @@ namespace VerminLordMod.Common.Events
     // ============================================================
     // 玩家层 → 世界层 / NPC 层
     // ============================================================
+
+    /// <summary>
+    /// D-09: 玩家即将死亡事件（统一死亡处理链）。
+    /// 在 PreKill 之后、实际死亡处理之前发布。
+    /// 处理顺序：
+    ///   1. ChunQiuChanPlayer 拦截 → 设置 IsRebirthProtected
+    ///   2. KongQiaoPlayer 处理蛊虫
+    ///   3. QiResourcePlayer 清空真元
+    ///   4. NpcDeathHandler 处理掉落/尸体
+    /// 如果 CancelDeath 被设为 true，后续处理跳过。
+    /// </summary>
+    public class PlayerDyingEvent : GuWorldEvent
+    {
+        public Player Player;
+        public int? KillerNPCType;
+        public bool IsRebirthProtected;  // 春秋蝉设置此标志
+        public bool CancelDeath;         // 如果为 true，取消死亡处理
+    }
 
     /// <summary> 玩家死亡事件 </summary>
     public class PlayerDeathEvent : GuWorldEvent

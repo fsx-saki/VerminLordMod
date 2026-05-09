@@ -2646,6 +2646,14 @@ Items: {
 		// DisplayName: Personality Switcher
 		// Tooltip: ""
 	}
+
+	DaggerTestGu: {
+		UsesXQi: 每次使用消耗 {0} 点真元
+		ControlRate: 炼化进度: {0}%
+		GuLevel: 转数: {0}
+		DisplayName: 测试匕首蛊
+		Tooltip: 测试用的火焰道匕首蛊
+	}
 }
 
 MapObject: {

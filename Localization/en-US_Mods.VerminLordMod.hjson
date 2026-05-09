@@ -2609,6 +2609,14 @@ Items: {
 		DisplayName: Personality Switcher
 		Tooltip: ""
 	}
+
+	DaggerTestGu: {
+		UsesXQi: Mods.VerminLordMod.Items.DaggerTestGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.DaggerTestGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.DaggerTestGu.GuLevel
+		DisplayName: Dagger Test Gu
+		Tooltip: ""
+	}
 }
 
 MapObject: {

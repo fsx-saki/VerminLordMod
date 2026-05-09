@@ -6,6 +6,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using VerminLordMod.Common.Entities;
 using VerminLordMod.Common.Events;
+using VerminLordMod.Common.GuBehaviors;
 using VerminLordMod.Common.Players;
 using VerminLordMod.Common.Systems;
 using VerminLordMod.Content.Items.Consumables;
@@ -204,6 +205,12 @@ namespace VerminLordMod.Common.Systems
                     DeceasedNPCType = npc.type,
                     SuccessorNPCType = successor
                 });
+            }
+
+            // 4. 战术触发：击杀触发（D-29）
+            if (killer != null && killer.active)
+            {
+                TacticalTriggerSystem.OnNPCKilled(killer, npc);
             }
         }
 

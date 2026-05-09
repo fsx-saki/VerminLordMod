@@ -291,8 +291,8 @@ namespace VerminLordMod.Common.GlobalNPCs
 			}
 
 
-			if (!npc.boss&& npc.type != NPCID.Dandelion)
-			npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<YuanS>(), 2, 0, (npc.damage + npc.lifeMax + npc.defense) / 6));
+			// D-32: 移除元石直接掉落 — 元石仅通过交易和资源节点获取
+			// 替代方案：后续可通过 D-34 资源节点扩展添加蛊虫材料掉落
 			if (npc.townNPC)
 			npcLoot.Add(ItemDropRule.Common(ItemID.FleshBlock, 1,1,7));
 			if (npc.type == ModContent.NPCType<XueTangJiaLao>()) {

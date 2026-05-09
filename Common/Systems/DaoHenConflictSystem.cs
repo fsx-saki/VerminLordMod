@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Terraria;
 using Terraria.ModLoader;
+using VerminLordMod.Common.GuBehaviors;
 using VerminLordMod.Common.Players;
 
 namespace VerminLordMod.Common.Systems
@@ -118,27 +119,121 @@ namespace VerminLordMod.Common.Systems
         };
 
         // ============================================================
-        // 默认道痕映射表
+        // DaoType → DaoPath 映射（D-24 填充）
+        // ============================================================
+
+        /// <summary>
+        /// DaoType（50 种细粒度流派）→ DaoPath（16 种粗粒度路径）映射。
+        /// 用于将武器/蛊虫的 DaoType 转换为冲突检测用的 DaoPath。
+        /// </summary>
+        public static readonly Dictionary<DaoType, DaoPath> DaoTypeToPathMapping = new()
+        {
+            // 火系 → 炎道
+            { DaoType.Fire, DaoPath.Fire },
+            { DaoType.Lightning, DaoPath.Fire },
+            { DaoType.War, DaoPath.Fire },
+
+            // 冰/水系 → 冰道
+            { DaoType.IceSnow, DaoPath.Ice },
+            { DaoType.Water, DaoPath.Ice },
+
+            // 力量/武器系 → 力道
+            { DaoType.Bone, DaoPath.Force },
+            { DaoType.Knife, DaoPath.Force },
+            { DaoType.Sword, DaoPath.Force },
+            { DaoType.Killing, DaoPath.Force },
+
+            // 风/飞行系 → 风道
+            { DaoType.Wind, DaoPath.Wind },
+            { DaoType.Flying, DaoPath.Wind },
+            { DaoType.Sky, DaoPath.Wind },
+
+            // 血/生死系 → 血道
+            { DaoType.Blood, DaoPath.Blood },
+            { DaoType.LifeDeath, DaoPath.Blood },
+
+            // 智慧/信息系 → 智道
+            { DaoType.Wisdom, DaoPath.Wisdom },
+            { DaoType.Info, DaoPath.Wisdom },
+
+            // 月/星/运系 → 月道
+            { DaoType.Moon, DaoPath.Moon },
+            { DaoType.Star, DaoPath.Moon },
+            { DaoType.Luck, DaoPath.Moon },
+
+            // 毒/食系 → 毒道
+            { DaoType.Poison, DaoPath.Poison },
+            { DaoType.Eating, DaoPath.Poison },
+
+            // 木/泥系 → 木道
+            { DaoType.Wood, DaoPath.Wood },
+            { DaoType.Mud, DaoPath.Wood },
+
+            // 土/力/修炼系 → 土道
+            { DaoType.Power, DaoPath.Earth },
+            { DaoType.Practise, DaoPath.Earth },
+
+            // 光/金系 → 光道
+            { DaoType.Light, DaoPath.Light },
+            { DaoType.Gold, DaoPath.Light },
+
+            // 暗/影/虚空系 → 暗道
+            { DaoType.Dark, DaoPath.Dark },
+            { DaoType.Shadow, DaoPath.Dark },
+            { DaoType.Void, DaoPath.Dark },
+
+            // 魂/梦/人系 → 魂道
+            { DaoType.Soul, DaoPath.Soul },
+            { DaoType.Dream, DaoPath.Soul },
+            { DaoType.Person, DaoPath.Soul },
+
+            // 阵法/战术系 → 阵道
+            { DaoType.Rule, DaoPath.Formation },
+            { DaoType.Tactical, DaoPath.Formation },
+
+            // 气/治愈系 → 医道
+            { DaoType.Qi, DaoPath.Healing },
+
+            // 特殊/未分类 → 智道（默认）
+            { DaoType.Ban, DaoPath.Wisdom },
+            { DaoType.Charm, DaoPath.Wisdom },
+            { DaoType.Cloud, DaoPath.Wind },
+            { DaoType.Draw, DaoPath.Wisdom },
+            { DaoType.Pellet, DaoPath.Force },
+            { DaoType.Slave, DaoPath.Soul },
+            { DaoType.Space, DaoPath.Wisdom },
+            { DaoType.Stealing, DaoPath.Dark },
+            { DaoType.SuccessFailure, DaoPath.Wisdom },
+            { DaoType.Time, DaoPath.Wisdom },
+            { DaoType.Unreal, DaoPath.Wisdom },
+            { DaoType.Variation, DaoPath.Wisdom },
+            { DaoType.Voice, DaoPath.Wind },
+            { DaoType.YinYang, DaoPath.Wisdom },
+            { DaoType.Love, DaoPath.Moon },
+        };
+
+        /// <summary>
+        /// 从 DaoType 获取对应的 DaoPath。
+        /// </summary>
+        public static DaoPath GetPathFromDaoType(DaoType daoType)
+        {
+            return DaoTypeToPathMapping.TryGetValue(daoType, out var path) ? path : DaoPath.Wisdom;
+        }
+
+        // ============================================================
+        // 默认道痕映射表（物品 TypeID → DaoPath）
         // ============================================================
 
         /// <summary>
         /// 已知蛊虫的默认道痕标签。
         /// Key: 物品类型 ID
         /// Value: 道痕路径
-        /// 
+        ///
         /// MVA 阶段：只填充已知蛊虫。
         /// P1 扩展：从数据库或配置加载。
         /// </summary>
         public static readonly Dictionary<int, DaoPath> DefaultDaoHenMap = new()
         {
-            // 月光蛊 → 月道
-            // 酒虫 → None（无道痕）
-            // 骨枪蛊 → 力道
-            // 炎心蛊 → 炎道
-            // 冰蚕蛊 → 冰道
-            // 风铃蛊 → 风道
-            // 血颅蛊 → 血道
-            // 智慧蛊 → 智道
             // 以下为占位，P1 再填充具体 TypeID
         };
 

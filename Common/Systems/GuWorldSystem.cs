@@ -143,10 +143,11 @@ namespace VerminLordMod.Common.Systems
     }
 
     // ============================================================
-    // GuWorldSystem - 世界级数据持有者
+    // GuWorldSystem - 世界级数据持有者（已弃用）
     // 保存所有家族状态
-    // TODO: D-01 将与 WorldEventSystem 合并为 WorldStateMachine
+    // D-01: 已合并到 WorldStateMachine，此类作为转发器保留
     // ============================================================
+    [System.Obsolete("请使用 WorldStateMachine 替代 GuWorldSystem")]
     public class GuWorldSystem : ModSystem
     {
         /// <summary> 所有已知家族 </summary>

@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using VerminLordMod.Common.GuBehaviors;
 using VerminLordMod.Content.Buffs.AddToEnemy;
 using VerminLordMod.Content.Buffs.AddToSelf.Pobuff;
 using VerminLordMod.Content.Items.Weapons;
@@ -169,6 +170,9 @@ namespace VerminLordMod.Common.Players
 				CombatText.NewText(new Rectangle((int)npc.position.X, (int)npc.position.Y, 16, 16), Color.Red, hurtInfo.Damage / 10);
 				npc.position += npc.position - Player.position;
 			}
+
+			// D-29: 受击触发 — 追踪受击次数
+			TacticalTriggerSystem.OnPlayerHitTaken(Player);
 		}
 
 		/// <summary>
