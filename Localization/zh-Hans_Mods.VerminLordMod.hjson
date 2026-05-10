@@ -138,6 +138,24 @@ Projectiles: {
 	// FireBombProj.DisplayName: Fire Bomb Proj
 	// FireRainProj.DisplayName: Fire Rain Proj
 	// FireChargeProj.DisplayName: Fire Charge Proj
+	// FireExplosionProj.DisplayName: Fire Explosion Proj
+	// FireFlameWallProj.DisplayName: Fire Flame Wall Proj
+	// FireMeteorProj.DisplayName: Fire Meteor Proj
+	// FireStreamProj.DisplayName: Fire Stream Proj
+	// WaterHealProj.DisplayName: Water Heal Proj
+	// WaterStreamProj.DisplayName: Water Stream Proj
+	// WaterVortexProj.DisplayName: Water Vortex Proj
+	// WaterWaveProj.DisplayName: Water Wave Proj
+	// IceBlizzardProj.DisplayName: Ice Blizzard Proj
+	// IceExplosionProj.DisplayName: Ice Explosion Proj
+	// IceFieldProj.DisplayName: Ice Field Proj
+	// IceShardScatterProj.DisplayName: Ice Shard Scatter Proj
+	// WindBurstProj.DisplayName: Wind Burst Proj
+	// WindCycloneProj.DisplayName: Wind Cyclone Proj
+	// WindStormProj.DisplayName: Wind Storm Proj
+	// WindWallProj.DisplayName: Wind Wall Proj
+	// BurstHostProj.DisplayName: Burst Host Proj
+	// WaterDropProj.DisplayName: Water Drop Proj
 }
 
 Prefixes: {

@@ -16,6 +16,12 @@ namespace VerminLordMod.Content.Trails
 		/// <summary>拖尾名称</summary>
 		public string Name { get; set; } = "GhostTrail";
 
+		/// <summary>
+		/// 拖尾需要的混合模式。
+		/// 由 ITrail 接口声明，TrailManager 自动处理切换。
+		/// </summary>
+		public BlendState BlendMode => UseAdditiveBlend ? BlendState.Additive : null;
+
 		/// <summary>记录位置的最大数量</summary>
 		public int MaxPositions { get; set; } = 16;
 

@@ -118,6 +118,38 @@ namespace VerminLordMod.Content.Trails
 		}
 
 		/// <summary>
+		/// 为弹幕创建一个 WaterTrail（水系拖尾）并自动添加到 TrailManager
+		/// </summary>
+		/// <param name="manager">拖尾管理器</param>
+		/// <param name="maxFragments">最大粒子总数</param>
+		/// <param name="particleLife">粒子存活帧数</param>
+		/// <param name="sizeMultiplier">粒子大小倍率</param>
+		/// <param name="splashSpeed">飞溅速度</param>
+		/// <param name="colorStart">起始颜色</param>
+		/// <param name="colorEnd">结束颜色</param>
+		/// <returns>创建的 WaterTrail 实例</returns>
+		public static WaterTrail AddWaterTrail(this TrailManager manager,
+			int maxFragments = 120,
+			int particleLife = 30,
+			float sizeMultiplier = 0.5f,
+			float splashSpeed = 4f,
+			Color? colorStart = null,
+			Color? colorEnd = null)
+		{
+			var trail = new WaterTrail
+			{
+				MaxFragments = maxFragments,
+				ParticleLife = particleLife,
+				SizeMultiplier = sizeMultiplier,
+				SplashSpeed = splashSpeed,
+				ColorStart = colorStart ?? new Color(180, 230, 255, 200),
+				ColorEnd = colorEnd ?? new Color(60, 150, 255, 0)
+			};
+			manager.Add(trail);
+			return trail;
+		}
+
+		/// <summary>
 		/// 获取或创建指定类型的拖尾（如果已存在则返回现有实例）
 		/// </summary>
 		public static T GetOrAdd<T>(this TrailManager manager) where T : class, ITrail, new()

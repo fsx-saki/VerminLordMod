@@ -9,14 +9,16 @@ namespace VerminLordMod.Content.Projectiles.Zero
 {
     /// <summary>
     /// 炎道基础弹幕 — 星火弹
-    /// 完全通过行为组件组合实现，零硬编码逻辑。
-    /// 
+    /// 炎道技术储备库的核心基础组件：
+    /// - 可独立作为小型火焰弹使用
+    /// - 也可被其他炎道弹幕（爆炸、陨石、火焰墙等）大量生成
+    /// - 体现"星火燎原"——小火星可以引燃大片火焰
+    ///
     /// 行为组合：
     /// - GravityBehavior: 重力（0.12f/帧）
     /// - BounceBehavior: 碰撞反弹（最多2次，系数0.4f）
     /// - LiquidTrailBehavior: 液态火焰拖尾（黄→红渐变）
     /// - ExplosionKillBehavior: 碰撞耗尽时爆炸 + 销毁时爆炸
-    /// - GlowDrawBehavior: 发光绘制
     /// </summary>
     public class FireBaseProj : BaseBullet
     {
@@ -30,8 +32,6 @@ namespace VerminLordMod.Content.Projectiles.Zero
             });
 
             // 2. 碰撞反弹（最多2次，系数0.4f，速度过低时停止）
-            // TriggerKillOnMaxBounces = true 时，反弹耗尽返回 true（销毁），
-            // 引擎调用 OnKill，由 ExplosionKillBehavior 处理爆炸。
             Behaviors.Add(new BounceBehavior(maxBounces: 2, bounceFactor: 0.4f)
             {
                 KillOnMaxBounces = true,
@@ -41,7 +41,7 @@ namespace VerminLordMod.Content.Projectiles.Zero
                 TimeLeftAfterStop = 30
             });
 
-            // 3. 爆炸效果（OnKill 时触发，覆盖 timeout 和 bounce 耗尽两种情况）
+            // 3. 爆炸效果（OnKill 时触发）
             Behaviors.Add(new ExplosionKillBehavior
             {
                 ExplodeOnKill = true,
@@ -49,7 +49,7 @@ namespace VerminLordMod.Content.Projectiles.Zero
                 KillSpeed = 4f,
                 KillSizeMultiplier = 1f,
                 KillFragmentLife = 25,
-                ExplodeOnTileCollide = false, // 由 BounceBehavior.TriggerKillOnMaxBounces 触发 OnKill
+                ExplodeOnTileCollide = false,
                 ColorStart = new Color(255, 220, 100, 255),
                 ColorEnd = new Color(255, 30, 0, 0)
             });
@@ -72,19 +72,6 @@ namespace VerminLordMod.Content.Projectiles.Zero
                 AutoDraw = true,
                 SuppressDefaultDraw = true
             });
-
-            // 5. 发光绘制（微弱，星火弹风格）
-            // Behaviors.Add(new GlowDrawBehavior
-            // {
-            //     GlowColor = new Color(255, 180, 60),
-            //     GlowLayers = 0,
-            //     GlowBaseScale = 0f,
-            //     GlowScaleIncrement = 0f,
-            //     GlowBaseAlpha = 0.3f,
-            //     GlowAlphaDecay = 0f,
-            //     GlowAlphaMultiplier = 0f,
-            //     EnableLight = false
-            // });
         }
 
         public override void SetDefaults()
@@ -94,8 +81,8 @@ namespace VerminLordMod.Content.Projectiles.Zero
             Projectile.scale = 1f;
             Projectile.ignoreWater = true;
             Projectile.tileCollide = true;
-            Projectile.penetrate = 99; // 不因命中敌人而销毁
-            Projectile.timeLeft = 120; // 星火弹 120 帧
+            Projectile.penetrate = 99;
+            Projectile.timeLeft = 120;
             Projectile.alpha = 0;
             Projectile.friendly = true;
             Projectile.hostile = false;

@@ -40,6 +40,13 @@ namespace VerminLordMod.Content.Trails
 
 		public string Name { get; set; } = "LiquidTrail";
 
+		/// <summary>
+		/// 拖尾需要的混合模式。
+		/// 由 ITrail 接口声明，TrailManager 自动处理切换。
+		/// LiquidTrail 默认使用 Additive 混合模式。
+		/// </summary>
+		public BlendState BlendMode => BlendState.Additive;
+
 		/// <summary>最大碎片数量</summary>
 		public int MaxFragments { get; set; } = 40;
 

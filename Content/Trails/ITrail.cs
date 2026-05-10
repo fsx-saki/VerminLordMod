@@ -11,6 +11,13 @@ namespace VerminLordMod.Content.Trails
 		/// <summary>拖尾名称（调试用）</summary>
 		string Name { get; }
 
+		/// <summary>
+		/// 拖尾需要的混合模式。
+		/// TrailManager 会根据此属性自动切换 SpriteBatch 混合模式。
+		/// null = 使用当前混合模式（不切换）。
+		/// </summary>
+		BlendState BlendMode { get; }
+
 		/// <summary>每帧更新拖尾</summary>
 		/// <param name="center">当前中心位置</param>
 		/// <param name="velocity">当前速度</param>

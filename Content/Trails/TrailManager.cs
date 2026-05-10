@@ -114,35 +114,100 @@ namespace VerminLordMod.Content.Trails
 
 		/// <summary>
 		/// 绘制所有拖尾（统一管理SpriteBatch状态）
-		/// TrailManager 负责开关 Additive 混合模式，
+		/// TrailManager 根据各 ITrail.BlendMode 自动切换混合模式，
 		/// 各 ITrail.Draw() 内部不再自行管理 SpriteBatch。
+		///
+		/// 支持多种混合模式：如果所有拖尾使用同一种混合模式，只切换一次；
+		/// 如果混合模式不同，按混合模式分组绘制。
 		/// </summary>
 		public void Draw(SpriteBatch sb)
 		{
 			if (trails.Count == 0) return;
 
-			// 检查是否需要 Additive 混合模式
-			bool needsAdditive = false;
+			// 收集所有需要的混合模式
+			BlendState currentBlend = null;
+			bool needsSwitch = false;
+
 			foreach (var t in trails)
 			{
-				if (t is GhostTrail gt && gt.UseAdditiveBlend) { needsAdditive = true; break; }
-				if (t is LiquidTrail) { needsAdditive = true; break; }
+				if (t.BlendMode != null)
+				{
+					if (currentBlend == null)
+					{
+						currentBlend = t.BlendMode;
+					}
+					else if (currentBlend != t.BlendMode)
+					{
+						needsSwitch = true;
+						break;
+					}
+				}
 			}
 
-			if (needsAdditive)
+			if (currentBlend != null)
 			{
 				sb.End();
-				sb.Begin(SpriteSortMode.Immediate, BlendState.Additive, SamplerState.LinearClamp,
+				sb.Begin(SpriteSortMode.Immediate, currentBlend, SamplerState.LinearClamp,
 					DepthStencilState.None, RasterizerState.CullNone, null, Main.GameViewMatrix.TransformationMatrix);
 			}
 
-			foreach (var t in trails)
+			if (needsSwitch)
 			{
-				t.Draw(sb);
+				// 多种混合模式：按混合模式分组绘制
+				DrawGroupedByBlendMode(sb);
+			}
+			else
+			{
+				// 单一混合模式或无混合模式：一次性绘制
+				foreach (var t in trails)
+				{
+					t.Draw(sb);
+				}
 			}
 
-			if (needsAdditive)
+			if (currentBlend != null)
 			{
+				sb.End();
+				sb.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.AnisotropicClamp,
+					DepthStencilState.None, RasterizerState.CullNone, null, Main.GameViewMatrix.TransformationMatrix);
+			}
+		}
+
+		/// <summary>
+		/// 按混合模式分组绘制，处理多种混合模式共存的情况。
+		/// </summary>
+		private void DrawGroupedByBlendMode(SpriteBatch sb)
+		{
+			// 先绘制不需要特殊混合模式的拖尾
+			foreach (var t in trails)
+			{
+				if (t.BlendMode == null)
+				{
+					t.Draw(sb);
+				}
+			}
+
+			// 按混合模式分组
+			var groups = new Dictionary<BlendState, List<ITrail>>();
+			foreach (var t in trails)
+			{
+				if (t.BlendMode == null) continue;
+				if (!groups.ContainsKey(t.BlendMode))
+					groups[t.BlendMode] = new List<ITrail>();
+				groups[t.BlendMode].Add(t);
+			}
+
+			foreach (var kvp in groups)
+			{
+				sb.End();
+				sb.Begin(SpriteSortMode.Immediate, kvp.Key, SamplerState.LinearClamp,
+					DepthStencilState.None, RasterizerState.CullNone, null, Main.GameViewMatrix.TransformationMatrix);
+
+				foreach (var t in kvp.Value)
+				{
+					t.Draw(sb);
+				}
+
 				sb.End();
 				sb.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.AnisotropicClamp,
 					DepthStencilState.None, RasterizerState.CullNone, null, Main.GameViewMatrix.TransformationMatrix);
