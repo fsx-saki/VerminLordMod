@@ -61,6 +61,10 @@ namespace VerminLordMod.Common.BulletBehaviors
         /// <summary>
         /// 处理碰撞反弹。在弹幕的 OnTileCollide 中调用此方法。
         /// 返回 true 表示弹幕应销毁，false 表示弹幕继续存在。
+        ///
+        /// Terraria 引擎机制：OnTileCollide 返回 false 时，
+        /// 引擎不会自动修改速度，仅保留弹幕存活。
+        /// 因此这里直接设置反弹后的速度即可。
         /// </summary>
         public bool HandleTileCollide(Projectile projectile, Vector2 oldVelocity)
         {
@@ -90,7 +94,7 @@ namespace VerminLordMod.Common.BulletBehaviors
                 return true;
             }
 
-            // 反弹
+            // 直接设置反弹速度（与星火弹原始实现一致）
             if (oldVelocity.X != projectile.velocity.X)
             {
                 projectile.velocity.X = -oldVelocity.X * BounceFactor;
@@ -126,6 +130,15 @@ namespace VerminLordMod.Common.BulletBehaviors
         public bool PreDraw(Projectile projectile, ref Color lightColor, SpriteBatch spriteBatch)
         {
             return true;
+        }
+
+        /// <summary>
+        /// IBulletBehavior.OnTileCollide 实现 — 委托给 HandleTileCollide。
+        /// 返回 true 表示弹幕应销毁，false 表示继续存在，null 表示不处理。
+        /// </summary>
+        public bool? OnTileCollide(Projectile projectile, Vector2 oldVelocity)
+        {
+            return HandleTileCollide(projectile, oldVelocity);
         }
     }
 }

@@ -43,5 +43,11 @@ namespace VerminLordMod.Common.BulletBehaviors
         /// 返回 true 表示引擎继续默认绘制，false 表示完全自定义绘制。
         /// </summary>
         bool PreDraw(Projectile projectile, ref Color lightColor, SpriteBatch spriteBatch);
+
+        /// <summary>
+        /// 碰撞物块时调用（OnTileCollide）。
+        /// 返回 true 表示弹幕应销毁，false 表示弹幕继续存在，null 表示不处理（由其他行为或默认逻辑决定）。
+        /// </summary>
+        bool? OnTileCollide(Projectile projectile, Vector2 oldVelocity);
     }
 }

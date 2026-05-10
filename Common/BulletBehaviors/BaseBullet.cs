@@ -71,6 +71,33 @@ namespace VerminLordMod.Common.BulletBehaviors
             return drawDefault;
         }
 
+        /// <summary>
+        /// 碰撞物块时委托给所有行为。
+        /// 行为通过 OnTileCollide 返回：
+        ///   true  → 弹幕应销毁
+        ///   false → 弹幕继续存在（行为已处理碰撞，引擎会自动反转速度）
+        ///   null  → 不处理（跳过，由引擎默认逻辑决定）
+        ///
+        /// 注意：返回 false 时，Terraria 引擎会自动反转速度分量。
+        /// 因此行为在设置反弹速度时需考虑此机制（设置反转前的值）。
+        /// </summary>
+        public sealed override bool OnTileCollide(Vector2 oldVelocity)
+        {
+            bool shouldKill = false;
+            foreach (var behavior in Behaviors)
+            {
+                bool? result = behavior.OnTileCollide(Projectile, oldVelocity);
+                if (result == true)
+                    shouldKill = true;
+            }
+            // 如果任一行为要求销毁，则销毁
+            if (shouldKill)
+                return true;
+
+            // 调用扩展点，允许子类添加额外逻辑
+            return OnTileCollided(oldVelocity);
+        }
+
         // ===== 可选扩展点 =====
 
         /// <summary>在 RegisterBehaviors 和 behaviors.OnSpawn 之后调用</summary>
@@ -84,5 +111,12 @@ namespace VerminLordMod.Common.BulletBehaviors
 
         /// <summary>在 behaviors.OnKill 之后调用</summary>
         protected virtual void OnKilled(int timeLeft) { }
+
+        /// <summary>
+        /// 在 behaviors.OnTileCollide 之后调用。
+        /// 返回 true 表示弹幕应销毁，false 表示继续存在。
+        /// 默认返回 false（不销毁）。
+        /// </summary>
+        protected virtual bool OnTileCollided(Vector2 oldVelocity) => false;
     }
 }

@@ -89,5 +89,7 @@ namespace VerminLordMod.Common.BulletBehaviors
         {
             return true;
         }
+
+        public bool? OnTileCollide(Projectile projectile, Vector2 oldVelocity) => null;
     }
 }

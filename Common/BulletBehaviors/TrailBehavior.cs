@@ -53,5 +53,7 @@ namespace VerminLordMod.Common.BulletBehaviors
             }
             return !SuppressDefaultDraw;
         }
+
+        public bool? OnTileCollide(Projectile projectile, Vector2 oldVelocity) => null;
     }
 }

@@ -46,8 +46,27 @@ namespace VerminLordMod.Content.Trails
 		/// <summary>碎片存活时间（帧）</summary>
 		public int FragmentLife { get; set; } = 30;
 
-		/// <summary>生成间隔（帧）</summary>
+		/// <summary>基础生成间隔（帧），速度慢时的间隔</summary>
 		public int SpawnInterval { get; set; } = 2;
+
+		/// <summary>
+		/// 是否启用速度自适应密度。
+		/// 启用后，速度快时每帧生成多个碎片，避免拖尾断裂。
+		/// </summary>
+		public bool AdaptiveDensity { get; set; } = true;
+
+		/// <summary>
+		/// 速度自适应密度阈值下限（像素/帧）。
+		/// 速度低于此值时使用 SpawnInterval。
+		/// </summary>
+		public float AdaptiveSpeedThreshold { get; set; } = 4f;
+
+		/// <summary>
+		/// 速度自适应密度系数。
+		/// 每达到此速度值，每帧多生成一个碎片。
+		/// 例如：系数=6f，速度=18 → 每帧生成 18/6=3 个碎片
+		/// </summary>
+		public float AdaptiveDensityFactor { get; set; } = 6f;
 
 		/// <summary>碎片大小倍率</summary>
 		public float SizeMultiplier { get; set; } = 1f;
@@ -82,6 +101,31 @@ namespace VerminLordMod.Content.Trails
 		/// <summary>生成位置偏移</summary>
 		public Vector2 SpawnOffset { get; set; } = Vector2.Zero;
 
+		/// <summary>
+		/// 是否启用速度自适应存活时间。
+		/// 启用后，速度快时碎片存活时间缩短，保持拖尾总长度大致恒定。
+		/// 拖尾目标长度 ≈ AdaptiveTargetLength（像素）。
+		/// </summary>
+		public bool AdaptiveLife { get; set; } = true;
+
+		/// <summary>
+		/// 拖尾目标长度（像素）。
+		/// 自适应存活时间模式下，拖尾长度 ≈ 此值。
+		/// 设为 0 表示不限制。
+		/// </summary>
+		public float AdaptiveTargetLength { get; set; } = 60f;
+
+		/// <summary>
+		/// 速度对存活时间的影响指数（0~1）。
+		/// 0 = 速度不影响存活时间（完全使用 FragmentLife）
+		/// 1 = 完全线性影响（currentLife = targetLength / speed）
+		/// 推荐值 0.3~0.5，让快速移动时拖尾变长但不至于断裂。
+		/// </summary>
+		public float SpeedLifeExponent { get; set; } = 0.4f;
+
+		/// <summary>碎片存活时间下限（帧），防止存活时间过短导致拖尾消失</summary>
+		public int MinFragmentLife { get; set; } = 4;
+
 		// ===== 内部状态 =====
 
 		private List<Fragment> fragments = new List<Fragment>();
@@ -91,10 +135,40 @@ namespace VerminLordMod.Content.Trails
 
 		public void Update(Vector2 center, Vector2 velocity)
 		{
-			spawnCounter++;
-			if (spawnCounter % SpawnInterval == 0 && fragments.Count < MaxFragments)
+			float speed = velocity.Length();
+
+			// 计算当前帧应使用的碎片存活时间
+			int currentLife = FragmentLife;
+			if (AdaptiveLife && AdaptiveTargetLength > 0f && speed > 0.5f)
 			{
-				SpawnFragment(center, velocity);
+				// 拖尾长度 ≈ speed^SpeedLifeExponent * currentLife
+				// SpeedLifeExponent 控制速度对存活时间的影响强度
+				// SpeedLifeExponent=0.4 时，速度翻倍存活时间只缩短约 24%
+				// 相比原来的线性缩短（速度翻倍存活时间减半），快速移动时拖尾明显更长
+				float effectiveSpeed = MathF.Pow(speed, SpeedLifeExponent);
+				currentLife = (int)(AdaptiveTargetLength / effectiveSpeed);
+				currentLife = Math.Clamp(currentLife, MinFragmentLife, FragmentLife);
+			}
+
+			if (AdaptiveDensity && speed > AdaptiveSpeedThreshold)
+			{
+				// 速度自适应模式：速度快时每帧生成多个碎片
+				int spawnCount = (int)(speed / AdaptiveDensityFactor);
+				spawnCount = Math.Clamp(spawnCount, 1, 5); // 限制每帧最多5个，防止性能问题
+				for (int i = 0; i < spawnCount; i++)
+				{
+					if (fragments.Count < MaxFragments)
+						SpawnFragment(center, velocity, currentLife);
+				}
+			}
+			else
+			{
+				// 传统固定间隔模式
+				spawnCounter++;
+				if (spawnCounter % SpawnInterval == 0 && fragments.Count < MaxFragments)
+				{
+					SpawnFragment(center, velocity, currentLife);
+				}
 			}
 
 			for (int i = fragments.Count - 1; i >= 0; i--)
@@ -110,7 +184,7 @@ namespace VerminLordMod.Content.Trails
 			}
 		}
 
-		private void SpawnFragment(Vector2 center, Vector2 velocity)
+		private void SpawnFragment(Vector2 center, Vector2 velocity, int life)
 		{
 			Vector2 inertia = -velocity * InertiaFactor;
 			Vector2 splash = velocity.RotatedByRandom(SplashAngle) * SplashFactor;
@@ -118,7 +192,7 @@ namespace VerminLordMod.Content.Trails
 			Vector2 vel = inertia + splash + random;
 			float scale = Main.rand.NextFloat(0.6f, 1.0f) * SizeMultiplier;
 			float rotSpeed = Main.rand.NextFloat(-0.15f, 0.15f);
-			fragments.Add(new Fragment(center + SpawnOffset, vel, FragmentLife, scale, rotSpeed));
+			fragments.Add(new Fragment(center + SpawnOffset, vel, life, scale, rotSpeed));
 		}
 
 		public void Draw(SpriteBatch sb)

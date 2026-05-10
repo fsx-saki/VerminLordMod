@@ -82,6 +82,62 @@ Projectiles: {
 	BloodDropProj.DisplayName: Blood Drop Proj
 	BlueBirdCircleProj.DisplayName: Blue Bird Circle Proj
 	IceShardProj.DisplayName: Ice Shard Proj
+	BanBaseProj.DisplayName: Ban Base Proj
+	BloodBaseProj.DisplayName: Blood Base Proj
+	BoneBaseProj.DisplayName: Bone Base Proj
+	CharmBaseProj.DisplayName: Charm Base Proj
+	CloudBaseProj.DisplayName: Cloud Base Proj
+	DarkBaseProj.DisplayName: Dark Base Proj
+	DrawBaseProj.DisplayName: Draw Base Proj
+	DreamBaseProj.DisplayName: Dream Base Proj
+	EatingBaseProj.DisplayName: Eating Base Proj
+	FireBaseProj.DisplayName: Fire Base Proj
+	FlyingBaseProj.DisplayName: Flying Base Proj
+	GoldBaseProj.DisplayName: Gold Base Proj
+	IceSnowBaseProj.DisplayName: Ice Snow Base Proj
+	InfoBaseProj.DisplayName: Info Base Proj
+	KillingBaseProj.DisplayName: Killing Base Proj
+	KnifeBaseProj.DisplayName: Knife Base Proj
+	LifeDeathBaseProj.DisplayName: Life Death Base Proj
+	LightBaseProj.DisplayName: Light Base Proj
+	LightningBaseProj.DisplayName: Lightning Base Proj
+	LoveBaseProj.DisplayName: Love Base Proj
+	LuckBaseProj.DisplayName: Luck Base Proj
+	MoonBaseProj.DisplayName: Moon Base Proj
+	MudBaseProj.DisplayName: Mud Base Proj
+	PelletBaseProj.DisplayName: Pellet Base Proj
+	PersonBaseProj.DisplayName: Person Base Proj
+	PoisonBaseProj.DisplayName: Poison Base Proj
+	PowerBaseProj.DisplayName: Power Base Proj
+	PractiseBaseProj.DisplayName: Practise Base Proj
+	QiBaseProj.DisplayName: Qi Base Proj
+	RuleBaseProj.DisplayName: Rule Base Proj
+	ShadowBaseProj.DisplayName: Shadow Base Proj
+	SkyBaseProj.DisplayName: Sky Base Proj
+	SlaveBaseProj.DisplayName: Slave Base Proj
+	SoulBaseProj.DisplayName: Soul Base Proj
+	SpaceBaseProj.DisplayName: Space Base Proj
+	StarBaseProj.DisplayName: Star Base Proj
+	StealingBaseProj.DisplayName: Stealing Base Proj
+	SuccessFailureBaseProj.DisplayName: Success Failure Base Proj
+	SwordBaseProj.DisplayName: Sword Base Proj
+	TacticalBaseProj.DisplayName: Tactical Base Proj
+	TimeBaseProj.DisplayName: Time Base Proj
+	UnrealBaseProj.DisplayName: Unreal Base Proj
+	VariationBaseProj.DisplayName: Variation Base Proj
+	VoiceBaseProj.DisplayName: Voice Base Proj
+	VoidBaseProj.DisplayName: Void Base Proj
+	WarBaseProj.DisplayName: War Base Proj
+	WaterBaseProj.DisplayName: Water Base Proj
+	WindBaseProj.DisplayName: Wind Base Proj
+	WisdomBaseProj.DisplayName: Wisdom Base Proj
+	WoodBaseProj.DisplayName: Wood Base Proj
+	YinYangBaseProj.DisplayName: Yin Yang Base Proj
+	FireRiseProj.DisplayName: Fire Rise Proj
+	FireScatterProj.DisplayName: Fire Scatter Proj
+	FireBombProj.DisplayName: Fire Bomb Proj
+	FireRainProj.DisplayName: Fire Rain Proj
+	FireChargeProj.DisplayName: Fire Charge Proj
 }
 
 Prefixes: {
@@ -2616,6 +2672,414 @@ Items: {
 		GuLevel: Mods.VerminLordMod.Items.DaggerTestGu.GuLevel
 		DisplayName: Dagger Test Gu
 		Tooltip: ""
+	}
+
+	BanBaseGu: {
+		DisplayName: Ban Base Gu
+		Tooltip: Seal and silence enemies
+		GuLevel: Mods.VerminLordMod.Items.BanWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.BanWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.BanWeapon.UsesXQi
+	}
+
+	BloodBaseGu: {
+		DisplayName: Blood Base Gu
+		Tooltip: Blood path attack, burn and life steal
+		GuLevel: Mods.VerminLordMod.Items.BloodWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.BloodWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.BloodWeapon.UsesXQi
+	}
+
+	BoneBaseGu: {
+		DisplayName: Bone Base Gu
+		Tooltip: Bone piercing, armor shred
+		GuLevel: Mods.VerminLordMod.Items.BoneWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.BoneWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.BoneWeapon.UsesXQi
+	}
+
+	CharmBaseGu: {
+		DisplayName: Charm Base Gu
+		Tooltip: Charm and confuse enemies
+		GuLevel: Mods.VerminLordMod.Items.CharmWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.CharmWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.CharmWeapon.UsesXQi
+	}
+
+	CloudBaseGu: {
+		DisplayName: Cloud Base Gu
+		Tooltip: Blind enemies with smoke
+		GuLevel: Mods.VerminLordMod.Items.CloudWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.CloudWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.CloudWeapon.UsesXQi
+	}
+
+	DarkBaseGu: {
+		DisplayName: Dark Base Gu
+		Tooltip: Shadow erosion, weaken targets
+		GuLevel: Mods.VerminLordMod.Items.DarkWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.DarkWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.DarkWeapon.UsesXQi
+	}
+
+	DrawBaseGu: {
+		DisplayName: Draw Base Gu
+		Tooltip: Pull enemies from afar
+		GuLevel: Mods.VerminLordMod.Items.DrawWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.DrawWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.DrawWeapon.UsesXQi
+	}
+
+	DreamBaseGu: {
+		DisplayName: Dream Base Gu
+		Tooltip: Nightmare, fear enemies
+		GuLevel: Mods.VerminLordMod.Items.DreamWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.DreamWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.DreamWeapon.UsesXQi
+	}
+
+	EatingBaseGu: {
+		DisplayName: Eating Base Gu
+		Tooltip: Devour all, burn damage
+		GuLevel: Mods.VerminLordMod.Items.EatingWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.EatingWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.EatingWeapon.UsesXQi
+	}
+
+	FireBaseGu: {
+		DisplayName: Fire Base Gu
+		Tooltip: Spark that ignites, ever-changing\nRight-click in inventory to switch attack mode
+		GuLevel: Mods.VerminLordMod.Items.FireWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.FireWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.FireWeapon.UsesXQi
+	}
+
+	FlyingBaseGu: {
+		DisplayName: Flying Base Gu
+		Tooltip: Swift flying needle, pure attack
+		GuLevel: Mods.VerminLordMod.Items.FlyingWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.FlyingWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.FlyingWeapon.UsesXQi
+	}
+
+	GoldBaseGu: {
+		DisplayName: Gold Base Gu
+		Tooltip: Golden edge, armor shred
+		GuLevel: Mods.VerminLordMod.Items.GoldWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.GoldWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.GoldWeapon.UsesXQi
+	}
+
+	IceSnowBaseGu: {
+		DisplayName: Ice Snow Base Gu
+		Tooltip: Freeze enemies solid
+		GuLevel: Mods.VerminLordMod.Items.IceSnowWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.IceSnowWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.IceSnowWeapon.UsesXQi
+	}
+
+	InfoBaseGu: {
+		DisplayName: Info Base Gu
+		Tooltip: Mark and track targets
+		GuLevel: Mods.VerminLordMod.Items.InfoWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.InfoWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.InfoWeapon.UsesXQi
+	}
+
+	KillingBaseGu: {
+		DisplayName: Killing Base Gu
+		Tooltip: Killing intent, poison damage
+		GuLevel: Mods.VerminLordMod.Items.KillingWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.KillingWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.KillingWeapon.UsesXQi
+	}
+
+	KnifeBaseGu: {
+		DisplayName: Knife Base Gu
+		Tooltip: Flash of blade, pure attack
+		GuLevel: Mods.VerminLordMod.Items.KnifeWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.KnifeWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.KnifeWeapon.UsesXQi
+	}
+
+	LifeDeathBaseGu: {
+		DisplayName: Life Death Base Gu
+		Tooltip: Cycle of life and death, burn and heal
+		GuLevel: Mods.VerminLordMod.Items.LifeDeathWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.LifeDeathWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.LifeDeathWeapon.UsesXQi
+	}
+
+	LightBaseGu: {
+		DisplayName: Light Base Gu
+		Tooltip: Blinding radiance
+		GuLevel: Mods.VerminLordMod.Items.LightWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.LightWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.LightWeapon.UsesXQi
+	}
+
+	LightningBaseGu: {
+		DisplayName: Lightning Base Gu
+		Tooltip: Lightning speed, slow enemies
+		GuLevel: Mods.VerminLordMod.Items.LightningWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.LightningWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.LightningWeapon.UsesXQi
+	}
+
+	LoveBaseGu: {
+		DisplayName: Love Base Gu
+		Tooltip: Silken threads of love, charm enemies
+		GuLevel: Mods.VerminLordMod.Items.LoveWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.LoveWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.LoveWeapon.UsesXQi
+	}
+
+	LuckBaseGu: {
+		DisplayName: Luck Base Gu
+		Tooltip: Fortune's flow, weaken targets
+		GuLevel: Mods.VerminLordMod.Items.LuckWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.LuckWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.LuckWeapon.UsesXQi
+	}
+
+	MoonBaseGu: {
+		DisplayName: Moon Base Gu
+		Tooltip: Moon blade, mark targets
+		GuLevel: Mods.VerminLordMod.Items.MoonWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.MoonWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.MoonWeapon.UsesXQi
+	}
+
+	MudBaseGu: {
+		DisplayName: Mud Base Gu
+		Tooltip: Mire and slow enemies
+		GuLevel: Mods.VerminLordMod.Items.MudWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.MudWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.MudWeapon.UsesXQi
+	}
+
+	PelletBaseGu: {
+		DisplayName: Pellet Base Gu
+		Tooltip: Pellet impact, pure attack
+		GuLevel: Mods.VerminLordMod.Items.PelletWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.PelletWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.PelletWeapon.UsesXQi
+	}
+
+	PersonBaseGu: {
+		DisplayName: Person Base Gu
+		Tooltip: Unfathomable heart, fear enemies
+		GuLevel: Mods.VerminLordMod.Items.PersonWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.PersonWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.PersonWeapon.UsesXQi
+	}
+
+	PoisonBaseGu: {
+		DisplayName: Poison Base Gu
+		Tooltip: Toxic mist, burn and slow
+		GuLevel: Mods.VerminLordMod.Items.PoisonWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.PoisonWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.PoisonWeapon.UsesXQi
+	}
+
+	PowerBaseGu: {
+		DisplayName: Power Base Gu
+		Tooltip: Overwhelming force, push enemies
+		GuLevel: Mods.VerminLordMod.Items.PowerWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.PowerWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.PowerWeapon.UsesXQi
+	}
+
+	PractiseBaseGu: {
+		DisplayName: Practise Base Gu
+		Tooltip: Condense true qi, pure attack
+		GuLevel: Mods.VerminLordMod.Items.PractiseWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.PractiseWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.PractiseWeapon.UsesXQi
+	}
+
+	QiBaseGu: {
+		DisplayName: Qi Base Gu
+		Tooltip: Qi blade, restore qi
+		GuLevel: Mods.VerminLordMod.Items.QiWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.QiWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.QiWeapon.UsesXQi
+	}
+
+	RuleBaseGu: {
+		DisplayName: Rule Base Gu
+		Tooltip: Rule binding, disarm enemies
+		GuLevel: Mods.VerminLordMod.Items.RuleWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.RuleWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.RuleWeapon.UsesXQi
+	}
+
+	ShadowBaseGu: {
+		DisplayName: Shadow Base Gu
+		Tooltip: Shadow strike, weaken targets
+		GuLevel: Mods.VerminLordMod.Items.ShadowWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.ShadowWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.ShadowWeapon.UsesXQi
+	}
+
+	SkyBaseGu: {
+		DisplayName: Sky Base Gu
+		Tooltip: Heavenly thunder, poison damage
+		GuLevel: Mods.VerminLordMod.Items.SkyWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.SkyWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.SkyWeapon.UsesXQi
+	}
+
+	SlaveBaseGu: {
+		DisplayName: Slave Base Gu
+		Tooltip: Enslave minds, charm enemies
+		GuLevel: Mods.VerminLordMod.Items.SlaveWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.SlaveWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.SlaveWeapon.UsesXQi
+	}
+
+	SoulBaseGu: {
+		DisplayName: Soul Base Gu
+		Tooltip: Soul fire, burn and fear
+		GuLevel: Mods.VerminLordMod.Items.SoulWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.SoulWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.SoulWeapon.UsesXQi
+	}
+
+	SpaceBaseGu: {
+		DisplayName: Space Base Gu
+		Tooltip: Space distortion, pull enemies
+		GuLevel: Mods.VerminLordMod.Items.SpaceWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.SpaceWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.SpaceWeapon.UsesXQi
+	}
+
+	StarBaseGu: {
+		DisplayName: Star Base Gu
+		Tooltip: Starlight mark, track targets
+		GuLevel: Mods.VerminLordMod.Items.StarWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.StarWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.StarWeapon.UsesXQi
+	}
+
+	StealingBaseGu: {
+		DisplayName: Stealing Base Gu
+		Tooltip: Steal life force, life steal
+		GuLevel: Mods.VerminLordMod.Items.StealingWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.StealingWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.StealingWeapon.UsesXQi
+	}
+
+	SuccessFailureBaseGu: {
+		DisplayName: Success Failure Base Gu
+		Tooltip: Success or failure, pure attack
+		GuLevel: Mods.VerminLordMod.Items.SuccessFailureWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.SuccessFailureWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.SuccessFailureWeapon.UsesXQi
+	}
+
+	SwordBaseGu: {
+		DisplayName: Sword Base Gu
+		Tooltip: Sword intent, armor shred
+		GuLevel: Mods.VerminLordMod.Items.SwordWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.SwordWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.SwordWeapon.UsesXQi
+	}
+
+	TacticalBaseGu: {
+		DisplayName: Tactical Base Gu
+		Tooltip: Tactical deployment, mark targets
+		GuLevel: Mods.VerminLordMod.Items.TacticalWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.TacticalWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.TacticalWeapon.UsesXQi
+	}
+
+	TimeBaseGu: {
+		DisplayName: Time Base Gu
+		Tooltip: Time dilation, slow enemies
+		GuLevel: Mods.VerminLordMod.Items.TimeWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.TimeWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.TimeWeapon.UsesXQi
+	}
+
+	UnrealBaseGu: {
+		DisplayName: Unreal Base Gu
+		Tooltip: Illusory and real, fear enemies
+		GuLevel: Mods.VerminLordMod.Items.UnrealWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.UnrealWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.UnrealWeapon.UsesXQi
+	}
+
+	VariationBaseGu: {
+		DisplayName: Variation Base Gu
+		Tooltip: Infinite variation, pure attack
+		GuLevel: Mods.VerminLordMod.Items.VariationWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.VariationWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.VariationWeapon.UsesXQi
+	}
+
+	VoiceBaseGu: {
+		DisplayName: Voice Base Gu
+		Tooltip: Sonic wave, silence enemies
+		GuLevel: Mods.VerminLordMod.Items.VoiceWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.VoiceWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.VoiceWeapon.UsesXQi
+	}
+
+	VoidBaseGu: {
+		DisplayName: Void Base Gu
+		Tooltip: Void devouring, pull and slow
+		GuLevel: Mods.VerminLordMod.Items.VoidWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.VoidWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.VoidWeapon.UsesXQi
+	}
+
+	WarBaseGu: {
+		DisplayName: War Base Gu
+		Tooltip: War spirit, pure attack
+		GuLevel: Mods.VerminLordMod.Items.WarWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.WarWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.WarWeapon.UsesXQi
+	}
+
+	WaterBaseGu: {
+		DisplayName: Water Base Gu
+		Tooltip: Water drop, slow enemies
+		GuLevel: Mods.VerminLordMod.Items.WaterWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.WaterWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.WaterWeapon.UsesXQi
+	}
+
+	WindBaseGu: {
+		DisplayName: Wind Base Gu
+		Tooltip: Wind blade, pure attack
+		GuLevel: Mods.VerminLordMod.Items.WindWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.WindWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.WindWeapon.UsesXQi
+	}
+
+	WisdomBaseGu: {
+		DisplayName: Wisdom Base Gu
+		Tooltip: Insightful eye, mark targets
+		GuLevel: Mods.VerminLordMod.Items.WisdomWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.WisdomWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.WisdomWeapon.UsesXQi
+	}
+
+	WoodBaseGu: {
+		DisplayName: Wood Base Gu
+		Tooltip: Vine entanglement, slow and pull
+		GuLevel: Mods.VerminLordMod.Items.WoodWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.WoodWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.WoodWeapon.UsesXQi
+	}
+
+	YinYangBaseGu: {
+		DisplayName: Yin Yang Base Gu
+		Tooltip: Yin and Yang, burn and heal
+		GuLevel: Mods.VerminLordMod.Items.YinYangWeapon.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.YinYangWeapon.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.YinYangWeapon.UsesXQi
 	}
 }
 

@@ -12,16 +12,16 @@ namespace VerminLordMod.Content.Projectiles
 {
     /// <summary>
     /// 血液滴弹幕 — 用于血手印销毁时的爆炸飞溅效果。
-    /// 
+    ///
     /// 使用 BaseBullet + LiquidTrailHelper 实现：
     /// - 受重力影响，碰到物块会反弹（最多 3 次），不能攻击 NPC
     /// - 带明显的液态血液拖尾，消失时产生血液飞溅粒子
+    ///
+    /// OnTileCollide 由 BaseBullet 自动委托给 BounceBehavior，
+    /// 无需手动重写。
     /// </summary>
     public class BloodDropProj : BaseBullet
     {
-        // BounceBehavior 引用，用于 OnTileCollide
-        private BounceBehavior _bounce;
-
         protected override void RegisterBehaviors()
         {
             // 1. 液态拖尾（LiquidTrail）— 明显的血液拖尾
@@ -41,7 +41,8 @@ namespace VerminLordMod.Content.Projectiles
             });
 
             // 3. 碰撞反弹（最多 3 次）
-            _bounce = new BounceBehavior
+            // OnTileCollide 由 BaseBullet 自动委托给 BounceBehavior.OnTileCollide
+            Behaviors.Add(new BounceBehavior
             {
                 MaxBounces = 3,
                 BounceFactor = 0.5f,
@@ -50,8 +51,7 @@ namespace VerminLordMod.Content.Projectiles
                 StopOnLowSpeed = true,
                 LowSpeedThreshold = 1f,
                 TimeLeftAfterStop = 20,
-            };
-            Behaviors.Add(_bounce);
+            });
 
             // 4. 死亡时血液飞溅
             Behaviors.Add(new LiquidBurstBehavior
@@ -97,16 +97,6 @@ namespace VerminLordMod.Content.Projectiles
                     maxFragments: 12, fragmentLife: 12,
                     sizeMultiplier: 0.35f);
             }
-        }
-
-        // 处理物块碰撞 — 调用 BounceBehavior 的反弹逻辑
-        public override bool OnTileCollide(Vector2 oldVelocity)
-        {
-            if (_bounce != null)
-            {
-                return _bounce.HandleTileCollide(Projectile, oldVelocity);
-            }
-            return true;
         }
     }
 }

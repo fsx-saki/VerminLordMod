@@ -71,5 +71,7 @@ namespace VerminLordMod.Common.BulletBehaviors
         {
             return true; // 使用默认绘制
         }
+
+        public bool? OnTileCollide(Projectile projectile, Vector2 oldVelocity) => null;
     }
 }

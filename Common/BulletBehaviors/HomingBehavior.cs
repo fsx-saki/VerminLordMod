@@ -94,6 +94,8 @@ namespace VerminLordMod.Common.BulletBehaviors
             return true;
         }
 
+        public bool? OnTileCollide(Projectile projectile, Vector2 oldVelocity) => null;
+
         private NPC FindNearestEnemy(Vector2 center, float range)
         {
             NPC nearest = null;

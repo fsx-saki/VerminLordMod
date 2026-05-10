@@ -82,6 +82,62 @@ Projectiles: {
 	// BloodDropProj.DisplayName: Blood Drop Proj
 	// BlueBirdCircleProj.DisplayName: Blue Bird Circle Proj
 	// IceShardProj.DisplayName: Ice Shard Proj
+	BanBaseProj.DisplayName: 禁制弹
+	BloodBaseProj.DisplayName: 血箭弹
+	BoneBaseProj.DisplayName: 骨刺弹
+	CharmBaseProj.DisplayName: 迷心弹
+	CloudBaseProj.DisplayName: 云烟弹
+	DarkBaseProj.DisplayName: 暗影弹
+	DrawBaseProj.DisplayName: 牵引弹
+	DreamBaseProj.DisplayName: 幻梦弹
+	EatingBaseProj.DisplayName: 吞噬弹
+	FireBaseProj.DisplayName: 火苗弹
+	FlyingBaseProj.DisplayName: 飞针弹
+	GoldBaseProj.DisplayName: 金锋弹
+	IceSnowBaseProj.DisplayName: 冰晶弹
+	InfoBaseProj.DisplayName: 探知弹
+	KillingBaseProj.DisplayName: 杀意弹
+	KnifeBaseProj.DisplayName: 飞刀弹
+	LifeDeathBaseProj.DisplayName: 生死弹
+	LightBaseProj.DisplayName: 光耀弹
+	LightningBaseProj.DisplayName: 电芒弹
+	LoveBaseProj.DisplayName: 情丝弹
+	LuckBaseProj.DisplayName: 运道弹
+	MoonBaseProj.DisplayName: 月刃弹
+	MudBaseProj.DisplayName: 泥沼弹
+	PelletBaseProj.DisplayName: 弹丸弹
+	PersonBaseProj.DisplayName: 人面弹
+	PoisonBaseProj.DisplayName: 毒雾弹
+	PowerBaseProj.DisplayName: 力道弹
+	PractiseBaseProj.DisplayName: 修炼弹
+	QiBaseProj.DisplayName: 气刃弹
+	RuleBaseProj.DisplayName: 律令弹
+	ShadowBaseProj.DisplayName: 影袭弹
+	SkyBaseProj.DisplayName: 天雷弹
+	SlaveBaseProj.DisplayName: 奴役弹
+	SoulBaseProj.DisplayName: 魂火弹
+	SpaceBaseProj.DisplayName: 空间弹
+	StarBaseProj.DisplayName: 星辉弹
+	StealingBaseProj.DisplayName: 窃取弹
+	SuccessFailureBaseProj.DisplayName: 成败弹
+	SwordBaseProj.DisplayName: 剑意弹
+	TacticalBaseProj.DisplayName: 战术弹
+	TimeBaseProj.DisplayName: 时光弹
+	UnrealBaseProj.DisplayName: 虚幻弹
+	VariationBaseProj.DisplayName: 变化弹
+	VoiceBaseProj.DisplayName: 音波弹
+	VoidBaseProj.DisplayName: 虚空弹
+	WarBaseProj.DisplayName: 战意弹
+	WaterBaseProj.DisplayName: 水弹
+	WindBaseProj.DisplayName: 风刃弹
+	WisdomBaseProj.DisplayName: 智慧弹
+	WoodBaseProj.DisplayName: 木藤弹
+	YinYangBaseProj.DisplayName: 阴阳弹
+	// FireRiseProj.DisplayName: Fire Rise Proj
+	// FireScatterProj.DisplayName: Fire Scatter Proj
+	// FireBombProj.DisplayName: Fire Bomb Proj
+	// FireRainProj.DisplayName: Fire Rain Proj
+	// FireChargeProj.DisplayName: Fire Charge Proj
 }
 
 Prefixes: {
@@ -2653,6 +2709,414 @@ Items: {
 		GuLevel: 转数: {0}
 		DisplayName: 测试匕首蛊
 		Tooltip: 测试用的火焰道匕首蛊
+	}
+
+	BanBaseGu: {
+		DisplayName: 禁制蛊
+		Tooltip: 封印禁制，沉默敌人
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	BloodBaseGu: {
+		DisplayName: 血箭蛊
+		Tooltip: 血道攻伐，灼伤吸血
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	BoneBaseGu: {
+		DisplayName: 骨刺蛊
+		Tooltip: 白骨穿刺，破甲伤敌
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	CharmBaseGu: {
+		DisplayName: 迷心蛊
+		Tooltip: 魅惑心神，令敌倒戈
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	CloudBaseGu: {
+		DisplayName: 云烟蛊
+		Tooltip: 烟云障目，致盲敌人
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	DarkBaseGu: {
+		DisplayName: 暗影蛊
+		Tooltip: 暗影侵蚀，虚弱目标
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	DrawBaseGu: {
+		DisplayName: 牵引蛊
+		Tooltip: 隔空摄物，牵引敌人
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	DreamBaseGu: {
+		DisplayName: 幻梦蛊
+		Tooltip: 梦魇缠身，恐惧敌人
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	EatingBaseGu: {
+		DisplayName: 吞噬蛊
+		Tooltip: 蚕食万物，持续灼伤
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	FireBaseGu: {
+		DisplayName: 火苗蛊
+		Tooltip: 星火燎原，变化万千\n在背包中右键点击切换攻击方式
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	FlyingBaseGu: {
+		DisplayName: 飞针蛊
+		Tooltip: 疾飞穿刺，纯粹攻击
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	GoldBaseGu: {
+		DisplayName: 金锋蛊
+		Tooltip: 金戈铁马，破甲伤敌
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	IceSnowBaseGu: {
+		DisplayName: 冰晶蛊
+		Tooltip: 冰封三尺，冻结敌人
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	InfoBaseGu: {
+		DisplayName: 探知蛊
+		Tooltip: 洞察先机，标记目标
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	KillingBaseGu: {
+		DisplayName: 杀意蛊
+		Tooltip: 杀机毕露，猛毒噬敌
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	KnifeBaseGu: {
+		DisplayName: 飞刀蛊
+		Tooltip: 刀光一闪，纯粹攻击
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	LifeDeathBaseGu: {
+		DisplayName: 生死蛊
+		Tooltip: 生死轮转，灼伤治疗
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	LightBaseGu: {
+		DisplayName: 光耀蛊
+		Tooltip: 光芒万丈，致盲敌人
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	LightningBaseGu: {
+		DisplayName: 电芒蛊
+		Tooltip: 电光石火，减速敌人
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	LoveBaseGu: {
+		DisplayName: 情丝蛊
+		Tooltip: 情丝缠绕，魅惑敌人
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	LuckBaseGu: {
+		DisplayName: 运道蛊
+		Tooltip: 气运流转，虚弱目标
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	MoonBaseGu: {
+		DisplayName: 月刃蛊
+		Tooltip: 月华斩击，标记目标
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	MudBaseGu: {
+		DisplayName: 泥沼蛊
+		Tooltip: 泥足深陷，减速敌人
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	PelletBaseGu: {
+		DisplayName: 弹丸蛊
+		Tooltip: 弹射冲击，纯粹攻击
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	PersonBaseGu: {
+		DisplayName: 人面蛊
+		Tooltip: 人心叵测，恐惧敌人
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	PoisonBaseGu: {
+		DisplayName: 毒雾蛊
+		Tooltip: 剧毒弥漫，灼伤减速
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	PowerBaseGu: {
+		DisplayName: 力道蛊
+		Tooltip: 力破千钧，击退敌人
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	PractiseBaseGu: {
+		DisplayName: 修炼蛊
+		Tooltip: 凝练真元，纯粹攻击
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	QiBaseGu: {
+		DisplayName: 气刃蛊
+		Tooltip: 真气化刃，回复真元
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	RuleBaseGu: {
+		DisplayName: 律令蛊
+		Tooltip: 规则束缚，缴械敌人
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	ShadowBaseGu: {
+		DisplayName: 影袭蛊
+		Tooltip: 如影随形，虚弱目标
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	SkyBaseGu: {
+		DisplayName: 天雷蛊
+		Tooltip: 天雷降世，猛毒噬敌
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	SlaveBaseGu: {
+		DisplayName: 奴役蛊
+		Tooltip: 奴役心智，魅惑敌人
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	SoulBaseGu: {
+		DisplayName: 魂火蛊
+		Tooltip: 灵魂灼烧，灼伤恐惧
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	SpaceBaseGu: {
+		DisplayName: 空间蛊
+		Tooltip: 空间扭曲，牵引敌人
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	StarBaseGu: {
+		DisplayName: 星辉蛊
+		Tooltip: 星辉标记，标记目标
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	StealingBaseGu: {
+		DisplayName: 窃取蛊
+		Tooltip: 窃取生机，吸血续航
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	SuccessFailureBaseGu: {
+		DisplayName: 成败蛊
+		Tooltip: 成败一线，纯粹攻击
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	SwordBaseGu: {
+		DisplayName: 剑意蛊
+		Tooltip: 剑意纵横，破甲伤敌
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	TacticalBaseGu: {
+		DisplayName: 战术蛊
+		Tooltip: 战术布局，标记目标
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	TimeBaseGu: {
+		DisplayName: 时光蛊
+		Tooltip: 时光迟滞，减速敌人
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	UnrealBaseGu: {
+		DisplayName: 虚幻蛊
+		Tooltip: 虚实莫测，恐惧敌人
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	VariationBaseGu: {
+		DisplayName: 变化蛊
+		Tooltip: 千变万化，纯粹攻击
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	VoiceBaseGu: {
+		DisplayName: 音波蛊
+		Tooltip: 音波震荡，沉默敌人
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	VoidBaseGu: {
+		DisplayName: 虚空蛊
+		Tooltip: 虚空吞噬，牵引减速
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	WarBaseGu: {
+		DisplayName: 战意蛊
+		Tooltip: 战意昂扬，纯粹攻击
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	WaterBaseGu: {
+		DisplayName: 水弹蛊
+		Tooltip: 水滴石穿，减速敌人
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	WindBaseGu: {
+		DisplayName: 风刃蛊
+		Tooltip: 风卷残云，纯粹攻击
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	WisdomBaseGu: {
+		DisplayName: 智慧蛊
+		Tooltip: 慧眼如炬，标记目标
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	WoodBaseGu: {
+		DisplayName: 木藤蛊
+		Tooltip: 藤蔓缠绕，减速牵引
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
+	}
+
+	YinYangBaseGu: {
+		DisplayName: 阴阳蛊
+		Tooltip: 阴阳相生，灼伤治疗
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元需求"
 	}
 }
 

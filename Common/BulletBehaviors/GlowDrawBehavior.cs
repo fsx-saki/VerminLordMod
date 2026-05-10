@@ -66,6 +66,8 @@ namespace VerminLordMod.Common.BulletBehaviors
 
         public void OnKill(Projectile projectile, int timeLeft) { }
 
+        public bool? OnTileCollide(Projectile projectile, Vector2 oldVelocity) => null;
+
         public bool PreDraw(Projectile projectile, ref Color lightColor, SpriteBatch spriteBatch)
         {
             if (_mainTexture == null) return true;

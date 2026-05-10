@@ -137,5 +137,7 @@ namespace VerminLordMod.Common.BulletBehaviors
             // Dust 由 Terraria 引擎自动绘制，无需额外处理
             return true;
         }
+
+        public bool? OnTileCollide(Projectile projectile, Vector2 oldVelocity) => null;
     }
 }
