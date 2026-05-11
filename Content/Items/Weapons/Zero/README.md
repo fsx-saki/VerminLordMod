@@ -4,7 +4,7 @@
 
 为 50 种道 + 阴阳道（共 51 种）各设计一种**基础蛊虫**，作为该道的代表性示例蛊虫。每种蛊虫应通过**弹道行为 + 命中效果 + 数值参数**的组合，体现该道的核心特点。
 
-## 架构概览（完全脱耦合）
+## 架构概览（完全脱耦合 ✅）
 
 ```
 蛊虫物品 (DaoWeapon + IOnHitEffectProvider)
@@ -41,38 +41,50 @@ Content/Projectiles/Zero/       ← 弹射物文件（51个）
     YinYangBaseProj.cs
 ```
 
-## 当前状态
+## 当前状态 ✅
 
-所有 51 个蛊虫物品 + 51 个弹射物已生成，C# 编译通过。但存在以下问题：
+所有 51 个蛊虫物品 + 51 个弹射物已生成，C# 编译通过。**脱耦合架构已验证成功**。
 
-### 问题 1：弹射物行为未差异化
+### 脱耦合核心设计（已验证）
 
-所有弹射物的 `RegisterBehaviors()` 都是相同的：
-```csharp
-protected override void RegisterBehaviors()
-{
-    Behaviors.Add(new AimBehavior(speed: 0f) { AutoRotate = true, RotationOffset = MathHelper.PiOver2 });
-}
+```
+┌──────────────────────────────────────────────────────────────────┐
+│  三层接口分离（每个接口独立定义、独立实现、独立测试）              │
+│                                                                    │
+│  IKinematicProvider      → 只管"怎么飞"（弹道参数）               │
+│  IOnHitEffectProvider    → 只管"打中后怎样"（命中效果）           │
+│  ITacticalTriggerProvider → 只管"什么条件下变强"（战术触发）      │
+│                                                                    │
+│  三个接口在 DaoWeapon 中聚合，但各自独立运作，互不依赖。           │
+│  修改弹道不影响命中效果，修改命中效果不影响战术触发。              │
+└──────────────────────────────────────────────────────────────────┘
 ```
 
-**需要改为**：每个道使用不同的行为组合。
+### 弹射物行为系统（组合模式）
 
-### 问题 2：命中效果参数未差异化
-
-所有蛊虫物品的 `IOnHitEffectProvider` 属性值都是相同的硬编码值：
-```csharp
-public float DoTDuration => 3f;
-public float DoTDamage => 4f;
-public float SlowPercent => 0.3f;
-public int SlowDuration => 120;
-// ... 全部相同
+```
+BaseBullet (sealed 生命周期)
+    │
+    ├─ RegisterBehaviors() ← 子类唯一需要重写的方法
+    │
+    └─ List<IBulletBehavior>
+         ├─ AimBehavior       (直线飞行)
+         ├─ HomingBehavior    (追踪)
+         ├─ WaveBehavior      (波浪)
+         ├─ GravityBehavior   (重力)
+         ├─ BounceBehavior    (反弹)
+         ├─ DustTrailBehavior (粒子拖尾)
+         ├─ GlowDrawBehavior  (发光)
+         ├─ TrailBehavior     (拖尾线)
+         ├─ DustKillBehavior  (死亡粒子)
+         └─ RotateBehavior    (旋转)
 ```
 
-**需要改为**：每个道根据其特点设置独特的参数值。
+### 待完成工作
 
-### 问题 3：占位贴图
-
-所有物品和弹射物使用 2×2 白色 PNG 占位贴图，需要替换为正式贴图。
+1. **弹射物行为差异化**：每个道的 `RegisterBehaviors()` 使用不同的行为组合
+2. **命中效果参数差异化**：每个道根据其特点设置独特的参数值
+3. **占位贴图替换**：替换 2×2 白色 PNG 为正式贴图
 
 ## 可用行为组件
 

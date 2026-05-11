@@ -66,6 +66,55 @@ namespace VerminLordMod.Content.Projectiles.Zero
                 SizeMultiplier = 0.6f,
                 NoGravity = false
             });
+
+            // 4. 周期性治愈粒子 — 飞行时散发柔和光点
+            Behaviors.Add(new PeriodicDustBehavior
+            {
+                SpawnChance = 0.5f,
+                DustType = DustID.HealingPlus,
+                Color = new Color(100, 255, 150, 150),
+                ScaleMin = 0.5f,
+                ScaleMax = 1.0f,
+                Speed = 0.5f,
+                SpreadRadius = 8f,
+                NoGravity = true,
+            });
+
+            // 5. 环境光 — 柔和绿光
+            Behaviors.Add(new GlowLightBehavior(new Vector3(0.2f, 0.6f, 0.3f)));
+
+            // 6. 命中治疗 — 按伤害比例回复玩家生命
+            Behaviors.Add(new HealOnHitBehavior(HealMultiplier)
+            {
+                HealDustCount = 8,
+                DustType = DustID.HealingPlus,
+                DustColor = new Color(100, 255, 150, 200),
+                DustScaleMin = 0.8f,
+                DustScaleMax = 1.5f,
+                DustSpeed = 3f,
+                DustSpreadRadius = 15f,
+            });
+
+            // 7. 销毁粉尘 — 消散时产生治愈水花
+            Behaviors.Add(new KillDustBurstBehavior
+            {
+                Layers = new System.Collections.Generic.List<KillDustBurstBehavior.DustBurstLayer>
+                {
+                    new KillDustBurstBehavior.DustBurstLayer
+                    {
+                        Count = 6,
+                        DustType = DustID.HealingPlus,
+                        Color = new Color(100, 255, 150, 180),
+                        ScaleMin = 0.5f,
+                        ScaleMax = 1.0f,
+                        NoGravity = true,
+                        SpreadRadius = 8f,
+                        UseCircularVelocity = true,
+                        SpeedMin = 0f,
+                        SpeedMax = 3f,
+                    },
+                }
+            });
         }
 
         public override void SetDefaults()
@@ -82,78 +131,6 @@ namespace VerminLordMod.Content.Projectiles.Zero
             Projectile.hostile = false;
             Projectile.DamageType = ModContent.GetInstance<InsectDamageClass>();
             Projectile.aiStyle = -1;
-        }
-
-        protected override void OnAI()
-        {
-            // 治愈粒子效果（柔和光点）
-            if (Main.rand.NextBool(2))
-            {
-                Vector2 pos = Projectile.Center + Main.rand.NextVector2Circular(8f, 8f);
-                Dust d = Dust.NewDustPerfect(
-                    pos,
-                    DustID.HealingPlus,
-                    Main.rand.NextVector2Circular(0.5f, 0.5f),
-                    0,
-                    new Color(100, 255, 150, 150),
-                    Main.rand.NextFloat(0.5f, 1.0f)
-                );
-                d.noGravity = true;
-            }
-
-            // 柔和绿光
-            Lighting.AddLight(Projectile.Center, 0.2f, 0.6f, 0.3f);
-        }
-
-        /// <summary>
-        /// 命中 NPC 时回复玩家生命
-        /// </summary>
-        protected override void OnHit(NPC target, NPC.HitInfo hit, int damageDone)
-        {
-            // 回复玩家生命
-            Player owner = Main.player[Projectile.owner];
-            if (owner != null && owner.active)
-            {
-                int healAmount = (int)(damageDone * HealMultiplier);
-                if (healAmount > 0)
-                {
-                    owner.statLife += healAmount;
-                    owner.HealEffect(healAmount);
-
-                    // 产生治愈光效
-                    for (int i = 0; i < 8; i++)
-                    {
-                        Vector2 vel = Main.rand.NextVector2Circular(3f, 3f);
-                        Dust d = Dust.NewDustPerfect(
-                            owner.Center + Main.rand.NextVector2Circular(15f, 15f),
-                            DustID.HealingPlus,
-                            vel,
-                            0,
-                            new Color(100, 255, 150, 200),
-                            Main.rand.NextFloat(0.8f, 1.5f)
-                        );
-                        d.noGravity = true;
-                    }
-                }
-            }
-        }
-
-        protected override void OnKilled(int timeLeft)
-        {
-            // 消散时产生治愈水花
-            for (int i = 0; i < 6; i++)
-            {
-                Vector2 vel = Main.rand.NextVector2Circular(3f, 3f);
-                Dust d = Dust.NewDustPerfect(
-                    Projectile.Center + Main.rand.NextVector2Circular(8f, 8f),
-                    DustID.HealingPlus,
-                    vel,
-                    0,
-                    new Color(100, 255, 150, 180),
-                    Main.rand.NextFloat(0.5f, 1.0f)
-                );
-                d.noGravity = true;
-            }
         }
     }
 }

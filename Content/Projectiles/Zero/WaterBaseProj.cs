@@ -68,25 +68,28 @@ namespace VerminLordMod.Content.Projectiles.Zero
                 SuppressDefaultDraw = false
             });
 
-            // 4. 粒子体崩解（命中/销毁时）— 生成 WaterDropProj 向四面八方飞散
-            //    使用 ExplosionSpawnHelper 模式，与 BloodHandprintsProj → BloodDropProj 一致
-            Behaviors.Add(new ParticleBurstBehavior
+            // 4. 法线崩解（命中/销毁时）— 沿法线方向泼洒 WaterDropProj
+            //    命中敌人时沿弹幕→敌人方向泼洒（模拟水球砸中表面）
+            //    timeout 时沿最后速度方向泼洒
+            Behaviors.Add(new NormalBurstBehavior
             {
                 ChildProjectileType = ModContent.ProjectileType<WaterDropProj>(),
-                Count = 12,
-                SpeedMin = 3f,
-                SpeedMax = 6f,
-                SpreadRadius = 5f,
-                AngleSpread = 0.4f,
+                Count = 16,
+                SpeedMin = 4f,
+                SpeedMax = 10f,
+                SpreadRadius = 6f,
+                SpreadAngle = 0.5f,
+                SideAngle = 1.0f,
+                BackSplashChance = 0.03f,
                 SpawnExtraDust = true,
-                ExtraDustCount = 8,
+                ExtraDustCount = 14,
                 DustType = DustID.MagicMirror,
-                DustColorStart = new Color(30, 100, 200, 200),
+                DustColorStart = new Color(30, 100, 200, 220),
                 DustColorEnd = new Color(30, 100, 200, 0),
                 DustScaleMin = 0.4f,
-                DustScaleMax = 0.8f,
+                DustScaleMax = 0.9f,
                 DustSpeedMin = 1f,
-                DustSpeedMax = 3f,
+                DustSpeedMax = 4f,
                 DustNoGravity = false,
             });
 

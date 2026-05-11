@@ -216,7 +216,9 @@ namespace VerminLordMod.Content.Trails
             {
                 float effectiveSpeed = MathF.Pow(speed, SpeedLifeExponent);
                 currentLife = (int)(AdaptiveTargetLength / effectiveSpeed);
-                currentLife = Math.Clamp(currentLife, MinParticleLife, ParticleLife);
+                int clampMin = Math.Min(MinParticleLife, ParticleLife);
+                int clampMax = Math.Max(MinParticleLife, ParticleLife);
+                currentLife = Math.Clamp(currentLife, clampMin, clampMax);
             }
 
             // 速度自适应密度

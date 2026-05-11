@@ -1,5 +1,6 @@
 using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 using VerminLordMod.Common.BulletBehaviors;
 using VerminLordMod.Content.DamageClasses;
@@ -7,13 +8,91 @@ using VerminLordMod.Content.DamageClasses;
 namespace VerminLordMod.Content.Projectiles.Zero
 {
     /// <summary>
-    /// Mud道基础弹幕
+    /// 土道基础弹幕 — 泥浆重力。
+    ///
+    /// 设计哲学：
+    /// 土道的本质是"重力 + 粘滞 + 厚重"。弹幕受强重力影响做抛物线运动，
+    /// 命中后产生径向泥浆爆散（SplashBehavior Radial 模式），
+    /// 视觉上以棕色泥浆拖尾和厚重感模拟泥球的砸击力。
+    ///
+    /// 运动方式：
+    /// - 抛物线运动（GravityBehavior）
+    /// - 命中后径向泥浆爆散
+    ///
+    /// 视觉效果：
+    /// - 棕色泥浆粒子拖尾
+    /// - 暗棕色发光
+    /// - 命中时径向泥浆爆散（SplashBehavior Radial 模式）
+    ///
+    /// 行为组合：
+    /// - AimBehavior: 初始速度
+    /// - GravityBehavior: 强重力抛物线
+    /// - DustTrailBehavior: 泥浆粒子拖尾
+    /// - GlowDrawBehavior: 暗棕色发光
+    /// - SplashBehavior(Radial): 命中时径向泥浆爆散
     /// </summary>
     public class MudBaseProj : BaseBullet
     {
+        private const float FlySpeed = 8f;
+        private const int MaxLife = 240;
+
         protected override void RegisterBehaviors()
         {
-            Behaviors.Add(new AimBehavior(speed: 0f) { AutoRotate = true, RotationOffset = MathHelper.PiOver2 });
+            // 1. 初始速度
+            Behaviors.Add(new AimBehavior(speed: FlySpeed)
+            {
+                AutoRotate = true,
+                RotationOffset = MathHelper.PiOver2,
+                EnableLight = true,
+                LightColor = new Vector3(0.2f, 0.15f, 0.05f)
+            });
+
+            // 2. 强重力抛物线
+            Behaviors.Add(new GravityBehavior(acceleration: 0.25f, maxFallSpeed: 14f)
+            {
+                AutoRotate = true,
+                RotationOffset = MathHelper.PiOver2
+            });
+
+            // 3. 泥浆粒子拖尾
+            Behaviors.Add(new DustTrailBehavior(DustID.Mud, spawnChance: 1)
+            {
+                DustScale = 0.6f,
+                VelocityMultiplier = 0.05f,
+                NoGravity = false,
+                DustAlpha = 150,
+                RandomSpeed = 0.2f
+            });
+
+            // 4. 暗棕色发光
+            Behaviors.Add(new GlowDrawBehavior
+            {
+                GlowColor = new Color(120, 80, 30, 120),
+                GlowBaseScale = 1.1f,
+                GlowLayers = 1,
+                GlowAlphaMultiplier = 0.2f,
+                EnableLight = true,
+                LightColor = new Vector3(0.25f, 0.18f, 0.06f)
+            });
+
+            // 5. 命中时径向泥浆爆散
+            Behaviors.Add(new SplashBehavior(SplashMode.Radial)
+            {
+                Count = 10,
+                SpeedMin = 1f,
+                SpeedMax = 4f,
+                SpreadRadius = 5f,
+                SpawnExtraDust = true,
+                ExtraDustCount = 12,
+                DustType = DustID.Mud,
+                DustColorStart = new Color(100, 70, 30, 200),
+                DustColorEnd = new Color(60, 40, 15, 0),
+                DustScaleMin = 0.3f,
+                DustScaleMax = 0.7f,
+                DustSpeedMin = 0.5f,
+                DustSpeedMax = 2.5f,
+                DustNoGravity = false,
+            });
         }
 
         public override void SetDefaults()
@@ -24,12 +103,40 @@ namespace VerminLordMod.Content.Projectiles.Zero
             Projectile.ignoreWater = true;
             Projectile.tileCollide = true;
             Projectile.penetrate = 1;
-            Projectile.timeLeft = 300;
+            Projectile.timeLeft = MaxLife;
             Projectile.alpha = 0;
             Projectile.friendly = true;
             Projectile.hostile = false;
             Projectile.DamageType = ModContent.GetInstance<InsectDamageClass>();
             Projectile.aiStyle = -1;
         }
+
+        protected override void OnHit(NPC target, NPC.HitInfo hit, int damageDone)
+        {
+            target.AddBuff(BuffID.Slow, 180);
+            target.AddBuff(BuffID.OgreSpit, 120);
+        }
+
+        protected override void OnKilled(int timeLeft)
+        {
+            for (int i = 0; i < 8; i++)
+            {
+                float angle = Main.rand.NextFloat(MathHelper.TwoPi);
+                float speed = Main.rand.NextFloat(0.5f, 2f);
+                Vector2 vel = angle.ToRotationVector2() * speed;
+
+                Dust d = Dust.NewDustPerfect(
+                    Projectile.Center,
+                    DustID.Mud,
+                    vel,
+                    0,
+                    new Color(100, 70, 30, 150),
+                    Main.rand.NextFloat(0.4f, 0.7f)
+                );
+                d.noGravity = false;
+            }
+        }
+
+        protected override bool OnTileCollided(Vector2 oldVelocity) => true;
     }
 }

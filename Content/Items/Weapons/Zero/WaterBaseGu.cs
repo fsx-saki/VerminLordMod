@@ -17,15 +17,16 @@ namespace VerminLordMod.Content.Items.Weapons.Zero
     /// <summary>
     /// 水道基础蛊 — 水弹蛊
     /// 水道技术储备库的武器端实现。
-    /// 聚焦水系特性：水弹、水波扩散、水柱喷射、漩涡吸附、治疗回复。
+    /// 聚焦水系特性：水弹、漩涡吸附、治疗回复、摆动追踪、法阵连击、圆环汇聚。
     /// 手持时按 R 键切换当前攻击模式。
     ///
-    /// 攻击模式（5种截然不同的水系效果）：
+    /// 攻击模式（6种截然不同的水系效果）：
     ///   模式0 - 水弹：发射基础水弹，命中后水花爆裂
-    ///   模式1 - 水波：发射水波弹，穿透敌人，扩散式伤害
-    ///   模式2 - 水柱：持续喷射水柱，路径上产生水花
-    ///   模式3 - 漩涡：在鼠标位置生成漩涡，吸附并伤害敌人
-    ///   模式4 - 治疗：发射治疗水弹，命中敌人时回复玩家生命
+    ///   模式1 - 漩涡：在鼠标位置生成漩涡，吸附并伤害敌人
+    ///   模式2 - 治疗：发射治疗水弹，命中敌人时回复玩家生命
+    ///   模式3 - 摆弹：发射小水弹，小角度左右摆动并以弧线追踪鼠标指针
+    ///   模式4 - 法阵：在鼠标位置生成水法阵，从四周汇聚水弹攻击法阵中心
+    ///   模式5 - 圆环汇聚：从鼠标周围大圆环上随机位置生成水弹，向鼠标汇聚
     /// </summary>
     public class WaterBaseGu : WaterWeapon, IOnHitEffectProvider
     {
@@ -44,10 +45,11 @@ namespace VerminLordMod.Content.Items.Weapons.Zero
         private static readonly string[] AttackModeNames = new[]
         {
             "水弹",         // 模式0：基础水弹，水花爆裂
-            "水波",         // 模式1：水波扩散，穿透敌人
-            "水柱",         // 模式2：持续喷射水柱
-            "漩涡",         // 模式3：漩涡吸附，持续范围伤害
-            "治疗",         // 模式4：治疗水弹，命中回复生命
+            "漩涡",         // 模式1：漩涡吸附，持续范围伤害
+            "治疗",         // 模式2：治疗水弹，命中回复生命
+            "摆弹",         // 模式3：摆动水弹，弧线追踪鼠标
+            "法阵",         // 模式4：水法阵，汇聚水弹连击
+            "圆环汇聚",     // 模式5：圆环随机生成水弹，向鼠标汇聚
         };
 
         /// <summary>所有攻击模式对应的弹幕类型</summary>
@@ -57,30 +59,33 @@ namespace VerminLordMod.Content.Items.Weapons.Zero
         private readonly float[] _modeShootSpeeds = new[]
         {
             10f,  // 模式0：水弹
-            6f,   // 模式1：水波（较慢，扩散感）
-            14f,  // 模式2：水柱（高速喷射）
-            0f,   // 模式3：漩涡（在鼠标位置直接生成）
-            8f,   // 模式4：治疗（中等速度）
+            0f,   // 模式1：漩涡（在鼠标位置直接生成）
+            8f,   // 模式2：治疗（中等速度）
+            9f,   // 模式3：摆弹（摆动追踪，中等速度）
+            0f,   // 模式4：法阵（在鼠标位置直接生成）
+            0f,   // 模式5：圆环汇聚（在鼠标位置周围圆环上生成）
         };
 
         /// <summary>所有攻击模式对应的伤害倍率</summary>
         private readonly float[] _modeDamageMultipliers = new[]
         {
             1.0f,  // 模式0：水弹
-            0.8f,  // 模式1：水波（穿透，多次伤害）
-            0.6f,  // 模式2：水柱（持续伤害）
-            0.5f,  // 模式3：漩涡（持续范围伤害）
-            0.7f,  // 模式4：治疗（兼顾伤害和治疗）
+            0.5f,  // 模式1：漩涡（持续范围伤害）
+            0.7f,  // 模式2：治疗（兼顾伤害和治疗）
+            0.75f, // 模式3：摆弹（小水弹，追踪，伤害略低）
+            0.6f,  // 模式4：法阵（法阵本体无直接伤害，汇聚水弹多次伤害）
+            0.7f,  // 模式5：圆环汇聚（多弹汇聚，单发伤害略低）
         };
 
         /// <summary>所有攻击模式对应的使用间隔（帧）</summary>
         private readonly int[] _modeUseTimes = new[]
         {
             20,  // 模式0：水弹，快速
-            25,  // 模式1：水波，中等
-            10,  // 模式2：水柱，快速喷射
-            30,  // 模式3：漩涡，较慢
-            25,  // 模式4：治疗，中等
+            30,  // 模式1：漩涡，较慢
+            25,  // 模式2：治疗，中等
+            18,  // 模式3：摆弹，快速（小水弹，快速连发）
+            35,  // 模式4：法阵，较慢（法阵持续 2.5 秒，需要冷却）
+            14,  // 模式5：圆环汇聚，快速
         };
 
         // ===== IOnHitEffectProvider =====
@@ -115,11 +120,12 @@ namespace VerminLordMod.Content.Items.Weapons.Zero
             // 初始化弹幕类型数组
             _modeProjectileTypes = new[]
             {
-                ModContent.ProjectileType<WaterBaseProj>(),       // 模式0：水弹
-                ModContent.ProjectileType<WaterWaveProj>(),       // 模式1：水波
-                ModContent.ProjectileType<WaterStreamProj>(),     // 模式2：水柱
-                ModContent.ProjectileType<WaterVortexProj>(),     // 模式3：漩涡
-                ModContent.ProjectileType<WaterHealProj>(),       // 模式4：治疗
+                ModContent.ProjectileType<WaterBaseProj>(),          // 模式0：水弹
+                ModContent.ProjectileType<WaterVortexProj>(),        // 模式1：漩涡
+                ModContent.ProjectileType<WaterHealProj>(),          // 模式2：治疗
+                ModContent.ProjectileType<WaterSwingProj>(),         // 模式3：摆弹
+                ModContent.ProjectileType<WaterFormationProj>(),     // 模式4：法阵
+                ModContent.ProjectileType<WaterRingConvergeProj>(),  // 模式5：圆环汇聚
             };
 
             // 默认使用模式0
@@ -172,8 +178,11 @@ namespace VerminLordMod.Content.Items.Weapons.Zero
         {
             base.ModifyTooltips(tooltips);
 
-            // 显示当前攻击模式
-            string modeName = AttackModeNames[attackMode];
+            int mode = attackMode;
+            if (mode < 0 || mode >= AttackModeNames.Length)
+                mode = 0;
+
+            string modeName = AttackModeNames[mode];
             tooltips.Add(new TooltipLine(Mod, "AttackMode", $"当前攻击方式：[c/66CCFF:{modeName}]"));
             tooltips.Add(new TooltipLine(Mod, "SwitchHint", "手持时按 [c/66CCFF:R] 键切换攻击方式"));
         }
@@ -190,11 +199,20 @@ namespace VerminLordMod.Content.Items.Weapons.Zero
             return base.CanUseItem(player);
         }
 
+        /// <summary>
+        /// 判断当前模式是否需要在鼠标位置直接生成弹幕（而非从玩家位置发射）
+        /// </summary>
+        private bool IsMouseSpawnMode(int mode)
+        {
+            // 模式1（漩涡）、模式4（法阵）、模式5（圆环汇聚）在鼠标位置生成
+            return mode == 1 || mode == 4 || mode == 5;
+        }
+
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {
-            if (attackMode == 3)
+            if (IsMouseSpawnMode(attackMode))
             {
-                // 模式3：漩涡 — 在鼠标位置生成漩涡
+                // 在鼠标位置生成弹幕
                 Vector2 mousePos = Main.MouseWorld;
 
                 Projectile.NewProjectile(
@@ -210,11 +228,10 @@ namespace VerminLordMod.Content.Items.Weapons.Zero
                 return false; // 阻止默认发射
             }
 
-            // 模式0/1/2/4：使用默认发射逻辑
+            // 模式0/2/3：使用默认发射逻辑
             // 模式0：WaterBaseProj（水弹）— 抛物线弹道，受重力影响，碰物块即破
-            // 模式1：WaterWaveProj（水波）— 沿鼠标方向飞行，穿透敌人
-            // 模式2：WaterStreamProj（水柱）— 沿鼠标方向高速喷射
-            // 模式4：WaterHealProj（治疗）— 沿鼠标方向飞行，命中回复生命
+            // 模式2：WaterHealProj（治疗）— 沿鼠标方向飞行，命中回复生命
+            // 模式3：WaterSwingProj（摆弹）— 沿鼠标方向发射，SwingHomingBehavior 接管后摆动追踪
             return base.Shoot(player, source, position, velocity, type, damage, knockback);
         }
 
@@ -231,7 +248,9 @@ namespace VerminLordMod.Content.Items.Weapons.Zero
             base.LoadData(tag);
             attackMode = tag.GetInt("attackMode");
 
-            // 恢复弹幕类型
+            if (attackMode < 0 || attackMode >= AttackModeNames.Length)
+                attackMode = 0;
+
             if (_modeProjectileTypes != null && attackMode >= 0 && attackMode < _modeProjectileTypes.Length)
             {
                 Item.shoot = _modeProjectileTypes[attackMode];

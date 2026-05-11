@@ -143,9 +143,8 @@ Projectiles: {
 	// FireMeteorProj.DisplayName: Fire Meteor Proj
 	// FireStreamProj.DisplayName: Fire Stream Proj
 	// WaterHealProj.DisplayName: Water Heal Proj
-	// WaterStreamProj.DisplayName: Water Stream Proj
 	// WaterVortexProj.DisplayName: Water Vortex Proj
-	// WaterWaveProj.DisplayName: Water Wave Proj
+	// WaterRingConvergeProj.DisplayName: Water Ring Converge Proj
 	// IceBlizzardProj.DisplayName: Ice Blizzard Proj
 	// IceExplosionProj.DisplayName: Ice Explosion Proj
 	// IceFieldProj.DisplayName: Ice Field Proj
@@ -156,6 +155,24 @@ Projectiles: {
 	// WindWallProj.DisplayName: Wind Wall Proj
 	// BurstHostProj.DisplayName: Burst Host Proj
 	// WaterDropProj.DisplayName: Water Drop Proj
+	// WaterFormationBoltProj.DisplayName: Water Formation Bolt Proj
+	// WaterFormationProj.DisplayName: Water Formation Proj
+	// WaterSwingProj.DisplayName: Water Swing Proj
+	// CrystalBaseProj.DisplayName: Crystal Base Proj
+	// CrystalShardProj.DisplayName: Crystal Shard Proj
+	// IceBaseProj.DisplayName: Ice Base Proj
+	// MetalBaseProj.DisplayName: Metal Base Proj
+	// WaterArcProj.DisplayName: Water Arc Proj
+	// WaterSlashProj.DisplayName: Water Slash Proj
+	// WaterWaveProj.DisplayName: Water Wave Proj
+	// DarkNovaProj.DisplayName: Dark Nova Proj
+	// DarkTentacleProj.DisplayName: Dark Tentacle Proj
+	// DarkVortexProj.DisplayName: Dark Vortex Proj
+	// LightningBoltProj.DisplayName: Lightning Bolt Proj
+	// LightningChainProj.DisplayName: Lightning Chain Proj
+	// LightningEMPProj.DisplayName: Lightning E M P Proj
+	// LightningStormProj.DisplayName: Lightning Storm Proj
+	// WaterFormationDragonProj.DisplayName: Water Formation Dragon Proj
 }
 
 Prefixes: {

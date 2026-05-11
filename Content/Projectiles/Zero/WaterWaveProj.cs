@@ -1,3 +1,4 @@
+using System;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -9,134 +10,225 @@ using VerminLordMod.Content.DamageClasses;
 namespace VerminLordMod.Content.Projectiles.Zero
 {
     /// <summary>
-    /// 水道水波弹 — 仿真水波扩散弹幕。
+    /// 水道贴地水波 — 沿地面推进的波浪，横扫路径上的敌人。
     ///
-    /// 设计哲学（与水弹 WaterBaseProj 一致）：
-    /// - 本体由粒子组成（WaveBodyBehavior），不依赖贴图
-    /// - 粒子在二维平面上铺开，模拟水波扩散效果
-    /// - 拖尾使用 WaterTrailBehavior（水滴 + 泡泡）
-    /// - 崩解使用 ParticleBurstBehavior → WaterDropProj
-    /// - 所有行为可配置、可复用
+    /// 设计哲学：
+    /// 水道的"势"——水往低处流，贴地推进的水波模拟了潮汐/洪水的推进感。
+    /// 宽大的碰撞箱 + 贴图拖尾 = 视觉上的"浪潮"效果。
+    ///
+    /// 运动方式：
+    /// - 沿鼠标方向贴地推进
+    /// - 使用 GravityBehavior 保持贴地
+    /// - 宽大的碰撞箱横扫敌人
     ///
     /// 视觉效果：
-    /// - 波浪形粒子体在二维平面上铺开（沿飞行方向 × 垂直方向）
-    /// - 纵波（疏密波）：粒子沿传播方向前后振动
-    /// - 横向涟漪：垂直方向粒子左右摆动，模拟水波扩散
-    /// - 粒子从中心向边缘逐渐缩小淡出
-    /// - 拖尾为水波经过后留下的水滴和泡沫
-    /// - 碰到物块时崩解为 WaterDropProj 飞溅
+    /// - 使用 LiquidTrailBehavior（贴图碎片拖尾），水蓝渐变
+    /// - 拖尾碎片有浮力（向上飘），模拟浪花飞沫
+    /// - 命中时沿法线泼洒 WaterDropProj
+    /// - 发光层增强视觉
+    ///
+    /// 行为组合：
+    /// - AimBehavior: 沿鼠标方向飞行
+    /// - GravityBehavior: 贴地（轻重力）
+    /// - LiquidTrailBehavior: 贴图碎片拖尾
+    /// - NormalBurstBehavior: 命中时沿法线泼洒水滴
+    /// - GlowDrawBehavior: 发光绘制
     /// </summary>
     public class WaterWaveProj : BaseBullet
     {
+        /// <summary>飞行速度</summary>
+        private const float FlySpeed = 8f;
+
+        /// <summary>最大存活时间（帧）</summary>
+        private const int MaxLife = 90;
+
+        /// <summary>波浪宽度（碰撞箱宽度）</summary>
+        private const int WaveWidth = 40;
+
+        /// <summary>波浪高度（碰撞箱高度）</summary>
+        private const int WaveHeight = 20;
+
         protected override void RegisterBehaviors()
         {
-            // 1. 直线飞行（较慢，水波扩散感）
-            Behaviors.Add(new AimBehavior(speed: 6f)
+            // 1. 沿鼠标方向飞行
+            Behaviors.Add(new AimBehavior(speed: FlySpeed)
             {
                 AutoRotate = true,
-                RotationOffset = MathHelper.PiOver2
+                RotationOffset = 0f,
+                EnableLight = true,
+                LightColor = new Vector3(0.08f, 0.25f, 0.5f)
             });
 
-            // 2. 波浪形粒子体 — 水波本体（二维网格排列）
-            var waveBody = new WaveBodyBehavior
+            // 2. 轻重力（贴地）
+            Behaviors.Add(new GravityBehavior(acceleration: 0.08f, maxFallSpeed: 6f)
             {
-                WaveLength = 60f,           // 波长（一个完整疏密周期）
-                Amplitude = 10f,            // 纵向振动幅度（前后偏移）
-                Width = 80f,                // 水波宽度（垂直方向铺开范围）
-                Rows = 8,                   // 垂直方向粒子行数
-                ParticlesPerRow = 24,       // 每行粒子数（沿飞行方向）
-                ParticleSize = 1.0f,        // 粒子大小
-                WaveSpeed = 0.1f,           // 波动速度
-                DecayRate = 0.35f,          // 边缘衰减
-                CompressionScale = 1.6f,    // 密部粒子缩放
-                RarefactionScale = 0.4f,    // 疏部粒子缩放
-                VerticalDecay = 0.6f,       // 垂直方向边缘衰减
-                RippleAmplitude = 4f,       // 横向涟漪幅度
-                ColorStart = new Color(30, 100, 200, 200),
-                ColorEnd = new Color(20, 60, 150, 0),
-                Alpha = 1.0f,
-                EnableLight = true,
-                LightColor = new Vector3(0.1f, 0.3f, 0.6f),
-                AutoGenerateTexture = true,
-                TextureSize = 12,
-            };
-            Behaviors.Add(waveBody);
+                AutoRotate = false
+            });
 
-            // 3. 水系拖尾 — 水波经过后留下的水滴和泡沫
-            Behaviors.Add(new WaterTrailBehavior
+            // 3. 贴图碎片拖尾（水蓝渐变 + 浮力，模拟浪花飞沫）
+            Behaviors.Add(new LiquidTrailBehavior
             {
-                MaxFragments = 80,
-                ParticleLife = 25,
+                MaxFragments = 60,
+                FragmentLife = 20,
                 SizeMultiplier = 0.5f,
-                SpawnChance = 0.8f,
-                SplashSpeed = 0.5f,
-                SplashAngle = 0.3f,
-                InertiaFactor = 0.05f,
-                RandomSpread = 1.0f,
-                Gravity = 0.15f,
-                AirResistance = 0.97f,
-                BubbleChance = 0.4f,
-                BubbleSizeMultiplier = 1.8f,
-                ColorStart = new Color(30, 100, 200, 200),
-                ColorEnd = new Color(30, 100, 200, 0),
+                SpawnInterval = 1,
+                AdaptiveDensity = true,
+                AdaptiveSpeedThreshold = 3f,
+                AdaptiveDensityFactor = 4f,
+                AdaptiveLife = true,
+                AdaptiveTargetLength = 90f,
+                SpeedLifeExponent = 0.3f,
+                MinFragmentLife = 4,
+                ColorStart = new Color(40, 140, 255, 220),
+                ColorEnd = new Color(20, 60, 180, 0),
+                Buoyancy = 0.06f,
+                AirResistance = 0.95f,
+                InertiaFactor = 0.4f,
+                SplashFactor = 0.25f,
+                SplashAngle = 0.6f,
+                RandomSpread = 0.8f,
                 AutoDraw = true,
                 SuppressDefaultDraw = false
             });
 
-            // 4. 崩解（命中/销毁时）— 生成 WaterDropProj 向四面八方飞散
-            Behaviors.Add(new ParticleBurstBehavior
+            // 4. 发光绘制
+            Behaviors.Add(new GlowDrawBehavior
+            {
+                GlowColor = new Color(60, 160, 255, 100),
+                GlowBaseScale = 1.4f,
+                GlowLayers = 2,
+                GlowAlphaMultiplier = 0.2f,
+                EnableLight = true,
+                LightColor = new Vector3(0.08f, 0.25f, 0.5f)
+            });
+
+            // 5. 法线崩解（命中时沿法线泼洒水滴）
+            Behaviors.Add(new NormalBurstBehavior
             {
                 ChildProjectileType = ModContent.ProjectileType<WaterDropProj>(),
-                Count = 10,
+                Count = 12,
                 SpeedMin = 2f,
-                SpeedMax = 5f,
+                SpeedMax = 6f,
                 SpreadRadius = 8f,
-                AngleSpread = 0.5f,
+                SpreadAngle = 0.5f,
+                SideAngle = 1.0f,
+                BackSplashChance = 0.03f,
                 SpawnExtraDust = true,
-                ExtraDustCount = 12,
+                ExtraDustCount = 10,
                 DustType = DustID.MagicMirror,
-                DustColorStart = new Color(30, 100, 200, 200),
-                DustColorEnd = new Color(30, 100, 200, 0),
+                DustColorStart = new Color(40, 140, 255, 200),
+                DustColorEnd = new Color(20, 60, 180, 0),
                 DustScaleMin = 0.3f,
                 DustScaleMax = 0.7f,
                 DustSpeedMin = 1f,
-                DustSpeedMax = 4f,
+                DustSpeedMax = 3f,
                 DustNoGravity = false,
             });
-
-            // 5. 液体反应（融入水中）
-            Behaviors.Add(new LiquidReactionBehavior
-            {
-                EnableMerge = true,
-                EnableVaporize = false,
-                EnableShimmerBounce = true,
-                MergeDustCount = 12,
-                MergeDustType = DustID.Water
-            });
-
-            // 6. 阻止默认贴图绘制 — 本体由 WaveBodyBehavior 的粒子组成
-            Behaviors.Add(new SuppressDrawBehavior());
         }
 
         public override void SetDefaults()
         {
-            Projectile.width = 18;
-            Projectile.height = 18;
-            Projectile.scale = 1.2f;
+            Projectile.width = WaveWidth;
+            Projectile.height = WaveHeight;
+            Projectile.scale = 1.3f;
             Projectile.ignoreWater = true;
             Projectile.tileCollide = true;
-            Projectile.penetrate = -1; // 穿透所有敌人
-            Projectile.timeLeft = 180;
-            Projectile.alpha = 0;
+            Projectile.penetrate = 8;
+            Projectile.timeLeft = MaxLife;
+            Projectile.alpha = 20;
             Projectile.friendly = true;
             Projectile.hostile = false;
             Projectile.DamageType = ModContent.GetInstance<InsectDamageClass>();
             Projectile.aiStyle = -1;
+            Projectile.usesLocalNPCImmunity = true;
+            Projectile.localNPCHitCooldown = 15;
+        }
+
+        protected override void OnSpawned(IEntitySource source)
+        {
+            base.OnSpawned(source);
+        }
+
+        protected override void OnAI()
+        {
+            // 贴地时产生地面水花粒子
+            if (Projectile.velocity.Y >= 0 && Main.rand.NextBool(2))
+            {
+                // 检测下方是否有地面
+                int tileX = (int)(Projectile.Center.X / 16f);
+                int tileY = (int)(Projectile.Center.Y / 16f) + 1;
+                if (tileY < Main.maxTilesY)
+                {
+                    Tile tile = Main.tile[tileX, tileY];
+                    if (tile != null && tile.HasTile && Main.tileSolid[tile.TileType])
+                    {
+                        // 在地面产生水花
+                        Vector2 groundPos = new Vector2(Projectile.Center.X, tileY * 16f);
+                        for (int i = 0; i < 2; i++)
+                        {
+                            Dust d = Dust.NewDustPerfect(
+                                groundPos + new Vector2(Main.rand.NextFloat(-WaveWidth/2f, WaveWidth/2f), 0),
+                                DustID.MagicMirror,
+                                new Vector2(Main.rand.NextFloat(-1f, 1f), Main.rand.NextFloat(-3f, -1f)),
+                                0,
+                                new Color(60, 180, 255, 150),
+                                Main.rand.NextFloat(0.4f, 0.8f)
+                            );
+                            d.noGravity = false;
+                        }
+                    }
+                }
+            }
+
+            // 飞行时产生浪花飞沫
+            if (Main.rand.NextBool(3))
+            {
+                Vector2 pos = Projectile.Center + new Vector2(
+                    Main.rand.NextFloat(-WaveWidth/2f, WaveWidth/2f),
+                    Main.rand.NextFloat(-WaveHeight/2f, WaveHeight/2f)
+                );
+                Dust d = Dust.NewDustPerfect(
+                    pos,
+                    DustID.MagicMirror,
+                    new Vector2(Main.rand.NextFloat(-0.5f, 0.5f), Main.rand.NextFloat(-2f, -0.5f)),
+                    0,
+                    new Color(80, 200, 255, 120),
+                    Main.rand.NextFloat(0.3f, 0.6f)
+                );
+                d.noGravity = true;
+            }
+        }
+
+        protected override void OnKilled(int timeLeft)
+        {
+            // 波浪消散时产生水花
+            for (int i = 0; i < 15; i++)
+            {
+                Vector2 pos = Projectile.Center + new Vector2(
+                    Main.rand.NextFloat(-WaveWidth/2f, WaveWidth/2f),
+                    Main.rand.NextFloat(-WaveHeight/2f, WaveHeight/2f)
+                );
+                float angle = Main.rand.NextFloat(-MathHelper.PiOver2, MathHelper.PiOver2);
+                float speed = Main.rand.NextFloat(1f, 4f);
+                Vector2 vel = new Vector2(
+                    (float)Math.Cos(angle) * speed * (Projectile.velocity.X > 0 ? 1 : -1),
+                    (float)Math.Sin(angle) * speed - Main.rand.NextFloat(1f, 3f)
+                );
+
+                Dust d = Dust.NewDustPerfect(
+                    pos,
+                    DustID.MagicMirror,
+                    vel,
+                    0,
+                    new Color(60, 180, 255, 180),
+                    Main.rand.NextFloat(0.4f, 0.9f)
+                );
+                d.noGravity = false;
+            }
         }
 
         /// <summary>
-        /// 碰到物块时销毁弹幕（水波撞到障碍物崩解）。
-        /// ParticleBurstBehavior.OnKill 自动触发崩解效果。
+        /// 碰到物块时销毁。
         /// </summary>
         protected override bool OnTileCollided(Vector2 oldVelocity) => true;
     }
