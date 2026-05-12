@@ -12,48 +12,87 @@ namespace VerminLordMod.Content.Projectiles.Zero
     /// 冰道冰霜领域 — 滞留冰霜区域弹幕。
     /// 冰道技术储备库的"冰霜领域"技术：
     /// - 在指定位置生成冰霜区域，固定不动
-    /// - 持续对范围内的敌人造成伤害
-    /// - 附加减速 + 冻结效果
-    /// - 产生冰霜粒子效果
-    /// - 持续一段时间后消失
+    /// - 由 icesnow + icestar 两种贴图的大型粒子体构成视觉效果
+    /// - 持续对范围内的敌人造成伤害 + 冻结效果
+    /// - 持续泼洒冰碎片（IceFragmentProj）
+    /// - 持续 5 秒后消失
     ///
     /// 行为组合：
-    /// - 完全由 OnAI 控制（无移动行为）
-    /// - 每帧检测范围内的敌人 + 减速 + 伤害
-    /// - 冰霜粒子效果
+    /// - ParticleBodyBehavior ×2: icesnow + icestar 大型粒子体
+    /// - StationaryBehavior: 固定不动
+    /// - OnAI: 每帧检测范围内的敌人 + 减速 + 伤害 + 泼洒冰碎片
     /// </summary>
     public class IceFieldProj : BaseBullet
     {
-        /// <summary>冰霜领域持续时间（帧）</summary>
-        private const int Duration = 180; // 3秒
+        /// <summary>冰霜领域持续时间（帧）5秒</summary>
+        private const int Duration = 300;
 
         /// <summary>伤害检测间隔（帧）</summary>
         private const int HitInterval = 15;
 
         /// <summary>伤害半径（像素）</summary>
-        private const float HitRadius = 80f;
+        private const float HitRadius = 100f;
 
         /// <summary>减速范围（像素）</summary>
-        private const float SlowRange = 100f;
+        private const float SlowRange = 120f;
+
+        /// <summary>冰碎片泼洒间隔（帧）</summary>
+        private const int FragmentInterval = 20;
+
+        /// <summary>每次泼洒的冰碎片数量</summary>
+        private const int FragmentBurst = 3;
 
         /// <summary>计时器</summary>
         private int _timer = 0;
 
         protected override void RegisterBehaviors()
         {
-            // 冰霜领域不需要移动行为，完全由 OnAI 控制
+            // 1. icesnow 大型粒子体（雪状冰晶）
+            Behaviors.Add(new ParticleBodyBehavior(particleCount: 44, bodyRadius: 50f)
+            {
+                ParticleSize = 0.8f,
+                ColorStart = new Color(160, 220, 255, 200),
+                ColorEnd = new Color(160, 220, 255, 80),
+                SwirlSpeed = 0.02f,
+                ReturnForce = 0.03f,
+                JitterStrength = 0.4f,
+                ShrinkOverLife = true,
+                StretchOnMove = false,
+                EnableLight = false,
+                Alpha = 0.9f,
+                TexturePath = "VerminLordMod/Content/Trails/IceTrail/IceTrailSnow",
+            });
+
+            // 2. icestar 大型粒子体（星状冰晶）
+            Behaviors.Add(new ParticleBodyBehavior(particleCount: 32, bodyRadius: 40f)
+            {
+                ParticleSize = 0.6f,
+                ColorStart = new Color(200, 240, 255, 220),
+                ColorEnd = new Color(200, 240, 255, 100),
+                SwirlSpeed = -0.03f,
+                ReturnForce = 0.03f,
+                JitterStrength = 0.4f,
+                ShrinkOverLife = true,
+                StretchOnMove = false,
+                EnableLight = false,
+                Alpha = 0.8f,
+                TexturePath = "VerminLordMod/Content/Trails/IceTrail/IceTrailStar",
+            });
+
+            // 3. 固定不动
+            Behaviors.Add(new StationaryBehavior());
         }
 
         public override void SetDefaults()
         {
-            Projectile.width = 50;
-            Projectile.height = 50;
+            Projectile.width = 80;
+            Projectile.height = 80;
             Projectile.scale = 1f;
             Projectile.ignoreWater = true;
             Projectile.tileCollide = false;
             Projectile.penetrate = -1;
             Projectile.timeLeft = Duration;
-            Projectile.alpha = 100;
+            Projectile.alpha = 0;
             Projectile.friendly = true;
             Projectile.hostile = false;
             Projectile.DamageType = ModContent.GetInstance<InsectDamageClass>();
@@ -72,15 +111,6 @@ namespace VerminLordMod.Content.Projectiles.Zero
         {
             _timer++;
 
-            // 透明度随持续时间变化（淡入淡出）
-            float lifeRatio = _timer / (float)Duration;
-            if (lifeRatio < 0.15f)
-                Projectile.alpha = (int)(200 * (1f - lifeRatio / 0.15f));
-            else if (lifeRatio > 0.7f)
-                Projectile.alpha = (int)(200 * ((lifeRatio - 0.7f) / 0.3f));
-            else
-                Projectile.alpha = 50;
-
             // 减速范围内的敌人
             SlowEnemies();
 
@@ -90,11 +120,14 @@ namespace VerminLordMod.Content.Projectiles.Zero
                 DamageEnemiesInRange();
             }
 
-            // 冰霜粒子效果
-            SpawnIceParticles();
+            // 间隔泼洒冰碎片
+            if (_timer % FragmentInterval == 0)
+            {
+                SpawnFragments();
+            }
 
             // 光照
-            Lighting.AddLight(Projectile.Center, 0.1f, 0.3f, 0.7f);
+            Lighting.AddLight(Projectile.Center, 0.15f, 0.35f, 0.75f);
         }
 
         /// <summary>
@@ -110,10 +143,10 @@ namespace VerminLordMod.Content.Projectiles.Zero
                     float dist = Vector2.Distance(Projectile.Center, npc.Center);
                     if (dist <= SlowRange)
                     {
-                        // 附加减速 + 冻结效果
                         npc.AddBuff(BuffID.Slow, 30);
                         npc.AddBuff(BuffID.Chilled, 30);
                         npc.AddBuff(BuffID.Frostburn, 30);
+                        npc.AddBuff(BuffID.Frozen, 15);
                     }
                 }
             }
@@ -150,54 +183,39 @@ namespace VerminLordMod.Content.Projectiles.Zero
         }
 
         /// <summary>
-        /// 生成冰霜粒子效果
+        /// 泼洒冰碎片（IceFragmentProj）
         /// </summary>
-        private void SpawnIceParticles()
+        private void SpawnFragments()
         {
-            // 冰霜环
-            for (int i = 0; i < 3; i++)
+            int fragType = ModContent.ProjectileType<IceFragmentProj>();
+            IEntitySource source = Main.player[Projectile.owner]?.GetSource_FromThis();
+
+            for (int i = 0; i < FragmentBurst; i++)
             {
                 float angle = Main.rand.NextFloat(MathHelper.TwoPi);
-                float radius = Main.rand.NextFloat(20f, 50f);
-                Vector2 pos = Projectile.Center + angle.ToRotationVector2() * radius;
+                float speed = Main.rand.NextFloat(2f, 5f);
+                Vector2 vel = angle.ToRotationVector2() * speed;
+                vel.Y -= Main.rand.NextFloat(0.5f, 2f);
 
-                Dust d = Dust.NewDustPerfect(
-                    pos,
-                    DustID.Ice,
-                    angle.ToRotationVector2() * Main.rand.NextFloat(0.3f, 1.0f),
-                    50,
-                    new Color(180, 220, 255, 150),
-                    Main.rand.NextFloat(0.4f, 0.8f)
+                Projectile.NewProjectile(
+                    source,
+                    Projectile.Center + Main.rand.NextVector2Circular(30f, 30f),
+                    vel,
+                    fragType,
+                    0,
+                    0f,
+                    Projectile.owner
                 );
-                d.noGravity = true;
-            }
-
-            // 冰晶下落
-            if (_timer % 4 == 0)
-            {
-                Vector2 fallPos = Projectile.Center + Main.rand.NextVector2Circular(40f, 40f);
-                Dust d = Dust.NewDustPerfect(
-                    fallPos,
-                    DustID.Ice,
-                    new Vector2(
-                        Main.rand.NextFloat(-0.3f, 0.3f),
-                        Main.rand.NextFloat(0.5f, 1.5f)
-                    ),
-                    50,
-                    new Color(200, 230, 255, 120),
-                    Main.rand.NextFloat(0.3f, 0.6f)
-                );
-                d.noGravity = false;
             }
         }
 
         protected override void OnKilled(int timeLeft)
         {
             // 消失时产生冰晶爆散
-            for (int i = 0; i < 15; i++)
+            for (int i = 0; i < 20; i++)
             {
                 float angle = Main.rand.NextFloat(MathHelper.TwoPi);
-                float speed = Main.rand.NextFloat(2f, 5f);
+                float speed = Main.rand.NextFloat(2f, 6f);
                 Vector2 vel = angle.ToRotationVector2() * speed;
 
                 Dust d = Dust.NewDustPerfect(
@@ -206,10 +224,13 @@ namespace VerminLordMod.Content.Projectiles.Zero
                     vel,
                     0,
                     new Color(180, 220, 255, 200),
-                    Main.rand.NextFloat(0.6f, 1.2f)
+                    Main.rand.NextFloat(0.6f, 1.4f)
                 );
                 d.noGravity = true;
             }
+
+            // 消失时泼洒一波冰碎片
+            SpawnFragments();
         }
     }
 }

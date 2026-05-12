@@ -157,7 +157,7 @@ namespace VerminLordMod.Common.Systems
                 CurrentOfficeHolders[evt.Faction][evt.VacatedRole] = successorType;
 
                 // 聊天栏提示
-                string factionName = GuWorldSystem.GetFactionDisplayName(evt.Faction);
+                string factionName = WorldStateMachine.GetFactionDisplayName(evt.Faction);
                 string roleName = GetRoleDisplayName(evt.VacatedRole);
                 string successorName = GetNPCTypeDisplayName(successorType);
 
@@ -168,7 +168,7 @@ namespace VerminLordMod.Common.Systems
             else
             {
                 // 无继任者：家族功能停摆
-                string factionName = GuWorldSystem.GetFactionDisplayName(evt.Faction);
+                string factionName = WorldStateMachine.GetFactionDisplayName(evt.Faction);
                 string roleName = GetRoleDisplayName(evt.VacatedRole);
 
                 Main.NewText(
@@ -291,7 +291,7 @@ namespace VerminLordMod.Common.Systems
                 lines.Add($"  {roleName}{status}");
             }
 
-            return $"{GuWorldSystem.GetFactionDisplayName(faction)}权力结构：\n" + string.Join("\n", lines);
+            return $"{WorldStateMachine.GetFactionDisplayName(faction)}权力结构：\n" + string.Join("\n", lines);
         }
 
         // ============================================================

@@ -95,7 +95,7 @@ namespace VerminLordMod.Content.Items.Debuggers
 
             foreach (var (fid, rel) in worldPlayer.FactionRelations)
             {
-                string displayName = GuWorldSystem.GetFactionDisplayName(fid);
+                string displayName = WorldStateMachine.GetFactionDisplayName(fid);
                 string levelName = GuiEnumHelper.GetRepLevelName(rel.GetLevel());
                 Color color = rel.GetLevel() switch
                 {
@@ -118,7 +118,7 @@ namespace VerminLordMod.Content.Items.Debuggers
             Main.NewText($"--- 蛊师数据 ---", Color.Cyan);
 
             // 基础属性
-            string factionName = GuWorldSystem.GetFactionDisplayName(guMaster.GetFaction());
+            string factionName = WorldStateMachine.GetFactionDisplayName(guMaster.GetFaction());
             string rankName = GuiEnumHelper.GetRankName(guMaster.GetRank());
             string personalityName = GuiEnumHelper.GetPersonalityName(guMaster.GetPersonality());
             Main.NewText($"势力: {factionName} | 修为: {rankName} | 性格: {personalityName}", Color.White);

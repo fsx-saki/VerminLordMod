@@ -123,7 +123,7 @@ namespace VerminLordMod.Common.Players
 
             // 声望变化通知
             string direction = points >= 0 ? $"+{points}" : $"{points}";
-            string msg = $"{GuWorldSystem.GetFactionDisplayName(faction)}声望 {direction}";
+            string msg = $"{WorldStateMachine.GetFactionDisplayName(faction)}声望 {direction}";
             if (!string.IsNullOrEmpty(reason)) msg += $" ({reason})";
             Main.NewText(msg, points >= 0 ? Color.Green : Color.Red);
 
@@ -143,7 +143,7 @@ namespace VerminLordMod.Common.Players
             foreach (var (otherId, otherRel) in FactionRelations)
             {
                 if (otherId == faction) continue;
-                int relationBetween = GuWorldSystem.GetRelation(faction, otherId);
+                int relationBetween = WorldStateMachine.GetRelation(faction, otherId);
 
                 // 友方家族：声望变化减半传递
                 if (relationBetween > 30)
@@ -169,7 +169,7 @@ namespace VerminLordMod.Common.Players
             if (FactionRelations.TryGetValue(issuer, out var rel))
                 rel.HasBounty = true;
 
-            Main.NewText($"你被{GuWorldSystem.GetFactionDisplayName(issuer)}悬赏了！赏金 {amount} 元石",
+            Main.NewText($"你被{WorldStateMachine.GetFactionDisplayName(issuer)}悬赏了！赏金 {amount} 元石",
                 Color.OrangeRed);
         }
 
@@ -192,7 +192,7 @@ namespace VerminLordMod.Common.Players
 
             if (GetRepLevel(faction) < RepLevel.Friendly)
             {
-                Main.NewText($"声望不够，{GuWorldSystem.GetFactionDisplayName(faction)}拒绝结盟",
+                Main.NewText($"声望不够，{WorldStateMachine.GetFactionDisplayName(faction)}拒绝结盟",
                     Color.Yellow);
                 return false;
             }
@@ -201,7 +201,7 @@ namespace VerminLordMod.Common.Players
             if (FactionRelations.TryGetValue(faction, out var rel))
                 rel.IsAllied = true;
 
-            Main.NewText($"你与{GuWorldSystem.GetFactionDisplayName(faction)}结盟了！",
+            Main.NewText($"你与{WorldStateMachine.GetFactionDisplayName(faction)}结盟了！",
                 Color.Green);
             return true;
         }
@@ -228,7 +228,7 @@ namespace VerminLordMod.Common.Players
             if (FactionRelations.TryGetValue(betrayed, out var rel))
                 rel.IsAllied = false;
 
-            Main.NewText($"你背叛了{GuWorldSystem.GetFactionDisplayName(betrayed)}！",
+            Main.NewText($"你背叛了{WorldStateMachine.GetFactionDisplayName(betrayed)}！",
                 Color.Purple);
             return true;
         }

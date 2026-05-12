@@ -468,7 +468,7 @@ public class ReputationEffect : DialogueEffect
         else
             worldPlayer.RemoveReputation(Faction, -Amount, Reason);
         string change = Amount >= 0 ? $"+{Amount}" : $"{Amount}";
-        Main.NewText($"与 {GuWorldSystem.GetFactionDisplayName(Faction)} 的声望 {change}！", Color.LightBlue);
+        Main.NewText($"与 {WorldStateMachine.GetFactionDisplayName(Faction)} 的声望 {change}！", Color.LightBlue);
     }
 }
 

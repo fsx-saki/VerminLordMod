@@ -15,8 +15,18 @@ namespace VerminLordMod.Common.DialogueTree;
 /// </summary>
 public abstract class DialogueCondition
 {
+    /// <summary> 是否取反条件结果 </summary>
+    public bool Invert { get; set; } = false;
+
     /// <summary> 评估条件是否满足 </summary>
-    public abstract bool Evaluate(Player player, NPC npc, BeliefState belief);
+    public abstract bool EvaluateCore(Player player, NPC npc, BeliefState belief);
+
+    /// <summary> 评估条件（自动处理 Invert） </summary>
+    public bool Evaluate(Player player, NPC npc, BeliefState belief)
+    {
+        bool result = EvaluateCore(player, npc, belief);
+        return Invert ? !result : result;
+    }
 }
 
 // ============================================================
@@ -42,7 +52,7 @@ public class BeliefCondition : DialogueCondition
         Value = value;
     }
 
-    public override bool Evaluate(Player player, NPC npc, BeliefState belief)
+    public override bool EvaluateCore(Player player, NPC npc, BeliefState belief)
     {
         if (belief == null) return false;
 
@@ -80,7 +90,7 @@ public class ReputationCondition : DialogueCondition
         MinReputation = minReputation;
     }
 
-    public override bool Evaluate(Player player, NPC npc, BeliefState belief)
+    public override bool EvaluateCore(Player player, NPC npc, BeliefState belief)
     {
         var worldPlayer = player.GetModPlayer<GuWorldPlayer>();
         if (worldPlayer.FactionRelations.TryGetValue(Faction, out var rel))
@@ -103,7 +113,7 @@ public class RealmCondition : DialogueCondition
         MinGuLevel = minGuLevel;
     }
 
-    public override bool Evaluate(Player player, NPC npc, BeliefState belief)
+    public override bool EvaluateCore(Player player, NPC npc, BeliefState belief)
     {
         var qiRealm = player.GetModPlayer<QiRealmPlayer>();
         return qiRealm.GuLevel >= MinGuLevel;
@@ -124,7 +134,7 @@ public class HasItemCondition : DialogueCondition
         MinStack = minStack;
     }
 
-    public override bool Evaluate(Player player, NPC npc, BeliefState belief)
+    public override bool EvaluateCore(Player player, NPC npc, BeliefState belief)
     {
         return player.HasItem(ItemType) && player.CountItem(ItemType) >= MinStack;
     }
@@ -142,7 +152,7 @@ public class AttitudeCondition : DialogueCondition
         RequiredAttitude = requiredAttitude;
     }
 
-    public override bool Evaluate(Player player, NPC npc, BeliefState belief)
+    public override bool EvaluateCore(Player player, NPC npc, BeliefState belief)
     {
         if (npc.ModNPC is GuMasterBase guMaster)
         {
@@ -164,10 +174,9 @@ public class FlagCondition : DialogueCondition
         FlagName = flagName;
     }
 
-    public override bool Evaluate(Player player, NPC npc, BeliefState belief)
+    public override bool EvaluateCore(Player player, NPC npc, BeliefState belief)
     {
-        // 标记存储在对话会话中，由 DialogueSession 提供
-        return false; // 由外部覆盖
+        return false;
     }
 }
 
@@ -185,7 +194,7 @@ public class AndCondition : DialogueCondition
         Conditions = conditions;
     }
 
-    public override bool Evaluate(Player player, NPC npc, BeliefState belief)
+    public override bool EvaluateCore(Player player, NPC npc, BeliefState belief)
     {
         foreach (var c in Conditions)
         {
@@ -206,7 +215,7 @@ public class OrCondition : DialogueCondition
         Conditions = conditions;
     }
 
-    public override bool Evaluate(Player player, NPC npc, BeliefState belief)
+    public override bool EvaluateCore(Player player, NPC npc, BeliefState belief)
     {
         foreach (var c in Conditions)
         {
@@ -227,7 +236,7 @@ public class NotCondition : DialogueCondition
         Condition = condition;
     }
 
-    public override bool Evaluate(Player player, NPC npc, BeliefState belief)
+    public override bool EvaluateCore(Player player, NPC npc, BeliefState belief)
     {
         return !Condition.Evaluate(player, npc, belief);
     }
@@ -249,7 +258,7 @@ public class HasYuanSCondition : DialogueCondition
         MinYuanS = minYuanS;
     }
 
-    public override bool Evaluate(Player player, NPC npc, BeliefState belief)
+    public override bool EvaluateCore(Player player, NPC npc, BeliefState belief)
     {
         int yuanSItemType = ModContent.ItemType<Content.Items.Consumables.YuanS>();
         return player.CountItem(yuanSItemType) >= MinYuanS;
@@ -270,7 +279,7 @@ public class HasGuCondition : DialogueCondition
         MinCount = minCount;
     }
 
-    public override bool Evaluate(Player player, NPC npc, BeliefState belief)
+    public override bool EvaluateCore(Player player, NPC npc, BeliefState belief)
     {
         return player.CountItem(GuItemType) >= MinCount;
     }
@@ -289,7 +298,7 @@ public class TimeCondition : DialogueCondition
         RequiredPeriod = requiredPeriod;
     }
 
-    public override bool Evaluate(Player player, NPC npc, BeliefState belief)
+    public override bool EvaluateCore(Player player, NPC npc, BeliefState belief)
     {
         double time = Main.time;
         bool isDay = Main.dayTime;
@@ -311,7 +320,7 @@ public class RealmGapCondition : DialogueCondition
 {
     public enum GapDirection { PlayerHigher, NPCHigher, WithinRange }
     public GapDirection Direction;
-    public int MaxGap = 3; // 最大差距等级数
+    public int MaxGap = 3;
 
     public RealmGapCondition() { }
 
@@ -321,7 +330,7 @@ public class RealmGapCondition : DialogueCondition
         MaxGap = maxGap;
     }
 
-    public override bool Evaluate(Player player, NPC npc, BeliefState belief)
+    public override bool EvaluateCore(Player player, NPC npc, BeliefState belief)
     {
         var qiRealm = player.GetModPlayer<QiRealmPlayer>();
         int playerLevel = qiRealm.GuLevel;
@@ -356,10 +365,8 @@ public class QuestCompletedCondition : DialogueCondition
         QuestName = questName;
     }
 
-    public override bool Evaluate(Player player, NPC npc, BeliefState belief)
+    public override bool EvaluateCore(Player player, NPC npc, BeliefState belief)
     {
-        // 任务系统预留 - 后续集成到 QuestSystem
-        // 目前返回 false，表示任务未完成
         return false;
     }
 }
@@ -376,7 +383,7 @@ public class PersonalityCondition : DialogueCondition
         RequiredPersonality = requiredPersonality;
     }
 
-    public override bool Evaluate(Player player, NPC npc, BeliefState belief)
+    public override bool EvaluateCore(Player player, NPC npc, BeliefState belief)
     {
         if (npc.ModNPC is GuMasterBase guMaster)
         {

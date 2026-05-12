@@ -10,67 +10,65 @@ namespace VerminLordMod.Content.Projectiles.Zero
 {
     /// <summary>
     /// 冰道冰锥散射 — 扇形散射冰锥弹幕。
-    /// 冰道技术储备库的"冰锥散射"技术：
-    /// - 发射后分裂成多个冰锥，呈扇形散射
-    /// - 每个冰锥穿透敌人
-    /// - 冰晶粒子拖尾
-    /// - 命中时冰晶爆散 + 冻结效果
     ///
     /// 行为组合：
     /// - AimBehavior: 直线飞行
-    /// - DustTrailBehavior: 冰晶粒子拖尾
-    /// - DustKillBehavior: 命中时冰晶爆散
+    /// - BounceBehavior: 物块反弹 2 次后销毁
+    /// - IceTrailBehavior: 冰系拖尾（十字星 + 雪片）
+    /// - SuppressDrawBehavior: 隐藏默认贴图
+    /// - OnKilled: 碎裂成 IceFragmentProj 冰碎片弹幕
     /// </summary>
     public class IceShardScatterProj : BaseBullet
     {
-        /// <summary>飞行速度</summary>
         private const float FlySpeed = 12f;
-
-        /// <summary>散射角度（弧度）</summary>
-        private const float ScatterAngle = 0.4f; // 约 23 度
-
-        /// <summary>散射数量</summary>
+        private const float ScatterAngle = 0.4f;
         private const int ShardCount = 5;
+
+        private const int KillFragmentCount = 6;
+        private const float KillFragmentSpeed = 4f;
 
         protected override void RegisterBehaviors()
         {
-            // 1. 直线飞行
             Behaviors.Add(new AimBehavior(speed: FlySpeed)
             {
                 AutoRotate = true,
                 RotationOffset = MathHelper.PiOver2
             });
 
-            // 2. 冰晶粒子拖尾
-            Behaviors.Add(new DustTrailBehavior(DustID.Ice, spawnChance: 1)
+            // 反弹 2 次后销毁，触发 OnKill → OnKilled 爆出冰碎片
+            Behaviors.Add(new BounceBehavior(maxBounces: 2, bounceFactor: 0.6f)
             {
-                DustScale = 0.6f,
-                VelocityMultiplier = 0.1f,
-                NoGravity = true,
-                DustAlpha = 150,
-                RandomSpeed = 0.3f
+                KillOnMaxBounces = true,
+                TriggerKillOnMaxBounces = true,
             });
 
-            // 3. 命中时冰晶爆散
-            Behaviors.Add(new DustKillBehavior(
-                dustType: DustID.Ice,
-                dustCount: 12,
-                dustSpeed: 3f,
-                dustScale: 0.8f
-            )
+            Behaviors.Add(new IceTrailBehavior
             {
-                NoGravity = true
+                MaxStars = 25,
+                StarLife = 30,
+                StarSpawnInterval = 2,
+                StarSize = 0.7f,
+                MaxSnowflakes = 80,
+                SnowflakeLife = 28,
+                SnowflakeSize = 0.35f,
+                SnowflakeClusterSize = 5,
+                SnowflakeSpawnChance = 0.7f,
+                SnowflakeGravity = 0.1f,
+                AutoDraw = true,
+                SuppressDefaultDraw = false,
             });
+
+            Behaviors.Add(new SuppressDrawBehavior());
         }
 
         public override void SetDefaults()
         {
-            Projectile.width = 10;
-            Projectile.height = 10;
-            Projectile.scale = 0.8f;
+            Projectile.width = 14;
+            Projectile.height = 14;
+            Projectile.scale = 1.2f;
             Projectile.ignoreWater = true;
             Projectile.tileCollide = true;
-            Projectile.penetrate = 2; // 穿透 2 个敌人
+            Projectile.penetrate = 2;
             Projectile.timeLeft = 120;
             Projectile.alpha = 0;
             Projectile.friendly = true;
@@ -81,27 +79,43 @@ namespace VerminLordMod.Content.Projectiles.Zero
 
         protected override void OnAI()
         {
-            // 冰晶微光
             Lighting.AddLight(Projectile.Center, 0.2f, 0.4f, 0.8f);
         }
 
         protected override void OnHit(NPC target, NPC.HitInfo hit, int damageDone)
         {
-            // 附加冻结效果
             target.AddBuff(BuffID.Frostburn, 90);
             target.AddBuff(BuffID.Slow, 120);
         }
 
-        /// <summary>
-        /// 生成散射冰锥（由 Weapon 调用）
-        /// </summary>
+        protected override void OnKilled(int timeLeft)
+        {
+            int fragType = ModContent.ProjectileType<IceFragmentProj>();
+            IEntitySource source = Main.player[Projectile.owner]?.GetSource_FromThis();
+
+            for (int i = 0; i < KillFragmentCount; i++)
+            {
+                Vector2 vel = Main.rand.NextVector2Circular(KillFragmentSpeed, KillFragmentSpeed);
+                vel.Y -= Main.rand.NextFloat(1f, KillFragmentSpeed * 0.5f);
+
+                Projectile.NewProjectile(
+                    source,
+                    Projectile.Center,
+                    vel,
+                    fragType,
+                    0,
+                    0f,
+                    Projectile.owner
+                );
+            }
+        }
+
         public static void SpawnScatter(Player player, IEntitySource source, Vector2 position, Vector2 baseVelocity, int type, int damage, float knockback)
         {
             float baseAngle = baseVelocity.ToRotation();
 
             for (int i = 0; i < ShardCount; i++)
             {
-                // 计算散射角度（均匀分布）
                 float offset = (i - (ShardCount - 1) / 2f) * ScatterAngle / (ShardCount - 1);
                 float angle = baseAngle + offset;
                 Vector2 vel = angle.ToRotationVector2() * FlySpeed;

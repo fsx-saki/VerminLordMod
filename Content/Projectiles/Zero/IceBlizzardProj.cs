@@ -14,12 +14,12 @@ namespace VerminLordMod.Content.Projectiles.Zero
     /// - 在鼠标位置上方生成大量冰晶
     /// - 冰晶受重力影响下落
     /// - 穿透敌人
-    /// - 冰晶粒子拖尾
+    /// - 较细的冰系拖尾（十字星 + 雪片 + 虚影）
     /// - 落地时冰晶爆散
     ///
     /// 行为组合：
     /// - GravityBehavior: 重力下落
-    /// - DustTrailBehavior: 冰晶粒子拖尾
+    /// - IceTrailBehavior: 较细的冰系拖尾
     /// - DustKillBehavior: 落地时冰晶爆散
     /// </summary>
     public class IceBlizzardProj : BaseBullet
@@ -39,17 +39,40 @@ namespace VerminLordMod.Content.Projectiles.Zero
                 RotationOffset = MathHelper.PiOver2
             });
 
-            // 2. 冰晶粒子拖尾
-            Behaviors.Add(new DustTrailBehavior(DustID.Ice, spawnChance: 1)
+            // 2. 较细的冰系拖尾（十字星 + 雪片 + 虚影）
+            Behaviors.Add(new IceTrailBehavior
             {
-                DustScale = 0.5f,
-                VelocityMultiplier = 0.1f,
-                NoGravity = true,
-                DustAlpha = 130,
-                RandomSpeed = 0.2f
+                // GhostTrail: 更细更淡
+                GhostMaxPositions = 6,
+                GhostRecordInterval = 3,
+                GhostWidthScale = 0.15f,
+                GhostLengthScale = 1.2f,
+                GhostAlpha = 0.4f,
+                GhostColor = new Color(140, 210, 255, 160),
+                // 十字星星: 更小更少
+                MaxStars = 15,
+                StarLife = 20,
+                StarSpawnInterval = 4,
+                StarSize = 0.3f,
+                StarColor = new Color(180, 230, 255, 200),
+                // 雪片: 更细更少
+                MaxSnowflakes = 40,
+                SnowflakeLife = 18,
+                SnowflakeSize = 0.15f,
+                SnowflakeClusterSize = 3,
+                SnowflakeSpawnChance = 0.5f,
+                SnowflakeGravity = 0.06f,
+                AutoDraw = true,
+                SuppressDefaultDraw = false,
             });
 
-            // 3. 落地时冰晶爆散
+            // 3. 碰到物块时销毁
+            Behaviors.Add(new KillOnContactBehavior
+            {
+                KillOnHitNPC = false, // 保留穿透敌人的能力
+            });
+
+            // 4. 落地时冰晶爆散
             Behaviors.Add(new DustKillBehavior(
                 dustType: DustID.Ice,
                 dustCount: 10,
@@ -63,9 +86,9 @@ namespace VerminLordMod.Content.Projectiles.Zero
 
         public override void SetDefaults()
         {
-            Projectile.width = 8;
-            Projectile.height = 8;
-            Projectile.scale = 0.7f;
+            Projectile.width = 18;
+            Projectile.height = 18;
+            Projectile.scale = 1.2f;
             Projectile.ignoreWater = true;
             Projectile.tileCollide = true;
             Projectile.penetrate = -1; // 无限穿透

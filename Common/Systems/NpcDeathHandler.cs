@@ -179,7 +179,7 @@ namespace VerminLordMod.Common.Systems
                     });
 
                     Main.NewText(
-                        $"{GuWorldSystem.GetFactionDisplayName(deathEvent.Faction)} 对 {killer.name} 发布了悬赏！赏金 {bountyReward} 元石",
+                        $"{WorldStateMachine.GetFactionDisplayName(deathEvent.Faction)} 对 {killer.name} 发布了悬赏！赏金 {bountyReward} 元石",
                         Color.Orange);
                 }
             }

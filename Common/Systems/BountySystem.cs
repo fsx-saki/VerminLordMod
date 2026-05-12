@@ -110,7 +110,7 @@ namespace VerminLordMod.Common.Systems
                 if (target.active && target.whoAmI == Main.myPlayer)
                 {
                     Main.NewText(
-                        $"你被{GuWorldSystem.GetFactionDisplayName(evt.PostingFaction)}悬赏了！赏金 {evt.RewardAmount} 元石",
+                        $"你被{WorldStateMachine.GetFactionDisplayName(evt.PostingFaction)}悬赏了！赏金 {evt.RewardAmount} 元石",
                         Color.OrangeRed);
                 }
             }
@@ -145,7 +145,7 @@ namespace VerminLordMod.Common.Systems
                 CompletedBounties.Add(bounty);
 
                 Main.NewText(
-                    $"{killer.name}已死亡，{GuWorldSystem.GetFactionDisplayName(bounty.PostingFaction)}的悬赏暂时失效。",
+                    $"{killer.name}已死亡，{WorldStateMachine.GetFactionDisplayName(bounty.PostingFaction)}的悬赏暂时失效。",
                     Color.Gray);
             }
 
@@ -213,7 +213,7 @@ namespace VerminLordMod.Common.Systems
             {
                 bounty.IsActive = false;
                 Main.NewText(
-                    $"{GuWorldSystem.GetFactionDisplayName(bounty.PostingFaction)}的悬赏已被取消。",
+                    $"{WorldStateMachine.GetFactionDisplayName(bounty.PostingFaction)}的悬赏已被取消。",
                     Color.Gray);
             }
         }
@@ -256,7 +256,7 @@ namespace VerminLordMod.Common.Systems
                     if (Main.netMode == NetmodeID.SinglePlayer)
                     {
                         Main.NewText(
-                            $"{GuWorldSystem.GetFactionDisplayName(bounty.PostingFaction)}对某玩家的悬赏已过期。",
+                            $"{WorldStateMachine.GetFactionDisplayName(bounty.PostingFaction)}对某玩家的悬赏已过期。",
                             Color.Gray);
                     }
                 }
@@ -401,7 +401,7 @@ namespace VerminLordMod.Common.Systems
                 _ => "其他"
             };
 
-            return $"[{GuWorldSystem.GetFactionDisplayName(PostingFaction)}] 悬赏 {targetName}：{RewardAmount} 真元（{reasonStr}）";
+            return $"[{WorldStateMachine.GetFactionDisplayName(PostingFaction)}] 悬赏 {targetName}：{RewardAmount} 真元（{reasonStr}）";
         }
     }
 }

@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using VerminLordMod.Content.Items.Weapons;
 using VerminLordMod.Content.Items.Weapons.Daos;
@@ -144,7 +145,7 @@ namespace VerminLordMod.Common.BulletBehaviors
                         {
                             player.statLife = 0;
                             player.KillMe(PlayerDeathReason.ByCustomReason(
-                                player.name + "的血被蛊虫吸干了"), 10, 0);
+                                NetworkText.FromLiteral(player.name + "的血被蛊虫吸干了")), 10, 0);
                         }
 
                         OnBloodCost(player);

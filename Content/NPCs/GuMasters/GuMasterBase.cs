@@ -33,7 +33,7 @@ namespace VerminLordMod.Content.NPCs.GuMasters
         public abstract GuRank GetRank();
         public abstract GuPersonality GetPersonality();
 
-        public virtual string GuMasterDisplayName => GuWorldSystem.GetFactionDisplayName(GetFaction()) + "蛊师";
+        public virtual string GuMasterDisplayName => WorldStateMachine.GetFactionDisplayName(GetFaction()) + "蛊师";
         public virtual int GuMasterDamage => 15;
         public virtual int GuMasterLife => 150;
         public virtual int GuMasterDefense => 10;
@@ -640,7 +640,7 @@ namespace VerminLordMod.Content.NPCs.GuMasters
                     {
                         worldPlayer.AddInfamy(10);
                         worldPlayer.RemoveReputation(GetFaction(), 20, "击杀成员");
-                        Main.NewText($"你击杀了{GuMasterDisplayName}！{GuWorldSystem.GetFactionDisplayName(GetFaction())}声望下降。", Color.OrangeRed);
+                        Main.NewText($"你击杀了{GuMasterDisplayName}！{WorldStateMachine.GetFactionDisplayName(GetFaction())}声望下降。", Color.OrangeRed);
                     }
                     else
                     {

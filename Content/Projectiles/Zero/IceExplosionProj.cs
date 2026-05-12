@@ -5,55 +5,81 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using VerminLordMod.Common.BulletBehaviors;
 using VerminLordMod.Content.DamageClasses;
+using VerminLordMod.Content.Dusts;
 
 namespace VerminLordMod.Content.Projectiles.Zero
 {
     /// <summary>
     /// 冰道冰爆术 — 范围冰爆弹幕。
-    /// 冰道技术储备库的"冰爆术"技术：
-    /// - 弹幕飞行到目标位置后爆炸
-    /// - 爆炸产生大范围冰霜伤害
-    /// - 对范围内的敌人附加冻结效果
-    /// - 产生大量冰晶粒子
     ///
     /// 行为组合：
+    /// - ParticleBodyBehavior: 冰色粒子体
+    /// - IceTrailBehavior: 冰系拖尾（十字星 + 雪片）
     /// - AimBehavior: 直线飞行
-    /// - DustTrailBehavior: 冰晶粒子拖尾
-    /// - 自定义 OnKilled: 范围冰爆
+    /// - KillOnContactBehavior: 碰到物块/敌人时销毁，触发爆炸
+    /// - SuppressDrawBehavior: 隐藏默认贴图
+    /// - OnKilled: 巨大冰爆炸（IceFragmentProj + 暴风雪粒子）
     /// </summary>
     public class IceExplosionProj : BaseBullet
     {
-        /// <summary>飞行速度</summary>
         private const float FlySpeed = 9f;
+        private const float BlastRadius = 140f;
 
-        /// <summary>爆炸范围（像素）</summary>
-        private const float BlastRadius = 100f;
+        private const int FragmentBurstCount = 20;
+        private const float FragmentBurstSpeed = 7f;
+
+        private const int BlizzardStarCount = 30;
+        private const int BlizzardSnowCount = 50;
 
         protected override void RegisterBehaviors()
         {
-            // 1. 直线飞行
+            Behaviors.Add(new ParticleBodyBehavior(particleCount: 14, bodyRadius: 12f)
+            {
+                ParticleSize = 0.6f,
+                ColorStart = new Color(160, 220, 255, 220),
+                ColorEnd = new Color(160, 220, 255, 220),
+                SwirlSpeed = 0.03f,
+                ReturnForce = 0.5f,
+                JitterStrength = 0.15f,
+                ShrinkOverLife = true,
+                StretchOnMove = true,
+                StretchFactor = 0.3f,
+                EnableLight = false,
+            });
+
+            Behaviors.Add(new IceTrailBehavior
+            {
+                MaxStars = 30,
+                StarLife = 35,
+                StarSpawnInterval = 2,
+                StarSize = 0.7f,
+                MaxSnowflakes = 90,
+                SnowflakeLife = 30,
+                SnowflakeSize = 0.35f,
+                SnowflakeClusterSize = 5,
+                SnowflakeSpawnChance = 0.7f,
+                SnowflakeGravity = 0.1f,
+                AutoDraw = true,
+                SuppressDefaultDraw = false,
+            });
+
             Behaviors.Add(new AimBehavior(speed: FlySpeed)
             {
                 AutoRotate = true,
                 RotationOffset = MathHelper.PiOver2
             });
 
-            // 2. 冰晶粒子拖尾
-            Behaviors.Add(new DustTrailBehavior(DustID.Ice, spawnChance: 1)
-            {
-                DustScale = 0.7f,
-                VelocityMultiplier = 0.15f,
-                NoGravity = true,
-                DustAlpha = 150,
-                RandomSpeed = 0.4f
-            });
+            // 碰到物块或敌人时立即销毁，触发 OnKill → OnKilled 爆炸
+            Behaviors.Add(new KillOnContactBehavior());
+
+            Behaviors.Add(new SuppressDrawBehavior());
         }
 
         public override void SetDefaults()
         {
-            Projectile.width = 16;
-            Projectile.height = 16;
-            Projectile.scale = 1f;
+            Projectile.width = 20;
+            Projectile.height = 20;
+            Projectile.scale = 1.2f;
             Projectile.ignoreWater = true;
             Projectile.tileCollide = true;
             Projectile.penetrate = 1;
@@ -67,14 +93,14 @@ namespace VerminLordMod.Content.Projectiles.Zero
 
         protected override void OnAI()
         {
-            // 冰晶微光
             Lighting.AddLight(Projectile.Center, 0.2f, 0.4f, 0.8f);
         }
 
         protected override void OnKilled(int timeLeft)
         {
-            // 爆炸时产生范围冰爆
-            // 1. 伤害并冻结范围内的敌人
+            Player owner = Main.player[Projectile.owner];
+            IEntitySource source = owner?.GetSource_FromThis();
+
             for (int i = 0; i < Main.maxNPCs; i++)
             {
                 NPC npc = Main.npc[i];
@@ -83,14 +109,11 @@ namespace VerminLordMod.Content.Projectiles.Zero
                     float dist = Vector2.Distance(Projectile.Center, npc.Center);
                     if (dist <= BlastRadius)
                     {
-                        // 附加冻结效果
                         npc.AddBuff(BuffID.Frostburn, 180);
                         npc.AddBuff(BuffID.Slow, 240);
                         npc.AddBuff(BuffID.Chilled, 120);
-                        npc.AddBuff(BuffID.Frozen, 30); // 短暂冻结
+                        npc.AddBuff(BuffID.Frozen, 30);
 
-                        // 造成伤害
-                        Player owner = Main.player[Projectile.owner];
                         if (owner != null && owner.active)
                         {
                             bool crit = Main.rand.Next(100) < Projectile.CritChance;
@@ -106,16 +129,34 @@ namespace VerminLordMod.Content.Projectiles.Zero
                 }
             }
 
-            // 2. 产生大量冰晶粒子（爆炸效果）
-            for (int i = 0; i < 30; i++)
+            int fragType = ModContent.ProjectileType<IceFragmentProj>();
+            for (int i = 0; i < FragmentBurstCount; i++)
             {
                 float angle = Main.rand.NextFloat(MathHelper.TwoPi);
-                float speed = Main.rand.NextFloat(3f, 8f);
+                float speed = Main.rand.NextFloat(2f, FragmentBurstSpeed);
+                Vector2 vel = angle.ToRotationVector2() * speed;
+
+                Projectile.NewProjectile(
+                    source,
+                    Projectile.Center + Main.rand.NextVector2Circular(15f, 15f),
+                    vel,
+                    fragType,
+                    0,
+                    0f,
+                    Projectile.owner
+                );
+            }
+
+            int starDustType = ModContent.DustType<IceBlizzardStarDust>();
+            for (int i = 0; i < BlizzardStarCount; i++)
+            {
+                float angle = Main.rand.NextFloat(MathHelper.TwoPi);
+                float speed = Main.rand.NextFloat(1f, 5f);
                 Vector2 vel = angle.ToRotationVector2() * speed;
 
                 Dust d = Dust.NewDustPerfect(
-                    Projectile.Center + Main.rand.NextVector2Circular(15f, 15f),
-                    DustID.Ice,
+                    Projectile.Center + Main.rand.NextVector2Circular(30f, 30f),
+                    starDustType,
                     vel,
                     0,
                     new Color(180, 230, 255, 200),
@@ -124,22 +165,23 @@ namespace VerminLordMod.Content.Projectiles.Zero
                 d.noGravity = true;
             }
 
-            // 3. 产生冰环效果
-            for (int i = 0; i < 12; i++)
+            int snowDustType = ModContent.DustType<IceBlizzardSnowDust>();
+            for (int i = 0; i < BlizzardSnowCount; i++)
             {
-                float angle = MathHelper.TwoPi * i / 12;
-                float radius = BlastRadius * 0.5f;
-                Vector2 pos = Projectile.Center + angle.ToRotationVector2() * radius;
+                float angle = Main.rand.NextFloat(MathHelper.TwoPi);
+                float speed = Main.rand.NextFloat(2f, 8f);
+                Vector2 vel = angle.ToRotationVector2() * speed;
+                vel.Y -= Main.rand.NextFloat(1f, 4f);
 
                 Dust d = Dust.NewDustPerfect(
-                    pos,
-                    DustID.Ice,
-                    angle.ToRotationVector2() * Main.rand.NextFloat(1f, 3f),
+                    Projectile.Center + Main.rand.NextVector2Circular(35f, 35f),
+                    snowDustType,
+                    vel,
                     0,
-                    new Color(200, 240, 255, 150),
-                    Main.rand.NextFloat(0.6f, 1.0f)
+                    new Color(200, 240, 255, 180),
+                    Main.rand.NextFloat(0.5f, 1.1f)
                 );
-                d.noGravity = true;
+                d.noGravity = false;
             }
         }
     }

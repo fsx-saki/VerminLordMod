@@ -3,6 +3,7 @@
 // 管理所有 ISearchable 实例的注册、玩家附近检测、搜索过程生命周期
 // 通过 SimpleUISystem 注册 UI 绘制层
 // ============================================================
+#nullable enable
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;

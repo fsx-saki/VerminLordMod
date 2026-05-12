@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using Terraria;
 using Terraria.DataStructures;
+using Terraria.ModLoader;
 
 namespace VerminLordMod.Common.BulletBehaviors
 {
@@ -75,6 +76,12 @@ namespace VerminLordMod.Common.BulletBehaviors
         /// <summary>是否自动生成运行时纹理（否则使用默认圆形纹理）</summary>
         public bool AutoGenerateTexture { get; set; } = true;
 
+        /// <summary>
+        /// 外部贴图路径（如 "VerminLordMod/Content/Projectiles/Zero/IceSnowBaseProj"）。
+        /// 设置后 AutoGenerateTexture 自动设为 false，使用此贴图绘制粒子。
+        /// </summary>
+        public string TexturePath { get; set; } = null;
+
         // ===== 内部状态 =====
 
         private class BodyParticle
@@ -106,6 +113,14 @@ namespace VerminLordMod.Common.BulletBehaviors
         {
             _particles.Clear();
             _globalPhase = 0f;
+
+            // 如果指定了外部贴图路径，加载它并禁用自动生成
+            if (!string.IsNullOrEmpty(TexturePath))
+            {
+                _particleTex = ModContent.Request<Texture2D>(TexturePath).Value;
+                _textureGenerated = true;
+                AutoGenerateTexture = false;
+            }
 
             // 生成初始粒子，在球体内随机分布
             for (int i = 0; i < ParticleCount; i++)

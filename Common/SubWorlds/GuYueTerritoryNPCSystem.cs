@@ -6,6 +6,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
+using VerminLordMod.Common.DialogueTree;
 using VerminLordMod.Content.NPCs.GuYue;
 
 namespace VerminLordMod.Common.SubWorlds
@@ -17,6 +18,7 @@ namespace VerminLordMod.Common.SubWorlds
     /// 1. 进入小世界时按比例自动生成古月家族NPC
     /// 2. 退出小世界时保存NPC位置和状态
     /// 3. 再次进入时恢复NPC
+    /// 4. 根据剧情阶段动态调整NPC生成和对话
     /// 
     /// NPC生成比例（以50个NPC为基准）：
     /// - 族长 × 1
@@ -31,6 +33,14 @@ namespace VerminLordMod.Common.SubWorlds
     /// - 拳脚教头 × 3
     /// - 杂役 × 10
     /// - 凡人 × 14
+    /// 
+    /// 剧情阶段影响：
+    /// - Arrival: 只生成守门蛊师和少量凡人，山寨大门紧闭
+    /// - SchoolTraining: 解锁学堂区域，生成教头和学员
+    /// - MedicineRequest: 解锁药堂区域，生成药老和药童
+    /// - FamilyRecognition: 解锁议事厅，族长出现
+    /// - Crisis: 生成更多御堂守卫，部分NPC转为战斗状态
+    /// - Finale: 所有NPC回归和平状态
     /// </summary>
     public class GuYueTerritoryNPCSystem : ModSystem
     {
@@ -58,27 +68,131 @@ namespace VerminLordMod.Common.SubWorlds
         };
 
         /// <summary>
-        /// NPC类型到具体ModNPC类型的映射
+        /// 各剧情阶段对应的NPC生成权重调整。
+        /// 某些NPC在特定阶段不生成（权重为0），
+        /// 某些NPC在特定阶段生成更多。
         /// </summary>
-        private static int GetNPCTypeId(GuYueNPCType type) => type switch
+        private static readonly Dictionary<StoryPhase, Dictionary<GuYueNPCType, int>> PhaseSpawnWeights = new()
         {
-            GuYueNPCType.Chief => ModContent.NPCType<GuYueChief>(),
-            GuYueNPCType.SchoolElder => ModContent.NPCType<GuYueSchoolElder>(),
-            GuYueNPCType.MedicineElder => ModContent.NPCType<GuYueMedicineElder>(),
-            GuYueNPCType.DefenseElder => ModContent.NPCType<GuYueDefenseElder>(),
-            GuYueNPCType.ChiElder => ModContent.NPCType<GuYueChiElder>(),
-            GuYueNPCType.MoElder => ModContent.NPCType<GuYueMoElder>(),
-            GuYueNPCType.MedicinePulseElder => ModContent.NPCType<GuYueMedicinePulseElder>(),
-            GuYueNPCType.SecondTurnGuMaster => ModContent.NPCType<GuYueSecondTurnGuMaster>(),
-            GuYueNPCType.FirstTurnGuMaster => ModContent.NPCType<GuYueFirstTurnGuMaster>(),
-            GuYueNPCType.FistInstructor => ModContent.NPCType<GuYueFistInstructor>(),
-            GuYueNPCType.Servant => ModContent.NPCType<GuYueServant>(),
-            GuYueNPCType.Commoner => ModContent.NPCType<GuYueCommoner>(),
-            _ => 0,
+            [StoryPhase.Arrival] = new()
+            {
+                { GuYueNPCType.Chief, 0 },
+                { GuYueNPCType.SchoolElder, 0 },
+                { GuYueNPCType.MedicineElder, 0 },
+                { GuYueNPCType.DefenseElder, 0 },
+                { GuYueNPCType.ChiElder, 0 },
+                { GuYueNPCType.MoElder, 0 },
+                { GuYueNPCType.MedicinePulseElder, 0 },
+                { GuYueNPCType.SecondTurnGuMaster, 1 },
+                { GuYueNPCType.FirstTurnGuMaster, 2 },
+                { GuYueNPCType.FistInstructor, 0 },
+                { GuYueNPCType.Servant, 3 },
+                { GuYueNPCType.Commoner, 5 },
+            },
+            [StoryPhase.SchoolTraining] = new()
+            {
+                { GuYueNPCType.Chief, 0 },
+                { GuYueNPCType.SchoolElder, 1 },
+                { GuYueNPCType.MedicineElder, 0 },
+                { GuYueNPCType.DefenseElder, 0 },
+                { GuYueNPCType.ChiElder, 0 },
+                { GuYueNPCType.MoElder, 0 },
+                { GuYueNPCType.MedicinePulseElder, 0 },
+                { GuYueNPCType.SecondTurnGuMaster, 3 },
+                { GuYueNPCType.FirstTurnGuMaster, 8 },
+                { GuYueNPCType.FistInstructor, 3 },
+                { GuYueNPCType.Servant, 5 },
+                { GuYueNPCType.Commoner, 8 },
+            },
+            [StoryPhase.MedicineRequest] = new()
+            {
+                { GuYueNPCType.Chief, 0 },
+                { GuYueNPCType.SchoolElder, 1 },
+                { GuYueNPCType.MedicineElder, 1 },
+                { GuYueNPCType.DefenseElder, 0 },
+                { GuYueNPCType.ChiElder, 1 },
+                { GuYueNPCType.MoElder, 1 },
+                { GuYueNPCType.MedicinePulseElder, 1 },
+                { GuYueNPCType.SecondTurnGuMaster, 4 },
+                { GuYueNPCType.FirstTurnGuMaster, 10 },
+                { GuYueNPCType.FistInstructor, 3 },
+                { GuYueNPCType.Servant, 8 },
+                { GuYueNPCType.Commoner, 12 },
+            },
+            [StoryPhase.FamilyRecognition] = new()
+            {
+                { GuYueNPCType.Chief, 1 },
+                { GuYueNPCType.SchoolElder, 1 },
+                { GuYueNPCType.MedicineElder, 1 },
+                { GuYueNPCType.DefenseElder, 1 },
+                { GuYueNPCType.ChiElder, 1 },
+                { GuYueNPCType.MoElder, 1 },
+                { GuYueNPCType.MedicinePulseElder, 1 },
+                { GuYueNPCType.SecondTurnGuMaster, 5 },
+                { GuYueNPCType.FirstTurnGuMaster, 12 },
+                { GuYueNPCType.FistInstructor, 3 },
+                { GuYueNPCType.Servant, 10 },
+                { GuYueNPCType.Commoner, 14 },
+            },
+            [StoryPhase.Crisis] = new()
+            {
+                { GuYueNPCType.Chief, 1 },
+                { GuYueNPCType.SchoolElder, 1 },
+                { GuYueNPCType.MedicineElder, 1 },
+                { GuYueNPCType.DefenseElder, 2 },
+                { GuYueNPCType.ChiElder, 1 },
+                { GuYueNPCType.MoElder, 1 },
+                { GuYueNPCType.MedicinePulseElder, 1 },
+                { GuYueNPCType.SecondTurnGuMaster, 8 },
+                { GuYueNPCType.FirstTurnGuMaster, 15 },
+                { GuYueNPCType.FistInstructor, 5 },
+                { GuYueNPCType.Servant, 5 },
+                { GuYueNPCType.Commoner, 5 },
+            },
+            [StoryPhase.Finale] = new()
+            {
+                { GuYueNPCType.Chief, 1 },
+                { GuYueNPCType.SchoolElder, 1 },
+                { GuYueNPCType.MedicineElder, 1 },
+                { GuYueNPCType.DefenseElder, 1 },
+                { GuYueNPCType.ChiElder, 1 },
+                { GuYueNPCType.MoElder, 1 },
+                { GuYueNPCType.MedicinePulseElder, 1 },
+                { GuYueNPCType.SecondTurnGuMaster, 5 },
+                { GuYueNPCType.FirstTurnGuMaster, 12 },
+                { GuYueNPCType.FistInstructor, 3 },
+                { GuYueNPCType.Servant, 12 },
+                { GuYueNPCType.Commoner, 16 },
+            },
         };
 
         /// <summary>
-        /// 在小世界中生成所有NPC
+        /// NPC类型到具体ModNPC类型的映射
+        /// 所有古月家族NPC统一使用 GuYueVillager 类，
+        /// 通过 SetNPCType 方法区分身份。
+        /// </summary>
+        private static int GetNPCTypeId(GuYueNPCType type) => ModContent.NPCType<GuYueVillager>();
+
+        /// <summary>
+        /// 创建指定类型的古月家族NPC并设置其身份
+        /// </summary>
+        private static int CreateGuYueNPC(GuYueNPCType type, Vector2 position)
+        {
+            int npcTypeId = ModContent.NPCType<GuYueVillager>();
+            int npcIdx = NPC.NewNPC(null, (int)position.X, (int)position.Y, npcTypeId);
+            if (npcIdx >= 0 && npcIdx < Main.maxNPCs)
+            {
+                var npc = Main.npc[npcIdx];
+                if (npc.ModNPC is GuYueVillager villager)
+                {
+                    villager.SetNPCType(type);
+                }
+            }
+            return npcIdx;
+        }
+
+        /// <summary>
+        /// 在小世界中生成所有NPC（根据当前剧情阶段调整）
         /// </summary>
         public static void SpawnAllNPCs()
         {
@@ -91,44 +205,57 @@ namespace VerminLordMod.Common.SubWorlds
                 return;
             }
 
-            // 否则按权重生成新NPC
+            // 获取当前玩家的剧情阶段
+            StoryPhase currentPhase = StoryPhase.Arrival;
+            Player player = Main.LocalPlayer;
+            if (player != null && player.active)
+            {
+                currentPhase = StoryManager.Instance.GetPhase(player);
+            }
+
+            SpawnPhaseNPCs(currentPhase);
+            HasInitialized = true;
+        }
+
+        /// <summary>
+        /// 根据剧情阶段生成对应的NPC
+        /// </summary>
+        public static void SpawnPhaseNPCs(StoryPhase phase)
+        {
+            if (!SubworldSystem.IsActive<GuYueTerritory>()) return;
+
             int groundLevel = Main.maxTilesY / 2 + 20;
             int centerX = Main.maxTilesX / 2;
 
-            // 定义各区域的NPC生成位置
+            // 获取当前阶段的权重配置
+            var weights = GetWeightsForPhase(phase);
+
+            // 定义各区域的NPC生成位置（所有阶段都生成固定位置的重要NPC）
             var spawnZones = new Dictionary<GuYueNPCType, Vector2[]>
             {
-                // 族长在议事厅
                 [GuYueNPCType.Chief] = new[] { new Vector2(centerX, groundLevel - 14) },
-                // 学堂家老在学堂区域（左侧）
                 [GuYueNPCType.SchoolElder] = new[] { new Vector2(centerX - 60, groundLevel - 8) },
-                // 药堂家老在药堂区域（右侧偏内）
                 [GuYueNPCType.MedicineElder] = new[] { new Vector2(centerX + 55, groundLevel - 8) },
-                // 御堂家老在御堂区域（右侧）
                 [GuYueNPCType.DefenseElder] = new[] { new Vector2(centerX + 80, groundLevel - 8) },
-                // 赤脉家老在左侧居住区
                 [GuYueNPCType.ChiElder] = new[] { new Vector2(centerX - 80, groundLevel - 8) },
-                // 漠脉家老在右侧居住区
                 [GuYueNPCType.MoElder] = new[] { new Vector2(centerX + 30, groundLevel - 8) },
-                // 药脉家老在药堂附近
                 [GuYueNPCType.MedicinePulseElder] = new[] { new Vector2(centerX + 45, groundLevel - 8) },
             };
 
-            // 生成固定位置的重要NPC
+            // 生成固定位置的重要NPC（只生成权重 > 0 的）
             foreach (var (type, positions) in spawnZones)
             {
+                if (!weights.TryGetValue(type, out int weight) || weight <= 0)
+                    continue;
+
                 foreach (var pos in positions)
                 {
-                    int npcTypeId = GetNPCTypeId(type);
-                    if (npcTypeId > 0)
+                    int npcIdx = CreateGuYueNPC(type, new Vector2(pos.X * 16, pos.Y * 16));
+                    if (npcIdx >= 0 && npcIdx < Main.maxNPCs)
                     {
-                        int npcIdx = NPC.NewNPC(null, (int)pos.X * 16, (int)pos.Y * 16, npcTypeId);
-                        if (npcIdx >= 0 && npcIdx < Main.maxNPCs)
-                        {
-                            var npc = Main.npc[npcIdx];
-                            npc.homeTileX = (int)pos.X;
-                            npc.homeTileY = (int)pos.Y;
-                        }
+                        var npc = Main.npc[npcIdx];
+                        npc.homeTileX = (int)pos.X;
+                        npc.homeTileY = (int)pos.Y;
                     }
                 }
             }
@@ -145,15 +272,13 @@ namespace VerminLordMod.Common.SubWorlds
 
             foreach (var type in commonTypes)
             {
-                int count = SpawnWeights[type];
+                if (!weights.TryGetValue(type, out int count) || count <= 0)
+                    continue;
+
                 for (int i = 0; i < count; i++)
                 {
-                    int npcTypeId = GetNPCTypeId(type);
-                    if (npcTypeId <= 0) continue;
-
-                    // 在可居住区域随机分布
                     Vector2 spawnPos = GetRandomSpawnPosition(centerX, groundLevel);
-                    int npcIdx = NPC.NewNPC(null, (int)spawnPos.X * 16, (int)spawnPos.Y * 16, npcTypeId);
+                    int npcIdx = CreateGuYueNPC(type, new Vector2(spawnPos.X * 16, spawnPos.Y * 16));
                     if (npcIdx >= 0 && npcIdx < Main.maxNPCs)
                     {
                         var npc = Main.npc[npcIdx];
@@ -162,8 +287,39 @@ namespace VerminLordMod.Common.SubWorlds
                     }
                 }
             }
+        }
 
-            HasInitialized = true;
+        /// <summary>
+        /// 当剧情阶段推进时，刷新NPC配置。
+        /// 清除旧NPC，按新阶段重新生成。
+        /// </summary>
+        public static void OnPhaseAdvance(StoryPhase newPhase)
+        {
+            if (!SubworldSystem.IsActive<GuYueTerritory>()) return;
+
+            // 清除所有现有NPC
+            ClearAllNPCs();
+
+            // 按新阶段重新生成
+            SpawnPhaseNPCs(newPhase);
+
+            // 清空保存数据，下次进入时重新生成
+            SavedNPCs.Clear();
+            HasInitialized = false;
+
+            Main.NewText($"[古月山寨] 山寨的氛围发生了变化……", Microsoft.Xna.Framework.Color.Gold);
+        }
+
+        /// <summary>
+        /// 获取指定阶段的NPC生成权重
+        /// </summary>
+        private static Dictionary<GuYueNPCType, int> GetWeightsForPhase(StoryPhase phase)
+        {
+            if (PhaseSpawnWeights.TryGetValue(phase, out var phaseWeights))
+                return phaseWeights;
+
+            // 默认使用完整权重
+            return new Dictionary<GuYueNPCType, int>(SpawnWeights);
         }
 
         /// <summary>
@@ -192,11 +348,11 @@ namespace VerminLordMod.Common.SubWorlds
                 if (!npc.active) continue;
 
                 // 只保存古月家族的NPC
-                if (npc.ModNPC is GuYueNPCBase guYueNPC)
+                if (npc.ModNPC is GuYueVillager guYueVillager)
                 {
                     SavedNPCs.Add(new SavedNPCData
                     {
-                        NPCType = guYueNPC.GetNPCType(),
+                        NPCType = guYueVillager.NPCType,
                         PositionX = npc.position.X,
                         PositionY = npc.position.Y,
                         HomeTileX = npc.homeTileX,
@@ -215,10 +371,7 @@ namespace VerminLordMod.Common.SubWorlds
         {
             foreach (var data in SavedNPCs)
             {
-                int npcTypeId = GetNPCTypeId(data.NPCType);
-                if (npcTypeId <= 0) continue;
-
-                int npcIdx = NPC.NewNPC(null, (int)data.PositionX, (int)data.PositionY, npcTypeId);
+                int npcIdx = CreateGuYueNPC(data.NPCType, new Vector2(data.PositionX, data.PositionY));
                 if (npcIdx >= 0 && npcIdx < Main.maxNPCs)
                 {
                     var npc = Main.npc[npcIdx];
@@ -243,7 +396,7 @@ namespace VerminLordMod.Common.SubWorlds
             for (int i = 0; i < Main.maxNPCs; i++)
             {
                 var npc = Main.npc[i];
-                if (npc.active && npc.ModNPC is GuYueNPCBase)
+                if (npc.active && npc.ModNPC is GuYueVillager)
                 {
                     npc.active = false;
                 }

@@ -70,7 +70,7 @@ namespace VerminLordMod.Common.UI.ReputationUI
 
             foreach (var (fid, rel) in worldPlayer.FactionRelations)
             {
-                string displayName = GuWorldSystem.GetFactionDisplayName(fid);
+                string displayName = WorldStateMachine.GetFactionDisplayName(fid);
                 string levelName = GuiEnumHelper.GetRepLevelName(rel.GetLevel());
                 string points = rel.ReputationPoints >= 0
                     ? $"+{rel.ReputationPoints}"

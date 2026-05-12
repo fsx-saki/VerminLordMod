@@ -56,7 +56,7 @@ namespace VerminLordMod.Content.Items.Weapons.Zero
         /// <summary>所有攻击模式对应的 shootSpeed</summary>
         private readonly float[] _modeShootSpeeds = new[]
         {
-            10f,  // 模式0：冰晶
+            12f, // 模式0：冰晶
             12f,  // 模式1：冰锥散射
             0f,   // 模式2：冰霜领域（在鼠标位置直接生成）
             0f,   // 模式3：暴风雪（在鼠标上方生成）

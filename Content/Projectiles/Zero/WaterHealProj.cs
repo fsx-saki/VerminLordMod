@@ -1,6 +1,5 @@
 using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 using VerminLordMod.Common.BulletBehaviors;
@@ -9,128 +8,115 @@ using VerminLordMod.Content.DamageClasses;
 namespace VerminLordMod.Content.Projectiles.Zero
 {
     /// <summary>
-    /// 水道治疗弹 — 治疗水弹。
-    /// 水道技术储备库的"治疗/回复"技术：
-    /// - 弹幕飞向鼠标位置（或队友），命中后回复生命
-    /// - 对友方 NPC 也有效
-    /// - 产生治愈水花粒子效果
-    /// - 碰到物块时消散
+    /// 水道治疗弹 — 青色粒子体小球，飞向鼠标。
+    ///
+    /// 命中敌人时碎裂为青色液滴，并概率生成 1-3 颗治疗追踪弹飞向友方。
+    /// 碰到物块时碎裂为青色液滴。
     ///
     /// 行为组合：
-    /// - AimBehavior: 沿鼠标方向飞行
-    /// - WaterTrailBehavior: 水系拖尾（治愈泡泡）
-    /// - LiquidBurstBehavior: 命中时水花爆裂
-    /// - 自定义 OnHit: 回复生命
+    /// - ParticleBodyBehavior: 青色粒子小球
+    /// - WaterTrailBehavior: 短青色拖尾
+    /// - AimBehavior: 飞向鼠标
+    /// - HealSeekerSpawnBehavior: 命中敌人概率生成治疗追踪弹
+    /// - ParticleBurstBehavior: 碎裂时青色液滴散落
+    /// - SuppressDrawBehavior: 阻止默认贴图
     /// </summary>
     public class WaterHealProj : BaseBullet
     {
-        /// <summary>飞行速度</summary>
         private const float FlySpeed = 8f;
-
-        /// <summary>治疗量倍率（基于伤害值）</summary>
-        private const float HealMultiplier = 0.5f;
+        private const float SeekerSpawnChance = 0.7f;
 
         protected override void RegisterBehaviors()
         {
-            // 1. 沿鼠标方向飞行
+            Behaviors.Add(new ParticleBodyBehavior(particleCount: 14, bodyRadius: 10f)
+            {
+                ParticleSize = 0.7f,
+                ColorStart = new Color(80, 220, 255, 220),
+                ColorEnd = new Color(80, 220, 255, 220),
+                SwirlSpeed = 0.08f,
+                ReturnForce = 0.8f,
+                JitterStrength = 0.5f,
+                ShrinkOverLife = true,
+                StretchOnMove = true,
+                StretchFactor = 0.4f,
+                EnableLight = false,
+            });
+
+            Behaviors.Add(new WaterTrailBehavior
+            {
+                MaxFragments = 18,
+                ParticleLife = 10,
+                SizeMultiplier = 0.3f,
+                SpawnChance = 0.5f,
+                SplashSpeed = 0.15f,
+                SplashAngle = 0.12f,
+                InertiaFactor = 0.02f,
+                RandomSpread = 0.5f,
+                Gravity = 0.1f,
+                AirResistance = 0.97f,
+                BubbleChance = 0.25f,
+                BubbleSizeMultiplier = 1.3f,
+                ColorStart = new Color(80, 220, 255, 180),
+                ColorEnd = new Color(80, 220, 255, 0),
+                AutoDraw = true,
+                SuppressDefaultDraw = false,
+                AdaptiveLife = true,
+                AdaptiveTargetLength = 40f,
+                SpeedLifeExponent = 0.3f,
+                MinParticleLife = 4,
+            });
+
             Behaviors.Add(new AimBehavior(speed: FlySpeed)
             {
                 AutoRotate = true,
-                RotationOffset = MathHelper.PiOver2
+                RotationOffset = MathHelper.PiOver2,
             });
 
-            // 2. 水系拖尾 — 治愈水滴（柔和、缓慢）
-            Behaviors.Add(new WaterTrailBehavior
+            Behaviors.Add(new HealSeekerSpawnBehavior(
+                ModContent.ProjectileType<WaterHealSeekerProj>(),
+                SeekerSpawnChance,
+                minCount: 1,
+                maxCount: 3
+            )
             {
-                MaxFragments = 60,
-                ParticleLife = 40,
-                SizeMultiplier = 0.5f,
-                SplashSpeed = 2f,
-                SplashAngle = 1.0f,
-                InertiaFactor = 0.5f,
-                Gravity = 0.04f,
-                AirResistance = 0.96f,
-                BubbleChance = 0.1f,
-                BubbleSizeMultiplier = 1.5f,
-                ColorStart = new Color(30, 180, 80, 200),    // 深治愈绿
-                ColorEnd = new Color(50, 200, 100, 0),
-                AutoDraw = true,
-                SuppressDefaultDraw = true
+                Speed = 2f,
             });
 
-            // 3. 命中时水花爆裂（治愈水花）
-            Behaviors.Add(new LiquidBurstBehavior(10, 4f)
+            Behaviors.Add(new ParticleBurstBehavior
             {
-                ColorStart = new Color(100, 255, 150, 200),
-                ColorEnd = new Color(50, 200, 100, 0),
-                SizeMultiplier = 0.6f,
-                NoGravity = false
-            });
-
-            // 4. 周期性治愈粒子 — 飞行时散发柔和光点
-            Behaviors.Add(new PeriodicDustBehavior
-            {
-                SpawnChance = 0.5f,
+                ChildProjectileType = -1,
+                Count = 0,
+                SpawnExtraDust = true,
+                ExtraDustCount = 10,
                 DustType = DustID.HealingPlus,
-                Color = new Color(100, 255, 150, 150),
-                ScaleMin = 0.5f,
-                ScaleMax = 1.0f,
-                Speed = 0.5f,
-                SpreadRadius = 8f,
-                NoGravity = true,
+                DustColorStart = new Color(80, 220, 255, 200),
+                DustColorEnd = new Color(80, 220, 255, 0),
+                DustScaleMin = 0.3f,
+                DustScaleMax = 0.7f,
+                DustSpeedMin = 1f,
+                DustSpeedMax = 4f,
+                DustNoGravity = false,
             });
 
-            // 5. 环境光 — 柔和绿光
-            Behaviors.Add(new GlowLightBehavior(new Vector3(0.2f, 0.6f, 0.3f)));
-
-            // 6. 命中治疗 — 按伤害比例回复玩家生命
-            Behaviors.Add(new HealOnHitBehavior(HealMultiplier)
-            {
-                HealDustCount = 8,
-                DustType = DustID.HealingPlus,
-                DustColor = new Color(100, 255, 150, 200),
-                DustScaleMin = 0.8f,
-                DustScaleMax = 1.5f,
-                DustSpeed = 3f,
-                DustSpreadRadius = 15f,
-            });
-
-            // 7. 销毁粉尘 — 消散时产生治愈水花
-            Behaviors.Add(new KillDustBurstBehavior
-            {
-                Layers = new System.Collections.Generic.List<KillDustBurstBehavior.DustBurstLayer>
-                {
-                    new KillDustBurstBehavior.DustBurstLayer
-                    {
-                        Count = 6,
-                        DustType = DustID.HealingPlus,
-                        Color = new Color(100, 255, 150, 180),
-                        ScaleMin = 0.5f,
-                        ScaleMax = 1.0f,
-                        NoGravity = true,
-                        SpreadRadius = 8f,
-                        UseCircularVelocity = true,
-                        SpeedMin = 0f,
-                        SpeedMax = 3f,
-                    },
-                }
-            });
+            Behaviors.Add(new SuppressDrawBehavior());
         }
 
         public override void SetDefaults()
         {
-            Projectile.width = 16;
-            Projectile.height = 16;
-            Projectile.scale = 1.0f;
+            Projectile.width = 10;
+            Projectile.height = 10;
+            Projectile.scale = 0.8f;
             Projectile.ignoreWater = true;
             Projectile.tileCollide = true;
             Projectile.penetrate = 1;
             Projectile.timeLeft = 180;
-            Projectile.alpha = 20;
+            Projectile.alpha = 0;
             Projectile.friendly = true;
             Projectile.hostile = false;
             Projectile.DamageType = ModContent.GetInstance<InsectDamageClass>();
             Projectile.aiStyle = -1;
         }
+
+        protected override bool OnTileCollided(Vector2 oldVelocity) => true;
     }
 }

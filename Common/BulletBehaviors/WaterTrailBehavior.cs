@@ -88,11 +88,23 @@ namespace VerminLordMod.Common.BulletBehaviors
         /// <summary>空气阻力系数</summary>
         public float AirResistance { get; set; } = 0.96f;
 
-        /// <summary>泡泡生成概率（0~1），偶尔生成一个泡泡而非水滴</summary>
+        /// <summary>泡泡大小倍率（相对于水滴）</summary>
         public float BubbleChance { get; set; } = 0.15f;
 
         /// <summary>泡泡大小倍率（相对于水滴）</summary>
         public float BubbleSizeMultiplier { get; set; } = 1.8f;
+
+        /// <summary>是否启用速度自适应存活时间</summary>
+        public bool AdaptiveLife { get; set; } = true;
+
+        /// <summary>拖尾目标长度（像素）</summary>
+        public float AdaptiveTargetLength { get; set; } = 60f;
+
+        /// <summary>速度对存活时间的影响指数（0~1）</summary>
+        public float SpeedLifeExponent { get; set; } = 0.35f;
+
+        /// <summary>粒子存活时间下限（帧）</summary>
+        public int MinParticleLife { get; set; } = 8;
 
         /// <summary>
         /// 是否在 PreDraw 中由本行为绘制拖尾。
@@ -131,7 +143,11 @@ namespace VerminLordMod.Common.BulletBehaviors
                 Gravity = Gravity,
                 AirResistance = AirResistance,
                 BubbleChance = BubbleChance,
-                BubbleSizeMultiplier = BubbleSizeMultiplier
+                BubbleSizeMultiplier = BubbleSizeMultiplier,
+                AdaptiveLife = AdaptiveLife,
+                AdaptiveTargetLength = AdaptiveTargetLength,
+                SpeedLifeExponent = SpeedLifeExponent,
+                MinParticleLife = MinParticleLife,
             };
 
             TrailManager.Add(Trail);
