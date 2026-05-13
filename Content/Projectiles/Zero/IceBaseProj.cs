@@ -13,21 +13,19 @@ namespace VerminLordMod.Content.Projectiles.Zero
     /// 设计哲学：
     /// 冰的本质是"冻结 + 碎裂 + 减速"。弹幕以中速直线飞行，
     /// 命中后沿法线方向爆散冰晶碎片（SplashBehavior Normal 模式），
-    /// 视觉上以蓝白色冰晶拖尾和冷光模拟极寒。
+    /// 视觉上以冰系拖尾（十字星 + 雪片）和冷光模拟极寒。
     ///
     /// 运动方式：
     /// - 中速直线飞行（AimBehavior）
     /// - 命中后法线方向冰晶爆散
     ///
     /// 视觉效果：
-    /// - 蓝白色冰晶粒子拖尾
-    /// - 冰蓝色发光
+    /// - 冰系拖尾：十字星 + 雪片（IceTrailBehavior）
     /// - 命中时法线冰晶爆散（SplashBehavior Normal 模式）
     ///
     /// 行为组合：
     /// - AimBehavior: 中速直线飞行
-    /// - DustTrailBehavior: 冰晶粒子拖尾
-    /// - GlowDrawBehavior: 冰蓝色发光
+    /// - IceTrailBehavior: 冰系拖尾（十字星 + 雪片）
     /// - SplashBehavior(Normal): 命中时法线冰晶爆散
     /// </summary>
     public class IceBaseProj : BaseBullet
@@ -45,23 +43,13 @@ namespace VerminLordMod.Content.Projectiles.Zero
                 LightColor = new Vector3(0.2f, 0.5f, 0.9f)
             });
 
-            Behaviors.Add(new DustTrailBehavior(DustID.IceTorch, spawnChance: 1)
+            Behaviors.Add(new IceTrailBehavior
             {
-                DustScale = 0.6f,
-                VelocityMultiplier = 0.08f,
-                NoGravity = true,
-                DustAlpha = 180,
-                RandomSpeed = 0.3f
-            });
-
-            Behaviors.Add(new GlowDrawBehavior
-            {
-                GlowColor = new Color(100, 180, 255, 180),
-                GlowBaseScale = 1.3f,
-                GlowLayers = 2,
-                GlowAlphaMultiplier = 0.3f,
-                EnableLight = true,
-                LightColor = new Vector3(0.2f, 0.5f, 0.9f)
+                SuppressDefaultDraw = true,
+                EnableGhostTrail = true,
+                GhostColor = new Color(120, 200, 255, 180),
+                StarColor = new Color(160, 220, 255, 220),
+                SnowflakeColor = new Color(200, 240, 255, 180),
             });
 
             Behaviors.Add(new SplashBehavior(SplashMode.Normal)

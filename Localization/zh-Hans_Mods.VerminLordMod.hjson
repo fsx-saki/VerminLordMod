@@ -175,6 +175,7 @@ Projectiles: {
 	// WaterFormationDragonProj.DisplayName: Water Formation Dragon Proj
 	// IceFragmentProj.DisplayName: Ice Fragment Proj
 	// WaterHealSeekerProj.DisplayName: Water Heal Seeker Proj
+	// WindBurstExplosionProj.DisplayName: Wind Burst Explosion Proj
 }
 
 Prefixes: {

@@ -123,6 +123,20 @@ namespace VerminLordMod.Common.Systems
             if (!AllyGraph.TryGetValue(sourceNPCOriginalType, out var allyTypes))
                 return;
 
+            Vector2 sourcePos = Vector2.Zero;
+            bool foundSource = false;
+            for (int i = 0; i < Main.maxNPCs; i++)
+            {
+                var npc = Main.npc[i];
+                if (npc.active && npc.type == sourceNPCOriginalType)
+                {
+                    sourcePos = npc.Center;
+                    foundSource = true;
+                    break;
+                }
+            }
+            if (!foundSource) return;
+
             for (int i = 0; i < Main.maxNPCs; i++)
             {
                 var npc = Main.npc[i];
@@ -130,7 +144,7 @@ namespace VerminLordMod.Common.Systems
                     continue;
 
                 if (allyTypes.Contains(npc.type) &&
-                    Vector2.Distance(npc.Center, Main.npc[sourceNPCOriginalType].Center) < spreadRange)
+                    Vector2.Distance(npc.Center, sourcePos) < spreadRange)
                 {
                     var targetBelief = ally.GetBelief(playerName);
 
@@ -164,6 +178,20 @@ namespace VerminLordMod.Common.Systems
             if (!AllyGraph.TryGetValue(sourceNPCType, out var allyTypes))
                 return;
 
+            Vector2 sourcePos = Vector2.Zero;
+            bool foundSource = false;
+            for (int i = 0; i < Main.maxNPCs; i++)
+            {
+                var npc = Main.npc[i];
+                if (npc.active && npc.type == sourceNPCType)
+                {
+                    sourcePos = npc.Center;
+                    foundSource = true;
+                    break;
+                }
+            }
+            if (!foundSource) return;
+
             for (int i = 0; i < Main.maxNPCs; i++)
             {
                 var npc = Main.npc[i];
@@ -171,7 +199,7 @@ namespace VerminLordMod.Common.Systems
                     continue;
 
                 if (allyTypes.Contains(npc.type) &&
-                    Vector2.Distance(npc.Center, Main.npc[sourceNPCType].Center) < range)
+                    Vector2.Distance(npc.Center, sourcePos) < range)
                 {
                     ally.HasBeenHitByPlayer = true;
                     ally.AggroTimer = 1800;

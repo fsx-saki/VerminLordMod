@@ -180,27 +180,27 @@ public static class SearchChairHandler
         switch (CurrentState)
         {
             case SearchState.NotStarted:
-                // 未开始搜索 → 显示搜索提示框
+                if (_searchPrompt == null) break;
                 PositionAboveTile(_searchPrompt, PromptWidth, PromptHeight);
-                if (_searchPrompt != null && !_searchPrompt.IsVisible)
+                if (!_searchPrompt.IsVisible)
                 {
                     _searchPrompt.Open();
                 }
                 break;
 
             case SearchState.Searching:
-                // 搜索中 → 显示搜索面板
+                if (_searchPanel == null) break;
                 PositionAboveTile(_searchPanel, PanelWidth, PanelHeight);
-                if (_searchPanel != null && !_searchPanel.IsVisible)
+                if (!_searchPanel.IsVisible)
                 {
                     _searchPanel.Open();
                 }
                 break;
 
             case SearchState.Complete:
-                // 搜索完成 → 显示搜索面板（结果）
+                if (_searchPanel == null) break;
                 PositionAboveTile(_searchPanel, PanelWidth, PanelHeight);
-                if (_searchPanel != null && !_searchPanel.IsVisible)
+                if (!_searchPanel.IsVisible)
                 {
                     _searchPanel.Open();
                 }

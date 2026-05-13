@@ -7,32 +7,6 @@ using VerminLordMod.Content.DamageClasses;
 
 namespace VerminLordMod.Content.Projectiles.Zero
 {
-    /// <summary>
-    /// 虚空道基础弹幕 — 虚空之眼。
-    ///
-    /// 设计哲学：
-    /// 虚空的本质是"吞噬 + 牵引 + 湮灭"。弹幕以慢速追踪敌人，
-    /// 飞行过程中持续牵引周围敌人（PullBehavior），
-    /// 命中后产生环形虚空冲击波（SplashBehavior Ring 模式），
-    /// 视觉上以暗紫色虚空粒子拖尾和暗光模拟吞噬一切的虚无感。
-    ///
-    /// 运动方式：
-    /// - 慢速追踪敌人（HomingBehavior）
-    /// - 持续牵引周围敌人（PullBehavior）
-    /// - 命中后环形虚空冲击波
-    ///
-    /// 视觉效果：
-    /// - 暗紫色虚空粒子拖尾
-    /// - 暗紫色发光
-    /// - 命中时环形虚空冲击波（SplashBehavior Ring 模式）
-    ///
-    /// 行为组合：
-    /// - HomingBehavior: 慢速追踪敌人
-    /// - PullBehavior: 持续牵引周围敌人
-    /// - DustTrailBehavior: 虚空粒子拖尾
-    /// - GlowDrawBehavior: 暗紫色发光
-    /// - SplashBehavior(Ring): 命中时环形虚空冲击波
-    /// </summary>
     public class VoidBaseProj : BaseBullet
     {
         private const float FlySpeed = 7f;
@@ -55,23 +29,53 @@ namespace VerminLordMod.Content.Projectiles.Zero
                 LightColor = new Vector3(0.3f, 0.05f, 0.4f)
             });
 
-            Behaviors.Add(new DustTrailBehavior(DustID.Shadowflame, spawnChance: 1)
+            Behaviors.Add(new VoidTrailBehavior
             {
-                DustScale = 0.7f,
-                VelocityMultiplier = 0.06f,
-                NoGravity = true,
-                DustAlpha = 160,
-                RandomSpeed = 0.25f
-            });
+                EnableGhostTrail = true,
+                GhostAlpha = 0.32f,
+                GhostMaxPositions = 10,
+                GhostWidthScale = 0.2f,
+                GhostLengthScale = 1.5f,
+                GhostColor = new Color(80, 20, 130, 160),
 
-            Behaviors.Add(new GlowDrawBehavior
-            {
-                GlowColor = new Color(100, 30, 150, 180),
-                GlowBaseScale = 1.5f,
-                GlowLayers = 3,
-                GlowAlphaMultiplier = 0.35f,
-                EnableLight = true,
-                LightColor = new Vector3(0.4f, 0.05f, 0.5f)
+                MaxOrbs = 22,
+                OrbLife = 38,
+                OrbSize = 0.5f,
+                OrbSpawnInterval = 2,
+                OrbRotSpeed = 0.06f,
+                OrbDriftSpeed = 0.2f,
+                OrbSpread = 5f,
+                OrbColor = new Color(80, 15, 140, 220),
+
+                MaxRifts = 4,
+                RiftLife = 48,
+                RiftStartSize = 0.2f,
+                RiftEndSize = 1.5f,
+                RiftSpawnChance = 0.02f,
+                RiftOpenSpeed = 3f,
+                RiftDriftSpeed = 0.06f,
+                RiftAspectRatio = 2.5f,
+                RiftEdgeColor = new Color(140, 50, 200, 200),
+                RiftCoreColor = new Color(20, 5, 40, 180),
+
+                MaxShards = 18,
+                ShardLife = 22,
+                ShardSize = 0.4f,
+                ShardSpawnChance = 0.13f,
+                ShardSpinSpeed = 0.12f,
+                ShardDriftSpeed = 0.3f,
+                ShardColor = new Color(70, 15, 110, 200),
+
+                MaxInflows = 20,
+                InflowLife = 25,
+                InflowSize = 0.35f,
+                InflowSpawnChance = 0.15f,
+                InflowPullStrength = 0.12f,
+                InflowSpread = 25f,
+                InflowColor = new Color(100, 30, 160, 200),
+
+                AutoDraw = true,
+                SuppressDefaultDraw = true,
             });
 
             Behaviors.Add(new SplashBehavior(SplashMode.Ring)
@@ -123,15 +127,8 @@ namespace VerminLordMod.Content.Projectiles.Zero
                 float angle = Main.rand.NextFloat(MathHelper.TwoPi);
                 float speed = Main.rand.NextFloat(1f, 4f);
                 Vector2 vel = angle.ToRotationVector2() * speed;
-
-                Dust d = Dust.NewDustPerfect(
-                    Projectile.Center,
-                    DustID.Shadowflame,
-                    vel,
-                    0,
-                    new Color(120, 40, 180, 200),
-                    Main.rand.NextFloat(0.5f, 1.0f)
-                );
+                Dust d = Dust.NewDustPerfect(Projectile.Center, DustID.Shadowflame, vel, 0,
+                    new Color(120, 40, 180, 200), Main.rand.NextFloat(0.5f, 1.0f));
                 d.noGravity = true;
             }
         }

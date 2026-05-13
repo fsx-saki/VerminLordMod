@@ -21,14 +21,12 @@ namespace VerminLordMod.Content.Projectiles.Zero
     /// - 穿透物块（tileCollide = false）
     ///
     /// 视觉效果：
-    /// - 蓝白色幽灵粒子拖尾
-    /// - 淡蓝色发光
+    /// - 魂系拖尾：灵焰 + 锁链 + 鬼火（SoulTrailBehavior）
     /// - 命中时径向灵魂爆散（SplashBehavior Radial 模式）
     ///
     /// 行为组合：
     /// - HomingBehavior: 慢速追踪敌人
-    /// - DustTrailBehavior: 幽灵粒子拖尾
-    /// - GlowDrawBehavior: 淡蓝色发光
+    /// - SoulTrailBehavior: 魂系拖尾（灵焰 + 锁链 + 鬼火）
     /// - SplashBehavior(Radial): 命中时径向灵魂爆散
     /// </summary>
     public class SoulBaseProj : BaseBullet
@@ -47,25 +45,14 @@ namespace VerminLordMod.Content.Projectiles.Zero
                 RotationOffset = MathHelper.PiOver2,
             });
 
-            // 2. 幽灵粒子拖尾
-            Behaviors.Add(new DustTrailBehavior(DustID.SpectreStaff, spawnChance: 1)
+            Behaviors.Add(new SoulTrailBehavior
             {
-                DustScale = 0.6f,
-                VelocityMultiplier = 0.05f,
-                NoGravity = true,
-                DustAlpha = 150,
-                RandomSpeed = 0.2f
-            });
-
-            // 3. 淡蓝色发光
-            Behaviors.Add(new GlowDrawBehavior
-            {
-                GlowColor = new Color(150, 200, 255, 150),
-                GlowBaseScale = 1.3f,
-                GlowLayers = 2,
-                GlowAlphaMultiplier = 0.25f,
-                EnableLight = true,
-                LightColor = new Vector3(0.3f, 0.4f, 0.8f)
+                SuppressDefaultDraw = true,
+                EnableGhostTrail = true,
+                GhostColor = new Color(120, 180, 255, 160),
+                FlameColor = new Color(140, 200, 255, 230),
+                ChainColor = new Color(100, 160, 240, 200),
+                WispColor = new Color(180, 220, 255, 240),
             });
 
             // 4. 命中时径向灵魂爆散

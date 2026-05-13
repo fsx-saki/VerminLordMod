@@ -126,17 +126,25 @@ namespace VerminLordMod.Common.SubWorlds
 
             // 左侧区域
             BuildServantQuarters(centerX - 120, groundLevel - 5);   // 杂役区（最左）
+            BuildWatchtower(centerX - 95, groundLevel - 20);        // 瞭望塔
             BuildSchool(centerX - 75, groundLevel - 8);             // 学堂（左中）
+            BuildKitchen(centerX - 55, groundLevel - 5);            // 厨房
             BuildTrainingGround(centerX - 40, groundLevel - 5);     // 训练场（左中偏中）
 
             // 中央区域
             BuildMainHall(centerX, groundLevel - 10);               // 议事厅（中央）
+            BuildWell(centerX - 20, groundLevel - 3);               // 水井（议事厅左侧）
+            BuildGarden(centerX + 20, groundLevel - 3);             // 花园（议事厅右侧）
 
             // 右侧区域
             BuildMedicineHall(centerX + 40, groundLevel - 8);       // 药堂（右中）
-            BuildDefenseHall(centerX + 75, groundLevel - 8);        // 御堂（右中偏右）
-            BuildMarket(centerX + 110, groundLevel - 5);            // 市场（右）
+            BuildChiBranchHall(centerX + 60, groundLevel - 8);      // 赤脉分堂
+            BuildMoBranchHall(centerX + 75, groundLevel - 8);       // 漠脉分堂
+            BuildDefenseHall(centerX + 90, groundLevel - 8);        // 御堂（右中偏右）
+            BuildBlacksmith(centerX + 105, groundLevel - 5);        // 铁匠铺
+            BuildMarket(centerX + 120, groundLevel - 5);            // 市场（右）
             BuildResidence(centerX + 145, groundLevel - 5);         // 居住区（最右）
+            BuildWatchtower(centerX + 160, groundLevel - 20);       // 右侧瞭望塔
 
             // 4. 放置光源
             PlaceTorches(width, groundLevel);
@@ -620,6 +628,351 @@ namespace VerminLordMod.Common.SubWorlds
             Tile table = Main.tile[centerX + 3, topY + height - 3];
             table.HasTile = true;
             table.TileType = TileID.Tables;
+        }
+
+        /// <summary>
+        /// 建造瞭望塔。
+        /// </summary>
+        private void BuildWatchtower(int centerX, int topY)
+        {
+            int towerHeight = 18;
+            int towerWidth = 5;
+
+            for (int j = topY; j <= topY + towerHeight; j++)
+            {
+                Tile leftWall = Main.tile[centerX - towerWidth / 2, j];
+                leftWall.HasTile = true;
+                leftWall.TileType = TileID.GrayBrick;
+
+                Tile rightWall = Main.tile[centerX + towerWidth / 2, j];
+                rightWall.HasTile = true;
+                rightWall.TileType = TileID.GrayBrick;
+
+                for (int i = centerX - towerWidth / 2 + 1; i < centerX + towerWidth / 2; i++)
+                {
+                    Tile inner = Main.tile[i, j];
+                    if (j == topY)
+                    {
+                        inner.HasTile = true;
+                        inner.TileType = TileID.GrayBrick;
+                    }
+                    else
+                    {
+                        inner.HasTile = false;
+                        inner.WallType = WallID.Planked;
+                    }
+                }
+            }
+
+            for (int i = centerX - towerWidth / 2 - 1; i <= centerX + towerWidth / 2 + 1; i++)
+            {
+                Tile platform = Main.tile[i, topY + towerHeight];
+                platform.HasTile = true;
+                platform.TileType = TileID.GrayBrick;
+            }
+
+            PlaceTorchAt(centerX, topY + 1);
+        }
+
+        /// <summary>
+        /// 建造厨房。
+        /// </summary>
+        private void BuildKitchen(int centerX, int topY)
+        {
+            int halfWidth = 8;
+            int height = 6;
+
+            for (int i = centerX - halfWidth; i <= centerX + halfWidth; i++)
+            {
+                for (int j = topY + height; j <= topY + height + 1; j++)
+                {
+                    Tile tile = Main.tile[i, j];
+                    tile.HasTile = true;
+                    tile.TileType = TileID.GrayBrick;
+                }
+            }
+
+            for (int i = centerX - halfWidth; i <= centerX + halfWidth; i++)
+            {
+                for (int j = topY; j <= topY + height; j++)
+                {
+                    if (i == centerX - halfWidth || i == centerX + halfWidth || j == topY)
+                    {
+                        Tile tile = Main.tile[i, j];
+                        tile.HasTile = true;
+                        tile.TileType = TileID.GrayBrick;
+                    }
+                    else if (j > topY && j < topY + height)
+                    {
+                        Tile tile = Main.tile[i, j];
+                        tile.HasTile = false;
+                        tile.WallType = WallID.Wood;
+                    }
+                }
+            }
+
+            Tile doorTile = Main.tile[centerX, topY + height - 2];
+            doorTile.HasTile = false;
+            Tile doorTile2 = Main.tile[centerX, topY + height - 1];
+            doorTile2.HasTile = false;
+
+            Tile stove = Main.tile[centerX - 3, topY + height - 2];
+            stove.HasTile = true;
+            stove.TileType = TileID.Furnaces;
+
+            Tile cookingPot = Main.tile[centerX, topY + height - 2];
+            cookingPot.HasTile = true;
+            cookingPot.TileType = TileID.CookingPots;
+
+            Tile barrel = Main.tile[centerX + 3, topY + height - 2];
+            barrel.HasTile = true;
+            barrel.TileType = TileID.Kegs;
+        }
+
+        /// <summary>
+        /// 建造水井。
+        /// </summary>
+        private void BuildWell(int centerX, int topY)
+        {
+            int wellWidth = 3;
+            int wellDepth = 5;
+
+            for (int i = centerX - wellWidth; i <= centerX + wellWidth; i++)
+            {
+                Tile rim = Main.tile[i, topY];
+                rim.HasTile = true;
+                rim.TileType = TileID.Stone;
+            }
+
+            Tile rimLeft = Main.tile[centerX - wellWidth, topY + 1];
+            rimLeft.HasTile = true;
+            rimLeft.TileType = TileID.Stone;
+            Tile rimRight = Main.tile[centerX + wellWidth, topY + 1];
+            rimRight.HasTile = true;
+            rimRight.TileType = TileID.Stone;
+
+            for (int j = topY + 1; j <= topY + wellDepth; j++)
+            {
+                Tile leftWall = Main.tile[centerX - wellWidth, j];
+                leftWall.HasTile = true;
+                leftWall.TileType = TileID.Stone;
+                Tile rightWall = Main.tile[centerX + wellWidth, j];
+                rightWall.HasTile = true;
+                rightWall.TileType = TileID.Stone;
+
+                for (int i = centerX - wellWidth + 1; i < centerX + wellWidth; i++)
+                {
+                    Tile water = Main.tile[i, j];
+                    water.HasTile = false;
+                    water.LiquidType = LiquidID.Water;
+                    water.LiquidAmount = 255;
+                }
+            }
+
+            Tile postLeft = Main.tile[centerX - wellWidth, topY - 3];
+            postLeft.HasTile = true;
+            postLeft.TileType = TileID.WoodenBeam;
+            Tile postRight = Main.tile[centerX + wellWidth, topY - 3];
+            postRight.HasTile = true;
+            postRight.TileType = TileID.WoodenBeam;
+
+            for (int i = centerX - wellWidth; i <= centerX + wellWidth; i++)
+            {
+                Tile roof = Main.tile[i, topY - 4];
+                roof.HasTile = true;
+                roof.TileType = TileID.WoodBlock;
+            }
+        }
+
+        /// <summary>
+        /// 建造花园。
+        /// </summary>
+        private void BuildGarden(int centerX, int topY)
+        {
+            int halfWidth = 8;
+
+            for (int i = centerX - halfWidth; i <= centerX + halfWidth; i++)
+            {
+                Tile planter = Main.tile[i, topY];
+                planter.HasTile = true;
+                planter.TileType = TileID.Grass;
+            }
+
+            int[] herbTypes = { TileID.BloomingHerbs, TileID.BloomingHerbs, TileID.BloomingHerbs, TileID.BloomingHerbs, TileID.BloomingHerbs, TileID.BloomingHerbs };
+            for (int k = -3; k <= 3; k++)
+            {
+                Tile herb = Main.tile[centerX + k * 2, topY - 1];
+                herb.HasTile = true;
+                herb.TileType = (ushort)herbTypes[((k + 3) % herbTypes.Length)];
+            }
+
+            Tile fence1 = Main.tile[centerX - halfWidth, topY - 1];
+            fence1.HasTile = true;
+            fence1.TileType = TileID.WoodBlock;
+            Tile fence2 = Main.tile[centerX + halfWidth, topY - 1];
+            fence2.HasTile = true;
+            fence2.TileType = TileID.WoodBlock;
+        }
+
+        /// <summary>
+        /// 建造赤脉分堂。
+        /// </summary>
+        private void BuildChiBranchHall(int centerX, int topY)
+        {
+            int halfWidth = 8;
+            int height = 8;
+
+            for (int i = centerX - halfWidth; i <= centerX + halfWidth; i++)
+            {
+                for (int j = topY + height; j <= topY + height + 1; j++)
+                {
+                    Tile tile = Main.tile[i, j];
+                    tile.HasTile = true;
+                    tile.TileType = TileID.GrayBrick;
+                }
+            }
+
+            for (int i = centerX - halfWidth; i <= centerX + halfWidth; i++)
+            {
+                for (int j = topY; j <= topY + height; j++)
+                {
+                    if (i == centerX - halfWidth || i == centerX + halfWidth || j == topY)
+                    {
+                        Tile tile = Main.tile[i, j];
+                        tile.HasTile = true;
+                        tile.TileType = TileID.ObsidianBrick;
+                    }
+                    else if (j > topY && j < topY + height)
+                    {
+                        Tile tile = Main.tile[i, j];
+                        tile.HasTile = false;
+                        tile.WallType = WallID.ObsidianBackUnsafe;
+                    }
+                }
+            }
+
+            Tile doorTile = Main.tile[centerX, topY + height - 2];
+            doorTile.HasTile = false;
+            Tile doorTile2 = Main.tile[centerX, topY + height - 1];
+            doorTile2.HasTile = false;
+
+            Tile weaponRack1 = Main.tile[centerX - 4, topY + height - 3];
+            weaponRack1.HasTile = true;
+            weaponRack1.TileType = TileID.WoodenBeam;
+            Tile weaponRack2 = Main.tile[centerX + 4, topY + height - 3];
+            weaponRack2.HasTile = true;
+            weaponRack2.TileType = TileID.WoodenBeam;
+
+            PlaceTorchAt(centerX - 2, topY + 2);
+            PlaceTorchAt(centerX + 2, topY + 2);
+        }
+
+        /// <summary>
+        /// 建造漠脉分堂。
+        /// </summary>
+        private void BuildMoBranchHall(int centerX, int topY)
+        {
+            int halfWidth = 8;
+            int height = 8;
+
+            for (int i = centerX - halfWidth; i <= centerX + halfWidth; i++)
+            {
+                for (int j = topY + height; j <= topY + height + 1; j++)
+                {
+                    Tile tile = Main.tile[i, j];
+                    tile.HasTile = true;
+                    tile.TileType = TileID.GrayBrick;
+                }
+            }
+
+            for (int i = centerX - halfWidth; i <= centerX + halfWidth; i++)
+            {
+                for (int j = topY; j <= topY + height; j++)
+                {
+                    if (i == centerX - halfWidth || i == centerX + halfWidth || j == topY)
+                    {
+                        Tile tile = Main.tile[i, j];
+                        tile.HasTile = true;
+                        tile.TileType = TileID.SandstoneBrick;
+                    }
+                    else if (j > topY && j < topY + height)
+                    {
+                        Tile tile = Main.tile[i, j];
+                        tile.HasTile = false;
+                        tile.WallType = WallID.Sandstone;
+                    }
+                }
+            }
+
+            Tile doorTile = Main.tile[centerX, topY + height - 2];
+            doorTile.HasTile = false;
+            Tile doorTile2 = Main.tile[centerX, topY + height - 1];
+            doorTile2.HasTile = false;
+
+            Tile shield1 = Main.tile[centerX - 4, topY + height - 3];
+            shield1.HasTile = true;
+            shield1.TileType = TileID.WoodenBeam;
+            Tile shield2 = Main.tile[centerX + 4, topY + height - 3];
+            shield2.HasTile = true;
+            shield2.TileType = TileID.WoodenBeam;
+
+            PlaceTorchAt(centerX - 2, topY + 2);
+            PlaceTorchAt(centerX + 2, topY + 2);
+        }
+
+        /// <summary>
+        /// 建造铁匠铺。
+        /// </summary>
+        private void BuildBlacksmith(int centerX, int topY)
+        {
+            int halfWidth = 8;
+            int height = 6;
+
+            for (int i = centerX - halfWidth; i <= centerX + halfWidth; i++)
+            {
+                for (int j = topY + height; j <= topY + height + 1; j++)
+                {
+                    Tile tile = Main.tile[i, j];
+                    tile.HasTile = true;
+                    tile.TileType = TileID.GrayBrick;
+                }
+            }
+
+            for (int i = centerX - halfWidth; i <= centerX + halfWidth; i++)
+            {
+                for (int j = topY; j <= topY + height; j++)
+                {
+                    if (i == centerX - halfWidth || i == centerX + halfWidth || j == topY)
+                    {
+                        Tile tile = Main.tile[i, j];
+                        tile.HasTile = true;
+                        tile.TileType = TileID.GrayBrick;
+                    }
+                    else if (j > topY && j < topY + height)
+                    {
+                        Tile tile = Main.tile[i, j];
+                        tile.HasTile = false;
+                        tile.WallType = WallID.Wood;
+                    }
+                }
+            }
+
+            Tile doorTile = Main.tile[centerX, topY + height - 2];
+            doorTile.HasTile = false;
+            Tile doorTile2 = Main.tile[centerX, topY + height - 1];
+            doorTile2.HasTile = false;
+
+            Tile anvil = Main.tile[centerX - 3, topY + height - 2];
+            anvil.HasTile = true;
+            anvil.TileType = TileID.Anvils;
+
+            Tile furnace = Main.tile[centerX + 3, topY + height - 2];
+            furnace.HasTile = true;
+            furnace.TileType = TileID.Furnaces;
+
+            Tile workbench = Main.tile[centerX, topY + height - 2];
+            workbench.HasTile = true;
+            workbench.TileType = TileID.WorkBenches;
         }
 
         /// <summary>

@@ -14,6 +14,15 @@ namespace VerminLordMod.Content.Projectiles.Zero
         protected override void RegisterBehaviors()
         {
             Behaviors.Add(new AimBehavior(speed: 0f) { AutoRotate = true, RotationOffset = MathHelper.PiOver2 });
+            Behaviors.Add(new SpaceTrailBehavior
+            {
+                SuppressDefaultDraw = true,
+                EnableGhostTrail = true,
+                GhostColor = new Color(160, 120, 220, 160),
+                FoldLineColor = new Color(180, 140, 240, 210),
+                WarpPointColor = new Color(140, 100, 200, 180),
+                MirrorShardColor = new Color(200, 180, 255, 220),
+            });
         }
 
         public override void SetDefaults()

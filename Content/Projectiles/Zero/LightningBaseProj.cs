@@ -21,14 +21,12 @@ namespace VerminLordMod.Content.Projectiles.Zero
     /// - 命中后电弧跳跃到附近敌人（最多 3 次连锁）
     ///
     /// 视觉效果：
-    /// - 雷电粒子拖尾（黄色/白色闪电粒子）
-    /// - 强烈发光（闪电的刺眼感）
+    /// - 雷系拖尾：电弧 + 闪光 + 场（LightningTrailBehavior）
     /// - 命中时锥形电弧喷射（SplashBehavior Cone 模式）
     ///
     /// 行为组合：
     /// - AimBehavior: 极高速直线飞行
-    /// - DustTrailBehavior: 雷电粒子拖尾
-    /// - GlowDrawBehavior: 强烈发光
+    /// - LightningTrailBehavior: 雷系拖尾（电弧 + 闪光 + 场）
     /// - SplashBehavior(Cone): 命中时锥形电弧喷射
     /// </summary>
     public class LightningBaseProj : BaseBullet
@@ -51,25 +49,15 @@ namespace VerminLordMod.Content.Projectiles.Zero
                 LightColor = new Vector3(0.8f, 0.8f, 0.3f)
             });
 
-            // 2. 雷电粒子拖尾
-            Behaviors.Add(new DustTrailBehavior(DustID.Electric, spawnChance: 1)
+            // 2. 雷电拖尾（电弧 + 闪光 + 场）
+            Behaviors.Add(new LightningTrailBehavior
             {
-                DustScale = 0.8f,
-                VelocityMultiplier = 0.15f,
-                NoGravity = true,
-                DustAlpha = 200,
-                RandomSpeed = 0.5f
-            });
-
-            // 3. 强烈发光
-            Behaviors.Add(new GlowDrawBehavior
-            {
-                GlowColor = new Color(255, 255, 150, 200),
-                GlowBaseScale = 1.5f,
-                GlowLayers = 3,
-                GlowAlphaMultiplier = 0.4f,
-                EnableLight = true,
-                LightColor = new Vector3(1.0f, 1.0f, 0.4f)
+                SuppressDefaultDraw = true,
+                EnableGhostTrail = true,
+                GhostColor = new Color(200, 200, 255, 200),
+                ArcColor = new Color(180, 180, 255, 240),
+                FlashColor = new Color(255, 255, 220, 255),
+                FieldColor = new Color(140, 140, 220, 160),
             });
 
             // 4. 命中时锥形电弧喷射

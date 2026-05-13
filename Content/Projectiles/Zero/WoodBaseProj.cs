@@ -7,29 +7,6 @@ using VerminLordMod.Content.DamageClasses;
 
 namespace VerminLordMod.Content.Projectiles.Zero
 {
-    /// <summary>
-    /// 木道基础弹幕 — 缠绕生长。
-    ///
-    /// 设计哲学：
-    /// 木道的本质是"生长 + 缠绕 + 束缚"。弹幕以追踪方式逼近敌人，
-    /// 命中后产生径向藤蔓爆散（SplashBehavior Radial 模式），
-    /// 视觉上以绿色叶片拖尾和自然生长感模拟藤蔓的缠绕力。
-    ///
-    /// 运动方式：
-    /// - 追踪敌人（HomingBehavior）
-    /// - 命中后径向藤蔓爆散
-    ///
-    /// 视觉效果：
-    /// - 绿色叶片粒子拖尾
-    /// - 翠绿色发光
-    /// - 命中时径向藤蔓爆散（SplashBehavior Radial 模式）
-    ///
-    /// 行为组合：
-    /// - HomingBehavior: 追踪敌人
-    /// - DustTrailBehavior: 叶片粒子拖尾
-    /// - GlowDrawBehavior: 翠绿色发光
-    /// - SplashBehavior(Radial): 命中时径向藤蔓爆散
-    /// </summary>
     public class WoodBaseProj : BaseBullet
     {
         private const float FlySpeed = 9f;
@@ -38,7 +15,6 @@ namespace VerminLordMod.Content.Projectiles.Zero
 
         protected override void RegisterBehaviors()
         {
-            // 1. 追踪敌人
             Behaviors.Add(new HomingBehavior(speed: FlySpeed, trackingWeight: TrackWeight)
             {
                 Range = 600f,
@@ -46,28 +22,54 @@ namespace VerminLordMod.Content.Projectiles.Zero
                 RotationOffset = MathHelper.PiOver2,
             });
 
-            // 2. 叶片粒子拖尾
-            Behaviors.Add(new DustTrailBehavior(DustID.Grass, spawnChance: 1)
+            Behaviors.Add(new GrassTrailBehavior
             {
-                DustScale = 0.6f,
-                VelocityMultiplier = 0.08f,
-                NoGravity = true,
-                DustAlpha = 150,
-                RandomSpeed = 0.25f
+                EnableGhostTrail = true,
+                GhostAlpha = 0.32f,
+                GhostMaxPositions = 10,
+                GhostWidthScale = 0.2f,
+                GhostLengthScale = 1.5f,
+                GhostColor = new Color(80, 200, 60, 160),
+
+                MaxLeaves = 28,
+                LeafLife = 38,
+                LeafSize = 0.5f,
+                LeafSpawnInterval = 2,
+                LeafRotSpeed = 0.06f,
+                LeafDriftSpeed = 0.25f,
+                LeafSpread = 5f,
+                LeafColor = new Color(80, 200, 60, 210),
+
+                MaxPollen = 30,
+                PollenLife = 28,
+                PollenSize = 0.25f,
+                PollenSpawnChance = 0.22f,
+                PollenDriftSpeed = 0.35f,
+                PollenColor = new Color(200, 230, 80, 200),
+
+                MaxBranches = 8,
+                BranchLife = 40,
+                BranchSize = 0.5f,
+                BranchLength = 20f,
+                BranchSpawnChance = 0.05f,
+                BranchGrowSpeed = 3f,
+                BranchDriftSpeed = 0.08f,
+                BranchMaxDepth = 2,
+                BranchSubAngle = 0.6f,
+                BranchColor = new Color(60, 160, 50, 200),
+
+                MaxPetals = 8,
+                PetalLife = 45,
+                PetalSize = 0.4f,
+                PetalSpawnChance = 0.035f,
+                PetalSpinSpeed = 0.04f,
+                PetalDriftSpeed = 0.15f,
+                PetalColor = new Color(255, 180, 200, 200),
+
+                AutoDraw = true,
+                SuppressDefaultDraw = true,
             });
 
-            // 3. 翠绿色发光
-            Behaviors.Add(new GlowDrawBehavior
-            {
-                GlowColor = new Color(50, 200, 50, 150),
-                GlowBaseScale = 1.2f,
-                GlowLayers = 2,
-                GlowAlphaMultiplier = 0.25f,
-                EnableLight = true,
-                LightColor = new Vector3(0.1f, 0.5f, 0.1f)
-            });
-
-            // 4. 命中时径向藤蔓爆散
             Behaviors.Add(new SplashBehavior(SplashMode.Radial)
             {
                 Count = 10,
@@ -116,15 +118,8 @@ namespace VerminLordMod.Content.Projectiles.Zero
                 float angle = Main.rand.NextFloat(MathHelper.TwoPi);
                 float speed = Main.rand.NextFloat(0.5f, 2f);
                 Vector2 vel = angle.ToRotationVector2() * speed;
-
-                Dust d = Dust.NewDustPerfect(
-                    Projectile.Center,
-                    DustID.Grass,
-                    vel,
-                    0,
-                    new Color(30, 150, 30, 150),
-                    Main.rand.NextFloat(0.4f, 0.7f)
-                );
+                Dust d = Dust.NewDustPerfect(Projectile.Center, DustID.Grass, vel, 0,
+                    new Color(30, 150, 30, 150), Main.rand.NextFloat(0.4f, 0.7f));
                 d.noGravity = true;
             }
         }

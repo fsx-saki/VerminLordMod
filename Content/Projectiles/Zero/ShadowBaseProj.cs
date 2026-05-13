@@ -13,7 +13,7 @@ namespace VerminLordMod.Content.Projectiles.Zero
     /// 设计哲学：
     /// 影道的本质是"隐匿 + 突袭 + 致命"。弹幕以高速追踪敌人，
     /// 命中后产生环形暗影冲击波（SplashBehavior Ring 模式），
-    /// 视觉上以暗色粒子拖尾和低可视度模拟暗影的隐匿突袭感。
+    /// 视觉上以影系拖尾（触手 + 池 + 影分身）和低可视度模拟暗影的隐匿突袭感。
     ///
     /// 与 DarkBaseProj 的区别：
     /// - Dark 是"吞噬腐蚀"，偏魔法/诅咒
@@ -24,14 +24,12 @@ namespace VerminLordMod.Content.Projectiles.Zero
     /// - 命中后环形暗影冲击波
     ///
     /// 视觉效果：
-    /// - 暗色粒子拖尾（低可视度）
-    /// - 微弱暗色发光
+    /// - 影系拖尾：触手 + 池 + 影分身（ShadowTrailBehavior）
     /// - 命中时环形暗影冲击波（SplashBehavior Ring 模式）
     ///
     /// 行为组合：
     /// - HomingBehavior: 高速追踪敌人
-    /// - DustTrailBehavior: 暗色粒子拖尾
-    /// - GlowDrawBehavior: 微弱暗色发光
+    /// - ShadowTrailBehavior: 影系拖尾（触手 + 池 + 影分身）
     /// - SplashBehavior(Ring): 命中时环形暗影冲击波
     /// </summary>
     public class ShadowBaseProj : BaseBullet
@@ -50,25 +48,15 @@ namespace VerminLordMod.Content.Projectiles.Zero
                 RotationOffset = MathHelper.PiOver2,
             });
 
-            // 2. 暗色粒子拖尾（低可视度）
-            Behaviors.Add(new DustTrailBehavior(DustID.Ash, spawnChance: 1)
+            // 2. 影道拖尾（触手 + 池 + 影分身）
+            Behaviors.Add(new ShadowTrailBehavior
             {
-                DustScale = 0.5f,
-                VelocityMultiplier = 0.05f,
-                NoGravity = true,
-                DustAlpha = 100,
-                RandomSpeed = 0.2f
-            });
-
-            // 3. 微弱暗色发光
-            Behaviors.Add(new GlowDrawBehavior
-            {
-                GlowColor = new Color(40, 40, 60, 120),
-                GlowBaseScale = 1.1f,
-                GlowLayers = 1,
-                GlowAlphaMultiplier = 0.2f,
-                EnableLight = true,
-                LightColor = new Vector3(0.1f, 0.1f, 0.2f)
+                SuppressDefaultDraw = true,
+                EnableGhostTrail = true,
+                GhostColor = new Color(30, 25, 50, 160),
+                TendrilColor = new Color(40, 30, 70, 200),
+                PoolColor = new Color(25, 20, 45, 180),
+                CloneColor = new Color(50, 40, 80, 180),
             });
 
             // 4. 命中时环形暗影冲击波

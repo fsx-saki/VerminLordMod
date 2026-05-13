@@ -59,7 +59,6 @@ public class SearchProcess
     // ===== 内部状态 =====
     private float _totalSearchTime;
     private int _attractTimer;
-    private int _interruptCooldownTimer;
     private Vector2 _searchStartPosition;
     private int _searchStartHealth;
 
@@ -83,7 +82,6 @@ public class SearchProcess
         _searchStartPosition = player.Center;
         _searchStartHealth = player.statLife;
         _attractTimer = 0;
-        _interruptCooldownTimer = 0;
     }
 
     /// <summary>
@@ -227,7 +225,6 @@ public class SearchProcess
     public void Interrupt(string reason = "")
     {
         State = SearchProcessState.Interrupted;
-        _interruptCooldownTimer = InterruptCooldown;
     }
 
     /// <summary>

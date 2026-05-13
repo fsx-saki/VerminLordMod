@@ -13,7 +13,14 @@ namespace VerminLordMod.Content.Projectiles.Zero
     {
         protected override void RegisterBehaviors()
         {
-            Behaviors.Add(new AimBehavior(speed: 0f) { AutoRotate = true, RotationOffset = MathHelper.PiOver2 });
+            Behaviors.Add(new AimBehavior(speed: 10f) { AutoRotate = true, RotationOffset = MathHelper.PiOver2 });
+            Behaviors.Add(new FlyingTrailBehavior
+            {
+                SuppressDefaultDraw = true,
+                FeatherColor = new Color(220, 235, 255, 200),
+                WindTailColor = new Color(180, 210, 255, 150),
+                SpeedAfterColor = new Color(160, 200, 255, 120),
+            });
         }
 
         public override void SetDefaults()

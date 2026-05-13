@@ -7,6 +7,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 using VerminLordMod.Common.DialogueTree;
+using VerminLordMod.Content.NPCs.GuMasters;
 using VerminLordMod.Content.NPCs.GuYue;
 
 namespace VerminLordMod.Common.SubWorlds
@@ -63,6 +64,7 @@ namespace VerminLordMod.Common.SubWorlds
             { GuYueNPCType.SecondTurnGuMaster, 5 },
             { GuYueNPCType.FirstTurnGuMaster, 12 },
             { GuYueNPCType.FistInstructor, 3 },
+            { GuYueNPCType.PatrolGuMaster, 6 },
             { GuYueNPCType.Servant, 10 },
             { GuYueNPCType.Commoner, 14 },
         };
@@ -86,6 +88,7 @@ namespace VerminLordMod.Common.SubWorlds
                 { GuYueNPCType.SecondTurnGuMaster, 1 },
                 { GuYueNPCType.FirstTurnGuMaster, 2 },
                 { GuYueNPCType.FistInstructor, 0 },
+                { GuYueNPCType.PatrolGuMaster, 3 },
                 { GuYueNPCType.Servant, 3 },
                 { GuYueNPCType.Commoner, 5 },
             },
@@ -101,6 +104,7 @@ namespace VerminLordMod.Common.SubWorlds
                 { GuYueNPCType.SecondTurnGuMaster, 3 },
                 { GuYueNPCType.FirstTurnGuMaster, 8 },
                 { GuYueNPCType.FistInstructor, 3 },
+                { GuYueNPCType.PatrolGuMaster, 4 },
                 { GuYueNPCType.Servant, 5 },
                 { GuYueNPCType.Commoner, 8 },
             },
@@ -116,6 +120,7 @@ namespace VerminLordMod.Common.SubWorlds
                 { GuYueNPCType.SecondTurnGuMaster, 4 },
                 { GuYueNPCType.FirstTurnGuMaster, 10 },
                 { GuYueNPCType.FistInstructor, 3 },
+                { GuYueNPCType.PatrolGuMaster, 5 },
                 { GuYueNPCType.Servant, 8 },
                 { GuYueNPCType.Commoner, 12 },
             },
@@ -131,6 +136,7 @@ namespace VerminLordMod.Common.SubWorlds
                 { GuYueNPCType.SecondTurnGuMaster, 5 },
                 { GuYueNPCType.FirstTurnGuMaster, 12 },
                 { GuYueNPCType.FistInstructor, 3 },
+                { GuYueNPCType.PatrolGuMaster, 6 },
                 { GuYueNPCType.Servant, 10 },
                 { GuYueNPCType.Commoner, 14 },
             },
@@ -146,6 +152,7 @@ namespace VerminLordMod.Common.SubWorlds
                 { GuYueNPCType.SecondTurnGuMaster, 8 },
                 { GuYueNPCType.FirstTurnGuMaster, 15 },
                 { GuYueNPCType.FistInstructor, 5 },
+                { GuYueNPCType.PatrolGuMaster, 10 },
                 { GuYueNPCType.Servant, 5 },
                 { GuYueNPCType.Commoner, 5 },
             },
@@ -161,6 +168,7 @@ namespace VerminLordMod.Common.SubWorlds
                 { GuYueNPCType.SecondTurnGuMaster, 5 },
                 { GuYueNPCType.FirstTurnGuMaster, 12 },
                 { GuYueNPCType.FistInstructor, 3 },
+                { GuYueNPCType.PatrolGuMaster, 6 },
                 { GuYueNPCType.Servant, 12 },
                 { GuYueNPCType.Commoner, 16 },
             },
@@ -168,27 +176,41 @@ namespace VerminLordMod.Common.SubWorlds
 
         /// <summary>
         /// NPC类型到具体ModNPC类型的映射
-        /// 所有古月家族NPC统一使用 GuYueVillager 类，
-        /// 通过 SetNPCType 方法区分身份。
+        /// 每个GuYueNPCType对应一个独立的NPC类，
+        /// 每个类继承自GuYueNPCBase，拥有独立的AI和行为。
         /// </summary>
-        private static int GetNPCTypeId(GuYueNPCType type) => ModContent.NPCType<GuYueVillager>();
+        private static readonly Dictionary<GuYueNPCType, int> NPCTypeMap = new()
+        {
+            { GuYueNPCType.Chief, ModContent.NPCType<GuYueChief>() },
+            { GuYueNPCType.SchoolElder, ModContent.NPCType<GuYueSchoolElder>() },
+            { GuYueNPCType.MedicineElder, ModContent.NPCType<GuYueMedicineElder>() },
+            { GuYueNPCType.DefenseElder, ModContent.NPCType<GuYueDefenseElder>() },
+            { GuYueNPCType.ChiElder, ModContent.NPCType<GuYueChiElder>() },
+            { GuYueNPCType.MoElder, ModContent.NPCType<GuYueMoElder>() },
+            { GuYueNPCType.MedicinePulseElder, ModContent.NPCType<GuYueMedicinePulseElder>() },
+            { GuYueNPCType.FirstTurnGuMaster, ModContent.NPCType<GuYueFirstTurnGuMaster>() },
+            { GuYueNPCType.SecondTurnGuMaster, ModContent.NPCType<GuYueSecondTurnGuMaster>() },
+            { GuYueNPCType.FistInstructor, ModContent.NPCType<GuYueFistInstructor>() },
+            { GuYueNPCType.PatrolGuMaster, ModContent.NPCType<GuYuePatrolGuMaster>() },
+            { GuYueNPCType.Servant, ModContent.NPCType<GuYueServant>() },
+            { GuYueNPCType.Commoner, ModContent.NPCType<GuYueCommoner>() },
+        };
+
+        private static int GetNPCTypeId(GuYueNPCType type)
+        {
+            if (NPCTypeMap.TryGetValue(type, out int id))
+                return id;
+            return ModContent.NPCType<GuYueCommoner>();
+        }
 
         /// <summary>
-        /// 创建指定类型的古月家族NPC并设置其身份
+        /// 创建指定类型的古月家族NPC
+        /// 每个NPC类型使用独立的ModNPC类，无需额外设置身份。
         /// </summary>
         private static int CreateGuYueNPC(GuYueNPCType type, Vector2 position)
         {
-            int npcTypeId = ModContent.NPCType<GuYueVillager>();
-            int npcIdx = NPC.NewNPC(null, (int)position.X, (int)position.Y, npcTypeId);
-            if (npcIdx >= 0 && npcIdx < Main.maxNPCs)
-            {
-                var npc = Main.npc[npcIdx];
-                if (npc.ModNPC is GuYueVillager villager)
-                {
-                    villager.SetNPCType(type);
-                }
-            }
-            return npcIdx;
+            int npcTypeId = GetNPCTypeId(type);
+            return NPC.NewNPC(null, (int)position.X, (int)position.Y, npcTypeId);
         }
 
         /// <summary>
@@ -348,11 +370,11 @@ namespace VerminLordMod.Common.SubWorlds
                 if (!npc.active) continue;
 
                 // 只保存古月家族的NPC
-                if (npc.ModNPC is GuYueVillager guYueVillager)
+                if (npc.ModNPC is GuYueNPCBase guYueNPC)
                 {
                     SavedNPCs.Add(new SavedNPCData
                     {
-                        NPCType = guYueVillager.NPCType,
+                        NPCType = guYueNPC.GetNPCType(),
                         PositionX = npc.position.X,
                         PositionY = npc.position.Y,
                         HomeTileX = npc.homeTileX,
@@ -396,7 +418,7 @@ namespace VerminLordMod.Common.SubWorlds
             for (int i = 0; i < Main.maxNPCs; i++)
             {
                 var npc = Main.npc[i];
-                if (npc.active && npc.ModNPC is GuYueVillager)
+                if (npc.active && npc.ModNPC is GuYueNPCBase)
                 {
                     npc.active = false;
                 }

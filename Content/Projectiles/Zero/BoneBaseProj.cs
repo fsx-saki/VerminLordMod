@@ -20,14 +20,14 @@ namespace VerminLordMod.Content.Projectiles.Zero
     /// - 命中后前方锥形散射骨碎片
     ///
     /// 视觉效果：
-    /// - 白色骨粉粒子拖尾
-    /// - 苍白发光
+    /// - 骨系拖尾：肋骨 + 髓光 + 骨刺（BoneTrailBehavior）
+    /// - 近战挥舞特效：挥砍弧 + 穿刺冲击 + 砸击环（MeleeSwingTrailBehavior）
     /// - 命中时前方锥形骨碎片散射（SplashBehavior Cone 模式）
     ///
     /// 行为组合：
     /// - AimBehavior: 高速直线飞行
-    /// - DustTrailBehavior: 骨粉粒子拖尾
-    /// - GlowDrawBehavior: 苍白发光
+    /// - BoneTrailBehavior: 骨系拖尾（肋骨 + 髓光 + 骨刺）
+    /// - MeleeSwingTrailBehavior: 近战挥舞特效（挥砍 + 穿刺 + 砸击）
     /// - SplashBehavior(Cone): 命中时前方锥形骨碎片散射
     /// </summary>
     public class BoneBaseProj : BaseBullet
@@ -46,25 +46,29 @@ namespace VerminLordMod.Content.Projectiles.Zero
                 LightColor = new Vector3(0.3f, 0.3f, 0.3f)
             });
 
-            // 2. 骨粉粒子拖尾
-            Behaviors.Add(new DustTrailBehavior(DustID.Bone, spawnChance: 1)
+            Behaviors.Add(new BoneTrailBehavior
             {
-                DustScale = 0.6f,
-                VelocityMultiplier = 0.1f,
-                NoGravity = true,
-                DustAlpha = 180,
-                RandomSpeed = 0.3f
-            });
+                SuppressDefaultDraw = true,
+                EnableGhostTrail = true,
+                GhostColor = new Color(180, 175, 160, 140),
 
-            // 3. 苍白发光
-            Behaviors.Add(new GlowDrawBehavior
+                RibCageColor = new Color(200, 195, 180, 200),
+                MarrowGlowColor = new Color(140, 200, 180, 180),
+                BoneSpikeColor = new Color(220, 215, 200, 220),
+            });
+            Behaviors.Add(new MeleeSwingTrailBehavior
             {
-                GlowColor = new Color(200, 200, 180, 150),
-                GlowBaseScale = 1.2f,
-                GlowLayers = 2,
-                GlowAlphaMultiplier = 0.25f,
-                EnableLight = true,
-                LightColor = new Vector3(0.4f, 0.4f, 0.35f)
+                SuppressDefaultDraw = true,
+                SwingArcColor = new Color(200, 195, 180, 200),
+                StabImpactColor = new Color(220, 215, 200, 220),
+                SmashRingColor = new Color(180, 175, 160, 180),
+                SwingArcLength = 36f,
+                SwingArcWidth = 0.3f,
+                SwingArcCurlAmount = 3f,
+                StabImpactSpread = 0.35f,
+                StabImpactStretch = 3.5f,
+                SmashRingEndRadius = 44f,
+                SmashRingCrackCount = 7,
             });
 
             // 4. 命中时前方锥形骨碎片散射

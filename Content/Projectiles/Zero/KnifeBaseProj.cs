@@ -13,7 +13,25 @@ namespace VerminLordMod.Content.Projectiles.Zero
     {
         protected override void RegisterBehaviors()
         {
-            Behaviors.Add(new AimBehavior(speed: 0f) { AutoRotate = true, RotationOffset = MathHelper.PiOver2 });
+            Behaviors.Add(new AimBehavior(speed: 6f) { AutoRotate = true, RotationOffset = MathHelper.PiOver2 });
+            Behaviors.Add(new KnifeTrailBehavior
+            {
+                SuppressDefaultDraw = true,
+                BladeFlashColor = new Color(200, 215, 240, 230),
+                CuttingMarkColor = new Color(160, 180, 220, 200),
+                EdgeShardColor = new Color(180, 195, 230, 200),
+            });
+            Behaviors.Add(new MeleeSwingTrailBehavior
+            {
+                SuppressDefaultDraw = true,
+                SwingArcColor = new Color(200, 215, 240, 200),
+                StabImpactColor = new Color(220, 210, 200, 220),
+                SmashRingColor = new Color(180, 195, 230, 180),
+                SwingArcSpawnChance = 0.2f,
+                StabImpactSpawnChance = 0.25f,
+                SwingArcLength = 30f,
+                StabImpactStretch = 3.5f,
+            });
         }
 
         public override void SetDefaults()

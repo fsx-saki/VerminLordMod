@@ -20,14 +20,12 @@ namespace VerminLordMod.Content.Projectiles.Zero
     /// - 命中后径向毒雾爆散
     ///
     /// 视觉效果：
-    /// - 绿色毒雾粒子拖尾
-    /// - 暗绿色发光
+    /// - 毒系拖尾：孢子 + 腐蚀滴 + 瘴气（PoisonTrailBehavior）
     /// - 命中时径向毒雾爆散（SplashBehavior Radial 模式）
     ///
     /// 行为组合：
     /// - AimBehavior: 中速直线飞行
-    /// - DustTrailBehavior: 毒雾粒子拖尾
-    /// - GlowDrawBehavior: 暗绿色发光
+    /// - PoisonTrailBehavior: 毒系拖尾（孢子 + 腐蚀滴 + 瘴气）
     /// - SplashBehavior(Radial): 命中时径向毒雾爆散
     /// </summary>
     public class PoisonBaseProj : BaseBullet
@@ -46,25 +44,14 @@ namespace VerminLordMod.Content.Projectiles.Zero
                 LightColor = new Vector3(0.1f, 0.4f, 0.1f)
             });
 
-            // 2. 毒雾粒子拖尾
-            Behaviors.Add(new DustTrailBehavior(DustID.Poisoned, spawnChance: 1)
+            Behaviors.Add(new PoisonTrailBehavior
             {
-                DustScale = 0.6f,
-                VelocityMultiplier = 0.08f,
-                NoGravity = true,
-                DustAlpha = 150,
-                RandomSpeed = 0.2f
-            });
-
-            // 3. 暗绿色发光
-            Behaviors.Add(new GlowDrawBehavior
-            {
-                GlowColor = new Color(50, 180, 50, 150),
-                GlowBaseScale = 1.2f,
-                GlowLayers = 2,
-                GlowAlphaMultiplier = 0.25f,
-                EnableLight = true,
-                LightColor = new Vector3(0.1f, 0.5f, 0.1f)
+                SuppressDefaultDraw = true,
+                EnableGhostTrail = true,
+                GhostColor = new Color(80, 180, 60, 140),
+                SporeBubbleColor = new Color(100, 200, 60, 200),
+                CorrosionDripColor = new Color(120, 220, 50, 220),
+                MiasmaCloudColor = new Color(60, 160, 40, 160),
             });
 
             // 4. 命中时径向毒雾爆散

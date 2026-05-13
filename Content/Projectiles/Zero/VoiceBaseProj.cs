@@ -6,14 +6,27 @@ using VerminLordMod.Content.DamageClasses;
 
 namespace VerminLordMod.Content.Projectiles.Zero
 {
-    /// <summary>
-    /// Voice道基础弹幕
-    /// </summary>
     public class VoiceBaseProj : BaseBullet
     {
         protected override void RegisterBehaviors()
         {
-            Behaviors.Add(new AimBehavior(speed: 0f) { AutoRotate = true, RotationOffset = MathHelper.PiOver2 });
+            Behaviors.Add(new AimBehavior(speed: 8f)
+            {
+                AutoRotate = true,
+                RotationOffset = MathHelper.PiOver2,
+                EnableLight = true,
+                LightColor = new Vector3(0.6f, 0.5f, 0.8f),
+            });
+
+            Behaviors.Add(new VoiceTrailBehavior
+            {
+                SuppressDefaultDraw = true,
+                EnableGhostTrail = true,
+                GhostColor = new Color(180, 160, 220, 120),
+                SoundWaveColor = new Color(200, 180, 240, 200),
+                MusicNoteColor = new Color(220, 200, 255, 220),
+                ResonanceColor = new Color(160, 140, 220, 230),
+            });
         }
 
         public override void SetDefaults()

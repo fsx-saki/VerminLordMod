@@ -21,15 +21,13 @@ namespace VerminLordMod.Content.Projectiles.Zero
     /// - 命中后径向血爆
     ///
     /// 视觉效果：
-    /// - 红色血雾粒子拖尾
-    /// - 暗红色发光
+    /// - 血系拖尾：血滴 + 血脉 + 血雾（BloodTrailBehavior）
     /// - 命中时径向血爆（SplashBehavior Radial 模式）
     /// - 吸血粒子飞回玩家
     ///
     /// 行为组合：
     /// - AimBehavior: 中速直线飞行
-    /// - DustTrailBehavior: 血雾粒子拖尾
-    /// - GlowDrawBehavior: 暗红色发光
+    /// - BloodTrailBehavior: 血系拖尾（血滴 + 血脉 + 血雾）
     /// - SplashBehavior(Radial): 命中时径向血爆
     /// </summary>
     public class BloodBaseProj : BaseBullet
@@ -48,25 +46,15 @@ namespace VerminLordMod.Content.Projectiles.Zero
                 LightColor = new Vector3(0.5f, 0.05f, 0.05f)
             });
 
-            // 2. 血雾粒子拖尾
-            Behaviors.Add(new DustTrailBehavior(DustID.Blood, spawnChance: 1)
+            // 2. 血道拖尾（血滴 + 血脉 + 血雾）
+            Behaviors.Add(new BloodTrailBehavior
             {
-                DustScale = 0.7f,
-                VelocityMultiplier = 0.1f,
-                NoGravity = false,
-                DustAlpha = 180,
-                RandomSpeed = 0.3f
-            });
-
-            // 3. 暗红色发光
-            Behaviors.Add(new GlowDrawBehavior
-            {
-                GlowColor = new Color(200, 30, 30, 150),
-                GlowBaseScale = 1.2f,
-                GlowLayers = 2,
-                GlowAlphaMultiplier = 0.3f,
-                EnableLight = true,
-                LightColor = new Vector3(0.6f, 0.05f, 0.05f)
+                SuppressDefaultDraw = true,
+                EnableGhostTrail = true,
+                GhostColor = new Color(180, 30, 30, 180),
+                DropColor = new Color(200, 30, 30, 230),
+                VeinColor = new Color(160, 20, 40, 210),
+                MistColor = new Color(140, 20, 30, 160),
             });
 
             // 4. 命中时径向血爆

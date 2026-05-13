@@ -13,21 +13,19 @@ namespace VerminLordMod.Content.Projectiles.Zero
     /// 设计哲学：
     /// 光道的本质是"穿透 + 折射 + 净化"。弹幕以极高速穿透敌人，
     /// 命中后向前方分裂出小型光棱（SplashBehavior Forward 模式），
-    /// 视觉上以金色/白色光芒和强烈发光模拟神圣光束的穿透感。
+    /// 视觉上以光系拖尾（光线 + 棱镜 + 光晕）模拟神圣光束的穿透感。
     ///
     /// 运动方式：
     /// - 极高速直线飞行，高穿透
     /// - 命中后向前方分裂小型光棱
     ///
     /// 视觉效果：
-    /// - 金色粒子拖尾
-    /// - 强烈白色发光
+    /// - 光系拖尾：光线 + 棱镜 + 光晕（LightTrailBehavior）
     /// - 命中时前方光棱分裂（SplashBehavior Forward 模式）
     ///
     /// 行为组合：
     /// - AimBehavior: 极高速直线飞行
-    /// - DustTrailBehavior: 金色粒子拖尾
-    /// - GlowDrawBehavior: 强烈白色发光
+    /// - LightTrailBehavior: 光系拖尾（光线 + 棱镜 + 光晕）
     /// - SplashBehavior(Forward): 命中时前方光棱分裂
     /// </summary>
     public class LightBaseProj : BaseBullet
@@ -46,25 +44,15 @@ namespace VerminLordMod.Content.Projectiles.Zero
                 LightColor = new Vector3(1.0f, 1.0f, 0.8f)
             });
 
-            // 2. 金色粒子拖尾
-            Behaviors.Add(new DustTrailBehavior(DustID.YellowStarDust, spawnChance: 1)
+            // 2. 光道拖尾（光线 + 棱镜 + 光晕）
+            Behaviors.Add(new LightTrailBehavior
             {
-                DustScale = 0.6f,
-                VelocityMultiplier = 0.1f,
-                NoGravity = true,
-                DustAlpha = 200,
-                RandomSpeed = 0.3f
-            });
-
-            // 3. 强烈白色发光
-            Behaviors.Add(new GlowDrawBehavior
-            {
-                GlowColor = new Color(255, 255, 200, 200),
-                GlowBaseScale = 1.4f,
-                GlowLayers = 3,
-                GlowAlphaMultiplier = 0.35f,
-                EnableLight = true,
-                LightColor = new Vector3(1.2f, 1.2f, 0.9f)
+                SuppressDefaultDraw = true,
+                EnableGhostTrail = true,
+                GhostColor = new Color(255, 255, 200, 200),
+                RayColor = new Color(255, 255, 220, 240),
+                HaloInnerColor = new Color(255, 255, 230, 220),
+                HaloOuterColor = new Color(255, 240, 180, 160),
             });
 
             // 4. 命中时前方光棱分裂

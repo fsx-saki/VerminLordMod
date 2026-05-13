@@ -22,15 +22,15 @@ namespace VerminLordMod.Content.Projectiles.Zero
     /// - 命中后径向金属碎片爆散
     ///
     /// 视觉效果：
-    /// - 金色火花粒子拖尾
-    /// - 金色发光
+    /// - 金系拖尾：火花 + 碎片 + 磨痕（MetalTrailBehavior）
+    /// - 近战挥舞特效：挥砍弧 + 穿刺冲击 + 砸击环（MeleeSwingTrailBehavior）
     /// - 命中时径向金属碎片爆散（SplashBehavior Radial 模式）
     ///
     /// 行为组合：
     /// - AimBehavior: 高速直线飞行
     /// - BounceBehavior: 撞墙反弹
-    /// - DustTrailBehavior: 火花粒子拖尾
-    /// - GlowDrawBehavior: 金色发光
+    /// - MetalTrailBehavior: 金系拖尾（火花 + 碎片 + 磨痕）
+    /// - MeleeSwingTrailBehavior: 近战挥舞特效（挥砍 + 穿刺 + 砸击）
     /// - SplashBehavior(Radial): 命中时径向金属碎片爆散
     /// </summary>
     public class MetalBaseProj : BaseBullet
@@ -57,23 +57,27 @@ namespace VerminLordMod.Content.Projectiles.Zero
                 TimeLeftAfterStop = 20
             });
 
-            Behaviors.Add(new DustTrailBehavior(DustID.GoldCoin, spawnChance: 1)
+            Behaviors.Add(new MetalTrailBehavior
             {
-                DustScale = 0.5f,
-                VelocityMultiplier = 0.06f,
-                NoGravity = true,
-                DustAlpha = 180,
-                RandomSpeed = 0.25f
-            });
+                SuppressDefaultDraw = true,
+                EnableGhostTrail = true,
+                GhostColor = new Color(200, 180, 120, 160),
 
-            Behaviors.Add(new GlowDrawBehavior
+                GrindSparkColor = new Color(255, 230, 150, 255),
+                ShardColor = new Color(220, 200, 140, 230),
+                WhetStreakColor = new Color(240, 220, 160, 200),
+            });
+            Behaviors.Add(new MeleeSwingTrailBehavior
             {
-                GlowColor = new Color(255, 200, 50, 180),
-                GlowBaseScale = 1.2f,
-                GlowLayers = 2,
-                GlowAlphaMultiplier = 0.3f,
-                EnableLight = true,
-                LightColor = new Vector3(0.8f, 0.7f, 0.2f)
+                SuppressDefaultDraw = true,
+                SwingArcColor = new Color(255, 230, 150, 200),
+                StabImpactColor = new Color(240, 220, 160, 220),
+                SmashRingColor = new Color(220, 200, 140, 180),
+                SwingArcLength = 32f,
+                SwingArcWidth = 0.25f,
+                SwingArcCurlAmount = 2f,
+                StabImpactStretch = 3f,
+                SmashRingEndRadius = 38f,
             });
 
             Behaviors.Add(new SplashBehavior(SplashMode.Radial)

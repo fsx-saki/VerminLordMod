@@ -6,14 +6,27 @@ using VerminLordMod.Content.DamageClasses;
 
 namespace VerminLordMod.Content.Projectiles.Zero
 {
-    /// <summary>
-    /// Wisdom道基础弹幕
-    /// </summary>
     public class WisdomBaseProj : BaseBullet
     {
         protected override void RegisterBehaviors()
         {
-            Behaviors.Add(new AimBehavior(speed: 0f) { AutoRotate = true, RotationOffset = MathHelper.PiOver2 });
+            Behaviors.Add(new AimBehavior(speed: 7f)
+            {
+                AutoRotate = true,
+                RotationOffset = MathHelper.PiOver2,
+                EnableLight = true,
+                LightColor = new Vector3(0.7f, 0.7f, 0.4f),
+            });
+
+            Behaviors.Add(new WisdomTrailBehavior
+            {
+                SuppressDefaultDraw = true,
+                EnableGhostTrail = true,
+                GhostColor = new Color(200, 200, 160, 120),
+                RuneSymbolColor = new Color(220, 210, 140, 230),
+                WisdomGlowColor = new Color(200, 200, 120, 200),
+                BookPageColor = new Color(180, 170, 120, 180),
+            });
         }
 
         public override void SetDefaults()

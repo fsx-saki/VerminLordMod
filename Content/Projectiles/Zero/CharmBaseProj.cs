@@ -13,7 +13,14 @@ namespace VerminLordMod.Content.Projectiles.Zero
     {
         protected override void RegisterBehaviors()
         {
-            Behaviors.Add(new AimBehavior(speed: 0f) { AutoRotate = true, RotationOffset = MathHelper.PiOver2 });
+            Behaviors.Add(new AimBehavior(speed: 5f) { AutoRotate = true, RotationOffset = MathHelper.PiOver2 });
+            Behaviors.Add(new CharmTrailBehavior
+            {
+                SuppressDefaultDraw = true,
+                HeartColor = new Color(255, 140, 180, 220),
+                RingColor = new Color(255, 160, 200, 180),
+                MistColor = new Color(255, 180, 220, 160),
+            });
         }
 
         public override void SetDefaults()

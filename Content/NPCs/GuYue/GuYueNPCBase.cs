@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using VerminLordMod.Common.DialogueTree;
 using VerminLordMod.Common.Players;
 using VerminLordMod.Common.Systems;
+using VerminLordMod.Common.UI.DialogueTreeUI;
 using VerminLordMod.Content.NPCs.GuMasters;
 
 namespace VerminLordMod.Content.NPCs.GuYue
@@ -56,6 +58,97 @@ namespace VerminLordMod.Content.NPCs.GuYue
                     _config = GuYueNPCConfig.GetDefaultConfig(GetNPCType());
                 return _config;
             }
+        }
+
+        // ============================================================
+        // 对话树系统（D-21 集成）
+        // ============================================================
+        private static readonly HashSet<int> RegisteredDialogueTreeTypes = new();
+
+        private bool _dialogueTreeRegistered;
+
+        public override void AI()
+        {
+            base.AI();
+
+            if (!_dialogueTreeRegistered)
+            {
+                _dialogueTreeRegistered = true;
+                if (!RegisteredDialogueTreeTypes.Contains(Type))
+                {
+                    RegisteredDialogueTreeTypes.Add(Type);
+                    RegisterDialogueTree();
+                }
+            }
+        }
+
+        /// <summary> 为此NPC类型注册对话树 </summary>
+        protected virtual void RegisterDialogueTree()
+        {
+            var tree = BuildDialogueTree();
+            if (tree != null)
+            {
+                tree.NPCType = Type;
+                DialogueTreeManager.Instance.RegisterTree(tree);
+            }
+        }
+
+        /// <summary> 构建对话树 - 子类可重写以提供个性化对话 </summary>
+        protected virtual DialogueTree BuildDialogueTree()
+        {
+            var npcType = GetNPCType();
+            var treeId = $"GuYue_{npcType}";
+            var b = new DialogueTreeBuilder(treeId, "greeting");
+
+            if (Config.IsTownNPC)
+            {
+                b.StartNode("greeting",
+                    $"{Config.DisplayName}看着你：\"有什么事吗？\"")
+                    .AddOption("闲聊", "chat", DialogueOptionType.Informative)
+                    .AddOption("关于古月山寨", "about_guyue", DialogueOptionType.Informative)
+                    .AddOption("关于蛊师", "about_gu", DialogueOptionType.Informative)
+                    .AddOption("交易", "trade", DialogueOptionType.Trade)
+                    .AddOption("再见", "bye", DialogueOptionType.Exit);
+            }
+            else
+            {
+                b.StartNode("greeting",
+                    $"{Config.DisplayName}看着你：\"有什么事吗？\"")
+                    .AddOption("闲聊", "chat", DialogueOptionType.Informative)
+                    .AddOption("关于古月山寨", "about_guyue", DialogueOptionType.Informative)
+                    .AddOption("关于蛊师", "about_gu", DialogueOptionType.Informative)
+                    .AddOption("再见", "bye", DialogueOptionType.Exit);
+            }
+
+            b.StartNode("chat",
+                $"{Config.DisplayName}：\"{GetFriendlyDialogue()}\"")
+                .AddOption("继续聊聊", "chat_more")
+                .AddOption("回到主菜单", "greeting");
+
+            b.StartNode("chat_more",
+                $"{Config.DisplayName}若有所思：\"这世道不太平啊...\"")
+                .AddOption("怎么说？", "about_gu")
+                .AddOption("回到主菜单", "greeting");
+
+            b.StartNode("about_guyue",
+                $"{Config.DisplayName}：\"古月山寨是蛊师世家，传承已有数百年。\"")
+                .AddOption("蛊师是什么？", "about_gu")
+                .AddOption("回到主菜单", "greeting");
+
+            b.StartNode("about_gu",
+                $"{Config.DisplayName}：\"蛊师以蛊虫为伴，修炼空窍。蛊虫既是武器也是伙伴。\"")
+                .AddOption("回到主菜单", "greeting");
+
+            b.StartNode("trade",
+                $"{Config.DisplayName}：\"看看有什么需要的吧。\"")
+                .OpensShop(GuMasterBase.ShopName)
+                .AddOption("回到主菜单", "greeting");
+
+            b.StartNode("bye",
+                $"{Config.DisplayName}向你点了点头。")
+                .AddOption("再见", "bye", DialogueOptionType.Exit);
+
+            return b.Build();
         }
 
         // ============================================================
@@ -176,6 +269,13 @@ namespace VerminLordMod.Content.NPCs.GuYue
 
         public override void SetChatButtons(ref string button, ref string button2)
         {
+            if (DialogueTreeManager.Instance.HasTree(NPC))
+            {
+                button = "对话";
+                button2 = Config.IsTownNPC ? "商店" : "";
+                return;
+            }
+
             button = "对话";
             if (Config.IsTownNPC)
             {
@@ -197,6 +297,32 @@ namespace VerminLordMod.Content.NPCs.GuYue
         {
             if (firstButton)
             {
+                if (DialogueTreeManager.Instance.HasTree(NPC))
+                {
+                    var mgr = DialogueTreeManager.Instance;
+                    if (!mgr.HasActiveSession(Main.LocalPlayer))
+                    {
+                        mgr.StartDialogue(NPC, Main.LocalPlayer);
+                    }
+
+                    var currentText = mgr.GetCurrentNPCText(Main.LocalPlayer);
+                    var options = mgr.GetCurrentOptions(Main.LocalPlayer);
+
+                    if (options != null && options.Count > 0)
+                    {
+                        DialogueTreeUI.Instance.Open(
+                            NPC.GivenName,
+                            NPCHeadLoader.GetHeadSlot(HeadTexture),
+                            currentText ?? "",
+                            options);
+                    }
+                    else
+                    {
+                        mgr.EndDialogue(Main.LocalPlayer);
+                        Main.npcChatText = currentText ?? GetDialogue(NPC, CurrentAttitude);
+                    }
+                    return;
+                }
                 Main.npcChatText = GetDialogue(NPC, CurrentAttitude);
             }
             else

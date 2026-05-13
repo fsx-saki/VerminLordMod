@@ -1,19 +1,69 @@
 using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 using VerminLordMod.Common.BulletBehaviors;
 using VerminLordMod.Content.DamageClasses;
 
 namespace VerminLordMod.Content.Projectiles.Zero
 {
-    /// <summary>
-    /// Gold道基础弹幕
-    /// </summary>
     public class GoldBaseProj : BaseBullet
     {
+        private const float FlySpeed = 10f;
+
         protected override void RegisterBehaviors()
         {
-            Behaviors.Add(new AimBehavior(speed: 0f) { AutoRotate = true, RotationOffset = MathHelper.PiOver2 });
+            Behaviors.Add(new AimBehavior(speed: FlySpeed)
+            {
+                AutoRotate = true,
+                RotationOffset = MathHelper.PiOver2,
+                EnableLight = true,
+                LightColor = new Vector3(0.8f, 0.6f, 0.2f),
+            });
+
+            Behaviors.Add(new GoldTrailBehavior
+            {
+                EnableGhostTrail = true,
+                GhostAlpha = 0.4f,
+                GhostMaxPositions = 10,
+                GhostWidthScale = 0.22f,
+                GhostLengthScale = 1.6f,
+                GhostColor = new Color(255, 215, 80, 180),
+
+                MaxBlades = 40,
+                BladeLife = 12,
+                BladeScale = 0.6f,
+                BladeLength = 18f,
+                BladeSpawnInterval = 1,
+                BladeDriftSpeed = 0.2f,
+                BladeSpread = 5f,
+                BladeColor = new Color(255, 230, 140, 240),
+
+                MaxPrisms = 20,
+                PrismLife = 28,
+                PrismSize = 0.45f,
+                PrismSpawnChance = 0.18f,
+                PrismDriftSpeed = 0.15f,
+                PrismHueSpeed = 2.0f,
+
+                MaxShards = 15,
+                ShardLife = 25,
+                ShardSize = 0.6f,
+                ShardStretch = 2.2f,
+                ShardSpawnChance = 0.08f,
+                ShardSpinSpeed = 0.1f,
+                ShardDriftSpeed = 0.25f,
+                ShardColor = new Color(255, 220, 100, 220),
+
+                MaxFlashes = 8,
+                FlashLife = 6,
+                FlashSize = 0.8f,
+                FlashSpawnChance = 0.04f,
+                FlashColor = new Color(255, 250, 220, 255),
+
+                AutoDraw = true,
+                SuppressDefaultDraw = true,
+            });
         }
 
         public override void SetDefaults()
@@ -31,5 +81,36 @@ namespace VerminLordMod.Content.Projectiles.Zero
             Projectile.DamageType = ModContent.GetInstance<InsectDamageClass>();
             Projectile.aiStyle = -1;
         }
+
+        protected override void OnHit(NPC target, NPC.HitInfo hit, int damageDone)
+        {
+            for (int i = 0; i < 6; i++)
+            {
+                float angle = Main.rand.NextFloat(MathHelper.TwoPi);
+                float speed = Main.rand.NextFloat(1.5f, 3.5f);
+                Vector2 vel = angle.ToRotationVector2() * speed;
+                Dust d = Dust.NewDustPerfect(
+                    target.Center + Main.rand.NextVector2Circular(8f, 8f),
+                    DustID.GoldFlame, vel, 0,
+                    new Color(255, 220, 100, 200),
+                    Main.rand.NextFloat(0.5f, 1.0f));
+                d.noGravity = true;
+            }
+        }
+
+        protected override void OnKilled(int timeLeft)
+        {
+            for (int i = 0; i < 8; i++)
+            {
+                float angle = Main.rand.NextFloat(MathHelper.TwoPi);
+                float speed = Main.rand.NextFloat(1f, 3f);
+                Vector2 vel = angle.ToRotationVector2() * speed;
+                Dust d = Dust.NewDustPerfect(Projectile.Center, DustID.GoldFlame, vel, 0,
+                    new Color(255, 200, 80, 180), Main.rand.NextFloat(0.4f, 0.9f));
+                d.noGravity = true;
+            }
+        }
+
+        protected override bool OnTileCollided(Vector2 oldVelocity) => true;
     }
 }

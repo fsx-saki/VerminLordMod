@@ -101,6 +101,8 @@ namespace VerminLordMod.Common.Systems
         Treacherous,    // 反复无常 - 可能背刺
         Benevolent,     // 仁慈 - 不会下杀手
         Proud,          // 高傲 - 被挑衅必反击
+        Cruel,          // 残忍 - 以折磨敌人为乐
+        Cold,           // 冷酷 - 无情无义，只看利益
     }
 
     /// <summary> 蛊师对玩家的态度（动态计算） </summary>

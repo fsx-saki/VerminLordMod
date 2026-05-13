@@ -14,7 +14,7 @@ namespace VerminLordMod.Content.Projectiles.Zero
     /// 晶的本质是"分裂 + 折射 + 璀璨"。弹幕以中速直线飞行，
     /// 命中后产生径向晶片爆散（SplashBehavior Radial 模式），
     /// 销毁时分裂为 3 个小型晶片弹幕继续攻击，
-    /// 视觉上以彩虹色棱镜粒子拖尾和闪光模拟水晶的折射璀璨。
+    /// 视觉上以晶系拖尾（共振环 + 棱晶碎片 + 晶格节点）模拟水晶的折射璀璨。
     ///
     /// 运动方式：
     /// - 中速直线飞行（AimBehavior）
@@ -22,14 +22,12 @@ namespace VerminLordMod.Content.Projectiles.Zero
     /// - 销毁时分裂为 3 个小型晶片
     ///
     /// 视觉效果：
-    /// - 彩虹色棱镜粒子拖尾
-    /// - 白色闪光发光
+    /// - 晶系拖尾：共振环 + 棱晶碎片 + 晶格节点（CrystalTrailBehavior）
     /// - 命中时径向晶片爆散（SplashBehavior Radial 模式）
     ///
     /// 行为组合：
     /// - AimBehavior: 中速直线飞行
-    /// - DustTrailBehavior: 棱镜粒子拖尾
-    /// - GlowDrawBehavior: 白色闪光发光
+    /// - CrystalTrailBehavior: 晶系拖尾（共振环 + 棱晶碎片 + 晶格节点）
     /// - SplashBehavior(Radial): 命中时径向晶片爆散
     /// </summary>
     public class CrystalBaseProj : BaseBullet
@@ -50,23 +48,14 @@ namespace VerminLordMod.Content.Projectiles.Zero
                 LightColor = new Vector3(0.6f, 0.6f, 0.9f)
             });
 
-            Behaviors.Add(new DustTrailBehavior(DustID.Clentaminator_Cyan, spawnChance: 1)
+            Behaviors.Add(new CrystalTrailBehavior
             {
-                DustScale = 0.5f,
-                VelocityMultiplier = 0.06f,
-                NoGravity = true,
-                DustAlpha = 180,
-                RandomSpeed = 0.3f
-            });
-
-            Behaviors.Add(new GlowDrawBehavior
-            {
-                GlowColor = new Color(200, 200, 255, 200),
-                GlowBaseScale = 1.4f,
-                GlowLayers = 3,
-                GlowAlphaMultiplier = 0.35f,
-                EnableLight = true,
-                LightColor = new Vector3(0.5f, 0.5f, 0.9f)
+                SuppressDefaultDraw = true,
+                EnableGhostTrail = true,
+                GhostColor = new Color(180, 180, 255, 160),
+                ResonanceRingColor = new Color(160, 180, 255, 200),
+                PrismShardColor = new Color(200, 200, 255, 220),
+                LatticeNodeColor = new Color(180, 200, 255, 200),
             });
 
             Behaviors.Add(new SplashBehavior(SplashMode.Radial)

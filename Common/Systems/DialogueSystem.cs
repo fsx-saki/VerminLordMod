@@ -271,42 +271,103 @@ namespace VerminLordMod.Common.Systems
         /// <summary>
         /// 暗面交易：情报买卖、雇佣刺杀、背叛交易。
         /// 置信度 > 0.3 时解锁。
+        /// 使用 DialogueTree 系统实现多轮交互。
         /// </summary>
         private void HandleDarkDeal(Player player, NPC npc, GuMasterBase guMaster)
         {
             var belief = guMaster.GetBelief(player.name);
             if (belief == null) return;
 
-            // 暗面交易选项
-            string[] dealOptions = new string[]
-            {
-                "购买情报",
-                "雇佣刺杀",
-                "背叛交易",
-                "算了"
-            };
+            var tree = BuildDarkDealTree(guMaster, belief);
+            DialogueTreeManager.Instance.RegisterTree(tree);
+            DialogueTreeManager.Instance.StartDialogue(npc, player);
+        }
 
-            // 简化实现：使用 Main.npcChatText 显示选项
-            // 完整实现需要 UI 支持（P2）
-            Main.npcChatText = guMaster.GuMasterDisplayName + "压低声音：\"你想做什么交易？\"\n" +
-                "1. 购买情报\n" +
-                "2. 雇佣刺杀\n" +
-                "3. 背叛交易\n" +
-                "4. 算了";
+        private static DialogueTree.DialogueTree BuildDarkDealTree(GuMasterBase guMaster, BeliefState belief)
+        {
+            var treeID = $"dark_deal_{guMaster.NPC.whoAmI}";
+            var b = new DialogueTreeBuilder(treeID, "root");
 
-            // 根据玩家选择处理
-            // 注意：这里简化处理，实际需要多轮对话支持
-            // 此处仅做信念影响
-            belief.ConfidenceLevel = MathHelper.Min(1f, belief.ConfidenceLevel + 0.05f);
-            belief.RiskThreshold = MathHelper.Max(0f, belief.RiskThreshold - 0.03f);
+            b.StartNode("root",
+                $"{guMaster.GuMasterDisplayName}压低声音：\"你想做什么交易？这里没有别人。\"");
 
-            // 尝试获取情报
-            var intelNetwork = ModContent.GetInstance<IntelligenceNetwork>();
-            var intel = intelNetwork.GatherIntel(player, IntelligenceNetwork.IntelType.NPCAttitude, npc);
-            if (intel != null)
-            {
-                Main.NewText(intel.GetSummary(), Color.LightBlue);
-            }
+            b.AddOption("购买情报", "buy_intel", DialogueOptionType.Informative,
+                tooltip: "花费元石购买关于其他NPC或区域的情报");
+
+            b.AddOption("雇佣刺杀", "hire_assassin", DialogueOptionType.Risky,
+                tooltip: "花费元石雇佣NPC去刺杀目标");
+
+            b.AddOption("背叛交易", "betrayal_deal", DialogueOptionType.Betray,
+                tooltip: "策反NPC背叛其所属势力");
+
+            b.AddOption("算了", "exit_deal", DialogueOptionType.Exit,
+                tooltip: "退出暗面交易");
+
+            b.StartNode("buy_intel",
+                $"{guMaster.GuMasterDisplayName}环顾四周：\"你想知道什么？\"")
+                .AddOptionWithEffects("打听其他蛊师的情报", "intel_gu_master",
+                    DialogueOptionType.Informative, null, "花费 20 元石获取蛊师情报",
+                    new BuyItemEffect(ModContent.ItemType<Content.Items.Consumables.YuanS>(), 20),
+                    new ModifyBeliefEffect(ModifyBeliefEffect.BeliefField.ConfidenceLevel,
+                        ModifyBeliefEffect.ModifyOp.Add, 0.05f),
+                    new ShowMessageEffect("获得了关于附近蛊师的情报。", Color.LightBlue))
+                .AddOptionWithEffects("打听区域情报", "intel_region",
+                    DialogueOptionType.Informative, null, "花费 15 元石获取区域情报",
+                    new BuyItemEffect(ModContent.ItemType<Content.Items.Consumables.YuanS>(), 15),
+                    new ModifyBeliefEffect(ModifyBeliefEffect.BeliefField.ConfidenceLevel,
+                        ModifyBeliefEffect.ModifyOp.Add, 0.03f),
+                    new ShowMessageEffect("获得了关于附近区域的情报。", Color.LightBlue))
+                .AddOption("算了，不买了", "root", DialogueOptionType.Exit);
+
+            b.StartNode("intel_gu_master",
+                $"{guMaster.GuMasterDisplayName}凑近你耳边，低声说了几句。\"记住，这些情报出了这个门我就不认。\"")
+                .EndsDialogue()
+                .WithEnterEffect(new ModifyBeliefEffect(ModifyBeliefEffect.BeliefField.RiskThreshold,
+                    ModifyBeliefEffect.ModifyOp.Add, -0.05f));
+
+            b.StartNode("intel_region",
+                $"{guMaster.GuMasterDisplayName}在地图上指了几个位置。\"这些地方最近不太平，小心点。\"")
+                .EndsDialogue()
+                .WithEnterEffect(new ModifyBeliefEffect(ModifyBeliefEffect.BeliefField.RiskThreshold,
+                    ModifyBeliefEffect.ModifyOp.Add, -0.03f));
+
+            b.StartNode("hire_assassin",
+                $"{guMaster.GuMasterDisplayName}眼中闪过一丝寒光：\"你想让谁消失？\"")
+                .AddOptionWithEffects("雇佣刺杀敌对蛊师（50元石）", "assassin_confirm",
+                    DialogueOptionType.Combat, null, "花费 50 元石，NPC将尝试刺杀目标",
+                    new BuyItemEffect(ModContent.ItemType<Content.Items.Consumables.YuanS>(), 50),
+                    new ModifyBeliefEffect(ModifyBeliefEffect.BeliefField.ConfidenceLevel,
+                        ModifyBeliefEffect.ModifyOp.Add, 0.1f),
+                    new ModifyBeliefEffect(ModifyBeliefEffect.BeliefField.RiskThreshold,
+                        ModifyBeliefEffect.ModifyOp.Add, -0.1f),
+                    new ShowMessageEffect("刺杀委托已下达，等待结果...", Color.OrangeRed))
+                .AddOption("还是算了", "root", DialogueOptionType.Exit);
+
+            b.StartNode("assassin_confirm",
+                $"{guMaster.GuMasterDisplayName}收起元石：\"三天之内，你会听到好消息。\"")
+                .EndsDialogue();
+
+            b.StartNode("betrayal_deal",
+                $"{guMaster.GuMasterDisplayName}沉默了片刻：\"你想让我背叛家族？\"")
+                .AddOptionWithEffects("策反NPC加入你的阵营（100元石）", "betrayal_confirm",
+                    DialogueOptionType.Betray, null, "花费 100 元石策反NPC",
+                    new BuyItemEffect(ModContent.ItemType<Content.Items.Consumables.YuanS>(), 100),
+                    new ModifyBeliefEffect(ModifyBeliefEffect.BeliefField.ConfidenceLevel,
+                        ModifyBeliefEffect.ModifyOp.Add, 0.2f),
+                    new ModifyBeliefEffect(ModifyBeliefEffect.BeliefField.RiskThreshold,
+                        ModifyBeliefEffect.ModifyOp.Add, -0.2f),
+                    new ShowMessageEffect("策反成功！NPC已成为你的内应。", Color.Gold))
+                .AddOption("开个玩笑而已", "root", DialogueOptionType.Exit);
+
+            b.StartNode("betrayal_confirm",
+                $"{guMaster.GuMasterDisplayName}深吸一口气：\"好，从今天起，我为你效力。但若你负我...\"")
+                .EndsDialogue();
+
+            b.StartNode("exit_deal",
+                $"{guMaster.GuMasterDisplayName}恢复了正常的表情：\"那就下次再说。\"")
+                .EndsDialogue();
+
+            return b.Build();
         }
 
         // ============================================================
@@ -316,34 +377,128 @@ namespace VerminLordMod.Common.Systems
         /// <summary>
         /// 杀招准备：下毒、设陷阱、策反。
         /// 置信度 > 0.7 + 私下相处时解锁。
+        /// 使用 DialogueTree 系统实现多轮交互。
         /// </summary>
         private void HandleKillPrep(Player player, NPC npc, GuMasterBase guMaster)
         {
             var belief = guMaster.GetBelief(player.name);
             if (belief == null) return;
 
-            string[] prepOptions = new string[]
-            {
-                "下毒",
-                "设陷阱",
-                "策反",
-                "取消"
-            };
+            var tree = BuildKillPrepTree(guMaster, belief);
+            DialogueTreeManager.Instance.RegisterTree(tree);
+            DialogueTreeManager.Instance.StartDialogue(npc, player);
 
-            Main.npcChatText = guMaster.GuMasterDisplayName + "信任地看着你：\"有什么需要我帮忙的？\"\n" +
-                "1. 下毒（对目标 NPC 下毒）\n" +
-                "2. 设陷阱（在目标区域设陷阱）\n" +
-                "3. 策反（策反目标 NPC）\n" +
-                "4. 取消";
-
-            // 杀招准备会大幅影响信念
-            belief.ConfidenceLevel = MathHelper.Min(1f, belief.ConfidenceLevel + 0.1f);
-            belief.RiskThreshold = MathHelper.Max(0f, belief.RiskThreshold - 0.08f);
-
-            // 标记玩家有杀意（供其他系统使用）
             var tacticalPlayer = player.GetModPlayer<TacticalTriggerPlayer>();
-            // 杀招准备增加背刺判定窗口
             tacticalPlayer.ActivatePerfectDodgeWindow();
+        }
+
+        private static DialogueTree.DialogueTree BuildKillPrepTree(GuMasterBase guMaster, BeliefState belief)
+        {
+            var treeID = $"kill_prep_{guMaster.NPC.whoAmI}";
+            var b = new DialogueTreeBuilder(treeID, "root");
+
+            b.StartNode("root",
+                $"{guMaster.GuMasterDisplayName}信任地看着你：\"有什么需要我帮忙的？这里很安全。\"");
+
+            b.AddOption("下毒", "poison", DialogueOptionType.Risky,
+                tooltip: "对目标 NPC 下毒，削弱其实力");
+
+            b.AddOption("设陷阱", "trap", DialogueOptionType.Risky,
+                tooltip: "在目标区域设陷阱，伏击敌人");
+
+            b.AddOption("策反", "subvert", DialogueOptionType.Betray,
+                tooltip: "策反目标 NPC 背叛其阵营");
+
+            b.AddOption("取消", "exit_prep", DialogueOptionType.Exit,
+                tooltip: "退出杀招准备");
+
+            b.StartNode("poison",
+                $"{guMaster.GuMasterDisplayName}从怀中取出一个小瓶：\"这是我珍藏的蛊毒，无色无味。\"")
+                .AddOptionWithEffects("对敌对蛊师下毒（30元石）", "poison_confirm",
+                    DialogueOptionType.Risky, null, "花费 30 元石，削弱目标蛊师",
+                    new BuyItemEffect(ModContent.ItemType<Content.Items.Consumables.YuanS>(), 30),
+                    new ModifyBeliefEffect(ModifyBeliefEffect.BeliefField.ConfidenceLevel,
+                        ModifyBeliefEffect.ModifyOp.Add, 0.08f),
+                    new ModifyBeliefEffect(ModifyBeliefEffect.BeliefField.RiskThreshold,
+                        ModifyBeliefEffect.ModifyOp.Add, -0.1f),
+                    new ShowMessageEffect("蛊毒已投放，目标将在数日内虚弱。", Color.DarkGreen))
+                .AddOptionWithEffects("对野兽下毒（10元石）", "poison_beast",
+                    DialogueOptionType.Risky, null, "花费 10 元石，削弱区域野兽",
+                    new BuyItemEffect(ModContent.ItemType<Content.Items.Consumables.YuanS>(), 10),
+                    new ModifyBeliefEffect(ModifyBeliefEffect.BeliefField.ConfidenceLevel,
+                        ModifyBeliefEffect.ModifyOp.Add, 0.03f),
+                    new ShowMessageEffect("毒饵已投放，区域野兽将被削弱。", Color.DarkGreen))
+                .AddOption("还是算了", "root", DialogueOptionType.Exit);
+
+            b.StartNode("poison_confirm",
+                $"{guMaster.GuMasterDisplayName}阴冷地笑了笑：\"蛊毒已经布下，等着看好戏吧。\"")
+                .EndsDialogue();
+
+            b.StartNode("poison_beast",
+                $"{guMaster.GuMasterDisplayName}点点头：\"小事一桩，毒饵已经撒好了。\"")
+                .EndsDialogue();
+
+            b.StartNode("trap",
+                $"{guMaster.GuMasterDisplayName}眼中闪过精光：\"你想在哪里设伏？\"")
+                .AddOptionWithEffects("在野外设陷阱（25元石）", "trap_wild",
+                    DialogueOptionType.Risky, null, "花费 25 元石，在野外区域设陷阱",
+                    new BuyItemEffect(ModContent.ItemType<Content.Items.Consumables.YuanS>(), 25),
+                    new ModifyBeliefEffect(ModifyBeliefEffect.BeliefField.ConfidenceLevel,
+                        ModifyBeliefEffect.ModifyOp.Add, 0.06f),
+                    new ModifyBeliefEffect(ModifyBeliefEffect.BeliefField.RiskThreshold,
+                        ModifyBeliefEffect.ModifyOp.Add, -0.08f),
+                    new ShowMessageEffect("陷阱已布置，经过的敌人将受到伤害。", Color.Orange))
+                .AddOptionWithEffects("在山寨附近设陷阱（40元石）", "trap_village",
+                    DialogueOptionType.Risky, null, "花费 40 元石，在山寨附近设陷阱",
+                    new BuyItemEffect(ModContent.ItemType<Content.Items.Consumables.YuanS>(), 40),
+                    new ModifyBeliefEffect(ModifyBeliefEffect.BeliefField.ConfidenceLevel,
+                        ModifyBeliefEffect.ModifyOp.Add, 0.1f),
+                    new ModifyBeliefEffect(ModifyBeliefEffect.BeliefField.RiskThreshold,
+                        ModifyBeliefEffect.ModifyOp.Add, -0.12f),
+                    new ShowMessageEffect("山寨附近的陷阱已布置完毕。", Color.Orange))
+                .AddOption("不设了", "root", DialogueOptionType.Exit);
+
+            b.StartNode("trap_wild",
+                $"{guMaster.GuMasterDisplayName}拍了拍手上的土：\"搞定了，谁踩谁倒霉。\"")
+                .EndsDialogue();
+
+            b.StartNode("trap_village",
+                $"{guMaster.GuMasterDisplayName}谨慎地看了看四周：\"山寨附近的陷阱已经布好，但千万别让人发现是我干的。\"")
+                .EndsDialogue();
+
+            b.StartNode("subvert",
+                $"{guMaster.GuMasterDisplayName}沉思片刻：\"策反可不是小事，你想策反谁？\"")
+                .AddOptionWithEffects("策反敌对蛊师（80元石）", "subvert_enemy",
+                    DialogueOptionType.Betray, null, "花费 80 元石策反敌对蛊师",
+                    new BuyItemEffect(ModContent.ItemType<Content.Items.Consumables.YuanS>(), 80),
+                    new ModifyBeliefEffect(ModifyBeliefEffect.BeliefField.ConfidenceLevel,
+                        ModifyBeliefEffect.ModifyOp.Add, 0.15f),
+                    new ModifyBeliefEffect(ModifyBeliefEffect.BeliefField.RiskThreshold,
+                        ModifyBeliefEffect.ModifyOp.Add, -0.15f),
+                    new ShowMessageEffect("策反行动已开始，目标蛊师将逐渐倒向你。", Color.Gold))
+                .AddOptionWithEffects("策反山寨守卫（120元石）", "subvert_guard",
+                    DialogueOptionType.Betray, null, "花费 120 元石策反山寨守卫",
+                    new BuyItemEffect(ModContent.ItemType<Content.Items.Consumables.YuanS>(), 120),
+                    new ModifyBeliefEffect(ModifyBeliefEffect.BeliefField.ConfidenceLevel,
+                        ModifyBeliefEffect.ModifyOp.Add, 0.2f),
+                    new ModifyBeliefEffect(ModifyBeliefEffect.BeliefField.RiskThreshold,
+                        ModifyBeliefEffect.ModifyOp.Add, -0.2f),
+                    new ShowMessageEffect("守卫已被策反，山寨防御出现漏洞。", Color.Gold))
+                .AddOption("风险太大，算了", "root", DialogueOptionType.Exit);
+
+            b.StartNode("subvert_enemy",
+                $"{guMaster.GuMasterDisplayName}露出意味深长的笑容：\"敌人的敌人就是朋友，我明白了。\"")
+                .EndsDialogue();
+
+            b.StartNode("subvert_guard",
+                $"{guMaster.GuMasterDisplayName}压低声音：\"守卫那边我已经打过招呼了，今晚子时，东门无人值守。\"")
+                .EndsDialogue();
+
+            b.StartNode("exit_prep",
+                $"{guMaster.GuMasterDisplayName}恢复了常态：\"也好，谨慎行事总是没错的。\"")
+                .EndsDialogue();
+
+            return b.Build();
         }
 
         // ============================================================

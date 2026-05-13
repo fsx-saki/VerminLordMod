@@ -6,6 +6,9 @@ using VerminLordMod.Content.NPCs.GuYue;
 using VerminLordMod.Content.Projectiles;
 using VerminLordMod.Content.Items.Consumables;
 using VerminLordMod.Content.Items.Accessories.One;
+using VerminLordMod.Content.Items.Accessories.Two;
+using VerminLordMod.Content.Items.Accessories.Three;
+using VerminLordMod.Content.Items.Accessories.Four;
 
 namespace VerminLordMod.Common.NPCBehaviors
 {
@@ -71,6 +74,7 @@ namespace VerminLordMod.Common.NPCBehaviors
             _initialized = true;
 
             int moonlightProj = ModContent.ProjectileType<MoonlightProj>();
+            int yuanS = VerminLordMod.YuanSId;
 
             Register(new NPCDataEntry
             {
@@ -82,7 +86,29 @@ namespace VerminLordMod.Common.NPCBehaviors
                 Damage = 30, Knockback = 6f, Cooldown = 20, RandExtraCooldown = 0,
                 ProjType = moonlightProj, AttackDelay = 1, ProjSpeed = 14f,
                 MinGuLevel = 1, MinLife = 100,
-                ShopItems = { new ShopItemData { ItemType = ItemID.Mushroom } }
+                ShopItems =
+                {
+                    new ShopItemData { ItemType = ModContent.ItemType<KongQiaoStone>(), CustomPrice = 500, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<FirstToSecond>(), CustomPrice = 800, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<SecondToThird>(), CustomPrice = 3000, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<ThirdToForth>(), CustomPrice = 10000, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<ForthToFifth>(), CustomPrice = 30000, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<FifthToSixth>(), CustomPrice = 80000, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<UnbindGuItem>(), CustomPrice = 200, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<GoldenThreadCloakGu>(), CustomPrice = 15000, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<TengYunWings>(), CustomPrice = 20000, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<NineWineBug>(), CustomPrice = 5000, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<KsitigarbhaFlowerGu>(), CustomPrice = 8000, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<Hopeness>(), CustomPrice = 12000, SpecialCurrency = yuanS }
+                },
+                CoinType = ItemID.GoldCoin, CoinMin = 1, CoinMax = 3,
+                LootItems =
+                {
+                    new LootItemData { ItemType = ModContent.ItemType<GoldShari>(), MinStack = 1, MaxStack = 3, Chance = 0.3f },
+                    new LootItemData { ItemType = ModContent.ItemType<NineWineBug>(), MinStack = 1, MaxStack = 1, Chance = 0.15f },
+                    new LootItemData { ItemType = ModContent.ItemType<KsitigarbhaFlowerGu>(), MinStack = 1, MaxStack = 1, Chance = 0.1f },
+                    new LootItemData { ItemType = ItemID.GoldCoin, MinStack = 3, MaxStack = 8, Chance = 0.5f }
+                }
             });
 
             Register(new NPCDataEntry
@@ -95,7 +121,26 @@ namespace VerminLordMod.Common.NPCBehaviors
                 Damage = 20, Knockback = 4f, Cooldown = 30, RandExtraCooldown = 0,
                 ProjType = moonlightProj, AttackDelay = 1, ProjSpeed = 12f,
                 MinGuLevel = 1, MinLife = 100,
-                ShopItems = { new ShopItemData { ItemType = ModContent.ItemType<WanShi>(), CustomPrice = 5, SpecialCurrency = VerminLordMod.YuanSId } }
+                ShopItems =
+                {
+                    new ShopItemData { ItemType = ModContent.ItemType<WanShi>(), CustomPrice = 5, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<KongQiaoStone>(), CustomPrice = 500, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<FirstToSecond>(), CustomPrice = 800, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<SecondToThird>(), CustomPrice = 3000, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<ThirdToForth>(), CustomPrice = 10000, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<UnbindGuItem>(), CustomPrice = 200, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<ZizhiDing>(), CustomPrice = 300, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<ZizhiYi>(), CustomPrice = 300, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<ZizhiBing>(), CustomPrice = 300, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<ZizhiJia>(), CustomPrice = 300, SpecialCurrency = yuanS }
+                },
+                CoinType = ItemID.SilverCoin, CoinMin = 15, CoinMax = 40,
+                LootItems =
+                {
+                    new LootItemData { ItemType = ModContent.ItemType<WanShi>(), MinStack = 1, MaxStack = 5, Chance = 0.4f },
+                    new LootItemData { ItemType = ModContent.ItemType<BronzeShari>(), MinStack = 1, MaxStack = 2, Chance = 0.3f },
+                    new LootItemData { ItemType = ModContent.ItemType<ZizhiDing>(), MinStack = 1, MaxStack = 1, Chance = 0.15f }
+                }
             });
 
             Register(new NPCDataEntry
@@ -110,8 +155,27 @@ namespace VerminLordMod.Common.NPCBehaviors
                 MinGuLevel = 1, MinLife = 100,
                 ShopItems =
                 {
-                    new ShopItemData { ItemType = ItemID.HealingPotion, CustomPrice = 10, SpecialCurrency = VerminLordMod.YuanSId },
-                    new ShopItemData { ItemType = ModContent.ItemType<LivingLeaf>(), CustomPrice = 50, SpecialCurrency = VerminLordMod.YuanSId }
+                    new ShopItemData { ItemType = ItemID.HealingPotion, CustomPrice = 10, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ItemID.GreaterHealingPotion, CustomPrice = 30, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ItemID.RegenerationPotion, CustomPrice = 15, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ItemID.LifeforcePotion, CustomPrice = 25, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<LivingLeaf>(), CustomPrice = 50, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<TenLifeGu>(), CustomPrice = 100, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<HundredLifeGu>(), CustomPrice = 500, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<ThousandLifeGu>(), CustomPrice = 2000, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<WineBug>(), CustomPrice = 80, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<SevenWineBug>(), CustomPrice = 400, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<FourFlavorWineBug>(), CustomPrice = 2000, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ItemID.Daybloom, CustomPrice = 3, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ItemID.Mushroom, CustomPrice = 3, SpecialCurrency = yuanS }
+                },
+                CoinType = ItemID.SilverCoin, CoinMin = 10, CoinMax = 30,
+                LootItems =
+                {
+                    new LootItemData { ItemType = ItemID.HealingPotion, MinStack = 2, MaxStack = 5, Chance = 0.5f },
+                    new LootItemData { ItemType = ModContent.ItemType<LivingLeaf>(), MinStack = 1, MaxStack = 2, Chance = 0.3f },
+                    new LootItemData { ItemType = ModContent.ItemType<TenLifeGu>(), MinStack = 1, MaxStack = 1, Chance = 0.15f },
+                    new LootItemData { ItemType = ModContent.ItemType<WineBug>(), MinStack = 1, MaxStack = 1, Chance = 0.1f }
                 }
             });
 
@@ -127,10 +191,24 @@ namespace VerminLordMod.Common.NPCBehaviors
                 MinGuLevel = 1, MinLife = 100,
                 ShopItems =
                 {
-                    new ShopItemData { ItemType = ModContent.ItemType<JadeSkin>(), CustomPrice = 250, SpecialCurrency = VerminLordMod.YuanSId },
-                    new ShopItemData { ItemType = ModContent.ItemType<StoneSkin>(), CustomPrice = 50, SpecialCurrency = VerminLordMod.YuanSId },
-                    new ShopItemData { ItemType = ModContent.ItemType<IronSkin>(), CustomPrice = 120, SpecialCurrency = VerminLordMod.YuanSId },
-                    new ShopItemData { ItemType = ModContent.ItemType<CopperSkin>(), CustomPrice = 100, SpecialCurrency = VerminLordMod.YuanSId }
+                    new ShopItemData { ItemType = ModContent.ItemType<CopperSkin>(), CustomPrice = 100, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<IronSkin>(), CustomPrice = 120, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<StoneSkin>(), CustomPrice = 50, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<JadeSkin>(), CustomPrice = 250, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<ScaleGu>(), CustomPrice = 150, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<InvisibleStoneGu>(), CustomPrice = 200, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<CopperSkinS>(), CustomPrice = 500, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<InvisibleScaleGu>(), CustomPrice = 600, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<CopperSkinSS>(), CustomPrice = 2000, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<BearPower>(), CustomPrice = 180, SpecialCurrency = yuanS }
+                },
+                CoinType = ItemID.SilverCoin, CoinMin = 15, CoinMax = 40,
+                LootItems =
+                {
+                    new LootItemData { ItemType = ModContent.ItemType<CopperSkin>(), MinStack = 1, MaxStack = 1, Chance = 0.2f },
+                    new LootItemData { ItemType = ModContent.ItemType<StoneSkin>(), MinStack = 1, MaxStack = 1, Chance = 0.25f },
+                    new LootItemData { ItemType = ModContent.ItemType<ScaleGu>(), MinStack = 1, MaxStack = 1, Chance = 0.15f },
+                    new LootItemData { ItemType = ItemID.IronBar, MinStack = 3, MaxStack = 8, Chance = 0.4f }
                 }
             });
 
@@ -143,7 +221,27 @@ namespace VerminLordMod.Common.NPCBehaviors
                 Farewell = "\"嗯，还算有点出息。\"",
                 Damage = 25, Knockback = 5f, Cooldown = 25, RandExtraCooldown = 0,
                 ProjType = moonlightProj, AttackDelay = 1, ProjSpeed = 12f,
-                MinGuLevel = 1, MinLife = 100
+                MinGuLevel = 1, MinLife = 100,
+                ShopItems =
+                {
+                    new ShopItemData { ItemType = ItemID.FlamingArrow, CustomPrice = 5, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ItemID.Fireblossom, CustomPrice = 10, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ItemID.HellstoneBar, CustomPrice = 50, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<StrengthLongicorn>(), CustomPrice = 300, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<HuangLuoLongicorn>(), CustomPrice = 800, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<DragonBallCricket>(), CustomPrice = 1500, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<RedSteelShari>(), CustomPrice = 400, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<ShiJunLiGu>(), CustomPrice = 600, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<EagleYangGu>(), CustomPrice = 5000, SpecialCurrency = yuanS }
+                },
+                CoinType = ItemID.SilverCoin, CoinMin = 10, CoinMax = 30,
+                LootItems =
+                {
+                    new LootItemData { ItemType = ItemID.Fireblossom, MinStack = 2, MaxStack = 5, Chance = 0.5f },
+                    new LootItemData { ItemType = ItemID.FlamingArrow, MinStack = 10, MaxStack = 30, Chance = 0.4f },
+                    new LootItemData { ItemType = ModContent.ItemType<RedSteelShari>(), MinStack = 1, MaxStack = 1, Chance = 0.15f },
+                    new LootItemData { ItemType = ModContent.ItemType<StrengthLongicorn>(), MinStack = 1, MaxStack = 1, Chance = 0.1f }
+                }
             });
 
             Register(new NPCDataEntry
@@ -155,7 +253,26 @@ namespace VerminLordMod.Common.NPCBehaviors
                 Farewell = "\"不错，继续保持。\"",
                 Damage = 22, Knockback = 4f, Cooldown = 25, RandExtraCooldown = 0,
                 ProjType = moonlightProj, AttackDelay = 1, ProjSpeed = 12f,
-                MinGuLevel = 1, MinLife = 100
+                MinGuLevel = 1, MinLife = 100,
+                ShopItems =
+                {
+                    new ShopItemData { ItemType = ItemID.SandBlock, CustomPrice = 1, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ItemID.AntlionMandible, CustomPrice = 15, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ItemID.FossilOre, CustomPrice = 20, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<PurpleCrystalShari>(), CustomPrice = 400, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<ShiJinLiGu>(), CustomPrice = 600, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<JinLiGu>(), CustomPrice = 800, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<JunLiGu>(), CustomPrice = 1000, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<ToilGu>(), CustomPrice = 4000, SpecialCurrency = yuanS }
+                },
+                CoinType = ItemID.SilverCoin, CoinMin = 10, CoinMax = 30,
+                LootItems =
+                {
+                    new LootItemData { ItemType = ItemID.AntlionMandible, MinStack = 1, MaxStack = 3, Chance = 0.5f },
+                    new LootItemData { ItemType = ItemID.FossilOre, MinStack = 2, MaxStack = 5, Chance = 0.4f },
+                    new LootItemData { ItemType = ModContent.ItemType<PurpleCrystalShari>(), MinStack = 1, MaxStack = 1, Chance = 0.12f },
+                    new LootItemData { ItemType = ModContent.ItemType<JinLiGu>(), MinStack = 1, MaxStack = 1, Chance = 0.08f }
+                }
             });
 
             Register(new NPCDataEntry
@@ -167,7 +284,31 @@ namespace VerminLordMod.Common.NPCBehaviors
                 Farewell = "\"这是我调制的伤药，拿着备用。\"",
                 Damage = 12, Knockback = 3f, Cooldown = 15, RandExtraCooldown = 0,
                 ProjType = moonlightProj, AttackDelay = 1, ProjSpeed = 10f,
-                MinGuLevel = 1, MinLife = 100
+                MinGuLevel = 1, MinLife = 100,
+                ShopItems =
+                {
+                    new ShopItemData { ItemType = ItemID.HealingPotion, CustomPrice = 8, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ItemID.GreaterHealingPotion, CustomPrice = 25, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ItemID.RegenerationPotion, CustomPrice = 15, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ItemID.LifeforcePotion, CustomPrice = 25, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ItemID.Daybloom, CustomPrice = 3, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<LivingLeaf>(), CustomPrice = 40, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<TenLifeGu>(), CustomPrice = 80, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<HundredLifeGu>(), CustomPrice = 400, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<ThousandLifeGu>(), CustomPrice = 1800, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<WhitePigGu>(), CustomPrice = 150, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<BlackPigGu>(), CustomPrice = 200, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<FlowerPig>(), CustomPrice = 300, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<SliverShari>(), CustomPrice = 300, SpecialCurrency = yuanS }
+                },
+                CoinType = ItemID.SilverCoin, CoinMin = 5, CoinMax = 20,
+                LootItems =
+                {
+                    new LootItemData { ItemType = ItemID.HealingPotion, MinStack = 1, MaxStack = 3, Chance = 0.5f },
+                    new LootItemData { ItemType = ItemID.Daybloom, MinStack = 2, MaxStack = 5, Chance = 0.4f },
+                    new LootItemData { ItemType = ModContent.ItemType<LivingLeaf>(), MinStack = 1, MaxStack = 1, Chance = 0.2f },
+                    new LootItemData { ItemType = ModContent.ItemType<WhitePigGu>(), MinStack = 1, MaxStack = 1, Chance = 0.1f }
+                }
             });
 
             Register(new NPCDataEntry
@@ -179,7 +320,24 @@ namespace VerminLordMod.Common.NPCBehaviors
                 Farewell = "\"一起努力修行吧！\"",
                 Damage = 10, Knockback = 2f, Cooldown = 30, RandExtraCooldown = 10,
                 ProjType = moonlightProj, AttackDelay = 1, ProjSpeed = 8f,
-                MinGuLevel = 1, MinLife = 100
+                MinGuLevel = 1, MinLife = 100,
+                ShopItems =
+                {
+                    new ShopItemData { ItemType = ItemID.Mushroom, CustomPrice = 3, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ItemID.Gel, CustomPrice = 2, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<WanShi>(), CustomPrice = 5, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<BronzeShari>(), CustomPrice = 100, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<WineBug>(), CustomPrice = 80, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<TenLifeGu>(), CustomPrice = 100, SpecialCurrency = yuanS }
+                },
+                CoinType = ItemID.CopperCoin, CoinMin = 20, CoinMax = 50,
+                LootItems =
+                {
+                    new LootItemData { ItemType = ItemID.Mushroom, MinStack = 1, MaxStack = 3, Chance = 0.4f },
+                    new LootItemData { ItemType = ItemID.Gel, MinStack = 2, MaxStack = 5, Chance = 0.3f },
+                    new LootItemData { ItemType = ModContent.ItemType<BronzeShari>(), MinStack = 1, MaxStack = 1, Chance = 0.15f },
+                    new LootItemData { ItemType = ModContent.ItemType<WanShi>(), MinStack = 1, MaxStack = 3, Chance = 0.2f }
+                }
             });
 
             Register(new NPCDataEntry
@@ -191,7 +349,27 @@ namespace VerminLordMod.Common.NPCBehaviors
                 Farewell = "\"有什么不懂的可以问我。\"",
                 Damage = 15, Knockback = 3f, Cooldown = 25, RandExtraCooldown = 5,
                 ProjType = moonlightProj, AttackDelay = 1, ProjSpeed = 10f,
-                MinGuLevel = 1, MinLife = 100
+                MinGuLevel = 1, MinLife = 100,
+                ShopItems =
+                {
+                    new ShopItemData { ItemType = ItemID.FallenStar, CustomPrice = 20, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ItemID.ManaCrystal, CustomPrice = 100, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<SliverShari>(), CustomPrice = 300, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<SevenWineBug>(), CustomPrice = 400, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<HundredLifeGu>(), CustomPrice = 500, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<StrengthLongicorn>(), CustomPrice = 300, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<CopperSkinS>(), CustomPrice = 500, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<InvisibleScaleGu>(), CustomPrice = 600, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<OneMinion>(), CustomPrice = 200, SpecialCurrency = yuanS }
+                },
+                CoinType = ItemID.SilverCoin, CoinMin = 5, CoinMax = 20,
+                LootItems =
+                {
+                    new LootItemData { ItemType = ItemID.FallenStar, MinStack = 1, MaxStack = 3, Chance = 0.4f },
+                    new LootItemData { ItemType = ItemID.ManaCrystal, MinStack = 1, MaxStack = 1, Chance = 0.1f },
+                    new LootItemData { ItemType = ModContent.ItemType<SliverShari>(), MinStack = 1, MaxStack = 1, Chance = 0.12f },
+                    new LootItemData { ItemType = ModContent.ItemType<SevenWineBug>(), MinStack = 1, MaxStack = 1, Chance = 0.08f }
+                }
             });
 
             Register(new NPCDataEntry
@@ -203,7 +381,26 @@ namespace VerminLordMod.Common.NPCBehaviors
                 Farewell = "\"来，陪我练练！\"",
                 Damage = 18, Knockback = 6f, Cooldown = 15, RandExtraCooldown = 5,
                 ProjType = moonlightProj, AttackDelay = 1, ProjSpeed = 10f,
-                MinGuLevel = 1, MinLife = 100
+                MinGuLevel = 1, MinLife = 100,
+                ShopItems =
+                {
+                    new ShopItemData { ItemType = ItemID.WoodenSword, CustomPrice = 10, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ItemID.IronBroadsword, CustomPrice = 50, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ItemID.Spear, CustomPrice = 30, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ItemID.WarAxeoftheNight, CustomPrice = 80, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<BearPower>(), CustomPrice = 180, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<StrengthLongicorn>(), CustomPrice = 300, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<ShiJunLiGu>(), CustomPrice = 600, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<WolfWaveCard>(), CustomPrice = 500, SpecialCurrency = yuanS }
+                },
+                CoinType = ItemID.SilverCoin, CoinMin = 5, CoinMax = 20,
+                LootItems =
+                {
+                    new LootItemData { ItemType = ItemID.WoodenSword, MinStack = 1, MaxStack = 1, Chance = 0.3f },
+                    new LootItemData { ItemType = ItemID.Spear, MinStack = 1, MaxStack = 1, Chance = 0.2f },
+                    new LootItemData { ItemType = ModContent.ItemType<BearPower>(), MinStack = 1, MaxStack = 1, Chance = 0.1f },
+                    new LootItemData { ItemType = ModContent.ItemType<StrengthLongicorn>(), MinStack = 1, MaxStack = 1, Chance = 0.08f }
+                }
             });
 
             Register(new NPCDataEntry
@@ -216,6 +413,13 @@ namespace VerminLordMod.Common.NPCBehaviors
                 Damage = 6, Knockback = 4f, Cooldown = 30, RandExtraCooldown = 10,
                 ProjType = 0, AttackDelay = 1, ProjSpeed = 0f,
                 MinGuLevel = 1, MinLife = 100,
+                ShopItems =
+                {
+                    new ShopItemData { ItemType = ItemID.Torch, CustomPrice = 1, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ItemID.Wood, CustomPrice = 1, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ItemID.Rope, CustomPrice = 1, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<WanShi>(), CustomPrice = 5, SpecialCurrency = yuanS }
+                },
                 CoinType = ItemID.CopperCoin, CoinMin = 10, CoinMax = 30,
                 LootItems =
                 {
@@ -236,6 +440,12 @@ namespace VerminLordMod.Common.NPCBehaviors
                 Damage = 4, Knockback = 3f, Cooldown = 40, RandExtraCooldown = 15,
                 ProjType = 0, AttackDelay = 1, ProjSpeed = 0f,
                 MinGuLevel = 1, MinLife = 100,
+                ShopItems =
+                {
+                    new ShopItemData { ItemType = ItemID.Wood, CustomPrice = 1, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ItemID.Torch, CustomPrice = 1, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ItemID.HealingPotion, CustomPrice = 10, SpecialCurrency = yuanS }
+                },
                 CoinType = ItemID.CopperCoin, CoinMin = 5, CoinMax = 15,
                 LootItems =
                 {
@@ -255,7 +465,23 @@ namespace VerminLordMod.Common.NPCBehaviors
                 Damage = 18, Knockback = 3f, Cooldown = 25, RandExtraCooldown = 5,
                 ProjType = moonlightProj, AttackDelay = 1, ProjSpeed = 9f,
                 MinGuLevel = 1, MinLife = 120,
-                CoinType = ItemID.SilverCoin, CoinMin = 5, CoinMax = 15
+                ShopItems =
+                {
+                    new ShopItemData { ItemType = ItemID.HealingPotion, CustomPrice = 10, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ItemID.Torch, CustomPrice = 1, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ItemID.IronBar, CustomPrice = 15, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<WanShi>(), CustomPrice = 5, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<BronzeShari>(), CustomPrice = 100, SpecialCurrency = yuanS },
+                    new ShopItemData { ItemType = ModContent.ItemType<ScaleGu>(), CustomPrice = 150, SpecialCurrency = yuanS }
+                },
+                CoinType = ItemID.SilverCoin, CoinMin = 5, CoinMax = 15,
+                LootItems =
+                {
+                    new LootItemData { ItemType = ItemID.Torch, MinStack = 5, MaxStack = 15, Chance = 0.5f },
+                    new LootItemData { ItemType = ItemID.IronOre, MinStack = 2, MaxStack = 5, Chance = 0.3f },
+                    new LootItemData { ItemType = ItemID.HealingPotion, MinStack = 1, MaxStack = 2, Chance = 0.2f },
+                    new LootItemData { ItemType = ModContent.ItemType<BronzeShari>(), MinStack = 1, MaxStack = 1, Chance = 0.1f }
+                }
             });
         }
 

@@ -10,7 +10,7 @@ namespace VerminLordMod.Common.DialogueTree
     {
         public override bool AppliesToEntity(NPC entity, bool lateInstantiation)
         {
-            return entity.ModNPC is GuYueVillager;
+            return entity.ModNPC is GuYueNPCBase || entity.ModNPC is GuYueVillager;
         }
 
         public override void OnSpawn(NPC npc, IEntitySource source)

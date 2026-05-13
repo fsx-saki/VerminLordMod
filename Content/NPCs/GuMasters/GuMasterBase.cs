@@ -4,6 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
+using VerminLordMod.Common.GuBehaviors;
 using VerminLordMod.Common.Players;
 using VerminLordMod.Common.Systems;
 
@@ -54,6 +55,10 @@ namespace VerminLordMod.Content.NPCs.GuMasters
         // ===== 弹幕保护系统 =====
         /// <summary> 玩家对此NPC的弹幕保护是否开启（默认开启） </summary>
         public bool ProjectileProtectionEnabled = true;
+
+        // ===== 调查链系统（D-19） =====
+        /// <summary> 此NPC对当前目标玩家的调查状态 </summary>
+        public InvestigationState CurrentInvestigation = new();
 
         // ===== 信念系统（黑暗森林核心） =====
         /// <summary> 对每个玩家的信念状态（以玩家名为key） </summary>
@@ -118,20 +123,17 @@ namespace VerminLordMod.Content.NPCs.GuMasters
 
         public override void AI()
         {
-            // 0. 确保 npc.target 指向最近的活跃玩家（非 townNPC 需要手动管理）
             NPC.TargetClosest(true);
 
-            // 1. 感知
             var context = Perceive(NPC);
 
-            // 2. 更新信念（核心新增步骤）
             UpdateBelief(NPC, context);
 
-            // 3. 获取当前玩家的信念状态
             string playerName = Main.LocalPlayer.name;
             var belief = GetBelief(playerName);
 
-            // 4. 计算态度（基于信念分布）
+            UpdateInvestigation(NPC, context);
+
             var attCtx = new AttitudeContext
             {
                 WorldPlayer = Main.LocalPlayer.GetModPlayer<GuWorldPlayer>(),
@@ -144,17 +146,15 @@ namespace VerminLordMod.Content.NPCs.GuMasters
             };
             CurrentAttitude = CalculateAttitude(NPC, attCtx);
 
-            // 5. 决策
+            CurrentAttitude = ApplyInvestigationModifier(CurrentAttitude);
+
             var decision = Decide(NPC, context);
 
-            // 6. 执行
             ExecuteAI(NPC, decision);
 
-            // 7. 更新计时器
-            // 注意：HasBeenHitByPlayer 不再由 AggroTimer 自动重置
-            // 改为由 Decide() 中的强制战斗逻辑保证行为正确
-            // AggroTimer 仅用于"仇恨持续时长"的参考，到期后 NPC 回到信念驱动
             if (AggroTimer > 0) AggroTimer--;
+
+            SpreadBeliefToAllies(playerName, belief);
         }
 
         // ============================================================
@@ -226,8 +226,73 @@ namespace VerminLordMod.Content.NPCs.GuMasters
             string playerName = context.TargetPlayer.name;
             var belief = GetBelief(playerName);
 
-            // 调用工具方法更新信念
             GuAttitudeHelper.UpdateBeliefState(belief, context, false, false);
+        }
+
+        /// <summary> 更新对当前目标玩家的调查状态（D-19 调查链集成） </summary>
+        public virtual void UpdateInvestigation(NPC npc, PerceptionContext context)
+        {
+            int currentDay = (int)(Main.time / 36000);
+            int daysSinceLastObs = currentDay - CurrentInvestigation.LastObservationDay;
+            if (daysSinceLastObs > 0)
+            {
+                CurrentInvestigation.DecayOverTime(daysSinceLastObs);
+            }
+
+            if (HasBeenHitByPlayer && AggroTimer > 0)
+            {
+                CurrentInvestigation.Observe("玩家攻击了此NPC", 0.4f);
+            }
+
+            if (context.PlayerInfamy > 50)
+            {
+                CurrentInvestigation.Observe("玩家恶名昭著", 0.15f);
+            }
+
+            var socialNetwork = NPCSocialNetwork.Instance;
+            if (socialNetwork != null)
+            {
+                var aggregatedBelief = socialNetwork.AggregateBelief(npc.type, context.TargetPlayer.name);
+                if (aggregatedBelief != null && aggregatedBelief.WasDefeated)
+                {
+                    CurrentInvestigation.Observe("盟友被该玩家击败", 0.3f);
+                }
+            }
+        }
+
+        /// <summary> 根据调查状态修正态度（D-19） </summary>
+        protected GuAttitude ApplyInvestigationModifier(GuAttitude baseAttitude)
+        {
+            if (CurrentInvestigation.IsActing)
+            {
+                return GuAttitude.Hostile;
+            }
+            if (CurrentInvestigation.IsConfirmed)
+            {
+                if (baseAttitude == GuAttitude.Friendly || baseAttitude == GuAttitude.Respectful)
+                    return GuAttitude.Wary;
+                return GuAttitude.Hostile;
+            }
+            if (CurrentInvestigation.IsSuspicious)
+            {
+                if (baseAttitude == GuAttitude.Friendly)
+                    return GuAttitude.Wary;
+                if (baseAttitude == GuAttitude.Ignore)
+                    return GuAttitude.Wary;
+            }
+            return baseAttitude;
+        }
+
+        /// <summary> 向盟友传播信念（D-20 社交网络集成） </summary>
+        protected void SpreadBeliefToAllies(string playerName, BeliefState belief)
+        {
+            if (belief.ObservationCount <= 1) return;
+
+            var socialNetwork = NPCSocialNetwork.Instance;
+            if (socialNetwork != null)
+            {
+                socialNetwork.SpreadBelief(NPC.type, playerName, belief, 500f);
+            }
         }
 
         // ============================================================
@@ -745,7 +810,6 @@ namespace VerminLordMod.Content.NPCs.GuMasters
         /// </summary>
         protected void AlertNearbyAllies(NPC npc, float range)
         {
-            // 目击者头顶飘出的话语
             string[] witnessLines = new string[]
             {
                 "好大的胆子！",
@@ -764,14 +828,10 @@ namespace VerminLordMod.Content.NPCs.GuMasters
                     if (ally.GetFaction() == GetFaction() &&
                         Vector2.Distance(npc.Center, other.Center) < range)
                     {
-                        // 目击到同家族成员被玩家攻击 → 直接参战
-                        // 这是"目击者参战"逻辑，不是"以多欺少"逻辑
-                        // 只有在玩家实际攻击时才会触发（AlertNearbyAllies 只在 HandleInteraction(Attack) 中被调用）
                         ally.HasBeenHitByPlayer = true;
                         ally.AggroTimer = 1800;
                         ally.ProjectileProtectionEnabled = false;
 
-                        // 每个目击者只有第一次看到族人被打时触发话语
                         if (!ally.HasSpokenWitnessLine)
                         {
                             ally.HasSpokenWitnessLine = true;
@@ -780,6 +840,12 @@ namespace VerminLordMod.Content.NPCs.GuMasters
                         }
                     }
                 }
+            }
+
+            var socialNetwork = NPCSocialNetwork.Instance;
+            if (socialNetwork != null)
+            {
+                socialNetwork.SpreadAlert(npc.type, Main.LocalPlayer.name, range);
             }
         }
 

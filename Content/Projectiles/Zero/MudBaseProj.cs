@@ -13,22 +13,20 @@ namespace VerminLordMod.Content.Projectiles.Zero
     /// 设计哲学：
     /// 土道的本质是"重力 + 粘滞 + 厚重"。弹幕受强重力影响做抛物线运动，
     /// 命中后产生径向泥浆爆散（SplashBehavior Radial 模式），
-    /// 视觉上以棕色泥浆拖尾和厚重感模拟泥球的砸击力。
+    /// 视觉上以泥系拖尾（泥块 + 裂纹 + 泥滴）和厚重感模拟泥球的砸击力。
     ///
     /// 运动方式：
     /// - 抛物线运动（GravityBehavior）
     /// - 命中后径向泥浆爆散
     ///
     /// 视觉效果：
-    /// - 棕色泥浆粒子拖尾
-    /// - 暗棕色发光
+    /// - 泥系拖尾：泥块 + 裂纹 + 泥滴（MudTrailBehavior）
     /// - 命中时径向泥浆爆散（SplashBehavior Radial 模式）
     ///
     /// 行为组合：
     /// - AimBehavior: 初始速度
     /// - GravityBehavior: 强重力抛物线
-    /// - DustTrailBehavior: 泥浆粒子拖尾
-    /// - GlowDrawBehavior: 暗棕色发光
+    /// - MudTrailBehavior: 泥系拖尾（泥块 + 裂纹 + 泥滴）
     /// - SplashBehavior(Radial): 命中时径向泥浆爆散
     /// </summary>
     public class MudBaseProj : BaseBullet
@@ -54,28 +52,18 @@ namespace VerminLordMod.Content.Projectiles.Zero
                 RotationOffset = MathHelper.PiOver2
             });
 
-            // 3. 泥浆粒子拖尾
-            Behaviors.Add(new DustTrailBehavior(DustID.Mud, spawnChance: 1)
+            // 3. 泥系拖尾
+            Behaviors.Add(new MudTrailBehavior
             {
-                DustScale = 0.6f,
-                VelocityMultiplier = 0.05f,
-                NoGravity = false,
-                DustAlpha = 150,
-                RandomSpeed = 0.2f
+                SuppressDefaultDraw = true,
+                EnableGhostTrail = true,
+                GhostColor = new Color(120, 80, 40, 140),
+                MudClodColor = new Color(100, 70, 30, 200),
+                GroundCrackColor = new Color(80, 55, 25, 180),
+                SludgeDripColor = new Color(110, 75, 35, 160),
             });
 
-            // 4. 暗棕色发光
-            Behaviors.Add(new GlowDrawBehavior
-            {
-                GlowColor = new Color(120, 80, 30, 120),
-                GlowBaseScale = 1.1f,
-                GlowLayers = 1,
-                GlowAlphaMultiplier = 0.2f,
-                EnableLight = true,
-                LightColor = new Vector3(0.25f, 0.18f, 0.06f)
-            });
-
-            // 5. 命中时径向泥浆爆散
+            // 4. 命中时径向泥浆爆散
             Behaviors.Add(new SplashBehavior(SplashMode.Radial)
             {
                 Count = 10,

@@ -13,21 +13,19 @@ namespace VerminLordMod.Content.Projectiles.Zero
     /// 设计哲学：
     /// 暗道的本质是"吞噬 + 腐蚀 + 扩散"。弹幕以追踪方式逼近敌人，
     /// 命中后产生环形暗影冲击波（SplashBehavior Ring 模式），
-    /// 视觉上以暗紫色拖尾和吞噬性发光模拟暗影的压迫感。
+    /// 视觉上以暗系拖尾（暗斑 + 锁链 + 诅咒印记）模拟暗影的压迫感。
     ///
     /// 运动方式：
     /// - 追踪敌人（HomingBehavior）
     /// - 命中后环形暗影冲击波扩散
     ///
     /// 视觉效果：
-    /// - 暗紫色粒子拖尾（ShadowFlame 风格）
-    /// - 暗色发光（吞噬光线的感觉）
+    /// - 暗系拖尾：暗斑 + 锁链 + 诅咒印记（DarkTrailBehavior）
     /// - 命中时环形暗影冲击波（SplashBehavior Ring 模式）
     ///
     /// 行为组合：
     /// - HomingBehavior: 追踪敌人
-    /// - DustTrailBehavior: 暗影粒子拖尾
-    /// - GlowDrawBehavior: 暗色发光
+    /// - DarkTrailBehavior: 暗系拖尾（暗斑 + 锁链 + 诅咒印记）
     /// - SplashBehavior(Ring): 命中时环形暗影冲击波
     /// </summary>
     public class DarkBaseProj : BaseBullet
@@ -46,25 +44,14 @@ namespace VerminLordMod.Content.Projectiles.Zero
                 RotationOffset = MathHelper.PiOver2,
             });
 
-            // 2. 暗影粒子拖尾
-            Behaviors.Add(new DustTrailBehavior(DustID.Shadowflame, spawnChance: 1)
+            Behaviors.Add(new DarkTrailBehavior
             {
-                DustScale = 0.7f,
-                VelocityMultiplier = 0.1f,
-                NoGravity = true,
-                DustAlpha = 180,
-                RandomSpeed = 0.3f
-            });
-
-            // 3. 暗色发光（吞噬光线）
-            Behaviors.Add(new GlowDrawBehavior
-            {
-                GlowColor = new Color(80, 20, 120, 180),
-                GlowBaseScale = 1.3f,
-                GlowLayers = 2,
-                GlowAlphaMultiplier = 0.3f,
-                EnableLight = true,
-                LightColor = new Vector3(0.3f, 0.05f, 0.5f)
+                SuppressDefaultDraw = true,
+                EnableGhostTrail = true,
+                GhostColor = new Color(60, 15, 90, 160),
+                PatchColor = new Color(50, 10, 80, 180),
+                ChainColor = new Color(80, 25, 120, 200),
+                CurseMarkColor = new Color(100, 30, 150, 220),
             });
 
             // 4. 命中时环形暗影冲击波

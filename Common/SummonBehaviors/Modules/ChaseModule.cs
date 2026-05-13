@@ -42,7 +42,6 @@ namespace VerminLordMod.Common.SummonBehaviors.Modules
         public float IdleFollowSpeed { get; set; } = 8f;
         public float TeleportRange { get; set; } = 2000f;
 
-        private Vector2? _currentTargetPos;
         private readonly PlayerSelector _idleSelector = new PlayerSelector();
 
         public ChaseModule() { }
@@ -56,7 +55,6 @@ namespace VerminLordMod.Common.SummonBehaviors.Modules
 
         public void OnSpawn(Projectile projectile, Player owner, IEntitySource source)
         {
-            _currentTargetPos = null;
         }
 
         public void Update(Projectile projectile, Player owner)
