@@ -149,6 +149,39 @@ namespace VerminLordMod.Content.Trails
 			return trail;
 		}
 
+		public static WindTrail AddWindTrail(this TrailManager manager,
+			int maxStreaks = 50,
+			int streakLife = 18,
+			float streakSize = 0.5f,
+			int maxVortex = 30,
+			int vortexLife = 35,
+			float vortexSize = 0.35f,
+			int maxMist = 15,
+			int mistLife = 40,
+			float mistSpawnChance = 0.12f,
+			Color? streakColor = null,
+			Color? vortexColor = null,
+			Color? mistColor = null)
+		{
+			var trail = new WindTrail
+			{
+				MaxStreaks = maxStreaks,
+				StreakLife = streakLife,
+				StreakSize = streakSize,
+				MaxVortex = maxVortex,
+				VortexLife = vortexLife,
+				VortexSize = vortexSize,
+				MaxMist = maxMist,
+				MistLife = mistLife,
+				MistSpawnChance = mistSpawnChance,
+				StreakColor = streakColor ?? new Color(180, 245, 230, 200),
+				VortexColor = vortexColor ?? new Color(140, 220, 200, 180),
+				MistColor = mistColor ?? new Color(180, 240, 230, 100)
+			};
+			manager.Add(trail);
+			return trail;
+		}
+
 		/// <summary>
 		/// 获取或创建指定类型的拖尾（如果已存在则返回现有实例）
 		/// </summary>

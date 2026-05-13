@@ -8,114 +8,105 @@ using VerminLordMod.Content.DamageClasses;
 
 namespace VerminLordMod.Content.Projectiles.Zero
 {
-    /// <summary>
-    /// 风道旋风弹 — 旋转前进的旋风弹幕。
-    /// 风道技术储备库的"旋风"技术：
-    /// - 弹幕沿波浪轨迹旋转前进
-    /// - 对路径上的敌人造成多次伤害
-    /// - 产生旋转风之粒子效果
-    /// - 穿透敌人
-    ///
-    /// 行为组合：
-    /// - AimBehavior: 直线飞行
-    /// - WaveBehavior: 波浪轨迹
-    /// - DustTrailBehavior: 风之粒子拖尾
-    /// - DustKillBehavior: 消散时风之爆散
-    /// </summary>
     public class WindCycloneProj : BaseBullet
     {
-        /// <summary>飞行速度</summary>
-        private const float FlySpeed = 8f;
-
-        /// <summary>计时器</summary>
-        private int _timer = 0;
+        private const int Duration = 180;
 
         protected override void RegisterBehaviors()
         {
-            // 1. 直线飞行（中等速度）
-            Behaviors.Add(new AimBehavior(speed: FlySpeed)
+            Behaviors.Add(new StationaryBehavior());
+
+            Behaviors.Add(new PullBehavior
             {
-                AutoRotate = true,
-                RotationOffset = MathHelper.PiOver2
+                PullRange = 160f,
+                PullStrength = 0.2f,
+                TangentFactor = 0.6f,
+                MaxPullSpeed = 6f,
+                EnableLight = false,
             });
 
-            // 2. 波浪轨迹（旋转感）
-            Behaviors.Add(new WaveBehavior(amplitude: 0.08f, frequency: 0.08f)
+            Behaviors.Add(new AreaDamageBehavior
             {
-                AutoRotate = true,
-                RotationOffset = MathHelper.PiOver2
+                HitRadius = 50f,
+                HitInterval = 15,
+                Knockback = 3f,
+                DirectionalKnockback = true,
             });
 
-            // 3. 风之粒子拖尾（大量）
-            Behaviors.Add(new DustTrailBehavior(DustID.Cloud, spawnChance: 1)
+            Behaviors.Add(new VortexParticleBehavior
             {
-                DustScale = 0.6f,
-                VelocityMultiplier = 0.2f,
-                NoGravity = true,
-                DustAlpha = 100,
-                RandomSpeed = 0.5f
+                UseCloudMode = true,
+                CloudParticleCount = 15,
+                CloudRadius = 55f,
+                CloudRotationSpeed = 0.08f,
+                CloudConvergenceSpeed = 0.01f,
+                CloudInnerBias = 1.5f,
+                CloudStreamerCount = 8,
+                CloudStreamerArms = 3,
+                CloudStreamerTightness = 0.04f,
+                CloudStreamerWidth = 10f,
+                CloudStreamerColor = new Color(140, 220, 200, 220),
+                CloudStreamerScale = new Vector2(0.6f, 1.1f),
+                DustType = DustID.Cloud,
+                ColorStart = new Color(160, 230, 210, 150),
+                ColorEnd = new Color(200, 250, 240, 200),
+                SpawnBubbles = false,
+                SpawnCenterGlow = true,
+                CenterGlowInterval = 4,
+                CenterGlowRange = 12f,
+                EnableLight = true,
+                LightColor = new Vector3(0.2f, 0.5f, 0.4f),
+                SuppressDefaultDraw = true,
             });
 
-            // 4. 消散时风之爆散
-            Behaviors.Add(new DustKillBehavior(
-                dustType: DustID.Cloud,
-                dustCount: 20,
-                dustSpeed: 5f,
-                dustScale: 1.2f
-            )
+            Behaviors.Add(new FadeInOutBehavior
             {
-                NoGravity = true
+                FadeInDuration = 0.08f,
+                FadeOutStart = 0.85f,
+                MinAlpha = 255,
+                MaxAlpha = 0,
             });
         }
 
         public override void SetDefaults()
         {
-            Projectile.width = 20;
-            Projectile.height = 20;
-            Projectile.scale = 1.2f;
+            Projectile.width = 30;
+            Projectile.height = 30;
+            Projectile.scale = 1f;
             Projectile.ignoreWater = true;
-            Projectile.tileCollide = true;
-            Projectile.penetrate = -1; // 无限穿透
-            Projectile.timeLeft = 120;
-            Projectile.alpha = 30;
+            Projectile.tileCollide = false;
+            Projectile.penetrate = -1;
+            Projectile.timeLeft = Duration;
+            Projectile.alpha = 0;
             Projectile.friendly = true;
             Projectile.hostile = false;
             Projectile.DamageType = ModContent.GetInstance<InsectDamageClass>();
             Projectile.aiStyle = -1;
             Projectile.usesLocalNPCImmunity = true;
-            Projectile.localNPCHitCooldown = 10;
+            Projectile.localNPCHitCooldown = 15;
         }
 
-        protected override void OnSpawned(IEntitySource source)
+        protected override void OnHit(NPC target, NPC.HitInfo hit, int damageDone)
         {
-            base.OnSpawned(source);
-            _timer = 0;
+            target.AddBuff(BuffID.Slow, 90);
         }
 
-        protected override void OnAI()
+        protected override void OnKilled(int timeLeft)
         {
-            _timer++;
-
-            // 旋转风之粒子
-            if (_timer % 2 == 0)
+            for (int i = 0; i < 15; i++)
             {
                 float angle = Main.rand.NextFloat(MathHelper.TwoPi);
-                float radius = Main.rand.NextFloat(5f, 15f);
-                Vector2 pos = Projectile.Center + angle.ToRotationVector2() * radius;
-
+                float speed = Main.rand.NextFloat(2f, 5f);
+                Vector2 vel = angle.ToRotationVector2() * speed;
                 Dust d = Dust.NewDustPerfect(
-                    pos,
-                    DustID.Cloud,
-                    angle.ToRotationVector2() * Main.rand.NextFloat(0.5f, 1.5f),
-                    50,
-                    new Color(180, 220, 255, 150),
-                    Main.rand.NextFloat(0.4f, 0.8f)
-                );
+                    Projectile.Center + Main.rand.NextVector2Circular(15f, 15f),
+                    DustID.Cloud, vel, 0,
+                    new Color(160, 230, 210, 160),
+                    Main.rand.NextFloat(0.5f, 1.0f));
                 d.noGravity = true;
             }
-
-            // 风之微光
-            Lighting.AddLight(Projectile.Center, 0.2f, 0.4f, 0.6f);
         }
+
+        protected override bool OnTileCollided(Vector2 oldVelocity) => false;
     }
 }
