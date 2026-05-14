@@ -10,107 +10,6 @@ namespace VerminLordMod.Content.Trails
 {
     public class GoldTrail : ITrail
     {
-        public class GoldBladeEdgeParticle
-        {
-            public Vector2 Position;
-            public Vector2 Velocity;
-            public float Scale;
-            public float Length;
-            public int Life;
-            public int MaxLife;
-            public float Rotation;
-            public Color Color;
-
-            public float Progress => 1f - (float)Life / MaxLife;
-
-            public float Alpha
-            {
-                get
-                {
-                    float fadeIn = MathF.Min(1f, Progress * 6f);
-                    float fadeOut = 1f - Progress;
-                    return MathF.Max(0f, fadeIn * fadeOut);
-                }
-            }
-
-            public float CurrentLength => Length * (1f - Progress * 0.3f);
-
-            public GoldBladeEdgeParticle(Vector2 pos, Vector2 vel, int life, float scale, float length, float rotation, Color color)
-            {
-                Position = pos;
-                Velocity = vel;
-                MaxLife = life;
-                Life = life;
-                Scale = scale;
-                Length = length;
-                Rotation = rotation;
-                Color = color;
-            }
-        }
-
-        public class GoldPrismGlowParticle
-        {
-            public Vector2 Position;
-            public Vector2 Velocity;
-            public float Scale;
-            public int Life;
-            public int MaxLife;
-            public float HueOffset;
-            public float HueSpeed;
-            public Color BaseColor;
-
-            public float Progress => 1f - (float)Life / MaxLife;
-
-            public float Alpha
-            {
-                get
-                {
-                    float fadeIn = MathF.Min(1f, Progress * 4f);
-                    float fadeOut = 1f - Progress * Progress;
-                    return MathF.Max(0f, fadeIn * fadeOut * 0.7f);
-                }
-            }
-
-            public Color CurrentColor
-            {
-                get
-                {
-                    float hue = (HueOffset + Progress * HueSpeed) % 1f;
-                    if (hue < 0) hue += 1f;
-                    return ColorFromHSV(hue * 360f, 0.8f, 1f) * Alpha;
-                }
-            }
-
-            private static Color ColorFromHSV(float h, float s, float v)
-            {
-                int hi = (int)(h / 60f) % 6;
-                float f = h / 60f - (int)(h / 60f);
-                float p = v * (1f - s);
-                float q = v * (1f - f * s);
-                float t = v * (1f - (1f - f) * s);
-                return hi switch
-                {
-                    0 => new Color(v, t, p),
-                    1 => new Color(q, v, p),
-                    2 => new Color(p, v, t),
-                    3 => new Color(p, q, v),
-                    4 => new Color(t, p, v),
-                    _ => new Color(v, p, q)
-                };
-            }
-
-            public GoldPrismGlowParticle(Vector2 pos, Vector2 vel, int life, float scale, float hueOffset, float hueSpeed)
-            {
-                Position = pos;
-                Velocity = vel;
-                MaxLife = life;
-                Life = life;
-                Scale = scale;
-                HueOffset = hueOffset;
-                HueSpeed = hueSpeed;
-            }
-        }
-
         public class GoldShardParticle
         {
             public Vector2 Position;
@@ -121,7 +20,6 @@ namespace VerminLordMod.Content.Trails
             public int MaxLife;
             public float Rotation;
             public float SpinSpeed;
-            public int FacetSides;
             public Color Color;
 
             public float Progress => 1f - (float)Life / MaxLife;
@@ -138,7 +36,7 @@ namespace VerminLordMod.Content.Trails
 
             public float CurrentScale => Scale * (1f - Progress * 0.4f);
 
-            public GoldShardParticle(Vector2 pos, Vector2 vel, int life, float scale, float stretch, float rotation, float spinSpeed, int facetSides, Color color)
+            public GoldShardParticle(Vector2 pos, Vector2 vel, int life, float scale, float stretch, float rotation, float spinSpeed, Color color)
             {
                 Position = pos;
                 Velocity = vel;
@@ -148,17 +46,19 @@ namespace VerminLordMod.Content.Trails
                 Stretch = stretch;
                 Rotation = rotation;
                 SpinSpeed = spinSpeed;
-                FacetSides = facetSides;
                 Color = color;
             }
         }
 
-        public class GoldFlashParticle
+        public class GoldSparkParticle
         {
             public Vector2 Position;
+            public Vector2 Velocity;
             public float Scale;
             public int Life;
             public int MaxLife;
+            public float TwinklePhase;
+            public float TwinkleSpeed;
             public Color Color;
 
             public float Progress => 1f - (float)Life / MaxLife;
@@ -167,19 +67,106 @@ namespace VerminLordMod.Content.Trails
             {
                 get
                 {
-                    float flash = 1f - Progress * Progress * Progress;
-                    return MathF.Max(0f, flash);
+                    float fadeIn = MathF.Min(1f, Progress * 6f);
+                    float fadeOut = 1f - Progress * Progress;
+                    float twinkle = 0.5f + 0.5f * MathF.Max(0, MathF.Sin(TwinklePhase));
+                    return MathF.Max(0f, fadeIn * fadeOut * twinkle);
                 }
             }
 
-            public float CurrentScale => Scale * (0.5f + 0.5f * (1f - Progress));
-
-            public GoldFlashParticle(Vector2 pos, int life, float scale, Color color)
+            public GoldSparkParticle(Vector2 pos, Vector2 vel, int life, float scale, Color color)
             {
                 Position = pos;
+                Velocity = vel;
                 MaxLife = life;
                 Life = life;
                 Scale = scale;
+                TwinklePhase = Main.rand.NextFloat(MathHelper.TwoPi);
+                TwinkleSpeed = Main.rand.NextFloat(0.15f, 0.3f);
+                Color = color;
+            }
+        }
+
+        public class GoldRingParticle
+        {
+            public Vector2 Position;
+            public Vector2 Velocity;
+            public float Scale;
+            public float MaxScale;
+            public int Life;
+            public int MaxLife;
+            public float Rotation;
+            public float RotSpeed;
+            public Color Color;
+
+            public float Progress => 1f - (float)Life / MaxLife;
+
+            public float Alpha
+            {
+                get
+                {
+                    float fadeIn = MathF.Min(1f, Progress * 3f);
+                    float fadeOut = (1f - Progress) * (1f - Progress);
+                    return MathF.Max(0f, fadeIn * fadeOut * 0.6f);
+                }
+            }
+
+            public float CurrentScale
+            {
+                get
+                {
+                    float expand = MathF.Min(1f, Progress * 2f);
+                    return Scale + (MaxScale - Scale) * expand;
+                }
+            }
+
+            public GoldRingParticle(Vector2 pos, Vector2 vel, int life, float scale, float maxScale, float rotSpeed, Color color)
+            {
+                Position = pos;
+                Velocity = vel;
+                MaxLife = life;
+                Life = life;
+                Scale = scale;
+                MaxScale = maxScale;
+                Rotation = Main.rand.NextFloat(MathHelper.TwoPi);
+                RotSpeed = rotSpeed;
+                Color = color;
+            }
+        }
+
+        public class GoldDustParticle
+        {
+            public Vector2 Position;
+            public Vector2 Velocity;
+            public float Scale;
+            public int Life;
+            public int MaxLife;
+            public float TwinklePhase;
+            public float TwinkleSpeed;
+            public Color Color;
+
+            public float Progress => 1f - (float)Life / MaxLife;
+
+            public float Alpha
+            {
+                get
+                {
+                    float fadeIn = MathF.Min(1f, Progress * 5f);
+                    float fadeOut = 1f - Progress;
+                    float twinkle = 0.6f + 0.4f * MathF.Max(0, MathF.Sin(TwinklePhase));
+                    return MathF.Max(0f, fadeIn * fadeOut * twinkle);
+                }
+            }
+
+            public GoldDustParticle(Vector2 pos, Vector2 vel, int life, float scale, Color color)
+            {
+                Position = pos;
+                Velocity = vel;
+                MaxLife = life;
+                Life = life;
+                Scale = scale;
+                TwinklePhase = Main.rand.NextFloat(MathHelper.TwoPi);
+                TwinkleSpeed = Main.rand.NextFloat(0.1f, 0.2f);
                 Color = color;
             }
         }
@@ -196,64 +183,66 @@ namespace VerminLordMod.Content.Trails
         public float GhostAlpha { get; set; } = 0.45f;
         public Color GhostColor { get; set; } = new Color(255, 215, 80, 180);
 
-        public int MaxBlades { get; set; } = 40;
-        public int BladeLife { get; set; } = 12;
-        public float BladeScale { get; set; } = 0.6f;
-        public float BladeLength { get; set; } = 18f;
-        public int BladeSpawnInterval { get; set; } = 1;
-        public float BladeDriftSpeed { get; set; } = 0.2f;
-        public float BladeSpread { get; set; } = 5f;
-        public Color BladeColor { get; set; } = new Color(255, 230, 140, 240);
-
-        public int MaxPrisms { get; set; } = 20;
-        public int PrismLife { get; set; } = 28;
-        public float PrismSize { get; set; } = 0.45f;
-        public float PrismSpawnChance { get; set; } = 0.18f;
-        public float PrismDriftSpeed { get; set; } = 0.15f;
-        public float PrismHueSpeed { get; set; } = 2.0f;
-
-        public int MaxShards { get; set; } = 15;
-        public int ShardLife { get; set; } = 25;
-        public float ShardSize { get; set; } = 0.6f;
-        public float ShardStretch { get; set; } = 2.2f;
-        public float ShardSpawnChance { get; set; } = 0.08f;
-        public float ShardSpinSpeed { get; set; } = 0.1f;
-        public float ShardDriftSpeed { get; set; } = 0.25f;
+        public int MaxShards { get; set; } = 40;
+        public int ShardLife { get; set; } = 22;
+        public float ShardSize { get; set; } = 0.5f;
+        public float ShardStretch { get; set; } = 2.0f;
+        public int ShardSpawnInterval { get; set; } = 1;
+        public float ShardSpinSpeed { get; set; } = 0.15f;
+        public float ShardDriftSpeed { get; set; } = 0.3f;
+        public float ShardSpread { get; set; } = 4f;
         public Color ShardColor { get; set; } = new Color(255, 220, 100, 220);
 
-        public int MaxFlashes { get; set; } = 8;
-        public int FlashLife { get; set; } = 6;
-        public float FlashSize { get; set; } = 0.8f;
-        public float FlashSpawnChance { get; set; } = 0.04f;
-        public Color FlashColor { get; set; } = new Color(255, 250, 220, 255);
+        public int MaxSparks { get; set; } = 25;
+        public int SparkLife { get; set; } = 30;
+        public float SparkSize { get; set; } = 0.5f;
+        public float SparkSpawnChance { get; set; } = 0.2f;
+        public float SparkDriftSpeed { get; set; } = 0.25f;
+        public Color SparkColor { get; set; } = new Color(255, 240, 160, 240);
+
+        public int MaxRings { get; set; } = 6;
+        public int RingLife { get; set; } = 40;
+        public float RingStartSize { get; set; } = 0.3f;
+        public float RingEndSize { get; set; } = 1.5f;
+        public float RingSpawnChance { get; set; } = 0.03f;
+        public float RingRotSpeed { get; set; } = 0.06f;
+        public float RingDriftSpeed { get; set; } = 0.1f;
+        public Color RingColor { get; set; } = new Color(255, 200, 60, 160);
+
+        public int MaxDust { get; set; } = 35;
+        public int DustLife { get; set; } = 28;
+        public float DustSize { get; set; } = 0.2f;
+        public float DustSpawnChance { get; set; } = 0.3f;
+        public float DustDriftSpeed { get; set; } = 0.4f;
+        public Color DustColor { get; set; } = new Color(255, 210, 80, 180);
 
         public float InertiaFactor { get; set; } = 0.18f;
         public float RandomSpread { get; set; } = 3f;
         public Vector2 SpawnOffset { get; set; } = Vector2.Zero;
 
-        private List<GoldBladeEdgeParticle> blades = new();
-        private List<GoldPrismGlowParticle> prisms = new();
         private List<GoldShardParticle> shards = new();
-        private List<GoldFlashParticle> flashes = new();
-        private int bladeCounter = 0;
+        private List<GoldSparkParticle> sparks = new();
+        private List<GoldRingParticle> rings = new();
+        private List<GoldDustParticle> dusts = new();
+        private int shardCounter = 0;
 
         private GhostTrail _ghostTrail;
 
-        private Texture2D _bladeTex;
-        private Texture2D _prismTex;
         private Texture2D _shardTex;
-        private Texture2D _flashTex;
+        private Texture2D _sparkTex;
+        private Texture2D _ringTex;
+        private Texture2D _dustTex;
         private Texture2D _ghostTex;
 
-        public bool HasContent => blades.Count > 0 || prisms.Count > 0 || shards.Count > 0 || flashes.Count > 0 || (_ghostTrail?.HasContent ?? false);
+        public bool HasContent => shards.Count > 0 || sparks.Count > 0 || rings.Count > 0 || dusts.Count > 0 || (_ghostTrail?.HasContent ?? false);
 
         private void EnsureTextures()
         {
-            if (_bladeTex != null) return;
-            _bladeTex = ModContent.Request<Texture2D>("VerminLordMod/Content/Trails/GoldTrail/GoldTrailBlade").Value;
-            _prismTex = ModContent.Request<Texture2D>("VerminLordMod/Content/Trails/GoldTrail/GoldTrailPrism").Value;
+            if (_shardTex != null) return;
             _shardTex = ModContent.Request<Texture2D>("VerminLordMod/Content/Trails/GoldTrail/GoldTrailShard").Value;
-            _flashTex = ModContent.Request<Texture2D>("VerminLordMod/Content/Trails/GoldTrail/GoldTrailFlash").Value;
+            _sparkTex = ModContent.Request<Texture2D>("VerminLordMod/Content/Trails/GoldTrail/GoldTrailSpark").Value;
+            _ringTex = ModContent.Request<Texture2D>("VerminLordMod/Content/Trails/GoldTrail/GoldTrailRing").Value;
+            _dustTex = ModContent.Request<Texture2D>("VerminLordMod/Content/Trails/GoldTrail/GoldTrailDust").Value;
             _ghostTex = ModContent.Request<Texture2D>("VerminLordMod/Content/Trails/GoldTrail/GoldTrailGhost").Value;
         }
 
@@ -287,39 +276,21 @@ namespace VerminLordMod.Content.Trails
 
             Vector2 moveDir = velocity.SafeNormalize(Vector2.UnitX);
 
-            bladeCounter++;
-            if (bladeCounter >= BladeSpawnInterval && blades.Count < MaxBlades)
+            shardCounter++;
+            if (shardCounter >= ShardSpawnInterval && shards.Count < MaxShards)
             {
-                bladeCounter = 0;
-                SpawnBlade(center, velocity, moveDir);
-            }
-
-            if (prisms.Count < MaxPrisms && Main.rand.NextFloat() < PrismSpawnChance)
-                SpawnPrism(center, velocity, moveDir);
-
-            if (shards.Count < MaxShards && Main.rand.NextFloat() < ShardSpawnChance)
+                shardCounter = 0;
                 SpawnShard(center, velocity, moveDir);
-
-            if (flashes.Count < MaxFlashes && Main.rand.NextFloat() < FlashSpawnChance)
-                SpawnFlash(center);
-
-            for (int i = blades.Count - 1; i >= 0; i--)
-            {
-                var b = blades[i];
-                b.Velocity *= 0.92f;
-                b.Position += b.Velocity;
-                b.Life--;
-                if (b.Life <= 0) blades.RemoveAt(i);
             }
 
-            for (int i = prisms.Count - 1; i >= 0; i--)
-            {
-                var p = prisms[i];
-                p.Velocity *= 0.95f;
-                p.Position += p.Velocity;
-                p.Life--;
-                if (p.Life <= 0) prisms.RemoveAt(i);
-            }
+            if (sparks.Count < MaxSparks && Main.rand.NextFloat() < SparkSpawnChance)
+                SpawnSpark(center, velocity, moveDir);
+
+            if (rings.Count < MaxRings && Main.rand.NextFloat() < RingSpawnChance)
+                SpawnRing(center, velocity, moveDir);
+
+            if (dusts.Count < MaxDust && Main.rand.NextFloat() < DustSpawnChance)
+                SpawnDust(center, velocity, moveDir);
 
             for (int i = shards.Count - 1; i >= 0; i--)
             {
@@ -331,74 +302,95 @@ namespace VerminLordMod.Content.Trails
                 if (s.Life <= 0) shards.RemoveAt(i);
             }
 
-            for (int i = flashes.Count - 1; i >= 0; i--)
+            for (int i = sparks.Count - 1; i >= 0; i--)
             {
-                var f = flashes[i];
-                f.Life--;
-                if (f.Life <= 0) flashes.RemoveAt(i);
+                var s = sparks[i];
+                s.TwinklePhase += s.TwinkleSpeed;
+                s.Velocity *= 0.96f;
+                s.Position += s.Velocity;
+                s.Life--;
+                if (s.Life <= 0) sparks.RemoveAt(i);
             }
-        }
 
-        private void SpawnBlade(Vector2 center, Vector2 velocity, Vector2 moveDir)
-        {
-            Vector2 perpDir = new Vector2(-moveDir.Y, moveDir.X);
-            float sideOffset = Main.rand.NextFloat(-BladeSpread, BladeSpread);
-            Vector2 pos = center + SpawnOffset + perpDir * sideOffset + Main.rand.NextVector2Circular(2f, 2f);
+            for (int i = rings.Count - 1; i >= 0; i--)
+            {
+                var r = rings[i];
+                r.Rotation += r.RotSpeed;
+                r.Velocity *= 0.97f;
+                r.Position += r.Velocity;
+                r.Life--;
+                if (r.Life <= 0) rings.RemoveAt(i);
+            }
 
-            Vector2 inertia = -velocity * InertiaFactor * 0.2f;
-            Vector2 drift = Main.rand.NextVector2Circular(BladeDriftSpeed, BladeDriftSpeed);
-            Vector2 vel = inertia + drift;
-
-            float scale = Main.rand.NextFloat(0.6f, 1.3f) * BladeScale;
-            float length = Main.rand.NextFloat(0.7f, 1.4f) * BladeLength;
-            float angleOffset = Main.rand.NextFloat(-0.8f, 0.8f);
-            float rotation = velocity.ToRotation() + MathHelper.PiOver2 + angleOffset;
-            Color color = BladeColor * Main.rand.NextFloat(0.6f, 1f);
-
-            blades.Add(new GoldBladeEdgeParticle(pos, vel, BladeLife, scale, length, rotation, color));
-        }
-
-        private void SpawnPrism(Vector2 center, Vector2 velocity, Vector2 moveDir)
-        {
-            Vector2 perpDir = new Vector2(-moveDir.Y, moveDir.X);
-            float sideOffset = Main.rand.NextFloat(-8f, 8f);
-            Vector2 pos = center + SpawnOffset + perpDir * sideOffset + Main.rand.NextVector2Circular(4f, 4f);
-
-            Vector2 drift = Main.rand.NextVector2Circular(PrismDriftSpeed, PrismDriftSpeed);
-            float scale = Main.rand.NextFloat(0.5f, 1.2f) * PrismSize;
-            float hueOffset = Main.rand.NextFloat();
-            float hueSpeed = PrismHueSpeed * Main.rand.NextFloat(0.6f, 1.4f);
-
-            prisms.Add(new GoldPrismGlowParticle(pos, drift, PrismLife, scale, hueOffset, hueSpeed));
+            for (int i = dusts.Count - 1; i >= 0; i--)
+            {
+                var d = dusts[i];
+                d.TwinklePhase += d.TwinkleSpeed;
+                d.Velocity *= 0.95f;
+                d.Position += d.Velocity;
+                d.Life--;
+                if (d.Life <= 0) dusts.RemoveAt(i);
+            }
         }
 
         private void SpawnShard(Vector2 center, Vector2 velocity, Vector2 moveDir)
         {
             Vector2 perpDir = new Vector2(-moveDir.Y, moveDir.X);
-            float sideOffset = Main.rand.NextFloat(-4f, 4f);
+            float sideOffset = Main.rand.NextFloat(-ShardSpread, ShardSpread);
             Vector2 pos = center + SpawnOffset + perpDir * sideOffset + Main.rand.NextVector2Circular(2f, 2f);
 
             Vector2 inertia = -velocity * InertiaFactor;
             Vector2 drift = Main.rand.NextVector2Circular(ShardDriftSpeed, ShardDriftSpeed);
-            Vector2 vel = inertia + drift;
+            Vector2 vel = inertia + drift + perpDir * sideOffset * 0.1f;
 
-            float scale = Main.rand.NextFloat(0.7f, 1.4f) * ShardSize;
+            float scale = Main.rand.NextFloat(0.6f, 1.3f) * ShardSize;
             float stretch = Main.rand.NextFloat(0.8f, 1.5f) * ShardStretch;
             float rotation = velocity.ToRotation() + Main.rand.NextFloat(-0.3f, 0.3f);
             float spinSpeed = Main.rand.NextFloat(-ShardSpinSpeed, ShardSpinSpeed);
-            int facetSides = Main.rand.Next(3, 6);
             Color color = ShardColor * Main.rand.NextFloat(0.6f, 1f);
 
-            shards.Add(new GoldShardParticle(pos, vel, ShardLife, scale, stretch, rotation, spinSpeed, facetSides, color));
+            shards.Add(new GoldShardParticle(pos, vel, ShardLife, scale, stretch, rotation, spinSpeed, color));
         }
 
-        private void SpawnFlash(Vector2 center)
+        private void SpawnSpark(Vector2 center, Vector2 velocity, Vector2 moveDir)
         {
-            Vector2 pos = center + SpawnOffset + Main.rand.NextVector2Circular(6f, 6f);
-            float scale = Main.rand.NextFloat(0.6f, 1.3f) * FlashSize;
-            Color color = FlashColor * Main.rand.NextFloat(0.7f, 1f);
+            Vector2 perpDir = new Vector2(-moveDir.Y, moveDir.X);
+            float sideOffset = Main.rand.NextFloat(-6f, 6f);
+            Vector2 pos = center + SpawnOffset + perpDir * sideOffset + Main.rand.NextVector2Circular(3f, 3f);
 
-            flashes.Add(new GoldFlashParticle(pos, FlashLife, scale, color));
+            Vector2 drift = Main.rand.NextVector2Circular(SparkDriftSpeed, SparkDriftSpeed);
+            float scale = Main.rand.NextFloat(0.5f, 1.2f) * SparkSize;
+            Color color = SparkColor * Main.rand.NextFloat(0.7f, 1f);
+
+            sparks.Add(new GoldSparkParticle(pos, drift, SparkLife, scale, color));
+        }
+
+        private void SpawnRing(Vector2 center, Vector2 velocity, Vector2 moveDir)
+        {
+            Vector2 perpDir = new Vector2(-moveDir.Y, moveDir.X);
+            float sideOffset = Main.rand.NextFloat(-8f, 8f);
+            Vector2 pos = center + SpawnOffset + perpDir * sideOffset + Main.rand.NextVector2Circular(6f, 6f);
+
+            Vector2 drift = Main.rand.NextVector2Circular(RingDriftSpeed, RingDriftSpeed);
+            float startSize = RingStartSize * Main.rand.NextFloat(0.8f, 1.2f);
+            float endSize = RingEndSize * Main.rand.NextFloat(0.8f, 1.2f);
+            float rotSpeed = Main.rand.NextFloat(-RingRotSpeed, RingRotSpeed);
+            Color color = RingColor * Main.rand.NextFloat(0.5f, 1f);
+
+            rings.Add(new GoldRingParticle(pos, drift, RingLife, startSize, endSize, rotSpeed, color));
+        }
+
+        private void SpawnDust(Vector2 center, Vector2 velocity, Vector2 moveDir)
+        {
+            Vector2 perpDir = new Vector2(-moveDir.Y, moveDir.X);
+            float sideOffset = Main.rand.NextFloat(-7f, 7f);
+            Vector2 pos = center + SpawnOffset + perpDir * sideOffset + Main.rand.NextVector2Circular(4f, 4f);
+
+            Vector2 drift = Main.rand.NextVector2Circular(DustDriftSpeed, DustDriftSpeed);
+            float scale = Main.rand.NextFloat(0.5f, 1.2f) * DustSize;
+            Color color = DustColor * Main.rand.NextFloat(0.5f, 1f);
+
+            dusts.Add(new GoldDustParticle(pos, drift, DustLife, scale, color));
         }
 
         public void Draw(SpriteBatch sb)
@@ -406,30 +398,29 @@ namespace VerminLordMod.Content.Trails
             if (_ghostTrail != null)
                 _ghostTrail.Draw(sb);
 
-            if (prisms.Count > 0 && _prismTex != null)
+            if (rings.Count > 0 && _ringTex != null)
             {
-                Vector2 prismOrigin = _prismTex.Size() * 0.5f;
-                var sortedPrisms = prisms.OrderBy(p => p.Life);
-                foreach (var p in sortedPrisms)
+                Vector2 ringOrigin = _ringTex.Size() * 0.5f;
+                var sortedRings = rings.OrderBy(r => r.Life);
+                foreach (var r in sortedRings)
                 {
-                    Color drawColor = p.CurrentColor;
-                    Vector2 pos = p.Position - Main.screenPosition;
-                    sb.Draw(_prismTex, pos, null, drawColor, 0f,
-                        prismOrigin, p.Scale, SpriteEffects.None, 0);
+                    Color drawColor = r.Color * r.Alpha;
+                    Vector2 pos = r.Position - Main.screenPosition;
+                    sb.Draw(_ringTex, pos, null, drawColor, r.Rotation,
+                        ringOrigin, r.CurrentScale, SpriteEffects.None, 0);
                 }
             }
 
-            if (blades.Count > 0 && _bladeTex != null)
+            if (dusts.Count > 0 && _dustTex != null)
             {
-                Vector2 bladeOrigin = new Vector2(_bladeTex.Width * 0.5f, _bladeTex.Height * 0.5f);
-                var sortedBlades = blades.OrderBy(b => b.Life);
-                foreach (var b in sortedBlades)
+                Vector2 dustOrigin = _dustTex.Size() * 0.5f;
+                var sortedDusts = dusts.OrderBy(d => d.Life);
+                foreach (var d in sortedDusts)
                 {
-                    Color drawColor = b.Color * b.Alpha;
-                    Vector2 pos = b.Position - Main.screenPosition;
-                    Vector2 scale = new Vector2(b.CurrentLength / _bladeTex.Width, b.Scale);
-                    sb.Draw(_bladeTex, pos, null, drawColor, b.Rotation,
-                        bladeOrigin, scale, SpriteEffects.None, 0);
+                    Color drawColor = d.Color * d.Alpha;
+                    Vector2 pos = d.Position - Main.screenPosition;
+                    sb.Draw(_dustTex, pos, null, drawColor, 0f,
+                        dustOrigin, d.Scale, SpriteEffects.None, 0);
                 }
             }
 
@@ -447,27 +438,27 @@ namespace VerminLordMod.Content.Trails
                 }
             }
 
-            if (flashes.Count > 0 && _flashTex != null)
+            if (sparks.Count > 0 && _sparkTex != null)
             {
-                Vector2 flashOrigin = _flashTex.Size() * 0.5f;
-                var sortedFlashes = flashes.OrderBy(f => f.Life);
-                foreach (var f in sortedFlashes)
+                Vector2 sparkOrigin = _sparkTex.Size() * 0.5f;
+                var sortedSparks = sparks.OrderBy(s => s.Life);
+                foreach (var s in sortedSparks)
                 {
-                    Color drawColor = f.Color * f.Alpha;
-                    Vector2 pos = f.Position - Main.screenPosition;
-                    sb.Draw(_flashTex, pos, null, drawColor, 0f,
-                        flashOrigin, f.CurrentScale, SpriteEffects.None, 0);
+                    Color drawColor = s.Color * s.Alpha;
+                    Vector2 pos = s.Position - Main.screenPosition;
+                    sb.Draw(_sparkTex, pos, null, drawColor, 0f,
+                        sparkOrigin, s.Scale, SpriteEffects.None, 0);
                 }
             }
         }
 
         public void Clear()
         {
-            blades.Clear();
-            prisms.Clear();
             shards.Clear();
-            flashes.Clear();
-            bladeCounter = 0;
+            sparks.Clear();
+            rings.Clear();
+            dusts.Clear();
+            shardCounter = 0;
             _ghostTrail?.Clear();
         }
     }

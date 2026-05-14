@@ -90,17 +90,16 @@ namespace VerminLordMod.Content.Trails
             }
         }
 
-        public class YinYangSCurveParticle
+        public class YinYangRippleParticle
         {
             public Vector2 Position;
             public Vector2 Velocity;
             public float Scale;
-            public float CurveAmplitude;
+            public float MaxScale;
             public int Life;
             public int MaxLife;
             public float Rotation;
             public float RotSpeed;
-            public bool IsYang;
             public Color Color;
 
             public float Progress => 1f - (float)Life / MaxLife;
@@ -111,36 +110,42 @@ namespace VerminLordMod.Content.Trails
                 {
                     float fadeIn = MathF.Min(1f, Progress * 3f);
                     float fadeOut = (1f - Progress) * (1f - Progress);
-                    return MathF.Max(0f, fadeIn * fadeOut * 0.6f);
+                    return MathF.Max(0f, fadeIn * fadeOut * 0.5f);
                 }
             }
 
-            public float CurrentAmplitude => CurveAmplitude * (1f - Progress * 0.5f);
+            public float CurrentScale
+            {
+                get
+                {
+                    float expand = MathF.Min(1f, Progress * 2f);
+                    return Scale + (MaxScale - Scale) * expand;
+                }
+            }
 
-            public YinYangSCurveParticle(Vector2 pos, Vector2 vel, int life, float scale, float amplitude, float rotSpeed, bool isYang, Color color)
+            public YinYangRippleParticle(Vector2 pos, Vector2 vel, int life, float scale, float maxScale, float rotSpeed, Color color)
             {
                 Position = pos;
                 Velocity = vel;
                 MaxLife = life;
                 Life = life;
                 Scale = scale;
-                CurveAmplitude = amplitude;
+                MaxScale = maxScale;
                 Rotation = Main.rand.NextFloat(MathHelper.TwoPi);
                 RotSpeed = rotSpeed;
-                IsYang = isYang;
                 Color = color;
             }
         }
 
-        public class YinYangOrbitDotParticle
+        public class YinYangSparkParticle
         {
-            public Vector2 Center;
-            public float OrbitRadius;
-            public float Angle;
-            public float AngularSpeed;
+            public Vector2 Position;
+            public Vector2 Velocity;
             public float Scale;
             public int Life;
             public int MaxLife;
+            public float TwinklePhase;
+            public float TwinkleSpeed;
             public bool IsYang;
             public Color Color;
 
@@ -152,22 +157,21 @@ namespace VerminLordMod.Content.Trails
                 {
                     float fadeIn = MathF.Min(1f, Progress * 6f);
                     float fadeOut = 1f - Progress;
-                    return MathF.Max(0f, fadeIn * fadeOut);
+                    float twinkle = 0.5f + 0.5f * MathF.Max(0, MathF.Sin(TwinklePhase));
+                    return MathF.Max(0f, fadeIn * fadeOut * twinkle);
                 }
             }
 
-            public Vector2 Position => Center + new Vector2(MathF.Cos(Angle), MathF.Sin(Angle)) * OrbitRadius;
-
-            public YinYangOrbitDotParticle(Vector2 center, float radius, float angle, float angularSpeed, int life, float scale, bool isYang, Color color)
+            public YinYangSparkParticle(Vector2 pos, Vector2 vel, int life, float scale, bool isYang, Color color)
             {
-                Center = center;
-                OrbitRadius = radius;
-                Angle = angle;
-                AngularSpeed = angularSpeed;
+                Position = pos;
+                Velocity = vel;
                 MaxLife = life;
                 Life = life;
                 Scale = scale;
                 IsYang = isYang;
+                TwinklePhase = Main.rand.NextFloat(MathHelper.TwoPi);
+                TwinkleSpeed = Main.rand.NextFloat(0.1f, 0.25f);
                 Color = color;
             }
         }
@@ -203,24 +207,22 @@ namespace VerminLordMod.Content.Trails
         public Color FishYinColor { get; set; } = new Color(50, 40, 90, 200);
         public Color FishYangColor { get; set; } = new Color(220, 215, 250, 200);
 
-        public int MaxSCurves { get; set; } = 12;
-        public int SCurveLife { get; set; } = 45;
-        public float SCurveSize { get; set; } = 0.5f;
-        public float SCurveAmplitude { get; set; } = 12f;
-        public float SCurveSpawnChance { get; set; } = 0.06f;
-        public float SCurveRotSpeed { get; set; } = 0.05f;
-        public float SCurveDriftSpeed { get; set; } = 0.1f;
-        public Color SCurveYinColor { get; set; } = new Color(70, 55, 120, 180);
-        public Color SCurveYangColor { get; set; } = new Color(210, 200, 245, 180);
+        public int MaxRipples { get; set; } = 6;
+        public int RippleLife { get; set; } = 45;
+        public float RippleStartSize { get; set; } = 0.3f;
+        public float RippleEndSize { get; set; } = 1.8f;
+        public float RippleSpawnChance { get; set; } = 0.025f;
+        public float RippleRotSpeed { get; set; } = 0.04f;
+        public float RippleDriftSpeed { get; set; } = 0.08f;
+        public Color RippleColor { get; set; } = new Color(160, 150, 220, 150);
 
-        public int MaxOrbitDots { get; set; } = 24;
-        public int OrbitDotLife { get; set; } = 30;
-        public float OrbitDotSize { get; set; } = 0.3f;
-        public float OrbitDotRadius { get; set; } = 20f;
-        public float OrbitDotAngularSpeed { get; set; } = 0.08f;
-        public float OrbitDotSpawnChance { get; set; } = 0.15f;
-        public Color OrbitDotYinColor { get; set; } = new Color(80, 65, 140, 220);
-        public Color OrbitDotYangColor { get; set; } = new Color(240, 235, 255, 220);
+        public int MaxSparks { get; set; } = 30;
+        public int SparkLife { get; set; } = 25;
+        public float SparkSize { get; set; } = 0.25f;
+        public float SparkSpawnChance { get; set; } = 0.25f;
+        public float SparkDriftSpeed { get; set; } = 0.35f;
+        public Color SparkYinColor { get; set; } = new Color(80, 70, 140, 200);
+        public Color SparkYangColor { get; set; } = new Color(220, 215, 255, 200);
 
         public float InertiaFactor { get; set; } = 0.15f;
         public float RandomSpread { get; set; } = 3f;
@@ -228,27 +230,27 @@ namespace VerminLordMod.Content.Trails
 
         private List<YinYangOrbParticle> orbs = new();
         private List<YinYangFishParticle> fish = new();
-        private List<YinYangSCurveParticle> sCurves = new();
-        private List<YinYangOrbitDotParticle> orbitDots = new();
+        private List<YinYangRippleParticle> ripples = new();
+        private List<YinYangSparkParticle> sparks = new();
         private int orbCounter = 0;
 
         private GhostTrail _ghostTrail;
 
         private Texture2D _orbTex;
         private Texture2D _fishTex;
-        private Texture2D _sCurveTex;
-        private Texture2D _orbitDotTex;
+        private Texture2D _rippleTex;
+        private Texture2D _sparkTex;
         private Texture2D _ghostTex;
 
-        public bool HasContent => orbs.Count > 0 || fish.Count > 0 || sCurves.Count > 0 || orbitDots.Count > 0 || (_ghostTrail?.HasContent ?? false);
+        public bool HasContent => orbs.Count > 0 || fish.Count > 0 || ripples.Count > 0 || sparks.Count > 0 || (_ghostTrail?.HasContent ?? false);
 
         private void EnsureTextures()
         {
             if (_orbTex != null) return;
             _orbTex = ModContent.Request<Texture2D>("VerminLordMod/Content/Trails/YinYangTrail/YinYangTrailOrb").Value;
             _fishTex = ModContent.Request<Texture2D>("VerminLordMod/Content/Trails/YinYangTrail/YinYangTrailFish").Value;
-            _sCurveTex = ModContent.Request<Texture2D>("VerminLordMod/Content/Trails/YinYangTrail/YinYangTrailSCurve").Value;
-            _orbitDotTex = ModContent.Request<Texture2D>("VerminLordMod/Content/Trails/YinYangTrail/YinYangTrailOrbitDot").Value;
+            _rippleTex = ModContent.Request<Texture2D>("VerminLordMod/Content/Trails/YinYangTrail/YinYangTrailRipple").Value;
+            _sparkTex = ModContent.Request<Texture2D>("VerminLordMod/Content/Trails/YinYangTrail/YinYangTrailSpark").Value;
             _ghostTex = ModContent.Request<Texture2D>("VerminLordMod/Content/Trails/YinYangTrail/YinYangTrailGhost").Value;
         }
 
@@ -292,11 +294,11 @@ namespace VerminLordMod.Content.Trails
             if (fish.Count < MaxFish && Main.rand.NextFloat() < FishSpawnChance)
                 SpawnFish(center, velocity, moveDir);
 
-            if (sCurves.Count < MaxSCurves && Main.rand.NextFloat() < SCurveSpawnChance)
-                SpawnSCurve(center, velocity, moveDir);
+            if (ripples.Count < MaxRipples && Main.rand.NextFloat() < RippleSpawnChance)
+                SpawnRipple(center, velocity, moveDir);
 
-            if (orbitDots.Count < MaxOrbitDots && Main.rand.NextFloat() < OrbitDotSpawnChance)
-                SpawnOrbitDot(center, velocity);
+            if (sparks.Count < MaxSparks && Main.rand.NextFloat() < SparkSpawnChance)
+                SpawnSpark(center, velocity, moveDir);
 
             for (int i = orbs.Count - 1; i >= 0; i--)
             {
@@ -318,24 +320,24 @@ namespace VerminLordMod.Content.Trails
                 if (f.Life <= 0) fish.RemoveAt(i);
             }
 
-            for (int i = sCurves.Count - 1; i >= 0; i--)
+            for (int i = ripples.Count - 1; i >= 0; i--)
             {
-                var sc = sCurves[i];
-                sc.Rotation += sc.RotSpeed;
-                sc.Velocity *= 0.97f;
-                sc.Position += sc.Velocity;
-                sc.Life--;
-                if (sc.Life <= 0) sCurves.RemoveAt(i);
+                var r = ripples[i];
+                r.Rotation += r.RotSpeed;
+                r.Velocity *= 0.98f;
+                r.Position += r.Velocity;
+                r.Life--;
+                if (r.Life <= 0) ripples.RemoveAt(i);
             }
 
-            for (int i = orbitDots.Count - 1; i >= 0; i--)
+            for (int i = sparks.Count - 1; i >= 0; i--)
             {
-                var od = orbitDots[i];
-                od.Angle += od.AngularSpeed;
-                od.Center += (center - od.Center) * 0.05f;
-                od.OrbitRadius *= 1f + 0.005f;
-                od.Life--;
-                if (od.Life <= 0) orbitDots.RemoveAt(i);
+                var s = sparks[i];
+                s.TwinklePhase += s.TwinkleSpeed;
+                s.Velocity *= 0.95f;
+                s.Position += s.Velocity;
+                s.Life--;
+                if (s.Life <= 0) sparks.RemoveAt(i);
             }
         }
 
@@ -372,34 +374,33 @@ namespace VerminLordMod.Content.Trails
             fish.Add(new YinYangFishParticle(pos, drift, FishLife, scale, rotSpeed, isYang, color));
         }
 
-        private void SpawnSCurve(Vector2 center, Vector2 velocity, Vector2 moveDir)
+        private void SpawnRipple(Vector2 center, Vector2 velocity, Vector2 moveDir)
         {
             Vector2 perpDir = new Vector2(-moveDir.Y, moveDir.X);
             float sideOffset = Main.rand.NextFloat(-6f, 6f);
             Vector2 pos = center + SpawnOffset + perpDir * sideOffset + Main.rand.NextVector2Circular(4f, 4f);
 
-            Vector2 drift = Main.rand.NextVector2Circular(SCurveDriftSpeed, SCurveDriftSpeed);
-            bool isYang = Main.rand.NextBool();
-            float scale = Main.rand.NextFloat(0.7f, 1.3f) * SCurveSize;
-            float amplitude = SCurveAmplitude * Main.rand.NextFloat(0.6f, 1.4f);
-            float rotSpeed = Main.rand.NextFloat(-SCurveRotSpeed, SCurveRotSpeed);
-            Color color = (isYang ? SCurveYangColor : SCurveYinColor) * Main.rand.NextFloat(0.5f, 1f);
+            Vector2 drift = Main.rand.NextVector2Circular(RippleDriftSpeed, RippleDriftSpeed);
+            float startSize = RippleStartSize * Main.rand.NextFloat(0.8f, 1.2f);
+            float endSize = RippleEndSize * Main.rand.NextFloat(0.8f, 1.2f);
+            float rotSpeed = Main.rand.NextFloat(-RippleRotSpeed, RippleRotSpeed);
+            Color color = RippleColor * Main.rand.NextFloat(0.5f, 1f);
 
-            sCurves.Add(new YinYangSCurveParticle(pos, drift, SCurveLife, scale, amplitude, rotSpeed, isYang, color));
+            ripples.Add(new YinYangRippleParticle(pos, drift, RippleLife, startSize, endSize, rotSpeed, color));
         }
 
-        private void SpawnOrbitDot(Vector2 center, Vector2 velocity)
+        private void SpawnSpark(Vector2 center, Vector2 velocity, Vector2 moveDir)
         {
+            Vector2 perpDir = new Vector2(-moveDir.Y, moveDir.X);
+            float sideOffset = Main.rand.NextFloat(-6f, 6f);
+            Vector2 pos = center + SpawnOffset + perpDir * sideOffset + Main.rand.NextVector2Circular(3f, 3f);
+
+            Vector2 drift = Main.rand.NextVector2Circular(SparkDriftSpeed, SparkDriftSpeed);
             bool isYang = Main.rand.NextBool();
-            float angle = Main.rand.NextFloat(MathHelper.TwoPi);
-            float radius = OrbitDotRadius * Main.rand.NextFloat(0.6f, 1.4f);
-            float angularSpeed = OrbitDotAngularSpeed * Main.rand.NextFloat(0.7f, 1.3f);
-            if (!isYang) angularSpeed = -angularSpeed;
+            float scale = Main.rand.NextFloat(0.5f, 1.2f) * SparkSize;
+            Color color = (isYang ? SparkYangColor : SparkYinColor) * Main.rand.NextFloat(0.5f, 1f);
 
-            float scale = Main.rand.NextFloat(0.5f, 1.2f) * OrbitDotSize;
-            Color color = (isYang ? OrbitDotYangColor : OrbitDotYinColor) * Main.rand.NextFloat(0.6f, 1f);
-
-            orbitDots.Add(new YinYangOrbitDotParticle(center, radius, angle, angularSpeed, OrbitDotLife, scale, isYang, color));
+            sparks.Add(new YinYangSparkParticle(pos, drift, SparkLife, scale, isYang, color));
         }
 
         public void Draw(SpriteBatch sb)
@@ -407,18 +408,16 @@ namespace VerminLordMod.Content.Trails
             if (_ghostTrail != null)
                 _ghostTrail.Draw(sb);
 
-            if (sCurves.Count > 0 && _sCurveTex != null)
+            if (ripples.Count > 0 && _rippleTex != null)
             {
-                Vector2 scOrigin = _sCurveTex.Size() * 0.5f;
-                var sortedSCurves = sCurves.OrderBy(sc => sc.Life);
-                foreach (var sc in sortedSCurves)
+                Vector2 rippleOrigin = _rippleTex.Size() * 0.5f;
+                var sortedRipples = ripples.OrderBy(r => r.Life);
+                foreach (var r in sortedRipples)
                 {
-                    Color drawColor = sc.Color * sc.Alpha;
-                    Vector2 pos = sc.Position - Main.screenPosition;
-                    SpriteEffects fx = sc.IsYang ? SpriteEffects.None : SpriteEffects.FlipVertically;
-                    Vector2 scale = new Vector2(sc.CurrentAmplitude / _sCurveTex.Width, sc.Scale);
-                    sb.Draw(_sCurveTex, pos, null, drawColor, sc.Rotation,
-                        scOrigin, scale, fx, 0);
+                    Color drawColor = r.Color * r.Alpha;
+                    Vector2 pos = r.Position - Main.screenPosition;
+                    sb.Draw(_rippleTex, pos, null, drawColor, r.Rotation,
+                        rippleOrigin, r.CurrentScale, SpriteEffects.None, 0);
                 }
             }
 
@@ -450,16 +449,16 @@ namespace VerminLordMod.Content.Trails
                 }
             }
 
-            if (orbitDots.Count > 0 && _orbitDotTex != null)
+            if (sparks.Count > 0 && _sparkTex != null)
             {
-                Vector2 dotOrigin = _orbitDotTex.Size() * 0.5f;
-                var sortedDots = orbitDots.OrderBy(d => d.Life);
-                foreach (var d in sortedDots)
+                Vector2 sparkOrigin = _sparkTex.Size() * 0.5f;
+                var sortedSparks = sparks.OrderBy(s => s.Life);
+                foreach (var s in sortedSparks)
                 {
-                    Color drawColor = d.Color * d.Alpha;
-                    Vector2 pos = d.Position - Main.screenPosition;
-                    sb.Draw(_orbitDotTex, pos, null, drawColor, d.Angle,
-                        dotOrigin, d.Scale, SpriteEffects.None, 0);
+                    Color drawColor = s.Color * s.Alpha;
+                    Vector2 pos = s.Position - Main.screenPosition;
+                    sb.Draw(_sparkTex, pos, null, drawColor, 0f,
+                        sparkOrigin, s.Scale, SpriteEffects.None, 0);
                 }
             }
         }
@@ -468,8 +467,8 @@ namespace VerminLordMod.Content.Trails
         {
             orbs.Clear();
             fish.Clear();
-            sCurves.Clear();
-            orbitDots.Clear();
+            ripples.Clear();
+            sparks.Clear();
             orbCounter = 0;
             _ghostTrail?.Clear();
         }

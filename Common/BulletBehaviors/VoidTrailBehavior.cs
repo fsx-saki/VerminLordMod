@@ -31,6 +31,15 @@ namespace VerminLordMod.Common.BulletBehaviors
         public float OrbSpread { get; set; } = 5f;
         public Color OrbColor { get; set; } = new Color(80, 15, 140, 220);
 
+        public int MaxDistortions { get; set; } = 5;
+        public int DistortionLife { get; set; } = 50;
+        public float DistortionStartSize { get; set; } = 0.3f;
+        public float DistortionEndSize { get; set; } = 2.0f;
+        public float DistortionSpawnChance { get; set; } = 0.02f;
+        public float DistortionRotSpeed { get; set; } = 0.05f;
+        public float DistortionDriftSpeed { get; set; } = 0.08f;
+        public Color DistortionColor { get; set; } = new Color(90, 20, 130, 160);
+
         public int MaxShards { get; set; } = 20;
         public int ShardLife { get; set; } = 25;
         public float ShardSize { get; set; } = 0.4f;
@@ -39,24 +48,10 @@ namespace VerminLordMod.Common.BulletBehaviors
         public float ShardDriftSpeed { get; set; } = 0.3f;
         public Color ShardColor { get; set; } = new Color(70, 15, 110, 200);
 
-        public int MaxRifts { get; set; } = 6;
-        public int RiftLife { get; set; } = 50;
-        public float RiftStartSize { get; set; } = 0.2f;
-        public float RiftEndSize { get; set; } = 1.5f;
-        public float RiftSpawnChance { get; set; } = 0.025f;
-        public float RiftOpenSpeed { get; set; } = 3f;
-        public float RiftDriftSpeed { get; set; } = 0.06f;
-        public float RiftAspectRatio { get; set; } = 2.5f;
-        public Color RiftEdgeColor { get; set; } = new Color(140, 50, 200, 200);
-        public Color RiftCoreColor { get; set; } = new Color(20, 5, 40, 180);
-
-        public int MaxInflows { get; set; } = 30;
-        public int InflowLife { get; set; } = 25;
-        public float InflowSize { get; set; } = 0.35f;
-        public float InflowSpawnChance { get; set; } = 0.2f;
-        public float InflowPullStrength { get; set; } = 0.12f;
-        public float InflowSpread { get; set; } = 25f;
-        public Color InflowColor { get; set; } = new Color(100, 30, 160, 200);
+        public float TendrilMaxDistance { get; set; } = 50f;
+        public float TendrilBreakDistance { get; set; } = 80f;
+        public float TendrilBaseAlpha { get; set; } = 0.2f;
+        public Color TendrilColor { get; set; } = new Color(70, 15, 110, 180);
 
         public float InertiaFactor { get; set; } = 0.15f;
         public float RandomSpread { get; set; } = 3f;
@@ -88,6 +83,15 @@ namespace VerminLordMod.Common.BulletBehaviors
                 OrbSpread = OrbSpread,
                 OrbColor = OrbColor,
 
+                MaxDistortions = MaxDistortions,
+                DistortionLife = DistortionLife,
+                DistortionStartSize = DistortionStartSize,
+                DistortionEndSize = DistortionEndSize,
+                DistortionSpawnChance = DistortionSpawnChance,
+                DistortionRotSpeed = DistortionRotSpeed,
+                DistortionDriftSpeed = DistortionDriftSpeed,
+                DistortionColor = DistortionColor,
+
                 MaxShards = MaxShards,
                 ShardLife = ShardLife,
                 ShardSize = ShardSize,
@@ -96,24 +100,10 @@ namespace VerminLordMod.Common.BulletBehaviors
                 ShardDriftSpeed = ShardDriftSpeed,
                 ShardColor = ShardColor,
 
-                MaxRifts = MaxRifts,
-                RiftLife = RiftLife,
-                RiftStartSize = RiftStartSize,
-                RiftEndSize = RiftEndSize,
-                RiftSpawnChance = RiftSpawnChance,
-                RiftOpenSpeed = RiftOpenSpeed,
-                RiftDriftSpeed = RiftDriftSpeed,
-                RiftAspectRatio = RiftAspectRatio,
-                RiftEdgeColor = RiftEdgeColor,
-                RiftCoreColor = RiftCoreColor,
-
-                MaxInflows = MaxInflows,
-                InflowLife = InflowLife,
-                InflowSize = InflowSize,
-                InflowSpawnChance = InflowSpawnChance,
-                InflowPullStrength = InflowPullStrength,
-                InflowSpread = InflowSpread,
-                InflowColor = InflowColor,
+                TendrilMaxDistance = TendrilMaxDistance,
+                TendrilBreakDistance = TendrilBreakDistance,
+                TendrilBaseAlpha = TendrilBaseAlpha,
+                TendrilColor = TendrilColor,
 
                 InertiaFactor = InertiaFactor,
                 RandomSpread = RandomSpread,

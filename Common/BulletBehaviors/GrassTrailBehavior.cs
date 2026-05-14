@@ -38,24 +38,18 @@ namespace VerminLordMod.Common.BulletBehaviors
         public float PollenDriftSpeed { get; set; } = 0.35f;
         public Color PollenColor { get; set; } = new Color(200, 230, 80, 200);
 
-        public int MaxBranches { get; set; } = 15;
-        public int BranchLife { get; set; } = 40;
-        public float BranchSize { get; set; } = 0.5f;
-        public float BranchLength { get; set; } = 20f;
-        public float BranchSpawnChance { get; set; } = 0.06f;
-        public float BranchGrowSpeed { get; set; } = 3f;
-        public float BranchDriftSpeed { get; set; } = 0.08f;
-        public int BranchMaxDepth { get; set; } = 2;
-        public float BranchSubAngle { get; set; } = 0.6f;
-        public Color BranchColor { get; set; } = new Color(60, 160, 50, 200);
+        public int MaxBlooms { get; set; } = 5;
+        public int BloomLife { get; set; } = 50;
+        public float BloomStartSize { get; set; } = 0.3f;
+        public float BloomEndSize { get; set; } = 1.5f;
+        public float BloomSpawnChance { get; set; } = 0.02f;
+        public float BloomDriftSpeed { get; set; } = 0.08f;
+        public Color BloomColor { get; set; } = new Color(150, 230, 120, 140);
 
-        public int MaxPetals { get; set; } = 12;
-        public int PetalLife { get; set; } = 50;
-        public float PetalSize { get; set; } = 0.45f;
-        public float PetalSpawnChance { get; set; } = 0.04f;
-        public float PetalSpinSpeed { get; set; } = 0.04f;
-        public float PetalDriftSpeed { get; set; } = 0.15f;
-        public Color PetalColor { get; set; } = new Color(255, 180, 200, 200);
+        public float VineMaxDistance { get; set; } = 45f;
+        public float VineBreakDistance { get; set; } = 70f;
+        public float VineBaseAlpha { get; set; } = 0.25f;
+        public Color VineColor { get; set; } = new Color(60, 160, 50, 180);
 
         public float InertiaFactor { get; set; } = 0.15f;
         public float RandomSpread { get; set; } = 3f;
@@ -94,24 +88,18 @@ namespace VerminLordMod.Common.BulletBehaviors
                 PollenDriftSpeed = PollenDriftSpeed,
                 PollenColor = PollenColor,
 
-                MaxBranches = MaxBranches,
-                BranchLife = BranchLife,
-                BranchSize = BranchSize,
-                BranchLength = BranchLength,
-                BranchSpawnChance = BranchSpawnChance,
-                BranchGrowSpeed = BranchGrowSpeed,
-                BranchDriftSpeed = BranchDriftSpeed,
-                BranchMaxDepth = BranchMaxDepth,
-                BranchSubAngle = BranchSubAngle,
-                BranchColor = BranchColor,
+                MaxBlooms = MaxBlooms,
+                BloomLife = BloomLife,
+                BloomStartSize = BloomStartSize,
+                BloomEndSize = BloomEndSize,
+                BloomSpawnChance = BloomSpawnChance,
+                BloomDriftSpeed = BloomDriftSpeed,
+                BloomColor = BloomColor,
 
-                MaxPetals = MaxPetals,
-                PetalLife = PetalLife,
-                PetalSize = PetalSize,
-                PetalSpawnChance = PetalSpawnChance,
-                PetalSpinSpeed = PetalSpinSpeed,
-                PetalDriftSpeed = PetalDriftSpeed,
-                PetalColor = PetalColor,
+                VineMaxDistance = VineMaxDistance,
+                VineBreakDistance = VineBreakDistance,
+                VineBaseAlpha = VineBaseAlpha,
+                VineColor = VineColor,
 
                 InertiaFactor = InertiaFactor,
                 RandomSpread = RandomSpread,

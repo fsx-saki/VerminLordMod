@@ -53,6 +53,53 @@ namespace VerminLordMod.Content.Trails
             }
         }
 
+        public class VoidDistortionParticle
+        {
+            public Vector2 Position;
+            public Vector2 Velocity;
+            public float Scale;
+            public float MaxScale;
+            public int Life;
+            public int MaxLife;
+            public float Rotation;
+            public float RotSpeed;
+            public Color Color;
+
+            public float Progress => 1f - (float)Life / MaxLife;
+
+            public float Alpha
+            {
+                get
+                {
+                    float fadeIn = MathF.Min(1f, Progress * 3f);
+                    float fadeOut = (1f - Progress) * (1f - Progress);
+                    return MathF.Max(0f, fadeIn * fadeOut * 0.5f);
+                }
+            }
+
+            public float CurrentScale
+            {
+                get
+                {
+                    float expand = MathF.Min(1f, Progress * 2f);
+                    return Scale + (MaxScale - Scale) * expand;
+                }
+            }
+
+            public VoidDistortionParticle(Vector2 pos, Vector2 vel, int life, float scale, float maxScale, float rotSpeed, Color color)
+            {
+                Position = pos;
+                Velocity = vel;
+                MaxLife = life;
+                Life = life;
+                Scale = scale;
+                MaxScale = maxScale;
+                Rotation = Main.rand.NextFloat(MathHelper.TwoPi);
+                RotSpeed = rotSpeed;
+                Color = color;
+            }
+        }
+
         public class VoidShardParticle
         {
             public Vector2 Position;
@@ -91,95 +138,12 @@ namespace VerminLordMod.Content.Trails
             }
         }
 
-        public class VoidRiftParticle
+        public class VoidTendrilConnection
         {
-            public Vector2 Position;
-            public Vector2 Velocity;
-            public float Scale;
-            public float MaxScale;
-            public int Life;
-            public int MaxLife;
-            public float Rotation;
-            public float OpenSpeed;
-            public float AspectRatio;
-            public Color EdgeColor;
-            public Color CoreColor;
-
-            public float Progress => 1f - (float)Life / MaxLife;
-
-            public float Alpha
-            {
-                get
-                {
-                    float openIn = MathF.Min(1f, Progress * OpenSpeed);
-                    float fadeOut = (1f - Progress) * (1f - Progress);
-                    return MathF.Max(0f, openIn * fadeOut);
-                }
-            }
-
-            public float CurrentScale
-            {
-                get
-                {
-                    float openProgress = MathF.Min(1f, Progress * OpenSpeed);
-                    return Scale + (MaxScale - Scale) * openProgress;
-                }
-            }
-
-            public Color CurrentEdgeColor => EdgeColor * Alpha;
-
-            public Color CurrentCoreColor => CoreColor * (Alpha * 0.6f);
-
-            public VoidRiftParticle(Vector2 pos, Vector2 vel, int life, float scale, float maxScale, float rotation, float openSpeed, float aspectRatio, Color edgeColor, Color coreColor)
-            {
-                Position = pos;
-                Velocity = vel;
-                MaxLife = life;
-                Life = life;
-                Scale = scale;
-                MaxScale = maxScale;
-                Rotation = rotation;
-                OpenSpeed = openSpeed;
-                AspectRatio = aspectRatio;
-                EdgeColor = edgeColor;
-                CoreColor = coreColor;
-            }
-        }
-
-        public class VoidInflowParticle
-        {
-            public Vector2 Position;
-            public Vector2 Target;
-            public float Scale;
-            public int Life;
-            public int MaxLife;
-            public float PullStrength;
+            public Vector2 Start;
+            public Vector2 End;
+            public float Alpha;
             public Color Color;
-
-            public float Progress => 1f - (float)Life / MaxLife;
-
-            public float Alpha
-            {
-                get
-                {
-                    float fadeIn = MathF.Min(1f, Progress * 4f);
-                    float fadeOut = 1f - Progress * Progress;
-                    return MathF.Max(0f, fadeIn * fadeOut);
-                }
-            }
-
-            public float CurrentScale => Scale * (1f - Progress * 0.7f);
-
-            public VoidInflowParticle(Vector2 pos, Vector2 target, int life, float scale, float pullStrength, Color color)
-            {
-                Position = pos;
-                Target = target;
-                MaxLife = life;
-                Life = life;
-                Scale = scale;
-                PullStrength = pullStrength;
-                Color = color;
-            }
         }
 
         public string Name { get; set; } = "VoidTrail";
@@ -203,6 +167,15 @@ namespace VerminLordMod.Content.Trails
         public float OrbSpread { get; set; } = 5f;
         public Color OrbColor { get; set; } = new Color(80, 15, 140, 220);
 
+        public int MaxDistortions { get; set; } = 5;
+        public int DistortionLife { get; set; } = 50;
+        public float DistortionStartSize { get; set; } = 0.3f;
+        public float DistortionEndSize { get; set; } = 2.0f;
+        public float DistortionSpawnChance { get; set; } = 0.02f;
+        public float DistortionRotSpeed { get; set; } = 0.05f;
+        public float DistortionDriftSpeed { get; set; } = 0.08f;
+        public Color DistortionColor { get; set; } = new Color(90, 20, 130, 160);
+
         public int MaxShards { get; set; } = 20;
         public int ShardLife { get; set; } = 25;
         public float ShardSize { get; set; } = 0.4f;
@@ -211,54 +184,37 @@ namespace VerminLordMod.Content.Trails
         public float ShardDriftSpeed { get; set; } = 0.3f;
         public Color ShardColor { get; set; } = new Color(70, 15, 110, 200);
 
-        public int MaxRifts { get; set; } = 6;
-        public int RiftLife { get; set; } = 50;
-        public float RiftStartSize { get; set; } = 0.2f;
-        public float RiftEndSize { get; set; } = 1.5f;
-        public float RiftSpawnChance { get; set; } = 0.025f;
-        public float RiftOpenSpeed { get; set; } = 3f;
-        public float RiftDriftSpeed { get; set; } = 0.06f;
-        public float RiftAspectRatio { get; set; } = 2.5f;
-        public Color RiftEdgeColor { get; set; } = new Color(140, 50, 200, 200);
-        public Color RiftCoreColor { get; set; } = new Color(20, 5, 40, 180);
-
-        public int MaxInflows { get; set; } = 30;
-        public int InflowLife { get; set; } = 25;
-        public float InflowSize { get; set; } = 0.35f;
-        public float InflowSpawnChance { get; set; } = 0.2f;
-        public float InflowPullStrength { get; set; } = 0.12f;
-        public float InflowSpread { get; set; } = 25f;
-        public Color InflowColor { get; set; } = new Color(100, 30, 160, 200);
+        public float TendrilMaxDistance { get; set; } = 50f;
+        public float TendrilBreakDistance { get; set; } = 80f;
+        public float TendrilBaseAlpha { get; set; } = 0.2f;
+        public Color TendrilColor { get; set; } = new Color(70, 15, 110, 180);
 
         public float InertiaFactor { get; set; } = 0.15f;
         public float RandomSpread { get; set; } = 3f;
         public Vector2 SpawnOffset { get; set; } = Vector2.Zero;
 
         private List<VoidOrbParticle> orbs = new();
+        private List<VoidDistortionParticle> distortions = new();
         private List<VoidShardParticle> shards = new();
-        private List<VoidRiftParticle> rifts = new();
-        private List<VoidInflowParticle> inflows = new();
         private int orbCounter = 0;
 
         private GhostTrail _ghostTrail;
 
         private Texture2D _orbTex;
+        private Texture2D _distortionTex;
         private Texture2D _shardTex;
-        private Texture2D _riftTex;
-        private Texture2D _inflowTex;
+        private Texture2D _tendrilTex;
         private Texture2D _ghostTex;
 
-        private Vector2 _lastCenter;
-
-        public bool HasContent => orbs.Count > 0 || shards.Count > 0 || rifts.Count > 0 || inflows.Count > 0 || (_ghostTrail?.HasContent ?? false);
+        public bool HasContent => orbs.Count > 0 || distortions.Count > 0 || shards.Count > 0 || (_ghostTrail?.HasContent ?? false);
 
         private void EnsureTextures()
         {
             if (_orbTex != null) return;
             _orbTex = ModContent.Request<Texture2D>("VerminLordMod/Content/Trails/VoidTrail/VoidTrailOrb").Value;
+            _distortionTex = ModContent.Request<Texture2D>("VerminLordMod/Content/Trails/VoidTrail/VoidTrailDistortion").Value;
             _shardTex = ModContent.Request<Texture2D>("VerminLordMod/Content/Trails/VoidTrail/VoidTrailShard").Value;
-            _riftTex = ModContent.Request<Texture2D>("VerminLordMod/Content/Trails/VoidTrail/VoidTrailRift").Value;
-            _inflowTex = ModContent.Request<Texture2D>("VerminLordMod/Content/Trails/VoidTrail/VoidTrailInflow").Value;
+            _tendrilTex = ModContent.Request<Texture2D>("VerminLordMod/Content/Trails/VoidTrail/VoidTrailTendril").Value;
             _ghostTex = ModContent.Request<Texture2D>("VerminLordMod/Content/Trails/VoidTrail/VoidTrailGhost").Value;
         }
 
@@ -287,8 +243,6 @@ namespace VerminLordMod.Content.Trails
             EnsureTextures();
             EnsureGhostTrail();
 
-            _lastCenter = center;
-
             if (_ghostTrail != null)
                 _ghostTrail.Update(center, velocity);
 
@@ -301,14 +255,11 @@ namespace VerminLordMod.Content.Trails
                 SpawnOrb(center, velocity, moveDir);
             }
 
+            if (distortions.Count < MaxDistortions && Main.rand.NextFloat() < DistortionSpawnChance)
+                SpawnDistortion(center, velocity, moveDir);
+
             if (shards.Count < MaxShards && Main.rand.NextFloat() < ShardSpawnChance)
                 SpawnShard(center, velocity, moveDir);
-
-            if (rifts.Count < MaxRifts && Main.rand.NextFloat() < RiftSpawnChance)
-                SpawnRift(center, velocity, moveDir);
-
-            if (inflows.Count < MaxInflows && Main.rand.NextFloat() < InflowSpawnChance)
-                SpawnInflow(center, velocity);
 
             for (int i = orbs.Count - 1; i >= 0; i--)
             {
@@ -321,6 +272,16 @@ namespace VerminLordMod.Content.Trails
                 if (o.Life <= 0) orbs.RemoveAt(i);
             }
 
+            for (int i = distortions.Count - 1; i >= 0; i--)
+            {
+                var d = distortions[i];
+                d.Rotation += d.RotSpeed;
+                d.Velocity *= 0.98f;
+                d.Position += d.Velocity;
+                d.Life--;
+                if (d.Life <= 0) distortions.RemoveAt(i);
+            }
+
             for (int i = shards.Count - 1; i >= 0; i--)
             {
                 var s = shards[i];
@@ -329,29 +290,6 @@ namespace VerminLordMod.Content.Trails
                 s.Position += s.Velocity;
                 s.Life--;
                 if (s.Life <= 0) shards.RemoveAt(i);
-            }
-
-            for (int i = rifts.Count - 1; i >= 0; i--)
-            {
-                var r = rifts[i];
-                r.Velocity *= 0.98f;
-                r.Position += r.Velocity;
-                r.Life--;
-                if (r.Life <= 0) rifts.RemoveAt(i);
-            }
-
-            for (int i = inflows.Count - 1; i >= 0; i--)
-            {
-                var inf = inflows[i];
-                Vector2 toTarget = inf.Target - inf.Position;
-                float dist = toTarget.Length();
-                if (dist > 1f)
-                {
-                    float pullForce = inf.PullStrength * (1f + (1f - inf.Progress) * 2f);
-                    inf.Position += toTarget.SafeNormalize(Vector2.Zero) * pullForce * dist * 0.05f;
-                }
-                inf.Life--;
-                if (inf.Life <= 0 || dist < 3f) inflows.RemoveAt(i);
             }
         }
 
@@ -372,6 +310,21 @@ namespace VerminLordMod.Content.Trails
             orbs.Add(new VoidOrbParticle(pos, vel, OrbLife, scale, rotSpeed, color));
         }
 
+        private void SpawnDistortion(Vector2 center, Vector2 velocity, Vector2 moveDir)
+        {
+            Vector2 perpDir = new Vector2(-moveDir.Y, moveDir.X);
+            float sideOffset = Main.rand.NextFloat(-8f, 8f);
+            Vector2 pos = center + SpawnOffset + perpDir * sideOffset + Main.rand.NextVector2Circular(6f, 6f);
+
+            Vector2 drift = Main.rand.NextVector2Circular(DistortionDriftSpeed, DistortionDriftSpeed);
+            float startSize = DistortionStartSize * Main.rand.NextFloat(0.8f, 1.2f);
+            float endSize = DistortionEndSize * Main.rand.NextFloat(0.8f, 1.2f);
+            float rotSpeed = Main.rand.NextFloat(-DistortionRotSpeed, DistortionRotSpeed);
+            Color color = DistortionColor * Main.rand.NextFloat(0.5f, 1f);
+
+            distortions.Add(new VoidDistortionParticle(pos, drift, DistortionLife, startSize, endSize, rotSpeed, color));
+        }
+
         private void SpawnShard(Vector2 center, Vector2 velocity, Vector2 moveDir)
         {
             Vector2 perpDir = new Vector2(-moveDir.Y, moveDir.X);
@@ -389,77 +342,25 @@ namespace VerminLordMod.Content.Trails
             shards.Add(new VoidShardParticle(pos, vel, ShardLife, scale, spinSpeed, color));
         }
 
-        private void SpawnRift(Vector2 center, Vector2 velocity, Vector2 moveDir)
-        {
-            Vector2 perpDir = new Vector2(-moveDir.Y, moveDir.X);
-            float sideOffset = Main.rand.NextFloat(-8f, 8f);
-            Vector2 pos = center + SpawnOffset + perpDir * sideOffset + Main.rand.NextVector2Circular(6f, 6f);
-
-            Vector2 drift = Main.rand.NextVector2Circular(RiftDriftSpeed, RiftDriftSpeed);
-            float startSize = RiftStartSize * Main.rand.NextFloat(0.8f, 1.2f);
-            float endSize = RiftEndSize * Main.rand.NextFloat(0.8f, 1.2f);
-            float rotation = Main.rand.NextFloat(MathHelper.TwoPi);
-            float openSpeed = RiftOpenSpeed * Main.rand.NextFloat(0.7f, 1.3f);
-            float aspectRatio = RiftAspectRatio * Main.rand.NextFloat(0.8f, 1.3f);
-            Color edgeColor = RiftEdgeColor * Main.rand.NextFloat(0.6f, 1f);
-            Color coreColor = RiftCoreColor * Main.rand.NextFloat(0.5f, 1f);
-
-            rifts.Add(new VoidRiftParticle(pos, drift, RiftLife, startSize, endSize, rotation, openSpeed, aspectRatio, edgeColor, coreColor));
-        }
-
-        private void SpawnInflow(Vector2 center, Vector2 velocity)
-        {
-            float angle = Main.rand.NextFloat(MathHelper.TwoPi);
-            float dist = InflowSpread * Main.rand.NextFloat(0.5f, 1.5f);
-            Vector2 pos = center + SpawnOffset + new Vector2(MathF.Cos(angle), MathF.Sin(angle)) * dist;
-
-            float scale = Main.rand.NextFloat(0.5f, 1.2f) * InflowSize;
-            float pullStrength = InflowPullStrength * Main.rand.NextFloat(0.7f, 1.3f);
-            Color color = InflowColor * Main.rand.NextFloat(0.5f, 1f);
-
-            inflows.Add(new VoidInflowParticle(pos, center, InflowLife, scale, pullStrength, color));
-        }
-
         public void Draw(SpriteBatch sb)
         {
             if (_ghostTrail != null)
                 _ghostTrail.Draw(sb);
 
-            if (rifts.Count > 0 && _riftTex != null)
+            if (distortions.Count > 0 && _distortionTex != null)
             {
-                Vector2 riftOrigin = _riftTex.Size() * 0.5f;
-                var sortedRifts = rifts.OrderBy(r => r.Life);
-                foreach (var r in sortedRifts)
+                Vector2 distOrigin = _distortionTex.Size() * 0.5f;
+                var sortedDistortions = distortions.OrderBy(d => d.Life);
+                foreach (var d in sortedDistortions)
                 {
-                    Vector2 pos = r.Position - Main.screenPosition;
-                    Vector2 scale = new Vector2(r.CurrentScale * r.AspectRatio, r.CurrentScale);
-
-                    Color coreDrawColor = r.CurrentCoreColor;
-                    sb.Draw(_riftTex, pos, null, coreDrawColor, r.Rotation,
-                        riftOrigin, scale, SpriteEffects.None, 0);
-
-                    Color edgeDrawColor = r.CurrentEdgeColor;
-                    sb.Draw(_riftTex, pos, null, edgeDrawColor, r.Rotation,
-                        riftOrigin, scale * 1.15f, SpriteEffects.None, 0);
+                    Color drawColor = d.Color * d.Alpha;
+                    Vector2 pos = d.Position - Main.screenPosition;
+                    sb.Draw(_distortionTex, pos, null, drawColor, d.Rotation,
+                        distOrigin, d.CurrentScale, SpriteEffects.None, 0);
                 }
             }
 
-            if (inflows.Count > 0 && _inflowTex != null)
-            {
-                Vector2 inflowOrigin = _inflowTex.Size() * 0.5f;
-                var sortedInflows = inflows.OrderBy(i => i.Life);
-                foreach (var inf in sortedInflows)
-                {
-                    Color drawColor = inf.Color * inf.Alpha;
-                    Vector2 pos = inf.Position - Main.screenPosition;
-                    Vector2 toTarget = inf.Target - inf.Position;
-                    float rotation = toTarget.Length() > 1f ? toTarget.ToRotation() : 0f;
-                    float stretch = MathF.Max(1f, toTarget.Length() * 0.05f);
-                    Vector2 scale = new Vector2(inf.CurrentScale * stretch, inf.CurrentScale);
-                    sb.Draw(_inflowTex, pos, null, drawColor, rotation,
-                        inflowOrigin, scale, SpriteEffects.None, 0);
-                }
-            }
+            DrawTendrilConnections(sb);
 
             if (orbs.Count > 0 && _orbTex != null)
             {
@@ -488,12 +389,62 @@ namespace VerminLordMod.Content.Trails
             }
         }
 
+        private void DrawTendrilConnections(SpriteBatch sb)
+        {
+            if (_tendrilTex == null || orbs.Count < 2) return;
+
+            Vector2 tendrilOrigin = new Vector2(0f, _tendrilTex.Height * 0.5f);
+
+            for (int i = 0; i < orbs.Count; i++)
+            {
+                var a = orbs[i];
+                if (a.Alpha < 0.05f) continue;
+
+                for (int j = i + 1; j < orbs.Count; j++)
+                {
+                    var b = orbs[j];
+                    if (b.Alpha < 0.05f) continue;
+
+                    float dist = Vector2.Distance(a.Position, b.Position);
+                    if (dist > TendrilBreakDistance || dist < 3f) continue;
+
+                    float tendrilAlpha;
+                    if (dist <= TendrilMaxDistance)
+                    {
+                        tendrilAlpha = TendrilBaseAlpha;
+                    }
+                    else
+                    {
+                        float breakProgress = (dist - TendrilMaxDistance) / (TendrilBreakDistance - TendrilMaxDistance);
+                        tendrilAlpha = TendrilBaseAlpha * (1f - breakProgress * breakProgress);
+                    }
+
+                    float minOrbAlpha = MathF.Min(a.Alpha, b.Alpha);
+                    tendrilAlpha *= minOrbAlpha;
+
+                    if (tendrilAlpha < 0.01f) continue;
+
+                    Vector2 start = a.Position - Main.screenPosition;
+                    Vector2 end = b.Position - Main.screenPosition;
+                    Vector2 diff = end - start;
+                    float length = diff.Length();
+                    if (length < 1f) continue;
+
+                    float rotation = diff.ToRotation();
+                    Vector2 scale = new Vector2(length / _tendrilTex.Width, 0.5f);
+                    Color drawColor = TendrilColor * tendrilAlpha;
+
+                    sb.Draw(_tendrilTex, start, null, drawColor, rotation,
+                        tendrilOrigin, scale, SpriteEffects.None, 0);
+                }
+            }
+        }
+
         public void Clear()
         {
             orbs.Clear();
+            distortions.Clear();
             shards.Clear();
-            rifts.Clear();
-            inflows.Clear();
             orbCounter = 0;
             _ghostTrail?.Clear();
         }

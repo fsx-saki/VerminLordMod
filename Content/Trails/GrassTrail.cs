@@ -89,62 +89,15 @@ namespace VerminLordMod.Content.Trails
             }
         }
 
-        public class GrassBranchParticle
+        public class GrassBloomParticle
         {
             public Vector2 Position;
             public Vector2 Velocity;
             public float Scale;
-            public float Length;
+            public float MaxScale;
             public int Life;
             public int MaxLife;
             public float Rotation;
-            public float GrowSpeed;
-            public int Depth;
-            public Color Color;
-
-            public float Progress => 1f - (float)Life / MaxLife;
-
-            public float Alpha
-            {
-                get
-                {
-                    float growIn = MathF.Min(1f, Progress * 5f);
-                    float fadeOut = (1f - Progress) * (1f - Progress);
-                    return MathF.Max(0f, growIn * fadeOut);
-                }
-            }
-
-            public float CurrentLength => Length * MathF.Min(1f, Progress * GrowSpeed);
-
-            public float CurrentWidth => Scale * (1f - Progress * 0.3f) * (1f - Depth * 0.2f);
-
-            public GrassBranchParticle(Vector2 pos, Vector2 vel, int life, float scale, float length, float rotation, float growSpeed, int depth, Color color)
-            {
-                Position = pos;
-                Velocity = vel;
-                MaxLife = life;
-                Life = life;
-                Scale = scale;
-                Length = length;
-                Rotation = rotation;
-                GrowSpeed = growSpeed;
-                Depth = depth;
-                Color = color;
-            }
-        }
-
-        public class GrassPetalParticle
-        {
-            public Vector2 Position;
-            public Vector2 Velocity;
-            public float Scale;
-            public int Life;
-            public int MaxLife;
-            public float Rotation;
-            public float SpinSpeed;
-            public float SpiralPhase;
-            public float SpiralSpeed;
-            public float SpiralRadius;
             public Color Color;
 
             public float Progress => 1f - (float)Life / MaxLife;
@@ -154,27 +107,39 @@ namespace VerminLordMod.Content.Trails
                 get
                 {
                     float fadeIn = MathF.Min(1f, Progress * 3f);
-                    float fadeOut = 1f - Progress;
-                    return MathF.Max(0f, fadeIn * fadeOut * 0.8f);
+                    float fadeOut = (1f - Progress) * (1f - Progress);
+                    return MathF.Max(0f, fadeIn * fadeOut * 0.4f);
                 }
             }
 
-            public float CurrentScale => Scale * (1f - Progress * 0.2f);
+            public float CurrentScale
+            {
+                get
+                {
+                    float expand = MathF.Min(1f, Progress * 2f);
+                    return Scale + (MaxScale - Scale) * expand;
+                }
+            }
 
-            public GrassPetalParticle(Vector2 pos, Vector2 vel, int life, float scale, float spinSpeed, Color color)
+            public GrassBloomParticle(Vector2 pos, Vector2 vel, int life, float scale, float maxScale, Color color)
             {
                 Position = pos;
                 Velocity = vel;
                 MaxLife = life;
                 Life = life;
                 Scale = scale;
-                SpinSpeed = spinSpeed;
-                SpiralPhase = Main.rand.NextFloat(MathHelper.TwoPi);
-                SpiralSpeed = Main.rand.NextFloat(0.03f, 0.08f);
-                SpiralRadius = Main.rand.NextFloat(3f, 8f);
+                MaxScale = maxScale;
                 Rotation = Main.rand.NextFloat(MathHelper.TwoPi);
                 Color = color;
             }
+        }
+
+        public class GrassVineConnection
+        {
+            public Vector2 Start;
+            public Vector2 End;
+            public float Alpha;
+            public Color Color;
         }
 
         public string Name { get; set; } = "GrassTrail";
@@ -205,24 +170,18 @@ namespace VerminLordMod.Content.Trails
         public float PollenDriftSpeed { get; set; } = 0.35f;
         public Color PollenColor { get; set; } = new Color(200, 230, 80, 200);
 
-        public int MaxBranches { get; set; } = 15;
-        public int BranchLife { get; set; } = 40;
-        public float BranchSize { get; set; } = 0.5f;
-        public float BranchLength { get; set; } = 20f;
-        public float BranchSpawnChance { get; set; } = 0.06f;
-        public float BranchGrowSpeed { get; set; } = 3f;
-        public float BranchDriftSpeed { get; set; } = 0.08f;
-        public int BranchMaxDepth { get; set; } = 2;
-        public float BranchSubAngle { get; set; } = 0.6f;
-        public Color BranchColor { get; set; } = new Color(60, 160, 50, 200);
+        public int MaxBlooms { get; set; } = 5;
+        public int BloomLife { get; set; } = 50;
+        public float BloomStartSize { get; set; } = 0.3f;
+        public float BloomEndSize { get; set; } = 1.5f;
+        public float BloomSpawnChance { get; set; } = 0.02f;
+        public float BloomDriftSpeed { get; set; } = 0.08f;
+        public Color BloomColor { get; set; } = new Color(150, 230, 120, 140);
 
-        public int MaxPetals { get; set; } = 12;
-        public int PetalLife { get; set; } = 50;
-        public float PetalSize { get; set; } = 0.45f;
-        public float PetalSpawnChance { get; set; } = 0.04f;
-        public float PetalSpinSpeed { get; set; } = 0.04f;
-        public float PetalDriftSpeed { get; set; } = 0.15f;
-        public Color PetalColor { get; set; } = new Color(255, 180, 200, 200);
+        public float VineMaxDistance { get; set; } = 45f;
+        public float VineBreakDistance { get; set; } = 70f;
+        public float VineBaseAlpha { get; set; } = 0.25f;
+        public Color VineColor { get; set; } = new Color(60, 160, 50, 180);
 
         public float InertiaFactor { get; set; } = 0.15f;
         public float RandomSpread { get; set; } = 3f;
@@ -230,27 +189,26 @@ namespace VerminLordMod.Content.Trails
 
         private List<GrassLeafParticle> leaves = new();
         private List<GrassPollenParticle> pollens = new();
-        private List<GrassBranchParticle> branches = new();
-        private List<GrassPetalParticle> petals = new();
+        private List<GrassBloomParticle> blooms = new();
         private int leafCounter = 0;
 
         private GhostTrail _ghostTrail;
 
         private Texture2D _leafTex;
         private Texture2D _pollenTex;
-        private Texture2D _branchTex;
-        private Texture2D _petalTex;
+        private Texture2D _bloomTex;
+        private Texture2D _vineTex;
         private Texture2D _ghostTex;
 
-        public bool HasContent => leaves.Count > 0 || pollens.Count > 0 || branches.Count > 0 || petals.Count > 0 || (_ghostTrail?.HasContent ?? false);
+        public bool HasContent => leaves.Count > 0 || pollens.Count > 0 || blooms.Count > 0 || (_ghostTrail?.HasContent ?? false);
 
         private void EnsureTextures()
         {
             if (_leafTex != null) return;
             _leafTex = ModContent.Request<Texture2D>("VerminLordMod/Content/Trails/GrassTrail/GrassTrailLeaf").Value;
             _pollenTex = ModContent.Request<Texture2D>("VerminLordMod/Content/Trails/GrassTrail/GrassTrailPollen").Value;
-            _branchTex = ModContent.Request<Texture2D>("VerminLordMod/Content/Trails/GrassTrail/GrassTrailBranch").Value;
-            _petalTex = ModContent.Request<Texture2D>("VerminLordMod/Content/Trails/GrassTrail/GrassTrailPetal").Value;
+            _bloomTex = ModContent.Request<Texture2D>("VerminLordMod/Content/Trails/GrassTrail/GrassTrailBloom").Value;
+            _vineTex = ModContent.Request<Texture2D>("VerminLordMod/Content/Trails/GrassTrail/GrassTrailVine").Value;
             _ghostTex = ModContent.Request<Texture2D>("VerminLordMod/Content/Trails/GrassTrail/GrassTrailGhost").Value;
         }
 
@@ -294,11 +252,8 @@ namespace VerminLordMod.Content.Trails
             if (pollens.Count < MaxPollen && Main.rand.NextFloat() < PollenSpawnChance)
                 SpawnPollen(center, velocity, moveDir);
 
-            if (branches.Count < MaxBranches && Main.rand.NextFloat() < BranchSpawnChance)
-                SpawnBranch(center, velocity, moveDir, 0);
-
-            if (petals.Count < MaxPetals && Main.rand.NextFloat() < PetalSpawnChance)
-                SpawnPetal(center, velocity, moveDir);
+            if (blooms.Count < MaxBlooms && Main.rand.NextFloat() < BloomSpawnChance)
+                SpawnBloom(center, velocity, moveDir);
 
             for (int i = leaves.Count - 1; i >= 0; i--)
             {
@@ -322,28 +277,13 @@ namespace VerminLordMod.Content.Trails
                 if (p.Life <= 0) pollens.RemoveAt(i);
             }
 
-            for (int i = branches.Count - 1; i >= 0; i--)
+            for (int i = blooms.Count - 1; i >= 0; i--)
             {
-                var b = branches[i];
+                var b = blooms[i];
                 b.Velocity *= 0.98f;
                 b.Position += b.Velocity;
                 b.Life--;
-                if (b.Life <= 0) branches.RemoveAt(i);
-            }
-
-            for (int i = petals.Count - 1; i >= 0; i--)
-            {
-                var p = petals[i];
-                p.SpiralPhase += p.SpiralSpeed;
-                p.Rotation += p.SpinSpeed;
-                Vector2 spiralOffset = new Vector2(
-                    MathF.Cos(p.SpiralPhase) * p.SpiralRadius * 0.05f,
-                    MathF.Sin(p.SpiralPhase) * p.SpiralRadius * 0.05f
-                );
-                p.Velocity = p.Velocity * 0.97f + spiralOffset + new Vector2(0f, 0.02f);
-                p.Position += p.Velocity;
-                p.Life--;
-                if (p.Life <= 0) petals.RemoveAt(i);
+                if (b.Life <= 0) blooms.RemoveAt(i);
             }
         }
 
@@ -377,54 +317,18 @@ namespace VerminLordMod.Content.Trails
             pollens.Add(new GrassPollenParticle(pos, drift, PollenLife, scale, color));
         }
 
-        private void SpawnBranch(Vector2 center, Vector2 velocity, Vector2 moveDir, int depth)
-        {
-            Vector2 perpDir = new Vector2(-moveDir.Y, moveDir.X);
-            float sideOffset = Main.rand.NextFloat(-6f, 6f);
-            Vector2 pos = center + SpawnOffset + perpDir * sideOffset + Main.rand.NextVector2Circular(3f, 3f);
-
-            Vector2 drift = Main.rand.NextVector2Circular(BranchDriftSpeed, BranchDriftSpeed);
-            float baseAngle = -MathHelper.PiOver2 + Main.rand.NextFloat(-0.8f, 0.8f);
-            float length = BranchLength * Main.rand.NextFloat(0.6f, 1.2f) / (1f + depth * 0.5f);
-            float growSpeed = BranchGrowSpeed * Main.rand.NextFloat(0.8f, 1.3f);
-            float scale = BranchSize * Main.rand.NextFloat(0.7f, 1.3f);
-            Color color = BranchColor * Main.rand.NextFloat(0.5f, 1f);
-
-            branches.Add(new GrassBranchParticle(pos, drift, BranchLife, scale, length, baseAngle, growSpeed, depth, color));
-
-            if (depth < BranchMaxDepth && Main.rand.NextFloat() < 0.5f)
-            {
-                Vector2 tipPos = pos + new Vector2(MathF.Cos(baseAngle), MathF.Sin(baseAngle)) * length * 0.7f;
-                float subAngle1 = baseAngle + BranchSubAngle * Main.rand.NextFloat(0.5f, 1.5f);
-                float subLength = length * Main.rand.NextFloat(0.4f, 0.7f);
-
-                branches.Add(new GrassBranchParticle(tipPos, drift * 0.5f, BranchLife - 5, scale * 0.7f, subLength, subAngle1, growSpeed, depth + 1, color * 0.8f));
-
-                if (Main.rand.NextFloat() < 0.4f)
-                {
-                    float subAngle2 = baseAngle - BranchSubAngle * Main.rand.NextFloat(0.5f, 1.5f);
-                    float subLength2 = length * Main.rand.NextFloat(0.3f, 0.6f);
-
-                    branches.Add(new GrassBranchParticle(tipPos, drift * 0.5f, BranchLife - 8, scale * 0.6f, subLength2, subAngle2, growSpeed, depth + 1, color * 0.7f));
-                }
-            }
-        }
-
-        private void SpawnPetal(Vector2 center, Vector2 velocity, Vector2 moveDir)
+        private void SpawnBloom(Vector2 center, Vector2 velocity, Vector2 moveDir)
         {
             Vector2 perpDir = new Vector2(-moveDir.Y, moveDir.X);
             float sideOffset = Main.rand.NextFloat(-8f, 8f);
-            Vector2 pos = center + SpawnOffset + perpDir * sideOffset + Main.rand.NextVector2Circular(5f, 5f);
+            Vector2 pos = center + SpawnOffset + perpDir * sideOffset + Main.rand.NextVector2Circular(6f, 6f);
 
-            Vector2 inertia = -velocity * InertiaFactor * 0.2f;
-            Vector2 drift = Main.rand.NextVector2Circular(PetalDriftSpeed, PetalDriftSpeed);
-            Vector2 vel = inertia + drift + new Vector2(0f, -0.3f);
+            Vector2 drift = Main.rand.NextVector2Circular(BloomDriftSpeed, BloomDriftSpeed);
+            float startSize = BloomStartSize * Main.rand.NextFloat(0.8f, 1.2f);
+            float endSize = BloomEndSize * Main.rand.NextFloat(0.8f, 1.2f);
+            Color color = BloomColor * Main.rand.NextFloat(0.5f, 1f);
 
-            float scale = Main.rand.NextFloat(0.6f, 1.3f) * PetalSize;
-            float spinSpeed = Main.rand.NextFloat(-PetalSpinSpeed, PetalSpinSpeed);
-            Color color = PetalColor * Main.rand.NextFloat(0.5f, 1f);
-
-            petals.Add(new GrassPetalParticle(pos, vel, PetalLife, scale, spinSpeed, color));
+            blooms.Add(new GrassBloomParticle(pos, drift, BloomLife, startSize, endSize, color));
         }
 
         public void Draw(SpriteBatch sb)
@@ -432,19 +336,20 @@ namespace VerminLordMod.Content.Trails
             if (_ghostTrail != null)
                 _ghostTrail.Draw(sb);
 
-            if (branches.Count > 0 && _branchTex != null)
+            if (blooms.Count > 0 && _bloomTex != null)
             {
-                Vector2 branchOrigin = new Vector2(0f, _branchTex.Height * 0.5f);
-                var sortedBranches = branches.OrderBy(b => b.Depth).ThenBy(b => b.Life);
-                foreach (var b in sortedBranches)
+                Vector2 bloomOrigin = _bloomTex.Size() * 0.5f;
+                var sortedBlooms = blooms.OrderBy(b => b.Life);
+                foreach (var b in sortedBlooms)
                 {
                     Color drawColor = b.Color * b.Alpha;
                     Vector2 pos = b.Position - Main.screenPosition;
-                    Vector2 scale = new Vector2(b.CurrentLength / _branchTex.Width, b.CurrentWidth);
-                    sb.Draw(_branchTex, pos, null, drawColor, b.Rotation,
-                        branchOrigin, scale, SpriteEffects.None, 0);
+                    sb.Draw(_bloomTex, pos, null, drawColor, b.Rotation,
+                        bloomOrigin, b.CurrentScale, SpriteEffects.None, 0);
                 }
             }
+
+            DrawVineConnections(sb);
 
             if (leaves.Count > 0 && _leafTex != null)
             {
@@ -456,19 +361,6 @@ namespace VerminLordMod.Content.Trails
                     Vector2 pos = l.Position - Main.screenPosition;
                     sb.Draw(_leafTex, pos, null, drawColor, l.Rotation,
                         leafOrigin, l.CurrentScale, SpriteEffects.None, 0);
-                }
-            }
-
-            if (petals.Count > 0 && _petalTex != null)
-            {
-                Vector2 petalOrigin = _petalTex.Size() * 0.5f;
-                var sortedPetals = petals.OrderBy(p => p.Life);
-                foreach (var p in sortedPetals)
-                {
-                    Color drawColor = p.Color * p.Alpha;
-                    Vector2 pos = p.Position - Main.screenPosition;
-                    sb.Draw(_petalTex, pos, null, drawColor, p.Rotation,
-                        petalOrigin, p.CurrentScale, SpriteEffects.None, 0);
                 }
             }
 
@@ -486,12 +378,62 @@ namespace VerminLordMod.Content.Trails
             }
         }
 
+        private void DrawVineConnections(SpriteBatch sb)
+        {
+            if (_vineTex == null || leaves.Count < 2) return;
+
+            Vector2 vineOrigin = new Vector2(0f, _vineTex.Height * 0.5f);
+
+            for (int i = 0; i < leaves.Count; i++)
+            {
+                var a = leaves[i];
+                if (a.Alpha < 0.05f) continue;
+
+                for (int j = i + 1; j < leaves.Count; j++)
+                {
+                    var b = leaves[j];
+                    if (b.Alpha < 0.05f) continue;
+
+                    float dist = Vector2.Distance(a.Position, b.Position);
+                    if (dist > VineBreakDistance || dist < 3f) continue;
+
+                    float vineAlpha;
+                    if (dist <= VineMaxDistance)
+                    {
+                        vineAlpha = VineBaseAlpha;
+                    }
+                    else
+                    {
+                        float breakProgress = (dist - VineMaxDistance) / (VineBreakDistance - VineMaxDistance);
+                        vineAlpha = VineBaseAlpha * (1f - breakProgress * breakProgress);
+                    }
+
+                    float minLeafAlpha = MathF.Min(a.Alpha, b.Alpha);
+                    vineAlpha *= minLeafAlpha;
+
+                    if (vineAlpha < 0.01f) continue;
+
+                    Vector2 start = a.Position - Main.screenPosition;
+                    Vector2 end = b.Position - Main.screenPosition;
+                    Vector2 diff = end - start;
+                    float length = diff.Length();
+                    if (length < 1f) continue;
+
+                    float rotation = diff.ToRotation();
+                    Vector2 scale = new Vector2(length / _vineTex.Width, 0.6f);
+                    Color drawColor = VineColor * vineAlpha;
+
+                    sb.Draw(_vineTex, start, null, drawColor, rotation,
+                        vineOrigin, scale, SpriteEffects.None, 0);
+                }
+            }
+        }
+
         public void Clear()
         {
             leaves.Clear();
             pollens.Clear();
-            branches.Clear();
-            petals.Clear();
+            blooms.Clear();
             leafCounter = 0;
             _ghostTrail?.Clear();
         }

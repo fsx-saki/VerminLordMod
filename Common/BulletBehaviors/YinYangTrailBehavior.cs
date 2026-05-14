@@ -41,24 +41,22 @@ namespace VerminLordMod.Common.BulletBehaviors
         public Color FishYinColor { get; set; } = new Color(50, 40, 90, 200);
         public Color FishYangColor { get; set; } = new Color(220, 215, 250, 200);
 
-        public int MaxSCurves { get; set; } = 12;
-        public int SCurveLife { get; set; } = 45;
-        public float SCurveSize { get; set; } = 0.5f;
-        public float SCurveAmplitude { get; set; } = 12f;
-        public float SCurveSpawnChance { get; set; } = 0.06f;
-        public float SCurveRotSpeed { get; set; } = 0.05f;
-        public float SCurveDriftSpeed { get; set; } = 0.1f;
-        public Color SCurveYinColor { get; set; } = new Color(70, 55, 120, 180);
-        public Color SCurveYangColor { get; set; } = new Color(210, 200, 245, 180);
+        public int MaxRipples { get; set; } = 6;
+        public int RippleLife { get; set; } = 45;
+        public float RippleStartSize { get; set; } = 0.3f;
+        public float RippleEndSize { get; set; } = 1.8f;
+        public float RippleSpawnChance { get; set; } = 0.025f;
+        public float RippleRotSpeed { get; set; } = 0.04f;
+        public float RippleDriftSpeed { get; set; } = 0.08f;
+        public Color RippleColor { get; set; } = new Color(160, 150, 220, 150);
 
-        public int MaxOrbitDots { get; set; } = 24;
-        public int OrbitDotLife { get; set; } = 30;
-        public float OrbitDotSize { get; set; } = 0.3f;
-        public float OrbitDotRadius { get; set; } = 20f;
-        public float OrbitDotAngularSpeed { get; set; } = 0.08f;
-        public float OrbitDotSpawnChance { get; set; } = 0.15f;
-        public Color OrbitDotYinColor { get; set; } = new Color(80, 65, 140, 220);
-        public Color OrbitDotYangColor { get; set; } = new Color(240, 235, 255, 220);
+        public int MaxSparks { get; set; } = 30;
+        public int SparkLife { get; set; } = 25;
+        public float SparkSize { get; set; } = 0.25f;
+        public float SparkSpawnChance { get; set; } = 0.25f;
+        public float SparkDriftSpeed { get; set; } = 0.35f;
+        public Color SparkYinColor { get; set; } = new Color(80, 70, 140, 200);
+        public Color SparkYangColor { get; set; } = new Color(220, 215, 255, 200);
 
         public float InertiaFactor { get; set; } = 0.15f;
         public float RandomSpread { get; set; } = 3f;
@@ -100,24 +98,22 @@ namespace VerminLordMod.Common.BulletBehaviors
                 FishYinColor = FishYinColor,
                 FishYangColor = FishYangColor,
 
-                MaxSCurves = MaxSCurves,
-                SCurveLife = SCurveLife,
-                SCurveSize = SCurveSize,
-                SCurveAmplitude = SCurveAmplitude,
-                SCurveSpawnChance = SCurveSpawnChance,
-                SCurveRotSpeed = SCurveRotSpeed,
-                SCurveDriftSpeed = SCurveDriftSpeed,
-                SCurveYinColor = SCurveYinColor,
-                SCurveYangColor = SCurveYangColor,
+                MaxRipples = MaxRipples,
+                RippleLife = RippleLife,
+                RippleStartSize = RippleStartSize,
+                RippleEndSize = RippleEndSize,
+                RippleSpawnChance = RippleSpawnChance,
+                RippleRotSpeed = RippleRotSpeed,
+                RippleDriftSpeed = RippleDriftSpeed,
+                RippleColor = RippleColor,
 
-                MaxOrbitDots = MaxOrbitDots,
-                OrbitDotLife = OrbitDotLife,
-                OrbitDotSize = OrbitDotSize,
-                OrbitDotRadius = OrbitDotRadius,
-                OrbitDotAngularSpeed = OrbitDotAngularSpeed,
-                OrbitDotSpawnChance = OrbitDotSpawnChance,
-                OrbitDotYinColor = OrbitDotYinColor,
-                OrbitDotYangColor = OrbitDotYangColor,
+                MaxSparks = MaxSparks,
+                SparkLife = SparkLife,
+                SparkSize = SparkSize,
+                SparkSpawnChance = SparkSpawnChance,
+                SparkDriftSpeed = SparkDriftSpeed,
+                SparkYinColor = SparkYinColor,
+                SparkYangColor = SparkYangColor,
 
                 InertiaFactor = InertiaFactor,
                 RandomSpread = RandomSpread,
