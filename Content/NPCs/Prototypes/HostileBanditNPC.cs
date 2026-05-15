@@ -8,8 +8,8 @@ namespace VerminLordMod.Content.NPCs.Prototypes
 {
     public class HostileBanditNPC : NPCBehaviorHost
     {
-        public override string Texture => "VerminLordMod/Content/NPCs/Town/YaoTangJiaLao";
-        public override string HeadTexture => "VerminLordMod/Content/NPCs/Town/YaoTangJiaLao_Head";
+        public override string Texture => "VerminLordMod/Content/NPCs/Prototypes/HostileBanditNPC";
+        public override string HeadTexture => "VerminLordMod/Content/NPCs/Prototypes/HostileBanditNPC_Head";
 
         protected override void RegisterBehaviors()
         {

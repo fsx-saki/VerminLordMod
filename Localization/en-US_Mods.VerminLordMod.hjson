@@ -608,6 +608,312 @@ NPCs: {
 			Princess_LovesNPC: 我喜欢 {NPCName}。
 		}
 	}
+
+	AlchemistApprenticeNPC: {
+		DisplayName: Alchemist Apprentice N P C
+
+		TownNPCMood: {
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	BeggarNPC: {
+		DisplayName: Beggar N P C
+
+		TownNPCMood: {
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	BlacksmithApprenticeNPC: {
+		DisplayName: Blacksmith Apprentice N P C
+
+		TownNPCMood: {
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	BlacksmithNPC: {
+		DisplayName: Blacksmith N P C
+
+		TownNPCMood: {
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	CookNPC: {
+		DisplayName: Cook N P C
+
+		TownNPCMood: {
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	DoctorNPC: {
+		DisplayName: Doctor N P C
+
+		TownNPCMood: {
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	FarmerNPC: {
+		DisplayName: Farmer N P C
+
+		TownNPCMood: {
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	FishermanNPC: {
+		DisplayName: Fisherman N P C
+
+		TownNPCMood: {
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	HerbalistNPC: {
+		DisplayName: Herbalist N P C
+
+		TownNPCMood: {
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	HunterNPC: {
+		DisplayName: Hunter N P C
+
+		TownNPCMood: {
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	MerchantNPC: {
+		DisplayName: Merchant N P C
+
+		TownNPCMood: {
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	MinerNPC: {
+		DisplayName: Miner N P C
+
+		TownNPCMood: {
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	NightWatchmanNPC: {
+		DisplayName: Night Watchman N P C
+
+		TownNPCMood: {
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	ScholarNPC: {
+		DisplayName: Scholar N P C
+
+		TownNPCMood: {
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	StorytellerNPC: {
+		DisplayName: Storyteller N P C
+
+		TownNPCMood: {
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	TailorNPC: {
+		DisplayName: Tailor N P C
+
+		TownNPCMood: {
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	TavernKeeperNPC: {
+		DisplayName: Tavern Keeper N P C
+
+		TownNPCMood: {
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	WeaverNPC: {
+		DisplayName: Weaver N P C
+
+		TownNPCMood: {
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	WoodcutterNPC: {
+		DisplayName: Woodcutter N P C
+
+		TownNPCMood: {
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	BanditGuMaster.DisplayName: Bandit Gu Master
+	EvilCultivatorGuMaster.DisplayName: Evil Cultivator Gu Master
+	HermitGuMaster.DisplayName: Hermit Gu Master
+	ShadowAssassinGuMaster.DisplayName: Shadow Assassin Gu Master
+	WildGuMaster.DisplayName: Wild Gu Master
+
+	GuardPrototypeNPC: {
+		DisplayName: Guard Prototype N P C
+
+		TownNPCMood: {
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
 }
 
 Items: {
@@ -3194,6 +3500,446 @@ Items: {
 		ControlRate: Mods.VerminLordMod.Items.YinYangWeapon.ControlRate
 		UsesXQi: Mods.VerminLordMod.Items.YinYangWeapon.UsesXQi
 	}
+
+	BloodPoolTile: {
+		DisplayName: Blood Pool Tile
+		Tooltip: ""
+	}
+
+	BloodStone: {
+		DisplayName: Blood Stone
+		Tooltip: ""
+	}
+
+	BoneBlock: {
+		DisplayName: Bone Block
+		Tooltip: ""
+	}
+
+	ChitinShell: {
+		DisplayName: Chitin Shell
+		Tooltip: ""
+	}
+
+	CorpseBlock: {
+		DisplayName: Corpse Block
+		Tooltip: ""
+	}
+
+	CorpseCocoon: {
+		DisplayName: Corpse Cocoon
+		Tooltip: ""
+	}
+
+	CursedEarth: {
+		DisplayName: Cursed Earth
+		Tooltip: ""
+	}
+
+	FleshWall: {
+		DisplayName: Flesh Wall
+		Tooltip: ""
+	}
+
+	GuCorpseBlock: {
+		DisplayName: Gu Corpse Block
+		Tooltip: ""
+	}
+
+	GuFormationTile: {
+		DisplayName: Gu Formation Tile
+		Tooltip: ""
+	}
+
+	GuSacrificeAltar: {
+		DisplayName: Gu Sacrifice Altar
+		Tooltip: ""
+	}
+
+	GuSilkWeb: {
+		DisplayName: Gu Silk Web
+		Tooltip: ""
+	}
+
+	GuTombstone: {
+		DisplayName: Gu Tombstone
+		Tooltip: ""
+	}
+
+	PoisonCrystal: {
+		DisplayName: Poison Crystal
+		Tooltip: ""
+	}
+
+	PoisonMistEmitter: {
+		DisplayName: Poison Mist Emitter
+		Tooltip: ""
+	}
+
+	RotWood: {
+		DisplayName: Rot Wood
+		Tooltip: ""
+	}
+
+	SoulCage: {
+		DisplayName: Soul Cage
+		Tooltip: ""
+	}
+
+	SoulRemnantBlock: {
+		DisplayName: Soul Remnant Block
+		Tooltip: ""
+	}
+
+	SpiritSealStone: {
+		DisplayName: Spirit Seal Stone
+		Tooltip: ""
+	}
+
+	WitheredOrgan: {
+		DisplayName: Withered Organ
+		Tooltip: ""
+	}
+
+	AncientInscription: {
+		DisplayName: Ancient Inscription
+		Tooltip: ""
+	}
+
+	AncientTreeMoss: {
+		DisplayName: Ancient Tree Moss
+		Tooltip: ""
+	}
+
+	BonePile: {
+		DisplayName: Bone Pile
+		Tooltip: ""
+	}
+
+	GuBreedingVat: {
+		DisplayName: Gu Breeding Vat
+		Tooltip: ""
+	}
+
+	GuCauldron: {
+		DisplayName: Gu Cauldron
+		Tooltip: ""
+	}
+
+	GuNest: {
+		DisplayName: Gu Nest
+		Tooltip: ""
+	}
+
+	GuWormHole: {
+		DisplayName: Gu Worm Hole
+		Tooltip: ""
+	}
+
+	HerbDryingRack: {
+		DisplayName: Herb Drying Rack
+		Tooltip: ""
+	}
+
+	MeditationCushion: {
+		DisplayName: Meditation Cushion
+		Tooltip: ""
+	}
+
+	MoonlitPond: {
+		DisplayName: Moonlit Pond
+		Tooltip: ""
+	}
+
+	PoisonSwampPlant: {
+		DisplayName: Poison Swamp Plant
+		Tooltip: ""
+	}
+
+	RedCopperOre: {
+		DisplayName: Red Copper Ore
+		Tooltip: ""
+	}
+
+	SpiritBeastDen: {
+		DisplayName: Spirit Beast Den
+		Tooltip: ""
+	}
+
+	SpiritFlower: {
+		DisplayName: Spirit Flower
+		Tooltip: ""
+	}
+
+	SpiritGrass: {
+		DisplayName: Spirit Grass
+		Tooltip: ""
+	}
+
+	SpiritHerbPlot: {
+		DisplayName: Spirit Herb Plot
+		Tooltip: ""
+	}
+
+	SpiritLantern: {
+		DisplayName: Spirit Lantern
+		Tooltip: ""
+	}
+
+	SpiritVine: {
+		DisplayName: Spirit Vine
+		Tooltip: ""
+	}
+
+	WitheredTree: {
+		DisplayName: Withered Tree
+		Tooltip: ""
+	}
+
+	YuanQiMushroom: {
+		DisplayName: Yuan Qi Mushroom
+		Tooltip: ""
+	}
+
+	YuanStoneCluster: {
+		DisplayName: Yuan Stone Cluster
+		Tooltip: ""
+	}
+
+	BaiJadeBlock: {
+		DisplayName: Bai Jade Block
+		Tooltip: ""
+	}
+
+	BaiJadeTable: {
+		DisplayName: Bai Jade Table
+		Tooltip: ""
+	}
+
+	BaiSilverBrick: {
+		DisplayName: Bai Silver Brick
+		Tooltip: ""
+	}
+
+	GuYueAltar: {
+		DisplayName: Gu Yue Altar
+		Tooltip: ""
+	}
+
+	GuYueBambooPlatform: {
+		DisplayName: Gu Yue Bamboo Platform
+		Tooltip: ""
+	}
+
+	GuYueWoodBlock: {
+		DisplayName: Gu Yue Wood Block
+		Tooltip: ""
+	}
+
+	JiaGoldSilkBlock: {
+		DisplayName: Jia Gold Silk Block
+		Tooltip: ""
+	}
+
+	JiaTradingCounter: {
+		DisplayName: Jia Trading Counter
+		Tooltip: ""
+	}
+
+	ScatteredCampfire: {
+		DisplayName: Scattered Campfire
+		Tooltip: ""
+	}
+
+	ScatteredMudBrick: {
+		DisplayName: Scattered Mud Brick
+		Tooltip: ""
+	}
+
+	TieForgeStone: {
+		DisplayName: Tie Forge Stone
+		Tooltip: ""
+	}
+
+	TieSmeltingFurnace: {
+		DisplayName: Tie Smelting Furnace
+		Tooltip: ""
+	}
+
+	WangCrystalBlock: {
+		DisplayName: Wang Crystal Block
+		Tooltip: ""
+	}
+
+	WangWaterOrb: {
+		DisplayName: Wang Water Orb
+		Tooltip: ""
+	}
+
+	XiongAnvil: {
+		DisplayName: Xiong Anvil
+		Tooltip: ""
+	}
+
+	XiongDarkStone: {
+		DisplayName: Xiong Dark Stone
+		Tooltip: ""
+	}
+
+	XiongIronBeam: {
+		DisplayName: Xiong Iron Beam
+		Tooltip: ""
+	}
+
+	ZhaoSecretDoor: {
+		DisplayName: Zhao Secret Door
+		Tooltip: ""
+	}
+
+	ZhaoShadowBrick: {
+		DisplayName: Zhao Shadow Brick
+		Tooltip: ""
+	}
+
+	FurnitureMiZongZhenItem: {
+		DisplayName: Furniture Mi Zong Zhen Item
+		Tooltip: ""
+	}
+
+	DarkIronOre: {
+		DisplayName: Dark Iron Ore
+		Tooltip: ""
+	}
+
+	GuEggCluster: {
+		DisplayName: Gu Egg Cluster
+		Tooltip: ""
+	}
+
+	HerbGardenSoil: {
+		DisplayName: Herb Garden Soil
+		Tooltip: ""
+	}
+
+	PoisonCrystalOre: {
+		DisplayName: Poison Crystal Ore
+		Tooltip: ""
+	}
+
+	ResourceRedCopperOre: {
+		DisplayName: Resource Red Copper Ore
+		Tooltip: ""
+	}
+
+	SoulEssenceOre: {
+		DisplayName: Soul Essence Ore
+		Tooltip: ""
+	}
+
+	SpiritBoneOre: {
+		DisplayName: Spirit Bone Ore
+		Tooltip: ""
+	}
+
+	SpiritVeinStone: {
+		DisplayName: Spirit Vein Stone
+		Tooltip: ""
+	}
+
+	YuanStoneOre: {
+		DisplayName: Yuan Stone Ore
+		Tooltip: ""
+	}
+
+	AncientStonePath: {
+		DisplayName: Ancient Stone Path
+		Tooltip: ""
+	}
+
+	BloodSand: {
+		DisplayName: Blood Sand
+		Tooltip: ""
+	}
+
+	ColdIronFloor: {
+		DisplayName: Cold Iron Floor
+		Tooltip: ""
+	}
+
+	DarkMossStone: {
+		DisplayName: Dark Moss Stone
+		Tooltip: ""
+	}
+
+	JadeBrickPath: {
+		DisplayName: Jade Brick Path
+		Tooltip: ""
+	}
+
+	SpiritSoil: {
+		DisplayName: Spirit Soil
+		Tooltip: ""
+	}
+
+	SwampMud: {
+		DisplayName: Swamp Mud
+		Tooltip: ""
+	}
+
+	WastelandSand: {
+		DisplayName: Wasteland Sand
+		Tooltip: ""
+	}
+
+	BaiJadeWall: {
+		DisplayName: Bai Jade Wall
+		Tooltip: ""
+	}
+
+	BoneWall: {
+		DisplayName: Bone Wall
+		Tooltip: ""
+	}
+
+	FleshWallItem: {
+		DisplayName: Flesh Wall Item
+		Tooltip: ""
+	}
+
+	GuYueWoodWall: {
+		DisplayName: Gu Yue Wood Wall
+		Tooltip: ""
+	}
+
+	JiaGoldSilkWall: {
+		DisplayName: Jia Gold Silk Wall
+		Tooltip: ""
+	}
+
+	ScatteredMudWall: {
+		DisplayName: Scattered Mud Wall
+		Tooltip: ""
+	}
+
+	TieIronWall: {
+		DisplayName: Tie Iron Wall
+		Tooltip: ""
+	}
+
+	WangCrystalWall: {
+		DisplayName: Wang Crystal Wall
+		Tooltip: ""
+	}
+
+	XiongStoneWall: {
+		DisplayName: Xiong Stone Wall
+		Tooltip: ""
+	}
+
+	ZhaoShadowWall: {
+		DisplayName: Zhao Shadow Wall
+		Tooltip: ""
+	}
 }
 
 MapObject: {
@@ -3571,6 +4317,16 @@ Buffs: {
 		DisplayName: Mi Zong Buff
 		Description: Mods.VerminLordMod.Buffs.MiZongBuff.Description
 	}
+
+	DefenseMiZongBuff: {
+		DisplayName: Defense Mi Zong Buff
+		Description: Mods.VerminLordMod.Buffs.DefenseMiZongBuff.Description
+	}
+
+	AddToSelfMiZongBuff: {
+		DisplayName: Add To Self Mi Zong Buff
+		Description: Mods.VerminLordMod.Buffs.AddToSelfMiZongBuff.Description
+	}
 }
 
 DamageClasses.InsectDamageClass.DisplayName: Insect Damage Class
@@ -3615,6 +4371,84 @@ Tiles: {
 	SpearBamboo.MapEntry: Spear Bamboo
 	SpiritSpring.MapEntry: Spirit Spring
 	WineGourdFlower.MapEntry: Wine Gourd Flower
+	DefenseMiZongZhenTile.MapEntry: Defense Mi Zong Zhen Tile
+	BloodPoolTile.MapEntry: Blood Pool Tile
+	BloodStone.MapEntry: Blood Stone
+	BoneBlock.MapEntry: Bone Block
+	ChitinShell.MapEntry: Chitin Shell
+	CorpseBlock.MapEntry: Corpse Block
+	CorpseCocoon.MapEntry: Corpse Cocoon
+	CursedEarth.MapEntry: Cursed Earth
+	FleshWall.MapEntry: Flesh Wall
+	GuCorpseBlock.MapEntry: Gu Corpse Block
+	GuFormationTile.MapEntry: Gu Formation Tile
+	GuSacrificeAltar.MapEntry: Gu Sacrifice Altar
+	GuSilkWeb.MapEntry: Gu Silk Web
+	GuTombstone.MapEntry: Gu Tombstone
+	PoisonCrystal.MapEntry: Poison Crystal
+	PoisonMistEmitter.MapEntry: Poison Mist Emitter
+	RotWood.MapEntry: Rot Wood
+	SoulCage.MapEntry: Soul Cage
+	SoulRemnantBlock.MapEntry: Soul Remnant Block
+	SpiritSealStone.MapEntry: Spirit Seal Stone
+	WitheredOrgan.MapEntry: Withered Organ
+	AncientInscription.MapEntry: Ancient Inscription
+	AncientTreeMoss.MapEntry: Ancient Tree Moss
+	BonePile.MapEntry: Bone Pile
+	GuBreedingVat.MapEntry: Gu Breeding Vat
+	GuCauldron.MapEntry: Gu Cauldron
+	GuNest.MapEntry: Gu Nest
+	GuWormHole.MapEntry: Gu Worm Hole
+	HerbDryingRack.MapEntry: Herb Drying Rack
+	MeditationCushion.MapEntry: Meditation Cushion
+	MoonlitPond.MapEntry: Moonlit Pond
+	PoisonSwampPlant.MapEntry: Poison Swamp Plant
+	RedCopperOre.MapEntry: Red Copper Ore
+	SpiritBeastDen.MapEntry: Spirit Beast Den
+	SpiritFlower.MapEntry: Spirit Flower
+	SpiritGrass.MapEntry: Spirit Grass
+	SpiritHerbPlot.MapEntry: Spirit Herb Plot
+	SpiritLantern.MapEntry: Spirit Lantern
+	SpiritVine.MapEntry: Spirit Vine
+	WitheredTree.MapEntry: Withered Tree
+	YuanQiMushroom.MapEntry: Yuan Qi Mushroom
+	YuanStoneCluster.MapEntry: Yuan Stone Cluster
+	BaiJadeBlock.MapEntry: Bai Jade Block
+	BaiJadeTable.MapEntry: Bai Jade Table
+	BaiSilverBrick.MapEntry: Bai Silver Brick
+	GuYueAltar.MapEntry: Gu Yue Altar
+	GuYueBambooPlatform.MapEntry: Gu Yue Bamboo Platform
+	GuYueWoodBlock.MapEntry: Gu Yue Wood Block
+	JiaGoldSilkBlock.MapEntry: Jia Gold Silk Block
+	JiaTradingCounter.MapEntry: Jia Trading Counter
+	ScatteredCampfire.MapEntry: Scattered Campfire
+	ScatteredMudBrick.MapEntry: Scattered Mud Brick
+	TieForgeStone.MapEntry: Tie Forge Stone
+	TieSmeltingFurnace.MapEntry: Tie Smelting Furnace
+	WangCrystalBlock.MapEntry: Wang Crystal Block
+	WangWaterOrb.MapEntry: Wang Water Orb
+	XiongAnvil.MapEntry: Xiong Anvil
+	XiongDarkStone.MapEntry: Xiong Dark Stone
+	XiongIronBeam.MapEntry: Xiong Iron Beam
+	ZhaoSecretDoor.MapEntry: Zhao Secret Door
+	ZhaoShadowBrick.MapEntry: Zhao Shadow Brick
+	DarkIronOre.MapEntry: Dark Iron Ore
+	GuEggCluster.MapEntry: Gu Egg Cluster
+	HerbGardenSoil.MapEntry: Herb Garden Soil
+	PoisonCrystalOre.MapEntry: Poison Crystal Ore
+	ResourceRedCopperOre.MapEntry: Resource Red Copper Ore
+	SoulEssenceOre.MapEntry: Soul Essence Ore
+	SpiritBoneOre.MapEntry: Spirit Bone Ore
+	SpiritVeinStone.MapEntry: Spirit Vein Stone
+	YuanStoneOre.MapEntry: Yuan Stone Ore
+	AncientStonePath.MapEntry: Ancient Stone Path
+	BloodSand.MapEntry: Blood Sand
+	ColdIronFloor.MapEntry: Cold Iron Floor
+	DarkMossStone.MapEntry: Dark Moss Stone
+	JadeBrickPath.MapEntry: Jade Brick Path
+	SpiritSoil.MapEntry: Spirit Soil
+	SwampMud.MapEntry: Swamp Mud
+	WastelandSand.MapEntry: Wasteland Sand
 }
 
 WorldGen: {

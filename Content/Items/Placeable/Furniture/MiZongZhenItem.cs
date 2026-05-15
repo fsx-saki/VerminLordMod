@@ -5,7 +5,7 @@ using VerminLordMod.Content.Tiles.GuYueArchitecture;
 
 namespace VerminLordMod.Content.Items.Placeable.Furniture
 {
-    public class MiZongZhenItem : ModItem
+    public class FurnitureMiZongZhenItem : ModItem
     {
         public override void SetDefaults()
         {

@@ -256,18 +256,6 @@ namespace VerminLordMod.Common.Events
         Other
     }
 
-    public enum FactionRole
-    {
-        None,
-        ClanLeader,
-        Elder,
-        GuardCaptain,
-        Merchant,
-        Scout,
-        Healer,
-        Trainer
-    }
-
     public enum ResourceType
     {
         YuanStoneVein,

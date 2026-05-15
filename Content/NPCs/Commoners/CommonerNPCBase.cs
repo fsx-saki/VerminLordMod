@@ -8,8 +8,8 @@ namespace VerminLordMod.Content.NPCs.Commoners
 {
     public abstract class CommonerNPCBase : NPCBehaviorHost
     {
-        public override string Texture => "Terraria/Images/NPC_" + NPCID.Guide;
-        public override string HeadTexture => "Terraria/Images/NPC_Head_" + NPCID.Guide;
+        public override string Texture => "VerminLordMod/Content/NPCs/Commoners/" + GetType().Name;
+        public override string HeadTexture => "VerminLordMod/Content/NPCs/Commoners/" + GetType().Name + "_Head";
 
         protected abstract string ProfessionName { get; }
         protected abstract Func<int, string> GetDialogueFunc();

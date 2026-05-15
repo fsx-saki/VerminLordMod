@@ -5,7 +5,6 @@ using VerminLordMod.Common.NPCBehaviors;
 
 namespace VerminLordMod.Content.NPCs.Commoners
 {
-    [AutoloadHead]
     public class GuardNPC : CommonerNPCBase
     {
         protected override string ProfessionName => "守卫";

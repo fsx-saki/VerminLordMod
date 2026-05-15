@@ -1,3 +1,4 @@
+using Terraria;
 using Terraria.ModLoader;
 using VerminLordMod.Common.Players;
 using VerminLordMod.Common.Systems;

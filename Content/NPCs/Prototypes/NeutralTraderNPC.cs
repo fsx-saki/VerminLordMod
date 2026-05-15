@@ -8,8 +8,8 @@ namespace VerminLordMod.Content.NPCs.Prototypes
 {
     public class NeutralTraderNPC : NPCBehaviorHost
     {
-        public override string Texture => "VerminLordMod/Content/NPCs/Town/JiasTravelingMerchant";
-        public override string HeadTexture => "VerminLordMod/Content/NPCs/Town/JiasTravelingMerchant_Head";
+        public override string Texture => "VerminLordMod/Content/NPCs/Prototypes/NeutralTraderNPC";
+        public override string HeadTexture => "VerminLordMod/Content/NPCs/Prototypes/NeutralTraderNPC_Head";
 
         protected override void RegisterBehaviors()
         {

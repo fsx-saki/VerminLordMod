@@ -22,7 +22,7 @@ namespace VerminLordMod.Content.Items.Placeable
             Item.useTime = 10;
             Item.useStyle = ItemUseStyleID.Swing;
             Item.consumable = true;
-            Item.createTile = ModContent.TileType<MiZongZhenTile>();
+            Item.createTile = ModContent.TileType<DefenseMiZongZhenTile>();
             Item.rare = ItemRarityID.Green;
             Item.value = Item.sellPrice(silver: 50);
         }

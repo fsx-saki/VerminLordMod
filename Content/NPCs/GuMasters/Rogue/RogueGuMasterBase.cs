@@ -8,8 +8,8 @@ namespace VerminLordMod.Content.NPCs.GuMasters.Rogue
 {
     public abstract class RogueGuMasterBase : GuMasterBase
     {
-        public override string Texture => "VerminLordMod/Content/NPCs/GuMasters/GuYuePatrolGuMaster";
-        public override string HeadTexture => "VerminLordMod/Content/NPCs/GuMasters/GuYuePatrolGuMaster_Head";
+        public override string Texture => "VerminLordMod/Content/NPCs/GuMasters/Rogue/" + GetType().Name;
+        public override string HeadTexture => "VerminLordMod/Content/NPCs/GuMasters/Rogue/" + GetType().Name + "_Head";
 
         public override FactionID GetFaction() => FactionID.Scattered;
         public override string GuMasterDisplayName => "散修蛊师";

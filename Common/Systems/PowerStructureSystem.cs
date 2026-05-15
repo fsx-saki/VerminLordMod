@@ -55,27 +55,19 @@ namespace VerminLordMod.Common.Systems
             [FactionID.GuYue] = new Dictionary<FactionRole, List<int>>
             {
                 // 药堂家老 → 药姬（弟子接替）
-                [FactionRole.Healer] = new List<int>
+                [FactionRole.Alchemist] = new List<int>
                 {
-                    // NPCID.Count + 1, // 药姬（P1 注册具体 NPC Type）
                 },
-                // 学堂家老 → 弟子接替
-                [FactionRole.Trainer] = new List<int>
+                [FactionRole.Instructor] = new List<int>
                 {
-                    // NPCID.Count + 2, // 学堂弟子
                 },
-                // 巡逻队长 → 副队长接替
-                [FactionRole.GuardCaptain] = new List<int>
+                [FactionRole.PatrolLeader] = new List<int>
                 {
-                    // NPCID.Count + 3, // 副队长
                 },
-                // 商队管事 → 商队弟子接替
-                [FactionRole.Merchant] = new List<int>
+                [FactionRole.Quartermaster] = new List<int>
                 {
-                    // NPCID.Count + 4, // 商队弟子
                 },
-                // 族长（不可继承，空缺时家族功能停摆）
-                [FactionRole.ClanLeader] = new List<int>(),
+                [FactionRole.Chief] = new List<int>(),
             }
             // 其他家族 P1 再填充
         };
@@ -252,13 +244,16 @@ namespace VerminLordMod.Common.Systems
             return role switch
             {
                 FactionRole.None => "无",
-                FactionRole.ClanLeader => "族长",
+                FactionRole.Chief => "族长",
                 FactionRole.Elder => "家老",
-                FactionRole.GuardCaptain => "巡逻队长",
-                FactionRole.Merchant => "商队管事",
-                FactionRole.Scout => "斥候",
-                FactionRole.Healer => "药堂家老",
-                FactionRole.Trainer => "学堂家老",
+                FactionRole.Deacon => "执事",
+                FactionRole.PatrolLeader => "巡逻队长",
+                FactionRole.Alchemist => "炼丹师",
+                FactionRole.Instructor => "教习",
+                FactionRole.Quartermaster => "库管",
+                FactionRole.Diplomat => "外交使",
+                FactionRole.Spy => "密探",
+                FactionRole.Servant => "仆从",
                 _ => "未知职务"
             };
         }

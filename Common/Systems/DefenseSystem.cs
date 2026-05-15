@@ -409,7 +409,7 @@ namespace VerminLordMod.Common.Systems
     /// 迷踪阵 Buff。
     /// 玩家在迷踪阵范围内时获得此 Buff，标记 IsInMiZong。
     /// </summary>
-    public class MiZongBuff : ModBuff
+    public class DefenseMiZongBuff : ModBuff
     {
         public override void SetStaticDefaults()
         {
@@ -446,7 +446,7 @@ namespace VerminLordMod.Common.Systems
     /// 迷踪阵 Tile。
     /// 消耗元石运转，降低 NPC 对玩家位置的感知精度。
     /// </summary>
-    public class MiZongZhenTile : ModTile
+    public class DefenseMiZongZhenTile : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -510,7 +510,7 @@ namespace VerminLordMod.Common.Systems
                             new Vector2(i * 16 + 8, j * 16 + 8),
                             player.Center) < DefenseSystem.MIZONG_RANGE_PIXELS)
                     {
-                        player.AddBuff(ModContent.BuffType<MiZongBuff>(), 2);
+                        player.AddBuff(ModContent.BuffType<DefenseMiZongBuff>(), 2);
                     }
                 }
             }

@@ -206,7 +206,7 @@ namespace VerminLordMod.Common.Systems
                     string vacancies = "";
                     foreach (FactionID faction in System.Enum.GetValues<FactionID>())
                     {
-                        foreach (Events.FactionRole role in System.Enum.GetValues<Events.FactionRole>())
+                        foreach (FactionRole role in System.Enum.GetValues<FactionRole>())
                         {
                             if (powerSystem.IsRoleVacant(faction, role))
                             {

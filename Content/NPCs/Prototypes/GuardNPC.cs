@@ -6,10 +6,10 @@ using VerminLordMod.Common.NPCBehaviors;
 
 namespace VerminLordMod.Content.NPCs.Prototypes
 {
-    public class GuardNPC : NPCBehaviorHost
+    public class GuardPrototypeNPC : NPCBehaviorHost
     {
-        public override string Texture => "VerminLordMod/Content/NPCs/Town/YuTangJiaLao";
-        public override string HeadTexture => "VerminLordMod/Content/NPCs/Town/YuTangJiaLao_Head";
+        public override string Texture => "VerminLordMod/Content/NPCs/Prototypes/GuardPrototypeNPC";
+        public override string HeadTexture => "VerminLordMod/Content/NPCs/Prototypes/GuardPrototypeNPC_Head";
 
         protected override void RegisterBehaviors()
         {

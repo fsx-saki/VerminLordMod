@@ -15,15 +15,18 @@ namespace VerminLordMod.Content.Buffs.AddToSelf.Debuff
     //   - 完善贴图
     // ============================================================
 
-    public class MiZongBuff : ModBuff
+    public class AddToSelfMiZongBuff : ModBuff
     {
         public override void SetStaticDefaults()
         {
             Main.debuff[Type] = false;
             Main.pvpBuff[Type] = false;
             Main.persistentBuff[Type] = true;
-            DisplayName.SetDefault("迷踪阵庇护");
-            Description.SetDefault("NPC对你的感知距离降低了50%");
+        }
+
+        public override void Update(Player player, ref int buffIndex)
+        {
+            // TODO: 实现降低NPC感知距离效果
         }
     }
 }

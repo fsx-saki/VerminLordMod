@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
@@ -106,7 +107,7 @@ namespace VerminLordMod.Common.Systems
 
         public PillQuality RollQuality(Player player)
         {
-            float luck = player.GetModPlayer<EffectsPlayer>().LuckModifier;
+            float luck = player.luck;
             float roll = Main.rand.NextFloat() + luck * 0.1f;
             // TODO: 完善品质随机逻辑
             return roll switch

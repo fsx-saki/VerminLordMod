@@ -3,6 +3,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using VerminLordMod.Content.Walls;
 using VerminLordMod.Content.Items.Consumables;
+using VerminLordMod.Content.Items.Placeable;
 using VerminLordMod.Content.Items.Placeable.Furniture;
 
 namespace VerminLordMod.Common.Systems

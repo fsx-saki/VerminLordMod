@@ -1,0 +1,285 @@
+[09:31:06.424] [.NET TP Worker/INFO] [tML]: JITModsAsync completed in 2345ms
+[09:31:06.425] [.NET TP Worker/INFO] [tML]: 增容中……
+[09:31:06.912] [.NET TP Worker/INFO] [tML]: 特殊调整内容：ModLoader (tModLoader) v2026.3.3.0
+[09:31:06.917] [.NET TP Worker/INFO] [tML]: 特殊调整内容：HEROsMod (HERO's Mod) v0.4.18
+[09:31:06.918] [.NET TP Worker/INFO] [tML]: 特殊调整内容：SubworldLibrary (Subworld Library) v2.2.3.3
+[09:31:06.918] [.NET TP Worker/INFO] [tML]: 特殊调整内容：VerminLordMod (VerminLordMod) v1.1.0.4
+[09:31:07.181] [.NET TP Worker/INFO] [tML]: 完成最后步骤：ModLoader (tModLoader) v2026.3.3.0
+[09:31:07.195] [.NET TP Worker/INFO] [tML]: 完成最后步骤：HEROsMod (HERO's Mod) v0.4.18
+[09:31:07.795] [.NET TP Worker/WARN] [tML]: HEROsMod spent 545ms blocking on asset loading. Avoid using AssetRequestMode.ImmediateLoad during mod loading where possible
+[09:31:07.796] [.NET TP Worker/INFO] [tML]: 完成最后步骤：SubworldLibrary (Subworld Library) v2.2.3.3
+[09:31:07.812] [.NET TP Worker/INFO] [tML]: 完成最后步骤：VerminLordMod (VerminLordMod) v1.1.0.4
+[09:31:07.830] [.NET TP Worker/INFO] [tML]: Mods using the most RAM: SubworldLibrary 49.5 MB, VerminLordMod 46.2 MB, HEROsMod 17.7 MB
+[09:31:07.971] [.NET TP Worker/WARN] [tML]: 静默捕获异常: 
+System.IO.DirectoryNotFoundException: Could not find a part of the path '/proc/331087/stat'.
+   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirError)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, UnixFileMode openPermissions, Int64& fileLength, UnixFileMode& filePermissions, Boolean failForSymlink, Boolean& wasSymlink, Func`4 createOpenException)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)
+   at Interop.procfs.TryReadFile(String path, String& contents)
+   at Interop.procfs.TryParseStatFile(String statFilePath, ParsedStat& result)
+   at System.Diagnostics.ProcessManager.CreateProcessInfo(Int32 pid)
+   at System.Diagnostics.ProcessManager.GetProcessInfos(String processNameFilter, String machineName)
+   at System.Diagnostics.Process.GetProcesses(String machineName)
+   at Terraria.ModLoader.Core.MemoryTracking.Finish() in tModLoader\Terraria\ModLoader\Core\MemoryTracking.cs:line 97
+   at Terraria.ModLoader.ModContent.Load(CancellationToken token) in tModLoader\Terraria\ModLoader\ModContent.cs:line 347
+   at Terraria.ModLoader.ModLoader.Load(CancellationToken token) in tModLoader\Terraria\ModLoader\ModLoader.cs:line 138
+   at Terraria.ModLoader.ModLoader.<>c__DisplayClass51_0.<BeginLoad>b__0() in tModLoader\Terraria\ModLoader\ModLoader.cs:line 116
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading.PortableThreadPool.WorkerThread.WorkerThreadStart()
+
+[09:31:07.972] [.NET TP Worker/INFO] [tML]: RAM physical: tModLoader usage: 1.9 GB, All processes usage: 24.7 GB, Available: 6.3 GB, Total Installed: 31.0 GB
+[09:31:07.973] [.NET TP Worker/INFO] [tML]: RAM virtual: tModLoader usage: 2.0 GB, All processes usage: 114.1 GB
+[09:31:07.973] [.NET TP Worker/WARN] [tML]: Total system memory usage exceeds installed physical memory, tModLoader will likely experience performance issues due to frequent page file access.
+[09:31:08.032] [.NET TP Worker/DEBUG] [tML]: GlobalItem registration stats. Count: 4, Slots per Entity: 13
+	Instanced: 1, Conditional with slot: 0, Conditional by type: 0, Applies to single type: 0
+	List Permutations: 1, Est Memory Consumption: 16 bytes
+[09:31:08.154] [.NET TP Worker/DEBUG] [tML]: GlobalNPC registration stats. Count: 9, Slots per Entity: 20
+	Instanced: 2, Conditional with slot: 0, Conditional by type: 1, Applies to single type: 0
+	List Permutations: 2, Est Memory Consumption: 96 bytes
+[09:31:08.163] [.NET TP Worker/DEBUG] [tML]: GlobalProjectile registration stats. Count: 3, Slots per Entity: 7
+	Instanced: 1, Conditional with slot: 0, Conditional by type: 0, Applies to single type: 0
+	List Permutations: 1, Est Memory Consumption: 16 bytes
+[09:31:08.316] [.NET TP Worker/INFO] [tML]: 添加合成配方……
+[09:31:15.441] [.NET TP Worker/INFO] [tML]: Finding Mods...
+[09:31:15.456] [.NET TP Worker/INFO] [tML]: Mod Load Completed in 11599ms
+[09:31:21.868] [Main Thread/WARN] [tML]: 静默捕获异常: 
+System.IO.IOException: Invalid NBT payload type 'System.Collections.Generic.HashSet`1[System.String]'
+   at Terraria.ModLoader.IO.TagIO.GetPayloadId(Type t) in tModLoader\Terraria\ModLoader\IO\TagIO.cs:line 185
+   at Terraria.ModLoader.IO.TagIO.Serialize(Object value) in tModLoader\Terraria\ModLoader\IO\TagIO.cs:line 221
+   at Terraria.ModLoader.IO.TagCompound.Set(String key, Object value, Boolean replace) in tModLoader\Terraria\ModLoader\IO\TagCompound.cs:line 83
+   at VerminLordMod.Common.Systems.QuestTrackerPlayer.SaveData(TagCompound tag) in VerminLordMod/Common/Systems/QuestSystem.cs:line 386
+   at Terraria.ModLoader.IO.PlayerIO.SaveModData(Player player) in tModLoader\Terraria\ModLoader\IO\PlayerIO.cs:line 216
+   at Terraria.ModLoader.IO.PlayerIO.SaveData(Player player) in tModLoader\Terraria\ModLoader\IO\PlayerIO.cs:line 44
+   at Terraria.Player.SerializedClone() in tModLoader\Terraria\Player.cs:line 45488
+   at Terraria.GameContent.UI.Elements.UICharacter..ctor(Player player, Boolean animated, Boolean hasBackPanel, Single characterScale, Boolean useAClone) in tModLoader\Terraria\GameContent\UI\Elements\UICharacter.cs:line 27
+   at Terraria.GameContent.UI.Elements.UICharacterListItem..ctor(PlayerFileData data, Int32 snapPointIndex) in tModLoader\Terraria\GameContent\UI\Elements\UICharacterListItem.cs:line 57
+   at Terraria.GameContent.UI.States.UICharacterSelect.UpdatePlayersList() in tModLoader\Terraria\GameContent\UI\States\UICharacterSelect.cs:line 158
+   at Terraria.GameContent.UI.States.UICharacterSelect.OnActivate() in tModLoader\Terraria\GameContent\UI\States\UICharacterSelect.cs:line 137
+   at Terraria.UI.UIElement.Activate() in tModLoader\Terraria\UI\UIElement.cs:line 537
+   at Terraria.UI.UserInterface.SetState(UIState state) in tModLoader\Terraria\UI\UserInterface.cs:line 262
+   at Terraria.Main.OpenCharacterSelectUI() in tModLoader\Terraria\Main.cs:line 45201
+   at Terraria.Main.DrawMenu(GameTime gameTime) in tModLoader\Terraria\Main.cs:line 42210
+   at DMD<DMD<>?31397867::Terraria.Main::DoDraw>(Main this, GameTime gameTime)
+   at SyncProxy<System.Void Terraria.Main:DoDraw(Microsoft.Xna.Framework.GameTime)>(Main , GameTime )
+   at Terraria.Main.Draw_Inner(GameTime gameTime) in tModLoader\Terraria\Main.cs:line 53228
+   at Terraria.Main.Draw(GameTime gameTime) in tModLoader\Terraria\Main.cs:line 53215
+   at Microsoft.Xna.Framework.Game.Tick() in D:\a\tModLoader\tModLoader\FNA\src\Game.cs:line 562
+   at Microsoft.Xna.Framework.Game.RunLoop() in D:\a\tModLoader\tModLoader\FNA\src\Game.cs:line 878
+   at Microsoft.Xna.Framework.Game.Run() in D:\a\tModLoader\tModLoader\FNA\src\Game.cs:line 419
+   at Terraria.Program.RunGame() in tModLoader\Terraria\Program.cs:line 266
+   at Terraria.Program.LaunchGame_(Boolean isServer) in tModLoader\Terraria\Program.cs:line 240
+   at Terraria.Program.LaunchGame(String[] args, Boolean monoArgs) in tModLoader\Terraria\Program.cs:line 213
+   at Terraria.MonoLaunch.Main_End(String[] args) in tModLoader\Terraria\MonoLaunch.cs:line 79
+   at Terraria.MonoLaunch.<>c__DisplayClass1_0.<Main>b__1() in tModLoader\Terraria\MonoLaunch.cs:line 65
+   at Terraria.MonoLaunch.Main(String[] args) in tModLoader\Terraria\MonoLaunch.cs:line 72
+
+[09:31:21.869] [Main Thread/WARN] [tML]: 静默捕获异常: 
+System.IO.IOException: NBT Serialization (key=CompletedQuestIDs,value=System.Collections.Generic.HashSet`1[System.String])
+   at Terraria.ModLoader.IO.TagCompound.Set(String key, Object value, Boolean replace) in tModLoader\Terraria\ModLoader\IO\TagCompound.cs:line 83
+   at VerminLordMod.Common.Systems.QuestTrackerPlayer.SaveData(TagCompound tag) in VerminLordMod/Common/Systems/QuestSystem.cs:line 386
+   at Terraria.ModLoader.IO.PlayerIO.SaveModData(Player player) in tModLoader\Terraria\ModLoader\IO\PlayerIO.cs:line 216
+   at Terraria.ModLoader.IO.PlayerIO.SaveData(Player player) in tModLoader\Terraria\ModLoader\IO\PlayerIO.cs:line 44
+   at Terraria.Player.SerializedClone() in tModLoader\Terraria\Player.cs:line 45488
+   at Terraria.GameContent.UI.Elements.UICharacter..ctor(Player player, Boolean animated, Boolean hasBackPanel, Single characterScale, Boolean useAClone) in tModLoader\Terraria\GameContent\UI\Elements\UICharacter.cs:line 27
+   at Terraria.GameContent.UI.Elements.UICharacterListItem..ctor(PlayerFileData data, Int32 snapPointIndex) in tModLoader\Terraria\GameContent\UI\Elements\UICharacterListItem.cs:line 57
+   at Terraria.GameContent.UI.States.UICharacterSelect.UpdatePlayersList() in tModLoader\Terraria\GameContent\UI\States\UICharacterSelect.cs:line 158
+   at Terraria.GameContent.UI.States.UICharacterSelect.OnActivate() in tModLoader\Terraria\GameContent\UI\States\UICharacterSelect.cs:line 137
+   at Terraria.UI.UIElement.Activate() in tModLoader\Terraria\UI\UIElement.cs:line 537
+   at Terraria.UI.UserInterface.SetState(UIState state) in tModLoader\Terraria\UI\UserInterface.cs:line 262
+   at Terraria.Main.OpenCharacterSelectUI() in tModLoader\Terraria\Main.cs:line 45201
+   at Terraria.Main.DrawMenu(GameTime gameTime) in tModLoader\Terraria\Main.cs:line 42210
+   at DMD<DMD<>?31397867::Terraria.Main::DoDraw>(Main this, GameTime gameTime)
+   at SyncProxy<System.Void Terraria.Main:DoDraw(Microsoft.Xna.Framework.GameTime)>(Main , GameTime )
+   at Terraria.Main.Draw_Inner(GameTime gameTime) in tModLoader\Terraria\Main.cs:line 53228
+   at Terraria.Main.Draw(GameTime gameTime) in tModLoader\Terraria\Main.cs:line 53215
+   at Terraria.MonoLaunch.<>c__DisplayClass1_0.<Main>b__1() in tModLoader\Terraria\MonoLaunch.cs:line 65
+   at Terraria.MonoLaunch.Main(String[] args) in tModLoader\Terraria\MonoLaunch.cs:line 72
+
+[09:31:21.869] [Main Thread/INFO] [tML]: 在保存自定义人物数据时遇到错误，由于“VerminLordMod”模组中的“QuestTrackerPlayer.SaveData”出现错误，与该类相关的数据将不会保存：
+
+System.IO.IOException: NBT Serialization (key=CompletedQuestIDs,value=System.Collections.Generic.HashSet`1[System.String])
+ ---> System.IO.IOException: Invalid NBT payload type 'System.Collections.Generic.HashSet`1[System.String]'
+   at Terraria.ModLoader.IO.TagIO.GetPayloadId(Type t) in tModLoader\Terraria\ModLoader\IO\TagIO.cs:line 185
+   at Terraria.ModLoader.IO.TagIO.Serialize(Object value) in tModLoader\Terraria\ModLoader\IO\TagIO.cs:line 221
+   at Terraria.ModLoader.IO.TagCompound.Set(String key, Object value, Boolean replace) in tModLoader\Terraria\ModLoader\IO\TagCompound.cs:line 83
+   --- End of inner exception stack trace ---
+   at Terraria.ModLoader.IO.TagCompound.Set(String key, Object value, Boolean replace) in tModLoader\Terraria\ModLoader\IO\TagCompound.cs:line 89
+   at VerminLordMod.Common.Systems.QuestTrackerPlayer.SaveData(TagCompound tag) in VerminLordMod/Common/Systems/QuestSystem.cs:line 386
+   at Terraria.ModLoader.IO.PlayerIO.SaveModData(Player player) in tModLoader\Terraria\ModLoader\IO\PlayerIO.cs:line 216
+[09:31:21.877] [Main Thread/INFO] [tML]: 在保存自定义人物数据时遇到错误，由于“VerminLordMod”模组中的“QuestTrackerPlayer.SaveData”出现错误，与该类相关的数据将不会保存：
+
+System.IO.IOException: NBT Serialization (key=CompletedQuestIDs,value=System.Collections.Generic.HashSet`1[System.String])
+ ---> System.IO.IOException: Invalid NBT payload type 'System.Collections.Generic.HashSet`1[System.String]'
+   at Terraria.ModLoader.IO.TagIO.GetPayloadId(Type t) in tModLoader\Terraria\ModLoader\IO\TagIO.cs:line 185
+   at Terraria.ModLoader.IO.TagIO.Serialize(Object value) in tModLoader\Terraria\ModLoader\IO\TagIO.cs:line 221
+   at Terraria.ModLoader.IO.TagCompound.Set(String key, Object value, Boolean replace) in tModLoader\Terraria\ModLoader\IO\TagCompound.cs:line 83
+   --- End of inner exception stack trace ---
+   at Terraria.ModLoader.IO.TagCompound.Set(String key, Object value, Boolean replace) in tModLoader\Terraria\ModLoader\IO\TagCompound.cs:line 89
+   at VerminLordMod.Common.Systems.QuestTrackerPlayer.SaveData(TagCompound tag) in VerminLordMod/Common/Systems/QuestSystem.cs:line 386
+   at Terraria.ModLoader.IO.PlayerIO.SaveModData(Player player) in tModLoader\Terraria\ModLoader\IO\PlayerIO.cs:line 216
+[09:31:21.880] [Main Thread/INFO] [tML]: 在保存自定义人物数据时遇到错误，由于“VerminLordMod”模组中的“QuestTrackerPlayer.SaveData”出现错误，与该类相关的数据将不会保存：
+
+System.IO.IOException: NBT Serialization (key=CompletedQuestIDs,value=System.Collections.Generic.HashSet`1[System.String])
+ ---> System.IO.IOException: Invalid NBT payload type 'System.Collections.Generic.HashSet`1[System.String]'
+   at Terraria.ModLoader.IO.TagIO.GetPayloadId(Type t) in tModLoader\Terraria\ModLoader\IO\TagIO.cs:line 185
+   at Terraria.ModLoader.IO.TagIO.Serialize(Object value) in tModLoader\Terraria\ModLoader\IO\TagIO.cs:line 221
+   at Terraria.ModLoader.IO.TagCompound.Set(String key, Object value, Boolean replace) in tModLoader\Terraria\ModLoader\IO\TagCompound.cs:line 83
+   --- End of inner exception stack trace ---
+   at Terraria.ModLoader.IO.TagCompound.Set(String key, Object value, Boolean replace) in tModLoader\Terraria\ModLoader\IO\TagCompound.cs:line 89
+   at VerminLordMod.Common.Systems.QuestTrackerPlayer.SaveData(TagCompound tag) in VerminLordMod/Common/Systems/QuestSystem.cs:line 386
+   at Terraria.ModLoader.IO.PlayerIO.SaveModData(Player player) in tModLoader\Terraria\ModLoader\IO\PlayerIO.cs:line 216
+[09:31:21.884] [Main Thread/WARN] [tML]: 静默捕获异常: 
+System.IO.IOException: Invalid NBT payload type 'System.Collections.Generic.HashSet`1[System.String]'
+   at Terraria.ModLoader.IO.TagIO.GetPayloadId(Type t) in tModLoader\Terraria\ModLoader\IO\TagIO.cs:line 185
+   at Terraria.ModLoader.IO.TagIO.Serialize(Object value) in tModLoader\Terraria\ModLoader\IO\TagIO.cs:line 221
+   at Terraria.ModLoader.IO.TagCompound.Set(String key, Object value, Boolean replace) in tModLoader\Terraria\ModLoader\IO\TagCompound.cs:line 83
+   at VerminLordMod.Common.Systems.QuestTrackerPlayer.SaveData(TagCompound tag) in VerminLordMod/Common/Systems/QuestSystem.cs:line 386
+   at Terraria.ModLoader.IO.PlayerIO.SaveModData(Player player) in tModLoader\Terraria\ModLoader\IO\PlayerIO.cs:line 216
+   at Terraria.ModLoader.IO.PlayerIO.SaveData(Player player) in tModLoader\Terraria\ModLoader\IO\PlayerIO.cs:line 44
+   at Terraria.Player.SerializedClone() in tModLoader\Terraria\Player.cs:line 45488
+   at Terraria.GameContent.UI.Elements.UICharacter..ctor(Player player, Boolean animated, Boolean hasBackPanel, Single characterScale, Boolean useAClone) in tModLoader\Terraria\GameContent\UI\Elements\UICharacter.cs:line 27
+   at Terraria.GameContent.UI.Elements.UICharacterListItem..ctor(PlayerFileData data, Int32 snapPointIndex) in tModLoader\Terraria\GameContent\UI\Elements\UICharacterListItem.cs:line 57
+   at Terraria.GameContent.UI.States.UICharacterSelect.UpdatePlayersList() in tModLoader\Terraria\GameContent\UI\States\UICharacterSelect.cs:line 158
+   at Terraria.GameContent.UI.States.UICharacterSelect.UpdateFavoritesCache() in tModLoader\Terraria\GameContent\UI\States\UICharacterSelect.cs:line 217
+   at Terraria.GameContent.UI.States.UICharacterSelect.Draw(SpriteBatch spriteBatch) in tModLoader\Terraria\GameContent\UI\States\UICharacterSelect.cs:line 175
+   at Terraria.Main.DrawMenu(GameTime gameTime) in tModLoader\Terraria\Main.cs:line 44012
+   at DMD<DMD<>?31397867::Terraria.Main::DoDraw>(Main this, GameTime gameTime)
+   at SyncProxy<System.Void Terraria.Main:DoDraw(Microsoft.Xna.Framework.GameTime)>(Main , GameTime )
+   at Terraria.Main.Draw_Inner(GameTime gameTime) in tModLoader\Terraria\Main.cs:line 53228
+   at Terraria.Main.Draw(GameTime gameTime) in tModLoader\Terraria\Main.cs:line 53215
+   at Microsoft.Xna.Framework.Game.Tick() in D:\a\tModLoader\tModLoader\FNA\src\Game.cs:line 562
+   at Microsoft.Xna.Framework.Game.RunLoop() in D:\a\tModLoader\tModLoader\FNA\src\Game.cs:line 878
+   at Microsoft.Xna.Framework.Game.Run() in D:\a\tModLoader\tModLoader\FNA\src\Game.cs:line 419
+   at Terraria.Program.RunGame() in tModLoader\Terraria\Program.cs:line 266
+   at Terraria.Program.LaunchGame_(Boolean isServer) in tModLoader\Terraria\Program.cs:line 240
+   at Terraria.Program.LaunchGame(String[] args, Boolean monoArgs) in tModLoader\Terraria\Program.cs:line 213
+   at Terraria.MonoLaunch.Main_End(String[] args) in tModLoader\Terraria\MonoLaunch.cs:line 79
+   at Terraria.MonoLaunch.<>c__DisplayClass1_0.<Main>b__1() in tModLoader\Terraria\MonoLaunch.cs:line 65
+   at Terraria.MonoLaunch.Main(String[] args) in tModLoader\Terraria\MonoLaunch.cs:line 72
+
+[09:31:21.885] [Main Thread/WARN] [tML]: 静默捕获异常: 
+System.IO.IOException: NBT Serialization (key=CompletedQuestIDs,value=System.Collections.Generic.HashSet`1[System.String])
+   at Terraria.ModLoader.IO.TagCompound.Set(String key, Object value, Boolean replace) in tModLoader\Terraria\ModLoader\IO\TagCompound.cs:line 83
+   at VerminLordMod.Common.Systems.QuestTrackerPlayer.SaveData(TagCompound tag) in VerminLordMod/Common/Systems/QuestSystem.cs:line 386
+   at Terraria.ModLoader.IO.PlayerIO.SaveModData(Player player) in tModLoader\Terraria\ModLoader\IO\PlayerIO.cs:line 216
+   at Terraria.ModLoader.IO.PlayerIO.SaveData(Player player) in tModLoader\Terraria\ModLoader\IO\PlayerIO.cs:line 44
+   at Terraria.Player.SerializedClone() in tModLoader\Terraria\Player.cs:line 45488
+   at Terraria.GameContent.UI.Elements.UICharacter..ctor(Player player, Boolean animated, Boolean hasBackPanel, Single characterScale, Boolean useAClone) in tModLoader\Terraria\GameContent\UI\Elements\UICharacter.cs:line 27
+   at Terraria.GameContent.UI.Elements.UICharacterListItem..ctor(PlayerFileData data, Int32 snapPointIndex) in tModLoader\Terraria\GameContent\UI\Elements\UICharacterListItem.cs:line 57
+   at Terraria.GameContent.UI.States.UICharacterSelect.UpdatePlayersList() in tModLoader\Terraria\GameContent\UI\States\UICharacterSelect.cs:line 158
+   at Terraria.GameContent.UI.States.UICharacterSelect.UpdateFavoritesCache() in tModLoader\Terraria\GameContent\UI\States\UICharacterSelect.cs:line 217
+   at Terraria.GameContent.UI.States.UICharacterSelect.Draw(SpriteBatch spriteBatch) in tModLoader\Terraria\GameContent\UI\States\UICharacterSelect.cs:line 175
+   at Terraria.Main.DrawMenu(GameTime gameTime) in tModLoader\Terraria\Main.cs:line 44012
+   at DMD<DMD<>?31397867::Terraria.Main::DoDraw>(Main this, GameTime gameTime)
+   at SyncProxy<System.Void Terraria.Main:DoDraw(Microsoft.Xna.Framework.GameTime)>(Main , GameTime )
+   at Terraria.Main.Draw_Inner(GameTime gameTime) in tModLoader\Terraria\Main.cs:line 53228
+   at Terraria.Main.Draw(GameTime gameTime) in tModLoader\Terraria\Main.cs:line 53215
+   at Microsoft.Xna.Framework.Game.Tick() in D:\a\tModLoader\tModLoader\FNA\src\Game.cs:line 562
+   at Microsoft.Xna.Framework.Game.RunLoop() in D:\a\tModLoader\tModLoader\FNA\src\Game.cs:line 878
+   at Microsoft.Xna.Framework.Game.Run() in D:\a\tModLoader\tModLoader\FNA\src\Game.cs:line 419
+   at Terraria.Program.RunGame() in tModLoader\Terraria\Program.cs:line 266
+   at Terraria.Program.LaunchGame_(Boolean isServer) in tModLoader\Terraria\Program.cs:line 240
+   at Terraria.Program.LaunchGame(String[] args, Boolean monoArgs) in tModLoader\Terraria\Program.cs:line 213
+   at Terraria.MonoLaunch.Main_End(String[] args) in tModLoader\Terraria\MonoLaunch.cs:line 79
+   at Terraria.MonoLaunch.<>c__DisplayClass1_0.<Main>b__1() in tModLoader\Terraria\MonoLaunch.cs:line 65
+   at Terraria.MonoLaunch.Main(String[] args) in tModLoader\Terraria\MonoLaunch.cs:line 72
+
+[09:31:21.885] [Main Thread/INFO] [tML]: 在保存自定义人物数据时遇到错误，由于“VerminLordMod”模组中的“QuestTrackerPlayer.SaveData”出现错误，与该类相关的数据将不会保存：
+
+System.IO.IOException: NBT Serialization (key=CompletedQuestIDs,value=System.Collections.Generic.HashSet`1[System.String])
+ ---> System.IO.IOException: Invalid NBT payload type 'System.Collections.Generic.HashSet`1[System.String]'
+   at Terraria.ModLoader.IO.TagIO.GetPayloadId(Type t) in tModLoader\Terraria\ModLoader\IO\TagIO.cs:line 185
+   at Terraria.ModLoader.IO.TagIO.Serialize(Object value) in tModLoader\Terraria\ModLoader\IO\TagIO.cs:line 221
+   at Terraria.ModLoader.IO.TagCompound.Set(String key, Object value, Boolean replace) in tModLoader\Terraria\ModLoader\IO\TagCompound.cs:line 83
+   --- End of inner exception stack trace ---
+   at Terraria.ModLoader.IO.TagCompound.Set(String key, Object value, Boolean replace) in tModLoader\Terraria\ModLoader\IO\TagCompound.cs:line 89
+   at VerminLordMod.Common.Systems.QuestTrackerPlayer.SaveData(TagCompound tag) in VerminLordMod/Common/Systems/QuestSystem.cs:line 386
+   at Terraria.ModLoader.IO.PlayerIO.SaveModData(Player player) in tModLoader\Terraria\ModLoader\IO\PlayerIO.cs:line 216
+[09:31:21.889] [Main Thread/INFO] [tML]: 在保存自定义人物数据时遇到错误，由于“VerminLordMod”模组中的“QuestTrackerPlayer.SaveData”出现错误，与该类相关的数据将不会保存：
+
+System.IO.IOException: NBT Serialization (key=CompletedQuestIDs,value=System.Collections.Generic.HashSet`1[System.String])
+ ---> System.IO.IOException: Invalid NBT payload type 'System.Collections.Generic.HashSet`1[System.String]'
+   at Terraria.ModLoader.IO.TagIO.GetPayloadId(Type t) in tModLoader\Terraria\ModLoader\IO\TagIO.cs:line 185
+   at Terraria.ModLoader.IO.TagIO.Serialize(Object value) in tModLoader\Terraria\ModLoader\IO\TagIO.cs:line 221
+   at Terraria.ModLoader.IO.TagCompound.Set(String key, Object value, Boolean replace) in tModLoader\Terraria\ModLoader\IO\TagCompound.cs:line 83
+   --- End of inner exception stack trace ---
+   at Terraria.ModLoader.IO.TagCompound.Set(String key, Object value, Boolean replace) in tModLoader\Terraria\ModLoader\IO\TagCompound.cs:line 89
+   at VerminLordMod.Common.Systems.QuestTrackerPlayer.SaveData(TagCompound tag) in VerminLordMod/Common/Systems/QuestSystem.cs:line 386
+   at Terraria.ModLoader.IO.PlayerIO.SaveModData(Player player) in tModLoader\Terraria\ModLoader\IO\PlayerIO.cs:line 216
+[09:31:21.893] [Main Thread/INFO] [tML]: 在保存自定义人物数据时遇到错误，由于“VerminLordMod”模组中的“QuestTrackerPlayer.SaveData”出现错误，与该类相关的数据将不会保存：
+
+System.IO.IOException: NBT Serialization (key=CompletedQuestIDs,value=System.Collections.Generic.HashSet`1[System.String])
+ ---> System.IO.IOException: Invalid NBT payload type 'System.Collections.Generic.HashSet`1[System.String]'
+   at Terraria.ModLoader.IO.TagIO.GetPayloadId(Type t) in tModLoader\Terraria\ModLoader\IO\TagIO.cs:line 185
+   at Terraria.ModLoader.IO.TagIO.Serialize(Object value) in tModLoader\Terraria\ModLoader\IO\TagIO.cs:line 221
+   at Terraria.ModLoader.IO.TagCompound.Set(String key, Object value, Boolean replace) in tModLoader\Terraria\ModLoader\IO\TagCompound.cs:line 83
+   --- End of inner exception stack trace ---
+   at Terraria.ModLoader.IO.TagCompound.Set(String key, Object value, Boolean replace) in tModLoader\Terraria\ModLoader\IO\TagCompound.cs:line 89
+   at VerminLordMod.Common.Systems.QuestTrackerPlayer.SaveData(TagCompound tag) in VerminLordMod/Common/Systems/QuestSystem.cs:line 386
+   at Terraria.ModLoader.IO.PlayerIO.SaveModData(Player player) in tModLoader\Terraria\ModLoader\IO\PlayerIO.cs:line 216
+[09:31:23.715] [.NET TP Worker/INFO] [Terraria]: Loading World: test, IsCloud=True, Width: 6400, Height: 1800, Evil: 1, GameMode: 1
+[09:31:23.773] [.NET TP Worker/INFO] [StatusText]: 正在加载世界数据：
+[09:31:25.076] [.NET TP Worker/INFO] [StatusText]: 正在安置液体
+[09:31:25.656] [.NET TP Worker/INFO] [StatusText]: 正在加载地图数据：
+[09:31:25.732] [.NET TP Worker/INFO] [StatusText]: 正在绘制地图：
+[09:31:25.904] [Main Thread/INFO] [Terraria]: Entering world with player: 1, IsCloud=True, Width: 6400, Height: 1800, Evil: 1, GameMode: 1
+[09:33:36.212] [.NET TP Worker/INFO] [StatusText]: 正在保存地图数据：
+[09:33:36.458] [.NET TP Worker/WARN] [tML]: 静默捕获异常: 
+System.IO.IOException: Invalid NBT payload type 'System.Collections.Generic.HashSet`1[System.String]'
+   at Terraria.ModLoader.IO.TagIO.GetPayloadId(Type t) in tModLoader\Terraria\ModLoader\IO\TagIO.cs:line 185
+   at Terraria.ModLoader.IO.TagIO.Serialize(Object value) in tModLoader\Terraria\ModLoader\IO\TagIO.cs:line 221
+   at Terraria.ModLoader.IO.TagCompound.Set(String key, Object value, Boolean replace) in tModLoader\Terraria\ModLoader\IO\TagCompound.cs:line 83
+   at VerminLordMod.Common.Systems.QuestTrackerPlayer.SaveData(TagCompound tag) in VerminLordMod/Common/Systems/QuestSystem.cs:line 386
+   at Terraria.ModLoader.IO.PlayerIO.SaveModData(Player player) in tModLoader\Terraria\ModLoader\IO\PlayerIO.cs:line 216
+   at Terraria.ModLoader.IO.PlayerIO.SaveData(Player player) in tModLoader\Terraria\ModLoader\IO\PlayerIO.cs:line 44
+   at Terraria.Player.InternalSavePlayerFile(PlayerFileData playerFile) in tModLoader\Terraria\Player.cs:line 45088
+   at Terraria.Player.<>c__DisplayClass1967_0.<SavePlayer>b__0() in tModLoader\Terraria\Player.cs:line 45048
+   at Terraria.Utilities.FileUtilities.ProtectedInvoke(Action action) in tModLoader\Terraria\Utilities\FileUtilities.cs:line 207
+   at DMD<DMD<>?47013098::Terraria.Player::SavePlayer>(PlayerFileData playerFile, Boolean skipMapSave)
+   at SyncProxy<System.Void Terraria.Player:SavePlayer(Terraria.IO.PlayerFileData, System.Boolean)>(PlayerFileData , Boolean )
+   at Terraria.WorldGen.SaveAndQuitCallBack(Object threadContext) in tModLoader\Terraria\WorldGen.cs:line 2621
+   at System.Threading.QueueUserWorkItemCallback.Execute()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading.PortableThreadPool.WorkerThread.WorkerThreadStart()
+
+[09:33:36.458] [.NET TP Worker/WARN] [tML]: 静默捕获异常: 
+System.IO.IOException: NBT Serialization (key=CompletedQuestIDs,value=System.Collections.Generic.HashSet`1[System.String])
+   at Terraria.ModLoader.IO.TagCompound.Set(String key, Object value, Boolean replace) in tModLoader\Terraria\ModLoader\IO\TagCompound.cs:line 83
+   at VerminLordMod.Common.Systems.QuestTrackerPlayer.SaveData(TagCompound tag) in VerminLordMod/Common/Systems/QuestSystem.cs:line 386
+   at Terraria.ModLoader.IO.PlayerIO.SaveModData(Player player) in tModLoader\Terraria\ModLoader\IO\PlayerIO.cs:line 216
+   at Terraria.ModLoader.IO.PlayerIO.SaveData(Player player) in tModLoader\Terraria\ModLoader\IO\PlayerIO.cs:line 44
+   at Terraria.Player.InternalSavePlayerFile(PlayerFileData playerFile) in tModLoader\Terraria\Player.cs:line 45088
+   at Terraria.Player.<>c__DisplayClass1967_0.<SavePlayer>b__0() in tModLoader\Terraria\Player.cs:line 45048
+   at Terraria.Utilities.FileUtilities.ProtectedInvoke(Action action) in tModLoader\Terraria\Utilities\FileUtilities.cs:line 207
+   at DMD<DMD<>?47013098::Terraria.Player::SavePlayer>(PlayerFileData playerFile, Boolean skipMapSave)
+   at SyncProxy<System.Void Terraria.Player:SavePlayer(Terraria.IO.PlayerFileData, System.Boolean)>(PlayerFileData , Boolean )
+   at Terraria.WorldGen.SaveAndQuitCallBack(Object threadContext) in tModLoader\Terraria\WorldGen.cs:line 2621
+   at System.Threading.QueueUserWorkItemCallback.Execute()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading.PortableThreadPool.WorkerThread.WorkerThreadStart()
+
+[09:33:36.459] [.NET TP Worker/INFO] [tML]: 在保存自定义人物数据时遇到错误，由于“VerminLordMod”模组中的“QuestTrackerPlayer.SaveData”出现错误，与该类相关的数据将不会保存：
+
+System.IO.IOException: NBT Serialization (key=CompletedQuestIDs,value=System.Collections.Generic.HashSet`1[System.String])
+ ---> System.IO.IOException: Invalid NBT payload type 'System.Collections.Generic.HashSet`1[System.String]'
+   at Terraria.ModLoader.IO.TagIO.GetPayloadId(Type t) in tModLoader\Terraria\ModLoader\IO\TagIO.cs:line 185
+   at Terraria.ModLoader.IO.TagIO.Serialize(Object value) in tModLoader\Terraria\ModLoader\IO\TagIO.cs:line 221
+   at Terraria.ModLoader.IO.TagCompound.Set(String key, Object value, Boolean replace) in tModLoader\Terraria\ModLoader\IO\TagCompound.cs:line 83
+   --- End of inner exception stack trace ---
+   at Terraria.ModLoader.IO.TagCompound.Set(String key, Object value, Boolean replace) in tModLoader\Terraria\ModLoader\IO\TagCompound.cs:line 89
+   at VerminLordMod.Common.Systems.QuestTrackerPlayer.SaveData(TagCompound tag) in VerminLordMod/Common/Systems/QuestSystem.cs:line 386
+   at Terraria.ModLoader.IO.PlayerIO.SaveModData(Player player) in tModLoader\Terraria\ModLoader\IO\PlayerIO.cs:line 216
+[09:33:36.459] [.NET TP Worker/INFO] [StatusText]: 正在备份玩家文件……
+[09:33:36.483] [.NET TP Worker/DEBUG] [tML]: string tModLoader/players/1.plr.bak does not contain string /home/fsx/.local/share/Steam/userdata/1017296889/105600/remote. Is this correct?
+[09:33:36.483] [.NET TP Worker/DEBUG] [tML]: string tModLoader/players/1.plr does not contain string /home/fsx/.local/share/Steam/userdata/1017296889/105600/remote. Is this correct?
+[09:33:36.486] [.NET TP Worker/DEBUG] [tML]: string tModLoader/players/1.tplr.bak does not contain string /home/fsx/.local/share/Steam/userdata/1017296889/105600/remote. Is this correct?
+[09:33:36.486] [.NET TP Worker/DEBUG] [tML]: string tModLoader/players/1.tplr does not contain string /home/fsx/.local/share/Steam/userdata/1017296889/105600/remote. Is this correct?
+[09:33:36.928] [.NET TP Worker/INFO] [StatusText]: 正在保存世界数据：
+[09:33:37.816] [.NET TP Worker/INFO] [StatusText]: 正在验证世界保存数据：
+[09:33:37.940] [.NET TP Worker/INFO] [StatusText]: 正在备份世界文件
+[09:33:38.497] [.NET TP Worker/INFO] [StatusText]: 保存修改后的世界数据
+[09:33:38.498] [.NET TP Worker/DEBUG] [tML]: string tModLoader/worlds/test.twld.bak does not contain string /home/fsx/.local/share/Steam/userdata/1017296889/105600/remote. Is this correct?
+[09:33:38.498] [.NET TP Worker/DEBUG] [tML]: string tModLoader/worlds/test.twld does not contain string /home/fsx/.local/share/Steam/userdata/1017296889/105600/remote. Is this correct?
+[09:33:42.834] [Main Thread/DEBUG] [tML]: Process.Start (UseShellExecute = True): "xdg-open" tModLoader-Logs

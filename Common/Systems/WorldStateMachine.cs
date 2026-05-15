@@ -135,21 +135,25 @@ namespace VerminLordMod.Common.Systems
             {
                 var hts = HeavenTribulationSystem.Instance;
                 if (hts == null) return false;
-                foreach (var state in hts.PlayerTribulations.Values)
+                foreach (var trib in hts.ActiveTribulations)
                 {
-                    if (state.IsActive) return true;
+                    if (!trib.IsComplete) return true;
                 }
                 return false;
             }
         }
 
-        /// <summary> 获取指定玩家的天劫状态 </summary>
-        public static HeavenTribulationSystem.TribulationState GetPlayerTribulationState(Player player)
+        /// <summary> 获取指定玩家的天劫实例 </summary>
+        public static TribulationInstance GetPlayerTribulation(Player player)
         {
             var hts = HeavenTribulationSystem.Instance;
             if (hts == null) return null;
-            hts.PlayerTribulations.TryGetValue(player.whoAmI, out var state);
-            return state;
+            foreach (var trib in hts.ActiveTribulations)
+            {
+                if (trib.TargetPlayerID == player.whoAmI)
+                    return trib;
+            }
+            return null;
         }
 
         /// <summary> 获取活跃天劫类型 </summary>
@@ -157,9 +161,9 @@ namespace VerminLordMod.Common.Systems
         {
             var hts = HeavenTribulationSystem.Instance;
             if (hts == null) return null;
-            foreach (var state in hts.PlayerTribulations.Values)
+            foreach (var trib in hts.ActiveTribulations)
             {
-                if (state.IsActive) return state.Type;
+                if (!trib.IsComplete) return trib.Type;
             }
             return null;
         }
