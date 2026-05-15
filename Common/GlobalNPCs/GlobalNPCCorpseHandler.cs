@@ -238,22 +238,6 @@ namespace VerminLordMod.Common.GlobalNPCs
         }
 
         /// <summary>
-        /// 查找玩家附近的尸体
-        /// </summary>
-        public static NpcCorpse FindCorpseNearPlayer(Player player, float radius = 60f)
-        {
-            foreach (Projectile proj in Main.projectile)
-            {
-                if (proj.active && proj.ModProjectile is NpcCorpse corpse)
-                {
-                    if (Vector2.Distance(player.Center, corpse.Projectile.Center) < radius)
-                        return corpse;
-                }
-            }
-            return null;
-        }
-
-        /// <summary>
         /// 查找 NPC 附近的尸体
         /// </summary>
         public static NpcCorpse FindCorpseNearNPC(NPC npc, float radius = 300f)

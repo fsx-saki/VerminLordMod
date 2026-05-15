@@ -271,7 +271,7 @@ namespace VerminLordMod.Common.Systems
             if (player.whoAmI != Main.myPlayer) return false;
 
             // 查找附近的尸体
-            NpcCorpse corpse = FindCorpseNearPlayer(player, InteractionRange);
+            NpcCorpse corpse = NpcDeathHandler.FindCorpseNearPlayer(player, InteractionRange);
             if (corpse == null) return false;
 
             // 检测鼠标右键的上升沿（按下瞬间，避免持续触发）
@@ -341,22 +341,6 @@ namespace VerminLordMod.Common.Systems
                     CloseLootUI(player);
                 }
             }
-        }
-
-        /// <summary>
-        /// 查找玩家附近的尸体（包括怪物和玩家尸体）
-        /// </summary>
-        private static NpcCorpse FindCorpseNearPlayer(Player player, float radius)
-        {
-            foreach (Projectile proj in Main.projectile)
-            {
-                if (proj.active && proj.ModProjectile is NpcCorpse corpse)
-                {
-                    if (Vector2.Distance(player.Center, corpse.Projectile.Center) < radius)
-                        return corpse;
-                }
-            }
-            return null;
         }
 
         // ============================================================

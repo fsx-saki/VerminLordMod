@@ -144,4 +144,25 @@ public static class UIRendering
         );
         Utils.DrawBorderString(sb, text, pos, color, scale);
     }
+
+    /// <summary>
+    /// 绘制扁平进度条（背景 + 边框 + 渐变填充）
+    /// </summary>
+    public static void DrawProgressBar(SpriteBatch sb, Rectangle rect, float quotient,
+        Color bgColor, Color borderColor, Color fillColorA, Color fillColorB, int radius = 6)
+    {
+        DrawRoundedRect(sb, rect, bgColor, radius);
+
+        var borderRect = rect;
+        borderRect.Inflate(1, 1);
+        DrawBorder(sb, borderRect, 1, borderColor);
+
+        int fillWidth = (int)((rect.Width - 4) * MathHelper.Clamp(quotient, 0f, 1f));
+        if (fillWidth > 0)
+        {
+            var fillRect = new Rectangle(rect.X + 2, rect.Y + 2, fillWidth, rect.Height - 4);
+            Color fillColor = Color.Lerp(fillColorA, fillColorB, quotient * 0.5f + 0.25f);
+            sb.Draw(Pixel, fillRect, fillColor);
+        }
+    }
 }

@@ -41,30 +41,35 @@ public class DialogueTreeUI
     private float _scrollOffset;
     private const float ScrollSpeed = 40f;
 
-    // ===== 颜色主题（青绿色，与SimplePanel的淡紫色区分） =====
-    private static readonly Color PanelBg = new(30, 40, 60, 230);
-    private static readonly Color TitleBarBg = new(50, 70, 100, 240);
-    private static readonly Color BorderColor = new(80, 120, 180, 200);
-    private static readonly Color TextBg = new(20, 30, 50, 200);
-    private static readonly Color TextColor = new(220, 230, 255, 255);
-    private static readonly Color OptionBgNormal = new(50, 80, 120, 200);
-    private static readonly Color OptionBgHover = new(70, 110, 160, 220);
-    private static readonly Color OptionTextColor = new(230, 240, 255, 255);
-    private static readonly Color ScrollbarBg = new(40, 50, 70, 180);
-    private static readonly Color ScrollbarThumb = new(80, 120, 180, 200);
-    private static readonly Color CloseBtnColor = new(200, 80, 80, 200);
-    private static readonly Color CloseBtnHover = new(255, 100, 100, 240);
+    // ===== 颜色主题（使用 UIStyles 统一风格） =====
+    private static readonly Color PanelBg = UIStyles.PanelBg;
+    private static readonly Color TitleBarBg = UIStyles.TitleBarBg;
+    private static readonly Color BorderColor = UIStyles.Border;
+    private static readonly Color TextBg = new(22, 24, 32, 200);
+    private static readonly Color TextColor = UIStyles.TextMain;
+    private static readonly Color OptionBgNormal = UIStyles.BtnDefault;
+    private static readonly Color OptionBgHover = UIStyles.ListItemHover;
+    private static readonly Color OptionTextColor = UIStyles.TextMain;
+    private static readonly Color ScrollbarBg = UIStyles.ScrollbarBg;
+    private static readonly Color ScrollbarThumb = UIStyles.ScrollbarThumb;
+    private static readonly Color CloseBtnColor = UIStyles.BtnDanger;
+    private static readonly Color CloseBtnHover = UIStyles.HoverOver(UIStyles.BtnDanger);
 
     // ===== 尺寸常量 =====
-    private const int PanelWidth = 480;
-    private const int PanelHeight = 420;
+    private const int PanelWidth = 520;
+    private const int PanelHeight = 500;
     private const int TitleBarHeight = 32;
-    private const int TextAreaHeight = 120;
-    private const int OptionHeight = 36;
+    private const int TextAreaHeight = 140;
+    private const int OptionHeight = 40;
     private const int OptionSpacing = 4;
     private const int Padding = 10;
     private const int CloseBtnSize = 22;
     private const int CloseBtnMargin = 6;
+    private const float TextScale = 0.75f;
+    private const float OptionTextScale = 0.7f;
+    private const int TextPaddingX = 6;
+    private const int TextPaddingY = 4;
+    private const int LineSpacing = 2;
 
     // ===== 鼠标状态 =====
     private bool _lastMouseLeft;
@@ -78,6 +83,20 @@ public class DialogueTreeUI
 
     // ===== ESC检测 =====
     private bool _escapeWasDown;
+
+    // ===== 键盘导航 =====
+    private int _keyboardSelectedIndex = -1;
+    private Keys[] _lastKeys = Array.Empty<Keys>();
+
+    // ===== 动画 =====
+    private float _openProgress;
+    private float _openVelocity;
+    private const float AnimSpeed = 0.15f;
+    private const float AnimDamping = 0.6f;
+
+    // ===== 文本换行缓存 =====
+    private List<string> _wrappedTextLines = new();
+    private string _lastWrappedText = "";
 
     // ============================================================
     // 打开/关闭
@@ -95,14 +114,15 @@ public class DialogueTreeUI
         _scrollOffset = 0;
         _lastScrollValue = Mouse.GetState().ScrollWheelValue;
         _escapeWasDown = false;
+        _keyboardSelectedIndex = -1;
+        _openProgress = 0f;
+        _openVelocity = 0f;
         _isOpen = true;
 
-        // 计算面板位置（屏幕居中）
         int x = (Main.screenWidth - PanelWidth) / 2;
         int y = (Main.screenHeight - PanelHeight) / 2;
         _panelRect = new Rectangle(x, y, PanelWidth, PanelHeight);
 
-        // 计算文本区域
         _textRect = new Rectangle(
             _panelRect.X + Padding,
             _panelRect.Y + TitleBarHeight + Padding,
@@ -110,6 +130,7 @@ public class DialogueTreeUI
             TextAreaHeight
         );
 
+        WrapNPCText();
         RebuildOptionButtons();
     }
 
@@ -132,9 +153,9 @@ public class DialogueTreeUI
         _npcText = text ?? "";
         _options = options ?? new List<DialogueOption>();
         _scrollOffset = 0;
+        WrapNPCText();
         RebuildOptionButtons();
 
-        // 如果没有可见选项，自动结束对话
         if (_options.Count == 0 && _optionButtons.Count == 0)
         {
             Main.NewText("[对话树] 没有可用选项，对话结束", Color.Yellow);
@@ -148,6 +169,76 @@ public class DialogueTreeUI
     public bool IsOpen => _isOpen;
 
     // ============================================================
+    // 文本换行
+    // ============================================================
+
+    private void WrapNPCText()
+    {
+        _wrappedTextLines.Clear();
+        if (string.IsNullOrEmpty(_npcText))
+        {
+            _lastWrappedText = "";
+            return;
+        }
+
+        _lastWrappedText = _npcText;
+
+        var font = FontAssets.MouseText.Value;
+        float maxWidth = _textRect.Width - TextPaddingX * 2;
+
+        string[] paragraphs = _npcText.Split('\n');
+        foreach (string paragraph in paragraphs)
+        {
+            if (string.IsNullOrEmpty(paragraph))
+            {
+                _wrappedTextLines.Add("");
+                continue;
+            }
+
+            string[] words = paragraph.Split(' ');
+            string currentLine = "";
+
+            foreach (string word in words)
+            {
+                string testLine = string.IsNullOrEmpty(currentLine) ? word : currentLine + " " + word;
+                float testWidth = font.MeasureString(testLine).X * TextScale;
+
+                if (testWidth > maxWidth && !string.IsNullOrEmpty(currentLine))
+                {
+                    _wrappedTextLines.Add(currentLine);
+                    currentLine = word;
+                }
+                else
+                {
+                    currentLine = testLine;
+                }
+            }
+
+            if (!string.IsNullOrEmpty(currentLine))
+                _wrappedTextLines.Add(currentLine);
+        }
+    }
+
+    private string TruncateOptionText(string text, float maxWidth)
+    {
+        if (string.IsNullOrEmpty(text)) return "";
+
+        var font = FontAssets.MouseText.Value;
+        float textWidth = font.MeasureString(text).X * OptionTextScale;
+
+        if (textWidth <= maxWidth) return text;
+
+        for (int i = text.Length - 1; i > 0; i--)
+        {
+            string truncated = text.Substring(0, i) + "...";
+            if (font.MeasureString(truncated).X * OptionTextScale <= maxWidth)
+                return truncated;
+        }
+
+        return "...";
+    }
+
+    // ============================================================
     // 选项按钮重建
     // ============================================================
 
@@ -156,7 +247,8 @@ public class DialogueTreeUI
         _optionButtons.Clear();
 
         int startY = _textRect.Bottom + Padding;
-        int btnWidth = _panelRect.Width - Padding * 2 - 16; // 留出滚动条空间
+        int btnWidth = _panelRect.Width - Padding * 2 - 16;
+        float maxTextWidth = btnWidth - TextPaddingX * 2;
 
         for (int i = 0; i < _options.Count; i++)
         {
@@ -170,14 +262,17 @@ public class DialogueTreeUI
             );
 
             string typeTag = GetOptionTypeTag(option.OptionType);
-            string displayText = string.IsNullOrEmpty(typeTag)
+            string fullText = string.IsNullOrEmpty(typeTag)
                 ? option.Text
                 : $"[{typeTag}] {option.Text}";
+
+            string displayText = TruncateOptionText(fullText, maxTextWidth);
 
             _optionButtons.Add(new OptionButton
             {
                 Rect = rect,
                 Text = displayText,
+                FullText = fullText,
                 Tooltip = option.Tooltip,
                 Index = i,
                 OptionType = option.OptionType
@@ -272,14 +367,15 @@ public class DialogueTreeUI
     {
         if (!_isOpen) return;
 
+        UpdateAnimation();
+        if (_openProgress < 0.95f) return;
+
         var mousePos = Main.MouseScreen;
         bool currentLeft = Main.mouseLeft;
         bool leftClick = currentLeft && !_lastMouseLeft;
 
-        // 标记鼠标被UI使用，防止游戏隐藏鼠标指针
         Main.LocalPlayer.mouseInterface = true;
 
-        // 检测ESC关闭
         if (Main.keyState.IsKeyDown(Keys.Escape) && !_escapeWasDown)
         {
             _escapeWasDown = true;
@@ -289,7 +385,6 @@ public class DialogueTreeUI
         }
         _escapeWasDown = Main.keyState.IsKeyDown(Keys.Escape);
 
-        // 检查关闭按钮
         var closeRect = GetCloseButtonRect();
         _closeBtnHovered = closeRect.Contains(mousePos.ToPoint());
 
@@ -302,10 +397,8 @@ public class DialogueTreeUI
         }
         _closeBtnPressed = false;
 
-        // 拖动标题栏
         UpdateDragging(mousePos, currentLeft, leftClick);
 
-        // 滚轮滚动
         if (_panelRect.Contains(mousePos.ToPoint()))
         {
             int currentScroll = Mouse.GetState().ScrollWheelValue;
@@ -318,7 +411,8 @@ public class DialogueTreeUI
             }
         }
 
-        // 选项按钮点击
+        UpdateKeyboardNavigation();
+
         foreach (var btn in _optionButtons)
         {
             var btnRect = btn.Rect;
@@ -332,6 +426,46 @@ public class DialogueTreeUI
         }
 
         _lastMouseLeft = currentLeft;
+    }
+
+    private void UpdateAnimation()
+    {
+        float target = 1f;
+        float diff = target - _openProgress;
+        _openVelocity += diff * AnimSpeed;
+        _openVelocity *= (1f - AnimDamping);
+        _openProgress += _openVelocity;
+
+        if (Math.Abs(diff) < 0.001f && Math.Abs(_openVelocity) < 0.001f)
+        {
+            _openProgress = target;
+            _openVelocity = 0f;
+        }
+    }
+
+    private void UpdateKeyboardNavigation()
+    {
+        Keys[] currentKeys = Main.keyState.GetPressedKeys();
+
+        bool KeyPressed(Keys k) => Array.IndexOf(currentKeys, k) >= 0 && Array.IndexOf(_lastKeys, k) < 0;
+
+        int selectedIndex = -1;
+        if (KeyPressed(Keys.D1)) selectedIndex = 0;
+        else if (KeyPressed(Keys.D2)) selectedIndex = 1;
+        else if (KeyPressed(Keys.D3)) selectedIndex = 2;
+        else if (KeyPressed(Keys.D4)) selectedIndex = 3;
+        else if (KeyPressed(Keys.D5)) selectedIndex = 4;
+        else if (KeyPressed(Keys.D6)) selectedIndex = 5;
+        else if (KeyPressed(Keys.D7)) selectedIndex = 6;
+        else if (KeyPressed(Keys.D8)) selectedIndex = 7;
+        else if (KeyPressed(Keys.D9)) selectedIndex = 8;
+
+        if (selectedIndex >= 0 && selectedIndex < _options.Count)
+        {
+            OnOptionClicked(selectedIndex);
+        }
+
+        _lastKeys = currentKeys;
     }
 
     private void UpdateDragging(Vector2 mousePos, bool currentLeft, bool leftClick)
@@ -450,62 +584,130 @@ public class DialogueTreeUI
         {
             var pixel = UIRendering.Pixel;
 
-            // ---- 面板背景 ----
-            sb.Draw(pixel, _panelRect, PanelBg);
+            float scale = 0.8f + _openProgress * 0.2f;
+            float alpha = _openProgress;
 
-            // ---- 标题栏 ----
-            var titleRect = GetTitleBarRect();
-            sb.Draw(pixel, titleRect, TitleBarBg);
-
-            // NPC名称
-            Utils.DrawBorderString(sb, _npcName, new Vector2(_panelRect.X + 10, titleRect.Y + 4), Color.White, 0.85f);
-
-            // ---- NPC文本区域 ----
-            sb.Draw(pixel, _textRect, TextBg);
-
-            // NPC文本（简单绘制，不换行）
-            Utils.DrawBorderString(sb, _npcText, new Vector2(_textRect.X + 4, _textRect.Y + 4), TextColor, 0.8f);
-
-            // ---- 选项按钮（使用与Update一致的坐标） ----
-            foreach (var btn in _optionButtons)
+            Rectangle drawPanel = _panelRect;
+            if (_openProgress < 1f)
             {
+                int cx = _panelRect.Center.X;
+                int cy = _panelRect.Center.Y;
+                int w = (int)(_panelRect.Width * scale);
+                int h = (int)(_panelRect.Height * scale);
+                drawPanel = new Rectangle(cx - w / 2, cy - h / 2, w, h);
+            }
+
+            sb.Draw(pixel, drawPanel, PanelBg * alpha);
+            UIRendering.DrawBorder(sb, drawPanel, 1, BorderColor * alpha);
+
+            var titleRect = new Rectangle(drawPanel.X, drawPanel.Y, drawPanel.Width, TitleBarHeight);
+            sb.Draw(pixel, titleRect, TitleBarBg * alpha);
+
+            DrawNPCHead(sb, drawPanel, alpha);
+
+            Utils.DrawBorderString(sb, _npcName,
+                new Vector2(drawPanel.X + 48, titleRect.Y + 4),
+                UIStyles.TitleText * alpha, 0.85f);
+
+            var textRect = new Rectangle(
+                drawPanel.X + Padding,
+                drawPanel.Y + TitleBarHeight + Padding,
+                drawPanel.Width - Padding * 2,
+                TextAreaHeight
+            );
+
+            sb.Draw(pixel, textRect, TextBg * alpha);
+            UIRendering.DrawBorder(sb, textRect, 1, UIStyles.BorderLight * alpha);
+
+            for (int i = 0; i < _wrappedTextLines.Count; i++)
+            {
+                float lineY = textRect.Y + TextPaddingY + i * (FontAssets.MouseText.Value.MeasureString("A").Y * TextScale + LineSpacing);
+                if (lineY + FontAssets.MouseText.Value.MeasureString("A").Y * TextScale > textRect.Bottom - TextPaddingY)
+                    break;
+
+                Utils.DrawBorderString(sb, _wrappedTextLines[i],
+                    new Vector2(textRect.X + TextPaddingX, lineY),
+                    TextColor * alpha, TextScale);
+            }
+
+            int optionsStartY = textRect.Bottom + Padding;
+            for (int idx = 0; idx < _optionButtons.Count; idx++)
+            {
+                var btn = _optionButtons[idx];
                 var drawRect = btn.Rect;
                 drawRect.Y -= (int)_scrollOffset;
 
-                // 只绘制在可见区域内的按钮
-                if (drawRect.Bottom < _textRect.Bottom + Padding || drawRect.Top > _panelRect.Bottom)
+                drawRect = new Rectangle(
+                    drawPanel.X + Padding,
+                    optionsStartY + idx * (OptionHeight + OptionSpacing) - (int)_scrollOffset,
+                    drawPanel.Width - Padding * 2,
+                    OptionHeight
+                );
+
+                if (drawRect.Bottom < textRect.Bottom + Padding || drawRect.Top > drawPanel.Bottom)
                     continue;
 
-                // 检测悬停
                 bool hovered = drawRect.Contains(Main.MouseScreen.ToPoint());
-                Color btnColor = GetOptionBgColor(btn.OptionType, hovered);
-                Color textColor = GetOptionTypeColor(btn.OptionType);
+                Color btnColor = GetOptionBgColor(btn.OptionType, hovered) * alpha;
+                Color textColor = GetOptionTypeColor(btn.OptionType) * alpha;
 
                 sb.Draw(pixel, drawRect, btnColor);
-                Utils.DrawBorderString(sb, btn.Text, new Vector2(drawRect.X + 4, drawRect.Y + 4), textColor, 0.8f);
+                UIRendering.DrawBorder(sb, drawRect, 1, (hovered ? UIStyles.BorderAccent : UIStyles.BorderLight) * alpha);
+
+                string keyHint = idx < 9 ? $"[{idx + 1}] " : "";
+                string btnText = keyHint + btn.Text;
+                var font = FontAssets.MouseText.Value;
+                var textSize = font.MeasureString(btnText) * OptionTextScale;
+                float textY = drawRect.Y + (drawRect.Height - textSize.Y) / 2f;
+                Utils.DrawBorderString(sb, btnText,
+                    new Vector2(drawRect.X + TextPaddingX, textY),
+                    textColor, OptionTextScale);
+
+                if (hovered && !string.IsNullOrEmpty(btn.Tooltip))
+                {
+                    DrawTooltip(sb, btn.Tooltip);
+                }
             }
 
-            // ---- 关闭按钮 ----
-            DrawCloseButton(sb);
+            DrawCloseButton(sb, drawPanel, alpha);
 
-            // ---- 滚动条（选项过多时显示） ----
             int totalOptionHeight = _options.Count * (OptionHeight + OptionSpacing);
-            int optionsAreaHeight = GetOptionsAreaHeight();
+            int optionsAreaHeight = drawPanel.Height - TitleBarHeight - Padding - TextAreaHeight - Padding * 2;
             if (totalOptionHeight > optionsAreaHeight)
             {
                 var scrollArea = new Rectangle(
-                    _panelRect.X + Padding,
-                    _textRect.Bottom + Padding,
-                    _panelRect.Width - Padding * 2,
+                    drawPanel.X + Padding,
+                    textRect.Bottom + Padding,
+                    drawPanel.Width - Padding * 2,
                     optionsAreaHeight
                 );
-                UIRendering.DrawScrollbar(sb, scrollArea, _scrollOffset, totalOptionHeight, ScrollbarBg, ScrollbarThumb);
+                UIRendering.DrawScrollbar(sb, scrollArea, _scrollOffset, totalOptionHeight,
+                    ScrollbarBg * alpha, ScrollbarThumb * alpha);
             }
         }
         catch (Exception ex)
         {
             Main.NewText($"[DialogueTreeUI Draw Error] {ex.Message}", Color.Red);
         }
+    }
+
+    private void DrawNPCHead(SpriteBatch sb, Rectangle panelRect, float alpha)
+    {
+        if (_npcHeadType < 0 || _npcHeadType >= TextureAssets.NpcHead.Length)
+            return;
+
+        var headTex = TextureAssets.NpcHead[_npcHeadType].Value;
+        if (headTex == null) return;
+
+        int headSize = 32;
+        var headRect = new Rectangle(
+            panelRect.X + 8,
+            panelRect.Y + (TitleBarHeight - headSize) / 2,
+            headSize,
+            headSize
+        );
+
+        sb.Draw(headTex, headRect, Color.White * alpha);
     }
 
     // ============================================================
@@ -529,11 +731,43 @@ public class DialogueTreeUI
         return _panelRect.Height - TitleBarHeight - Padding - TextAreaHeight - Padding * 2;
     }
 
-    private void DrawCloseButton(SpriteBatch sb)
+    private void DrawCloseButton(SpriteBatch sb, Rectangle panelRect, float alpha)
     {
-        var rect = GetCloseButtonRect();
-        Color bgColor = _closeBtnPressed ? CloseBtnHover : (_closeBtnHovered ? CloseBtnHover : CloseBtnColor);
-        UIRendering.DrawCloseButton(sb, rect, bgColor, Color.White * 0.9f);
+        int btnX = panelRect.Right - CloseBtnSize - CloseBtnMargin;
+        int btnY = panelRect.Y + (TitleBarHeight - CloseBtnSize) / 2;
+        var rect = new Rectangle(btnX, btnY, CloseBtnSize, CloseBtnSize);
+        Color bgColor = (_closeBtnPressed ? CloseBtnHover : (_closeBtnHovered ? CloseBtnHover : CloseBtnColor)) * alpha;
+        UIRendering.DrawCloseButton(sb, rect, bgColor, Color.White * 0.9f * alpha);
+    }
+
+    private void DrawTooltip(SpriteBatch sb, string tooltip)
+    {
+        if (string.IsNullOrEmpty(tooltip)) return;
+
+        var font = FontAssets.MouseText.Value;
+        float scale = 0.65f;
+        var textSize = font.MeasureString(tooltip) * scale;
+        var mousePos = Main.MouseScreen;
+
+        int padding = 6;
+        int tooltipWidth = (int)textSize.X + padding * 2;
+        int tooltipHeight = (int)textSize.Y + padding * 2;
+
+        int tooltipX = (int)mousePos.X + 16;
+        int tooltipY = (int)mousePos.Y + 16;
+
+        if (tooltipX + tooltipWidth > Main.screenWidth)
+            tooltipX = Main.screenWidth - tooltipWidth - 4;
+        if (tooltipY + tooltipHeight > Main.screenHeight)
+            tooltipY = (int)mousePos.Y - tooltipHeight - 4;
+
+        var tooltipRect = new Rectangle(tooltipX, tooltipY, tooltipWidth, tooltipHeight);
+        sb.Draw(UIRendering.Pixel, tooltipRect, UIStyles.PanelBg);
+        UIRendering.DrawBorder(sb, tooltipRect, 1, UIStyles.BorderAccent);
+
+        Utils.DrawBorderString(sb, tooltip,
+            new Vector2(tooltipX + padding, tooltipY + padding),
+            UIStyles.TextMain, scale);
     }
 
     // ============================================================
@@ -544,6 +778,7 @@ public class DialogueTreeUI
     {
         public Rectangle Rect;
         public string Text;
+        public string FullText;
         public string Tooltip;
         public int Index;
         public DialogueOptionType OptionType;

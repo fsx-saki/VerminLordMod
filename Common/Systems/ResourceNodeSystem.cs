@@ -260,11 +260,8 @@ namespace VerminLordMod.Common.Systems
             int actual = System.Math.Min(amount, node.CurrentAmount);
             node.CurrentAmount -= actual;
 
-            // 给予玩家元石
-            for (int i = 0; i < actual; i++)
-            {
-                player.QuickSpawnItem(player.GetSource_GiftOrReward(), ModContent.ItemType<YuanS>(), 1);
-            }
+            int harvestItemType = node.GetHarvestItemType();
+            player.QuickSpawnItem(player.GetSource_GiftOrReward(), harvestItemType, actual);
 
             if (node.IsDepleted)
             {
@@ -272,7 +269,7 @@ namespace VerminLordMod.Common.Systems
             }
             else
             {
-                Main.NewText($"采集了 {actual} 块元石。{node.DisplayName}剩余 {node.CurrentAmount}/{node.MaxAmount}", Color.Cyan);
+                Main.NewText($"采集了 {actual} 份资源。{node.DisplayName}剩余 {node.CurrentAmount}/{node.MaxAmount}", Color.Cyan);
             }
 
             return true;

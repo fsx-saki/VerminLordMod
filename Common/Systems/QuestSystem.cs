@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
@@ -155,11 +156,190 @@ namespace VerminLordMod.Common.Systems
 
         private void RegisterAllQuests()
         {
-            // TODO: 注册所有任务定义
-            // RegisterGuYueMainStoryQuests();
-            // RegisterGuYueFactionQuests();
-            // RegisterDailyQuests();
-            // RegisterBountyQuests();
+            RegisterGuYueFactionQuests();
+            RegisterDailyQuests();
+            RegisterBountyQuests();
+        }
+
+        private void RegisterGuYueFactionQuests()
+        {
+            RegisterQuest(new QuestDefinition
+            {
+                QuestID = "guyue_first_hunt",
+                Title = "初次狩猎",
+                Description = "古月家族的新人试炼：猎杀10只史莱姆证明你的实力。",
+                BriefDescription = "猎杀10只史莱姆",
+                Type = QuestType.FactionQuest,
+                IssuingFaction = FactionID.GuYue,
+                RequiredGuLevel = 1,
+                Objectives = new List<QuestObjective>
+                {
+                    new QuestObjective
+                    {
+                        ObjectiveID = "kill_slimes",
+                        Description = "猎杀史莱姆",
+                        Type = ObjectiveType.KillNPCType,
+                        TargetAmount = 10,
+                        TargetNPCType = Terraria.ID.NPCID.GreenSlime,
+                    }
+                },
+                Rewards = new List<QuestReward>
+                {
+                    new QuestReward { Type = QuestRewardType.Reputation, Amount = 20, TargetFaction = FactionID.GuYue },
+                    new QuestReward { Type = QuestRewardType.YuanStones, Amount = 5 },
+                },
+            });
+
+            RegisterQuest(new QuestDefinition
+            {
+                QuestID = "guyue_collect_herbs",
+                Title = "采集灵草",
+                Description = "为家族药堂采集5株月光草。",
+                BriefDescription = "采集5株月光草",
+                Type = QuestType.FactionQuest,
+                IssuingFaction = FactionID.GuYue,
+                RequiredGuLevel = 1,
+                Objectives = new List<QuestObjective>
+                {
+                    new QuestObjective
+                    {
+                        ObjectiveID = "collect_daybloom",
+                        Description = "采集月光草",
+                        Type = ObjectiveType.CollectItem,
+                        TargetAmount = 5,
+                        TargetItemType = Terraria.ID.ItemID.Daybloom,
+                    }
+                },
+                Rewards = new List<QuestReward>
+                {
+                    new QuestReward { Type = QuestRewardType.Reputation, Amount = 15, TargetFaction = FactionID.GuYue },
+                    new QuestReward { Type = QuestRewardType.YuanStones, Amount = 3 },
+                },
+            });
+
+            RegisterQuest(new QuestDefinition
+            {
+                QuestID = "guyue_prove_strength",
+                Title = "证明实力",
+                Description = "击败克苏鲁之眼，向家族证明你的实力。",
+                BriefDescription = "击败克苏鲁之眼",
+                Type = QuestType.FactionQuest,
+                IssuingFaction = FactionID.GuYue,
+                RequiredGuLevel = 2,
+                Objectives = new List<QuestObjective>
+                {
+                    new QuestObjective
+                    {
+                        ObjectiveID = "kill_eoc",
+                        Description = "击败克苏鲁之眼",
+                        Type = ObjectiveType.KillNPCType,
+                        TargetAmount = 1,
+                        TargetNPCType = Terraria.ID.NPCID.EyeofCthulhu,
+                    }
+                },
+                Rewards = new List<QuestReward>
+                {
+                    new QuestReward { Type = QuestRewardType.Reputation, Amount = 50, TargetFaction = FactionID.GuYue },
+                    new QuestReward { Type = QuestRewardType.YuanStones, Amount = 20 },
+                    new QuestReward { Type = QuestRewardType.QiExp, Amount = 100 },
+                },
+            });
+        }
+
+        private void RegisterDailyQuests()
+        {
+            RegisterQuest(new QuestDefinition
+            {
+                QuestID = "daily_hunt",
+                Title = "每日狩猎",
+                Description = "猎杀任意怪物，收集战利品。",
+                BriefDescription = "猎杀20只怪物",
+                Type = QuestType.DailyQuest,
+                IssuingFaction = FactionID.Scattered,
+                RequiredGuLevel = 1,
+                IsRepeatable = true,
+                ExpireDays = 1,
+                Objectives = new List<QuestObjective>
+                {
+                    new QuestObjective
+                    {
+                        ObjectiveID = "kill_any",
+                        Description = "猎杀任意怪物",
+                        Type = ObjectiveType.KillNPCType,
+                        TargetAmount = 20,
+                    }
+                },
+                Rewards = new List<QuestReward>
+                {
+                    new QuestReward { Type = QuestRewardType.YuanStones, Amount = 3 },
+                    new QuestReward { Type = QuestRewardType.QiExp, Amount = 30 },
+                },
+            });
+
+            RegisterQuest(new QuestDefinition
+            {
+                QuestID = "daily_collect_ore",
+                Title = "采矿委托",
+                Description = "采集矿石资源。",
+                BriefDescription = "采集10个矿石",
+                Type = QuestType.DailyQuest,
+                IssuingFaction = FactionID.Scattered,
+                RequiredGuLevel = 1,
+                IsRepeatable = true,
+                ExpireDays = 1,
+                Objectives = new List<QuestObjective>
+                {
+                    new QuestObjective
+                    {
+                        ObjectiveID = "collect_ore",
+                        Description = "采集矿石",
+                        Type = ObjectiveType.CollectItem,
+                        TargetAmount = 10,
+                        TargetItemType = Terraria.ID.ItemID.IronOre,
+                    }
+                },
+                Rewards = new List<QuestReward>
+                {
+                    new QuestReward { Type = QuestRewardType.YuanStones, Amount = 5 },
+                },
+            });
+        }
+
+        private void RegisterBountyQuests()
+        {
+            RegisterQuest(new QuestDefinition
+            {
+                QuestID = "bounty_skeleton",
+                Title = "悬赏：骷髅",
+                Description = "清除墓地中的骷髅，为民除害。",
+                BriefDescription = "猎杀15只骷髅",
+                Type = QuestType.BountyQuest,
+                IssuingFaction = FactionID.Scattered,
+                RequiredGuLevel = 2,
+                IsRepeatable = true,
+                ExpireDays = 3,
+                Objectives = new List<QuestObjective>
+                {
+                    new QuestObjective
+                    {
+                        ObjectiveID = "kill_skeleton",
+                        Description = "猎杀骷髅",
+                        Type = ObjectiveType.KillNPCType,
+                        TargetAmount = 15,
+                        TargetNPCType = Terraria.ID.NPCID.Skeleton,
+                    }
+                },
+                Rewards = new List<QuestReward>
+                {
+                    new QuestReward { Type = QuestRewardType.YuanStones, Amount = 10 },
+                    new QuestReward { Type = QuestRewardType.QiExp, Amount = 50 },
+                },
+            });
+        }
+
+        private void RegisterQuest(QuestDefinition quest)
+        {
+            QuestRegistry[quest.QuestID] = quest;
         }
 
         public List<QuestDefinition> GetAvailableQuests(Player player)
@@ -175,15 +355,31 @@ namespace VerminLordMod.Common.Systems
                 if (tracker.HasActiveQuest(quest.QuestID)) continue;
                 if (tracker.HasCompletedQuest(quest.QuestID) && !quest.IsRepeatable) continue;
 
-                // TODO: 实现完整的条件检查
-                // if (qiRealm.GuLevel < quest.RequiredGuLevel) continue;
-                // if (guWorld.GetRepLevel(quest.IssuingFaction).ordinal < quest.RequiredRepLevel) continue;
-                // if (storyPhase < quest.RequiredStoryPhase) continue;
-                // if (!AllPrerequisitesCompleted(tracker, quest)) continue;
+                if (qiRealm.GuLevel < quest.RequiredGuLevel) continue;
+                if (quest.IssuingFaction != FactionID.Scattered)
+                {
+                    var rep = guWorld.GetRepLevel(quest.IssuingFaction);
+                    if ((int)rep < quest.RequiredRepLevel) continue;
+                }
+                if (storyPhase < quest.RequiredStoryPhase) continue;
+                if (!AllPrerequisitesCompleted(tracker, quest)) continue;
 
                 available.Add(quest);
             }
             return available;
+        }
+
+        private bool AllPrerequisitesCompleted(QuestTrackerPlayer tracker, QuestDefinition quest)
+        {
+            if (quest.PrerequisiteQuestIDs == null || quest.PrerequisiteQuestIDs.Count == 0)
+                return true;
+
+            foreach (var prereqID in quest.PrerequisiteQuestIDs)
+            {
+                if (!tracker.HasCompletedQuest(prereqID))
+                    return false;
+            }
+            return true;
         }
 
         public QuestDefinition GetQuestDefinition(string questID)
@@ -246,39 +442,98 @@ namespace VerminLordMod.Common.Systems
 
         private void GrantRewards(Player player, QuestDefinition quest)
         {
-            // TODO: 实现奖励发放
+            var guWorld = player.GetModPlayer<GuWorldPlayer>();
+            var qiRealm = player.GetModPlayer<QiRealmPlayer>();
+
             foreach (var reward in quest.Rewards)
             {
                 switch (reward.Type)
                 {
-                    case QuestRewardType.Reputation:
-                        // player.GetModPlayer<GuWorldPlayer>().AddReputation(reward.TargetFaction, reward.Amount);
-                        break;
                     case QuestRewardType.YuanStones:
-                        // player.QuickSpawnItem(Item.GetSource_GiftOrReward(), ModContent.ItemType<YuanS>(), reward.Amount);
+                        player.QuickSpawnItem(player.GetSource_GiftOrReward(),
+                            ModContent.ItemType<Content.Items.Consumables.YuanS>(), reward.Amount);
                         break;
-                    case QuestRewardType.Item:
-                        // player.QuickSpawnItem(Item.GetSource_GiftOrReward(), reward.ItemType, reward.Amount);
+                    case QuestRewardType.Reputation:
+                        guWorld.AddReputation(reward.TargetFaction, reward.Amount, $"完成任务: {quest.Title}");
                         break;
                     case QuestRewardType.QiExp:
-                        // TODO: 真元经验奖励
+                        qiRealm.BreakthroughProgress += reward.Amount;
                         break;
-                    case QuestRewardType.StoryProgress:
-                        // StoryManager.Instance.CompleteStory(player, reward.StoryFlag);
+                    case QuestRewardType.Item:
+                        if (reward.ItemType > 0)
+                        {
+                            player.QuickSpawnItem(player.GetSource_GiftOrReward(), reward.ItemType, reward.Amount);
+                        }
                         break;
                 }
             }
+
+            if (player.whoAmI == Main.myPlayer)
+                Main.NewText($"任务完成：{quest.Title}！", Color.Gold);
         }
 
         public void OnQuestCompleted(QuestCompletedEvent evt)
         {
-            // TODO: 任务完成后续处理（解锁新任务、通知家族等）
+            var player = Main.player[evt.PlayerID];
+            if (!player.active) return;
+
+            var tracker = player.GetModPlayer<QuestTrackerPlayer>();
+            var def = GetQuestDefinition(evt.QuestID);
+            if (def == null) return;
+
+            GrantRewards(player, def);
+            tracker.RemoveActiveQuest(evt.QuestID);
+            tracker.AddCompletedQuest(evt.QuestID);
         }
 
         private void OnNPCDeathForQuest(NPCDeathEvent evt)
         {
-            // TODO: 检查是否有击杀NPC类型相关的任务目标
-            // 更新所有拥有 KillNPCType 目标的活跃任务进度
+            for (int i = 0; i < Main.maxPlayers; i++)
+            {
+                var player = Main.player[i];
+                if (!player.active) continue;
+
+                var tracker = player.GetModPlayer<QuestTrackerPlayer>();
+                foreach (var quest in tracker.ActiveQuests)
+                {
+                    foreach (var obj in quest.Objectives)
+                    {
+                        if (obj.Type == ObjectiveType.KillNPCType && !obj.IsCompleted)
+                        {
+                            if (obj.TargetNPCType == 0 || evt.NPCType == obj.TargetNPCType)
+                            {
+                                obj.CurrentAmount++;
+                                if (obj.CurrentAmount >= obj.TargetAmount)
+                                {
+                                    if (player.whoAmI == Main.myPlayer)
+                                        Main.NewText($"任务目标完成：{obj.Description}", Color.Cyan);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        public void UpdateObjectiveProgress(Player player, string questID, string objectiveID, int amount)
+        {
+            var tracker = player.GetModPlayer<QuestTrackerPlayer>();
+            var quest = tracker.GetActiveQuest(questID);
+            if (quest == null) return;
+
+            foreach (var obj in quest.Objectives)
+            {
+                if (obj.ObjectiveID == objectiveID && !obj.IsCompleted)
+                {
+                    obj.CurrentAmount = System.Math.Min(obj.TargetAmount, obj.CurrentAmount + amount);
+                    if (obj.CurrentAmount >= obj.TargetAmount)
+                    {
+                        if (player.whoAmI == Main.myPlayer)
+                            Main.NewText($"任务目标完成：{obj.Description}", Color.Cyan);
+                    }
+                    break;
+                }
+            }
         }
     }
 

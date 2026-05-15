@@ -173,38 +173,6 @@ namespace VerminLordMod.Common.UI.UIUtils
         }
 
         /// <summary>
-        /// 绘制圆角矩形边框（使用 9-patch 模拟圆角）
-        /// </summary>
-        public static void DrawRoundedRect(SpriteBatch sb, Rectangle rect, Color color, int radius = 4)
-        {
-            var pixel = TextureAssets.MagicPixel.Value;
-
-            // 四个角
-            sb.Draw(pixel, new Rectangle(rect.X, rect.Y, radius, radius), color);
-            sb.Draw(pixel, new Rectangle(rect.Right - radius, rect.Y, radius, radius), color);
-            sb.Draw(pixel, new Rectangle(rect.X, rect.Bottom - radius, radius, radius), color);
-            sb.Draw(pixel, new Rectangle(rect.Right - radius, rect.Bottom - radius, radius, radius), color);
-
-            // 四条边
-            sb.Draw(pixel, new Rectangle(rect.X + radius, rect.Y, rect.Width - radius * 2, 1), color);
-            sb.Draw(pixel, new Rectangle(rect.X + radius, rect.Bottom - 1, rect.Width - radius * 2, 1), color);
-            sb.Draw(pixel, new Rectangle(rect.X, rect.Y + radius, 1, rect.Height - radius * 2), color);
-            sb.Draw(pixel, new Rectangle(rect.Right - 1, rect.Y + radius, 1, rect.Height - radius * 2), color);
-        }
-
-        /// <summary>
-        /// 绘制矩形边框（简单版）
-        /// </summary>
-        public static void DrawBorder(SpriteBatch sb, Rectangle rect, int thickness, Color color)
-        {
-            var pixel = TextureAssets.MagicPixel.Value;
-            sb.Draw(pixel, new Rectangle(rect.X, rect.Y, rect.Width, thickness), color);
-            sb.Draw(pixel, new Rectangle(rect.X, rect.Y + rect.Height - thickness, rect.Width, thickness), color);
-            sb.Draw(pixel, new Rectangle(rect.X, rect.Y, thickness, rect.Height), color);
-            sb.Draw(pixel, new Rectangle(rect.X + rect.Width - thickness, rect.Y, thickness, rect.Height), color);
-        }
-
-        /// <summary>
         /// 绘制物品图标（通用方法）
         /// </summary>
         public static void DrawItemIcon(SpriteBatch sb, Item item, Rectangle rect, bool showStack = true)

@@ -1,4 +1,4 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
 using Terraria;
@@ -21,8 +21,6 @@ namespace VerminLordMod.Common.UI.QiUI
         private UIText text;
         private UIText text2;
         private UIElement area;
-        private Color gradientA;
-        private Color gradientB;
 
         public override void OnInitialize()
         {
@@ -46,9 +44,6 @@ namespace VerminLordMod.Common.UI.QiUI
             text2.Left.Set(0, 0f);
             text2.TextColor = UIStyles.TextSecondary;
 
-            gradientA = UIStyles.TextSuccess;
-            gradientB = new Color(80, 160, 100);
-
             area.Append(text);
             area.Append(text2);
             Append(area);
@@ -68,49 +63,32 @@ namespace VerminLordMod.Common.UI.QiUI
 
             var qiResource = Main.LocalPlayer.GetModPlayer<QiResourcePlayer>();
             var qiRealm = Main.LocalPlayer.GetModPlayer<QiRealmPlayer>();
-            var qiTalent = Main.LocalPlayer.GetModPlayer<QiTalentPlayer>();
 
             float quotient = qiResource.QiMaxCurrent == 0 ? 0 : (float)qiResource.QiCurrent / qiResource.QiMaxCurrent;
             quotient = Utils.Clamp(quotient, 0f, 1f);
 
-            // 绘制扁平背景条
             var bgRect = area.GetInnerDimensions().ToRectangle();
-            bgRect.X += 0;
             bgRect.Width = 200;
-            bgRect.Y += 0;
             bgRect.Height = 36;
 
-            // 背景
-            UIHelper.DrawRoundedRect(spriteBatch, bgRect, UIStyles.QiBarBg, 6);
-            // 边框
-            var borderRect = bgRect;
-            borderRect.Inflate(1, 1);
-            UIHelper.DrawBorder(spriteBatch, borderRect, 1, UIStyles.QiBarBorder);
-
-            // 根据境界选择颜色
+            Color fillA, fillB;
             switch (qiRealm.GuLevel)
             {
-                case 1: gradientA = new Color(130, 215, 130); gradientB = new Color(80, 170, 80); break;
-                case 2: gradientA = new Color(200, 130, 130); gradientB = new Color(160, 80, 80); break;
-                case 3: gradientA = new Color(130, 150, 170); gradientB = new Color(80, 100, 120); break;
-                case 4: gradientA = new Color(220, 210, 90); gradientB = new Color(180, 170, 60); break;
-                case 5: gradientA = new Color(180, 110, 200); gradientB = new Color(140, 70, 160); break;
-                case 6: gradientA = new Color(100, 220, 180); gradientB = new Color(60, 180, 140); break;
-                case 7: gradientA = new Color(230, 150, 160); gradientB = new Color(190, 100, 110); break;
-                case 8: gradientA = new Color(100, 150, 190); gradientB = new Color(60, 110, 150); break;
-                case 9: gradientA = new Color(240, 180, 60); gradientB = new Color(200, 140, 30); break;
-                case 10: gradientA = new Color(220, 220, 230); gradientB = new Color(180, 180, 190); break;
-                default: gradientA = UIStyles.TextDim; gradientB = new Color(60, 60, 70); break;
+                case 1: fillA = new Color(130, 215, 130); fillB = new Color(80, 170, 80); break;
+                case 2: fillA = new Color(200, 130, 130); fillB = new Color(160, 80, 80); break;
+                case 3: fillA = new Color(130, 150, 170); fillB = new Color(80, 100, 120); break;
+                case 4: fillA = new Color(220, 210, 90); fillB = new Color(180, 170, 60); break;
+                case 5: fillA = new Color(180, 110, 200); fillB = new Color(140, 70, 160); break;
+                case 6: fillA = new Color(100, 220, 180); fillB = new Color(60, 180, 140); break;
+                case 7: fillA = new Color(230, 150, 160); fillB = new Color(190, 100, 110); break;
+                case 8: fillA = new Color(100, 150, 190); fillB = new Color(60, 110, 150); break;
+                case 9: fillA = new Color(240, 180, 60); fillB = new Color(200, 140, 30); break;
+                case 10: fillA = new Color(220, 220, 230); fillB = new Color(180, 180, 190); break;
+                default: fillA = UIStyles.TextDim; fillB = new Color(60, 60, 70); break;
             }
 
-            // 填充条
-            int fillWidth = (int)((bgRect.Width - 4) * quotient);
-            if (fillWidth > 0)
-            {
-                var fillRect = new Rectangle(bgRect.X + 2, bgRect.Y + 2, fillWidth, bgRect.Height - 4);
-                Color fillColor = Color.Lerp(gradientA, gradientB, quotient * 0.5f + 0.25f);
-                spriteBatch.Draw(TextureAssets.MagicPixel.Value, fillRect, fillColor);
-            }
+            UIRendering.DrawProgressBar(spriteBatch, bgRect, quotient,
+                UIStyles.QiBarBg, UIStyles.QiBarBorder, fillA, fillB);
         }
 
         public override void Update(GameTime gameTime)

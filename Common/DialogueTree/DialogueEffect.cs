@@ -519,3 +519,32 @@ public class GiveQuestEffect : DialogueEffect
         // 任务系统预留 - 后续集成到 QuestSystem
     }
 }
+
+/// <summary> 随机效果 - 按概率触发成功或失败效果 </summary>
+public class RandomEffect : DialogueEffect
+{
+    public DialogueEffect SuccessEffect;
+    public DialogueEffect FailEffect;
+    public float SuccessChance;
+
+    public RandomEffect() { }
+
+    public RandomEffect(DialogueEffect successEffect, DialogueEffect failEffect, float successChance = 0.5f)
+    {
+        SuccessEffect = successEffect;
+        FailEffect = failEffect;
+        SuccessChance = MathHelper.Clamp(successChance, 0f, 1f);
+    }
+
+    public override void Execute(Player player, NPC npc, BeliefState belief)
+    {
+        if (Main.rand.NextFloat() < SuccessChance)
+        {
+            SuccessEffect?.Execute(player, npc, belief);
+        }
+        else
+        {
+            FailEffect?.Execute(player, npc, belief);
+        }
+    }
+}

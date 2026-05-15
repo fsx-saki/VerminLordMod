@@ -60,18 +60,71 @@ namespace VerminLordMod.Common.Systems
         public const float SYNC_RATE_BASE = 0.3f;
         public const float SYNC_RATE_MAX = 1.0f;
 
+        private int _dayCounter = 0;
+
         public override void PostUpdateWorld()
         {
-            // TODO: 每日推进所有玩家的本命蛊成长
+            int currentDay = (int)(Main.GameUpdateCount / 36000);
+            if (currentDay <= _dayCounter) return;
+            _dayCounter = currentDay;
+
+            for (int i = 0; i < Main.maxPlayers; i++)
+            {
+                var player = Main.player[i];
+                if (!player.active) continue;
+
+                var soulPlayer = player.GetModPlayer<GuSoulPlayer>();
+                if (!soulPlayer.HasMainGu) continue;
+
+                soulPlayer.MainGu.DaysBonded++;
+                soulPlayer.MainGu.BondProgress += BOND_PROGRESS_PER_DAY;
+
+                if (soulPlayer.MainGu.BondProgress >= MAX_BOND_LEVEL * BOND_PROGRESS_PER_DAY)
+                {
+                    soulPlayer.MainGu.BondProgress = 0f;
+                    if (soulPlayer.MainGu.BondLevel < MAX_BOND_LEVEL)
+                    {
+                        soulPlayer.MainGu.BondLevel++;
+                        soulPlayer.MainGu.SyncRate = System.Math.Min(SYNC_RATE_MAX,
+                            SYNC_RATE_BASE + soulPlayer.MainGu.BondLevel * 0.07f);
+                    }
+                }
+
+                UpdateMainGuState(soulPlayer.MainGu);
+            }
+        }
+
+        private void UpdateMainGuState(MainGuBond bond)
+        {
+            if (bond.BondLevel >= 8 && bond.SyncRate >= 0.9f)
+                bond.State = MainGuState.Transcendent;
+            else if (bond.BondLevel >= 5 && bond.SyncRate >= 0.7f)
+                bond.State = MainGuState.Mature;
+            else if (bond.BondLevel >= 3)
+                bond.State = MainGuState.Growing;
         }
 
         public static MainGuType GetMainGuType(int itemType)
         {
-            // TODO: 根据物品类型映射本命蛊类型
-            return itemType switch
-            {
-                _ => MainGuType.None,
-            };
+            if (itemType == ModContent.ItemType<Content.Items.Weapons.Six.ChunQiuChan>())
+                return MainGuType.SpringAutumnCicada;
+            if (itemType == ModContent.ItemType<Content.Items.Weapons.Two.BigStrengthGu>())
+                return MainGuType.StrengthGu;
+            if (itemType == ModContent.ItemType<Content.Items.Weapons.Two.BigSoulGu>())
+                return MainGuType.SoulGu;
+            if (itemType == ModContent.ItemType<Content.Items.Weapons.Three.BloodMoonGu>())
+                return MainGuType.BloodGu;
+            if (itemType == ModContent.ItemType<Content.Items.Weapons.Three.EternalLifeGu>())
+                return MainGuType.LifeGu;
+            if (itemType == ModContent.ItemType<Content.Items.Weapons.Four.BloodSkullGu>())
+                return MainGuType.BloodGu;
+            if (itemType == ModContent.ItemType<Content.Items.Weapons.Five.BloodHandprintGu>())
+                return MainGuType.BloodGu;
+            if (itemType == ModContent.ItemType<Content.Items.Weapons.Five.TaiGuangGu>())
+                return MainGuType.TimeGu;
+            if (itemType == ModContent.ItemType<Content.Items.Weapons.Five.TianDiHongYinGu>())
+                return MainGuType.SpaceGu;
+            return MainGuType.None;
         }
 
         public static float GetBondLevelBonus(int bondLevel)
@@ -110,12 +163,12 @@ namespace VerminLordMod.Common.Systems
 
         public override void SaveWorldData(TagCompound tag)
         {
-            // TODO: 保存本命蛊数据
+            tag["dayCounter"] = _dayCounter;
         }
 
         public override void LoadWorldData(TagCompound tag)
         {
-            // TODO: 加载本命蛊数据
+            _dayCounter = tag.GetInt("dayCounter");
         }
     }
 
@@ -130,23 +183,42 @@ namespace VerminLordMod.Common.Systems
         {
             if (!HasMainGu) return;
 
-            // TODO: 应用本命蛊被动效果
+            float bondBonus = GuSoulSystem.GetBondLevelBonus(MainGu.BondLevel);
+            float syncBonus = GuSoulSystem.GetSyncRateBonus(MainGu.SyncRate);
+            float totalMult = bondBonus + syncBonus;
+
             switch (MainGu.Type)
             {
                 case MainGuType.StrengthGu:
-                    // 力量加成
+                    Player.GetDamage(DamageClass.Generic) += 0.1f * totalMult;
+                    Player.GetAttackSpeed(DamageClass.Generic) += 0.05f * totalMult;
                     break;
                 case MainGuType.WisdomGu:
-                    // 感知加成
+                    Player.detectCreature = true;
+                    Player.GetCritChance(DamageClass.Generic) += 5f * totalMult;
                     break;
                 case MainGuType.ShadowGu:
-                    // 潜行加成
+                    Player.aggro -= (int)(400 * totalMult);
+                    Player.moveSpeed += 0.1f * totalMult;
                     break;
                 case MainGuType.LifeGu:
-                    // 生命恢复加成
+                    Player.lifeRegen += (int)(2 * totalMult);
+                    Player.statLifeMax2 += (int)(20 * totalMult);
+                    break;
+                case MainGuType.BloodGu:
+                    Player.GetDamage(DamageClass.Generic) += 0.05f * totalMult;
                     break;
                 case MainGuType.FortuneGu:
-                    // 幸运加成
+                    Player.luck += 0.05f * totalMult;
+                    break;
+                case MainGuType.SoulGu:
+                    Player.maxMinions += (int)(1 * totalMult);
+                    break;
+                case MainGuType.SpringAutumnCicada:
+                    if (MainGu.State >= MainGuState.Mature && Main.rand.NextFloat() < MainGu.DeathProtectionChance)
+                    {
+                        Player.SetImmuneTimeForAllTypes(60);
+                    }
                     break;
             }
         }
@@ -183,7 +255,14 @@ namespace VerminLordMod.Common.Systems
             var oldType = MainGu.Type;
             MainGu.State = MainGuState.Severed;
 
-            // TODO: 解契惩罚（修为损失/真元消耗）
+            var qiRealm = Player.GetModPlayer<QiRealmPlayer>();
+            qiRealm.BreakthroughProgress = System.Math.Max(0, qiRealm.BreakthroughProgress - 30f);
+
+            var qiResource = Player.GetModPlayer<QiResourcePlayer>();
+            qiResource.QiCurrent = System.Math.Max(0, qiResource.QiCurrent - qiResource.QiMaxCurrent / 4);
+
+            Player.AddBuff(Terraria.ID.BuffID.Weak, 3600);
+            Player.AddBuff(Terraria.ID.BuffID.BrokenArmor, 3600);
 
             EventBus.Publish(new MainGuSeveredEvent
             {

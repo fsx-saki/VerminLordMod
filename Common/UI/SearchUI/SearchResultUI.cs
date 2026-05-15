@@ -148,15 +148,15 @@ public class SearchResultUI
         Rectangle panelRect = new((int)panelLeft, (int)panelTop, panelWidth, panelHeight);
 
         // 面板背景
-        sb.Draw(TextureAssets.MagicPixel.Value, panelRect, new Color(22, 24, 32, 230));
+        sb.Draw(TextureAssets.MagicPixel.Value, panelRect, UIStyles.PanelBg);
 
         // 面板边框
-        UIHelper.DrawBorder(sb, panelRect, 1, new Color(55, 60, 75, 200));
+        UIRendering.DrawBorder(sb, panelRect, 1, UIStyles.Border);
 
         // 标题
         string titleText = $"搜索收获 ({itemCount})";
         Vector2 titlePos = new(panelLeft + PanelPadding, panelTop + PanelPadding);
-        Utils.DrawBorderString(sb, titleText, titlePos, new Color(210, 212, 220), 0.7f);
+        Utils.DrawBorderString(sb, titleText, titlePos, UIStyles.TextMain, 0.7f);
 
         // "全部拾取"按钮
         Rectangle takeAllRect = new(
@@ -169,8 +169,8 @@ public class SearchResultUI
 
         bool hoverTakeAll = takeAllRect.Contains(Main.mouseX, Main.mouseY);
         sb.Draw(TextureAssets.MagicPixel.Value, takeAllRect,
-            hoverTakeAll ? new Color(65, 115, 80, 230) : new Color(50, 90, 65, 220));
-        UIHelper.DrawBorder(sb, takeAllRect, 1, new Color(70, 130, 90, 200));
+            hoverTakeAll ? UIStyles.HoverOver(UIStyles.BtnPrimary) : UIStyles.BtnPrimary);
+        UIRendering.DrawBorder(sb, takeAllRect, 1, UIStyles.BorderAccent);
 
         string takeAllText = $"全部拾取 ({itemCount})";
         Vector2 takeAllSize = FontAssets.MouseText.Value.MeasureString(takeAllText);
@@ -199,11 +199,11 @@ public class SearchResultUI
 
             // 槽位背景
             sb.Draw(TextureAssets.MagicPixel.Value, slotRect,
-                hoverSlot ? new Color(45, 48, 62, 230) : new Color(32, 34, 44, 220));
+                hoverSlot ? UIStyles.ListItemHover : UIStyles.ListItemBg);
 
             // 槽位边框
-            UIHelper.DrawBorder(sb, slotRect, 1,
-                hoverSlot ? new Color(100, 150, 210, 220) : new Color(45, 48, 60, 160));
+            UIRendering.DrawBorder(sb, slotRect, 1,
+                hoverSlot ? UIStyles.BorderAccent : UIStyles.BorderLight);
 
             // 物品图标
             var item = _cachedItems[i];

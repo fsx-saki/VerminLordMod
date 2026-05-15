@@ -18,26 +18,17 @@ namespace VerminLordMod.Common.Systems
     //   - 填充所有方块/墙壁配方（建筑类）
     //   - 填充所有家具配方（青茅石家具系列）
     //   - 填充特殊配方（阵法道具、炼器材料等）
+    // TODO 使用更简洁的配方注册方式
     // ============================================================
-
     public class RecipeSystem : ModSystem
     {
         public override void AddRecipes()
         {
-            // ===== 方块配方 =====
             AddBuildingRecipes();
-
-            // ===== 一转蛊虫武器配方 =====
-            // TODO: AddOneTurnGuRecipes();
-
-            // ===== 消耗品配方 =====
-            // TODO: AddConsumableRecipes();
-
-            // ===== 饰品配方 =====
-            // TODO: AddAccessoryRecipes();
-
-            // ===== 家具配方 =====
-            // TODO: AddFurnitureRecipes();
+            AddOneTurnGuRecipes();
+            AddConsumableRecipes();
+            AddAccessoryRecipes();
+            AddFurnitureRecipes();
         }
 
         private void AddBuildingRecipes()
@@ -66,17 +57,76 @@ namespace VerminLordMod.Common.Systems
             // TODO: 注册配方
         }
 
-        // ===== 一转蛊虫武器配方（示例框架） =====
-        // 月光蛊 = 元石5 + 星尘3 @ 空窍炼化台
-        // 骨矛蛊 = 元石5 + 骨竹10 @ 空窍炼化台
-        // 水箭蛊 = 元石3 + 水尘5 @ 空窍炼化台
+        private void AddOneTurnGuRecipes()
+        {
+            var yuanS = ModContent.ItemType<YuanS>();
 
-        // ===== 突破丹药配方 =====
-        // 一转→二转突破丹 = 元石10 + 灵草3 @ 炼丹炉
-        // 二转→三转突破丹 = 元石20 + 灵草5 + 月兰2 @ 炼丹炉
+            var moonlight = Recipe.Create(ModContent.ItemType<Content.Items.Weapons.One.Moonlight>());
+            moonlight.AddIngredient(yuanS, 5);
+            moonlight.AddIngredient(ItemID.FallenStar, 3);
+            moonlight.AddTile(TileID.WorkBenches);
+            moonlight.Register();
 
-        // ===== 饰品配方 =====
-        // 铁皮肤 = 铁皮蛊 @ 空窍炼化台
-        // 飞翼蛊 = 飞翼蛊材料 + 元石 @ 空窍炼化台
+            var boneSpear = Recipe.Create(ModContent.ItemType<Content.Items.Weapons.One.BoneSpearGu>());
+            boneSpear.AddIngredient(yuanS, 5);
+            boneSpear.AddIngredient(ItemID.Bone, 10);
+            boneSpear.AddTile(TileID.WorkBenches);
+            boneSpear.Register();
+
+            var waterArrow = Recipe.Create(ModContent.ItemType<Content.Items.Weapons.One.WaterArrowGu>());
+            waterArrow.AddIngredient(yuanS, 3);
+            waterArrow.AddIngredient(ItemID.Coral, 5);
+            waterArrow.AddTile(TileID.WorkBenches);
+            waterArrow.Register();
+        }
+
+        private void AddConsumableRecipes()
+        {
+            var yuanS = ModContent.ItemType<YuanS>();
+
+            var breakPill1 = Recipe.Create(ModContent.ItemType<Content.Items.Consumables.FirstToSecond>());
+            breakPill1.AddIngredient(yuanS, 10);
+            breakPill1.AddIngredient(ItemID.Daybloom, 3);
+            breakPill1.AddTile(TileID.Bottles);
+            breakPill1.Register();
+
+            var breakPill2 = Recipe.Create(ModContent.ItemType<Content.Items.Consumables.SecondToThird>());
+            breakPill2.AddIngredient(yuanS, 20);
+            breakPill2.AddIngredient(ItemID.Daybloom, 5);
+            breakPill2.AddIngredient(ItemID.Moonglow, 3);
+            breakPill2.AddTile(TileID.Bottles);
+            breakPill2.Register();
+
+            var guFood = Recipe.Create(ModContent.ItemType<Content.Items.Consumables.WineBug>());
+            guFood.AddIngredient(ItemID.Gel, 10);
+            guFood.AddIngredient(ItemID.Mushroom, 5);
+            guFood.AddTile(TileID.WorkBenches);
+            guFood.Register();
+        }
+
+        private void AddAccessoryRecipes()
+        {
+        }
+
+        private void AddFurnitureRecipes()
+        {
+            var yuanS = ModContent.ItemType<YuanS>();
+            var qingMaoBlock = ModContent.ItemType<Content.Items.Placeable.BoneBanbooBlock>();
+
+            var qingMaoTable = Recipe.Create(ModContent.ItemType<Content.Items.Placeable.Furniture.QingMaoStoneTable>());
+            qingMaoTable.AddIngredient(qingMaoBlock, 8);
+            qingMaoTable.AddTile(TileID.WorkBenches);
+            qingMaoTable.Register();
+
+            var qingMaoChair = Recipe.Create(ModContent.ItemType<Content.Items.Placeable.Furniture.QingMaoStoneChair>());
+            qingMaoChair.AddIngredient(qingMaoBlock, 4);
+            qingMaoChair.AddTile(TileID.WorkBenches);
+            qingMaoChair.Register();
+
+            var qingMaoWorkbench = Recipe.Create(ModContent.ItemType<Content.Items.Placeable.Furniture.QingMaoStoneWorkbench>());
+            qingMaoWorkbench.AddIngredient(qingMaoBlock, 10);
+            qingMaoWorkbench.AddTile(TileID.WorkBenches);
+            qingMaoWorkbench.Register();
+        }
     }
 }

@@ -15,6 +15,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.GameContent;
 using Terraria.ModLoader;
+using VerminLordMod.Common.UI.UIUtils;
 
 namespace VerminLordMod.Common.UI.SimpleUI;
 
@@ -380,38 +381,30 @@ public class SimplePanel
         // 切换到 NonPremultiplied 混合模式
         DrawHelper.BeginNonPremultiplied(sb);
 
-        // 绘制面板背景
-        DrawRoundedRect(sb, drawRect, PanelBg * alpha, BorderColor * alpha, CornerRadius);
+        UIRendering.DrawRoundedRect(sb, drawRect, PanelBg * alpha, BorderColor * alpha, CornerRadius);
 
-        // 绘制标题栏
         var titleRect = new Rectangle(drawRect.X, drawRect.Y, drawRect.Width, TitleBarHeight);
         Color titleColor = Color.Lerp(TitleBarBg, TitleBarHover, _titleHoverAnim) * alpha;
-        DrawFilledRect(sb, titleRect, titleColor);
+        UIRendering.DrawFilledRect(sb, titleRect, titleColor);
 
-        // 标题栏底部边框线
-        DrawFilledRect(sb, new Rectangle(drawRect.X, drawRect.Y + TitleBarHeight - 1, drawRect.Width, 1), BorderColor * alpha * 0.5f);
+        UIRendering.DrawFilledRect(sb, new Rectangle(drawRect.X, drawRect.Y + TitleBarHeight - 1, drawRect.Width, 1), BorderColor * alpha * 0.5f);
 
-        // 标题文字（留出关闭按钮的空间）
         if (!string.IsNullOrEmpty(Title))
         {
             var titleTextRect = new Rectangle(drawRect.X + 8, drawRect.Y, drawRect.Width - CloseBtnSize - CloseBtnRightMargin - 8, TitleBarHeight);
-            DrawTextCentered(sb, Title, titleTextRect, TitleTextColor * alpha, 0.9f);
+            UIRendering.DrawTextCentered(sb, Title, titleTextRect, TitleTextColor * alpha, 0.9f);
         }
 
-        // 绘制关闭按钮（右上角 X）
         var closeRect = GetCloseButtonRect(drawRect);
         DrawCloseButton(sb, closeRect, alpha);
 
-        // 绘制内容区域
         var contentRect = GetContentRect(drawRect);
 
-        // 绘制所有子面板
         foreach (var subPanel in SubPanels)
         {
             subPanel.Draw(sb, contentRect, alpha);
         }
 
-        // 绘制调整大小手柄
         var handleRect = GetResizeHandleRect(drawRect);
         Color handleColor = Color.Lerp(ResizeHandleColor, ResizeHandleHover, _resizeHoverAnim) * alpha;
         DrawResizeHandle(sb, handleRect, handleColor);
@@ -520,60 +513,6 @@ public class SimplePanel
 
     // ==================== 绘制工具 ====================
     /// <summary>
-    /// 绘制圆角矩形
-    /// </summary>
-    private static void DrawRoundedRect(SpriteBatch sb, Rectangle rect, Color bgColor, Color borderColor, int radius)
-    {
-        var pixel = TextureAssets.MagicPixel.Value;
-
-        if (rect.Width <= radius * 2 || rect.Height <= radius * 2)
-        {
-            sb.Draw(pixel, rect, bgColor);
-            return;
-        }
-
-        // 中心填充
-        sb.Draw(pixel, new Rectangle(rect.X + radius, rect.Y + radius, rect.Width - radius * 2, rect.Height - radius * 2), bgColor);
-
-        // 四条边
-        sb.Draw(pixel, new Rectangle(rect.X + radius, rect.Y, rect.Width - radius * 2, radius), bgColor);
-        sb.Draw(pixel, new Rectangle(rect.X + radius, rect.Bottom - radius, rect.Width - radius * 2, radius), bgColor);
-        sb.Draw(pixel, new Rectangle(rect.X, rect.Y + radius, radius, rect.Height - radius * 2), bgColor);
-        sb.Draw(pixel, new Rectangle(rect.Right - radius, rect.Y + radius, radius, rect.Height - radius * 2), bgColor);
-
-        // 四个角
-        sb.Draw(pixel, new Rectangle(rect.X, rect.Y, radius, radius), bgColor);
-        sb.Draw(pixel, new Rectangle(rect.Right - radius, rect.Y, radius, radius), bgColor);
-        sb.Draw(pixel, new Rectangle(rect.X, rect.Bottom - radius, radius, radius), bgColor);
-        sb.Draw(pixel, new Rectangle(rect.Right - radius, rect.Bottom - radius, radius, radius), bgColor);
-
-        // 边框（四条边）
-        sb.Draw(pixel, new Rectangle(rect.X + radius, rect.Y, rect.Width - radius * 2, 1), borderColor);
-        sb.Draw(pixel, new Rectangle(rect.X + radius, rect.Bottom - 1, rect.Width - radius * 2, 1), borderColor);
-        sb.Draw(pixel, new Rectangle(rect.X, rect.Y + radius, 1, rect.Height - radius * 2), borderColor);
-        sb.Draw(pixel, new Rectangle(rect.Right - 1, rect.Y + radius, 1, rect.Height - radius * 2), borderColor);
-    }
-
-    /// <summary>
-    /// 绘制纯色矩形
-    /// </summary>
-    private static void DrawFilledRect(SpriteBatch sb, Rectangle rect, Color color)
-    {
-        sb.Draw(TextureAssets.MagicPixel.Value, rect, color);
-    }
-
-    /// <summary>
-    /// 绘制居中文字
-    /// </summary>
-    private static void DrawTextCentered(SpriteBatch sb, string text, Rectangle rect, Color color, float scale)
-    {
-        var font = FontAssets.MouseText.Value;
-        var size = font.MeasureString(text) * scale;
-        var pos = new Vector2(rect.Center.X - size.X / 2f, rect.Center.Y - size.Y / 2f);
-        Utils.DrawBorderString(sb, text, pos, color, scale);
-    }
-
-    /// <summary>
     /// 绘制关闭按钮（X 符号）
     /// </summary>
     private void DrawCloseButton(SpriteBatch sb, Rectangle rect, float alpha)
@@ -593,8 +532,7 @@ public class SimplePanel
 
         bgColor *= alpha;
 
-        // 绘制按钮背景
-        DrawFilledRect(sb, rect, bgColor);
+        UIRendering.DrawFilledRect(sb, rect, bgColor);
 
         // 绘制 X 符号（两条交叉线）
         int cx = rect.Center.X;

@@ -16,6 +16,7 @@ using VerminLordMod.Common.Systems;
 using VerminLordMod.Common.UI.DialogueTreeUI;
 using VerminLordMod.Common.UI.UIUtils;
 using VerminLordMod.Content.Items.Debuggers;
+using VerminLordMod.Content.Items.Consumables;
 using VerminLordMod.Content.NPCs.GuMasters;
 
 namespace VerminLordMod.Content.NPCs;
@@ -70,7 +71,6 @@ public class DialogueTreeDemoNPC : ModNPC
         AnimationType = NPCID.Guide;
         NPC.value = Item.buyPrice(0, 0, 50, 0);
 
-        // 初始化调试信念
         DebugBelief = new BeliefState
         {
             PlayerName = "",
@@ -84,6 +84,43 @@ public class DialogueTreeDemoNPC : ModNPC
             HasDefeatedPlayer = false,
             LastInteractionDay = 0
         };
+    }
+
+    public override void AddShops()
+    {
+        var shop = new NPCShop(Type, "DemoShop");
+
+        shop.Add(new Item(ItemID.HealingPotion) { shopCustomPrice = 50 }, Condition.TimeDay);
+        shop.Add(new Item(ItemID.GreaterHealingPotion) { shopCustomPrice = 150 });
+        shop.Add(new Item(ItemID.ManaPotion) { shopCustomPrice = 50 });
+        shop.Add(new Item(ItemID.RegenerationPotion) { shopCustomPrice = 80 });
+        shop.Add(new Item(ItemID.IronskinPotion) { shopCustomPrice = 60 });
+        shop.Add(new Item(ItemID.SwiftnessPotion) { shopCustomPrice = 40 });
+        shop.Add(new Item(ItemID.RecallPotion) { shopCustomPrice = 20 });
+        shop.Add(new Item(ItemID.Torch) { shopCustomPrice = 1 });
+        shop.Add(new Item(ItemID.Rope) { shopCustomPrice = 2 });
+        shop.Add(new Item(ItemID.WoodenArrow) { shopCustomPrice = 1 });
+        shop.Add(new Item(ItemID.Shuriken) { shopCustomPrice = 3 });
+        shop.Add(new Item(ItemID.Bomb) { shopCustomPrice = 15 });
+        shop.Add(new Item(ItemID.BugNet) { shopCustomPrice = 25 });
+
+        shop.Add(new Item(ModContent.ItemType<YuanS>()) { shopCustomPrice = 1 });
+
+        shop.Add(new Item(ModContent.ItemType<TenLifeGu>()) { shopCustomPrice = 100 });
+        shop.Add(new Item(ModContent.ItemType<HundredLifeGu>()) { shopCustomPrice = 500 });
+        shop.Add(new Item(ModContent.ItemType<StrengthLongicorn>()) { shopCustomPrice = 200 });
+        shop.Add(new Item(ModContent.ItemType<HuangLuoLongicorn>()) { shopCustomPrice = 200 });
+        shop.Add(new Item(ModContent.ItemType<BronzeShari>()) { shopCustomPrice = 300 });
+        shop.Add(new Item(ModContent.ItemType<SliverShari>()) { shopCustomPrice = 800 });
+        shop.Add(new Item(ModContent.ItemType<WineBug>()) { shopCustomPrice = 150 });
+        shop.Add(new Item(ModContent.ItemType<SevenWineBug>()) { shopCustomPrice = 600 });
+        shop.Add(new Item(ModContent.ItemType<LivingLeaf>()) { shopCustomPrice = 50 });
+        shop.Add(new Item(ModContent.ItemType<KsitigarbhaFlowerGu>()) { shopCustomPrice = 400 });
+        shop.Add(new Item(ModContent.ItemType<OneMinion>()) { shopCustomPrice = 250 });
+        shop.Add(new Item(ModContent.ItemType<JinLiGu>()) { shopCustomPrice = 180 });
+        shop.Add(new Item(ModContent.ItemType<WolfWaveCard>()) { shopCustomPrice = 120 });
+
+        shop.Register();
     }
 
     public override void AI()
@@ -154,8 +191,13 @@ public class DialogueTreeDemoNPC : ModNPC
             .AddOption("这是什么？", "what_is_this", DialogueOptionType.Informative)
             .AddOption("展示对话树", "show_tree")
             .AddOption("交易与购买", "trade_menu", DialogueOptionType.Trade)
+            .AddOption("炼制与合成", "craft_menu", DialogueOptionType.Craft)
+            .AddOption("修炼指导", "training_menu", DialogueOptionType.Teach)
             .AddOption("社交与互动", "social_menu", DialogueOptionType.Social)
             .AddOption("任务与委托", "quest_menu", DialogueOptionType.Quest)
+            .AddOption("挑战与试炼", "challenge_menu", DialogueOptionType.Combat)
+            .AddOption("深度世界观", "lore_menu", DialogueOptionType.Informative)
+            .AddOption("秘密与传说", "secrets_menu", DialogueOptionType.Informative)
             .AddOption("调试工具", "debug_tools", DialogueOptionType.Special)
             .AddOption("帮助", "help")
             .AddOption("再见", "bye", DialogueOptionType.Exit);
@@ -260,6 +302,217 @@ public class DialogueTreeDemoNPC : ModNPC
             "{npcName}后退一步：\"你触发了警告效果！NPC的 RiskThreshold 上升了，这意味着他变得更警惕。\n\n这就是对话效果的实际应用——每个选择都有后果！\"")
             .AddOption("明白了", "tree_effect");
 
+        // ===== 炼制与合成菜单 =====
+        b.StartNode("craft_menu",
+            "{npcName}拿出一个小型炼炉：\"我这里可以帮你炼制一些基础物品。你想炼制什么？\"")
+            .AddOptionWithEffects("炼制疗伤丹药（需要5个蘑菇+10元石）", "craft_done",
+                DialogueOptionType.Craft, new HasItemCondition(ItemID.Mushroom, 5), "消耗5个蘑菇和10元石",
+                new RemoveItemEffect(ItemID.Mushroom, 5),
+                new BuyItemEffect(ItemID.HealingPotion, 10, 3),
+                new ShowMessageEffect("炼制成功！获得3瓶疗伤丹药！", Color.Green))
+            .AddOptionWithEffects("炼制铁锭（需要3个铁矿石+5元石）", "craft_done",
+                DialogueOptionType.Craft, new HasItemCondition(ItemID.IronOre, 3), "消耗3个铁矿石和5元石",
+                new RemoveItemEffect(ItemID.IronOre, 3),
+                new GiveItemEffect(ItemID.IronBar, 1),
+                new ShowMessageEffect("炼制成功！获得1个铁锭！", Color.Green))
+            .AddOptionWithEffects("炼制金锭（需要4个金矿石+10元石）", "craft_done",
+                DialogueOptionType.Craft, new HasItemCondition(ItemID.GoldOre, 4), "消耗4个金矿石和10元石",
+                new RemoveItemEffect(ItemID.GoldOre, 4),
+                new GiveItemEffect(ItemID.GoldBar, 1),
+                new ShowMessageEffect("炼制成功！获得1个金锭！", Color.Gold))
+            .AddOption("返回主菜单", "greeting", DialogueOptionType.Exit);
+
+        b.StartNode("craft_done",
+            "{npcName}擦了擦汗：\"炼制完成！修真界的炼器之道博大精深，这只是皮毛而已。\"")
+            .AddOption("继续炼制", "craft_menu", DialogueOptionType.Craft)
+            .AddOption("返回主菜单", "greeting", DialogueOptionType.Exit);
+
+        // ===== 修炼指导菜单 =====
+        b.StartNode("training_menu",
+            "{npcName}正襟危坐：\"修炼之道，贵在坚持。你想了解哪方面的修炼知识？\"")
+            .AddOption("请教战斗技巧", "training_combat", DialogueOptionType.Teach)
+            .AddOption("请教资源获取", "training_resource", DialogueOptionType.Teach)
+            .AddOption("请教蛊虫培养", "training_gu", DialogueOptionType.Teach)
+            .AddOption("返回主菜单", "greeting", DialogueOptionType.Exit);
+
+        b.StartNode("training_combat",
+            "{npcName}摆出架势：\"战斗技巧方面：\n\n1. 善用环境——利用地形优势\n2. 合理搭配——不同蛊虫配合使用\n3. 知己知彼——了解敌人弱点\n4. 保持真元——不要过度消耗\n\n记住，活着才有输出！\"")
+            .AddOption("受益匪浅！", "training_menu")
+            .AddOption("返回主菜单", "greeting");
+
+        b.StartNode("training_resource",
+            "{npcName}拿出一张地图：\"资源获取方面：\n\n1. 青茅山盛产草药和矿石\n2. 夜晚有更多稀有资源出现\n3. 完成委托可以获得元石奖励\n4. 与商人交易是获取稀有物品的好方法\n\n记住，元石是修真界的硬通货！\"")
+            .AddOption("明白了！", "training_menu")
+            .AddOption("返回主菜单", "greeting");
+
+        b.StartNode("training_gu",
+            "{npcName}小心翼翼地拿出一只蛊虫：\"蛊虫培养方面：\n\n1. 蛊虫需要真元喂养，不要饿着它们\n2. 不同蛊虫有不同的进化路线\n3. 合炼可以产生更强大的蛊虫\n4. 本命蛊与主人性命相连，务必珍惜\n\n蛊虫是蛊师的根本，切记！\"")
+            .AddOption("受教了！", "training_menu")
+            .AddOption("返回主菜单", "greeting");
+
+        // ===== 秘密与传说菜单 =====
+        b.StartNode("secrets_menu",
+            "{npcName}压低声音，四处张望后说：\"你想知道一些不为人知的秘密？小心隔墙有耳...\"")
+            .AddOption("关于这个世界的真相", "secret_world", DialogueOptionType.Informative)
+            .AddOption("关于古月家族的秘密", "secret_guyue", DialogueOptionType.Informative)
+            .AddOption("关于远古遗迹", "secret_ruins", DialogueOptionType.Informative)
+            .AddOption("算了，太危险了", "greeting", DialogueOptionType.Exit);
+
+        b.StartNode("secret_world",
+            "{npcName}神秘地说：\"这个世界远比表面看起来复杂。据说在远古时代，蛊师们拥有移山填海之能。但一场大劫之后，大部分传承都失落了。\n\n现在残存的蛊师家族，不过是当年辉煌的余烬罢了...\"")
+            .AddOption("还有更多吗？", "secrets_menu")
+            .AddOption("令人震惊...", "greeting");
+
+        b.StartNode("secret_guyue",
+            "{npcName}声音更低了：\"古月家族...表面上是青茅山的主宰，但内部派系林立。漠脉、赤脉、药脉各怀心思。\n\n据说族长手中掌握着一件上古至宝，但没人见过真面目。\"")
+            .AddOption("有意思...", "secrets_menu")
+            .AddOption("我知道了", "greeting");
+
+        b.StartNode("secret_ruins",
+            "{npcName}眼中闪过一丝向往：\"传说在青茅山深处，有一座远古蛊师的洞府。里面藏有无数珍宝和失传的蛊方。\n\n但洞府外有强大的禁制，非有缘人不得入内。据说每百年才会开启一次...\"")
+            .AddOption("我要去寻找！", "secrets_menu")
+            .AddOption("太遥远了", "greeting");
+
+        // ===== 挑战与试炼菜单 =====
+        b.StartNode("challenge_menu",
+            "{npcName}眼中燃起斗志：\"你想挑战我？很好！修真之路，不进则退。你想挑战什么？\"")
+            .AddOption("知识问答挑战", "challenge_quiz", DialogueOptionType.Teach)
+            .AddOption("运气赌博挑战", "challenge_gamble", DialogueOptionType.Risky)
+            .AddOption("战斗模拟挑战", "challenge_combat", DialogueOptionType.Combat)
+            .AddOption("返回主菜单", "greeting", DialogueOptionType.Exit);
+
+        b.StartNode("challenge_quiz",
+            "{npcName}拿出一本古籍：\"修真知识问答！答对了有奖励，答错了...嘿嘿。准备好了吗？\"")
+            .AddOption("第一题：蛊师修炼的核心是什么？", "quiz_q1")
+            .AddOption("算了，我不擅长答题", "challenge_menu");
+
+        b.StartNode("quiz_q1",
+            "{npcName}问道：\"蛊师修炼的核心是什么？\"")
+            .AddOptionWithEffects("A. 真元", "quiz_q1_correct",
+                DialogueOptionType.Teach, null, "选择A",
+                new ShowMessageEffect("正确！真元是蛊师修炼的根本！", Color.Green),
+                new GiveItemEffect(ModContent.ItemType<Content.Items.Consumables.YuanS>(), 10))
+            .AddOptionWithEffects("B. 体力", "quiz_q1_wrong",
+                DialogueOptionType.Teach, null, "选择B",
+                new ShowMessageEffect("错误！蛊师修炼的核心是真元，不是体力。", Color.Red))
+            .AddOptionWithEffects("C. 运气", "quiz_q1_wrong",
+                DialogueOptionType.Teach, null, "选择C",
+                new ShowMessageEffect("错误！虽然运气很重要，但核心是真元。", Color.Red));
+
+        b.StartNode("quiz_q1_correct",
+            "{npcName}鼓掌：\"答对了！奖励你10元石。下一题：蛊虫分为几个等级？\"")
+            .AddOptionWithEffects("A. 三个", "quiz_q2_wrong",
+                DialogueOptionType.Teach, null, "选择A",
+                new ShowMessageEffect("错误！蛊虫通常分为五个等级。", Color.Red))
+            .AddOptionWithEffects("B. 五个", "quiz_q2_correct",
+                DialogueOptionType.Teach, null, "选择B",
+                new ShowMessageEffect("正确！蛊虫分为凡、灵、宝、道、仙五个等级！", Color.Green),
+                new GiveItemEffect(ModContent.ItemType<Content.Items.Consumables.YuanS>(), 20))
+            .AddOptionWithEffects("C. 七个", "quiz_q2_wrong",
+                DialogueOptionType.Teach, null, "选择C",
+                new ShowMessageEffect("错误！蛊虫通常分为五个等级。", Color.Red));
+
+        b.StartNode("quiz_q1_wrong",
+            "{npcName}摇头：\"答错了！不过没关系，再来一次？\"")
+            .AddOption("重新挑战", "challenge_quiz")
+            .AddOption("算了", "challenge_menu");
+
+        b.StartNode("quiz_q2_correct",
+            "{npcName}赞叹道：\"厉害！两题全对！奖励你20元石。看来你对修真知识很了解啊！\"")
+            .AddOption("继续挑战", "challenge_menu")
+            .AddOption("返回主菜单", "greeting");
+
+        b.StartNode("quiz_q2_wrong",
+            "{npcName}惋惜地说：\"可惜，第二题答错了。不过第一题答对了，还是给你10元石吧。\"")
+            .AddOption("重新挑战", "challenge_quiz")
+            .AddOption("返回主菜单", "greeting");
+
+        b.StartNode("challenge_gamble",
+            "{npcName}拿出一个骰盅：\"来赌一把！押注元石，赢了翻倍，输了全没。敢不敢？\"")
+            .AddOptionWithEffects("押注10元石（50%胜率）", "gamble_result",
+                DialogueOptionType.Risky, new HasYuanSCondition(10), "押注10元石，50%胜率",
+                new BuyItemEffect(ModContent.ItemType<Content.Items.Consumables.YuanS>(), 10, 0),
+                new RandomEffect(
+                    new CompositeEffect(
+                        new ShowMessageEffect("你赢了！获得20元石！", Color.Gold),
+                        new GiveItemEffect(ModContent.ItemType<Content.Items.Consumables.YuanS>(), 20)),
+                    new ShowMessageEffect("你输了！10元石没了...", Color.Red),
+                    0.5f))
+            .AddOptionWithEffects("押注50元石（30%胜率）", "gamble_result",
+                DialogueOptionType.Risky, new HasYuanSCondition(50), "押注50元石，30%胜率",
+                new BuyItemEffect(ModContent.ItemType<Content.Items.Consumables.YuanS>(), 50, 0),
+                new RandomEffect(
+                    new CompositeEffect(
+                        new ShowMessageEffect("大赢！获得150元石！", Color.Gold),
+                        new GiveItemEffect(ModContent.ItemType<Content.Items.Consumables.YuanS>(), 150)),
+                    new ShowMessageEffect("你输了！50元石没了...", Color.Red),
+                    0.3f))
+            .AddOptionWithEffects("押注100元石（10%胜率）", "gamble_result",
+                DialogueOptionType.Risky, new HasYuanSCondition(100), "押注100元石，10%胜率",
+                new BuyItemEffect(ModContent.ItemType<Content.Items.Consumables.YuanS>(), 100, 0),
+                new RandomEffect(
+                    new CompositeEffect(
+                        new ShowMessageEffect("超级大奖！获得500元石！！", Color.Gold),
+                        new GiveItemEffect(ModContent.ItemType<Content.Items.Consumables.YuanS>(), 500)),
+                    new ShowMessageEffect("你输了！100元石没了...", Color.Red),
+                    0.1f))
+            .AddOption("不赌了", "challenge_menu");
+
+        b.StartNode("gamble_result",
+            "{npcName}收起骰盅：\"赌博有风险，下注需谨慎！还要继续吗？\"")
+            .AddOption("再来一局", "challenge_gamble", DialogueOptionType.Risky)
+            .AddOption("见好就收", "challenge_menu");
+
+        b.StartNode("challenge_combat",
+            "{npcName}摆出战斗姿态：\"战斗模拟！我会控制力道，不会真的伤到你。准备好了吗？\"")
+            .AddOptionWithEffects("初级挑战（简单）", "combat_result",
+                DialogueOptionType.Combat, null, "初级战斗模拟",
+                new ShowMessageEffect("你完成了初级战斗模拟！获得20元石！", Color.Green),
+                new GiveItemEffect(ModContent.ItemType<Content.Items.Consumables.YuanS>(), 20))
+            .AddOptionWithEffects("中级挑战（普通）", "combat_result",
+                DialogueOptionType.Combat, null, "中级战斗模拟",
+                new ShowMessageEffect("你完成了中级战斗模拟！获得50元石！", Color.Green),
+                new GiveItemEffect(ModContent.ItemType<Content.Items.Consumables.YuanS>(), 50))
+            .AddOptionWithEffects("高级挑战（困难）", "combat_result",
+                DialogueOptionType.Combat, null, "高级战斗模拟",
+                new ShowMessageEffect("你完成了高级战斗模拟！获得100元石！", Color.Gold),
+                new GiveItemEffect(ModContent.ItemType<Content.Items.Consumables.YuanS>(), 100))
+            .AddOption("返回", "challenge_menu");
+
+        b.StartNode("combat_result",
+            "{npcName}擦了擦汗：\"不错不错！你的实力有所提升。还要继续挑战吗？\"")
+            .AddOption("继续挑战", "challenge_combat", DialogueOptionType.Combat)
+            .AddOption("今天就到这里", "challenge_menu");
+
+        // ===== 深度世界观菜单 =====
+        b.StartNode("lore_menu",
+            "{npcName}拿出一本厚重的古籍：\"你想深入了解这个世界的真相？很好，求知欲是修真者最重要的品质。\"")
+            .AddOption("蛊师的起源", "lore_origin", DialogueOptionType.Informative)
+            .AddOption("五大势力的历史", "lore_factions", DialogueOptionType.Informative)
+            .AddOption("蛊虫的奥秘", "lore_gu", DialogueOptionType.Informative)
+            .AddOption("上古大劫的真相", "lore_cataclysm", DialogueOptionType.Informative)
+            .AddOption("返回主菜单", "greeting", DialogueOptionType.Exit);
+
+        b.StartNode("lore_origin",
+            "{npcName}缓缓道来：\"蛊师的起源可以追溯到上古时期。传说第一位蛊师是一位名叫'蛊祖'的奇人，他在深山中发现了第一只蛊虫。\n\n蛊祖发现，通过培养和炼化蛊虫，人类可以获得超乎想象的力量。他将这门技艺传授给了十二位弟子，这十二人后来建立了最初的十二蛊师家族。\n\n然而，经过数千年的变迁，大部分家族已经消亡或没落。如今只剩下五大势力还在传承蛊师之道...\"")
+            .AddOption("继续听", "lore_menu")
+            .AddOption("太长了，下次再听", "greeting");
+
+        b.StartNode("lore_factions",
+            "{npcName}翻开古籍的另一页：\"五大势力分别是：\n\n1. 古月家族——青茅山的主宰，以月之蛊闻名\n2. 白家——北方雪原的统治者，擅长冰系蛊术\n3. 商家——遍布天下的商业帝国，掌控资源流通\n4. 铁家——以锻造蛊器闻名，战力强悍\n5. 天鹤宗——最古老的蛊师宗门，传承最为完整\n\n每个势力都有自己的独门蛊术和传承体系。\"")
+            .AddOption("继续听", "lore_menu")
+            .AddOption("很有意思", "greeting");
+
+        b.StartNode("lore_gu",
+            "{npcName}小心翼翼地取出一只蛊虫标本：\"蛊虫分为五个等级：\n\n凡级——最常见的蛊虫，如月光蛊、治疗蛊\n灵级——拥有灵智的蛊虫，如剑影蛊、盾甲蛊\n宝级——稀世珍宝级别的蛊虫，如天元蛊、时空蛊\n道级——蕴含天地法则的蛊虫，极其罕见\n仙级——传说中的存在，据说只有蛊祖拥有过\n\n蛊虫可以通过喂养、合炼、进化来提升等级。\"")
+            .AddOption("继续听", "lore_menu")
+            .AddOption("受益匪浅", "greeting");
+
+        b.StartNode("lore_cataclysm",
+            "{npcName}压低声音，神色凝重：\"上古大劫...这是蛊师世界最大的禁忌话题。\n\n据说在数千年前，蛊师文明达到了巅峰。但一场突如其来的大劫摧毁了一切。没有人知道大劫的具体原因，但流传着几种说法：\n\n1. 天罚说——蛊师的力量触怒了天道\n2. 内乱说——蛊师家族之间的战争引发了灾难\n3. 蛊虫反噬说——某位蛊师试图炼制仙级蛊虫失败\n\n无论真相如何，大劫之后，蛊师文明倒退了几千年。许多传承永远失传了...\"")
+            .AddOption("令人唏嘘", "lore_menu")
+            .AddOption("我要探寻真相！", "greeting");
+
         // ===== 交易与购买菜单 =====
         int yuanSItemType = ModContent.ItemType<Content.Items.Consumables.YuanS>();
         b.StartNode("trade_menu",
@@ -305,6 +558,11 @@ public class DialogueTreeDemoNPC : ModNPC
                 new RemoveItemEffect(ItemID.GoldBar, 3),
                 new ModifyReputationEffect(FactionID.GuYue, 20, "赠送礼物"),
                 new ShowMessageEffect("NPC很高兴！与古月势力的声望提升了！", Color.Gold))
+            .AddOptionWithEffects("切磋武艺", "social_done",
+                DialogueOptionType.Combat, null, "与NPC切磋，不伤性命",
+                new ShowMessageEffect("你和NPC切磋了一番，双方都受益良多！", Color.Orange),
+                new ModifyBeliefEffect(ModifyBeliefEffect.BeliefField.ConfidenceLevel,
+                    ModifyBeliefEffect.ModifyOp.Add, 0.2f))
             .AddOptionWithEffects("结盟提议", "social_done",
                 DialogueOptionType.Ally, new ReputationCondition(FactionID.GuYue, 100), "需要声望>=100",
                 new ShowMessageEffect("你与NPC结成了盟友关系！", Color.Gold),
@@ -324,6 +582,11 @@ public class DialogueTreeDemoNPC : ModNPC
                 new RemoveItemEffect(ItemID.Wood, 10),
                 new GiveItemEffect(yuanSItemType, 30),
                 new ShowMessageEffect("任务完成！获得30元石奖励！", Color.Gold))
+            .AddOptionWithEffects("狩猎任务：收集5个晶状体", "quest_done",
+                DialogueOptionType.Quest, new HasItemCondition(ItemID.Lens, 5), "需要5个晶状体",
+                new RemoveItemEffect(ItemID.Lens, 5),
+                new GiveItemEffect(yuanSItemType, 50),
+                new ShowMessageEffect("任务完成！获得50元石奖励！", Color.Gold))
             .AddOptionWithEffects("讨伐任务：击杀5只史莱姆", "quest_done",
                 DialogueOptionType.Quest, null, "接受讨伐史莱姆的任务",
                 new GiveQuestEffect("讨伐史莱姆", "击杀5只史莱姆，回来领取奖励", 50))
@@ -385,6 +648,7 @@ public class DialogueTreeDemoNPC : ModNPC
             "{npcName}警惕地盯着你，手按在武器上：\"你是谁？想干什么？我警告你，别耍花样！\"")
             .AddOption("我没有恶意", "explain", DialogueOptionType.Informative)
             .AddOption("我只是路过", "pass_by")
+            .AddOption("我想打听点消息", "wary_info", DialogueOptionType.Informative)
             .AddOption("我想交易", "trade_attempt", DialogueOptionType.Trade)
             .AddOption("...（沉默离开）", "bye", DialogueOptionType.Exit);
 
@@ -414,6 +678,22 @@ public class DialogueTreeDemoNPC : ModNPC
             .AddOption("打开商店", null, DialogueOptionType.Trade, opensShop: "DemoShop")
             .AddOption("算了", "bye", DialogueOptionType.Exit);
 
+        b.StartNode("wary_info",
+            "{npcName}犹豫了一下，还是开口了：\"你想知道什么？不过我不保证说的都是真的。\"")
+            .AddOption("附近有什么危险？", "wary_danger")
+            .AddOption("你在这里做什么？", "wary_why_here")
+            .AddOption("算了，不问了", "greeting");
+
+        b.StartNode("wary_danger",
+            "{npcName}指了指东边：\"那边有妖兽出没，我劝你别去送死。不过...你死了也不关我的事。\"")
+            .AddOption("多谢提醒", "greeting")
+            .AddOption("哼", "bye", DialogueOptionType.Exit);
+
+        b.StartNode("wary_why_here",
+            "{npcName}警惕地看了你一眼：\"这不关你的事。每个人都有自己的理由。\"")
+            .AddOption("好吧", "greeting")
+            .AddOption("（离开）", "bye", DialogueOptionType.Exit);
+
         b.StartNode("bye",
             "{npcName}一直盯着你直到你走远：\"呼...总算走了。\"")
             .EndsDialogue();
@@ -434,6 +714,7 @@ public class DialogueTreeDemoNPC : ModNPC
             .AddOption("我需要一些物资", "shop", DialogueOptionType.Trade)
             .AddOption("给我讲讲这里的情况", "tell_story", DialogueOptionType.Informative)
             .AddOption("有什么特殊服务吗？", "special_service", DialogueOptionType.Special)
+            .AddOption("我要赏赐你", "respect_gift", DialogueOptionType.Social)
             .AddOption("你太客气了", "humble")
             .AddOption("我先走了", "bye", DialogueOptionType.Exit);
 
@@ -474,6 +755,20 @@ public class DialogueTreeDemoNPC : ModNPC
             .AddOption("好，下次带我去", "greeting")
             .AddOption("我不需要", "greeting");
 
+        b.StartNode("respect_gift",
+            "{npcName}受宠若惊：\"大人要赏赐小人？这...这怎么好意思！\"")
+            .AddOptionWithEffects("给你一些元石（50元石）", "respect_gift_done",
+                DialogueOptionType.Social, new HasYuanSCondition(50), "赠送50元石",
+                new BuyItemEffect(ModContent.ItemType<Content.Items.Consumables.YuanS>(), 50, 0),
+                new ModifyReputationEffect(FactionID.GuYue, 30, "慷慨赏赐"),
+                new ShowMessageEffect("NPC感激涕零！声望大幅提升！", Color.Gold))
+            .AddOption("算了，下次吧", "greeting");
+
+        b.StartNode("respect_gift_done",
+            "{npcName}激动得热泪盈眶：\"大人恩德，小人没齿难忘！以后有用得着小人的地方，尽管吩咐！\"")
+            .AddOption("好好干", "greeting")
+            .AddOption("我走了", "bye", DialogueOptionType.Exit);
+
         b.StartNode("humble",
             "{npcName}惶恐地说：\"大人折煞小人了！能为您效劳是小人的福分！\"")
             .AddOption("好吧，那我要买东西", "shop", DialogueOptionType.Trade)
@@ -499,6 +794,7 @@ public class DialogueTreeDemoNPC : ModNPC
             .AddOption("别怕，我不伤害你", "calm_down", DialogueOptionType.Informative)
             .AddOption("把值钱的东西交出来", "rob", DialogueOptionType.Risky)
             .AddOption("我问你几个问题", "question")
+            .AddOption("你需要帮助吗？", "fearful_help", DialogueOptionType.Social)
             .AddOption("...（转身离开）", "bye", DialogueOptionType.Exit);
 
         b.StartNode("calm_down",
@@ -545,6 +841,21 @@ public class DialogueTreeDemoNPC : ModNPC
             .AddOption("有意思", "question")
             .AddOption("够了", "bye", DialogueOptionType.Exit);
 
+        b.StartNode("fearful_help",
+            "{npcName}眼睛一亮：\"大人愿意帮我？真的吗？我...我需要一些食物和水，我已经好几天没吃东西了...\"")
+            .AddOptionWithEffects("给你一些食物", "fearful_help_done",
+                DialogueOptionType.Social, new HasItemCondition(ItemID.Mushroom, 3), "需要3个蘑菇",
+                new RemoveItemEffect(ItemID.Mushroom, 3),
+                new ModifyBeliefEffect(ModifyBeliefEffect.BeliefField.RiskThreshold,
+                    ModifyBeliefEffect.ModifyOp.Add, -0.3f),
+                new ShowMessageEffect("NPC感激涕零！对你的信任大幅提升！", Color.Green))
+            .AddOption("我没有食物", "greeting");
+
+        b.StartNode("fearful_help_done",
+            "{npcName}狼吞虎咽地吃着，眼泪都流出来了：\"谢谢大人！谢谢大人！您是我的救命恩人！\"")
+            .AddOption("不用谢", "greeting")
+            .AddOption("我走了", "bye", DialogueOptionType.Exit);
+
         b.StartNode("bye",
             "{npcName}看着你离开，如释重负地瘫坐在地上：\"活...活下来了...\"")
             .EndsDialogue();
@@ -564,6 +875,8 @@ public class DialogueTreeDemoNPC : ModNPC
             "{npcName}拔出武器，眼中充满杀意：\"你还有胆子来？找死！\"")
             .AddOption("等等！我是来谈判的！", "negotiate", DialogueOptionType.Risky)
             .AddOption("你想怎样？", "what_you_want")
+            .AddOption("我有话问你", "hostile_info", DialogueOptionType.Informative)
+            .AddOption("你打不过我的", "hostile_taunt", DialogueOptionType.Risky)
             .AddOption("（默默离开）", "bye", DialogueOptionType.Exit);
 
         b.StartNode("negotiate",
@@ -589,6 +902,21 @@ public class DialogueTreeDemoNPC : ModNPC
                 new SetAttitudeEffect(GuAttitude.Hostile))
             .AddOption("等等！我走！", "bye", DialogueOptionType.Exit);
 
+        b.StartNode("hostile_taunt",
+            "{npcName}狂笑道：\"哈哈哈！就凭你也配跟我打？你连我的一根手指都打不过！\"")
+            .AddOption("那就试试看！", "fight", DialogueOptionType.Risky)
+            .AddOption("你等着，我会回来的", "bye", DialogueOptionType.Exit);
+
+        b.StartNode("hostile_info",
+            "{npcName}不耐烦地说：\"你想知道什么？说完赶紧滚！\"")
+            .AddOption("你为什么这么恨我？", "hostile_why")
+            .AddOption("算了", "bye", DialogueOptionType.Exit);
+
+        b.StartNode("hostile_why",
+            "{npcName}咬牙切齿：\"你还有脸问？上次你抢了我的东西，还打伤了我的兄弟！这笔账我记着呢！\"")
+            .AddOption("那是个误会", "negotiate")
+            .AddOption("我没错", "fight", DialogueOptionType.Risky);
+
         b.StartNode("bye",
             "{npcName}在你身后喊道：\"滚！别再让我看见你！下次见面就是你的死期！\"")
             .EndsDialogue();
@@ -608,6 +936,7 @@ public class DialogueTreeDemoNPC : ModNPC
             "{npcName}上下打量了你一番，嗤笑一声：\"哟，这不是那个谁吗？怎么，又来找虐了？\"")
             .AddOption("你什么意思？", "what_mean")
             .AddOption("我不想跟你吵", "ignore_him")
+            .AddOption("敢不敢打个赌？", "contempt_bet", DialogueOptionType.Risky)
             .AddOption("有本事再说一遍！", "provoke", DialogueOptionType.Risky)
             .AddOption("（转身就走）", "bye", DialogueOptionType.Exit);
 
@@ -634,6 +963,20 @@ public class DialogueTreeDemoNPC : ModNPC
                 new SetAttitudeEffect(GuAttitude.Hostile))
             .AddOption("我认输...", "bye", DialogueOptionType.Exit);
 
+        b.StartNode("contempt_bet",
+            "{npcName}挑了挑眉：\"哦？你想跟我打赌？赌什么？\"")
+            .AddOptionWithEffects("赌100元石，我能在战斗中赢你", "contempt_bet_fight",
+                DialogueOptionType.Risky, new HasYuanSCondition(100), "需要100元石",
+                new ShowMessageEffect("赌约成立！", Color.Gold))
+            .AddOption("算了，不赌了", "greeting");
+
+        b.StartNode("contempt_bet_fight",
+            "{npcName}大笑道：\"哈哈哈！有胆量！那就来吧！输了可别哭鼻子！\"")
+            .AddOptionWithEffects("（进入战斗）", "bye",
+                new ShowMessageEffect("赌约战斗开始！", Color.Red),
+                new SetAttitudeEffect(GuAttitude.Hostile))
+            .AddOption("我改变主意了", "bye", DialogueOptionType.Exit);
+
         b.StartNode("bye",
             "{npcName}不屑地啐了一口：\"哼，废物。\"")
             .EndsDialogue();
@@ -653,6 +996,7 @@ public class DialogueTreeDemoNPC : ModNPC
             "{npcName}瞥了你一眼，继续做自己的事，完全当你不存在。")
             .AddOption("喂！我在跟你说话！", "hey")
             .AddOption("...（尴尬地站着）", "stand")
+            .AddOption("给你点好处，理我一下", "ignore_bribe", DialogueOptionType.Social)
             .AddOption("（走人）", "bye", DialogueOptionType.Exit);
 
         b.StartNode("hey",
@@ -681,6 +1025,21 @@ public class DialogueTreeDemoNPC : ModNPC
                 new ShowMessageEffect("NPC被激怒，进入战斗状态！", Color.Red),
                 new SetAttitudeEffect(GuAttitude.Hostile))
             .AddOption("我错了...", "bye", DialogueOptionType.Exit);
+
+        b.StartNode("ignore_bribe",
+            "{npcName}终于有了点反应，瞥了你手中的东西一眼：\"...什么东西？\"")
+            .AddOptionWithEffects("给你50元石，跟我说句话", "ignore_bribe_done",
+                DialogueOptionType.Social, new HasYuanSCondition(50), "消耗50元石",
+                new BuyItemEffect(ModContent.ItemType<Content.Items.Consumables.YuanS>(), 50, 0),
+                new ModifyBeliefEffect(ModifyBeliefEffect.BeliefField.RiskThreshold,
+                    ModifyBeliefEffect.ModifyOp.Add, -0.15f),
+                new ShowMessageEffect("NPC终于正眼看你了！", Color.Green))
+            .AddOption("算了", "bye", DialogueOptionType.Exit);
+
+        b.StartNode("ignore_bribe_done",
+            "{npcName}收起元石，语气依然冷淡但至少愿意说话了：\"行吧，你想说什么？\"")
+            .AddOption("终于肯理我了", "greeting")
+            .AddOption("没什么，就是确认一下你还活着", "bye", DialogueOptionType.Exit);
 
         b.StartNode("bye",
             "你离开时，{npcName}自始至终没有多看你一眼。")

@@ -1,7 +1,4 @@
 using System.Collections.Generic;
-using Terraria;
-using Terraria.ModLoader;
-using Terraria.ModLoader.IO;
 
 namespace VerminLordMod.Common.Systems
 {
@@ -145,117 +142,7 @@ namespace VerminLordMod.Common.Systems
     }
 
     // ============================================================
-    // GuWorldSystem - 世界级数据持有者（已弃用）
-    // 保存所有家族状态
-    // D-01: 已合并到 WorldStateMachine，此类作为转发器保留
+    // GuWorldSystem - 已废弃，仅保留枚举定义
+    // D-01: 所有功能已合并到 WorldStateMachine
     // ============================================================
-    [System.Obsolete("请使用 WorldStateMachine 替代 GuWorldSystem")]
-    public class GuWorldSystem : ModSystem
-    {
-        /// <summary> 所有已知家族 </summary>
-        public static Dictionary<FactionID, FactionState> AllFactions = new();
-
-        /// <summary> 家族显示名称映射 </summary>
-        public static string GetFactionDisplayName(FactionID id) => id switch
-        {
-            FactionID.GuYue => "古月家族",
-            FactionID.Bai => "白家",
-            FactionID.Xiong => "熊家",
-            FactionID.Tie => "铁家",
-            FactionID.Bai2 => "百家",
-            FactionID.Wang => "汪家",
-            FactionID.Zhao => "赵家",
-            FactionID.Jia => "贾家",
-            FactionID.Scattered => "散修",
-            _ => "未知"
-        };
-
-        /// <summary> 获取家族之间关系值 </summary>
-        public static int GetRelation(FactionID a, FactionID b)
-        {
-            if (a == b) return 100;
-            if (!AllFactions.ContainsKey(a) || !AllFactions[a].Relations.ContainsKey(b))
-                return 0;
-            return AllFactions[a].Relations[b];
-        }
-
-        public override void OnWorldLoad()
-        {
-            // 初始化家族数据
-            AllFactions.Clear();
-            AllFactions[FID.GuYue] = new FactionState(FID.GuYue, "古月家族", "GuYueTerritory");
-            AllFactions[FID.Bai] = new FactionState(FID.Bai, "白家", "BaiTerritory");
-            AllFactions[FID.Xiong] = new FactionState(FID.Xiong, "熊家", "XiongTerritory");
-            AllFactions[FID.Tie] = new FactionState(FID.Tie, "铁家", "TieTerritory");
-            AllFactions[FID.Bai2] = new FactionState(FID.Bai2, "百家", "Bai2Territory");
-            AllFactions[FID.Wang] = new FactionState(FID.Wang, "汪家", "WangTerritory");
-            AllFactions[FID.Zhao] = new FactionState(FID.Zhao, "赵家", "ZhaoTerritory");
-            AllFactions[FID.Jia] = new FactionState(FID.Jia, "贾家", null);
-
-            // 初始化家族间关系（基于小说设定）
-            SetDefaultRelations();
-        }
-
-        private void SetDefaultRelations()
-        {
-            // 古月与周边家族的关系
-            SetRelation(FID.GuYue, FID.Bai, 30);
-            SetRelation(FID.GuYue, FID.Xiong, -20);
-            SetRelation(FID.GuYue, FID.Tie, 0);
-
-            // 白家
-            SetRelation(FID.Bai, FID.GuYue, 30);
-            SetRelation(FID.Bai, FID.Tie, 10);
-
-            // 熊家
-            SetRelation(FID.Xiong, FID.GuYue, -20);
-            SetRelation(FID.Xiong, FID.Tie, -10);
-        }
-
-        private void SetRelation(FactionID a, FactionID b, int value)
-        {
-            if (AllFactions.ContainsKey(a))
-                AllFactions[a].Relations[b] = value;
-            if (AllFactions.ContainsKey(b))
-                AllFactions[b].Relations[a] = value; // 默认对称
-        }
-
-        public override void SaveWorldData(TagCompound tag)
-        {
-            // 保存家族间关系变化（使用 List<TagCompound> 替代嵌套 Dictionary）
-            var relationsData = new List<TagCompound>();
-            foreach (var (fid, state) in AllFactions)
-            {
-                foreach (var (otherId, val) in state.Relations)
-                {
-                    relationsData.Add(new TagCompound
-                    {
-                        ["factionA"] = fid.ToString(),
-                        ["factionB"] = otherId.ToString(),
-                        ["value"] = val
-                    });
-                }
-            }
-            tag["factionRelations"] = relationsData;
-        }
-
-        public override void LoadWorldData(TagCompound tag)
-        {
-            if (tag.TryGet("factionRelations", out List<TagCompound> relationsData))
-            {
-                foreach (var entry in relationsData)
-                {
-                    var aStr = entry.GetString("factionA");
-                    var bStr = entry.GetString("factionB");
-                    var val = entry.GetInt("value");
-                    if (System.Enum.TryParse<FactionID>(aStr, out var fidA) && AllFactions.ContainsKey(fidA)
-                        && System.Enum.TryParse<FactionID>(bStr, out var fidB))
-                    {
-                        AllFactions[fidA].Relations[fidB] = val;
-                    }
-                }
-            }
-        }
-    }
-
-    }
+}

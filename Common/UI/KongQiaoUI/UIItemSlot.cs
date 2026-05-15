@@ -76,7 +76,7 @@ namespace VerminLordMod.Common.UI.KongQiaoUI
             // 边框
             Color borderColor = _highlighted ? UIStyles.BorderAccent : (IsEmpty ? UIStyles.BorderLight : UIStyles.Border);
             int borderSize = _highlighted ? 2 : 1;
-            UIHelper.DrawBorder(spriteBatch, rect, borderSize, borderColor);
+            UIRendering.DrawBorder(spriteBatch, rect, borderSize, borderColor);
 
             // 物品图标
             if (!IsEmpty && _item.type < TextureAssets.Item.Length && _item.type > 0)

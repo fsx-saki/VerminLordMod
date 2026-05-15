@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
@@ -171,12 +172,99 @@ namespace VerminLordMod.Common.Systems
             return GetCurrentModifiers().GuLoyaltyDecayMult;
         }
 
+        private int _lastDay = -1;
+
         public override void PostUpdateWorld()
         {
-            // TODO: 季节推进逻辑
-            // TODO: 月相更新逻辑
-            // TODO: 天气变化逻辑
-            // TODO: 天气视觉效果
+            int currentDay = (int)(Main.GameUpdateCount / TICKS_PER_DAY);
+            if (currentDay == _lastDay) return;
+            _lastDay = currentDay;
+
+            DayInSeason++;
+            if (DayInSeason >= DAYS_PER_SEASON)
+            {
+                DayInSeason = 0;
+                CurrentSeason = (Season)(((int)CurrentSeason + 1) % 4);
+                OnSeasonChanged();
+            }
+
+            CurrentMoonPhase = (CelestialPhase)(((int)CurrentMoonPhase + 1) % 8);
+
+            UpdateWeather();
+
+            if (Main.netMode != Terraria.ID.NetmodeID.Server && Main.myPlayer >= 0)
+            {
+                ApplyWeatherVisuals();
+            }
+        }
+
+        private void OnSeasonChanged()
+        {
+            string seasonName = CurrentSeason switch
+            {
+                Season.Spring => "春",
+                Season.Summer => "夏",
+                Season.Autumn => "秋",
+                Season.Winter => "冬",
+                _ => "?"
+            };
+            Main.NewText($"季节更替：{seasonName}季来临！", Color.Gold);
+        }
+
+        private void UpdateWeather()
+        {
+            WeatherRemainingTicks--;
+            if (WeatherRemainingTicks > 0) return;
+
+            float spiritRainChance = CurrentSeason == Season.Spring ? 0.05f : 0.02f;
+            float bloodMoonChance = Main.bloodMoon ? 1f : 0f;
+
+            float roll = Main.rand.NextFloat();
+            if (bloodMoonChance > 0 && roll < bloodMoonChance)
+            {
+                CurrentWeather = WeatherType.BloodMoon;
+                WeatherRemainingTicks = TICKS_PER_DAY;
+            }
+            else if (roll < spiritRainChance)
+            {
+                CurrentWeather = WeatherType.SpiritRain;
+                WeatherRemainingTicks = TICKS_PER_DAY / 4;
+            }
+            else
+            {
+                CurrentWeather = CurrentSeason switch
+                {
+                    Season.Spring => RollWeather(0.3f, 0.05f, 0f, 0.1f),
+                    Season.Summer => RollWeather(0.15f, 0.1f, 0f, 0.05f),
+                    Season.Autumn => RollWeather(0.2f, 0.05f, 0f, 0.15f),
+                    Season.Winter => RollWeather(0.1f, 0.05f, 0.3f, 0.1f),
+                    _ => WeatherType.Clear,
+                };
+                WeatherRemainingTicks = TICKS_PER_DAY / 2 + Main.rand.Next(TICKS_PER_DAY / 2);
+            }
+        }
+
+        private WeatherType RollWeather(float rainChance, float stormChance, float snowChance, float fogChance)
+        {
+            float roll = Main.rand.NextFloat();
+            if (roll < rainChance) return WeatherType.Rain;
+            if (roll < rainChance + stormChance) return WeatherType.Storm;
+            if (roll < rainChance + stormChance + snowChance) return WeatherType.Snow;
+            if (roll < rainChance + stormChance + snowChance + fogChance) return WeatherType.Fog;
+            return WeatherType.Clear;
+        }
+
+        private void ApplyWeatherVisuals()
+        {
+            if (CurrentWeather == WeatherType.Rain || CurrentWeather == WeatherType.Storm)
+            {
+                Main.rainTime = System.Math.Max(Main.rainTime, 600);
+                Main.maxRaining = CurrentWeather == WeatherType.Storm ? 0.8f : 0.4f;
+            }
+            if (CurrentWeather == WeatherType.BloodMoon)
+            {
+                Main.bloodMoon = true;
+            }
         }
 
         public override void SaveWorldData(TagCompound tag)

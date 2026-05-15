@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
@@ -53,10 +54,56 @@ namespace VerminLordMod.Common.Systems
     {
         public static KarmaSystem Instance => ModContent.GetInstance<KarmaSystem>();
 
+        private int _lastDay = -1;
+
         public override void PostUpdateWorld()
         {
-            // TODO: 因果报应触发检查
-            // TODO: 善恶值衰减
+            int currentDay = (int)(Main.GameUpdateCount / 36000);
+            if (currentDay <= _lastDay) return;
+            _lastDay = currentDay;
+
+            for (int i = 0; i < Main.maxPlayers; i++)
+            {
+                var player = Main.player[i];
+                if (!player.active) continue;
+
+                var karmaPlayer = player.GetModPlayer<KarmaPlayer>();
+
+                if (karmaPlayer.GoodKarma > 0)
+                    karmaPlayer.GoodKarma = System.Math.Max(0, karmaPlayer.GoodKarma - 1);
+                if (karmaPlayer.EvilKarma > 0)
+                    karmaPlayer.EvilKarma = System.Math.Max(0, karmaPlayer.EvilKarma - 1);
+
+                CheckKarmaRetribution(player, karmaPlayer);
+            }
+        }
+
+        private void CheckKarmaRetribution(Player player, KarmaPlayer karmaPlayer)
+        {
+            var level = karmaPlayer.GetKarmaLevel();
+
+            if (level == KarmaLevel.Damned && Main.rand.NextFloat() < 0.02f)
+            {
+                var tribSystem = HeavenTribulationSystem.Instance;
+                if (tribSystem != null && tribSystem.CanTriggerTribulation(player))
+                {
+                    tribSystem.TriggerTribulation(player);
+                    if (player.whoAmI == Main.myPlayer)
+                        Main.NewText("天谴降临！你的恶行引来了天劫！", Color.DarkRed);
+                }
+            }
+
+            if (level <= KarmaLevel.Corrupted && Main.rand.NextFloat() < 0.01f)
+            {
+                player.AddBuff(Terraria.ID.BuffID.Cursed, 600);
+                if (player.whoAmI == Main.myPlayer)
+                    Main.NewText("你感到一股不祥的预兆...", Color.Gray);
+            }
+
+            if (level >= KarmaLevel.Virtuous && Main.rand.NextFloat() < 0.01f)
+            {
+                player.AddBuff(Terraria.ID.BuffID.Regeneration, 600);
+            }
         }
 
         public static float GetTribulationModifier(KarmaLevel level)
@@ -103,12 +150,12 @@ namespace VerminLordMod.Common.Systems
 
         public override void SaveWorldData(TagCompound tag)
         {
-            // TODO: 保存因果数据
+            tag["karmaDayCounter"] = _lastDay;
         }
 
         public override void LoadWorldData(TagCompound tag)
         {
-            // TODO: 加载因果数据
+            _lastDay = tag.GetInt("karmaDayCounter");
         }
     }
 

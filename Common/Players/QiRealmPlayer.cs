@@ -247,18 +247,16 @@ namespace VerminLordMod.Common.Players
         /// </summary>
         public override void PostUpdateMiscEffects()
         {
-            if (GuLevel <= 0) return; // 未开窍
+            if (GuLevel <= 0) return;
 
-            // 突破进度自然衰减（未满时）
-            if (BreakthroughProgress <= 100)
+            if (BreakthroughProgress >= 100)
             {
-                BreakthroughProgress -= 0.01f;
+                BreakthroughProgress = 0;
+                StageUp();
             }
             else
             {
-                // 满100触发破境
-                BreakthroughProgress = 0;
-                StageUp();
+                BreakthroughProgress -= 0.01f;
             }
 
             BreakthroughProgress = Utils.Clamp(BreakthroughProgress, 0, 100);

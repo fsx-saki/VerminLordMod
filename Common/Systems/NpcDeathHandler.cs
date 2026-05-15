@@ -9,8 +9,6 @@ using VerminLordMod.Common.Events;
 using VerminLordMod.Common.GuBehaviors;
 using VerminLordMod.Common.Players;
 using VerminLordMod.Common.Systems;
-using VerminLordMod.Content.Items.Consumables;
-using VerminLordMod.Content.Items.Weapons;
 using VerminLordMod.Content.NPCs.GuMasters;
 
 namespace VerminLordMod.Common.Systems
@@ -270,35 +268,11 @@ namespace VerminLordMod.Common.Systems
         // ============================================================
 
         /// <summary>
-        /// 计算暴露掉落：从玩家背包中随机选择 30% 物品散落。
-        /// 媒介武器和空窍石不掉落。
+        /// 计算暴露掉落：委托给 LootSystem。
         /// </summary>
         private List<Item> CalculateExposedDrops(Player player)
         {
-            var drops = new List<Item>();
-
-            foreach (Item item in player.inventory)
-            {
-                if (item == null || item.IsAir) continue;
-                if (IsEssentialItem(item)) continue; // 媒介/空窍石不掉落
-
-                if (Main.rand.NextFloat() < ExposedDropRate)
-                {
-                    drops.Add(item.Clone());
-                    item.TurnToAir();
-                }
-            }
-
-            return drops;
-        }
-
-        /// <summary>
-        /// 判断是否为关键物品（死亡不掉落）
-        /// </summary>
-        private bool IsEssentialItem(Item item)
-        {
-            return item.type == ModContent.ItemType<GuMediumWeapon>()
-                || item.type == ModContent.ItemType<KongQiaoStone>();
+            return LootSystem.Instance.CalculateExposedDrops(player, ExposedDropRate);
         }
 
         /// <summary>

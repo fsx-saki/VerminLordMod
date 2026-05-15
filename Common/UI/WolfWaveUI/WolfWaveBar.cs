@@ -1,4 +1,4 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
@@ -21,8 +21,6 @@ namespace VerminLordMod.Common.UI.WolfWaveUI
     {
         private UIText text;
         private UIElement area;
-        private Color gradientA;
-        private Color gradientB;
 
         public override void OnInitialize()
         {
@@ -38,9 +36,6 @@ namespace VerminLordMod.Common.UI.WolfWaveUI
             text.Top.Set(28, 0f);
             text.Left.Set(0, 0f);
             text.TextColor = UIStyles.TextMain;
-
-            gradientA = UIStyles.TextDanger;
-            gradientB = new Color(160, 60, 60);
 
             area.Append(text);
             Append(area);
@@ -60,28 +55,15 @@ namespace VerminLordMod.Common.UI.WolfWaveUI
             float quotient = WolfSystem.WolfWaveRate / 100;
             quotient = Utils.Clamp(quotient, 0, 1);
 
-            // 绘制扁平背景条
             var bgRect = area.GetInnerDimensions().ToRectangle();
-            bgRect.X += 0;
             bgRect.Width = 200;
-            bgRect.Y += 0;
             bgRect.Height = 24;
 
-            // 背景
-            UIHelper.DrawRoundedRect(spriteBatch, bgRect, UIStyles.WolfBarBg, 6);
-            // 边框
-            var borderRect = bgRect;
-            borderRect.Inflate(1, 1);
-            UIHelper.DrawBorder(spriteBatch, borderRect, 1, UIStyles.WolfBarBorder);
+            Color fillA = UIStyles.TextDanger;
+            Color fillB = new Color(160, 60, 60);
 
-            // 填充条 — 从红色渐变到橙色
-            int fillWidth = (int)((bgRect.Width - 4) * quotient);
-            if (fillWidth > 0)
-            {
-                var fillRect = new Rectangle(bgRect.X + 2, bgRect.Y + 2, fillWidth, bgRect.Height - 4);
-                Color fillColor = Color.Lerp(gradientA, gradientB, quotient);
-                spriteBatch.Draw(TextureAssets.MagicPixel.Value, fillRect, fillColor);
-            }
+            UIRendering.DrawProgressBar(spriteBatch, bgRect, quotient,
+                UIStyles.WolfBarBg, UIStyles.WolfBarBorder, fillA, fillB);
         }
 
         public override void Update(GameTime gameTime)
