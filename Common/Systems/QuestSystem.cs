@@ -383,7 +383,7 @@ namespace VerminLordMod.Common.Systems
                 activeQuestIDs.Add(quest.QuestID);
             }
             tag["ActiveQuestIDs"] = activeQuestIDs;
-            tag["CompletedQuestIDs"] = CompletedQuestIDs;
+            tag["CompletedQuestIDs"] = new List<string>(CompletedQuestIDs);
         }
 
         public override void LoadData(TagCompound tag)
