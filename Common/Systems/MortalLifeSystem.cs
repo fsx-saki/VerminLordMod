@@ -156,26 +156,161 @@ namespace VerminLordMod.Common.Systems
 
         public void SpreadRumor(MortalState source, string rumorID)
         {
+            if (source.KnownRumors.Contains(rumorID)) return;
             source.KnownRumors.Add(rumorID);
-            // TODO: 通过社交网络传播谣言
+
+            int spreadCount = 0;
+            foreach (var kvp in MortalStates)
+            {
+                var target = kvp.Value;
+                if (target == source || !target.IsAlive) continue;
+                if (target.KnownRumors.Contains(rumorID)) continue;
+
+                float spreadChance = 0.1f;
+                if (target.Occupation == MortalOccupation.Storyteller)
+                    spreadChance = 0.5f;
+                if (target.Occupation == MortalOccupation.Merchant)
+                    spreadChance = 0.3f;
+                if (target.Occupation == MortalOccupation.Beggar)
+                    spreadChance = 0.25f;
+
+                if (Main.rand.NextFloat() < spreadChance)
+                {
+                    target.KnownRumors.Add(rumorID);
+                    spreadCount++;
+                }
+            }
+
+            if (spreadCount > 0 && Main.netMode != Terraria.ID.NetmodeID.Server)
+            {
+                Main.NewText($"谣言「{rumorID}」在凡人中传播开来...", Microsoft.Xna.Framework.Color.DarkGray);
+            }
         }
+
+        public bool HasRumorSpread(string rumorID)
+        {
+            int count = 0;
+            foreach (var kvp in MortalStates)
+            {
+                if (kvp.Value.KnownRumors.Contains(rumorID))
+                    count++;
+            }
+            return count >= 3;
+        }
+
+        private int _lastDay = -1;
 
         public override void PostUpdateWorld()
         {
-            // TODO: 每日更新凡人需求
-            // TODO: 凡人生病/治愈
-            // TODO: 凡人死亡/新生
-            // TODO: 凡人迁移
+            if (!WorldTimeHelper.IsNewDay(ref _lastDay)) return;
+
+            var toRemove = new List<int>();
+
+            foreach (var kvp in MortalStates)
+            {
+                var mortal = kvp.Value;
+                if (!mortal.IsAlive) continue;
+
+                mortal.DaysAlive++;
+                UpdateMortalNeeds(mortal);
+
+                if (mortal.IsStarving && mortal.Needs[MortalNeed.Food] < 0.1f)
+                {
+                    mortal.Happiness -= 0.1f;
+                    if (Main.rand.NextFloat() < 0.05f)
+                    {
+                        mortal.IsAlive = false;
+                        toRemove.Add(kvp.Key);
+                        continue;
+                    }
+                }
+
+                if (mortal.IsSick && Main.rand.NextFloat() < 0.02f)
+                {
+                    mortal.IsAlive = false;
+                    toRemove.Add(kvp.Key);
+                    continue;
+                }
+
+                if (Main.rand.NextFloat() < 0.01f)
+                {
+                    mortal.IsSick = true;
+                }
+
+                if (mortal.Happiness < 0.2f && Main.rand.NextFloat() < 0.03f)
+                {
+                    mortal.IsAlive = false;
+                    toRemove.Add(kvp.Key);
+                }
+            }
+
+            foreach (var id in toRemove)
+                MortalStates.Remove(id);
         }
 
         public override void SaveWorldData(TagCompound tag)
         {
-            // TODO: 保存凡人数据
+            var list = new List<TagCompound>();
+            foreach (var kvp in MortalStates)
+            {
+                var m = kvp.Value;
+                var needsTag = new TagCompound();
+                foreach (var n in m.Needs)
+                    needsTag[n.Key.ToString()] = n.Value;
+
+                list.Add(new TagCompound
+                {
+                    ["npcID"] = m.NPCID,
+                    ["occupation"] = (int)m.Occupation,
+                    ["wealth"] = m.WealthLevel,
+                    ["happiness"] = m.Happiness,
+                    ["fear"] = m.FearOfGuMaster,
+                    ["loyalty"] = m.LoyaltyToFaction,
+                    ["isSick"] = m.IsSick,
+                    ["isStarving"] = m.IsStarving,
+                    ["daysAlive"] = m.DaysAlive,
+                    ["isAlive"] = m.IsAlive,
+                    ["needs"] = needsTag,
+                });
+            }
+            tag["mortals"] = list;
+            tag["mortalDayCounter"] = _lastDay;
         }
 
         public override void LoadWorldData(TagCompound tag)
         {
-            // TODO: 加载凡人数据
+            MortalStates.Clear();
+            var list = tag.GetList<TagCompound>("mortals");
+            if (list == null) return;
+
+            foreach (var t in list)
+            {
+                var mortal = new MortalState
+                {
+                    NPCID = t.GetInt("npcID"),
+                    Occupation = (MortalOccupation)t.GetInt("occupation"),
+                    WealthLevel = t.GetInt("wealth"),
+                    Happiness = t.GetFloat("happiness"),
+                    FearOfGuMaster = t.GetFloat("fear"),
+                    LoyaltyToFaction = t.GetFloat("loyalty"),
+                    IsSick = t.GetBool("isSick"),
+                    IsStarving = t.GetBool("isStarving"),
+                    DaysAlive = t.GetInt("daysAlive"),
+                    IsAlive = t.GetBool("isAlive"),
+                };
+
+                if (t.TryGet("needs", out TagCompound needsTag))
+                {
+                    foreach (MortalNeed need in System.Enum.GetValues<MortalNeed>())
+                    {
+                        mortal.Needs[need] = needsTag.GetFloat(need.ToString());
+                    }
+                }
+
+                MortalStates[mortal.NPCID] = mortal;
+            }
+
+            _lastDay = tag.GetInt("mortalDayCounter");
         }
     }
 }

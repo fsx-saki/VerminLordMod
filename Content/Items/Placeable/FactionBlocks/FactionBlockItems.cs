@@ -135,4 +135,76 @@ namespace VerminLordMod.Content.Items.Placeable.FactionBlocks
             Item.createTile = ModContent.TileType<Tiles.FactionBlocks.ScatteredMudBrick>();
         }
     }
+
+    public class GuYueBambooWall : ModItem
+    {
+        public override void SetDefaults()
+        {
+            Item.width = 12; Item.height = 12; Item.maxStack = 999;
+            Item.useTurn = true; Item.autoReuse = true;
+            Item.useAnimation = 15; Item.useTime = 10;
+            Item.useStyle = ItemUseStyleID.Swing; Item.consumable = true;
+            Item.createTile = ModContent.TileType<Tiles.FactionBlocks.GuYueBambooWall>();
+        }
+    }
+
+    public class BaiJadePillar : ModItem
+    {
+        public override void SetDefaults()
+        {
+            Item.width = 12; Item.height = 12; Item.maxStack = 999;
+            Item.useTurn = true; Item.autoReuse = true;
+            Item.useAnimation = 15; Item.useTime = 10;
+            Item.useStyle = ItemUseStyleID.Swing; Item.consumable = true;
+            Item.createTile = ModContent.TileType<Tiles.FactionBlocks.BaiJadePillar>();
+        }
+    }
+
+    public class TieForgeWall : ModItem
+    {
+        public override void SetDefaults()
+        {
+            Item.width = 12; Item.height = 12; Item.maxStack = 999;
+            Item.useTurn = true; Item.autoReuse = true;
+            Item.useAnimation = 15; Item.useTime = 10;
+            Item.useStyle = ItemUseStyleID.Swing; Item.consumable = true;
+            Item.createTile = ModContent.TileType<Tiles.FactionBlocks.TieForgeWall>();
+        }
+    }
+
+    public class WangCrystalPillar : ModItem
+    {
+        public override void SetDefaults()
+        {
+            Item.width = 12; Item.height = 12; Item.maxStack = 999;
+            Item.useTurn = true; Item.autoReuse = true;
+            Item.useAnimation = 15; Item.useTime = 10;
+            Item.useStyle = ItemUseStyleID.Swing; Item.consumable = true;
+            Item.createTile = ModContent.TileType<Tiles.FactionBlocks.WangCrystalPillar>();
+        }
+    }
+
+    public class ZhaoShadowCurtain : ModItem
+    {
+        public override void SetDefaults()
+        {
+            Item.width = 12; Item.height = 12; Item.maxStack = 999;
+            Item.useTurn = true; Item.autoReuse = true;
+            Item.useAnimation = 15; Item.useTime = 10;
+            Item.useStyle = ItemUseStyleID.Swing; Item.consumable = true;
+            Item.createTile = ModContent.TileType<Tiles.FactionBlocks.ZhaoShadowCurtain>();
+        }
+    }
+
+    public class JiaSilkCurtain : ModItem
+    {
+        public override void SetDefaults()
+        {
+            Item.width = 12; Item.height = 12; Item.maxStack = 999;
+            Item.useTurn = true; Item.autoReuse = true;
+            Item.useAnimation = 15; Item.useTime = 10;
+            Item.useStyle = ItemUseStyleID.Swing; Item.consumable = true;
+            Item.createTile = ModContent.TileType<Tiles.FactionBlocks.JiaSilkCurtain>();
+        }
+    }
 }

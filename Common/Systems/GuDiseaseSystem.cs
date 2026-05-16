@@ -149,12 +149,41 @@ namespace VerminLordMod.Common.Systems
 
         public override void SaveWorldData(TagCompound tag)
         {
-            // TODO: 保存瘟疫区域数据
+            var list = new List<TagCompound>();
+            foreach (var zone in ActivePlagueZones)
+            {
+                list.Add(new TagCompound
+                {
+                    ["centerX"] = zone.Center.X,
+                    ["centerY"] = zone.Center.Y,
+                    ["radius"] = zone.Radius,
+                    ["type"] = (int)zone.DiseaseType,
+                    ["remaining"] = zone.RemainingTicks,
+                    ["faction"] = zone.SourceFactionID,
+                    ["intensity"] = zone.Intensity,
+                });
+            }
+            tag["plagueZones"] = list;
         }
 
         public override void LoadWorldData(TagCompound tag)
         {
-            // TODO: 加载瘟疫区域数据
+            ActivePlagueZones.Clear();
+            var list = tag.GetList<TagCompound>("plagueZones");
+            if (list == null) return;
+
+            foreach (var t in list)
+            {
+                ActivePlagueZones.Add(new PlagueZone
+                {
+                    Center = new Vector2(t.GetFloat("centerX"), t.GetFloat("centerY")),
+                    Radius = t.GetFloat("radius"),
+                    DiseaseType = (GuDiseaseType)t.GetInt("type"),
+                    RemainingTicks = t.GetInt("remaining"),
+                    SourceFactionID = t.GetInt("faction"),
+                    Intensity = t.GetFloat("intensity"),
+                });
+            }
         }
     }
 
@@ -218,10 +247,9 @@ namespace VerminLordMod.Common.Systems
                     continue;
                 }
 
-                // TODO: 应用疾病效果
+                ApplyDiseaseEffect(disease);
             }
 
-            // 检查瘟疫区域
             if (GuDiseaseSystem.Instance.IsInPlagueZone(Player.Center, out var zone))
             {
                 if (!HasDisease(zone.DiseaseType))
@@ -229,14 +257,85 @@ namespace VerminLordMod.Common.Systems
             }
         }
 
+        private void ApplyDiseaseEffect(GuDiseaseInstance disease)
+        {
+            float dmg = GuDiseaseSystem.GetDiseaseDamage(disease.Type, disease.Severity);
+            float qiDrain = GuDiseaseSystem.GetQiDrain(disease.Type, disease.Severity);
+
+            if (dmg > 0 && Main.rand.NextFloat() < 0.1f)
+            {
+                Player.statLife -= (int)dmg;
+                if (Player.statLife <= 0)
+                    Player.KillMe(Terraria.DataStructures.PlayerDeathReason.ByCustomReason(
+                        $"{Player.name}被蛊病夺去了生命"), dmg, 0);
+            }
+
+            if (qiDrain > 0)
+            {
+                var qiResource = Player.GetModPlayer<QiResourcePlayer>();
+                qiResource.QiCurrent = System.Math.Max(0, qiResource.QiCurrent - qiDrain * 0.1f);
+            }
+
+            switch (disease.Type)
+            {
+                case GuDiseaseType.PoisonGu:
+                    Player.AddBuff(Terraria.ID.BuffID.Poisoned, 60);
+                    break;
+                case GuDiseaseType.BoneCorrodeGu:
+                    Player.AddBuff(Terraria.ID.BuffID.BrokenArmor, 60);
+                    break;
+                case GuDiseaseType.BloodDevourGu:
+                    Player.AddBuff(Terraria.ID.BuffID.Bleeding, 60);
+                    break;
+                case GuDiseaseType.MindControlGu:
+                    if (Main.rand.NextFloat() < 0.02f)
+                        Player.AddBuff(Terraria.ID.BuffID.Confused, 120);
+                    break;
+                case GuDiseaseType.SoulDrainGu:
+                    Player.AddBuff(Terraria.ID.BuffID.Slow, 60);
+                    break;
+                case GuDiseaseType.GuFever:
+                    Player.AddBuff(Terraria.ID.BuffID.OnFire, 60);
+                    break;
+            }
+        }
+
         public override void SaveData(TagCompound tag)
         {
-            // TODO: 保存疾病数据
+            var list = new List<TagCompound>();
+            foreach (var disease in ActiveDiseases)
+            {
+                list.Add(new TagCompound
+                {
+                    ["type"] = (int)disease.Type,
+                    ["severity"] = (int)disease.Severity,
+                    ["remaining"] = disease.RemainingTicks,
+                    ["total"] = disease.TotalTicks,
+                    ["intensity"] = disease.Intensity,
+                    ["source"] = disease.SourcePlayerID,
+                });
+            }
+            tag["diseases"] = list;
         }
 
         public override void LoadData(TagCompound tag)
         {
             ActiveDiseases.Clear();
+            var list = tag.GetList<TagCompound>("diseases");
+            if (list == null) return;
+
+            foreach (var t in list)
+            {
+                ActiveDiseases.Add(new GuDiseaseInstance
+                {
+                    Type = (GuDiseaseType)t.GetInt("type"),
+                    Severity = (DiseaseSeverity)t.GetInt("severity"),
+                    RemainingTicks = t.GetInt("remaining"),
+                    TotalTicks = t.GetInt("total"),
+                    Intensity = t.GetFloat("intensity"),
+                    SourcePlayerID = t.GetInt("source"),
+                });
+            }
         }
     }
 }

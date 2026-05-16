@@ -123,7 +123,28 @@ namespace VerminLordMod.Common.Systems
             Main.NewText($"【战争】{attackerName}向{defenderName}宣战！原因：{reason}",
                 Microsoft.Xna.Framework.Color.Red);
 
-            // TODO: 影响日常交互（贸易中断、NPC敌对化）
+            ApplyWarEffects(war);
+        }
+
+        private void ApplyWarEffects(WarInstance war)
+        {
+            var economySystem = FactionEconomySystem.Instance;
+            if (economySystem != null)
+            {
+                if (economySystem.Economies.TryGetValue(war.AttackerFaction, out var attackerEcon))
+                    attackerEcon.DailyExpense += 200;
+                if (economySystem.Economies.TryGetValue(war.DefenderFaction, out var defenderEcon))
+                    defenderEcon.DailyExpense += 200;
+            }
+
+            var powerSystem = FactionPowerSystem.Instance;
+            if (powerSystem != null)
+            {
+                var attackerStruct = powerSystem.GetPowerStructure(war.AttackerFaction);
+                var defenderStruct = powerSystem.GetPowerStructure(war.DefenderFaction);
+                if (attackerStruct != null) attackerStruct.InternalConflictLevel = System.Math.Min(100, attackerStruct.InternalConflictLevel + 10);
+                if (defenderStruct != null) defenderStruct.InternalConflictLevel = System.Math.Min(100, defenderStruct.InternalConflictLevel + 10);
+            }
         }
 
         public void AdvanceWarPhase(WarInstance war)
@@ -131,7 +152,14 @@ namespace VerminLordMod.Common.Systems
             war.CurrentPhase++;
             if (war.CurrentPhase > WarPhase.FullWar)
             {
-                // TODO: 进入谈判/停火阶段
+                war.CurrentPhase = WarPhase.Negotiation;
+                if (Main.netMode != Terraria.ID.NetmodeID.Server)
+                {
+                    string attackerName = WorldStateMachine.GetFactionDisplayName(war.AttackerFaction);
+                    string defenderName = WorldStateMachine.GetFactionDisplayName(war.DefenderFaction);
+                    Main.NewText($"【战争】{attackerName}与{defenderName}进入谈判阶段...",
+                        Microsoft.Xna.Framework.Color.Yellow);
+                }
             }
         }
 
@@ -142,34 +170,175 @@ namespace VerminLordMod.Common.Systems
             ActiveWars.Remove(war);
             WarHistory.Add(war);
 
-            // TODO: 战争结果处理
-            // 胜方获得声望+领土
-            // 负方声望大降
-            // 经济影响
+            switch (outcome)
+            {
+                case WarOutcome.Victory:
+                    ApplyVictoryEffects(war.AttackerFaction, war.DefenderFaction);
+                    break;
+                case WarOutcome.Defeat:
+                    ApplyVictoryEffects(war.DefenderFaction, war.AttackerFaction);
+                    break;
+                case WarOutcome.NegotiatedPeace:
+                    ApplyPeaceEffects(war);
+                    break;
+            }
+
+            RemoveWarEffects(war);
+        }
+
+        private void ApplyVictoryEffects(FactionID winner, FactionID loser)
+        {
+            var economySystem = FactionEconomySystem.Instance;
+            if (economySystem != null)
+            {
+                if (economySystem.Economies.TryGetValue(winner, out var winnerEcon))
+                    winnerEcon.YuanStoneReserve += 5000;
+                if (economySystem.Economies.TryGetValue(loser, out var loserEcon))
+                    loserEcon.YuanStoneReserve = System.Math.Max(0, loserEcon.YuanStoneReserve - 3000);
+            }
+
+            var territorySystem = TerritoryControlSystem.Instance;
+            if (territorySystem != null)
+            {
+                var loserTerritories = territorySystem.GetFactionTerritoriesList(loser);
+                if (loserTerritories.Count > 0)
+                {
+                    var target = loserTerritories[Main.rand.Next(loserTerritories.Count)];
+                    territorySystem.CaptureTerritory(target.TerritoryID, winner);
+                }
+            }
+        }
+
+        private void ApplyPeaceEffects(WarInstance war)
+        {
+            if (Main.netMode != Terraria.ID.NetmodeID.Server)
+            {
+                string attackerName = WorldStateMachine.GetFactionDisplayName(war.AttackerFaction);
+                string defenderName = WorldStateMachine.GetFactionDisplayName(war.DefenderFaction);
+                Main.NewText($"【战争】{attackerName}与{defenderName}达成和平协议。",
+                    Microsoft.Xna.Framework.Color.Green);
+            }
+        }
+
+        private void RemoveWarEffects(WarInstance war)
+        {
+            var economySystem = FactionEconomySystem.Instance;
+            if (economySystem != null)
+            {
+                if (economySystem.Economies.TryGetValue(war.AttackerFaction, out var attackerEcon))
+                    attackerEcon.DailyExpense = System.Math.Max(0, attackerEcon.DailyExpense - 200);
+                if (economySystem.Economies.TryGetValue(war.DefenderFaction, out var defenderEcon))
+                    defenderEcon.DailyExpense = System.Math.Max(0, defenderEcon.DailyExpense - 200);
+            }
         }
 
         public void PlayerJoinWar(Player player, FactionID side)
         {
             var guWorld = player.GetModPlayer<GuWorldPlayer>();
-            // TODO: 玩家参与战争任务
             guWorld.AddReputation(side, 50, "参战");
+
+            var war = GetActiveWar(side);
+            if (war != null)
+            {
+                war.WarProgress += 5;
+                if (!war.BattlesWon.ContainsKey(side))
+                    war.BattlesWon[side] = 0;
+                war.BattlesWon[side]++;
+            }
         }
+
+        public int GetFactionWarParticipation(FactionID faction)
+        {
+            int count = 0;
+            foreach (var war in ActiveWars)
+            {
+                if (war.AttackerFaction == faction || war.DefenderFaction == faction)
+                    count++;
+            }
+            foreach (var war in WarHistory)
+            {
+                if (war.AttackerFaction == faction || war.DefenderFaction == faction)
+                    count++;
+            }
+            return count;
+        }
+
+        private int _lastDay = -1;
 
         public override void PostUpdateWorld()
         {
-            // TODO: 战争进度推进
-            // 战争NPC生成
-            // 防守波次触发
+            if (!WorldTimeHelper.IsNewDay(ref _lastDay)) return;
+
+            for (int i = ActiveWars.Count - 1; i >= 0; i--)
+            {
+                var war = ActiveWars[i];
+                war.DurationDays++;
+
+                war.WarProgress += Main.rand.Next(1, 5);
+
+                if (war.DurationDays >= 3 && war.CurrentPhase < WarPhase.FullWar)
+                {
+                    AdvanceWarPhase(war);
+                }
+
+                if (war.CurrentPhase == WarPhase.Negotiation && war.DurationDays >= 7)
+                {
+                    if (Main.rand.NextFloat() < 0.5f)
+                        ResolveWar(war, WarOutcome.NegotiatedPeace);
+                    else
+                        ResolveWar(war, Main.rand.NextFloat() < 0.5f ? WarOutcome.Victory : WarOutcome.Defeat);
+                }
+
+                if (war.WarProgress >= 100)
+                {
+                    ResolveWar(war, WarOutcome.Victory);
+                }
+            }
         }
 
         public override void SaveWorldData(TagCompound tag)
         {
-            // TODO: 保存战争数据
+            var activeList = new List<TagCompound>();
+            foreach (var war in ActiveWars)
+            {
+                activeList.Add(new TagCompound
+                {
+                    ["attacker"] = (int)war.AttackerFaction,
+                    ["defender"] = (int)war.DefenderFaction,
+                    ["phase"] = (int)war.CurrentPhase,
+                    ["startDay"] = war.StartDay,
+                    ["duration"] = war.DurationDays,
+                    ["progress"] = war.WarProgress,
+                });
+            }
+            tag["activeWars"] = activeList;
+            tag["warDayCounter"] = _lastDay;
         }
 
         public override void LoadWorldData(TagCompound tag)
         {
-            // TODO: 加载战争数据
+            ActiveWars.Clear();
+            WarHistory.Clear();
+
+            var activeList = tag.GetList<TagCompound>("activeWars");
+            if (activeList != null)
+            {
+                foreach (var t in activeList)
+                {
+                    ActiveWars.Add(new WarInstance
+                    {
+                        AttackerFaction = (FactionID)t.GetInt("attacker"),
+                        DefenderFaction = (FactionID)t.GetInt("defender"),
+                        CurrentPhase = (WarPhase)t.GetInt("phase"),
+                        StartDay = t.GetInt("startDay"),
+                        DurationDays = t.GetInt("duration"),
+                        WarProgress = t.GetInt("progress"),
+                        IsActive = true,
+                    });
+                }
+            }
+
+            _lastDay = tag.GetInt("warDayCounter");
         }
     }
 }

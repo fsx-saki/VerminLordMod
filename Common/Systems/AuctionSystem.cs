@@ -63,15 +63,13 @@ namespace VerminLordMod.Common.Systems
 
         public override void PostUpdateWorld()
         {
-            // TODO: 拍卖周期触发
             int currentDay = (int)(Main.time / 36000);
-            if (currentDay >= _nextAuctionDay)
+            if (currentDay >= _nextAuctionDay && Main.dayTime && Main.time < 3600)
             {
                 StartNewAuctionSession();
                 _nextAuctionDay = currentDay + AuctionIntervalDays;
             }
 
-            // TODO: 处理竞拍倒计时
             for (int i = CurrentAuctions.Count - 1; i >= 0; i--)
             {
                 CurrentAuctions[i].RemainingTimeTicks--;
@@ -81,13 +79,62 @@ namespace VerminLordMod.Common.Systems
                     CompletedAuctions.Add(CurrentAuctions[i]);
                     CurrentAuctions.RemoveAt(i);
                 }
+                else if (CurrentAuctions[i].RemainingTimeTicks % 3600 == 0)
+                {
+                    NPCBidOnItem(CurrentAuctions[i]);
+                }
             }
         }
 
         private void StartNewAuctionSession()
         {
-            // TODO: NPC上架拍卖品
             Main.NewText("拍卖会开始！快去看看有什么好东西！", Microsoft.Xna.Framework.Color.Gold);
+
+            var economySystem = FactionEconomySystem.Instance;
+            if (economySystem == null) return;
+
+            foreach (var kvp in economySystem.Economies)
+            {
+                var economy = kvp.Value;
+                if (economy.State == EconomyState.Collapsed || economy.State == EconomyState.Crisis) continue;
+
+                int itemCount = Main.rand.Next(1, 4);
+                for (int j = 0; j < itemCount; j++)
+                {
+                    var auction = new AuctionItem
+                    {
+                        ItemType = GetRandomAuctionItem(economy.Faction),
+                        Stack = Main.rand.Next(1, 5),
+                        StartingPrice = Main.rand.Next(50, 500),
+                        SellerPlayerID = -1,
+                        RemainingTimeTicks = 36000 * 3,
+                        IsNPCItem = true,
+                        SellerFaction = economy.Faction,
+                        AuctionID = CurrentAuctions.Count + j,
+                    };
+                    auction.CurrentBid = auction.StartingPrice;
+                    CurrentAuctions.Add(auction);
+                }
+            }
+        }
+
+        private int GetRandomAuctionItem(FactionID faction)
+        {
+            var items = new List<int>();
+            switch (faction)
+            {
+                case FactionID.GuYue:
+                    items.Add(ModContent.ItemType<Content.Items.Consumables.YuanS>());
+                    items.Add(ModContent.ItemType<Content.Items.Consumables.YuanS>());
+                    break;
+                case FactionID.Jia:
+                    items.Add(ModContent.ItemType<Content.Items.Consumables.YuanS>());
+                    break;
+                default:
+                    items.Add(ModContent.ItemType<Content.Items.Consumables.YuanS>());
+                    break;
+            }
+            return items.Count > 0 ? items[Main.rand.Next(items.Count)] : ModContent.ItemType<Content.Items.Consumables.YuanS>();
         }
 
         public void PlayerPlaceBid(Player player, int auctionID, int bidAmount)
@@ -95,13 +142,19 @@ namespace VerminLordMod.Common.Systems
             var item = CurrentAuctions.Find(a => a.AuctionID == auctionID);
             if (item == null) return;
 
-            // TODO: 检查元石余额
+            var qiResource = player.GetModPlayer<QiResourcePlayer>();
+            if (qiResource.QiCurrent < bidAmount)
+            {
+                Main.NewText("真元不足，无法竞价", Microsoft.Xna.Framework.Color.Red);
+                return;
+            }
+
             if (bidAmount <= item.CurrentBid) return;
 
             item.CurrentBid = bidAmount;
             item.BidderPlayerID = player.whoAmI;
 
-            Main.NewText($"你以 {bidAmount} 元石竞价了 {item.ItemType}！", Microsoft.Xna.Framework.Color.Yellow);
+            Main.NewText($"你以 {bidAmount} 元石竞价了拍卖品！", Microsoft.Xna.Framework.Color.Yellow);
         }
 
         public void PlayerListAuction(Player player, int itemType, int stack, int startingPrice)
@@ -121,16 +174,34 @@ namespace VerminLordMod.Common.Systems
 
         private void FinalizeAuction(AuctionItem auction)
         {
-            // TODO: 结算拍卖结果
-            // 买家获得物品，卖家获得元石
-            // NPC竞拍者处理
+            if (auction.BidderPlayerID >= 0)
+            {
+                var buyer = Main.player[auction.BidderPlayerID];
+                if (buyer != null && buyer.active)
+                {
+                    buyer.QuickSpawnItem(buyer.GetSource_GiftOrReward(), auction.ItemType, auction.Stack);
+                    Main.NewText($"恭喜！你以 {auction.CurrentBid} 元石拍得了拍卖品！", Microsoft.Xna.Framework.Color.Green);
+                }
+            }
+
+            if (auction.SellerPlayerID >= 0)
+            {
+                var seller = Main.player[auction.SellerPlayerID];
+                if (seller != null && seller.active)
+                {
+                    seller.GetModPlayer<GuWorldPlayer>().AddReputation(
+                        seller.GetModPlayer<GuWorldPlayer>().CurrentAlly, 10, "拍卖成功");
+                }
+            }
         }
 
         private void NPCBidOnItem(AuctionItem item)
         {
-            // TODO: NPC竞价AI
-            // 根据NPC性格和信念决定是否竞拍
-            // 贪婪型NPC更容易竞价
+            if (Main.rand.NextFloat() > 0.3f) return;
+
+            int npcBid = item.CurrentBid + Main.rand.Next(10, 100);
+            item.CurrentBid = npcBid;
+            item.BidderPlayerID = -1;
         }
     }
 }

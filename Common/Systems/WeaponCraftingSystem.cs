@@ -66,16 +66,59 @@ namespace VerminLordMod.Common.Systems
 
         private void RegisterRefineRecipes()
         {
-            // TODO: 注册炼器配方
             RefineRecipes[RefineType.ControlRateUp] = new RefineRecipe
             {
                 Type = RefineType.ControlRateUp,
                 RequiredYuanStones = 10,
                 RequiredQiCost = 20,
                 RequiredGuLevel = 1,
-                SuccessRate = 0.8f
+                SuccessRate = 0.8f,
             };
-            // etc.
+
+            RefineRecipes[RefineType.DamageUp] = new RefineRecipe
+            {
+                Type = RefineType.DamageUp,
+                RequiredYuanStones = 20,
+                RequiredQiCost = 40,
+                RequiredGuLevel = 2,
+                SuccessRate = 0.7f,
+            };
+
+            RefineRecipes[RefineType.DefenseUp] = new RefineRecipe
+            {
+                Type = RefineType.DefenseUp,
+                RequiredYuanStones = 20,
+                RequiredQiCost = 40,
+                RequiredGuLevel = 2,
+                SuccessRate = 0.7f,
+            };
+
+            RefineRecipes[RefineType.SpeedUp] = new RefineRecipe
+            {
+                Type = RefineType.SpeedUp,
+                RequiredYuanStones = 15,
+                RequiredQiCost = 30,
+                RequiredGuLevel = 2,
+                SuccessRate = 0.75f,
+            };
+
+            RefineRecipes[RefineType.DaoHenImprint] = new RefineRecipe
+            {
+                Type = RefineType.DaoHenImprint,
+                RequiredYuanStones = 50,
+                RequiredQiCost = 100,
+                RequiredGuLevel = 3,
+                SuccessRate = 0.5f,
+            };
+
+            RefineRecipes[RefineType.CombineGu] = new RefineRecipe
+            {
+                Type = RefineType.CombineGu,
+                RequiredYuanStones = 100,
+                RequiredQiCost = 200,
+                RequiredGuLevel = 4,
+                SuccessRate = 0.3f,
+            };
         }
 
         public bool AttemptRefine(Player player, Item weapon, RefineType type)
@@ -85,8 +128,14 @@ namespace VerminLordMod.Common.Systems
             var qiRealm = player.GetModPlayer<QiRealmPlayer>();
             if (qiRealm.GuLevel < recipe.RequiredGuLevel) return false;
 
-            // TODO: 检查元石消耗
-            // TODO: 检查真元消耗
+            var qiResource = player.GetModPlayer<QiResourcePlayer>();
+            if (qiResource.QiCurrent < recipe.RequiredQiCost)
+            {
+                Main.NewText("真元不足，无法炼器", Microsoft.Xna.Framework.Color.Red);
+                return false;
+            }
+
+            qiResource.ConsumeQi(recipe.RequiredQiCost);
 
             float successRate = recipe.SuccessRate + qiRealm.GuLevel * 0.03f;
             bool success = Main.rand.NextFloat() <= successRate;
@@ -106,20 +155,25 @@ namespace VerminLordMod.Common.Systems
 
         private void ApplyRefineEffect(Item weapon, RefineType type)
         {
-            // TODO: 实现炼器效果
-            // if (weapon.ModItem is GuWeaponItem guWeapon)
-            // {
-            //     switch (type)
-            //     {
-            //         case RefineType.ControlRateUp:
-            //             guWeapon.controlRate += 5f;
-            //             break;
-            //         case RefineType.DamageUp:
-            //             weapon.damage += 2;
-            //             break;
-            //         // etc.
-            //     }
-            // }
+            if (weapon.ModItem is Content.Items.Weapons.GuWeaponItem guWeapon)
+            {
+                switch (type)
+                {
+                    case RefineType.ControlRateUp:
+                        guWeapon.controlRate = System.Math.Min(100, guWeapon.controlRate + 5f);
+                        break;
+                    case RefineType.DamageUp:
+                        weapon.damage += 2;
+                        break;
+                    case RefineType.DefenseUp:
+                        weapon.defense += 2;
+                        break;
+                    case RefineType.SpeedUp:
+                        weapon.useTime = System.Math.Max(2, weapon.useTime - 1);
+                        weapon.useAnimation = weapon.useTime;
+                        break;
+                }
+            }
         }
 
         // ===== 重铸保留（已有 RefinementGlobalItem） =====

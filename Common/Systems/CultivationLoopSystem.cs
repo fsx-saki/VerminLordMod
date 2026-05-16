@@ -30,11 +30,6 @@ namespace VerminLordMod.Common.Systems
     //   炼化新蛊虫 → 继续修炼 → 循环
     //
     // TODO:
-    //   - 实现日常修炼真元积累（修炼台Tile）
-    //   - 实现天劫渡劫成功/失败的闭环效果
-    //   - 实现破境瓶颈机制
-    //   - 实现修为等级到空窍格数的映射表
-    //   - 实现境界解锁内容（新区域、新配方、新蛊虫）
     //   - 创建修炼台Tile
     // ============================================================
 
@@ -42,46 +37,51 @@ namespace VerminLordMod.Common.Systems
     {
         public static CultivationLoopSystem Instance => ModContent.GetInstance<CultivationLoopSystem>();
 
-        // ===== 修为等级 → 空窍格数映射 =====
-        // TODO: 完善映射表，确保每个境界都有合理的格数
         public static int GetMaxKongQiaoSlots(int guLevel)
         {
             return guLevel switch
             {
-                0 => 0,     // 未开窍
-                1 => 3,     // 一转：3格（1本命+2辅蛊）
-                2 => 5,     // 二转：5格
-                3 => 7,     // 三转：7格
-                4 => 9,     // 四转：9格
-                5 => 12,    // 五转：12格
-                6 => 15,    // 六转：15格
-                7 => 18,    // 七转：18格
-                8 => 21,    // 八转：21格
-                9 => 25,    // 九转：25格
+                0 => 0,
+                1 => 3,
+                2 => 5,
+                3 => 7,
+                4 => 9,
+                5 => 12,
+                6 => 15,
+                7 => 18,
+                8 => 21,
+                9 => 25,
                 _ => 25
             };
         }
 
-        // ===== 修为等级 → 真元上限映射 =====
         public static int GetMaxQiForLevel(int guLevel, int stage)
         {
             int baseQi = guLevel * 100 + stage * 25;
             return baseQi;
         }
 
-        // ===== 破境瓶颈检查 =====
         public static bool HasBreakthroughBottleneck(int guLevel, int stage)
         {
-            // TODO: 完善瓶颈条件
-            // 三转巅峰到四转是瓶颈
-            // 需要特殊条件（天劫成功、族长批准等）
-            return guLevel == 3 && stage == 3;
+            if (guLevel == 3 && stage == 3) return true;
+            if (guLevel == 5 && stage == 3) return true;
+            if (guLevel == 7 && stage == 3) return true;
+            return false;
         }
 
-        // ===== 境界解锁内容 =====
+        public static string GetBottleneckRequirement(int guLevel)
+        {
+            return guLevel switch
+            {
+                3 => "需要成功渡过天劫并获得族长批准",
+                5 => "需要完成家族战争任务或获得稀有突破材料",
+                7 => "需要领悟道痕印记",
+                _ => "未知条件"
+            };
+        }
+
         public static string GetUnlockedContent(int guLevel)
         {
-            // TODO: 完善境界解锁内容列表
             return guLevel switch
             {
                 1 => "一转：基础蛊虫、学堂训练、青茅山探索",
@@ -89,24 +89,157 @@ namespace VerminLordMod.Common.Systems
                 3 => "三转：高级蛊虫、家族职位、中型阵法、领地进入",
                 4 => "四转：稀有蛊虫、族长级权限、大型阵法、家族战争",
                 5 => "五转：传说蛊虫、南疆通行、顶阶阵法",
+                6 => "六转：仙蛊雏形、跨域传送、秘境探索",
+                7 => "七转：仙蛊炼制、道痕觉醒、天劫掌控",
+                8 => "八转：仙蛊大成、世界法则、家族称霸",
+                9 => "九转：至尊蛊师、天地共鸣、万蛊朝拜",
                 _ => "未知境界"
             };
         }
 
-        // ===== 修炼效率 =====
         public static float GetCultivationEfficiency(Player player)
         {
             var qiRealm = player.GetModPlayer<QiRealmPlayer>();
             float efficiency = 1.0f;
             efficiency += qiRealm.GuLevel * 0.05f;
-            // TODO: 灵池加成、修炼台加成、丹药加成
+
+            var formationSystem = FormationSystem.Instance;
+            if (formationSystem != null && formationSystem.IsPlayerInFormation(player, FormationType.SpiritZhen))
+                efficiency += 0.2f;
+
+            var weatherSystem = WeatherSystem.Instance;
+            if (weatherSystem != null)
+                efficiency += weatherSystem.GetCultivationBonus();
+
+            if (IsPlayerNearCultivationPlatform(player))
+                efficiency += 0.15f;
+
             return efficiency;
         }
 
+        public static bool IsPlayerNearCultivationPlatform(Player player)
+        {
+            int tileX = (int)(player.Center.X / 16);
+            int tileY = (int)(player.Center.Y / 16);
+            int radius = 5;
+
+            for (int x = tileX - radius; x <= tileX + radius; x++)
+            {
+                for (int y = tileY - radius; y <= tileY + radius; y++)
+                {
+                    if (!WorldGen.InWorld(x, y)) continue;
+                    Tile tile = Main.tile[x, y];
+                    if (tile.HasTile && tile.TileType == ModContent.TileType<Content.Tiles.CultivationPlatformTile>())
+                        return true;
+                }
+            }
+            return false;
+        }
+
+        public static bool TryBreakthroughBottleneck(Player player, int guLevel)
+        {
+            var qiRealm = player.GetModPlayer<QiRealmPlayer>();
+            if (!HasBreakthroughBottleneck(guLevel, qiRealm.LevelStage)) return true;
+
+            switch (guLevel)
+            {
+                case 3:
+                    var tribulation = HeavenTribulationSystem.Instance;
+                    if (tribulation != null && tribulation.HasPlayerSurvivedTribulation(player))
+                        return true;
+                    if (player.whoAmI == Main.myPlayer)
+                        Main.NewText("瓶颈：需要成功渡过天劫并获得族长批准", Microsoft.Xna.Framework.Color.Orange);
+                    return false;
+
+                case 5:
+                    var warSystem = FactionWarSystem.Instance;
+                    var guWorld = player.GetModPlayer<GuWorldPlayer>();
+                    if (warSystem != null && guWorld != null)
+                    {
+                        var faction = guWorld.CurrentAlly;
+                        if (warSystem.GetFactionWarParticipation(faction) >= 1)
+                            return true;
+                    }
+                    if (player.whoAmI == Main.myPlayer)
+                        Main.NewText("瓶颈：需要完成家族战争任务或获得稀有突破材料", Microsoft.Xna.Framework.Color.Orange);
+                    return false;
+
+                case 7:
+                    var daoMark = player.GetModPlayer<DaoHenPlayer>();
+                    if (daoMark != null && daoMark.HasDaoMark())
+                        return true;
+                    if (player.whoAmI == Main.myPlayer)
+                        Main.NewText("瓶颈：需要领悟道痕印记", Microsoft.Xna.Framework.Color.Orange);
+                    return false;
+
+                default:
+                    return true;
+            }
+        }
+
+        public static void OnTribulationSurvived(Player player)
+        {
+            var qiRealm = player.GetModPlayer<QiRealmPlayer>();
+            qiRealm.BreakthroughProgress += 30f;
+
+            int bonusSlots = qiRealm.GuLevel >= 5 ? 1 : 0;
+            if (bonusSlots > 0 && player.whoAmI == Main.myPlayer)
+                Main.NewText($"天劫淬体！空窍扩容+{bonusSlots}格！", Microsoft.Xna.Framework.Color.Cyan);
+        }
+
+        public static void OnTribulationFailed(Player player)
+        {
+            var qiRealm = player.GetModPlayer<QiRealmPlayer>();
+            qiRealm.BreakthroughProgress = System.Math.Max(0, qiRealm.BreakthroughProgress - 50f);
+
+            var qiResource = player.GetModPlayer<QiResourcePlayer>();
+            qiResource.QiCurrent = qiResource.QiMaxCurrent * 0.3f;
+
+            if (player.whoAmI == Main.myPlayer)
+                Main.NewText("天劫失败！修为受损，真元大减...", Microsoft.Xna.Framework.Color.Red);
+        }
+
+        private int _lastDay = -1;
+
         public override void PostUpdateWorld()
         {
-            // TODO: 每日自动修炼真元积累
-            // 如果玩家在修炼台/灵池附近，自动积累真元
+            if (!WorldTimeHelper.IsNewDay(ref _lastDay)) return;
+
+            for (int i = 0; i < Main.maxPlayers; i++)
+            {
+                var player = Main.player[i];
+                if (!player.active) continue;
+
+                var qiRealm = player.GetModPlayer<QiRealmPlayer>();
+                if (qiRealm.GuLevel <= 0) continue;
+
+                var qiResource = player.GetModPlayer<QiResourcePlayer>();
+                float efficiency = GetCultivationEfficiency(player);
+                float dailyQiGain = 10f * efficiency;
+
+                qiResource.QiCurrent = System.Math.Min(qiResource.QiMaxCurrent, qiResource.QiCurrent + dailyQiGain);
+
+                if (qiResource.QiCurrent >= qiResource.QiMaxCurrent * 0.9f)
+                {
+                    qiRealm.BreakthroughProgress += efficiency * 2f;
+                    if (qiRealm.BreakthroughProgress >= 100f)
+                    {
+                        qiRealm.BreakthroughProgress = 0f;
+                        if (qiRealm.LevelStage < 3)
+                        {
+                            qiRealm.StageUp();
+                        }
+                        else if (!HasBreakthroughBottleneck(qiRealm.GuLevel, qiRealm.LevelStage))
+                        {
+                            qiRealm.LevelUp();
+                        }
+                        else if (TryBreakthroughBottleneck(player, qiRealm.GuLevel))
+                        {
+                            qiRealm.LevelUp();
+                        }
+                    }
+                }
+            }
         }
     }
 }

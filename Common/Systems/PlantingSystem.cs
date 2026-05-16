@@ -138,8 +138,15 @@ namespace VerminLordMod.Common.Systems
 
         private int GetHarvestItem(PlantType type)
         {
-            // TODO: 返回对应的收获物品Type
-            return 0;
+            return type switch
+            {
+                PlantType.MoonOrchid => ModContent.ItemType<Content.Items.Consumables.YuanS>(),
+                PlantType.HealingHerb => ModContent.ItemType<Content.Items.Consumables.YuanS>(),
+                PlantType.QiHerb => ModContent.ItemType<Content.Items.Consumables.YuanS>(),
+                PlantType.RiceBagGrass => ModContent.ItemType<Content.Items.Consumables.YuanS>(),
+                PlantType.SpiritGrass => ModContent.ItemType<Content.Items.Consumables.YuanS>(),
+                _ => ModContent.ItemType<Content.Items.Consumables.YuanS>(),
+            };
         }
 
         private int GetHarvestAmount(PlantType type)
@@ -156,18 +163,57 @@ namespace VerminLordMod.Common.Systems
         public void Harvest(PlantInstance plant, Player player)
         {
             if (plant.Stage != PlantStage.Harvestable) return;
-            // TODO: 产出物品给玩家
+
+            int itemType = plant.HarvestItem;
+            int amount = plant.HarvestAmount + Main.rand.Next(0, 3);
+
+            player.QuickSpawnItem(player.GetSource_GiftOrReward(), itemType, amount);
+            Main.NewText($"收获了 {amount} 个作物！", Microsoft.Xna.Framework.Color.Green);
             ActivePlants.Remove(plant);
         }
 
         public override void SaveWorldData(TagCompound tag)
         {
-            // TODO: 保存植物数据
+            var list = new List<TagCompound>();
+            foreach (var p in ActivePlants)
+            {
+                list.Add(new TagCompound
+                {
+                    ["type"] = (int)p.Type,
+                    ["stage"] = (int)p.Stage,
+                    ["posX"] = p.Position.X,
+                    ["posY"] = p.Position.Y,
+                    ["growth"] = p.GrowthTicks,
+                    ["required"] = p.RequiredGrowthTicks,
+                    ["watered"] = p.IsWatered,
+                });
+            }
+            tag["plants"] = list;
         }
 
         public override void LoadWorldData(TagCompound tag)
         {
-            // TODO: 加载植物数据
+            ActivePlants.Clear();
+
+            var list = tag.GetList<TagCompound>("plants");
+            if (list == null) return;
+
+            foreach (var t in list)
+            {
+                var plant = new PlantInstance
+                {
+                    Type = (PlantType)t.GetInt("type"),
+                    Stage = (PlantStage)t.GetInt("stage"),
+                    Position = new Microsoft.Xna.Framework.Vector2(t.GetFloat("posX"), t.GetFloat("posY")),
+                    GrowthTicks = t.GetInt("growth"),
+                    RequiredGrowthTicks = t.GetInt("required"),
+                    IsWatered = t.GetBool("watered"),
+                    GrowthRateMultiplier = 1f,
+                };
+                plant.HarvestItem = GetHarvestItem(plant.Type);
+                plant.HarvestAmount = GetHarvestAmount(plant.Type);
+                ActivePlants.Add(plant);
+            }
         }
     }
 }

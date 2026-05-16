@@ -111,13 +111,107 @@ namespace VerminLordMod.Common.Systems
 
         private void RegisterFormationDefinitions()
         {
-            // TODO: 注册所有阵法定义
+            FormationRegistry["mizong_1"] = new FormationDefinition
+            {
+                Type = FormationType.MizongZhen,
+                Rank = FormationRank.Rank1,
+                DisplayName = "一阶迷踪阵",
+                Description = "降低区域内敌人感知，防御型阵法",
+                RequiredGuLevel = 1,
+                BaseRange = 480f,
+                BaseMaintenanceCost = 1,
+                ActivationQiCost = 50,
+                Effect = new FormationEffect { NPCPERceptionReduction = 0.3f },
+            };
+
+            FormationRegistry["guattack_1"] = new FormationDefinition
+            {
+                Type = FormationType.GuAttackZhen,
+                Rank = FormationRank.Rank1,
+                DisplayName = "一阶蛊阵",
+                Description = "对区域内敌人造成持续伤害",
+                RequiredGuLevel = 1,
+                BaseRange = 320f,
+                BaseMaintenanceCost = 2,
+                ActivationQiCost = 80,
+                Effect = new FormationEffect { DamagePerTick = 5 },
+            };
+
+            FormationRegistry["spirit_1"] = new FormationDefinition
+            {
+                Type = FormationType.SpiritZhen,
+                Rank = FormationRank.Rank1,
+                DisplayName = "一阶灵阵",
+                Description = "区域内回复真元和生命",
+                RequiredGuLevel = 2,
+                BaseRange = 400f,
+                BaseMaintenanceCost = 1,
+                ActivationQiCost = 60,
+                Effect = new FormationEffect { QiRegenBonus = 0.5f, LifeRegenBonus = 0.3f },
+            };
+
+            FormationRegistry["trap_1"] = new FormationDefinition
+            {
+                Type = FormationType.TrapZhen,
+                Rank = FormationRank.Rank1,
+                DisplayName = "一阶困阵",
+                Description = "减速区域内敌人",
+                RequiredGuLevel = 2,
+                BaseRange = 256f,
+                BaseMaintenanceCost = 2,
+                ActivationQiCost = 70,
+                Effect = new FormationEffect { MovementSpeedModifier = -0.3f, SlowDuration = 120 },
+            };
+
+            FormationRegistry["kill_3"] = new FormationDefinition
+            {
+                Type = FormationType.KillZhen,
+                Rank = FormationRank.Rank3,
+                DisplayName = "三阶杀阵",
+                Description = "对区域内敌人造成高额伤害",
+                RequiredGuLevel = 3,
+                BaseRange = 200f,
+                BaseMaintenanceCost = 5,
+                ActivationQiCost = 200,
+                Effect = new FormationEffect { DamagePerTick = 30 },
+            };
+
+            FormationRegistry["detection_1"] = new FormationDefinition
+            {
+                Type = FormationType.DetectionZhen,
+                Rank = FormationRank.Rank1,
+                DisplayName = "一阶探阵",
+                Description = "侦测区域内隐藏的NPC和资源",
+                RequiredGuLevel = 1,
+                BaseRange = 600f,
+                BaseMaintenanceCost = 1,
+                ActivationQiCost = 40,
+                Effect = new FormationEffect { RevealHiddenNPCs = true },
+            };
         }
 
-        public void ActivateFormation(FormationType type, FormationRank rank,
+        public bool ActivateFormation(FormationType type, FormationRank rank,
             Microsoft.Xna.Framework.Point center, int coreGuType, Player owner)
         {
-            // TODO: 验证激活条件（修为等级、蛊虫兼容性、真元消耗）
+            var qiRealm = owner.GetModPlayer<QiRealmPlayer>();
+            if (qiRealm.GuLevel < (int)rank + 1)
+            {
+                Main.NewText($"需要{(int)rank + 1}转蛊师才能激活此阵法", Microsoft.Xna.Framework.Color.Red);
+                return false;
+            }
+
+            var def = GetDefinition(type, rank);
+            if (def == null) return false;
+
+            var qiResource = owner.GetModPlayer<QiResourcePlayer>();
+            if (qiResource.QiCurrent < def.ActivationQiCost)
+            {
+                Main.NewText($"真元不足，需要{def.ActivationQiCost}点真元", Microsoft.Xna.Framework.Color.Red);
+                return false;
+            }
+
+            qiResource.ConsumeQi(def.ActivationQiCost);
+
             var instance = new FormationInstance
             {
                 Type = type,
@@ -132,6 +226,18 @@ namespace VerminLordMod.Common.Systems
             };
 
             ActiveFormations.Add(instance);
+            Main.NewText($"【阵法】{def.DisplayName}已激活！", Microsoft.Xna.Framework.Color.Cyan);
+            return true;
+        }
+
+        private FormationDefinition GetDefinition(FormationType type, FormationRank rank)
+        {
+            foreach (var def in FormationRegistry.Values)
+            {
+                if (def.Type == type && def.Rank == rank)
+                    return def;
+            }
+            return null;
         }
 
         public void DeactivateFormation(Microsoft.Xna.Framework.Point center)
@@ -171,11 +277,12 @@ namespace VerminLordMod.Common.Systems
 
         private int GetMaintenanceCost(FormationType type, FormationRank rank)
         {
-            // TODO: 完善维护成本计算
             int baseCost = type switch
             {
                 FormationType.KillZhen => 5,
                 FormationType.GuAttackZhen => 3,
+                FormationType.TrapZhen => 2,
+                FormationType.SummonZhen => 2,
                 _ => 1
             };
             return baseCost * (1 + (int)rank);
@@ -189,17 +296,133 @@ namespace VerminLordMod.Common.Systems
 
         public override void PreUpdateWorld()
         {
-            // TODO: 每帧更新阵法效果（范围伤害、维护消耗、效果Buff发放）
+            for (int i = ActiveFormations.Count - 1; i >= 0; i--)
+            {
+                var formation = ActiveFormations[i];
+                if (!formation.IsActive) continue;
+
+                formation.MaintenanceTimer++;
+                if (formation.MaintenanceTimer >= 60)
+                {
+                    formation.MaintenanceTimer = 0;
+                    var owner = Main.player[formation.OwnerPlayerID];
+                    if (owner == null || !owner.active)
+                    {
+                        formation.IsActive = false;
+                        continue;
+                    }
+
+                    var qiResource = owner.GetModPlayer<QiResourcePlayer>();
+                    if (qiResource.QiCurrent < formation.MaintenanceCostPerTick)
+                    {
+                        formation.IsActive = false;
+                        Main.NewText($"【阵法】阵法因真元不足而失效", Microsoft.Xna.Framework.Color.Red);
+                        continue;
+                    }
+
+                    qiResource.ConsumeQi(formation.MaintenanceCostPerTick);
+                }
+
+                ApplyFormationEffects(formation);
+            }
+        }
+
+        private void ApplyFormationEffects(FormationInstance formation)
+        {
+            var def = GetDefinition(formation.Type, formation.Rank);
+            if (def == null) return;
+
+            var center = new Microsoft.Xna.Framework.Vector2(
+                formation.CenterTile.X * 16 + 8,
+                formation.CenterTile.Y * 16 + 8);
+
+            switch (formation.Type)
+            {
+                case FormationType.GuAttackZhen:
+                case FormationType.KillZhen:
+                    for (int i = 0; i < Main.maxNPCs; i++)
+                    {
+                        var npc = Main.npc[i];
+                        if (!npc.active || npc.friendly) continue;
+                        if (Microsoft.Xna.Framework.Vector2.Distance(npc.Center, center) < formation.RangePixels)
+                        {
+                            int damage = (int)(def.Effect.DamagePerTick * formation.EffectMultiplier);
+                            npc.life -= damage;
+                            if (npc.life <= 0) npc.checkDead();
+                        }
+                    }
+                    break;
+
+                case FormationType.SpiritZhen:
+                    for (int i = 0; i < Main.maxPlayers; i++)
+                    {
+                        var player = Main.player[i];
+                        if (!player.active) continue;
+                        if (Microsoft.Xna.Framework.Vector2.Distance(player.Center, center) < formation.RangePixels)
+                        {
+                            if (Main.GameUpdateCount % 60 == 0)
+                            {
+                                player.statLife += (int)(def.Effect.LifeRegenBonus * formation.EffectMultiplier * 10);
+                                if (player.statLife > player.statLifeMax2) player.statLife = player.statLifeMax2;
+                            }
+                        }
+                    }
+                    break;
+
+                case FormationType.TrapZhen:
+                    for (int i = 0; i < Main.maxNPCs; i++)
+                    {
+                        var npc = Main.npc[i];
+                        if (!npc.active || npc.friendly) continue;
+                        if (Microsoft.Xna.Framework.Vector2.Distance(npc.Center, center) < formation.RangePixels)
+                        {
+                            npc.velocity *= 0.7f;
+                        }
+                    }
+                    break;
+            }
         }
 
         public override void SaveWorldData(TagCompound tag)
         {
-            // TODO: 保存阵法数据
+            var list = new List<TagCompound>();
+            foreach (var f in ActiveFormations)
+            {
+                list.Add(new TagCompound
+                {
+                    ["type"] = (int)f.Type,
+                    ["rank"] = (int)f.Rank,
+                    ["centerX"] = f.CenterTile.X,
+                    ["centerY"] = f.CenterTile.Y,
+                    ["coreGu"] = f.CoreGuTypeID,
+                    ["owner"] = f.OwnerPlayerID,
+                    ["active"] = f.IsActive,
+                });
+            }
+            tag["formations"] = list;
         }
 
         public override void LoadWorldData(TagCompound tag)
         {
-            // TODO: 加载阵法数据
+            ActiveFormations.Clear();
+
+            var list = tag.GetList<TagCompound>("formations");
+            if (list == null) return;
+
+            foreach (var t in list)
+            {
+                ActiveFormations.Add(new FormationInstance
+                {
+                    Type = (FormationType)t.GetInt("type"),
+                    Rank = (FormationRank)t.GetInt("rank"),
+                    CenterTile = new Microsoft.Xna.Framework.Point(t.GetInt("centerX"), t.GetInt("centerY")),
+                    CoreGuTypeID = t.GetInt("coreGu"),
+                    OwnerPlayerID = t.GetInt("owner"),
+                    IsActive = t.GetBool("active"),
+                    RangePixels = GetFormationRange((FormationType)t.GetInt("type"), (FormationRank)t.GetInt("rank")),
+                    MaintenanceCostPerTick = GetMaintenanceCost((FormationType)t.GetInt("type"), (FormationRank)t.GetInt("rank")),
+                });
+            }
         }
     }
 }

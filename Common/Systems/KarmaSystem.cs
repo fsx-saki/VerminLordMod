@@ -58,9 +58,7 @@ namespace VerminLordMod.Common.Systems
 
         public override void PostUpdateWorld()
         {
-            int currentDay = (int)(Main.GameUpdateCount / 36000);
-            if (currentDay <= _lastDay) return;
-            _lastDay = currentDay;
+            if (!WorldTimeHelper.IsNewDay(ref _lastDay)) return;
 
             for (int i = 0; i < Main.maxPlayers; i++)
             {
@@ -185,7 +183,7 @@ namespace VerminLordMod.Common.Systems
                 Type = type,
                 Description = description,
                 Value = value,
-                GameDay = (int)(Main.GameUpdateCount / 36000),
+                GameDay = WorldTimeHelper.CurrentDay,
                 AffectedFaction = faction,
             };
 
@@ -223,7 +221,7 @@ namespace VerminLordMod.Common.Systems
 
             bond.IsResolved = true;
             bond.EffectDescription = effectDescription;
-            bond.ResolutionDay = (int)(Main.GameUpdateCount / 36000);
+            bond.ResolutionDay = WorldTimeHelper.CurrentDay;
         }
 
         public override void SaveData(TagCompound tag)

@@ -90,10 +90,85 @@ namespace VerminLordMod.Common.Systems
 
         private void RegisterPillRecipes()
         {
-            // TODO: 注册所有丹药配方
-            // PillRecipes[PillType.HealingPill] = new PillRecipe { ... };
-            // PillRecipes[PillType.QiRecoveryPill] = new PillRecipe { ... };
-            // etc.
+            PillRecipes[PillType.HealingPill] = new PillRecipe
+            {
+                OutputPill = PillType.HealingPill,
+                RequiredGuLevel = 1,
+                BaseSuccessRate = 0.7f,
+                CraftTimeTicks = 300,
+            };
+
+            PillRecipes[PillType.QiRecoveryPill] = new PillRecipe
+            {
+                OutputPill = PillType.QiRecoveryPill,
+                RequiredGuLevel = 1,
+                BaseSuccessRate = 0.7f,
+                CraftTimeTicks = 300,
+            };
+
+            PillRecipes[PillType.DetoxPill] = new PillRecipe
+            {
+                OutputPill = PillType.DetoxPill,
+                RequiredGuLevel = 2,
+                BaseSuccessRate = 0.6f,
+                CraftTimeTicks = 400,
+            };
+
+            PillRecipes[PillType.DefensePill] = new PillRecipe
+            {
+                OutputPill = PillType.DefensePill,
+                RequiredGuLevel = 2,
+                BaseSuccessRate = 0.6f,
+                CraftTimeTicks = 400,
+            };
+
+            PillRecipes[PillType.StrengthPill] = new PillRecipe
+            {
+                OutputPill = PillType.StrengthPill,
+                RequiredGuLevel = 2,
+                BaseSuccessRate = 0.6f,
+                CraftTimeTicks = 400,
+            };
+
+            PillRecipes[PillType.SpeedPill] = new PillRecipe
+            {
+                OutputPill = PillType.SpeedPill,
+                RequiredGuLevel = 2,
+                BaseSuccessRate = 0.6f,
+                CraftTimeTicks = 400,
+            };
+
+            PillRecipes[PillType.PerceptionPill] = new PillRecipe
+            {
+                OutputPill = PillType.PerceptionPill,
+                RequiredGuLevel = 3,
+                BaseSuccessRate = 0.5f,
+                CraftTimeTicks = 500,
+            };
+
+            PillRecipes[PillType.VisionPill] = new PillRecipe
+            {
+                OutputPill = PillType.VisionPill,
+                RequiredGuLevel = 3,
+                BaseSuccessRate = 0.5f,
+                CraftTimeTicks = 500,
+            };
+
+            PillRecipes[PillType.BreakthroughPill] = new PillRecipe
+            {
+                OutputPill = PillType.BreakthroughPill,
+                RequiredGuLevel = 4,
+                BaseSuccessRate = 0.3f,
+                CraftTimeTicks = 900,
+            };
+
+            PillRecipes[PillType.AwakeningPill] = new PillRecipe
+            {
+                OutputPill = PillType.AwakeningPill,
+                RequiredGuLevel = 5,
+                BaseSuccessRate = 0.2f,
+                CraftTimeTicks = 1200,
+            };
         }
 
         public float CalculateSuccessRate(Player player, PillRecipe recipe)
@@ -101,22 +176,31 @@ namespace VerminLordMod.Common.Systems
             float rate = recipe.BaseSuccessRate;
             var qiRealm = player.GetModPlayer<QiRealmPlayer>();
             rate += qiRealm.GuLevel * 0.05f;
-            // TODO: 药材品质加成、丹药熟练度加成
+
+            var alchemyPlayer = player.GetModPlayer<AlchemyPlayer>();
+            rate += alchemyPlayer.AlchemySuccessBonus;
+
+            float herbQualityBonus = 0f;
+            for (int i = 0; i < recipe.RequiredHerbTypes.Count; i++)
+            {
+                herbQualityBonus += 0.02f;
+            }
+            rate += herbQualityBonus;
+
             return MathHelper.Clamp(rate, 0f, 1f);
         }
 
         public PillQuality RollQuality(Player player)
         {
+            var alchemyPlayer = player.GetModPlayer<AlchemyPlayer>();
             float luck = player.luck;
-            float roll = Main.rand.NextFloat() + luck * 0.1f;
-            // TODO: 完善品质随机逻辑
-            return roll switch
-            {
-                >= 0.95f => PillQuality.Supreme,
-                >= 0.7f => PillQuality.High,
-                >= 0.4f => PillQuality.Medium,
-                _ => PillQuality.Low
-            };
+            float levelBonus = alchemyPlayer.AlchemyLevel * 0.02f;
+            float roll = Main.rand.NextFloat() + luck * 0.1f + levelBonus;
+
+            if (roll >= 0.95f) return PillQuality.Supreme;
+            if (roll >= 0.7f) return PillQuality.High;
+            if (roll >= 0.4f) return PillQuality.Medium;
+            return PillQuality.Low;
         }
 
         public PillCraftResult CraftPill(Player player, PillType type)
@@ -141,8 +225,20 @@ namespace VerminLordMod.Common.Systems
 
         private int GetPillItemType(PillType type, PillQuality quality)
         {
-            // TODO: 返回对应丹药物品的 ModContent.ItemType
-            return 0;
+            return type switch
+            {
+                PillType.HealingPill => ModContent.ItemType<Content.Items.Consumables.HealingPill>(),
+                PillType.QiRecoveryPill => ModContent.ItemType<Content.Items.Consumables.QiRecoveryPill>(),
+                PillType.BreakthroughPill => ModContent.ItemType<Content.Items.Consumables.FirstToSecond>(),
+                PillType.DetoxPill => ModContent.ItemType<Content.Items.Consumables.DetoxPill>(),
+                PillType.PerceptionPill => ModContent.ItemType<Content.Items.Consumables.PerceptionPill>(),
+                PillType.DefensePill => ModContent.ItemType<Content.Items.Consumables.DefensePill>(),
+                PillType.StrengthPill => ModContent.ItemType<Content.Items.Consumables.StrengthPill>(),
+                PillType.SpeedPill => ModContent.ItemType<Content.Items.Consumables.SpeedPill>(),
+                PillType.VisionPill => ModContent.ItemType<Content.Items.Consumables.VisionPill>(),
+                PillType.AwakeningPill => ModContent.ItemType<Content.Items.Consumables.AwakeningPill>(),
+                _ => 0,
+            };
         }
     }
 
@@ -167,7 +263,20 @@ namespace VerminLordMod.Common.Systems
 
         private void CheckLevelUp()
         {
-            // TODO: 炼丹等级提升逻辑
+            int[] expThresholds = { 100, 250, 500, 1000, 2000, 4000, 8000, 16000, 32000, 64000 };
+
+            while (AlchemyLevel < 10 && AlchemyExp >= expThresholds[AlchemyLevel])
+            {
+                AlchemyExp -= expThresholds[AlchemyLevel];
+                AlchemyLevel++;
+                AlchemySuccessBonus = AlchemyLevel * 0.03f;
+
+                if (Player.whoAmI == Main.myPlayer)
+                {
+                    Main.NewText($"炼丹等级提升至 {AlchemyLevel} 级！成功率加成 +{AlchemySuccessBonus * 100:F0}%",
+                        Microsoft.Xna.Framework.Color.LimeGreen);
+                }
+            }
         }
 
         public override void SaveData(TagCompound tag)

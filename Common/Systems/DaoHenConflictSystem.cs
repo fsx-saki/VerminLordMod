@@ -1,8 +1,13 @@
+using System;
 using System.Collections.Generic;
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
+using VerminLordMod.Common.Abstractions;
 using VerminLordMod.Common.GuBehaviors;
 using VerminLordMod.Common.Players;
+using VerminLordMod.Content.Items.Weapons;
+using VerminLordMod.Content.Items.Weapons.Daos;
 
 namespace VerminLordMod.Common.Systems
 {
@@ -232,10 +237,102 @@ namespace VerminLordMod.Common.Systems
         /// MVA 阶段：只填充已知蛊虫。
         /// P1 扩展：从数据库或配置加载。
         /// </summary>
-        public static readonly Dictionary<int, DaoPath> DefaultDaoHenMap = new()
+        public static readonly Dictionary<int, DaoPath> DefaultDaoHenMap = new();
+
+        private static bool _populated = false;
+
+        public static readonly Dictionary<GuElement, DaoPath> GuElementToDaoPath = new()
         {
-            // 以下为占位，P1 再填充具体 TypeID
+            { GuElement.Fire, DaoPath.Fire },
+            { GuElement.Ice, DaoPath.Ice },
+            { GuElement.Wind, DaoPath.Wind },
+            { GuElement.Water, DaoPath.Ice },
+            { GuElement.Earth, DaoPath.Earth },
+            { GuElement.Lightning, DaoPath.Fire },
+            { GuElement.Blood, DaoPath.Blood },
+            { GuElement.Bone, DaoPath.Force },
+            { GuElement.Poison, DaoPath.Poison },
+            { GuElement.Soul, DaoPath.Soul },
+            { GuElement.Dark, DaoPath.Dark },
+            { GuElement.Light, DaoPath.Light },
+            { GuElement.Moon, DaoPath.Moon },
+            { GuElement.Dream, DaoPath.Soul },
+            { GuElement.Charm, DaoPath.Wisdom },
+            { GuElement.Void, DaoPath.Dark },
         };
+
+        private static void PopulateDefaultDaoHenMap()
+        {
+            if (_populated) return;
+            _populated = true;
+            DefaultDaoHenMap.Clear();
+
+            for (int i = ItemID.Count; i < ItemLoader.ItemCount; i++)
+            {
+                var modItem = ItemLoader.GetItem(i);
+                if (modItem is null) continue;
+
+                DaoType? daoType = null;
+
+                if (modItem is DaoWeapon daoWeapon)
+                {
+                    daoType = daoWeapon.DaoType;
+                }
+
+                if (daoType == null && modItem is GuWeaponItem)
+                {
+                    daoType = InferDaoTypeFromHierarchy(modItem.GetType());
+                }
+
+                if (daoType == null && modItem is Abstractions.IGu gu)
+                {
+                    if (GuElementToDaoPath.TryGetValue(gu.Element, out var elemPath))
+                    {
+                        DefaultDaoHenMap[i] = elemPath;
+                    }
+                    continue;
+                }
+
+                if (daoType != null && DaoTypeToPathMapping.TryGetValue(daoType.Value, out var path))
+                {
+                    DefaultDaoHenMap[i] = path;
+                }
+            }
+        }
+
+        private static DaoType? InferDaoTypeFromHierarchy(Type type)
+        {
+            Type current = type;
+            while (current != null && current != typeof(object))
+            {
+                string name = current.Name;
+
+                if (name.EndsWith("Weapon") && name != "GuWeaponItem" && name != "DaoWeapon")
+                {
+                    string daoName = name.Substring(0, name.Length - 6);
+                    if (Enum.TryParse<DaoType>(daoName, out var dt))
+                        return dt;
+                }
+
+                current = current.BaseType;
+            }
+
+            string itemName = type.Name;
+            if (itemName.EndsWith("BaseGu"))
+            {
+                string daoName = itemName.Substring(0, itemName.Length - 6);
+                if (Enum.TryParse<DaoType>(daoName, out var dt))
+                    return dt;
+            }
+
+            foreach (DaoType dt in Enum.GetValues<DaoType>())
+            {
+                if (itemName.StartsWith(dt.ToString()))
+                    return dt;
+            }
+
+            return null;
+        }
 
         // ============================================================
         // 核心接口
@@ -329,11 +426,13 @@ namespace VerminLordMod.Common.Systems
         /// </summary>
         public static ulong GetDefaultDaoHenTag(int guTypeID)
         {
+            PopulateDefaultDaoHenMap();
+
             if (DefaultDaoHenMap.TryGetValue(guTypeID, out var path))
             {
                 return (ulong)path;
             }
-            return 0; // 未知蛊虫：无道痕
+            return 0;
         }
 
         /// <summary>
@@ -396,11 +495,10 @@ namespace VerminLordMod.Common.Systems
         // ModSystem 生命周期
         // ============================================================
 
-        public override void PostUpdateWorld()
+        public override void OnWorldLoad()
         {
-            // 预留：P2 阶段实现冲突检测
-            // 每帧检查所有在线玩家的空窍，计算冲突掩码
-            // MVA 阶段不执行实际检测
+            _populated = false;
+            PopulateDefaultDaoHenMap();
         }
     }
 }

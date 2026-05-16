@@ -63,8 +63,7 @@ namespace VerminLordMod.Common.Systems
 
         private void RegisterFactionMembers()
         {
-            // TODO: 自动扫描所有 GuMasterBase 子类并注册
-            // MVA阶段：手动注册关键NPC
+            AutoRegisterGuMasterNPCs();
 
             RegisterPersistentNPC(new PersistentNPCData
             {
@@ -113,6 +112,40 @@ namespace VerminLordMod.Common.Systems
                 RoleID = "medicine_elder",
                 RespawnDelayDays = 5,
             });
+        }
+
+        private void AutoRegisterGuMasterNPCs()
+        {
+            var guMasterTypes = new (string className, string displayName, FactionID faction, string roleID)[]
+            {
+                ("GuYuePatrolGuMaster", "古月巡逻蛊师", FactionID.GuYue, "patrol"),
+                ("BanditGuMaster", "流寇蛊师", FactionID.Scattered, "bandit"),
+                ("WildGuMaster", "野生蛊师", FactionID.Scattered, "wild"),
+                ("HermitGuMaster", "隐修蛊师", FactionID.Scattered, "hermit"),
+                ("EvilCultivatorGuMaster", "邪修蛊师", FactionID.Scattered, "evil"),
+                ("ShadowAssassinGuMaster", "影刺蛊师", FactionID.Scattered, "assassin"),
+            };
+
+            foreach (var (className, displayName, faction, roleID) in guMasterTypes)
+            {
+                int npcType = Mod.Find<ModNPC>(className)?.Type ?? 0;
+                if (npcType == 0) continue;
+
+                string uniqueID = $"{faction.ToString().ToLower()}_{roleID}";
+                if (RegisteredNPCs.ContainsKey(uniqueID)) continue;
+
+                RegisterPersistentNPC(new PersistentNPCData
+                {
+                    NPCType = npcType,
+                    UniqueID = uniqueID,
+                    DisplayName = displayName,
+                    PersistenceType = NPCPersistenceType.Persistent,
+                    DeathPolicy = NPCDeathPolicy.RespawnAfterDelay,
+                    Faction = faction,
+                    RoleID = roleID,
+                    RespawnDelayDays = 3,
+                });
+            }
         }
 
         private void RegisterPersistentNPC(PersistentNPCData data)
@@ -166,13 +199,14 @@ namespace VerminLordMod.Common.Systems
                     break;
 
                 case NPCDeathPolicy.CorpseThenReplace:
-                    // TODO: 创建尸体（NpcCorpse）
-                    // TODO: 触发 PowerStructureSystem 补位
+                    CreateCorpse(npc, data);
+                    TriggerSuccession(data);
                     DeadNPCQueue.Add(data.UniqueID);
                     break;
 
                 case NPCDeathPolicy.PermaDeath:
-                    // TODO: 永久移除，触发继承
+                    CreateCorpse(npc, data);
+                    TriggerSuccession(data);
                     break;
 
                 case NPCDeathPolicy.Immortal:
@@ -192,7 +226,6 @@ namespace VerminLordMod.Common.Systems
 
         public override void PostUpdateWorld()
         {
-            // TODO: 检查复活队列
             for (int i = DeadNPCQueue.Count - 1; i >= 0; i--)
             {
                 var uid = DeadNPCQueue[i];
@@ -208,7 +241,95 @@ namespace VerminLordMod.Common.Systems
                 }
             }
 
-            // TODO: 生成未生成的持久化NPC
+            SpawnUnspawnedNPCs();
+        }
+
+        private void SpawnUnspawnedNPCs()
+        {
+            foreach (var kvp in RegisteredNPCs)
+            {
+                var data = kvp.Value;
+                if (!data.IsAlive || data.HasSpawned) continue;
+
+                int existingCount = 0;
+                for (int i = 0; i < Main.maxNPCs; i++)
+                {
+                    if (Main.npc[i].active && Main.npc[i].type == data.NPCType)
+                        existingCount++;
+                }
+
+                if (existingCount > 0)
+                {
+                    data.HasSpawned = true;
+                    continue;
+                }
+
+                if (Main.netMode == Terraria.ID.NetmodeID.MultiplayerClient) continue;
+
+                Vector2 spawnPos = data.HomePosition;
+                if (spawnPos == Vector2.Zero)
+                {
+                    spawnPos = Main.spawnTileX < Main.maxTilesX / 2
+                        ? new Vector2(Main.spawnTileX * 16 + 800, Main.spawnTileY * 16)
+                        : new Vector2(Main.spawnTileX * 16 - 800, Main.spawnTileY * 16);
+                }
+
+                int npcIndex = NPC.NewNPC(Terraria.Entity.GetSource_NaturalSpawn(),
+                    (int)spawnPos.X, (int)spawnPos.Y, data.NPCType);
+                if (npcIndex >= 0 && npcIndex < Main.maxNPCs)
+                {
+                    data.HasSpawned = true;
+                }
+            }
+        }
+
+        private void CreateCorpse(NPC npc, PersistentNPCData data)
+        {
+            if (npc == null || !npc.active) return;
+
+            int corpseType = ModContent.ProjectileType<Common.Entities.NpcCorpse>();
+            int projIndex = Projectile.NewProjectile(
+                Terraria.Entity.GetSource_NaturalSpawn(),
+                npc.Center, Microsoft.Xna.Framework.Vector2.Zero,
+                corpseType, 0, 0, Main.myPlayer);
+
+            if (projIndex >= 0 && projIndex < Main.maxProjectiles)
+            {
+                var corpse = (Common.Entities.NpcCorpse)Main.projectile[projIndex].ModProjectile;
+                corpse.CorpseType = Common.Entities.CorpseType.Monster;
+                corpse.SourceNPCType = npc.type;
+                corpse.SourceNPCName = data.DisplayName;
+                corpse.OwnerName = data.DisplayName;
+
+                for (int i = 0; i < npc.extraValue; i++)
+                {
+                    if (Main.rand.NextFloat() < 0.3f)
+                    {
+                        corpse.RemainingItems.Add(new Item(ModContent.ItemType<Content.Items.Consumables.YuanS>())
+                        {
+                            stack = Main.rand.Next(1, 5)
+                        });
+                    }
+                }
+            }
+        }
+
+        private void TriggerSuccession(PersistentNPCData data)
+        {
+            var powerSystem = FactionPowerSystem.Instance;
+            if (powerSystem == null) return;
+
+            var structure = powerSystem.GetPowerStructure(data.Faction);
+            if (structure == null) return;
+
+            structure.InternalConflictLevel = System.Math.Min(100, structure.InternalConflictLevel + 15);
+            structure.StabilityScore = System.Math.Max(0, structure.StabilityScore - 10);
+
+            if (Main.netMode != Terraria.ID.NetmodeID.Server)
+            {
+                Main.NewText($"【{data.Faction}】{data.DisplayName}已陨落，家族内部权力动荡...",
+                    Microsoft.Xna.Framework.Color.DarkOrange);
+            }
         }
 
         public override void SaveWorldData(TagCompound tag)

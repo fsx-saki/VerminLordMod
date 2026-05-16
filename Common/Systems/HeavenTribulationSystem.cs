@@ -460,6 +460,8 @@ namespace VerminLordMod.Common.Systems
             qiRealm.LevelStage = 0;
             qiRealm.BreakthroughProgress = 0f;
 
+            CultivationLoopSystem.OnTribulationSurvived(player);
+
             EventBus.Publish(new TribulationCompletedEvent
             {
                 PlayerID = trib.TargetPlayerID,
@@ -479,6 +481,8 @@ namespace VerminLordMod.Common.Systems
             var player = Main.player[trib.TargetPlayerID];
             if (!player.active) return;
 
+            CultivationLoopSystem.OnTribulationFailed(player);
+
             EventBus.Publish(new TribulationCompletedEvent
             {
                 PlayerID = trib.TargetPlayerID,
@@ -490,6 +494,16 @@ namespace VerminLordMod.Common.Systems
             {
                 Main.NewText("天劫失败！修为受损……", Color.Red);
             }
+        }
+
+        public bool HasPlayerSurvivedTribulation(Player player)
+        {
+            foreach (var trib in CompletedTribulations)
+            {
+                if (trib.TargetPlayerID == player.whoAmI)
+                    return true;
+            }
+            return false;
         }
 
         public override void SaveWorldData(TagCompound tag)

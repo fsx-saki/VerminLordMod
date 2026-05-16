@@ -1,18 +1,11 @@
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Terraria;
-using Terraria.DataStructures;
 using VerminLordMod.Content.Trails;
 
 namespace VerminLordMod.Common.BulletBehaviors
 {
-    public class FireTrailBehavior : IBulletBehavior
+    public class FireTrailBehavior : ElementalTrailBehavior<FireTrail>
     {
-        public string Name => "FireTrail";
-
-        public TrailManager TrailManager { get; } = new TrailManager();
-
-        public FireTrail Trail { get; private set; }
+        public override string Name => "FireTrail";
 
         public bool EnableGhostTrail { get; set; } = true;
         public int GhostMaxPositions { get; set; } = 10;
@@ -54,78 +47,47 @@ namespace VerminLordMod.Common.BulletBehaviors
         public float RandomSpread { get; set; } = 3f;
         public Vector2 SpawnOffset { get; set; } = Vector2.Zero;
 
-        public bool AutoDraw { get; set; } = true;
-        public bool SuppressDefaultDraw { get; set; } = false;
-
-        public FireTrailBehavior() { }
-
-        public void OnSpawn(Projectile projectile, IEntitySource source)
+        protected override void ConfigureTrail(FireTrail trail)
         {
-            Trail = new FireTrail
-            {
-                EnableGhostTrail = EnableGhostTrail,
-                GhostMaxPositions = GhostMaxPositions,
-                GhostRecordInterval = GhostRecordInterval,
-                GhostWidthScale = GhostWidthScale,
-                GhostLengthScale = GhostLengthScale,
-                GhostAlpha = GhostAlpha,
-                GhostColor = GhostColor,
+            trail.EnableGhostTrail = EnableGhostTrail;
+            trail.GhostMaxPositions = GhostMaxPositions;
+            trail.GhostRecordInterval = GhostRecordInterval;
+            trail.GhostWidthScale = GhostWidthScale;
+            trail.GhostLengthScale = GhostLengthScale;
+            trail.GhostAlpha = GhostAlpha;
+            trail.GhostColor = GhostColor;
 
-                MaxTongues = MaxTongues,
-                TongueLife = TongueLife,
-                TongueScale = TongueScale,
-                TongueLength = TongueLength,
-                TongueSpawnInterval = TongueSpawnInterval,
-                TongueSwaySpeed = TongueSwaySpeed,
-                TongueSwayAmp = TongueSwayAmp,
-                TongueRiseSpeed = TongueRiseSpeed,
-                TongueSpread = TongueSpread,
-                TongueColor = TongueColor,
+            trail.MaxTongues = MaxTongues;
+            trail.TongueLife = TongueLife;
+            trail.TongueScale = TongueScale;
+            trail.TongueLength = TongueLength;
+            trail.TongueSpawnInterval = TongueSpawnInterval;
+            trail.TongueSwaySpeed = TongueSwaySpeed;
+            trail.TongueSwayAmp = TongueSwayAmp;
+            trail.TongueRiseSpeed = TongueRiseSpeed;
+            trail.TongueSpread = TongueSpread;
+            trail.TongueColor = TongueColor;
 
-                MaxEmbers = MaxEmbers,
-                EmberLife = EmberLife,
-                EmberSize = EmberSize,
-                EmberSpawnChance = EmberSpawnChance,
-                EmberRiseSpeed = EmberRiseSpeed,
-                EmberDriftSpeed = EmberDriftSpeed,
-                EmberColor = EmberColor,
+            trail.MaxEmbers = MaxEmbers;
+            trail.EmberLife = EmberLife;
+            trail.EmberSize = EmberSize;
+            trail.EmberSpawnChance = EmberSpawnChance;
+            trail.EmberRiseSpeed = EmberRiseSpeed;
+            trail.EmberDriftSpeed = EmberDriftSpeed;
+            trail.EmberColor = EmberColor;
 
-                MaxAshes = MaxAshes,
-                AshLife = AshLife,
-                AshSize = AshSize,
-                AshSpawnChance = AshSpawnChance,
-                AshFallSpeed = AshFallSpeed,
-                AshDriftSpeed = AshDriftSpeed,
-                AshSpinSpeed = AshSpinSpeed,
-                AshColor = AshColor,
+            trail.MaxAshes = MaxAshes;
+            trail.AshLife = AshLife;
+            trail.AshSize = AshSize;
+            trail.AshSpawnChance = AshSpawnChance;
+            trail.AshFallSpeed = AshFallSpeed;
+            trail.AshDriftSpeed = AshDriftSpeed;
+            trail.AshSpinSpeed = AshSpinSpeed;
+            trail.AshColor = AshColor;
 
-                InertiaFactor = InertiaFactor,
-                RandomSpread = RandomSpread,
-                SpawnOffset = SpawnOffset,
-            };
-
-            TrailManager.Add(Trail);
+            trail.InertiaFactor = InertiaFactor;
+            trail.RandomSpread = RandomSpread;
+            trail.SpawnOffset = SpawnOffset;
         }
-
-        public void Update(Projectile projectile)
-        {
-            TrailManager.Update(projectile.Center, projectile.velocity);
-        }
-
-        public void OnHitNPC(Projectile projectile, NPC target, NPC.HitInfo hit, int damageDone) { }
-
-        public void OnKill(Projectile projectile, int timeLeft)
-        {
-            TrailManager.Clear();
-        }
-
-        public bool PreDraw(Projectile projectile, ref Color lightColor, SpriteBatch spriteBatch)
-        {
-            if (AutoDraw)
-                TrailManager.Draw(spriteBatch);
-            return !SuppressDefaultDraw;
-        }
-
-        public bool? OnTileCollide(Projectile projectile, Vector2 oldVelocity) => null;
     }
 }

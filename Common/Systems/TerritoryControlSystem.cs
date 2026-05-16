@@ -63,9 +63,6 @@ namespace VerminLordMod.Common.Systems
 
         private void InitializeDefaultTerritories()
         {
-            // TODO: 根据世界生成结果动态创建领地节点
-            // MVA阶段：硬编码古月族地及周边区域
-
             RegisterTerritory(new TerritoryNode
             {
                 TerritoryID = "guyue_core",
@@ -121,11 +118,83 @@ namespace VerminLordMod.Common.Systems
                 MaxDefense = 80,
             });
 
-            // 设置邻接关系
+            RegisterTerritory(new TerritoryNode
+            {
+                TerritoryID = "xiong_territory",
+                DisplayName = "熊家领地",
+                Type = TerritoryType.GuMasterSettlement,
+                Status = TerritoryStatus.Claimed,
+                OwnerFaction = FactionID.Xiong,
+                DefenseLevel = 90,
+                MaxDefense = 90,
+            });
+
+            RegisterTerritory(new TerritoryNode
+            {
+                TerritoryID = "tie_territory",
+                DisplayName = "铁家领地",
+                Type = TerritoryType.GuMasterSettlement,
+                Status = TerritoryStatus.Claimed,
+                OwnerFaction = FactionID.Tie,
+                DefenseLevel = 85,
+                MaxDefense = 85,
+            });
+
+            RegisterTerritory(new TerritoryNode
+            {
+                TerritoryID = "jia_caravan_route",
+                DisplayName = "贾家商路",
+                Type = TerritoryType.Town,
+                Status = TerritoryStatus.Claimed,
+                OwnerFaction = FactionID.Jia,
+                DefenseLevel = 40,
+                MaxDefense = 40,
+            });
+
+            RegisterTerritory(new TerritoryNode
+            {
+                TerritoryID = "wilderness_east",
+                DisplayName = "东荒",
+                Type = TerritoryType.Wilderness,
+                Status = TerritoryStatus.Unclaimed,
+                OwnerFaction = FactionID.None,
+                DefenseLevel = 0,
+                MaxDefense = 0,
+            });
+
+            RegisterTerritory(new TerritoryNode
+            {
+                TerritoryID = "forbidden_valley",
+                DisplayName = "禁断谷",
+                Type = TerritoryType.ForbiddenZone,
+                Status = TerritoryStatus.Unclaimed,
+                OwnerFaction = FactionID.None,
+                DefenseLevel = 0,
+                MaxDefense = 0,
+            });
+
+            RegisterTerritory(new TerritoryNode
+            {
+                TerritoryID = "inheritance_peak",
+                DisplayName = "传承峰",
+                Type = TerritoryType.InheritanceGround,
+                Status = TerritoryStatus.Unclaimed,
+                OwnerFaction = FactionID.None,
+                DefenseLevel = 0,
+                MaxDefense = 0,
+            });
+
             SetAdjacent("guyue_core", "guyue_village");
             SetAdjacent("guyue_village", "qingmao_forest");
             SetAdjacent("qingmao_forest", "wilderness_north");
             SetAdjacent("wilderness_north", "bai_territory");
+            SetAdjacent("bai_territory", "xiong_territory");
+            SetAdjacent("xiong_territory", "tie_territory");
+            SetAdjacent("tie_territory", "wilderness_east");
+            SetAdjacent("wilderness_east", "jia_caravan_route");
+            SetAdjacent("jia_caravan_route", "guyue_village");
+            SetAdjacent("wilderness_north", "forbidden_valley");
+            SetAdjacent("forbidden_valley", "inheritance_peak");
         }
 
         private void RegisterTerritory(TerritoryNode node)
@@ -217,21 +286,137 @@ namespace VerminLordMod.Common.Systems
             });
         }
 
+        private int _lastDay = -1;
+
         public override void PostUpdateWorld()
         {
-            // TODO: 领地争夺进度推进
-            // TODO: 防御恢复
-            // TODO: 资源产出
+            if (!WorldTimeHelper.IsNewDay(ref _lastDay)) return;
+
+            foreach (var kvp in Territories)
+            {
+                var territory = kvp.Value;
+
+                if (territory.Status == TerritoryStatus.Contested)
+                {
+                    territory.ContestTimer++;
+                    if (territory.ContestTimer >= 3)
+                    {
+                        if (Main.rand.NextFloat() < 0.4f)
+                        {
+                            CaptureTerritory(territory.TerritoryID, territory.AttackerFaction);
+                        }
+                        else
+                        {
+                            territory.Status = TerritoryStatus.Claimed;
+                            territory.AttackerFaction = FactionID.None;
+                            territory.ContestTimer = 0;
+                        }
+                    }
+                }
+
+                if (territory.Status == TerritoryStatus.Claimed && territory.DefenseLevel < territory.MaxDefense)
+                {
+                    territory.DefenseLevel = System.Math.Min(territory.MaxDefense,
+                        territory.DefenseLevel + 5);
+                }
+
+                if (territory.Status == TerritoryStatus.Claimed && territory.OwnerFaction != FactionID.None)
+                {
+                    ProduceResources(territory);
+                }
+            }
+        }
+
+        private void ProduceResources(TerritoryNode territory)
+        {
+            switch (territory.Type)
+            {
+                case TerritoryType.ResourceZone:
+                    if (!territory.Resources.ContainsKey(NodeResourceType.YuanSpring))
+                        territory.Resources[NodeResourceType.YuanSpring] = 0;
+                    territory.Resources[NodeResourceType.YuanSpring] += Main.rand.Next(1, 5);
+                    break;
+                case TerritoryType.Village:
+                    if (!territory.Resources.ContainsKey(NodeResourceType.HerbGarden))
+                        territory.Resources[NodeResourceType.HerbGarden] = 0;
+                    territory.Resources[NodeResourceType.HerbGarden] += Main.rand.Next(2, 8);
+                    break;
+                case TerritoryType.GuMasterSettlement:
+                    if (!territory.Resources.ContainsKey(NodeResourceType.YuanSpring))
+                        territory.Resources[NodeResourceType.YuanSpring] = 0;
+                    territory.Resources[NodeResourceType.YuanSpring] += Main.rand.Next(2, 6);
+                    break;
+            }
         }
 
         public override void SaveWorldData(TagCompound tag)
         {
-            // TODO: 保存领地数据
+            var list = new List<TagCompound>();
+            foreach (var kvp in Territories)
+            {
+                var t = kvp.Value;
+                var resTag = new TagCompound();
+                foreach (var r in t.Resources)
+                    resTag[r.Key.ToString()] = r.Value;
+
+                list.Add(new TagCompound
+                {
+                    ["id"] = t.TerritoryID,
+                    ["name"] = t.DisplayName,
+                    ["type"] = (int)t.Type,
+                    ["status"] = (int)t.Status,
+                    ["owner"] = (int)t.OwnerFaction,
+                    ["attacker"] = (int)t.AttackerFaction,
+                    ["defense"] = t.DefenseLevel,
+                    ["maxDefense"] = t.MaxDefense,
+                    ["contestTimer"] = t.ContestTimer,
+                    ["resources"] = resTag,
+                });
+            }
+            tag["territories"] = list;
+            tag["territoryDayCounter"] = _lastDay;
         }
 
         public override void LoadWorldData(TagCompound tag)
         {
-            // TODO: 加载领地数据
+            Territories.Clear();
+            FactionTerritories.Clear();
+
+            var list = tag.GetList<TagCompound>("territories");
+            if (list == null) return;
+
+            foreach (var t in list)
+            {
+                var node = new TerritoryNode
+                {
+                    TerritoryID = t.GetString("id"),
+                    DisplayName = t.GetString("name"),
+                    Type = (TerritoryType)t.GetInt("type"),
+                    Status = (TerritoryStatus)t.GetInt("status"),
+                    OwnerFaction = (FactionID)t.GetInt("owner"),
+                    AttackerFaction = (FactionID)t.GetInt("attacker"),
+                    DefenseLevel = t.GetInt("defense"),
+                    MaxDefense = t.GetInt("maxDefense"),
+                    ContestTimer = t.GetInt("contestTimer"),
+                };
+
+                if (t.TryGet("resources", out TagCompound resTag))
+                {
+                    foreach (NodeResourceType resType in System.Enum.GetValues<NodeResourceType>())
+                    {
+                        string key = resType.ToString();
+                        if (resTag.ContainsKey(key))
+                            node.Resources[resType] = resTag.GetInt(key);
+                    }
+                }
+
+                Territories[node.TerritoryID] = node;
+                if (!FactionTerritories.ContainsKey(node.OwnerFaction))
+                    FactionTerritories[node.OwnerFaction] = new List<string>();
+                FactionTerritories[node.OwnerFaction].Add(node.TerritoryID);
+            }
+
+            _lastDay = tag.GetInt("territoryDayCounter");
         }
     }
 

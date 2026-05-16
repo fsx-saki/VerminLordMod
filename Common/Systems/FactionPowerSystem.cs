@@ -253,21 +253,85 @@ namespace VerminLordMod.Common.Systems
             return false;
         }
 
+        private int _lastDay = -1;
+
         public override void PostUpdateWorld()
         {
-            // TODO: 权力斗争模拟
-            // TODO: 稳定性变化
-            // TODO: 内部冲突事件
+            if (!WorldTimeHelper.IsNewDay(ref _lastDay)) return;
+
+            foreach (var kvp in PowerStructures)
+            {
+                var structure = kvp.Value;
+
+                int stabilityChange = 0;
+                if (structure.InternalConflictLevel > 30)
+                    stabilityChange -= Main.rand.Next(1, 4);
+                else if (structure.InternalConflictLevel < 10)
+                    stabilityChange += Main.rand.Next(0, 2);
+
+                structure.StabilityScore = System.Math.Clamp(
+                    structure.StabilityScore + stabilityChange, 0, 100);
+
+                if (Main.rand.NextFloat() < 0.05f)
+                {
+                    structure.InternalConflictLevel = System.Math.Clamp(
+                        structure.InternalConflictLevel + Main.rand.Next(-5, 6), 0, 100);
+                }
+
+                if (structure.InternalConflictLevel > 50 && Main.rand.NextFloat() < 0.03f)
+                {
+                    TriggerInternalConflict(structure);
+                }
+            }
+        }
+
+        private void TriggerInternalConflict(FactionPowerStructure structure)
+        {
+            structure.StabilityScore = System.Math.Max(0, structure.StabilityScore - 10);
+            structure.InternalConflictLevel = System.Math.Min(100, structure.InternalConflictLevel + 5);
+
+            if (Main.netMode != Terraria.ID.NetmodeID.Server)
+            {
+                string factionName = structure.Faction.ToString();
+                Main.NewText($"【{factionName}】内部发生权力斗争！稳定性下降...", Microsoft.Xna.Framework.Color.Orange);
+            }
         }
 
         public override void SaveWorldData(TagCompound tag)
         {
-            // TODO: 保存权力结构数据
+            var list = new List<TagCompound>();
+            foreach (var kvp in PowerStructures)
+            {
+                list.Add(new TagCompound
+                {
+                    ["faction"] = (int)kvp.Key,
+                    ["stability"] = kvp.Value.StabilityScore,
+                    ["conflict"] = kvp.Value.InternalConflictLevel,
+                });
+            }
+            tag["powerStructures"] = list;
+            tag["powerDayCounter"] = _lastDay;
         }
 
         public override void LoadWorldData(TagCompound tag)
         {
-            // TODO: 加载权力结构数据
+            PowerStructures.Clear();
+            InitializePowerStructures();
+
+            var list = tag.GetList<TagCompound>("powerStructures");
+            if (list == null) return;
+
+            foreach (var t in list)
+            {
+                var faction = (FactionID)t.GetInt("faction");
+                if (PowerStructures.TryGetValue(faction, out var structure))
+                {
+                    structure.StabilityScore = t.GetInt("stability");
+                    structure.InternalConflictLevel = t.GetInt("conflict");
+                }
+            }
+
+            _lastDay = tag.GetInt("powerDayCounter");
         }
     }
 }

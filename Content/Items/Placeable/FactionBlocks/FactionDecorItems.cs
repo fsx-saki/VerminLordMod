@@ -99,4 +99,100 @@ namespace VerminLordMod.Content.Items.Placeable.FactionBlocks
             Item.createTile = ModContent.TileType<Tiles.FactionBlocks.ScatteredCampfire>();
         }
     }
+
+    public class GuYueMedicinePot : ModItem
+    {
+        public override void SetDefaults()
+        {
+            Item.width = 12; Item.height = 12; Item.maxStack = 99;
+            Item.useTurn = true; Item.autoReuse = true;
+            Item.useAnimation = 15; Item.useTime = 10;
+            Item.useStyle = ItemUseStyleID.Swing; Item.consumable = true;
+            Item.createTile = ModContent.TileType<Tiles.FactionBlocks.GuYueMedicinePot>();
+        }
+    }
+
+    public class BaiJadeScreen : ModItem
+    {
+        public override void SetDefaults()
+        {
+            Item.width = 20; Item.height = 20; Item.maxStack = 99;
+            Item.useTurn = true; Item.autoReuse = true;
+            Item.useAnimation = 15; Item.useTime = 10;
+            Item.useStyle = ItemUseStyleID.Swing; Item.consumable = true;
+            Item.createTile = ModContent.TileType<Tiles.FactionBlocks.BaiJadeScreen>();
+        }
+    }
+
+    public class XiongBoneTotem : ModItem
+    {
+        public override void SetDefaults()
+        {
+            Item.width = 12; Item.height = 20; Item.maxStack = 99;
+            Item.useTurn = true; Item.autoReuse = true;
+            Item.useAnimation = 15; Item.useTime = 10;
+            Item.useStyle = ItemUseStyleID.Swing; Item.consumable = true;
+            Item.createTile = ModContent.TileType<Tiles.FactionBlocks.XiongBoneTotem>();
+        }
+    }
+
+    public class TieWeaponRack : ModItem
+    {
+        public override void SetDefaults()
+        {
+            Item.width = 20; Item.height = 20; Item.maxStack = 99;
+            Item.useTurn = true; Item.autoReuse = true;
+            Item.useAnimation = 15; Item.useTime = 10;
+            Item.useStyle = ItemUseStyleID.Swing; Item.consumable = true;
+            Item.createTile = ModContent.TileType<Tiles.FactionBlocks.TieWeaponRack>();
+        }
+    }
+
+    public class WangWaterBasin : ModItem
+    {
+        public override void SetDefaults()
+        {
+            Item.width = 20; Item.height = 12; Item.maxStack = 99;
+            Item.useTurn = true; Item.autoReuse = true;
+            Item.useAnimation = 15; Item.useTime = 10;
+            Item.useStyle = ItemUseStyleID.Swing; Item.consumable = true;
+            Item.createTile = ModContent.TileType<Tiles.FactionBlocks.WangWaterBasin>();
+        }
+    }
+
+    public class ZhaoShadowLantern : ModItem
+    {
+        public override void SetDefaults()
+        {
+            Item.width = 12; Item.height = 20; Item.maxStack = 99;
+            Item.useTurn = true; Item.autoReuse = true;
+            Item.useAnimation = 15; Item.useTime = 10;
+            Item.useStyle = ItemUseStyleID.Swing; Item.consumable = true;
+            Item.createTile = ModContent.TileType<Tiles.FactionBlocks.ZhaoShadowLantern>();
+        }
+    }
+
+    public class JiaGoldCoinPile : ModItem
+    {
+        public override void SetDefaults()
+        {
+            Item.width = 12; Item.height = 12; Item.maxStack = 99;
+            Item.useTurn = true; Item.autoReuse = true;
+            Item.useAnimation = 15; Item.useTime = 10;
+            Item.useStyle = ItemUseStyleID.Swing; Item.consumable = true;
+            Item.createTile = ModContent.TileType<Tiles.FactionBlocks.JiaGoldCoinPile>();
+        }
+    }
+
+    public class ScatteredTent : ModItem
+    {
+        public override void SetDefaults()
+        {
+            Item.width = 28; Item.height = 20; Item.maxStack = 99;
+            Item.useTurn = true; Item.autoReuse = true;
+            Item.useAnimation = 15; Item.useTime = 10;
+            Item.useStyle = ItemUseStyleID.Swing; Item.consumable = true;
+            Item.createTile = ModContent.TileType<Tiles.FactionBlocks.ScatteredTent>();
+        }
+    }
 }

@@ -65,7 +65,7 @@ namespace VerminLordMod.Common.Systems
         public int DiscoveryDay;
         public int ExpiryDay;
         public bool HasExpiry => ExpiryDay > 0;
-        public bool IsExpired => HasExpiry && Main.GameUpdateCount / 36000 > ExpiryDay;
+        public bool IsExpired => HasExpiry && WorldTimeHelper.CurrentDay > ExpiryDay;
     }
 
     public class InheritanceSystem : ModSystem
@@ -84,9 +84,6 @@ namespace VerminLordMod.Common.Systems
 
         private void RegisterDefaultInheritances()
         {
-            // TODO: 注册世界中的传承秘境
-            // MVA阶段：硬编码1-2个传承
-
             RegisterInheritance(new InheritanceInstance
             {
                 InheritanceID = "guyue_ancestor",
@@ -108,6 +105,61 @@ namespace VerminLordMod.Common.Systems
                 OriginalOwnerFaction = FactionID.None,
                 DiscoveryDay = -1,
             });
+
+            RegisterInheritance(new InheritanceInstance
+            {
+                InheritanceID = "bai_jade_pavilion",
+                DisplayName = "白家玉阁传承",
+                Type = InheritanceType.AlchemyManual,
+                Rarity = InheritanceRarity.Rare,
+                State = InheritanceState.Hidden,
+                OriginalOwnerFaction = FactionID.Bai,
+                DiscoveryDay = -1,
+            });
+
+            RegisterInheritance(new InheritanceInstance
+            {
+                InheritanceID = "xiong_war_heritage",
+                DisplayName = "熊家战魂传承",
+                Type = InheritanceType.WeaponTechnique,
+                Rarity = InheritanceRarity.Epic,
+                State = InheritanceState.Hidden,
+                OriginalOwnerFaction = FactionID.Xiong,
+                DiscoveryDay = -1,
+            });
+
+            RegisterInheritance(new InheritanceInstance
+            {
+                InheritanceID = "tie_forge_secret",
+                DisplayName = "铁家锻造秘传",
+                Type = InheritanceType.GuRecipe,
+                Rarity = InheritanceRarity.Rare,
+                State = InheritanceState.Hidden,
+                OriginalOwnerFaction = FactionID.Tie,
+                DiscoveryDay = -1,
+            });
+
+            RegisterInheritance(new InheritanceInstance
+            {
+                InheritanceID = "ancient_immortal_cave",
+                DisplayName = "上古仙人洞府",
+                Type = InheritanceType.Bloodline,
+                Rarity = InheritanceRarity.Legendary,
+                State = InheritanceState.Hidden,
+                OriginalOwnerFaction = FactionID.None,
+                DiscoveryDay = -1,
+            });
+
+            RegisterInheritance(new InheritanceInstance
+            {
+                InheritanceID = "forbidden_secret_art",
+                DisplayName = "禁断秘术",
+                Type = InheritanceType.SecretArt,
+                Rarity = InheritanceRarity.Mythic,
+                State = InheritanceState.Hidden,
+                OriginalOwnerFaction = FactionID.None,
+                DiscoveryDay = -1,
+            });
         }
 
         private void RegisterInheritance(InheritanceInstance instance)
@@ -121,7 +173,7 @@ namespace VerminLordMod.Common.Systems
             if (instance.State != InheritanceState.Hidden) return;
 
             instance.State = InheritanceState.Discovered;
-            instance.DiscoveryDay = (int)(Main.GameUpdateCount / 36000);
+            instance.DiscoveryDay = WorldTimeHelper.CurrentDay;
 
             EventBus.Publish(new InheritanceDiscoveredEvent
             {
@@ -143,8 +195,15 @@ namespace VerminLordMod.Common.Systems
 
             instance.State = InheritanceState.Entered;
 
-            // TODO: 传送玩家到传承小世界
-            // SubworldLibrary 集成
+            if (instance.EntrancePosition != Vector2.Zero)
+            {
+                player.Teleport(instance.EntrancePosition, 1);
+            }
+
+            if (player.whoAmI == Main.myPlayer)
+            {
+                Main.NewText($"进入传承秘境：{instance.DisplayName}！", Microsoft.Xna.Framework.Color.Gold);
+            }
         }
 
         public void CompleteInheritance(string id, Player player)
@@ -154,7 +213,7 @@ namespace VerminLordMod.Common.Systems
             instance.State = InheritanceState.Completed;
             CompletedInheritances.Add(id);
 
-            // TODO: 发放传承奖励
+            DistributeRewards(instance, player);
 
             EventBus.Publish(new InheritanceCompletedEvent
             {
@@ -165,20 +224,116 @@ namespace VerminLordMod.Common.Systems
             });
         }
 
+        private void DistributeRewards(InheritanceInstance instance, Player player)
+        {
+            int yuanStoneAmount = instance.Rarity switch
+            {
+                InheritanceRarity.Common => Main.rand.Next(5, 15),
+                InheritanceRarity.Rare => Main.rand.Next(15, 40),
+                InheritanceRarity.Epic => Main.rand.Next(40, 80),
+                InheritanceRarity.Legendary => Main.rand.Next(80, 150),
+                InheritanceRarity.Mythic => Main.rand.Next(150, 300),
+                _ => 5,
+            };
+
+            player.QuickSpawnItem(player.GetSource_GiftOrReward(),
+                ModContent.ItemType<Content.Items.Consumables.YuanS>(), yuanStoneAmount);
+
+            if (instance.Rarity >= InheritanceRarity.Rare)
+            {
+                int guCount = instance.Rarity switch
+                {
+                    InheritanceRarity.Rare => 1,
+                    InheritanceRarity.Epic => 2,
+                    InheritanceRarity.Legendary => 3,
+                    InheritanceRarity.Mythic => 5,
+                    _ => 0,
+                };
+
+                for (int i = 0; i < guCount; i++)
+                {
+                    player.QuickSpawnItem(player.GetSource_GiftOrReward(),
+                        ModContent.ItemType<Content.Items.Consumables.YuanS>(), Main.rand.Next(3, 10));
+                }
+            }
+
+            if (player.whoAmI == Main.myPlayer)
+            {
+                Main.NewText($"获得传承奖励：{instance.DisplayName}！获得{yuanStoneAmount}元石。",
+                    Microsoft.Xna.Framework.Color.Gold);
+            }
+        }
+
         public override void PostUpdateWorld()
         {
-            // TODO: 检查传承过期
-            // TODO: 随机发现触发
+            var expired = new List<string>();
+            foreach (var kvp in KnownInheritances)
+            {
+                if (kvp.Value.IsExpired)
+                {
+                    kvp.Value.State = InheritanceState.Expired;
+                    expired.Add(kvp.Key);
+                }
+            }
+            foreach (var id in expired)
+                KnownInheritances.Remove(id);
         }
 
         public override void SaveWorldData(TagCompound tag)
         {
-            // TODO: 保存传承数据
+            var list = new List<TagCompound>();
+            foreach (var kvp in KnownInheritances)
+            {
+                var i = kvp.Value;
+                list.Add(new TagCompound
+                {
+                    ["id"] = i.InheritanceID,
+                    ["name"] = i.DisplayName,
+                    ["type"] = (int)i.Type,
+                    ["rarity"] = (int)i.Rarity,
+                    ["state"] = (int)i.State,
+                    ["entranceX"] = i.EntrancePosition.X,
+                    ["entranceY"] = i.EntrancePosition.Y,
+                    ["faction"] = (int)i.OriginalOwnerFaction,
+                    ["discoveryDay"] = i.DiscoveryDay,
+                    ["expiryDay"] = i.ExpiryDay,
+                });
+            }
+            tag["inheritances"] = list;
+
+            var completedList = new List<string>(CompletedInheritances);
+            tag["completedInheritances"] = completedList;
         }
 
         public override void LoadWorldData(TagCompound tag)
         {
-            // TODO: 加载传承数据
+            KnownInheritances.Clear();
+            CompletedInheritances.Clear();
+
+            var list = tag.GetList<TagCompound>("inheritances");
+            if (list != null)
+            {
+                foreach (var t in list)
+                {
+                    var instance = new InheritanceInstance
+                    {
+                        InheritanceID = t.GetString("id"),
+                        DisplayName = t.GetString("name"),
+                        Type = (InheritanceType)t.GetInt("type"),
+                        Rarity = (InheritanceRarity)t.GetInt("rarity"),
+                        State = (InheritanceState)t.GetInt("state"),
+                        EntrancePosition = new Vector2(t.GetFloat("entranceX"), t.GetFloat("entranceY")),
+                        OriginalOwnerFaction = (FactionID)t.GetInt("faction"),
+                        DiscoveryDay = t.GetInt("discoveryDay"),
+                        ExpiryDay = t.GetInt("expiryDay"),
+                    };
+                    KnownInheritances[instance.InheritanceID] = instance;
+                }
+            }
+
+            var completedList = tag.GetList<string>("completedInheritances");
+            if (completedList != null)
+                CompletedInheritances.AddRange(completedList);
         }
     }
 

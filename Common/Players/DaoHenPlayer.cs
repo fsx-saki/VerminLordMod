@@ -33,5 +33,23 @@ namespace VerminLordMod.Common.Players
             if (DaoHen.ContainsKey(dao))
                 DaoHen[dao] += amount;
         }
+
+        public bool HasDaoMark()
+        {
+            foreach (var kvp in DaoHen)
+            {
+                if (kvp.Value >= 50f)
+                    return true;
+            }
+            return false;
+        }
+
+        public float GetTotalDaoHen()
+        {
+            float total = 0f;
+            foreach (var kvp in DaoHen)
+                total += kvp.Value;
+            return total;
+        }
     }
 }

@@ -75,10 +75,13 @@ namespace VerminLordMod.Common.Systems
 
         private void RegisterDefaultTemplates()
         {
-            // TODO: 注册各家族默认建筑模板
             RegisterGuYueTemplates();
             RegisterBaiTemplates();
             RegisterXiongTemplates();
+            RegisterTieTemplates();
+            RegisterWangTemplates();
+            RegisterZhaoTemplates();
+            RegisterJiaTemplates();
         }
 
         private void RegisterGuYueTemplates()
@@ -133,6 +136,99 @@ namespace VerminLordMod.Common.Systems
                 Width = 20,
                 Height = 18,
             });
+
+            RegisterTemplate(new StructureTemplate
+            {
+                TemplateID = "xiong_barracks",
+                DisplayName = "熊家兵营",
+                Style = FactionArchitectureStyle.XiongStyle,
+                Width = 16,
+                Height = 10,
+            });
+        }
+
+        private void RegisterTieTemplates()
+        {
+            RegisterTemplate(new StructureTemplate
+            {
+                TemplateID = "tie_forge",
+                DisplayName = "铁家锻造坊",
+                Style = FactionArchitectureStyle.TieStyle,
+                Width = 14,
+                Height = 10,
+            });
+
+            RegisterTemplate(new StructureTemplate
+            {
+                TemplateID = "tie_armory",
+                DisplayName = "铁家武库",
+                Style = FactionArchitectureStyle.TieStyle,
+                Width = 12,
+                Height = 8,
+            });
+        }
+
+        private void RegisterWangTemplates()
+        {
+            RegisterTemplate(new StructureTemplate
+            {
+                TemplateID = "wang_pavilion",
+                DisplayName = "汪家水榭",
+                Style = FactionArchitectureStyle.WangStyle,
+                Width = 16,
+                Height = 12,
+            });
+
+            RegisterTemplate(new StructureTemplate
+            {
+                TemplateID = "wang_library",
+                DisplayName = "汪家藏书阁",
+                Style = FactionArchitectureStyle.WangStyle,
+                Width = 14,
+                Height = 14,
+            });
+        }
+
+        private void RegisterZhaoTemplates()
+        {
+            RegisterTemplate(new StructureTemplate
+            {
+                TemplateID = "zhao_underground_hall",
+                DisplayName = "赵家地下殿堂",
+                Style = FactionArchitectureStyle.ZhaoStyle,
+                Width = 18,
+                Height = 12,
+            });
+
+            RegisterTemplate(new StructureTemplate
+            {
+                TemplateID = "zhao_trap_chamber",
+                DisplayName = "赵家机关室",
+                Style = FactionArchitectureStyle.ZhaoStyle,
+                Width = 10,
+                Height = 8,
+            });
+        }
+
+        private void RegisterJiaTemplates()
+        {
+            RegisterTemplate(new StructureTemplate
+            {
+                TemplateID = "jia_trade_hall",
+                DisplayName = "贾家商会大厅",
+                Style = FactionArchitectureStyle.JiaStyle,
+                Width = 22,
+                Height = 14,
+            });
+
+            RegisterTemplate(new StructureTemplate
+            {
+                TemplateID = "jia_warehouse",
+                DisplayName = "贾家仓库",
+                Style = FactionArchitectureStyle.JiaStyle,
+                Width = 16,
+                Height = 10,
+            });
         }
 
         private void RegisterTemplate(StructureTemplate template)
@@ -162,20 +258,34 @@ namespace VerminLordMod.Common.Systems
 
         public static int GetFactionWallTile(FactionID faction)
         {
-            // TODO: 返回各家族对应的墙壁Tile ID
             return faction switch
             {
-                FactionID.GuYue => TileID.BorealWood,
-                _ => TileID.Stone,
+                FactionID.GuYue => WallID.BorealWood,
+                FactionID.Bai => WallID.Marble,
+                FactionID.Xiong => WallID.Granite,
+                FactionID.Tie => WallID.ObsidianBrick,
+                FactionID.Bai2 => WallID.Wood,
+                FactionID.Wang => WallID.Glass,
+                FactionID.Zhao => WallID.EbonstoneUnsafe,
+                FactionID.Jia => WallID.GoldBrick,
+                FactionID.Scattered => WallID.MudUnsafe,
+                _ => WallID.Stone,
             };
         }
 
         public static int GetFactionFloorTile(FactionID faction)
         {
-            // TODO: 返回各家族对应的地板Tile ID
             return faction switch
             {
                 FactionID.GuYue => TileID.BorealWood,
+                FactionID.Bai => TileID.Marble,
+                FactionID.Xiong => TileID.Granite,
+                FactionID.Tie => TileID.ObsidianBrick,
+                FactionID.Bai2 => TileID.WoodBlock,
+                FactionID.Wang => TileID.Glass,
+                FactionID.Zhao => TileID.EbonstoneBrick,
+                FactionID.Jia => TileID.GoldBrick,
+                FactionID.Scattered => TileID.Mudstone,
                 _ => TileID.StoneSlab,
             };
         }
@@ -254,22 +364,43 @@ namespace VerminLordMod.Common.Systems
                 System.Enum.TryParse(line.Substring(7).Trim(), out template.Style);
         }
 
+        private Dictionary<char, TilePlacement> _charMapping = new();
+
         private void ParseTemplateMeta(string line, StructureTemplate template)
         {
-            // @TILE:A=123 格式：字符A映射到TileID 123
             if (line.StartsWith("@TILE:"))
             {
                 var parts = line.Substring(6).Split('=');
                 if (parts.Length == 2 && char.TryParse(parts[0], out char c) && int.TryParse(parts[1], out int id))
                 {
-                    // TODO: 存储字符到TileID的映射
+                    _charMapping[c] = new TilePlacement { TileID = (ushort)id, Type = StructureType.Floor };
+                }
+            }
+            else if (line.StartsWith("@WALL:"))
+            {
+                var parts = line.Substring(6).Split('=');
+                if (parts.Length == 2 && char.TryParse(parts[0], out char c) && int.TryParse(parts[1], out int id))
+                {
+                    _charMapping[c] = new TilePlacement { IsWall = true, WallID = id, Type = StructureType.Wall };
                 }
             }
         }
 
         private TilePlacement CharToTilePlacement(char c, int x, int y)
         {
-            // TODO: 完善字符到Tile的映射
+            if (_charMapping.TryGetValue(c, out var mapping))
+            {
+                return new TilePlacement
+                {
+                    X = x, Y = y,
+                    TileID = mapping.TileID,
+                    WallID = mapping.WallID,
+                    IsWall = mapping.IsWall,
+                    IsPlatform = mapping.IsPlatform,
+                    Type = mapping.Type,
+                };
+            }
+
             return c switch
             {
                 'W' => new TilePlacement { X = x, Y = y, IsWall = true, WallID = WallID.BorealWood, Type = StructureType.Wall },
@@ -279,18 +410,54 @@ namespace VerminLordMod.Common.Systems
                 'T' => new TilePlacement { X = x, Y = y, TileID = TileID.Tables, Type = StructureType.Furniture },
                 'C' => new TilePlacement { X = x, Y = y, TileID = TileID.Chairs, Type = StructureType.Furniture },
                 'L' => new TilePlacement { X = x, Y = y, TileID = TileID.Torches, Type = StructureType.LightSource },
+                'B' => new TilePlacement { X = x, Y = y, TileID = TileID.Beds, Type = StructureType.Furniture },
+                'K' => new TilePlacement { X = x, Y = y, TileID = TileID.Bookcases, Type = StructureType.Furniture },
+                'S' => new TilePlacement { X = x, Y = y, TileID = TileID.Sinks, Type = StructureType.Furniture },
+                'A' => new TilePlacement { X = x, Y = y, TileID = TileID.Anvils, Type = StructureType.Functional },
+                'H' => new TilePlacement { X = x, Y = y, TileID = TileID.CookingPots, Type = StructureType.Functional },
+                'O' => new TilePlacement { X = x, Y = y, TileID = TileID.Bottles, Type = StructureType.Functional },
+                'X' => new TilePlacement { X = x, Y = y, TileID = TileID.DemonAltar, Type = StructureType.Special },
                 _ => null,
             };
         }
 
         public override void SaveWorldData(TagCompound tag)
         {
-            // TODO: 保存建筑模板缓存
+            var templateList = new List<TagCompound>();
+            foreach (var kvp in Templates)
+            {
+                templateList.Add(new TagCompound
+                {
+                    ["id"] = kvp.Key,
+                    ["name"] = kvp.Value.DisplayName,
+                    ["style"] = (int)kvp.Value.Style,
+                    ["width"] = kvp.Value.Width,
+                    ["height"] = kvp.Value.Height,
+                });
+            }
+            tag["templates"] = templateList;
         }
 
         public override void LoadWorldData(TagCompound tag)
         {
-            // TODO: 加载建筑模板缓存
+            Templates.Clear();
+            StyleTemplates.Clear();
+
+            var templateList = tag.GetList<TagCompound>("templates");
+            if (templateList == null) return;
+
+            foreach (var t in templateList)
+            {
+                var template = new StructureTemplate
+                {
+                    TemplateID = t.GetString("id"),
+                    DisplayName = t.GetString("name"),
+                    Style = (FactionArchitectureStyle)t.GetInt("style"),
+                    Width = t.GetInt("width"),
+                    Height = t.GetInt("height"),
+                };
+                RegisterTemplate(template);
+            }
         }
     }
 }

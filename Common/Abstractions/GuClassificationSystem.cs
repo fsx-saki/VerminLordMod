@@ -48,8 +48,52 @@ namespace VerminLordMod.Common.Abstractions
 
         private static void RegisterAllGus()
         {
-            // TODO: 自动扫描所有实现 IGu 的 ModItem 并注册
-            // 目前需要手动注册，后续可通过反射自动扫描
+            for (int i = Terraria.ID.ItemID.Count; i < ItemLoader.ItemCount; i++)
+            {
+                var modItem = ItemLoader.GetItem(i);
+                if (modItem is null) continue;
+
+                bool isAbstractionsGu = modItem is IGu;
+                bool isMarkerGu = modItem is Content.Items.IGu;
+                if (!isAbstractionsGu && !isMarkerGu) continue;
+
+                var entry = new GuClassificationEntry
+                {
+                    ItemType = i,
+                    InternalName = modItem.FullName,
+                    DisplayName = modItem.DisplayName.Value,
+                    IsConsumable = modItem.Item.consumable,
+                    IsAccessory = modItem.Item.accessory,
+                };
+
+                if (isAbstractionsGu)
+                {
+                    var gu = (IGu)modItem;
+                    entry.GuLevel = gu.GuLevel;
+                    entry.Category = gu.Category;
+                    entry.PrimaryElement = gu.Element;
+                    entry.DaoHenTagMask = gu.DaoHenTags;
+                    entry.IsMainGuCandidate = gu is IMainGu;
+                }
+                else
+                {
+                    if (modItem is Content.Items.Weapons.GuWeaponItem weaponItem)
+                    {
+                        entry.GuLevel = weaponItem.GetGuLevel();
+                        entry.Category = GuCategory.Attack;
+                    }
+                    else
+                    {
+                        entry.GuLevel = 1;
+                        entry.Category = GuCategory.Special;
+                    }
+                    entry.PrimaryElement = GuElement.None;
+                    entry.DaoHenTagMask = 0;
+                    entry.IsMainGuCandidate = false;
+                }
+
+                Register(entry);
+            }
         }
 
         public static void Register(GuClassificationEntry entry)

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Terraria;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
@@ -79,10 +79,6 @@ namespace VerminLordMod.Common.GlobalNPCs
 				//猪鲨和光女1/20概率掉落任意舍利蛊
 				npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<TaiGuangGu>(), 1));
 			}
-			if (npc.boss) {
-				//boss掉落元石
-				npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<YuanS>(), 3, 1, 100));
-			}
 			//蜂后
 			if (npc.type==NPCID.QueenBee) {
 				npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<CareerGu>(), 15));
@@ -124,12 +120,11 @@ namespace VerminLordMod.Common.GlobalNPCs
 				npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<GrassPuppet>(), 15));
 				npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<PineNeedleGu>(), 5));
 				npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<QingTengGu>(), 15));
-				npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<JiaoLeiPotatoGu>(), 15));
+				npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<JiaoLeiPotatoGu>(), 12));
 				npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<PotatoMotherGu>(), 45));
 				npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<MuMeiGu>(), 30));
 				npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EternalLifeGu>(), 45));
 				npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<ThreeStepGrassGu>(), 10));
-				npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<JiaoLeiPotatoGu>(), 4));
 			}
 			//肉前与流星有关的
 			if (npc.type == NPCID.MeteorHead) {
@@ -254,7 +249,6 @@ namespace VerminLordMod.Common.GlobalNPCs
 				npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<GrassPuppet>(), 5));
 				npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<QingTengGu>(), 5));
 				npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<TengClawGu>(), 30));
-				npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<PotatoMotherGu>(), 17));
 				npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<PotatoMotherGu>(), 17));
 				npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<EternalLifeGu>(), 17));
 				npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<MuMeiGu>(), 17));

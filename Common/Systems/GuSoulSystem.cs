@@ -64,9 +64,7 @@ namespace VerminLordMod.Common.Systems
 
         public override void PostUpdateWorld()
         {
-            int currentDay = (int)(Main.GameUpdateCount / 36000);
-            if (currentDay <= _dayCounter) return;
-            _dayCounter = currentDay;
+            if (!WorldTimeHelper.IsNewDay(ref _dayCounter)) return;
 
             for (int i = 0; i < Main.maxPlayers; i++)
             {
