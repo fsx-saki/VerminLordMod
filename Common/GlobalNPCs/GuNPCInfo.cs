@@ -4,6 +4,15 @@ using Terraria.ModLoader;
 
 namespace VerminLordMod.Common.GlobalNPCs
 {
+    /// <summary>
+    /// NPC蛊效果信息（GlobalNPC） — 存储NPC身上所有道痕效果的实时状态。
+    /// 每个NPC独立实例，由 DaoEffectSystem 写入，ResetEffects 每帧递减计时器。
+    /// 
+    /// 效果类型：
+    /// - DoT（持续伤害）、Slow（减速）、ArmorShred（碎甲）、Weaken（虚弱）
+    /// - Mark（标记/引爆）、Shield（护盾）、Fear（恐惧）、Charm（魅惑）
+    /// - Silence（沉默）、Disarm（缴械）
+    /// </summary>
     public class GuNPCInfo : GlobalNPC
     {
         public override bool InstancePerEntity => true;

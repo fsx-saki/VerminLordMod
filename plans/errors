@@ -1,0 +1,13 @@
+Terraria.ModLoader.Exceptions.MissingResourceException: 未找到预期的资源:
+    Content/Items/Breeding/AncestralAltar
+很可能：（是否拼写或文件夹放置错误？）
+    Content/Items/Breeding/GuBox
+Content/Items/Breeding/[c/ff0000:Ancestral][c/ffff00:Altar]
+Content/Items/Breeding/         [c/ffff00:GuBox]
+
+   at Terraria.ModLoader.Core.LoaderUtils.RethrowAggregatedExceptions(IReadOnlyCollection`1 exceptions) in tModLoader\Terraria\ModLoader\Core\LoaderUtils.cs:line 143
+   at Terraria.ModLoader.Mod.TransferAllAssets() in tModLoader\Terraria\ModLoader\Mod.Internals.cs:line 103
+   at Terraria.ModLoader.ModContent.<>c.<Load>b__45_2(Mod mod) in tModLoader\Terraria\ModLoader\ModContent.cs:line 344
+   at Terraria.ModLoader.ModContent.LoadModContent(CancellationToken token, Action`1 loadAction) in tModLoader\Terraria\ModLoader\ModContent.cs:line 447
+   at Terraria.ModLoader.ModContent.Load(CancellationToken token) in tModLoader\Terraria\ModLoader\ModContent.cs:line 341
+   at Terraria.ModLoader.ModLoader.Load(CancellationToken token) in tModLoader\Terraria\ModLoader\ModLoader.cs:line 138

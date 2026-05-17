@@ -75,6 +75,12 @@ namespace VerminLordMod.Common.BulletBehaviors
         /// <summary>推出弹幕的初始速度</summary>
         public float FireSpeed { get; set; } = 12f;
 
+        /// <summary>
+        /// 固定蓄力位置偏移（相对于玩家中心）。
+        /// 非零时使用固定偏移，忽略鼠标方向的位置计算。
+        /// </summary>
+        public Vector2 ChargePositionOffset { get; set; } = Vector2.Zero;
+
         // ===== 可选回调 =====
 
         /// <summary>蓄力阶段每帧粒子效果回调 (projectile, chargeProgress 0~1)</summary>
@@ -114,14 +120,24 @@ namespace VerminLordMod.Common.BulletBehaviors
             // 初始透明度
             projectile.alpha = StartAlpha;
 
-            // 计算弹幕初始位置：鼠标方向前方
-            Vector2 dir = Main.MouseWorld - _owner.Center;
-            if (dir == Vector2.Zero) dir = Vector2.UnitX;
-            dir.Normalize();
-            projectile.Center = _owner.Center + dir * ChargeDistance;
+            // 计算弹幕初始位置
+            if (ChargePositionOffset != Vector2.Zero)
+            {
+                projectile.Center = _owner.Center + ChargePositionOffset;
+            }
+            else
+            {
+                Vector2 dir = Main.MouseWorld - _owner.Center;
+                if (dir == Vector2.Zero) dir = Vector2.UnitX;
+                dir.Normalize();
+                projectile.Center = _owner.Center + dir * ChargeDistance;
+            }
 
             // 存储鼠标方向用于推出（使用 ai[1]）
-            projectile.ai[1] = dir.ToRotation();
+            Vector2 fireDir = Main.MouseWorld - _owner.Center;
+            if (fireDir == Vector2.Zero) fireDir = Vector2.UnitX;
+            fireDir.Normalize();
+            projectile.ai[1] = fireDir.ToRotation();
         }
 
         public void Update(Projectile projectile)
@@ -166,11 +182,18 @@ namespace VerminLordMod.Common.BulletBehaviors
                 projectile.ai[1] = mouseDir.ToRotation();
             }
 
-            // 1. 弹幕位置：跟随玩家，保持在玩家前方
-            float currentDist = ChargeDistance * (0.8f + progress * 0.4f);
-            float dirAngle = projectile.ai[1];
-            Vector2 dir = dirAngle.ToRotationVector2();
-            projectile.Center = _owner.Center + dir * currentDist;
+            // 1. 弹幕位置：跟随玩家
+            if (ChargePositionOffset != Vector2.Zero)
+            {
+                projectile.Center = _owner.Center + ChargePositionOffset;
+            }
+            else
+            {
+                float currentDist = ChargeDistance * (0.8f + progress * 0.4f);
+                float dirAngle = projectile.ai[1];
+                Vector2 dir = dirAngle.ToRotationVector2();
+                projectile.Center = _owner.Center + dir * currentDist;
+            }
 
             // 2. 透明度逐渐降低
             projectile.alpha = (int)MathHelper.Lerp(StartAlpha, EndAlpha, progress);

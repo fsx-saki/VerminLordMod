@@ -1,3 +1,8 @@
+/// <summary>
+/// 道痕效果标签（位标志） — 定义蛊虫攻击可附加的效果类型。
+/// 用于 DaoEffectSystem 统一施加和管理战斗效果。
+/// 多个标签可通过位运算组合（如 DoT | Slow 表示持续伤害+减速）。
+/// </summary>
 using System;
 
 namespace VerminLordMod.Common.GuBehaviors

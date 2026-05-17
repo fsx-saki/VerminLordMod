@@ -4,9 +4,11 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
+using VerminLordMod.Common.DialogueTree;
 using VerminLordMod.Common.GuBehaviors;
 using VerminLordMod.Common.Players;
 using VerminLordMod.Common.Systems;
+using VerminLordMod.Common.UI.DialogueTreeUI;
 
 namespace VerminLordMod.Content.NPCs.GuMasters
 {
@@ -573,18 +575,22 @@ namespace VerminLordMod.Content.NPCs.GuMasters
 
         public virtual void GetChatButtons(NPC npc, ref string button, ref string button2)
         {
-            // 集成 DialogueSystem：生成对话选项
+            if (DialogueTreeManager.Instance.HasTree(npc))
+            {
+                button = "对话";
+                button2 = "";
+                return;
+            }
+
             var dialogueSystem = ModContent.GetInstance<DialogueSystem>();
             dialogueSystem.GenerateDialogueOptions(Main.LocalPlayer, npc, ref button, ref button2);
 
-            // 如果 DialogueSystem 没有覆盖按钮，使用默认值
             if (string.IsNullOrEmpty(button))
                 button = "对话";
             if (string.IsNullOrEmpty(button2))
             {
                 if (CurrentAttitude != GuAttitude.Hostile && CurrentAttitude != GuAttitude.Wary)
                 {
-                    // 根据弹幕保护状态显示不同的按钮文本
                     if (ProjectileProtectionEnabled)
                         button2 = "去除保护";
                     else
@@ -595,20 +601,49 @@ namespace VerminLordMod.Content.NPCs.GuMasters
 
         public virtual void OnChatButtonClicked(NPC npc, bool firstButton, ref string shop)
         {
-            var dialogueSystem = ModContent.GetInstance<DialogueSystem>();
-
             if (firstButton)
             {
-                // 对话（主按钮）
+                if (DialogueTreeManager.Instance.HasTree(npc))
+                {
+                    var mgr = DialogueTreeManager.Instance;
+                    if (!mgr.HasActiveSession(Main.LocalPlayer))
+                    {
+                        mgr.StartDialogue(npc, Main.LocalPlayer);
+                    }
+
+                    var currentText = mgr.GetCurrentNPCText(Main.LocalPlayer);
+                    var options = mgr.GetCurrentOptions(Main.LocalPlayer);
+
+                    if (options != null && options.Count > 0)
+                    {
+                        DialogueTreeUI.Instance.Open(
+                            npc.GivenName,
+                            NPCHeadLoader.GetHeadSlot(HeadTexture),
+                            currentText ?? "",
+                            options);
+                    }
+                    else
+                    {
+                        mgr.EndDialogue(Main.LocalPlayer);
+                        Main.npcChatText = currentText ?? GetDialogue(npc, CurrentAttitude);
+                    }
+                    return;
+                }
+
+                var dialogueSystem = ModContent.GetInstance<DialogueSystem>();
                 dialogueSystem.OnDialogueChoice(Main.LocalPlayer, npc, 0);
                 Main.npcChatText = GetDialogue(npc, CurrentAttitude);
             }
             else
             {
-                // 副按钮：尝试 DialogueSystem 的第二个选项
+                if (DialogueTreeManager.Instance.HasTree(npc))
+                {
+                    return;
+                }
+
+                var dialogueSystem = ModContent.GetInstance<DialogueSystem>();
                 dialogueSystem.OnDialogueChoice(Main.LocalPlayer, npc, 1);
 
-                // 如果 DialogueSystem 没有处理，回退到弹幕保护切换
                 if (CurrentAttitude != GuAttitude.Hostile && CurrentAttitude != GuAttitude.Wary)
                 {
                     ProjectileProtectionEnabled = !ProjectileProtectionEnabled;

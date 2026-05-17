@@ -3,6 +3,9 @@ using Terraria;
 
 namespace VerminLordMod.Common.Abstractions
 {
+    /// <summary>
+    /// 条件类型枚举 — 定义对话/任务/事件的条件分类
+    /// </summary>
     public enum ConditionType
     {
         None = 0,
@@ -20,6 +23,10 @@ namespace VerminLordMod.Common.Abstractions
         Custom,             // 自定义条件
     }
 
+    /// <summary>
+    /// 条件接口 — 定义可评估的游戏条件契约。
+    /// 用于对话树分支、任务前置条件、事件触发条件等。
+    /// </summary>
     public interface ICondition
     {
         string ConditionID { get; }
@@ -29,6 +36,9 @@ namespace VerminLordMod.Common.Abstractions
         string GetFailureMessage(Player player);
     }
 
+    /// <summary>
+    /// 条件评估器接口 — 提供条件组合评估（全部满足/任一满足）
+    /// </summary>
     public interface IConditionEvaluator
     {
         bool EvaluateAll(IEnumerable<ICondition> conditions, Player player);
@@ -37,6 +47,9 @@ namespace VerminLordMod.Common.Abstractions
         string GetCombinedFailureMessage(IEnumerable<ICondition> conditions, Player player);
     }
 
+    /// <summary>
+    /// 条件评估器实现 — 提供全部满足/任一满足的组合评估逻辑
+    /// </summary>
     public class ConditionEvaluator : IConditionEvaluator
     {
         public bool EvaluateAll(IEnumerable<ICondition> conditions, Player player)
@@ -83,6 +96,9 @@ namespace VerminLordMod.Common.Abstractions
         }
     }
 
+    /// <summary>
+    /// 条件基类 — 提供条件接口的默认实现，子类只需实现核心评估逻辑
+    /// </summary>
     public abstract class BaseCondition : ICondition
     {
         public abstract string ConditionID { get; }
@@ -96,6 +112,9 @@ namespace VerminLordMod.Common.Abstractions
         }
     }
 
+    /// <summary>
+    /// 组合条件 — 将多个条件通过 AND（全部满足）或 OR（任一满足）组合
+    /// </summary>
     public class CompositeCondition : ICondition
     {
         public string ConditionID { get; }
@@ -138,6 +157,9 @@ namespace VerminLordMod.Common.Abstractions
         }
     }
 
+    /// <summary>
+    /// 取反条件 — 对内部条件取反，当内部条件不满足时返回 true
+    /// </summary>
     public class NegatedCondition : ICondition
     {
         private readonly ICondition _inner;

@@ -1,4 +1,4 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,10 +14,22 @@ using VerminLordMod.Content.NPCs.Town;
 
 namespace VerminLordMod.Common.Systems
 {
+	/// <summary>
+	/// 狼潮系统 — 周期性触发狼群入侵事件
+	/// 
+	/// 触发条件：玩家生命值 ≥ 150 且已入修（转数 > 0），白天开始时有 5% 概率触发
+	/// 狼潮进度：WolfWaveRate 从 0 递增到 100，到达 80 时可能召唤电狼王
+	/// 到达 100 时狼潮结束
+	/// </summary>
 	public class WolfSystem:ModSystem
 	{
+		/// <summary>当前是否处于狼潮事件中</summary>
 		public static bool isWolfWave = false;
+
+		/// <summary>狼潮进度 [0, 100]，达到100时狼潮结束</summary>
 		public static float WolfWaveRate = 0f;
+
+		/// <summary>是否已召唤过电狼王（每次狼潮只召唤一只）</summary>
 		public static bool hasSummonesKing = false;
 		public override void PreUpdateNPCs() {
 			Player player = Main.LocalPlayer;

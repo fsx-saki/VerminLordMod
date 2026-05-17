@@ -28,30 +28,74 @@ namespace VerminLordMod.Common.Systems
         Critical = 3,       // 危急 — 致命
     }
 
+    /// <summary>
+    /// 蛊病实例 — 记录一次蛊病发作的完整状态
+    /// </summary>
     public class GuDiseaseInstance
     {
+        /// <summary>蛊病类型</summary>
         public GuDiseaseType Type;
+
+        /// <summary>严重程度</summary>
         public DiseaseSeverity Severity;
+
+        /// <summary>剩余持续帧数</summary>
         public int RemainingTicks;
+
+        /// <summary>总持续帧数</summary>
         public int TotalTicks;
+
+        /// <summary>强度 [0, 1]，影响严重程度和伤害</summary>
         public float Intensity;
+
+        /// <summary>施加者的玩家ID（-1表示环境/瘟疫区）</summary>
         public int SourcePlayerID;
+
+        /// <summary>是否具有传染性</summary>
         public bool IsContagious;
+
+        /// <summary>传染范围（像素）</summary>
         public float ContagionRange;
+
+        /// <summary>病情进度 [0, 1]</summary>
         public float Progress => TotalTicks > 0 ? 1f - (float)RemainingTicks / TotalTicks : 0f;
+
+        /// <summary>是否已过期（自然痊愈）</summary>
         public bool IsExpired => RemainingTicks <= 0;
     }
 
+    /// <summary>
+    /// 瘟疫区域 — 由瘟疫类蛊病产生的持续影响区域
+    /// </summary>
     public class PlagueZone
     {
+        /// <summary>瘟疫中心坐标</summary>
         public Vector2 Center;
+
+        /// <summary>影响半径（像素）</summary>
         public float Radius;
+
+        /// <summary>瘟疫类型</summary>
         public GuDiseaseType DiseaseType;
+
+        /// <summary>剩余持续帧数</summary>
         public int RemainingTicks;
+
+        /// <summary>来源家族ID（0=无来源）</summary>
         public int SourceFactionID;
+
+        /// <summary>瘟疫强度</summary>
         public float Intensity;
     }
 
+    /// <summary>
+    /// 蛊病系统 — 管理蛊病施加、持续伤害、传染和瘟疫区域
+    /// 
+    /// 蛊病是蛊师对敌施加的持续性负面状态，包括：
+    /// - 毒蛊侵蚀（持续扣血）、寄生蛊（吸取真元）、控心蛊（混乱）
+    /// - 噬血蛊（吸血/虚弱）、蚀骨蛊（防御降低）、夺魂蛊（精神伤害）
+    /// - 瘟疫（传染性区域效果）、蛊热（蛊虫失控引起）
+    /// </summary>
     public class GuDiseaseSystem : ModSystem
     {
         public static GuDiseaseSystem Instance => ModContent.GetInstance<GuDiseaseSystem>();

@@ -4,6 +4,16 @@ using Terraria.ModLoader;
 
 namespace VerminLordMod.Common.Events
 {
+    /// <summary>
+    /// 事件总线 — 蛊世界事件发布/订阅系统
+    /// 
+    /// 基于类型的发布-订阅模式，各系统通过 Subscribe 注册事件处理器，
+    /// 通过 Publish 发布事件。所有事件必须继承自 GuWorldEvent。
+    /// 
+    /// 使用示例：
+    /// - 订阅：EventBus.Subscribe&lt;PlayerQiChangedEvent&gt;(OnQiChanged);
+    /// - 发布：EventBus.Publish(new PlayerQiChangedEvent { ... });
+    /// </summary>
     public static class EventBus
     {
         private static readonly Dictionary<Type, Delegate> _subscribers = new();

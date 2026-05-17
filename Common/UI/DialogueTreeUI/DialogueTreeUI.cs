@@ -56,10 +56,12 @@ public class DialogueTreeUI
     private static readonly Color CloseBtnHover = UIStyles.HoverOver(UIStyles.BtnDanger);
 
     // ===== 尺寸常量 =====
-    private const int PanelWidth = 520;
-    private const int PanelHeight = 500;
+    private const int PanelWidth = 560;
+    private const int PanelMinHeight = 400;
+    private const int PanelMaxHeight = 620;
     private const int TitleBarHeight = 32;
-    private const int TextAreaHeight = 140;
+    private const int TextAreaMinHeight = 100;
+    private const int TextAreaMaxHeight = 240;
     private const int OptionHeight = 40;
     private const int OptionSpacing = 4;
     private const int Padding = 10;
@@ -120,18 +122,18 @@ public class DialogueTreeUI
         _isOpen = true;
 
         int x = (Main.screenWidth - PanelWidth) / 2;
-        int y = (Main.screenHeight - PanelHeight) / 2;
-        _panelRect = new Rectangle(x, y, PanelWidth, PanelHeight);
 
+        _panelRect = new Rectangle(x, 0, PanelWidth, PanelMinHeight);
         _textRect = new Rectangle(
             _panelRect.X + Padding,
             _panelRect.Y + TitleBarHeight + Padding,
             _panelRect.Width - Padding * 2,
-            TextAreaHeight
+            TextAreaMinHeight
         );
 
         WrapNPCText();
         RebuildOptionButtons();
+        RecalculateLayout();
     }
 
     /// <summary>
@@ -155,6 +157,7 @@ public class DialogueTreeUI
         _scrollOffset = 0;
         WrapNPCText();
         RebuildOptionButtons();
+        RecalculateLayout();
 
         if (_options.Count == 0 && _optionButtons.Count == 0)
         {
@@ -185,6 +188,7 @@ public class DialogueTreeUI
 
         var font = FontAssets.MouseText.Value;
         float maxWidth = _textRect.Width - TextPaddingX * 2;
+        float lineHeight = font.MeasureString("A").Y * TextScale + LineSpacing;
 
         string[] paragraphs = _npcText.Split('\n');
         foreach (string paragraph in paragraphs)
@@ -200,17 +204,70 @@ public class DialogueTreeUI
 
             foreach (string word in words)
             {
-                string testLine = string.IsNullOrEmpty(currentLine) ? word : currentLine + " " + word;
-                float testWidth = font.MeasureString(testLine).X * TextScale;
+                if (string.IsNullOrEmpty(word)) continue;
 
-                if (testWidth > maxWidth && !string.IsNullOrEmpty(currentLine))
+                bool hasCJK = ContainsCJK(word);
+
+                if (hasCJK && word.Length > 1)
                 {
-                    _wrappedTextLines.Add(currentLine);
-                    currentLine = word;
+                    if (!string.IsNullOrEmpty(currentLine))
+                    {
+                        _wrappedTextLines.Add(currentLine);
+                        currentLine = "";
+                    }
+
+                    string charLine = "";
+                    foreach (char c in word)
+                    {
+                        string testCharLine = charLine + c;
+                        float testCharWidth = font.MeasureString(testCharLine).X * TextScale;
+
+                        if (testCharWidth > maxWidth && !string.IsNullOrEmpty(charLine))
+                        {
+                            _wrappedTextLines.Add(charLine);
+                            charLine = c.ToString();
+                        }
+                        else
+                        {
+                            charLine = testCharLine;
+                        }
+                    }
+
+                    if (!string.IsNullOrEmpty(charLine))
+                    {
+                        if (string.IsNullOrEmpty(currentLine))
+                        {
+                            currentLine = charLine;
+                        }
+                        else
+                        {
+                            float combinedWidth = font.MeasureString(currentLine + " " + charLine).X * TextScale;
+                            if (combinedWidth <= maxWidth)
+                            {
+                                currentLine += " " + charLine;
+                            }
+                            else
+                            {
+                                _wrappedTextLines.Add(currentLine);
+                                currentLine = charLine;
+                            }
+                        }
+                    }
                 }
                 else
                 {
-                    currentLine = testLine;
+                    string testLine = string.IsNullOrEmpty(currentLine) ? word : currentLine + " " + word;
+                    float testWidth = font.MeasureString(testLine).X * TextScale;
+
+                    if (testWidth > maxWidth && !string.IsNullOrEmpty(currentLine))
+                    {
+                        _wrappedTextLines.Add(currentLine);
+                        currentLine = word;
+                    }
+                    else
+                    {
+                        currentLine = testLine;
+                    }
                 }
             }
 
@@ -219,23 +276,53 @@ public class DialogueTreeUI
         }
     }
 
-    private string TruncateOptionText(string text, float maxWidth)
+    private static bool ContainsCJK(string text)
     {
-        if (string.IsNullOrEmpty(text)) return "";
+        foreach (char c in text)
+        {
+            if (c >= 0x4E00 && c <= 0x9FFF) return true;
+            if (c >= 0x3400 && c <= 0x4DBF) return true;
+            if (c >= 0x3000 && c <= 0x303F) return true;
+            if (c >= 0xFF00 && c <= 0xFFEF) return true;
+        }
+        return false;
+    }
+
+    private List<string> WrapOptionText(string text, float maxWidth)
+    {
+        var lines = new List<string>();
+        if (string.IsNullOrEmpty(text)) return lines;
 
         var font = FontAssets.MouseText.Value;
         float textWidth = font.MeasureString(text).X * OptionTextScale;
 
-        if (textWidth <= maxWidth) return text;
-
-        for (int i = text.Length - 1; i > 0; i--)
+        if (textWidth <= maxWidth)
         {
-            string truncated = text.Substring(0, i) + "...";
-            if (font.MeasureString(truncated).X * OptionTextScale <= maxWidth)
-                return truncated;
+            lines.Add(text);
+            return lines;
         }
 
-        return "...";
+        string currentLine = "";
+        foreach (char c in text)
+        {
+            string testLine = currentLine + c;
+            float testWidth = font.MeasureString(testLine).X * OptionTextScale;
+
+            if (testWidth > maxWidth && !string.IsNullOrEmpty(currentLine))
+            {
+                lines.Add(currentLine);
+                currentLine = c.ToString();
+            }
+            else
+            {
+                currentLine = testLine;
+            }
+        }
+
+        if (!string.IsNullOrEmpty(currentLine))
+            lines.Add(currentLine);
+
+        return lines;
     }
 
     // ============================================================
@@ -246,37 +333,45 @@ public class DialogueTreeUI
     {
         _optionButtons.Clear();
 
-        int startY = _textRect.Bottom + Padding;
         int btnWidth = _panelRect.Width - Padding * 2 - 16;
         float maxTextWidth = btnWidth - TextPaddingX * 2;
+        var font = FontAssets.MouseText.Value;
+        float optionLineHeight = font.MeasureString("A").Y * OptionTextScale + 1;
+
+        int currentY = 0;
 
         for (int i = 0; i < _options.Count; i++)
         {
             var option = _options[i];
-            int y = startY + i * (OptionHeight + OptionSpacing);
-            var rect = new Rectangle(
-                _panelRect.X + Padding,
-                y,
-                btnWidth,
-                OptionHeight
-            );
-
             string typeTag = GetOptionTypeTag(option.OptionType);
             string fullText = string.IsNullOrEmpty(typeTag)
                 ? option.Text
                 : $"[{typeTag}] {option.Text}";
 
-            string displayText = TruncateOptionText(fullText, maxTextWidth);
+            var wrappedLines = WrapOptionText(fullText, maxTextWidth);
+            int lineCount = wrappedLines.Count;
+            int btnHeight = Math.Max(OptionHeight, (int)(lineCount * optionLineHeight + TextPaddingY * 2));
+
+            var rect = new Rectangle(
+                _panelRect.X + Padding,
+                currentY,
+                btnWidth,
+                btnHeight
+            );
 
             _optionButtons.Add(new OptionButton
             {
                 Rect = rect,
-                Text = displayText,
+                WrappedLines = wrappedLines,
+                Text = fullText,
                 FullText = fullText,
                 Tooltip = option.Tooltip,
                 Index = i,
-                OptionType = option.OptionType
+                OptionType = option.OptionType,
+                Height = btnHeight
             });
+
+            currentY += btnHeight + OptionSpacing;
         }
     }
 
@@ -406,7 +501,13 @@ public class DialogueTreeUI
             _lastScrollValue = currentScroll;
             if (scrollDelta != 0)
             {
-                float maxScroll = Math.Max(0, _options.Count * (OptionHeight + OptionSpacing) - GetOptionsAreaHeight());
+                int totalOptionHeight = 0;
+                foreach (var btn in _optionButtons)
+                    totalOptionHeight += btn.Height + OptionSpacing;
+                if (_optionButtons.Count > 0)
+                    totalOptionHeight -= OptionSpacing;
+
+                float maxScroll = Math.Max(0, totalOptionHeight - GetOptionsAreaHeight());
                 _scrollOffset = Math.Clamp(_scrollOffset - Math.Sign(scrollDelta) * ScrollSpeed, 0, maxScroll);
             }
         }
@@ -415,8 +516,12 @@ public class DialogueTreeUI
 
         foreach (var btn in _optionButtons)
         {
-            var btnRect = btn.Rect;
-            btnRect.Y -= (int)_scrollOffset;
+            var btnRect = new Rectangle(
+                btn.Rect.X,
+                btn.Rect.Y - (int)_scrollOffset,
+                btn.Rect.Width,
+                btn.Height
+            );
 
             if (btnRect.Contains(mousePos.ToPoint()) && leftClick)
             {
@@ -500,12 +605,43 @@ public class DialogueTreeUI
 
     private void RecalculateRects()
     {
+        RecalculateLayout();
+    }
+
+    private void RecalculateLayout()
+    {
+        var font = FontAssets.MouseText.Value;
+        float lineHeight = font.MeasureString("A").Y * TextScale + LineSpacing;
+
+        int textContentHeight = (int)(_wrappedTextLines.Count * lineHeight) + TextPaddingY * 2;
+        int textAreaHeight = Math.Clamp(textContentHeight, TextAreaMinHeight, TextAreaMaxHeight);
+
+        int totalOptionHeight = 0;
+        foreach (var btn in _optionButtons)
+        {
+            totalOptionHeight += btn.Height + OptionSpacing;
+        }
+        if (_optionButtons.Count > 0)
+            totalOptionHeight -= OptionSpacing;
+
+        int neededHeight = TitleBarHeight + Padding + textAreaHeight + Padding + totalOptionHeight + Padding;
+        int panelHeight = Math.Clamp(neededHeight, PanelMinHeight, PanelMaxHeight);
+
+        int x = _panelRect.X;
+        int y = _panelRect.Y;
+        if (!_isDragging)
+        {
+            y = Math.Clamp(y, 0, Main.screenHeight - panelHeight);
+        }
+
+        _panelRect = new Rectangle(x, y, PanelWidth, panelHeight);
         _textRect = new Rectangle(
             _panelRect.X + Padding,
             _panelRect.Y + TitleBarHeight + Padding,
             _panelRect.Width - Padding * 2,
-            TextAreaHeight
+            textAreaHeight
         );
+
         RebuildOptionButtons();
     }
 
@@ -613,7 +749,7 @@ public class DialogueTreeUI
                 drawPanel.X + Padding,
                 drawPanel.Y + TitleBarHeight + Padding,
                 drawPanel.Width - Padding * 2,
-                TextAreaHeight
+                _textRect.Height
             );
 
             sb.Draw(pixel, textRect, TextBg * alpha);
@@ -631,18 +767,23 @@ public class DialogueTreeUI
             }
 
             int optionsStartY = textRect.Bottom + Padding;
+            int optionsAreaHeight = drawPanel.Height - TitleBarHeight - Padding - _textRect.Height - Padding * 2;
+
+            int currentDrawY = optionsStartY;
             for (int idx = 0; idx < _optionButtons.Count; idx++)
             {
                 var btn = _optionButtons[idx];
-                var drawRect = btn.Rect;
-                drawRect.Y -= (int)_scrollOffset;
+                int btnDrawY = currentDrawY - (int)_scrollOffset;
+                int btnHeight = btn.Height;
 
-                drawRect = new Rectangle(
+                var drawRect = new Rectangle(
                     drawPanel.X + Padding,
-                    optionsStartY + idx * (OptionHeight + OptionSpacing) - (int)_scrollOffset,
+                    btnDrawY,
                     drawPanel.Width - Padding * 2,
-                    OptionHeight
+                    btnHeight
                 );
+
+                currentDrawY += btnHeight + OptionSpacing;
 
                 if (drawRect.Bottom < textRect.Bottom + Padding || drawRect.Top > drawPanel.Bottom)
                     continue;
@@ -655,13 +796,19 @@ public class DialogueTreeUI
                 UIRendering.DrawBorder(sb, drawRect, 1, (hovered ? UIStyles.BorderAccent : UIStyles.BorderLight) * alpha);
 
                 string keyHint = idx < 9 ? $"[{idx + 1}] " : "";
-                string btnText = keyHint + btn.Text;
                 var font = FontAssets.MouseText.Value;
-                var textSize = font.MeasureString(btnText) * OptionTextScale;
-                float textY = drawRect.Y + (drawRect.Height - textSize.Y) / 2f;
-                Utils.DrawBorderString(sb, btnText,
-                    new Vector2(drawRect.X + TextPaddingX, textY),
-                    textColor, OptionTextScale);
+                float optionLineHeight = font.MeasureString("A").Y * OptionTextScale + 1;
+
+                for (int lineIdx = 0; lineIdx < btn.WrappedLines.Count; lineIdx++)
+                {
+                    string lineText = lineIdx == 0 ? keyHint + btn.WrappedLines[0] : btn.WrappedLines[lineIdx];
+                    float textY = drawRect.Y + TextPaddingY + lineIdx * optionLineHeight;
+                    if (textY + optionLineHeight > drawRect.Bottom) break;
+
+                    Utils.DrawBorderString(sb, lineText,
+                        new Vector2(drawRect.X + TextPaddingX, textY),
+                        textColor, OptionTextScale);
+                }
 
                 if (hovered && !string.IsNullOrEmpty(btn.Tooltip))
                 {
@@ -671,8 +818,12 @@ public class DialogueTreeUI
 
             DrawCloseButton(sb, drawPanel, alpha);
 
-            int totalOptionHeight = _options.Count * (OptionHeight + OptionSpacing);
-            int optionsAreaHeight = drawPanel.Height - TitleBarHeight - Padding - TextAreaHeight - Padding * 2;
+            int totalOptionHeight = 0;
+            foreach (var btn in _optionButtons)
+                totalOptionHeight += btn.Height + OptionSpacing;
+            if (_optionButtons.Count > 0)
+                totalOptionHeight -= OptionSpacing;
+
             if (totalOptionHeight > optionsAreaHeight)
             {
                 var scrollArea = new Rectangle(
@@ -728,7 +879,7 @@ public class DialogueTreeUI
 
     private int GetOptionsAreaHeight()
     {
-        return _panelRect.Height - TitleBarHeight - Padding - TextAreaHeight - Padding * 2;
+        return _panelRect.Height - TitleBarHeight - Padding - _textRect.Height - Padding * 2;
     }
 
     private void DrawCloseButton(SpriteBatch sb, Rectangle panelRect, float alpha)
@@ -777,10 +928,13 @@ public class DialogueTreeUI
     private class OptionButton
     {
         public Rectangle Rect;
+        public List<string> WrappedLines;
         public string Text;
         public string FullText;
         public string Tooltip;
         public int Index;
         public DialogueOptionType OptionType;
+        public int LineCount => WrappedLines?.Count ?? 1;
+        public int Height;
     }
 }

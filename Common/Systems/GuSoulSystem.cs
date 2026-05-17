@@ -7,6 +7,9 @@ using VerminLordMod.Common.Players;
 
 namespace VerminLordMod.Common.Systems
 {
+    /// <summary>
+    /// 本命蛊结契状态
+    /// </summary>
     public enum MainGuState
     {
         None = 0,           // 无本命蛊
@@ -17,6 +20,9 @@ namespace VerminLordMod.Common.Systems
         Severed,            // 契约断裂（主人死亡/主动解除）
     }
 
+    /// <summary>
+    /// 本命蛊类型 — 每种本命蛊拥有独特的核心能力
+    /// </summary>
     public enum MainGuType
     {
         None = 0,
@@ -33,6 +39,9 @@ namespace VerminLordMod.Common.Systems
         DestinyGu,              // 命运蛊 — 命运干涉
     }
 
+    /// <summary>
+    /// 本命蛊结契数据 — 记录本命蛊的绑定状态、亲密度和同步率
+    /// </summary>
     public class MainGuBond
     {
         public MainGuType Type;
@@ -51,6 +60,15 @@ namespace VerminLordMod.Common.Systems
         };
     }
 
+    /// <summary>
+    /// 蛊魂系统 — 管理本命蛊的结契、成长和灵魂同步
+    /// 
+    /// 本命蛊是蛊师灵魂绑定的核心蛊虫，拥有以下特性：
+    /// - 结契后与主人灵魂绑定，不可交易
+    /// - 随主人修为成长，亲密度每日递增
+    /// - 同步率影响本命蛊的战斗效率和死亡保护概率
+    /// - 成熟期以上可提供 50% 死亡保护，超越期 100%
+    /// </summary>
     public class GuSoulSystem : ModSystem
     {
         public static GuSoulSystem Instance => ModContent.GetInstance<GuSoulSystem>();

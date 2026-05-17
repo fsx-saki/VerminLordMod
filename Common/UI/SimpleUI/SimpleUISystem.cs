@@ -364,7 +364,17 @@ public class SimpleUISystem : ModSystem
 
     public override void ModifyInterfaceLayers(List<GameInterfaceLayer> layers)
     {
-        // 在鼠标文本层之前绘制 SimpleUI 面板和信息提示框
+        bool dialogueTreeOpen = DialogueTreeUIPanel.Instance.IsOpen;
+
+        if (dialogueTreeOpen)
+        {
+            int chatIndex = layers.FindIndex(layer => layer.Name == "Vanilla: NPC / Sign Dialog");
+            if (chatIndex != -1)
+            {
+                layers.RemoveAt(chatIndex);
+            }
+        }
+
         int mouseTextIndex = layers.FindIndex(layer => layer.Name == "Vanilla: Mouse Text");
         if (mouseTextIndex != -1)
         {

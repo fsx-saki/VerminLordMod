@@ -3940,6 +3940,317 @@ Items: {
 		DisplayName: Zhao Shadow Wall
 		Tooltip: ""
 	}
+
+	AncestralAltar: {
+		DisplayName: Ancestral Altar
+		Tooltip: ""
+	}
+
+	BattleArena: {
+		DisplayName: Battle Arena
+		Tooltip: ""
+	}
+
+	GuBox: {
+		DisplayName: Gu Box
+		Tooltip: ""
+	}
+
+	SpiritPoolBox: {
+		DisplayName: Spirit Pool Box
+		Tooltip: ""
+	}
+
+	AwakeningPill: {
+		DisplayName: Awakening Pill
+		Tooltip: ""
+	}
+
+	BloodEssence: {
+		DisplayName: Blood Essence
+		Tooltip: ""
+	}
+
+	DefensePill: {
+		DisplayName: Defense Pill
+		Tooltip: ""
+	}
+
+	DetoxPill: {
+		DisplayName: Detox Pill
+		Tooltip: ""
+	}
+
+	GuFoodPellet: {
+		DisplayName: Gu Food Pellet
+		Tooltip: ""
+	}
+
+	HealingPill: {
+		DisplayName: Healing Pill
+		Tooltip: ""
+	}
+
+	PerceptionPill: {
+		DisplayName: Perception Pill
+		Tooltip: ""
+	}
+
+	QiRecoveryPill: {
+		DisplayName: Qi Recovery Pill
+		Tooltip: ""
+	}
+
+	SpeedPill: {
+		DisplayName: Speed Pill
+		Tooltip: ""
+	}
+
+	SpiritMeat: {
+		DisplayName: Spirit Meat
+		Tooltip: ""
+	}
+
+	StrengthPill: {
+		DisplayName: Strength Pill
+		Tooltip: ""
+	}
+
+	VisionPill: {
+		DisplayName: Vision Pill
+		Tooltip: ""
+	}
+
+	CultivationPlatformItem: {
+		DisplayName: Cultivation Platform Item
+		Tooltip: ""
+	}
+
+	BaiJadePillar: {
+		DisplayName: Bai Jade Pillar
+		Tooltip: ""
+	}
+
+	BaiJadeScreen: {
+		DisplayName: Bai Jade Screen
+		Tooltip: ""
+	}
+
+	GuYueBambooWall: {
+		DisplayName: Gu Yue Bamboo Wall
+		Tooltip: ""
+	}
+
+	GuYueMedicinePot: {
+		DisplayName: Gu Yue Medicine Pot
+		Tooltip: ""
+	}
+
+	JiaGoldCoinPile: {
+		DisplayName: Jia Gold Coin Pile
+		Tooltip: ""
+	}
+
+	JiaSilkCurtain: {
+		DisplayName: Jia Silk Curtain
+		Tooltip: ""
+	}
+
+	ScatteredTent: {
+		DisplayName: Scattered Tent
+		Tooltip: ""
+	}
+
+	TieForgeWall: {
+		DisplayName: Tie Forge Wall
+		Tooltip: ""
+	}
+
+	TieWeaponRack: {
+		DisplayName: Tie Weapon Rack
+		Tooltip: ""
+	}
+
+	WangCrystalPillar: {
+		DisplayName: Wang Crystal Pillar
+		Tooltip: ""
+	}
+
+	WangWaterBasin: {
+		DisplayName: Wang Water Basin
+		Tooltip: ""
+	}
+
+	XiongBoneTotem: {
+		DisplayName: Xiong Bone Totem
+		Tooltip: ""
+	}
+
+	ZhaoShadowCurtain: {
+		DisplayName: Zhao Shadow Curtain
+		Tooltip: ""
+	}
+
+	ZhaoShadowLantern: {
+		DisplayName: Zhao Shadow Lantern
+		Tooltip: ""
+	}
+
+	HealingHerb: {
+		DisplayName: Healing Herb
+		Tooltip: ""
+	}
+
+	PoisonWeed: {
+		DisplayName: Poison Weed
+		Tooltip: ""
+	}
+
+	QiHerb: {
+		DisplayName: Qi Herb
+		Tooltip: ""
+	}
+
+	BoneBanbooWallItem: {
+		DisplayName: Bone Banboo Wall Item
+		Tooltip: ""
+	}
+
+	QingMaoStoneWallItem: {
+		DisplayName: Qing Mao Stone Wall Item
+		Tooltip: ""
+	}
+
+	BoneBanbooSeed: {
+		DisplayName: Bone Banboo Seed
+		Tooltip: ""
+	}
+
+	HealingHerbSeed: {
+		DisplayName: Healing Herb Seed
+		Tooltip: ""
+	}
+
+	MoonOrchidSeed: {
+		DisplayName: Moon Orchid Seed
+		Tooltip: ""
+	}
+
+	PoisonWeedSeed: {
+		DisplayName: Poison Weed Seed
+		Tooltip: ""
+	}
+
+	QiHerbSeed: {
+		DisplayName: Qi Herb Seed
+		Tooltip: ""
+	}
+
+	RiceBagGrassSeed: {
+		DisplayName: Rice Bag Grass Seed
+		Tooltip: ""
+	}
+
+	SpearBambooSeed: {
+		DisplayName: Spear Bamboo Seed
+		Tooltip: ""
+	}
+
+	SpiritGrassSeed: {
+		DisplayName: Spirit Grass Seed
+		Tooltip: ""
+	}
+
+	SpiritSpringPlantSeed: {
+		DisplayName: Spirit Spring Plant Seed
+		Tooltip: ""
+	}
+
+	WineGourdFlowerSeed: {
+		DisplayName: Wine Gourd Flower Seed
+		Tooltip: ""
+	}
+
+	// === 10 New Gu Insects ===
+	BattlePlanGu: {
+		DisplayName: Battle Plan Gu
+		Tooltip: ""
+		GuLevel: Mods.VerminLordMod.Items.BattlePlanGu.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.BattlePlanGu.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.BattlePlanGu.UsesXQi
+	}
+
+	DreamBiteGu: {
+		DisplayName: Dream Bite Gu
+		Tooltip: ""
+		GuLevel: Mods.VerminLordMod.Items.DreamBiteGu.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.DreamBiteGu.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.DreamBiteGu.UsesXQi
+	}
+
+	HeartSeekerGu: {
+		DisplayName: Heart Seeker Gu
+		Tooltip: ""
+		GuLevel: Mods.VerminLordMod.Items.HeartSeekerGu.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.HeartSeekerGu.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.HeartSeekerGu.UsesXQi
+	}
+
+	HeavenGazeGu: {
+		DisplayName: Heaven Gaze Gu
+		Tooltip: ""
+		GuLevel: Mods.VerminLordMod.Items.HeavenGazeGu.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.HeavenGazeGu.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.HeavenGazeGu.UsesXQi
+	}
+
+	ShadowStingGu: {
+		DisplayName: Shadow Sting Gu
+		Tooltip: ""
+		GuLevel: Mods.VerminLordMod.Items.ShadowStingGu.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.ShadowStingGu.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.ShadowStingGu.UsesXQi
+	}
+
+	SoulReapGu: {
+		DisplayName: Soul Reap Gu
+		Tooltip: ""
+		GuLevel: Mods.VerminLordMod.Items.SoulReapGu.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.SoulReapGu.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.SoulReapGu.UsesXQi
+	}
+
+	SpiritGuardGu: {
+		DisplayName: Spirit Guard Gu
+		Tooltip: ""
+		GuLevel: Mods.VerminLordMod.Items.SpiritGuardGu.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.SpiritGuardGu.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.SpiritGuardGu.UsesXQi
+	}
+
+	SwiftWindGu: {
+		DisplayName: Swift Wind Gu
+		Tooltip: ""
+		GuLevel: Mods.VerminLordMod.Items.SwiftWindGu.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.SwiftWindGu.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.SwiftWindGu.UsesXQi
+	}
+
+	VoidRipGu: {
+		DisplayName: Void Rip Gu
+		Tooltip: ""
+		GuLevel: Mods.VerminLordMod.Items.VoidRipGu.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.VoidRipGu.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.VoidRipGu.UsesXQi
+	}
+
+	WarHornGu: {
+		DisplayName: War Horn Gu
+		Tooltip: ""
+		GuLevel: Mods.VerminLordMod.Items.WarHornGu.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.WarHornGu.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.WarHornGu.UsesXQi
+	}
 }
 
 MapObject: {
@@ -4449,6 +4760,23 @@ Tiles: {
 	SpiritSoil.MapEntry: Spirit Soil
 	SwampMud.MapEntry: Swamp Mud
 	WastelandSand.MapEntry: Wasteland Sand
+	QiHerb.MapEntry: Qi Herb
+	PoisonWeed.MapEntry: Poison Weed
+	HealingHerb.MapEntry: Healing Herb
+	ZhaoShadowLantern.MapEntry: Zhao Shadow Lantern
+	ZhaoShadowCurtain.MapEntry: Zhao Shadow Curtain
+	XiongBoneTotem.MapEntry: Xiong Bone Totem
+	WangWaterBasin.MapEntry: Wang Water Basin
+	WangCrystalPillar.MapEntry: Wang Crystal Pillar
+	TieWeaponRack.MapEntry: Tie Weapon Rack
+	TieForgeWall.MapEntry: Tie Forge Wall
+	ScatteredTent.MapEntry: Scattered Tent
+	JiaSilkCurtain.MapEntry: Jia Silk Curtain
+	JiaGoldCoinPile.MapEntry: Jia Gold Coin Pile
+	GuYueMedicinePot.MapEntry: Gu Yue Medicine Pot
+	GuYueBambooWall.MapEntry: Gu Yue Bamboo Wall
+	BaiJadeScreen.MapEntry: Bai Jade Screen
+	BaiJadePillar.MapEntry: Bai Jade Pillar
 }
 
 WorldGen: {

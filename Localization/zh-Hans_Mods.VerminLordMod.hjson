@@ -340,578 +340,578 @@ NPCs: {
 	StrongElectricWolf.DisplayName: 豪电狼
 
 	GuYueChief: {
-		// DisplayName: Gu Yue Chief
+		DisplayName: 古月族长
 
 		TownNPCMood: {
-			// Content: 我很满足。
-			// NoHome: 我讨厌没有家。
-			// FarFromHome: 我离家太远了。
-			// LoveSpace: 我非常喜欢有这么大的空间。
-			// DislikeCrowded: 我不喜欢这么拥挤。
-			// HateCrowded: 我讨厌这么拥挤。
-			// LikeNPC_Princess: 我喜欢 {NPCName}。
-			// Princess_LovesNPC: 我喜欢 {NPCName}。
+			Content: 我很满足。
+			NoHome: 古月山寨在哪？我的族人们还需要我。
+			FarFromHome: 我离家太远了，或许我的族人们正需要我。
+			LoveSpace: 我非常喜欢有这么大的空间，蛊师就该有体面的住所。
+			DislikeCrowded: 我不喜欢这么拥挤，这里甚至有凡人居住。
+			HateCrowded: 我讨厌这么拥挤，特别是和这些凡人住在一起。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
 		}
 	}
 
 	GuYueChiElder: {
-		// DisplayName: Gu Yue Chi Elder
+		DisplayName: 古月赤长老
 
 		TownNPCMood: {
-			// Content: 我很满足。
-			// NoHome: 我讨厌没有家。
-			// FarFromHome: 我离家太远了。
-			// LoveSpace: 我非常喜欢有这么大的空间。
-			// DislikeCrowded: 我不喜欢这么拥挤。
-			// HateCrowded: 我讨厌这么拥挤。
-			// LikeNPC_Princess: 我喜欢 {NPCName}。
-			// Princess_LovesNPC: 我喜欢 {NPCName}。
+			Content: 我很满足。
+			NoHome: 古月山寨在哪？我的族人们还需要我。
+			FarFromHome: 我离家太远了，或许我的族人们正需要我。
+			LoveSpace: 我非常喜欢有这么大的空间，蛊师就该有体面的住所。
+			DislikeCrowded: 我不喜欢这么拥挤，这里甚至有凡人居住。
+			HateCrowded: 我讨厌这么拥挤，特别是和这些凡人住在一起。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
 		}
 	}
 
 	GuYueCommoner: {
-		// DisplayName: Gu Yue Commoner
+		DisplayName: 古月平民
 
 		TownNPCMood: {
-			// Content: 我很满足。
-			// NoHome: 我讨厌没有家。
-			// FarFromHome: 我离家太远了。
-			// LoveSpace: 我非常喜欢有这么大的空间。
-			// DislikeCrowded: 我不喜欢这么拥挤。
-			// HateCrowded: 我讨厌这么拥挤。
-			// LikeNPC_Princess: 我喜欢 {NPCName}。
-			// Princess_LovesNPC: 我喜欢 {NPCName}。
+			Content: 我很满足。
+			NoHome: 古月山寨在哪？我的族人们还需要我。
+			FarFromHome: 我离家太远了，或许我的族人们正需要我。
+			LoveSpace: 我非常喜欢有这么大的空间，蛊师就该有体面的住所。
+			DislikeCrowded: 我不喜欢这么拥挤，这里甚至有凡人居住。
+			HateCrowded: 我讨厌这么拥挤，特别是和这些凡人住在一起。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
 		}
 	}
 
 	GuYueDefenseElder: {
-		// DisplayName: Gu Yue Defense Elder
+		DisplayName: 古月防长老
 
 		TownNPCMood: {
-			// Content: 我很满足。
-			// NoHome: 我讨厌没有家。
-			// FarFromHome: 我离家太远了。
-			// LoveSpace: 我非常喜欢有这么大的空间。
-			// DislikeCrowded: 我不喜欢这么拥挤。
-			// HateCrowded: 我讨厌这么拥挤。
-			// LikeNPC_Princess: 我喜欢 {NPCName}。
-			// Princess_LovesNPC: 我喜欢 {NPCName}。
+			Content: 我很满足。
+			NoHome: 古月山寨在哪？我的族人们还需要我。
+			FarFromHome: 我离家太远了，或许我的族人们正需要我。
+			LoveSpace: 我非常喜欢有这么大的空间，蛊师就该有体面的住所。
+			DislikeCrowded: 我不喜欢这么拥挤，这里甚至有凡人居住。
+			HateCrowded: 我讨厌这么拥挤，特别是和这些凡人住在一起。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
 		}
 	}
 
 	GuYueFirstTurnGuMaster: {
-		// DisplayName: Gu Yue First Turn Gu Master
+		DisplayName: 古月一转蛊师
 
 		TownNPCMood: {
-			// Content: 我很满足。
-			// NoHome: 我讨厌没有家。
-			// FarFromHome: 我离家太远了。
-			// LoveSpace: 我非常喜欢有这么大的空间。
-			// DislikeCrowded: 我不喜欢这么拥挤。
-			// HateCrowded: 我讨厌这么拥挤。
-			// LikeNPC_Princess: 我喜欢 {NPCName}。
-			// Princess_LovesNPC: 我喜欢 {NPCName}。
+			Content: 我很满足。
+			NoHome: 古月山寨在哪？我的族人们还需要我。
+			FarFromHome: 我离家太远了，或许我的族人们正需要我。
+			LoveSpace: 我非常喜欢有这么大的空间，蛊师就该有体面的住所。
+			DislikeCrowded: 我不喜欢这么拥挤，这里甚至有凡人居住。
+			HateCrowded: 我讨厌这么拥挤，特别是和这些凡人住在一起。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
 		}
 	}
 
 	GuYueFistInstructor: {
-		// DisplayName: Gu Yue Fist Instructor
+		DisplayName: 古月拳师
 
 		TownNPCMood: {
-			// Content: 我很满足。
-			// NoHome: 我讨厌没有家。
-			// FarFromHome: 我离家太远了。
-			// LoveSpace: 我非常喜欢有这么大的空间。
-			// DislikeCrowded: 我不喜欢这么拥挤。
-			// HateCrowded: 我讨厌这么拥挤。
-			// LikeNPC_Princess: 我喜欢 {NPCName}。
-			// Princess_LovesNPC: 我喜欢 {NPCName}。
+			Content: 我很满足。
+			NoHome: 古月山寨在哪？我的族人们还需要我。
+			FarFromHome: 我离家太远了，或许我的族人们正需要我。
+			LoveSpace: 我非常喜欢有这么大的空间，蛊师就该有体面的住所。
+			DislikeCrowded: 我不喜欢这么拥挤，这里甚至有凡人居住。
+			HateCrowded: 我讨厌这么拥挤，特别是和这些凡人住在一起。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
 		}
 	}
 
 	GuYueMedicineElder: {
-		// DisplayName: Gu Yue Medicine Elder
+		DisplayName: 古月药长老
 
 		TownNPCMood: {
-			// Content: 我很满足。
-			// NoHome: 我讨厌没有家。
-			// FarFromHome: 我离家太远了。
-			// LoveSpace: 我非常喜欢有这么大的空间。
-			// DislikeCrowded: 我不喜欢这么拥挤。
-			// HateCrowded: 我讨厌这么拥挤。
-			// LikeNPC_Princess: 我喜欢 {NPCName}。
-			// Princess_LovesNPC: 我喜欢 {NPCName}。
+			Content: 我很满足。
+			NoHome: 古月山寨在哪？我的族人们还需要我。
+			FarFromHome: 我离家太远了，或许我的族人们正需要我。
+			LoveSpace: 我非常喜欢有这么大的空间，蛊师就该有体面的住所。
+			DislikeCrowded: 我不喜欢这么拥挤，这里甚至有凡人居住。
+			HateCrowded: 我讨厌这么拥挤，特别是和这些凡人住在一起。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
 		}
 	}
 
 	GuYueMedicinePulseElder: {
-		// DisplayName: Gu Yue Medicine Pulse Elder
+		DisplayName: 古月药脉长老
 
 		TownNPCMood: {
-			// Content: 我很满足。
-			// NoHome: 我讨厌没有家。
-			// FarFromHome: 我离家太远了。
-			// LoveSpace: 我非常喜欢有这么大的空间。
-			// DislikeCrowded: 我不喜欢这么拥挤。
-			// HateCrowded: 我讨厌这么拥挤。
-			// LikeNPC_Princess: 我喜欢 {NPCName}。
-			// Princess_LovesNPC: 我喜欢 {NPCName}。
+			Content: 我很满足。
+			NoHome: 古月山寨在哪？我的族人们还需要我。
+			FarFromHome: 我离家太远了，或许我的族人们正需要我。
+			LoveSpace: 我非常喜欢有这么大的空间，蛊师就该有体面的住所。
+			DislikeCrowded: 我不喜欢这么拥挤，这里甚至有凡人居住。
+			HateCrowded: 我讨厌这么拥挤，特别是和这些凡人住在一起。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
 		}
 	}
 
 	GuYueMoElder: {
-		// DisplayName: Gu Yue Mo Elder
+		DisplayName: 古月墨长老
 
 		TownNPCMood: {
-			// Content: 我很满足。
-			// NoHome: 我讨厌没有家。
-			// FarFromHome: 我离家太远了。
-			// LoveSpace: 我非常喜欢有这么大的空间。
-			// DislikeCrowded: 我不喜欢这么拥挤。
-			// HateCrowded: 我讨厌这么拥挤。
-			// LikeNPC_Princess: 我喜欢 {NPCName}。
-			// Princess_LovesNPC: 我喜欢 {NPCName}。
+			Content: 我很满足。
+			NoHome: 古月山寨在哪？我的族人们还需要我。
+			FarFromHome: 我离家太远了，或许我的族人们正需要我。
+			LoveSpace: 我非常喜欢有这么大的空间，蛊师就该有体面的住所。
+			DislikeCrowded: 我不喜欢这么拥挤，这里甚至有凡人居住。
+			HateCrowded: 我讨厌这么拥挤，特别是和这些凡人住在一起。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
 		}
 	}
 
 	GuYueSchoolElder: {
-		// DisplayName: Gu Yue School Elder
+		DisplayName: 古月学堂长老
 
 		TownNPCMood: {
-			// Content: 我很满足。
-			// NoHome: 我讨厌没有家。
-			// FarFromHome: 我离家太远了。
-			// LoveSpace: 我非常喜欢有这么大的空间。
-			// DislikeCrowded: 我不喜欢这么拥挤。
-			// HateCrowded: 我讨厌这么拥挤。
-			// LikeNPC_Princess: 我喜欢 {NPCName}。
-			// Princess_LovesNPC: 我喜欢 {NPCName}。
+			Content: 我很满足。
+			NoHome: 古月山寨在哪？我的族人们还需要我。
+			FarFromHome: 我离家太远了，或许我的族人们正需要我。
+			LoveSpace: 我非常喜欢有这么大的空间，蛊师就该有体面的住所。
+			DislikeCrowded: 我不喜欢这么拥挤，这里甚至有凡人居住。
+			HateCrowded: 我讨厌这么拥挤，特别是和这些凡人住在一起。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
 		}
 	}
 
 	GuYueSecondTurnGuMaster: {
-		// DisplayName: Gu Yue Second Turn Gu Master
+		DisplayName: 古月二转蛊师
 
 		TownNPCMood: {
-			// Content: 我很满足。
-			// NoHome: 我讨厌没有家。
-			// FarFromHome: 我离家太远了。
-			// LoveSpace: 我非常喜欢有这么大的空间。
-			// DislikeCrowded: 我不喜欢这么拥挤。
-			// HateCrowded: 我讨厌这么拥挤。
-			// LikeNPC_Princess: 我喜欢 {NPCName}。
-			// Princess_LovesNPC: 我喜欢 {NPCName}。
+			Content: 我很满足。
+			NoHome: 古月山寨在哪？我的族人们还需要我。
+			FarFromHome: 我离家太远了，或许我的族人们正需要我。
+			LoveSpace: 我非常喜欢有这么大的空间，蛊师就该有体面的住所。
+			DislikeCrowded: 我不喜欢这么拥挤，这里甚至有凡人居住。
+			HateCrowded: 我讨厌这么拥挤，特别是和这些凡人住在一起。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
 		}
 	}
 
 	GuYueServant: {
-		// DisplayName: Gu Yue Servant
+		DisplayName: 古月仆役
 
 		TownNPCMood: {
-			// Content: 我很满足。
-			// NoHome: 我讨厌没有家。
-			// FarFromHome: 我离家太远了。
-			// LoveSpace: 我非常喜欢有这么大的空间。
-			// DislikeCrowded: 我不喜欢这么拥挤。
-			// HateCrowded: 我讨厌这么拥挤。
-			// LikeNPC_Princess: 我喜欢 {NPCName}。
-			// Princess_LovesNPC: 我喜欢 {NPCName}。
+			Content: 我很满足。
+			NoHome: 古月山寨在哪？我的族人们还需要我。
+			FarFromHome: 我离家太远了，或许我的族人们正需要我。
+			LoveSpace: 我非常喜欢有这么大的空间，蛊师就该有体面的住所。
+			DislikeCrowded: 我不喜欢这么拥挤，这里甚至有凡人居住。
+			HateCrowded: 我讨厌这么拥挤，特别是和这些凡人住在一起。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
 		}
 	}
 
 	DialogueTreeDemoNPC: {
-		// DisplayName: Dialogue Tree Demo N P C
+		DisplayName: 对话树演示NPC
 
 		TownNPCMood: {
-			// Content: 我很满足。
-			// NoHome: 我讨厌没有家。
-			// FarFromHome: 我离家太远了。
-			// LoveSpace: 我非常喜欢有这么大的空间。
-			// DislikeCrowded: 我不喜欢这么拥挤。
-			// HateCrowded: 我讨厌这么拥挤。
-			// LikeNPC_Princess: 我喜欢 {NPCName}。
-			// Princess_LovesNPC: 我喜欢 {NPCName}。
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
 		}
 	}
 
 	GuYueVillager: {
-		// DisplayName: Gu Yue Villager
+		DisplayName: 古月村民
 
 		TownNPCMood: {
-			// Content: 我很满足。
-			// NoHome: 我讨厌没有家。
-			// FarFromHome: 我离家太远了。
-			// LoveSpace: 我非常喜欢有这么大的空间。
-			// DislikeCrowded: 我不喜欢这么拥挤。
-			// HateCrowded: 我讨厌这么拥挤。
-			// LikeNPC_Princess: 我喜欢 {NPCName}。
-			// Princess_LovesNPC: 我喜欢 {NPCName}。
+			Content: 我很满足。
+			NoHome: 古月山寨在哪？我的族人们还需要我。
+			FarFromHome: 我离家太远了，或许我的族人们正需要我。
+			LoveSpace: 我非常喜欢有这么大的空间，蛊师就该有体面的住所。
+			DislikeCrowded: 我不喜欢这么拥挤，这里甚至有凡人居住。
+			HateCrowded: 我讨厌这么拥挤，特别是和这些凡人住在一起。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
 		}
 	}
 
 	GuardNPC: {
-		// DisplayName: Guard N P C
+		DisplayName: 守卫
 
 		TownNPCMood: {
-			// Content: 我很满足。
-			// NoHome: 我讨厌没有家。
-			// FarFromHome: 我离家太远了。
-			// LoveSpace: 我非常喜欢有这么大的空间。
-			// DislikeCrowded: 我不喜欢这么拥挤。
-			// HateCrowded: 我讨厌这么拥挤。
-			// LikeNPC_Princess: 我喜欢 {NPCName}。
-			// Princess_LovesNPC: 我喜欢 {NPCName}。
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
 		}
 	}
 
 	HostileBanditNPC: {
-		// DisplayName: Hostile Bandit N P C
+		DisplayName: 敌对山贼
 
 		TownNPCMood: {
-			// Content: 我很满足。
-			// NoHome: 我讨厌没有家。
-			// FarFromHome: 我离家太远了。
-			// LoveSpace: 我非常喜欢有这么大的空间。
-			// DislikeCrowded: 我不喜欢这么拥挤。
-			// HateCrowded: 我讨厌这么拥挤。
-			// LikeNPC_Princess: 我喜欢 {NPCName}。
-			// Princess_LovesNPC: 我喜欢 {NPCName}。
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
 		}
 	}
 
 	NeutralTraderNPC: {
-		// DisplayName: Neutral Trader N P C
+		DisplayName: 中立商人
 
 		TownNPCMood: {
-			// Content: 我很满足。
-			// NoHome: 我讨厌没有家。
-			// FarFromHome: 我离家太远了。
-			// LoveSpace: 我非常喜欢有这么大的空间。
-			// DislikeCrowded: 我不喜欢这么拥挤。
-			// HateCrowded: 我讨厌这么拥挤。
-			// LikeNPC_Princess: 我喜欢 {NPCName}。
-			// Princess_LovesNPC: 我喜欢 {NPCName}。
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
 		}
 	}
 
 	PassiveVillagerNPC: {
-		// DisplayName: Passive Villager N P C
+		DisplayName: 温顺村民
 
 		TownNPCMood: {
-			// Content: 我很满足。
-			// NoHome: 我讨厌没有家。
-			// FarFromHome: 我离家太远了。
-			// LoveSpace: 我非常喜欢有这么大的空间。
-			// DislikeCrowded: 我不喜欢这么拥挤。
-			// HateCrowded: 我讨厌这么拥挤。
-			// LikeNPC_Princess: 我喜欢 {NPCName}。
-			// Princess_LovesNPC: 我喜欢 {NPCName}。
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
 		}
 	}
 
 	AlchemistApprenticeNPC: {
-		// DisplayName: Alchemist Apprentice N P C
+		DisplayName: 炼药学徒
 
 		TownNPCMood: {
-			// Content: 我很满足。
-			// NoHome: 我讨厌没有家。
-			// FarFromHome: 我离家太远了。
-			// LoveSpace: 我非常喜欢有这么大的空间。
-			// DislikeCrowded: 我不喜欢这么拥挤。
-			// HateCrowded: 我讨厌这么拥挤。
-			// LikeNPC_Princess: 我喜欢 {NPCName}。
-			// Princess_LovesNPC: 我喜欢 {NPCName}。
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
 		}
 	}
 
 	BeggarNPC: {
-		// DisplayName: Beggar N P C
+		DisplayName: 乞丐
 
 		TownNPCMood: {
-			// Content: 我很满足。
-			// NoHome: 我讨厌没有家。
-			// FarFromHome: 我离家太远了。
-			// LoveSpace: 我非常喜欢有这么大的空间。
-			// DislikeCrowded: 我不喜欢这么拥挤。
-			// HateCrowded: 我讨厌这么拥挤。
-			// LikeNPC_Princess: 我喜欢 {NPCName}。
-			// Princess_LovesNPC: 我喜欢 {NPCName}。
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
 		}
 	}
 
 	BlacksmithApprenticeNPC: {
-		// DisplayName: Blacksmith Apprentice N P C
+		DisplayName: 铁匠学徒
 
 		TownNPCMood: {
-			// Content: 我很满足。
-			// NoHome: 我讨厌没有家。
-			// FarFromHome: 我离家太远了。
-			// LoveSpace: 我非常喜欢有这么大的空间。
-			// DislikeCrowded: 我不喜欢这么拥挤。
-			// HateCrowded: 我讨厌这么拥挤。
-			// LikeNPC_Princess: 我喜欢 {NPCName}。
-			// Princess_LovesNPC: 我喜欢 {NPCName}。
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
 		}
 	}
 
 	BlacksmithNPC: {
-		// DisplayName: Blacksmith N P C
+		DisplayName: 铁匠
 
 		TownNPCMood: {
-			// Content: 我很满足。
-			// NoHome: 我讨厌没有家。
-			// FarFromHome: 我离家太远了。
-			// LoveSpace: 我非常喜欢有这么大的空间。
-			// DislikeCrowded: 我不喜欢这么拥挤。
-			// HateCrowded: 我讨厌这么拥挤。
-			// LikeNPC_Princess: 我喜欢 {NPCName}。
-			// Princess_LovesNPC: 我喜欢 {NPCName}。
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
 		}
 	}
 
 	CookNPC: {
-		// DisplayName: Cook N P C
+		DisplayName: 厨师
 
 		TownNPCMood: {
-			// Content: 我很满足。
-			// NoHome: 我讨厌没有家。
-			// FarFromHome: 我离家太远了。
-			// LoveSpace: 我非常喜欢有这么大的空间。
-			// DislikeCrowded: 我不喜欢这么拥挤。
-			// HateCrowded: 我讨厌这么拥挤。
-			// LikeNPC_Princess: 我喜欢 {NPCName}。
-			// Princess_LovesNPC: 我喜欢 {NPCName}。
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
 		}
 	}
 
 	DoctorNPC: {
-		// DisplayName: Doctor N P C
+		DisplayName: 医师
 
 		TownNPCMood: {
-			// Content: 我很满足。
-			// NoHome: 我讨厌没有家。
-			// FarFromHome: 我离家太远了。
-			// LoveSpace: 我非常喜欢有这么大的空间。
-			// DislikeCrowded: 我不喜欢这么拥挤。
-			// HateCrowded: 我讨厌这么拥挤。
-			// LikeNPC_Princess: 我喜欢 {NPCName}。
-			// Princess_LovesNPC: 我喜欢 {NPCName}。
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
 		}
 	}
 
 	FarmerNPC: {
-		// DisplayName: Farmer N P C
+		DisplayName: 农夫
 
 		TownNPCMood: {
-			// Content: 我很满足。
-			// NoHome: 我讨厌没有家。
-			// FarFromHome: 我离家太远了。
-			// LoveSpace: 我非常喜欢有这么大的空间。
-			// DislikeCrowded: 我不喜欢这么拥挤。
-			// HateCrowded: 我讨厌这么拥挤。
-			// LikeNPC_Princess: 我喜欢 {NPCName}。
-			// Princess_LovesNPC: 我喜欢 {NPCName}。
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
 		}
 	}
 
 	FishermanNPC: {
-		// DisplayName: Fisherman N P C
+		DisplayName: 渔夫
 
 		TownNPCMood: {
-			// Content: 我很满足。
-			// NoHome: 我讨厌没有家。
-			// FarFromHome: 我离家太远了。
-			// LoveSpace: 我非常喜欢有这么大的空间。
-			// DislikeCrowded: 我不喜欢这么拥挤。
-			// HateCrowded: 我讨厌这么拥挤。
-			// LikeNPC_Princess: 我喜欢 {NPCName}。
-			// Princess_LovesNPC: 我喜欢 {NPCName}。
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
 		}
 	}
 
 	HerbalistNPC: {
-		// DisplayName: Herbalist N P C
+		DisplayName: 草药师
 
 		TownNPCMood: {
-			// Content: 我很满足。
-			// NoHome: 我讨厌没有家。
-			// FarFromHome: 我离家太远了。
-			// LoveSpace: 我非常喜欢有这么大的空间。
-			// DislikeCrowded: 我不喜欢这么拥挤。
-			// HateCrowded: 我讨厌这么拥挤。
-			// LikeNPC_Princess: 我喜欢 {NPCName}。
-			// Princess_LovesNPC: 我喜欢 {NPCName}。
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
 		}
 	}
 
 	HunterNPC: {
-		// DisplayName: Hunter N P C
+		DisplayName: 猎人
 
 		TownNPCMood: {
-			// Content: 我很满足。
-			// NoHome: 我讨厌没有家。
-			// FarFromHome: 我离家太远了。
-			// LoveSpace: 我非常喜欢有这么大的空间。
-			// DislikeCrowded: 我不喜欢这么拥挤。
-			// HateCrowded: 我讨厌这么拥挤。
-			// LikeNPC_Princess: 我喜欢 {NPCName}。
-			// Princess_LovesNPC: 我喜欢 {NPCName}。
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
 		}
 	}
 
 	MerchantNPC: {
-		// DisplayName: Merchant N P C
+		DisplayName: 商人
 
 		TownNPCMood: {
-			// Content: 我很满足。
-			// NoHome: 我讨厌没有家。
-			// FarFromHome: 我离家太远了。
-			// LoveSpace: 我非常喜欢有这么大的空间。
-			// DislikeCrowded: 我不喜欢这么拥挤。
-			// HateCrowded: 我讨厌这么拥挤。
-			// LikeNPC_Princess: 我喜欢 {NPCName}。
-			// Princess_LovesNPC: 我喜欢 {NPCName}。
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
 		}
 	}
 
 	MinerNPC: {
-		// DisplayName: Miner N P C
+		DisplayName: 矿工
 
 		TownNPCMood: {
-			// Content: 我很满足。
-			// NoHome: 我讨厌没有家。
-			// FarFromHome: 我离家太远了。
-			// LoveSpace: 我非常喜欢有这么大的空间。
-			// DislikeCrowded: 我不喜欢这么拥挤。
-			// HateCrowded: 我讨厌这么拥挤。
-			// LikeNPC_Princess: 我喜欢 {NPCName}。
-			// Princess_LovesNPC: 我喜欢 {NPCName}。
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
 		}
 	}
 
 	NightWatchmanNPC: {
-		// DisplayName: Night Watchman N P C
+		DisplayName: 更夫
 
 		TownNPCMood: {
-			// Content: 我很满足。
-			// NoHome: 我讨厌没有家。
-			// FarFromHome: 我离家太远了。
-			// LoveSpace: 我非常喜欢有这么大的空间。
-			// DislikeCrowded: 我不喜欢这么拥挤。
-			// HateCrowded: 我讨厌这么拥挤。
-			// LikeNPC_Princess: 我喜欢 {NPCName}。
-			// Princess_LovesNPC: 我喜欢 {NPCName}。
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
 		}
 	}
 
 	ScholarNPC: {
-		// DisplayName: Scholar N P C
+		DisplayName: 书生
 
 		TownNPCMood: {
-			// Content: 我很满足。
-			// NoHome: 我讨厌没有家。
-			// FarFromHome: 我离家太远了。
-			// LoveSpace: 我非常喜欢有这么大的空间。
-			// DislikeCrowded: 我不喜欢这么拥挤。
-			// HateCrowded: 我讨厌这么拥挤。
-			// LikeNPC_Princess: 我喜欢 {NPCName}。
-			// Princess_LovesNPC: 我喜欢 {NPCName}。
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
 		}
 	}
 
 	StorytellerNPC: {
-		// DisplayName: Storyteller N P C
+		DisplayName: 说书人
 
 		TownNPCMood: {
-			// Content: 我很满足。
-			// NoHome: 我讨厌没有家。
-			// FarFromHome: 我离家太远了。
-			// LoveSpace: 我非常喜欢有这么大的空间。
-			// DislikeCrowded: 我不喜欢这么拥挤。
-			// HateCrowded: 我讨厌这么拥挤。
-			// LikeNPC_Princess: 我喜欢 {NPCName}。
-			// Princess_LovesNPC: 我喜欢 {NPCName}。
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
 		}
 	}
 
 	TailorNPC: {
-		// DisplayName: Tailor N P C
+		DisplayName: 裁缝
 
 		TownNPCMood: {
-			// Content: 我很满足。
-			// NoHome: 我讨厌没有家。
-			// FarFromHome: 我离家太远了。
-			// LoveSpace: 我非常喜欢有这么大的空间。
-			// DislikeCrowded: 我不喜欢这么拥挤。
-			// HateCrowded: 我讨厌这么拥挤。
-			// LikeNPC_Princess: 我喜欢 {NPCName}。
-			// Princess_LovesNPC: 我喜欢 {NPCName}。
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
 		}
 	}
 
 	TavernKeeperNPC: {
-		// DisplayName: Tavern Keeper N P C
+		DisplayName: 酒馆老板
 
 		TownNPCMood: {
-			// Content: 我很满足。
-			// NoHome: 我讨厌没有家。
-			// FarFromHome: 我离家太远了。
-			// LoveSpace: 我非常喜欢有这么大的空间。
-			// DislikeCrowded: 我不喜欢这么拥挤。
-			// HateCrowded: 我讨厌这么拥挤。
-			// LikeNPC_Princess: 我喜欢 {NPCName}。
-			// Princess_LovesNPC: 我喜欢 {NPCName}。
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
 		}
 	}
 
 	WeaverNPC: {
-		// DisplayName: Weaver N P C
+		DisplayName: 织工
 
 		TownNPCMood: {
-			// Content: 我很满足。
-			// NoHome: 我讨厌没有家。
-			// FarFromHome: 我离家太远了。
-			// LoveSpace: 我非常喜欢有这么大的空间。
-			// DislikeCrowded: 我不喜欢这么拥挤。
-			// HateCrowded: 我讨厌这么拥挤。
-			// LikeNPC_Princess: 我喜欢 {NPCName}。
-			// Princess_LovesNPC: 我喜欢 {NPCName}。
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
 		}
 	}
 
 	WoodcutterNPC: {
-		// DisplayName: Woodcutter N P C
+		DisplayName: 樵夫
 
 		TownNPCMood: {
-			// Content: 我很满足。
-			// NoHome: 我讨厌没有家。
-			// FarFromHome: 我离家太远了。
-			// LoveSpace: 我非常喜欢有这么大的空间。
-			// DislikeCrowded: 我不喜欢这么拥挤。
-			// HateCrowded: 我讨厌这么拥挤。
-			// LikeNPC_Princess: 我喜欢 {NPCName}。
-			// Princess_LovesNPC: 我喜欢 {NPCName}。
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
 		}
 	}
 
-	// BanditGuMaster.DisplayName: Bandit Gu Master
-	// EvilCultivatorGuMaster.DisplayName: Evil Cultivator Gu Master
-	// HermitGuMaster.DisplayName: Hermit Gu Master
-	// ShadowAssassinGuMaster.DisplayName: Shadow Assassin Gu Master
-	// WildGuMaster.DisplayName: Wild Gu Master
+	BanditGuMaster.DisplayName: 山贼蛊师
+	EvilCultivatorGuMaster.DisplayName: 邪修蛊师
+	HermitGuMaster.DisplayName: 隐士蛊师
+	ShadowAssassinGuMaster.DisplayName: 暗影刺客蛊师
+	WildGuMaster.DisplayName: 野蛊师
 
 	GuardPrototypeNPC: {
-		// DisplayName: Guard Prototype N P C
+		DisplayName: 守卫原型
 
 		TownNPCMood: {
-			// Content: 我很满足。
-			// NoHome: 我讨厌没有家。
-			// FarFromHome: 我离家太远了。
-			// LoveSpace: 我非常喜欢有这么大的空间。
-			// DislikeCrowded: 我不喜欢这么拥挤。
-			// HateCrowded: 我讨厌这么拥挤。
-			// LikeNPC_Princess: 我喜欢 {NPCName}。
-			// Princess_LovesNPC: 我喜欢 {NPCName}。
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LikeNPC_Princess: 我喜欢 {NPCName}。
+			Princess_LovesNPC: 我喜欢 {NPCName}。
 		}
 	}
 }
@@ -1137,8 +1137,8 @@ Items: {
 	}
 
 	GuAccessoryItem: {
-		// Tooltip: ""
-		// DisplayName: Gu Accessory Item
+		Tooltip: ""
+		DisplayName: 蛊饰品
 		ControlRate: 炼化进度：{0}
 		UsesXQi: "{0} 真元需求"
 	}
@@ -1264,8 +1264,8 @@ Items: {
 	}
 
 	RiceBagGrass: {
-		// DisplayName: Rice Bag Grass
-		// Tooltip: ""
+		DisplayName: 饭袋草
+		Tooltip: ""
 	}
 
 	GrassPuppet: {
@@ -1330,8 +1330,8 @@ Items: {
 	}
 
 	WolfWaveCard: {
-		// DisplayName: Wolf Wave Card
-		// Tooltip: ""
+		DisplayName: 狼潮卡
+		Tooltip: ""
 	}
 
 	HuangLuoLongicorn: {
@@ -1484,11 +1484,11 @@ Items: {
 	}
 
 	DogControlGu: {
-		// UsesXQi: Mods.VerminLordMod.Items.DogControlGu.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.DogControlGu.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.DogControlGu.GuLevel
-		// DisplayName: Dog Control Gu
-		// Tooltip: ""
+		UsesXQi: "{0} 真元需求"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 狗控蛊
+		Tooltip: ""
 	}
 
 	BlackPig: {
@@ -2287,419 +2287,419 @@ Items: {
 	}
 
 	StarWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.StarWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.StarWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.StarWeapon.GuLevel
-		// DisplayName: Star Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 星辉武器
+		Tooltip: ""
 	}
 
 	BanWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.BanWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.BanWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.BanWeapon.GuLevel
-		// DisplayName: Ban Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 禁制武器
+		Tooltip: ""
 	}
 
 	BloodWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.BloodWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.BloodWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.BloodWeapon.GuLevel
-		// DisplayName: Blood Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 血道武器
+		Tooltip: ""
 	}
 
 	BoneWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.BoneWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.BoneWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.BoneWeapon.GuLevel
-		// DisplayName: Bone Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 骨道武器
+		Tooltip: ""
 	}
 
 	CharmWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.CharmWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.CharmWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.CharmWeapon.GuLevel
-		// DisplayName: Charm Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 魅惑武器
+		Tooltip: ""
 	}
 
 	CloudWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.CloudWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.CloudWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.CloudWeapon.GuLevel
-		// DisplayName: Cloud Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 云烟武器
+		Tooltip: ""
 	}
 
 	DarkWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.DarkWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.DarkWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.DarkWeapon.GuLevel
-		// DisplayName: Dark Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 暗影武器
+		Tooltip: ""
 	}
 
 	DrawWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.DrawWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.DrawWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.DrawWeapon.GuLevel
-		// DisplayName: Draw Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 牵引武器
+		Tooltip: ""
 	}
 
 	DreamWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.DreamWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.DreamWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.DreamWeapon.GuLevel
-		// DisplayName: Dream Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 幻梦武器
+		Tooltip: ""
 	}
 
 	EatingWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.EatingWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.EatingWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.EatingWeapon.GuLevel
-		// DisplayName: Eating Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 吞噬武器
+		Tooltip: ""
 	}
 
 	FireWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.FireWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.FireWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.FireWeapon.GuLevel
-		// DisplayName: Fire Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 火焰武器
+		Tooltip: ""
 	}
 
 	FlyingWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.FlyingWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.FlyingWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.FlyingWeapon.GuLevel
-		// DisplayName: Flying Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 飞针武器
+		Tooltip: ""
 	}
 
 	GoldWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.GoldWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.GoldWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.GoldWeapon.GuLevel
-		// DisplayName: Gold Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 金锋武器
+		Tooltip: ""
 	}
 
 	IceSnowWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.IceSnowWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.IceSnowWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.IceSnowWeapon.GuLevel
-		// DisplayName: Ice Snow Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 冰晶武器
+		Tooltip: ""
 	}
 
 	InfoWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.InfoWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.InfoWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.InfoWeapon.GuLevel
-		// DisplayName: Info Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 探知武器
+		Tooltip: ""
 	}
 
 	KillingWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.KillingWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.KillingWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.KillingWeapon.GuLevel
-		// DisplayName: Killing Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 杀意武器
+		Tooltip: ""
 	}
 
 	KnifeWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.KnifeWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.KnifeWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.KnifeWeapon.GuLevel
-		// DisplayName: Knife Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 飞刀武器
+		Tooltip: ""
 	}
 
 	LifeDeathWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.LifeDeathWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.LifeDeathWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.LifeDeathWeapon.GuLevel
-		// DisplayName: Life Death Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 生死武器
+		Tooltip: ""
 	}
 
 	LightningWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.LightningWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.LightningWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.LightningWeapon.GuLevel
-		// DisplayName: Lightning Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 电芒武器
+		Tooltip: ""
 	}
 
 	LightWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.LightWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.LightWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.LightWeapon.GuLevel
-		// DisplayName: Light Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 光耀武器
+		Tooltip: ""
 	}
 
 	LoveWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.LoveWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.LoveWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.LoveWeapon.GuLevel
-		// DisplayName: Love Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 情丝武器
+		Tooltip: ""
 	}
 
 	LuckWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.LuckWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.LuckWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.LuckWeapon.GuLevel
-		// DisplayName: Luck Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 运道武器
+		Tooltip: ""
 	}
 
 	MoonWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.MoonWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.MoonWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.MoonWeapon.GuLevel
-		// DisplayName: Moon Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 月刃武器
+		Tooltip: ""
 	}
 
 	MudWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.MudWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.MudWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.MudWeapon.GuLevel
-		// DisplayName: Mud Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 泥沼武器
+		Tooltip: ""
 	}
 
 	PelletWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.PelletWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.PelletWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.PelletWeapon.GuLevel
-		// DisplayName: Pellet Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 弹丸武器
+		Tooltip: ""
 	}
 
 	PersonWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.PersonWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.PersonWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.PersonWeapon.GuLevel
-		// DisplayName: Person Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 人面武器
+		Tooltip: ""
 	}
 
 	PoisonWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.PoisonWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.PoisonWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.PoisonWeapon.GuLevel
-		// DisplayName: Poison Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 毒雾武器
+		Tooltip: ""
 	}
 
 	PowerDuatWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.PowerDuatWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.PowerDuatWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.PowerDuatWeapon.GuLevel
-		// DisplayName: Power Duat Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 力道武器
+		Tooltip: ""
 	}
 
 	PractiseWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.PractiseWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.PractiseWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.PractiseWeapon.GuLevel
-		// DisplayName: Practise Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 修炼武器
+		Tooltip: ""
 	}
 
 	QiWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.QiWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.QiWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.QiWeapon.GuLevel
-		// DisplayName: Qi Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 气刃武器
+		Tooltip: ""
 	}
 
 	RuleWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.RuleWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.RuleWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.RuleWeapon.GuLevel
-		// DisplayName: Rule Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 律令武器
+		Tooltip: ""
 	}
 
 	ShadowWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.ShadowWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.ShadowWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.ShadowWeapon.GuLevel
-		// DisplayName: Shadow Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 影袭武器
+		Tooltip: ""
 	}
 
 	SkyWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.SkyWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.SkyWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.SkyWeapon.GuLevel
-		// DisplayName: Sky Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 天雷武器
+		Tooltip: ""
 	}
 
 	SlaveWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.SlaveWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.SlaveWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.SlaveWeapon.GuLevel
-		// DisplayName: Slave Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 奴役武器
+		Tooltip: ""
 	}
 
 	SoulWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.SoulWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.SoulWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.SoulWeapon.GuLevel
-		// DisplayName: Soul Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 魂火武器
+		Tooltip: ""
 	}
 
 	SpaceWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.SpaceWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.SpaceWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.SpaceWeapon.GuLevel
-		// DisplayName: Space Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 空间武器
+		Tooltip: ""
 	}
 
 	StealingWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.StealingWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.StealingWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.StealingWeapon.GuLevel
-		// DisplayName: Stealing Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 窃取武器
+		Tooltip: ""
 	}
 
 	SuccessFailureWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.SuccessFailureWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.SuccessFailureWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.SuccessFailureWeapon.GuLevel
-		// DisplayName: Success Failure Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 成败武器
+		Tooltip: ""
 	}
 
 	SwordWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.SwordWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.SwordWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.SwordWeapon.GuLevel
-		// DisplayName: Sword Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 剑意武器
+		Tooltip: ""
 	}
 
 	TacticalWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.TacticalWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.TacticalWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.TacticalWeapon.GuLevel
-		// DisplayName: Tactical Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 战术武器
+		Tooltip: ""
 	}
 
 	TimeWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.TimeWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.TimeWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.TimeWeapon.GuLevel
-		// DisplayName: Time Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 时光武器
+		Tooltip: ""
 	}
 
 	UnrealWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.UnrealWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.UnrealWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.UnrealWeapon.GuLevel
-		// DisplayName: Unreal Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 虚幻武器
+		Tooltip: ""
 	}
 
 	VariationWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.VariationWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.VariationWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.VariationWeapon.GuLevel
-		// DisplayName: Variation Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 变化武器
+		Tooltip: ""
 	}
 
 	VoiceWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.VoiceWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.VoiceWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.VoiceWeapon.GuLevel
-		// DisplayName: Voice Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 音波武器
+		Tooltip: ""
 	}
 
 	VoidWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.VoidWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.VoidWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.VoidWeapon.GuLevel
-		// DisplayName: Void Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 虚空武器
+		Tooltip: ""
 	}
 
 	WarWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.WarWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.WarWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.WarWeapon.GuLevel
-		// DisplayName: War Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 战意武器
+		Tooltip: ""
 	}
 
 	WaterWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.WaterWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.WaterWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.WaterWeapon.GuLevel
-		// DisplayName: Water Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 水行武器
+		Tooltip: ""
 	}
 
 	WindWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.WindWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.WindWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.WindWeapon.GuLevel
-		// DisplayName: Wind Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 风刃武器
+		Tooltip: ""
 	}
 
 	WisdomWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.WisdomWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.WisdomWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.WisdomWeapon.GuLevel
-		// DisplayName: Wisdom Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 智慧武器
+		Tooltip: ""
 	}
 
 	WoodWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.WoodWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.WoodWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.WoodWeapon.GuLevel
-		// DisplayName: Wood Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 木藤武器
+		Tooltip: ""
 	}
 
 	YinYangWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.YinYangWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.YinYangWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.YinYangWeapon.GuLevel
-		// DisplayName: Yin Yang Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 阴阳武器
+		Tooltip: ""
 	}
 
 	PowerWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.PowerWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.PowerWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.PowerWeapon.GuLevel
-		// DisplayName: Power Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 力道武器
+		Tooltip: ""
 	}
 
 	MoonPoisonGu: {
@@ -2888,22 +2888,102 @@ Items: {
 		// Tooltip: ""
 	}
 
+	BloodFrenzyGu: {
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 血狂蛊
+		Tooltip: 发射可追踪的血弹，命中后使目标发狂并持续腐蚀流血
+	}
+
+	BloodDropperGu: {
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 血滴子蛊
+		Tooltip: 蓄力投掷旋转血刃回旋镖，持续消耗气血
+	}
+
+	GhostFaceGu: {
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 鬼脸蛊
+		Tooltip: 发射可穿墙的鬼面，使目标恐惧并削弱其攻击力
+	}
+
+	WindFlowerGu: {
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 风花蛊
+		Tooltip: 向周围散射五枚追踪风花弹，附带轻盈之风
+	}
+
+	FlyingBoneShieldGu: {
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 飞骨盾蛊
+		Tooltip: 召唤三面环绕骨盾，自动冲向附近敌人
+	}
+
+	ThunderWingGu: {
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 雷翼蛊
+		Tooltip: 化为雷翼冲刺，麻痹路径上的敌人
+	}
+
+	IceBombGu: {
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 冰爆蛊
+		Tooltip: 发射冰块弹，命中后爆炸并散射冰晶碎片，施加冻伤和减速
+	}
+
+	FlyingSoulGu: {
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 飞魂蛊
+		Tooltip: 发射可穿墙的追踪灵魂弹，使目标恐惧
+	}
+
+	FrostDemonGu: {
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 霜妖蛊
+		Tooltip: 在原地引爆冰霜爆发，冻结并伤害范围内敌人，散射冰晶碎片
+	}
+
+	BoneThornGu: {
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 骨刺蛊
+		Tooltip: 消耗生命值，从体内爆发骨刺攻击四面八方，削甲并造成破体伤害
+	}
+
 	TrailDemoItems: {
 		// DisplayName: Trail Demo Items
 		// Tooltip: ""
 	}
 
 	LiquidFlameGu: {
-		// UsesXQi: Mods.VerminLordMod.Items.LiquidFlameGu.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.LiquidFlameGu.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.LiquidFlameGu.GuLevel
-		// DisplayName: Liquid Flame Gu
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 液火蛊
+		Tooltip: ""
 	}
 
 	QuickQi: {
-		// DisplayName: Quick Qi
-		// Tooltip: ""
+		DisplayName: 速回真元
+		Tooltip: ""
 	}
 
 	DanmakuTestWeapon: {
@@ -2912,49 +2992,49 @@ Items: {
 	}
 
 	BlackPigGu: {
-		// UsesXQi: Mods.VerminLordMod.Items.BlackPigGu.UsesXQi
-		// GuLevel: Mods.VerminLordMod.Items.BlackPigGu.GuLevel
-		// DisplayName: Black Pig Gu
-		// Tooltip: ""
+		UsesXQi: "{0} 真元需求"
+		GuLevel: 转数：{0}
+		DisplayName: 黑豕蛊
+		Tooltip: ""
 	}
 
 	WhitePigGu: {
-		// UsesXQi: Mods.VerminLordMod.Items.WhitePigGu.UsesXQi
-		// GuLevel: Mods.VerminLordMod.Items.WhitePigGu.GuLevel
-		// DisplayName: White Pig Gu
-		// Tooltip: ""
+		UsesXQi: "{0} 真元需求"
+		GuLevel: 转数：{0}
+		DisplayName: 白豕蛊
+		Tooltip: ""
 	}
 
 	NineWineBugWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.NineWineBugWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.NineWineBugWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.NineWineBugWeapon.GuLevel
-		// DisplayName: Nine Wine Bug Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 九酒虫武器
+		Tooltip: ""
 	}
 
 	WineBugWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.WineBugWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.WineBugWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.WineBugWeapon.GuLevel
-		// DisplayName: Wine Bug Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 酒虫武器
+		Tooltip: ""
 	}
 
 	SevenWineBugWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.SevenWineBugWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.SevenWineBugWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.SevenWineBugWeapon.GuLevel
-		// DisplayName: Seven Wine Bug Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 七酒虫武器
+		Tooltip: ""
 	}
 
 	FourFlavorWineBugWeapon: {
-		// UsesXQi: Mods.VerminLordMod.Items.FourFlavorWineBugWeapon.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.FourFlavorWineBugWeapon.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.FourFlavorWineBugWeapon.GuLevel
-		// DisplayName: Four Flavor Wine Bug Weapon
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 四味酒虫武器
+		Tooltip: ""
 	}
 
 	BladeBloodBatGuBanner: {
@@ -2983,28 +3063,28 @@ Items: {
 	}
 
 	KongQiaoStone: {
-		// DisplayName: Kong Qiao Stone
-		// Tooltip: ""
+		DisplayName: 空窍石
+		Tooltip: ""
 	}
 
 	UnbindGuItem: {
-		// DisplayName: Unbind Gu Item
-		// Tooltip: ""
+		DisplayName: 解蛊物品
+		Tooltip: ""
 	}
 
 	GuMediumWeapon: {
-		// DisplayName: Gu Medium Weapon
-		// Tooltip: ""
+		DisplayName: 蛊媒介武器
+		Tooltip: ""
 	}
 
 	MiZongZhenItem: {
-		// DisplayName: Mi Zong Zhen Item
-		// Tooltip: ""
+		DisplayName: 迷踪阵物品
+		Tooltip: ""
 	}
 
 	SubworldPortalGuYue: {
-		// DisplayName: Subworld Portal Gu Yue
-		// Tooltip: ""
+		DisplayName: 古月子世界传送门
+		Tooltip: ""
 	}
 
 	AncestorTablet: {
@@ -3977,6 +4057,317 @@ Items: {
 		// DisplayName: Zhao Shadow Wall
 		// Tooltip: ""
 	}
+
+	AncestralAltar: {
+		// DisplayName: Ancestral Altar
+		// Tooltip: ""
+	}
+
+	BattleArena: {
+		// DisplayName: Battle Arena
+		// Tooltip: ""
+	}
+
+	GuBox: {
+		// DisplayName: Gu Box
+		// Tooltip: ""
+	}
+
+	SpiritPoolBox: {
+		// DisplayName: Spirit Pool Box
+		// Tooltip: ""
+	}
+
+	AwakeningPill: {
+		// DisplayName: Awakening Pill
+		// Tooltip: ""
+	}
+
+	BloodEssence: {
+		// DisplayName: Blood Essence
+		// Tooltip: ""
+	}
+
+	DefensePill: {
+		// DisplayName: Defense Pill
+		// Tooltip: ""
+	}
+
+	DetoxPill: {
+		// DisplayName: Detox Pill
+		// Tooltip: ""
+	}
+
+	GuFoodPellet: {
+		// DisplayName: Gu Food Pellet
+		// Tooltip: ""
+	}
+
+	HealingPill: {
+		// DisplayName: Healing Pill
+		// Tooltip: ""
+	}
+
+	PerceptionPill: {
+		// DisplayName: Perception Pill
+		// Tooltip: ""
+	}
+
+	QiRecoveryPill: {
+		// DisplayName: Qi Recovery Pill
+		// Tooltip: ""
+	}
+
+	SpeedPill: {
+		// DisplayName: Speed Pill
+		// Tooltip: ""
+	}
+
+	SpiritMeat: {
+		// DisplayName: Spirit Meat
+		// Tooltip: ""
+	}
+
+	StrengthPill: {
+		// DisplayName: Strength Pill
+		// Tooltip: ""
+	}
+
+	VisionPill: {
+		// DisplayName: Vision Pill
+		// Tooltip: ""
+	}
+
+	CultivationPlatformItem: {
+		// DisplayName: Cultivation Platform Item
+		// Tooltip: ""
+	}
+
+	BaiJadePillar: {
+		// DisplayName: Bai Jade Pillar
+		// Tooltip: ""
+	}
+
+	BaiJadeScreen: {
+		// DisplayName: Bai Jade Screen
+		// Tooltip: ""
+	}
+
+	GuYueBambooWall: {
+		// DisplayName: Gu Yue Bamboo Wall
+		// Tooltip: ""
+	}
+
+	GuYueMedicinePot: {
+		// DisplayName: Gu Yue Medicine Pot
+		// Tooltip: ""
+	}
+
+	JiaGoldCoinPile: {
+		// DisplayName: Jia Gold Coin Pile
+		// Tooltip: ""
+	}
+
+	JiaSilkCurtain: {
+		// DisplayName: Jia Silk Curtain
+		// Tooltip: ""
+	}
+
+	ScatteredTent: {
+		// DisplayName: Scattered Tent
+		// Tooltip: ""
+	}
+
+	TieForgeWall: {
+		// DisplayName: Tie Forge Wall
+		// Tooltip: ""
+	}
+
+	TieWeaponRack: {
+		// DisplayName: Tie Weapon Rack
+		// Tooltip: ""
+	}
+
+	WangCrystalPillar: {
+		// DisplayName: Wang Crystal Pillar
+		// Tooltip: ""
+	}
+
+	WangWaterBasin: {
+		// DisplayName: Wang Water Basin
+		// Tooltip: ""
+	}
+
+	XiongBoneTotem: {
+		// DisplayName: Xiong Bone Totem
+		// Tooltip: ""
+	}
+
+	ZhaoShadowCurtain: {
+		// DisplayName: Zhao Shadow Curtain
+		// Tooltip: ""
+	}
+
+	ZhaoShadowLantern: {
+		// DisplayName: Zhao Shadow Lantern
+		// Tooltip: ""
+	}
+
+	HealingHerb: {
+		// DisplayName: Healing Herb
+		// Tooltip: ""
+	}
+
+	PoisonWeed: {
+		// DisplayName: Poison Weed
+		// Tooltip: ""
+	}
+
+	QiHerb: {
+		// DisplayName: Qi Herb
+		// Tooltip: ""
+	}
+
+	BoneBanbooWallItem: {
+		// DisplayName: Bone Banboo Wall Item
+		// Tooltip: ""
+	}
+
+	QingMaoStoneWallItem: {
+		// DisplayName: Qing Mao Stone Wall Item
+		// Tooltip: ""
+	}
+
+	BoneBanbooSeed: {
+		// DisplayName: Bone Banboo Seed
+		// Tooltip: ""
+	}
+
+	HealingHerbSeed: {
+		// DisplayName: Healing Herb Seed
+		// Tooltip: ""
+	}
+
+	MoonOrchidSeed: {
+		// DisplayName: Moon Orchid Seed
+		// Tooltip: ""
+	}
+
+	PoisonWeedSeed: {
+		// DisplayName: Poison Weed Seed
+		// Tooltip: ""
+	}
+
+	QiHerbSeed: {
+		// DisplayName: Qi Herb Seed
+		// Tooltip: ""
+	}
+
+	RiceBagGrassSeed: {
+		// DisplayName: Rice Bag Grass Seed
+		// Tooltip: ""
+	}
+
+	SpearBambooSeed: {
+		// DisplayName: Spear Bamboo Seed
+		// Tooltip: ""
+	}
+
+	SpiritGrassSeed: {
+		// DisplayName: Spirit Grass Seed
+		// Tooltip: ""
+	}
+
+	SpiritSpringPlantSeed: {
+		// DisplayName: Spirit Spring Plant Seed
+		// Tooltip: ""
+	}
+
+	WineGourdFlowerSeed: {
+		// DisplayName: Wine Gourd Flower Seed
+		// Tooltip: ""
+	}
+
+	// === 十种新增蛊虫 ===
+	BattlePlanGu: {
+		Tooltip: 战术道攻伐蛊虫，发射金策弹，命中后散射子母弹并附加灼烧
+		DisplayName: 战策蛊
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元消耗"
+	}
+
+	DreamBiteGu: {
+		Tooltip: 梦道攻伐蛊虫，发射梦境泡泡，无视物块追踪敌人，命中附加困惑
+		DisplayName: 噬梦蛊
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元消耗"
+	}
+
+	HeartSeekerGu: {
+		Tooltip: 情道攻伐蛊虫，发射追踪心形弹，命中附加魅惑效果
+		DisplayName: 寻心蛊
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元消耗"
+	}
+
+	HeavenGazeGu: {
+		Tooltip: 天道攻伐蛊虫，发射极速天光射线，穿透多个敌人
+		DisplayName: 天眼蛊
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元消耗"
+	}
+
+	ShadowStingGu: {
+		Tooltip: 影道攻伐蛊虫，发射暗影尖刺，穿透敌人并散射暗影碎片
+		DisplayName: 影刺蛊
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元消耗"
+	}
+
+	SoulReapGu: {
+		Tooltip: 魂道攻伐蛊虫，发射魂火追踪弹，无视物块，命中吸取生命
+		DisplayName: 割魂蛊
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元消耗"
+	}
+
+	SpiritGuardGu: {
+		Tooltip: 金道攻伐蛊虫，发射金灵弹，命中后产生大范围爆炸
+		DisplayName: 灵盾蛊
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元消耗"
+	}
+
+	SwiftWindGu: {
+		Tooltip: 飞道攻伐蛊虫，发射高速风刃，波浪轨迹切割敌人
+		DisplayName: 疾风蛊
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元消耗"
+	}
+
+	VoidRipGu: {
+		Tooltip: 虚道攻伐蛊虫，发射虚空之球，无视物块，命中后径向爆散虚空碎片
+		DisplayName: 虚裂蛊
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元消耗"
+	}
+
+	WarHornGu: {
+		Tooltip: 战道攻伐蛊虫，发射大型战弹，命中产生大范围爆炸并附加破甲
+		DisplayName: 战角蛊
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元消耗"
+	}
 }
 
 MapObject: {
@@ -4046,8 +4437,8 @@ Buffs: {
 	}
 
 	WidowSpiderbuff: {
-		// DisplayName: Widow Spiderbuff
-		// Description: Mods.VerminLordMod.Buffs.WidowSpiderbuff.Description
+		DisplayName: 寡妇蛛
+		Description: 寡妇蛛正在为你战斗
 	}
 
 	BreezeWheelbuff: {
@@ -4066,13 +4457,13 @@ Buffs: {
 	}
 
 	Dogbuff: {
-		// DisplayName: Dogbuff
-		// Description: Mods.VerminLordMod.Buffs.Dogbuff.Description
+		DisplayName: 狗
+		Description: 你的狗正在为你战斗
 	}
 
 	LoveToLeavebuff: {
-		// DisplayName: Love To Leavebuff
-		// Description: Mods.VerminLordMod.Buffs.LoveToLeavebuff.Description
+		DisplayName: 爱生离
+		Description: 问世间情为何物
 	}
 
 	BlackManebuff: {
@@ -4091,18 +4482,18 @@ Buffs: {
 	}
 
 	Acidicbuff: {
-		// DisplayName: Acidicbuff
-		// Description: Mods.VerminLordMod.Buffs.Acidicbuff.Description
+		DisplayName: 酸蚀
+		Description: 酸水正在腐蚀你的护甲
 	}
 
 	TwoPoisonbuff: {
-		// DisplayName: Two Poisonbuff
-		// Description: Mods.VerminLordMod.Buffs.TwoPoisonbuff.Description
+		DisplayName: 双毒
+		Description: 你中了双重剧毒
 	}
 
 	BlueBirdbuff: {
-		// DisplayName: Blue Birdbuff
-		// Description: Mods.VerminLordMod.Buffs.BlueBirdbuff.Description
+		DisplayName: 蓝鸟
+		Description: 蓝鸟冰棺的寒气环绕着你
 	}
 
 	GoldMoonCutbuff: {
@@ -4111,8 +4502,8 @@ Buffs: {
 	}
 
 	ShuangLinbuff: {
-		// DisplayName: Shuang Linbuff
-		// Description: Mods.VerminLordMod.Buffs.ShuangLinbuff.Description
+		DisplayName: 霜霖
+		Description: 霜霖月蛊的寒气环绕着你
 	}
 
 	IceCrystalbuff: {
@@ -4121,8 +4512,8 @@ Buffs: {
 	}
 
 	ShuangXibuff: {
-		// DisplayName: Shuang Xibuff
-		// Description: Mods.VerminLordMod.Buffs.ShuangXibuff.Description
+		DisplayName: 霜息
+		Description: 冰寒吐息笼罩着你
 	}
 
 	IceBladeStorm1: {
@@ -4146,8 +4537,8 @@ Buffs: {
 	}
 
 	SoulOscillationbuff: {
-		// DisplayName: Soul Oscillationbuff
-		// Description: Mods.VerminLordMod.Buffs.SoulOscillationbuff.Description
+		DisplayName: 魂震
+		Description: 灵魂正在震荡
 	}
 
 	Ragebuff: {
@@ -4156,8 +4547,8 @@ Buffs: {
 	}
 
 	DingShenbuff: {
-		// DisplayName: Ding Shenbuff
-		// Description: Mods.VerminLordMod.Buffs.DingShenbuff.Description
+		DisplayName: 定身
+		Description: 你被定身了
 	}
 
 	DogControlGuBuff: {
@@ -4171,8 +4562,8 @@ Buffs: {
 	}
 
 	BloodHandprintsbuff: {
-		// DisplayName: Blood Handprintsbuff
-		// Description: Mods.VerminLordMod.Buffs.BloodHandprintsbuff.Description
+		DisplayName: 血手印
+		Description: 血手印正在侵蚀你
 	}
 
 	TianDiHongYinbuff: {
@@ -4231,8 +4622,8 @@ Buffs: {
 	}
 
 	Starbuff: {
-		// DisplayName: Starbuff
-		// Description: Mods.VerminLordMod.Buffs.Starbuff.Description
+		DisplayName: 星
+		Description: 星辉加持中
 	}
 
 	FiveStarbuff: {
@@ -4276,8 +4667,8 @@ Buffs: {
 	}
 
 	Waterbuff: {
-		// DisplayName: Waterbuff
-		// Description: Mods.VerminLordMod.Buffs.Waterbuff.Description
+		DisplayName: 水行
+		Description: 水流环绕着你
 	}
 
 	BigStrengthbuff: {
@@ -4301,8 +4692,8 @@ Buffs: {
 	}
 
 	MoonPoisonbuff: {
-		// DisplayName: Moon Poisonbuff
-		// Description: Mods.VerminLordMod.Buffs.MoonPoisonbuff.Description
+		DisplayName: 月毒
+		Description: 月毒正在侵蚀你
 	}
 
 	Canopybuff: {
@@ -4341,36 +4732,36 @@ Buffs: {
 	}
 
 	Gratingbuff: {
-		// DisplayName: Gratingbuff
-		// Description: Mods.VerminLordMod.Buffs.Gratingbuff.Description
+		DisplayName: 光栅
+		Description: 光栅控制中
 	}
 
 	YanTongbuff: {
-		// DisplayName: Yan Tongbuff
-		// Description: Mods.VerminLordMod.Buffs.YanTongbuff.Description
+		DisplayName: 炎瞳
+		Description: 炎瞳凝视中
 	}
 
 	MiZongBuff: {
-		// DisplayName: Mi Zong Buff
-		// Description: Mods.VerminLordMod.Buffs.MiZongBuff.Description
+		DisplayName: 迷踪
+		Description: 迷踪阵法生效中
 	}
 
 	DefenseMiZongBuff: {
-		// DisplayName: Defense Mi Zong Buff
-		// Description: Mods.VerminLordMod.Buffs.DefenseMiZongBuff.Description
+		DisplayName: 防御迷踪
+		Description: 迷踪阵法提供防御
 	}
 
 	AddToSelfMiZongBuff: {
-		// DisplayName: Add To Self Mi Zong Buff
-		// Description: Mods.VerminLordMod.Buffs.AddToSelfMiZongBuff.Description
+		DisplayName: 迷踪自增益
+		Description: 迷踪阵法加持自身
 	}
 }
 
 DamageClasses.InsectDamageClass.DisplayName: 蛊术伤害
 
 UI: {
-	// WolfWave: Mods.VerminLordMod.UI.WolfWave
-	// Qi: Mods.VerminLordMod.UI.Qi
+	WolfWave: 狼潮
+	Qi: 真元
 }
 
 Biomes: {
@@ -4385,8 +4776,8 @@ Biomes: {
 	}
 
 	GuYueCompoundBiome: {
-		// DisplayName: Gu Yue Compound Biome
-		// TownNPCDialogueName: the Gu Yue Compound Biome
+		DisplayName: 古月山寨
+		TownNPCDialogueName: 古月山寨
 	}
 }
 
@@ -4486,6 +4877,23 @@ Tiles: {
 	// SpiritSoil.MapEntry: Spirit Soil
 	// SwampMud.MapEntry: Swamp Mud
 	// WastelandSand.MapEntry: Wasteland Sand
+	// QiHerb.MapEntry: Qi Herb
+	// PoisonWeed.MapEntry: Poison Weed
+	// HealingHerb.MapEntry: Healing Herb
+	// ZhaoShadowLantern.MapEntry: Zhao Shadow Lantern
+	// ZhaoShadowCurtain.MapEntry: Zhao Shadow Curtain
+	// XiongBoneTotem.MapEntry: Xiong Bone Totem
+	// WangWaterBasin.MapEntry: Wang Water Basin
+	// WangCrystalPillar.MapEntry: Wang Crystal Pillar
+	// TieWeaponRack.MapEntry: Tie Weapon Rack
+	// TieForgeWall.MapEntry: Tie Forge Wall
+	// ScatteredTent.MapEntry: Scattered Tent
+	// JiaSilkCurtain.MapEntry: Jia Silk Curtain
+	// JiaGoldCoinPile.MapEntry: Jia Gold Coin Pile
+	// GuYueMedicinePot.MapEntry: Gu Yue Medicine Pot
+	// GuYueBambooWall.MapEntry: Gu Yue Bamboo Wall
+	// BaiJadeScreen.MapEntry: Bai Jade Screen
+	// BaiJadePillar.MapEntry: Bai Jade Pillar
 }
 
 WorldGen: {
@@ -4495,21 +4903,21 @@ WorldGen: {
 
 Configs: {
 	VerminLordModConfig: {
-		// DisplayName: Vermin Lord Mod Config
-		// Headers.设置: 设置 Header
+		DisplayName: 蛊尊模组设置
+		Headers.设置: 设置
 
 		LimitSth: {
-			// Label: 等级限制
-			// Tooltip: 限制每转蛊师可以获取的额外血量、力量、防御加成，提升平衡性
+			Label: 等级限制
+			Tooltip: 限制每转蛊师可以获取的额外血量、力量、防御加成，提升平衡性
 		}
 	}
 
 	UILayoutConfig: {
-		// DisplayName: U I Layout Config
+		DisplayName: UI布局设置
 
 		PanelLayouts: {
-			// Label: Panel Layouts
-			// Tooltip: ""
+			Label: 面板布局
+			Tooltip: ""
 		}
 	}
 }

@@ -14,6 +14,9 @@ using VerminLordMod.Content.NPCs.Town;
 
 namespace VerminLordMod.Common.GlobalNPCs
 {
+    /// <summary>
+    /// 蛊虫掉落条目 — 定义单个物品的掉落概率和数量
+    /// </summary>
     public readonly struct GuDropEntry
     {
         public readonly int ItemType;
@@ -30,6 +33,9 @@ namespace VerminLordMod.Common.GlobalNPCs
         }
     }
 
+    /// <summary>
+    /// Boss掉落条目 — 定义Boss NPC的掉落表
+    /// </summary>
     public readonly struct BossDropEntry
     {
         public readonly int NpcType;

@@ -6,6 +6,18 @@ using VerminLordMod.Common.GlobalNPCs;
 
 namespace VerminLordMod.Common.GuBehaviors
 {
+    /// <summary>
+    /// 道痕效果系统 — 统一管理蛊虫攻击附加的战斗效果
+    /// 
+    /// 根据 DaoEffectTags 位标志，在命中时施加对应效果：
+    /// - 持续伤害（DoT/StrongDoT）
+    /// - 控制效果（Slow/Freeze/Fear/Charm/Silence/Disarm）
+    /// - 属性削弱（ArmorShred/Weaken/DrainStat）
+    /// - 位移效果（Pull/Push）
+    /// - 恢复效果（LifeSteal/QiRestore/Heal/Shield）
+    /// - 标记效果（Mark/MoonMark）
+    /// - 连锁效果（Chain）
+    /// </summary>
     public static class DaoEffectSystem
     {
         public static void ApplyEffects(NPC target, Player player, Projectile proj, DaoEffectTags tags,
