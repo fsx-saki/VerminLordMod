@@ -9,7 +9,25 @@ using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.Projectiles
-{
+{    /// <summary>
+    /// QingTengGuProj弹幕 — 道道
+    /// </summary>    /// <summary>
+    /// QingTengGuProj弹幕 — 道道
+    /// </summary>
+
+
+	/// <summary>
+
+
+
+	/// QingTengGu弹幕 — 木道
+
+
+
+	/// </summary>
+
+
+
 	public class QingTengGuProj : ModProjectile
 	{
 		// The texture doesn't have the same name as the item, so this property points to it.

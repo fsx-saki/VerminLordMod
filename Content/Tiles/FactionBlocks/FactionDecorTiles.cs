@@ -7,7 +7,13 @@ using Terraria.ObjectData;
 
 namespace VerminLordMod.Content.Tiles.FactionBlocks
 {
-    public class GuYueAltar : ModTile
+    /// <summary>
+    /// 古月祭坛 — 古月宗的祭坛
+    /// </summary>
+        /// <summary>
+    /// 古月祭坛 — 古月宗的祭坛
+    /// </summary>
+        public class GuYueAltar : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -42,7 +48,13 @@ namespace VerminLordMod.Content.Tiles.FactionBlocks
         }
     }
 
-    public class BaiJadeTable : ModTile
+    /// <summary>
+    /// 白玉桌 — 白玉制成的桌子
+    /// </summary>
+        /// <summary>
+    /// 白玉桌 — 白玉制成的桌子
+    /// </summary>
+        public class BaiJadeTable : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -69,7 +81,13 @@ namespace VerminLordMod.Content.Tiles.FactionBlocks
         }
     }
 
-    public class XiongAnvil : ModTile
+    /// <summary>
+    /// 熊家铁砧 — 熊家的铁砧
+    /// </summary>
+        /// <summary>
+    /// 熊家铁砧 — 熊家的铁砧
+    /// </summary>
+        public class XiongAnvil : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -104,7 +122,13 @@ namespace VerminLordMod.Content.Tiles.FactionBlocks
         }
     }
 
-    public class TieSmeltingFurnace : ModTile
+    /// <summary>
+    /// 铁家熔炉 — 铁家的冶炼熔炉
+    /// </summary>
+        /// <summary>
+    /// 铁家熔炉 — 铁家的冶炼熔炉
+    /// </summary>
+        public class TieSmeltingFurnace : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -139,7 +163,13 @@ namespace VerminLordMod.Content.Tiles.FactionBlocks
         }
     }
 
-    public class WangWaterOrb : ModTile
+    /// <summary>
+    /// 王家水球 — 王家的水球装饰
+    /// </summary>
+        /// <summary>
+    /// 王家水球 — 王家的水球装饰
+    /// </summary>
+        public class WangWaterOrb : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -175,7 +205,13 @@ namespace VerminLordMod.Content.Tiles.FactionBlocks
         }
     }
 
-    public class ZhaoSecretDoor : ModTile
+    /// <summary>
+    /// 赵家暗门 — 赵家的秘密门
+    /// </summary>
+        /// <summary>
+    /// 赵家暗门 — 赵家的秘密门
+    /// </summary>
+        public class ZhaoSecretDoor : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -206,7 +242,13 @@ namespace VerminLordMod.Content.Tiles.FactionBlocks
         }
     }
 
-    public class JiaTradingCounter : ModTile
+    /// <summary>
+    /// 贾家柜台 — 贾家的交易柜台
+    /// </summary>
+        /// <summary>
+    /// 贾家柜台 — 贾家的交易柜台
+    /// </summary>
+        public class JiaTradingCounter : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -233,7 +275,13 @@ namespace VerminLordMod.Content.Tiles.FactionBlocks
         }
     }
 
-    public class ScatteredCampfire : ModTile
+    /// <summary>
+    /// 散修篝火 — 散修营地的篝火
+    /// </summary>
+        /// <summary>
+    /// 散修篝火 — 散修营地的篝火
+    /// </summary>
+        public class ScatteredCampfire : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -268,7 +316,13 @@ namespace VerminLordMod.Content.Tiles.FactionBlocks
         }
     }
 
-    public class GuYueMedicinePot : ModTile
+    /// <summary>
+    /// 古月药罐 — 古月宗的药罐
+    /// </summary>
+        /// <summary>
+    /// 古月药罐 — 古月宗的药罐
+    /// </summary>
+        public class GuYueMedicinePot : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -303,7 +357,13 @@ namespace VerminLordMod.Content.Tiles.FactionBlocks
         }
     }
 
-    public class BaiJadeScreen : ModTile
+    /// <summary>
+    /// 白玉屏风 — 白玉制成的屏风
+    /// </summary>
+        /// <summary>
+    /// 白玉屏风 — 白玉制成的屏风
+    /// </summary>
+        public class BaiJadeScreen : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -338,7 +398,13 @@ namespace VerminLordMod.Content.Tiles.FactionBlocks
         }
     }
 
-    public class XiongBoneTotem : ModTile
+    /// <summary>
+    /// 熊家骨图腾 — 熊家的骨制图腾
+    /// </summary>
+        /// <summary>
+    /// 熊家骨图腾 — 熊家的骨制图腾
+    /// </summary>
+        public class XiongBoneTotem : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -373,7 +439,13 @@ namespace VerminLordMod.Content.Tiles.FactionBlocks
         }
     }
 
-    public class TieWeaponRack : ModTile
+    /// <summary>
+    /// 铁家兵器架 — 铁家的兵器架
+    /// </summary>
+        /// <summary>
+    /// 铁家兵器架 — 铁家的兵器架
+    /// </summary>
+        public class TieWeaponRack : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -408,7 +480,13 @@ namespace VerminLordMod.Content.Tiles.FactionBlocks
         }
     }
 
-    public class WangWaterBasin : ModTile
+    /// <summary>
+    /// 王家水盆 — 王家的水盆装饰
+    /// </summary>
+        /// <summary>
+    /// 王家水盆 — 王家的水盆装饰
+    /// </summary>
+        public class WangWaterBasin : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -443,7 +521,13 @@ namespace VerminLordMod.Content.Tiles.FactionBlocks
         }
     }
 
-    public class ZhaoShadowLantern : ModTile
+    /// <summary>
+    /// 赵家影灯 — 赵家的暗影灯笼
+    /// </summary>
+        /// <summary>
+    /// 赵家影灯 — 赵家的暗影灯笼
+    /// </summary>
+        public class ZhaoShadowLantern : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -478,7 +562,13 @@ namespace VerminLordMod.Content.Tiles.FactionBlocks
         }
     }
 
-    public class JiaGoldCoinPile : ModTile
+    /// <summary>
+    /// 贾家金币堆 — 贾家的金币堆装饰
+    /// </summary>
+        /// <summary>
+    /// 贾家金币堆 — 贾家的金币堆装饰
+    /// </summary>
+        public class JiaGoldCoinPile : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -513,7 +603,13 @@ namespace VerminLordMod.Content.Tiles.FactionBlocks
         }
     }
 
-    public class ScatteredTent : ModTile
+    /// <summary>
+    /// 散修帐篷 — 散修的帐篷
+    /// </summary>
+        /// <summary>
+    /// 散修帐篷 — 散修的帐篷
+    /// </summary>
+        public class ScatteredTent : ModTile
     {
         public override void SetStaticDefaults()
         {

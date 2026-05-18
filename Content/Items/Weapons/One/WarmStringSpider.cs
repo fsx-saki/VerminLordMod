@@ -5,6 +5,14 @@ using VerminLordMod.Content.Items.Weapons.Daos;
 
 namespace VerminLordMod.Content.Items.Weapons.One
 {
+	/// <summary>
+
+	/// 一转道蛊虫 — WarmStringSpider
+
+	/// 蛊虫
+
+	/// </summary>
+
 	class WarmStringSpider : EatingWeapon
 	{
 		protected override int qiCost => 10;

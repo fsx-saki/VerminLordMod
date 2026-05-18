@@ -14,6 +14,12 @@ using VerminLordMod.Content.Buffs.AddToSelf.Pobuff;
 
 namespace VerminLordMod.Content.Projectiles
 {
+	/// <summary>
+
+	/// WaterCircle弹幕 — 道道
+
+	/// </summary>
+
 	class WaterCircle:ModProjectile
 	{
 		public static Player player;

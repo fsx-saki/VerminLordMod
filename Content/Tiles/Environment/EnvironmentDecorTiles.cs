@@ -8,7 +8,13 @@ using Terraria.ObjectData;
 
 namespace VerminLordMod.Content.Tiles.Environment
 {
-    public class SpiritHerbPlot : ModTile
+    /// <summary>
+    /// 灵药圃 — 种植灵药的园圃
+    /// </summary>
+        /// <summary>
+    /// 灵药圃 — 种植灵药的园圃
+    /// </summary>
+        public class SpiritHerbPlot : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -44,7 +50,13 @@ namespace VerminLordMod.Content.Tiles.Environment
         }
     }
 
-    public class GuBreedingVat : ModTile
+    /// <summary>
+    /// 蛊虫繁殖缸 — 用于繁殖蛊虫的缸
+    /// </summary>
+        /// <summary>
+    /// 蛊虫繁殖缸 — 用于繁殖蛊虫的缸
+    /// </summary>
+        public class GuBreedingVat : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -80,7 +92,13 @@ namespace VerminLordMod.Content.Tiles.Environment
         }
     }
 
-    public class MeditationCushion : ModTile
+    /// <summary>
+    /// 蒲团 — 修炼打坐用的蒲团
+    /// </summary>
+        /// <summary>
+    /// 蒲团 — 修炼打坐用的蒲团
+    /// </summary>
+        public class MeditationCushion : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -114,7 +132,13 @@ namespace VerminLordMod.Content.Tiles.Environment
         }
     }
 
-    public class SpiritLantern : ModTile
+    /// <summary>
+    /// 灵灯 — 灵气点亮的灯笼
+    /// </summary>
+        /// <summary>
+    /// 灵灯 — 灵气点亮的灯笼
+    /// </summary>
+        public class SpiritLantern : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -151,7 +175,13 @@ namespace VerminLordMod.Content.Tiles.Environment
         }
     }
 
-    public class GuCauldron : ModTile
+    /// <summary>
+    /// 蛊鼎 — 炼制蛊虫的鼎
+    /// </summary>
+        /// <summary>
+    /// 蛊鼎 — 炼制蛊虫的鼎
+    /// </summary>
+        public class GuCauldron : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -193,7 +223,13 @@ namespace VerminLordMod.Content.Tiles.Environment
         }
     }
 
-    public class YuanStoneCluster : ModTile
+    /// <summary>
+    /// 元石簇 — 元石聚集的矿簇
+    /// </summary>
+        /// <summary>
+    /// 元石簇 — 元石聚集的矿簇
+    /// </summary>
+        public class YuanStoneCluster : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -229,7 +265,13 @@ namespace VerminLordMod.Content.Tiles.Environment
         }
     }
 
-    public class SpiritFlower : ModTile
+    /// <summary>
+    /// 灵花 — 蕴含灵气的花朵
+    /// </summary>
+        /// <summary>
+    /// 灵花 — 蕴含灵气的花朵
+    /// </summary>
+        public class SpiritFlower : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -269,7 +311,13 @@ namespace VerminLordMod.Content.Tiles.Environment
         }
     }
 
-    public class AncientTreeMoss : ModTile
+    /// <summary>
+    /// 古树苔 — 古老树木上的苔藓
+    /// </summary>
+        /// <summary>
+    /// 古树苔 — 古老树木上的苔藓
+    /// </summary>
+        public class AncientTreeMoss : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -299,7 +347,13 @@ namespace VerminLordMod.Content.Tiles.Environment
         }
     }
 
-    public class GuWormHole : ModTile
+    /// <summary>
+    /// 蛊虫洞 — 蛊虫挖掘的洞穴
+    /// </summary>
+        /// <summary>
+    /// 蛊虫洞 — 蛊虫挖掘的洞穴
+    /// </summary>
+        public class GuWormHole : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -335,7 +389,13 @@ namespace VerminLordMod.Content.Tiles.Environment
         }
     }
 
-    public class MoonlitPond : ModTile
+    /// <summary>
+    /// 月池 — 月光照耀的水池
+    /// </summary>
+        /// <summary>
+    /// 月池 — 月光照耀的水池
+    /// </summary>
+        public class MoonlitPond : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -373,7 +433,13 @@ namespace VerminLordMod.Content.Tiles.Environment
         }
     }
 
-    public class WitheredTree : ModTile
+    /// <summary>
+    /// 枯树 — 枯萎的树木
+    /// </summary>
+        /// <summary>
+    /// 枯树 — 枯萎的树木
+    /// </summary>
+        public class WitheredTree : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -403,7 +469,13 @@ namespace VerminLordMod.Content.Tiles.Environment
         }
     }
 
-    public class SpiritBeastDen : ModTile
+    /// <summary>
+    /// 灵兽穴 — 灵兽栖息的洞穴
+    /// </summary>
+        /// <summary>
+    /// 灵兽穴 — 灵兽栖息的洞穴
+    /// </summary>
+        public class SpiritBeastDen : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -431,7 +503,13 @@ namespace VerminLordMod.Content.Tiles.Environment
         }
     }
 
-    public class HerbDryingRack : ModTile
+    /// <summary>
+    /// 药草晾架 — 晾干药草的架子
+    /// </summary>
+        /// <summary>
+    /// 药草晾架 — 晾干药草的架子
+    /// </summary>
+        public class HerbDryingRack : ModTile
     {
         public override void SetStaticDefaults()
         {

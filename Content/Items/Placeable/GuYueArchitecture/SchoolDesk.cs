@@ -6,7 +6,10 @@ namespace VerminLordMod.Content.Items.Placeable.GuYueArchitecture
     /// <summary>
     /// 古月学堂书桌物品 - 可放置为书桌家具
     /// </summary>
-    public class SchoolDesk : ModItem
+    /// <summary>
+    /// 学堂桌（物品） — 古月宗学堂的桌子
+    /// </summary>
+        public class SchoolDesk : ModItem
     {
         public override void SetDefaults()
         {

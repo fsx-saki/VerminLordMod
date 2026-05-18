@@ -9,6 +9,21 @@ using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.Projectiles
 {
+    /// <summary>
+
+    /// ShiningGu弹幕 — 木道
+
+    /// </summary>
+
+    /// <summary>
+
+
+    /// ShiningGu弹幕 — 木道
+
+
+    /// </summary>
+
+
     class ShiningProj : BaseBullet
     {
         protected override void RegisterBehaviors()

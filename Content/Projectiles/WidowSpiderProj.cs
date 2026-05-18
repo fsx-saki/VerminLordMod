@@ -11,6 +11,21 @@ using VerminLordMod.Content.Buffs.AddToEnemy;
 
 namespace VerminLordMod.Content.Projectiles
 {
+	/// <summary>
+
+	/// WidowSpider弹幕 — 毒道
+
+	/// </summary>
+
+	/// <summary>
+
+
+	/// WidowSpider弹幕 — 毒道
+
+
+	/// </summary>
+
+
 	class WidowSpiderProj:ModProjectile
 	{
 		public override void SetDefaults() {

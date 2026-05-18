@@ -8,7 +8,13 @@ using Terraria.ObjectData;
 
 namespace VerminLordMod.Content.Tiles.GuYueArchitecture
 {
-    public class HealingHerb : ModTile
+    /// <summary>
+    /// 疗伤草 — 具有疗伤效果的草药
+    /// </summary>
+        /// <summary>
+    /// 疗伤草 — 具有疗伤效果的草药
+    /// </summary>
+        public class HealingHerb : ModTile
     {
         public override void SetStaticDefaults()
         {

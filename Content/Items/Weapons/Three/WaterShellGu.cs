@@ -6,6 +6,14 @@ using VerminLordMod.Content.Items.Weapons.Daos;
 
 namespace VerminLordMod.Content.Items.Weapons.Three
 {
+	/// <summary>
+
+	/// 三转水蛊虫 — WaterShellGu
+
+	/// 蛊虫
+
+	/// </summary>
+
 	class WaterShellGu : WaterWeapon
 	{
 

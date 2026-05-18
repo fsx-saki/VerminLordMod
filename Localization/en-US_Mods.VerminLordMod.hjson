@@ -176,6 +176,26 @@ Projectiles: {
 	IceFragmentProj.DisplayName: Ice Fragment Proj
 	WaterHealSeekerProj.DisplayName: Water Heal Seeker Proj
 	WindBurstExplosionProj.DisplayName: Wind Burst Explosion Proj
+	DanHuoProj.DisplayName: Dan Huo Proj
+	BingBaoProj.DisplayName: Bing Bao Proj
+	DaoChiXueFuProj.DisplayName: Dao Chi Xue Fu Proj
+	GuangHongProj.DisplayName: Guang Hong Proj
+	TianPengProj.DisplayName: Tian Peng Proj
+	ShuiLongProj.DisplayName: Shui Long Proj
+	BaoRanProj.DisplayName: Bao Ran Proj
+	XiuLuoShiProj.DisplayName: Xiu Luo Shi Proj
+	HuoLongProj.DisplayName: Huo Long Proj
+	TieShouQinNaProj.DisplayName: Tie Shou Qin Na Proj
+	ShuangJianProj.DisplayName: Shuang Jian Proj
+	YouLongProj.DisplayName: You Long Proj
+	DieYingProj.DisplayName: Die Ying Proj
+	BaLiProj.DisplayName: Ba Li Proj
+	JinLongProj.DisplayName: Jin Long Proj
+	XueKuangProj.DisplayName: Xue Kuang Proj
+	DingYinProj.DisplayName: Ding Yin Proj
+	TunJiangChanProj.DisplayName: Tun Jiang Chan Proj
+	XueHeMangProj.DisplayName: Xue He Mang Proj
+	HuoGuangZhuTianProj.DisplayName: Huo Guang Zhu Tian Proj
 }
 
 Prefixes: {
@@ -2851,6 +2871,166 @@ Items: {
 		Tooltip: ""
 	}
 
+	DanHuoGu: {
+		UsesXQi: Mods.VerminLordMod.Items.DanHuoGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.DanHuoGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.DanHuoGu.GuLevel
+		DisplayName: Dan Huo Gu
+		Tooltip: ""
+	}
+
+	BingBaoGu: {
+		UsesXQi: Mods.VerminLordMod.Items.BingBaoGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BingBaoGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BingBaoGu.GuLevel
+		DisplayName: Bing Bao Gu
+		Tooltip: ""
+	}
+
+	DaoChiXueFuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.DaoChiXueFuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.DaoChiXueFuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.DaoChiXueFuGu.GuLevel
+		DisplayName: Dao Chi Xue Fu Gu
+		Tooltip: ""
+	}
+
+	GuangHongGu: {
+		UsesXQi: Mods.VerminLordMod.Items.GuangHongGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.GuangHongGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.GuangHongGu.GuLevel
+		DisplayName: Guang Hong Gu
+		Tooltip: ""
+	}
+
+	TianPengGu: {
+		UsesXQi: Mods.VerminLordMod.Items.TianPengGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.TianPengGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.TianPengGu.GuLevel
+		DisplayName: Tian Peng Gu
+		Tooltip: ""
+	}
+
+	ShuiLongGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ShuiLongGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ShuiLongGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ShuiLongGu.GuLevel
+		DisplayName: Shui Long Gu
+		Tooltip: ""
+	}
+
+	BaoRanGu: {
+		UsesXQi: Mods.VerminLordMod.Items.BaoRanGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BaoRanGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BaoRanGu.GuLevel
+		DisplayName: Bao Ran Gu
+		Tooltip: ""
+	}
+
+	XiuLuoShiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XiuLuoShiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XiuLuoShiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XiuLuoShiGu.GuLevel
+		DisplayName: Xiu Luo Shi Gu
+		Tooltip: ""
+	}
+
+	HuoLongGu: {
+		UsesXQi: Mods.VerminLordMod.Items.HuoLongGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.HuoLongGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.HuoLongGu.GuLevel
+		DisplayName: Huo Long Gu
+		Tooltip: ""
+	}
+
+	TieShouQinNaGu: {
+		UsesXQi: Mods.VerminLordMod.Items.TieShouQinNaGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.TieShouQinNaGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.TieShouQinNaGu.GuLevel
+		DisplayName: Tie Shou Qin Na Gu
+		Tooltip: ""
+	}
+
+	ShuangJianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ShuangJianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ShuangJianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ShuangJianGu.GuLevel
+		DisplayName: Shuang Jian Gu
+		Tooltip: ""
+	}
+
+	YouLongGu: {
+		UsesXQi: Mods.VerminLordMod.Items.YouLongGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.YouLongGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.YouLongGu.GuLevel
+		DisplayName: You Long Gu
+		Tooltip: ""
+	}
+
+	DieYingGu: {
+		UsesXQi: Mods.VerminLordMod.Items.DieYingGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.DieYingGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.DieYingGu.GuLevel
+		DisplayName: Die Ying Gu
+		Tooltip: ""
+	}
+
+	BaLiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.BaLiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BaLiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BaLiGu.GuLevel
+		DisplayName: Ba Li Gu
+		Tooltip: ""
+	}
+
+	JinLongGu: {
+		UsesXQi: Mods.VerminLordMod.Items.JinLongGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.JinLongGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.JinLongGu.GuLevel
+		DisplayName: Jin Long Gu
+		Tooltip: ""
+	}
+
+	XueKuangGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XueKuangGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XueKuangGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XueKuangGu.GuLevel
+		DisplayName: Xue Kuang Gu
+		Tooltip: ""
+	}
+
+	DingYinGu: {
+		UsesXQi: Mods.VerminLordMod.Items.DingYinGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.DingYinGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.DingYinGu.GuLevel
+		DisplayName: Ding Yin Gu
+		Tooltip: ""
+	}
+
+	TunJiangChan: {
+		UsesXQi: Mods.VerminLordMod.Items.TunJiangChan.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.TunJiangChan.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.TunJiangChan.GuLevel
+		DisplayName: Tun Jiang Chan
+		Tooltip: ""
+	}
+
+	XueHeMang: {
+		UsesXQi: Mods.VerminLordMod.Items.XueHeMang.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XueHeMang.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XueHeMang.GuLevel
+		DisplayName: Xue He Mang
+		Tooltip: ""
+	}
+
+	HuoGuangZhuTianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.HuoGuangZhuTianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.HuoGuangZhuTianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.HuoGuangZhuTianGu.GuLevel
+		DisplayName: Huo Guang Zhu Tian Gu
+		Tooltip: ""
+	}
+
 	TrailDemoItems: {
 		DisplayName: Trail Demo Items
 		Tooltip: ""
@@ -4251,7 +4431,847 @@ Items: {
 		ControlRate: Mods.VerminLordMod.Items.WarHornGu.ControlRate
 		UsesXQi: Mods.VerminLordMod.Items.WarHornGu.UsesXQi
 	}
-}
+
+	元石砖: {
+		DisplayName: 元石砖
+		Tooltip: 元石制成的砖块，价值不菲
+	}
+	影砖: {
+		DisplayName: 影砖
+		Tooltip: 隐入暗影的砖块，影道建筑常用
+	}
+	暗砖: {
+		DisplayName: 暗砖
+		Tooltip: 阴暗的砖块，暗道建筑常用
+	}
+	律砖: {
+		DisplayName: 律砖
+		Tooltip: 规则纹理的砖块，律道建筑常用
+	}
+	血砖: {
+		DisplayName: 血砖
+		Tooltip: 血红色的砖块，血道建筑常用
+	}
+	宙砖: {
+		DisplayName: 宙砖
+		Tooltip: 时间痕迹的砖块，宙道建筑常用
+	}
+	灵苔石: {
+		DisplayName: 灵苔石
+		Tooltip: 覆盖灵苔的石头，散发微弱灵气
+	}
+	灵壤: {
+		DisplayName: 灵壤
+		Tooltip: 灵气充盈的土壤，适合种植灵草
+	}
+	蛊纹砖: {
+		DisplayName: 蛊纹砖
+		Tooltip: 刻有蛊纹的砖块，用于蛊师建筑
+	}
+	雷砖: {
+		DisplayName: 雷砖
+		Tooltip: 带电的砖块，雷道建筑常用
+	}
+	龙鳞砖: {
+		DisplayName: 龙鳞砖
+		Tooltip: 龙鳞纹路的砖块，坚固且美观
+	}
+	魂砖: {
+		DisplayName: 魂砖
+		Tooltip: 散发幽光的砖块，魂道建筑常用
+	}
+	阳砖: {
+		DisplayName: 阳砖
+		Tooltip: 散发暖光的砖块，阳道建筑常用
+	}
+	云砖: {
+		DisplayName: 云砖
+		Tooltip: 如云般轻盈的砖块，宇道建筑常用
+	}
+	蛊土: {
+		DisplayName: 蛊土
+		Tooltip: 被蛊虫之力侵蚀的土壤
+	}
+	毒砖: {
+		DisplayName: 毒砖
+		Tooltip: 泛绿的砖块，毒道建筑常用
+	}
+	梦砖: {
+		DisplayName: 梦砖
+		Tooltip: 虚幻的砖块，梦道建筑常用
+	}
+	晶化沙: {
+		DisplayName: 晶化沙
+		Tooltip: 灵气晶化后的沙土，闪烁微光
+	}
+	月砖: {
+		DisplayName: 月砖
+		Tooltip: 散发月光的砖块，月道建筑常用
+	}
+	灵骨砖: {
+		DisplayName: 灵骨砖
+		Tooltip: 灵骨制成的砖块，带有灵气
+	}
+	星辉砖: {
+		DisplayName: 星辉砖
+		Tooltip: 星光凝结的砖块，夜间发光
+	}
+	深层血沙: {
+		DisplayName: 深层血沙
+		Tooltip: 深层地下的血沙，颜色更深
+	}
+	骨砖: {
+		DisplayName: 骨砖
+		Tooltip: 骨质砖块，骨道建筑常用
+	}
+	玄武砖: {
+		DisplayName: 玄武砖
+		Tooltip: 玄武纹路的砖块，厚重沉稳
+	}
+	冰砖: {
+		DisplayName: 冰砖
+		Tooltip: 冰寒的砖块，冰道建筑常用
+	}
+	风砖: {
+		DisplayName: 风砖
+		Tooltip: 轻盈的砖块，风道建筑常用
+	}
+	土砖: {
+		DisplayName: 土砖
+		Tooltip: 厚重的砖块，土道建筑常用
+	}
+	星砖: {
+		DisplayName: 星砖
+		Tooltip: 闪烁星光的砖块，星辰道建筑常用
+	}
+	凤羽砖: {
+		DisplayName: 凤羽砖
+		Tooltip: 凤羽纹路的砖块，温暖如春
+	}
+	火砖: {
+		DisplayName: 火砖
+		Tooltip: 耐火的砖块，火道建筑常用
+	}
+	灵木方块: {
+		DisplayName: 灵木方块
+		Tooltip: 灵木制成的建筑方块
+	}
+	冥铁砖: {
+		DisplayName: 冥铁砖
+		Tooltip: 冥铁锻造的砖块，坚硬无比
+	}
+	赤金矿: {
+		DisplayName: 赤金矿
+		Tooltip: 赤金色的珍贵矿石，可用于锻造高级蛊器
+	}
+	深层元石矿: {
+		DisplayName: 深层元石矿
+		Tooltip: 深层地下的元石矿脉，蕴含更纯净的灵气
+	}
+	魂银矿石: {
+		DisplayName: 魂银矿石
+		Tooltip: 散发幽光的银色矿石，含有魂道道痕
+	}
+	火炭矿石: {
+		DisplayName: 火炭矿石
+		Tooltip: 火炭山特产矿石，燃烧长久无烟
+	}
+	血铜矿石: {
+		DisplayName: 血铜矿石
+		Tooltip: 血红色的铜矿石，常见于血道环境
+	}
+	灵髓矿: {
+		DisplayName: 灵髓矿
+		Tooltip: 灵气凝结而成的矿髓，极为稀有
+	}
+	龙骨矿: {
+		DisplayName: 龙骨矿
+		Tooltip: 远古龙族遗骸矿化后的珍贵矿石
+	}
+	骨玉矿石: {
+		DisplayName: 骨玉矿石
+		Tooltip: 骨质中凝结的玉石，可用于骨道炼蛊
+	}
+	天晶矿: {
+		DisplayName: 天晶矿
+		Tooltip: 蕴含天晶之力的稀有矿石，发出淡蓝色微光
+	}
+	蛊晶矿: {
+		DisplayName: 蛊晶矿
+		Tooltip: 蛊虫之力结晶形成的矿石，蕴含诡异能量
+	}
+	毒铁矿石: {
+		DisplayName: 毒铁矿石
+		Tooltip: 被毒气浸染的铁矿石，表面泛绿
+	}
+	幽冥矿: {
+		DisplayName: 幽冥矿
+		Tooltip: 来自幽冥深处的暗色矿石，散发阴冷气息
+	}
+	星辰矿石: {
+		DisplayName: 星辰矿石
+		Tooltip: 内含星辰系蛊的顽石，表面有蓝色荧光
+	}
+	灵晶矿石: {
+		DisplayName: 灵晶矿石
+		Tooltip: 蕴含灵气的结晶矿石，发出微弱光芒
+	}
+	镇魂柱: {
+		DisplayName: 镇魂柱
+		Tooltip: 镇压魂魄的石柱，刻满符文
+	}
+	毒沼泽: {
+		DisplayName: 毒沼泽
+		Tooltip: 充满毒素的沼泽地块
+	}
+	蛊茧: {
+		DisplayName: 蛊茧
+		Tooltip: 蛊虫结成的茧，内部蛰伏着未知
+	}
+	骸骨柱: {
+		DisplayName: 骸骨柱
+		Tooltip: 由骸骨堆砌的柱子
+	}
+	尸砖: {
+		DisplayName: 尸砖
+		Tooltip: 尸骸制成的砖块，令人不安
+	}
+	小型蛊祭坛: {
+		DisplayName: 小型蛊祭坛
+		Tooltip: 小型蛊虫祭祀坛，散发诡异气息
+	}
+	枯木方块: {
+		DisplayName: 枯木方块
+		Tooltip: 枯萎的木材方块
+	}
+	腐骨堆: {
+		DisplayName: 腐骨堆
+		Tooltip: 腐朽的骨骼堆积，散发恶臭
+	}
+	小型血池: {
+		DisplayName: 小型血池
+		Tooltip: 小型的血道池子，散发血腥气息
+	}
+	怨灵碑: {
+		DisplayName: 怨灵碑
+		Tooltip: 刻满怨灵符文的石碑
+	}
+	蛊丝方块: {
+		DisplayName: 蛊丝方块
+		Tooltip: 蛊虫吐丝凝结的方块
+	}
+	暗灵烛: {
+		DisplayName: 暗灵烛
+		Tooltip: 暗灵之火点燃的蜡烛，散发幽暗光芒
+	}
+	血蛊池: {
+		DisplayName: 血蛊池
+		Tooltip: 血色蛊虫聚集的池子
+	}
+	血肉墙: {
+		DisplayName: 血肉墙
+		Tooltip: 血肉凝固形成的墙壁，令人不寒而栗
+	}
+	毒雾池: {
+		DisplayName: 毒雾池
+		Tooltip: 不断冒出毒雾的池子
+	}
+	古月储物箱: {
+		DisplayName: 古月储物箱
+		Tooltip: 古月寨的储物箱
+	}
+	古月木地板: {
+		DisplayName: 古月木地板
+		Tooltip: 古月寨风格的木地板
+	}
+	古月蛊架: {
+		DisplayName: 古月蛊架
+		Tooltip: 放置蛊虫的专用架子
+	}
+	青茅石台: {
+		DisplayName: 青茅石台
+		Tooltip: 青茅石制成的平台
+	}
+	古月练功桩: {
+		DisplayName: 古月练功桩
+		Tooltip: 古月宗弟子练功用的木桩
+	}
+	古月赤铜方块: {
+		DisplayName: 古月赤铜方块
+		Tooltip: 赤铜制成的古月风格方块
+	}
+	青茅石砖: {
+		DisplayName: 青茅石砖
+		Tooltip: 青茅山特产石砖
+	}
+	古月旗杆: {
+		DisplayName: 古月旗杆
+		Tooltip: 古月宗的旗帜杆，彰显宗门威仪
+	}
+	古月药柜: {
+		DisplayName: 古月药柜
+		Tooltip: 存放蛊药和灵草的柜子
+	}
+	古月石灯: {
+		DisplayName: 古月石灯
+		Tooltip: 古月宗特有的石灯，散发柔和光芒
+	}
+	古月灯笼: {
+		DisplayName: 古月灯笼
+		Tooltip: 古月寨的灯笼，发出暖光
+	}
+	古月兵器架: {
+		DisplayName: 古月兵器架
+		Tooltip: 古月寨的兵器架
+	}
+	古月灵泉: {
+		DisplayName: 古月灵泉
+		Tooltip: 古月宗灵泉，泉水蕴含灵气
+	}
+	古月书架: {
+		DisplayName: 古月书架
+		Tooltip: 古月寨的书架，存放蛊方
+	}
+	古月屏风: {
+		DisplayName: 古月屏风
+		Tooltip: 古月宗风格的屏风
+	}
+	古月旗帜: {
+		DisplayName: 古月旗帜
+		Tooltip: 古月一族的旗帜
+	}
+	青茅竹方块: {
+		DisplayName: 青茅竹方块
+		Tooltip: 青矛竹制成的建筑方块
+	}
+	古月石碑: {
+		DisplayName: 古月石碑
+		Tooltip: 刻有古月宗训的石碑
+	}
+	青茅石柱: {
+		DisplayName: 青茅石柱
+		Tooltip: 青茅石制成的柱子
+	}
+	蛊卵孵化器: {
+		DisplayName: 蛊卵孵化器
+		Tooltip: 用于孵化蛊虫卵的温控装置
+	}
+	冰心莲: {
+		DisplayName: 冰心莲
+		Tooltip: 冰寒之地的莲花，花瓣晶莹如冰
+	}
+	金针草: {
+		DisplayName: 金针草
+		Tooltip: 叶片如金针的草药，可用于炼蛊
+	}
+	灵兽笼: {
+		DisplayName: 灵兽笼
+		Tooltip: 关押灵兽的笼子
+	}
+	聚灵灯: {
+		DisplayName: 聚灵灯
+		Tooltip: 聚集灵气的灯笼，发出柔和光芒
+	}
+	蛊虫隔离笼: {
+		DisplayName: 蛊虫隔离笼
+		Tooltip: 隔离危险蛊虫的笼子
+	}
+	蛊炼化台: {
+		DisplayName: 蛊炼化台
+		Tooltip: 用于炼化蛊虫的专用台座
+	}
+	灵雾兰: {
+		DisplayName: 灵雾兰
+		Tooltip: 被灵雾笼罩的兰花，散发清幽香气
+	}
+	蛊母花: {
+		DisplayName: 蛊母花
+		Tooltip: 蛊母栖息的花朵，是蛊虫繁殖的温床
+	}
+	灵石研磨器: {
+		DisplayName: 灵石研磨器
+		Tooltip: 研磨灵石为粉的器具
+	}
+	灵液收集器: {
+		DisplayName: 灵液收集器
+		Tooltip: 收集灵液的装置
+	}
+	灵气导引柱: {
+		DisplayName: 灵气导引柱
+		Tooltip: 导引灵气流动的石柱
+	}
+	血藤: {
+		DisplayName: 血藤
+		Tooltip: 暗红色的吸血藤蔓，触碰会吸取灵气
+	}
+	火棘草: {
+		DisplayName: 火棘草
+		Tooltip: 燃烧着微弱火焰的荆棘草
+	}
+	九叶芝: {
+		DisplayName: 九叶芝
+		Tooltip: 九片叶子的灵芝，药效非凡
+	}
+	蛊虫喂养槽: {
+		DisplayName: 蛊虫喂养槽
+		Tooltip: 喂养蛊虫的专用食槽
+	}
+	聚气阵: {
+		DisplayName: 聚气阵
+		Tooltip: 聚集天地灵气的阵法，修炼辅助
+	}
+	蛊虫鉴定台: {
+		DisplayName: 蛊虫鉴定台
+		Tooltip: 鉴定蛊虫品质和属性的工作台
+	}
+	月兰野花: {
+		DisplayName: 月兰野花
+		Tooltip: 野外生长的月兰花，花瓣如月牙
+	}
+	真元凝聚器: {
+		DisplayName: 真元凝聚器
+		Tooltip: 凝聚真元的装置，辅助修行
+	}
+	灵气聚拢阵: {
+		DisplayName: 灵气聚拢阵
+		Tooltip: 聚拢灵气的阵法装置
+	}
+	蛊虫净化池: {
+		DisplayName: 蛊虫净化池
+		Tooltip: 净化蛊虫的灵水池
+	}
+	蛊虫养殖池: {
+		DisplayName: 蛊虫养殖池
+		Tooltip: 养殖蛊虫的水池
+	}
+	蛊虫饲料槽: {
+		DisplayName: 蛊虫饲料槽
+		Tooltip: 投放蛊虫食物的槽
+	}
+	鬼面菇: {
+		DisplayName: 鬼面菇
+		Tooltip: 形似鬼面的蘑菇，具有致幻效果
+	}
+	元素熔炉: {
+		DisplayName: 元素熔炉
+		Tooltip: 融合多种元素的炼蛊熔炉
+	}
+	蛊虫交配台: {
+		DisplayName: 蛊虫交配台
+		Tooltip: 蛊虫交配繁殖的专用台
+	}
+	蛇纹藤: {
+		DisplayName: 蛇纹藤
+		Tooltip: 蛇纹般的藤蔓植物，可攀附生长
+	}
+	碧灵草: {
+		DisplayName: 碧灵草
+		Tooltip: 碧绿色灵草，常见于灵气浓郁之地
+	}
+	蛊虫冬眠箱: {
+		DisplayName: 蛊虫冬眠箱
+		Tooltip: 让蛊虫进入冬眠状态的保温箱
+	}
+	雷光苔: {
+		DisplayName: 雷光苔
+		Tooltip: 闪烁微弱电光的苔藓，生长在雷击之地
+	}
+	紫云花: {
+		DisplayName: 紫云花
+		Tooltip: 紫色云雾般的花朵，可入蛊药
+	}
+	暗影菌: {
+		DisplayName: 暗影菌
+		Tooltip: 暗影中生长的菌类，吸收阴暗能量
+	}
+	蛊炼制鼎: {
+		DisplayName: 蛊炼制鼎
+		Tooltip: 大型炼蛊鼎，可同时炼制多只蛊虫
+	}
+	蛊虫交易摊: {
+		DisplayName: 蛊虫交易摊
+		Tooltip: 蛊虫交易市场的摊位
+	}
+	蛊虫培养皿: {
+		DisplayName: 蛊虫培养皿
+		Tooltip: 用于培养蛊虫的特殊器皿
+	}
+	蛊虫储存罐: {
+		DisplayName: 蛊虫储存罐
+		Tooltip: 储存蛊虫的特制陶罐
+	}
+	龙涎花: {
+		DisplayName: 龙涎花
+		Tooltip: 传说龙族涎液浇灌而成的奇异花朵
+	}
+	冰晶柱: {
+		DisplayName: 冰晶柱
+		Tooltip: 极寒之地自然形成的冰晶柱
+	}
+	旱地裂纹石: {
+		DisplayName: 旱地裂纹石
+		Tooltip: 干旱地面开裂的石头
+	}
+	雷击木: {
+		DisplayName: 雷击木
+		Tooltip: 被雷电击中的树木，蕴含雷属性灵气
+	}
+	霜花: {
+		DisplayName: 霜花
+		Tooltip: 严寒中绽放的冰霜之花
+	}
+	熔岩石: {
+		DisplayName: 熔岩石
+		Tooltip: 火山熔岩冷却后的岩石，余温犹存
+	}
+	熔岩晶: {
+		DisplayName: 熔岩晶
+		Tooltip: 熔岩中凝结的晶石，灼热发光
+	}
+	冰封花: {
+		DisplayName: 冰封花
+		Tooltip: 被冰封保存的远古花朵
+	}
+	火山灰砖: {
+		DisplayName: 火山灰砖
+		Tooltip: 火山灰制成的砖块，耐高温
+	}
+	风化岩: {
+		DisplayName: 风化岩
+		Tooltip: 长期风化侵蚀的岩石，纹理独特
+	}
+	雪灵花: {
+		DisplayName: 雪灵花
+		Tooltip: 雪地中盛开的灵花，洁白无瑕
+	}
+	灵气结晶树: {
+		DisplayName: 灵气结晶树
+		Tooltip: 灵气结晶形成的树状结构
+	}
+	灵雾石: {
+		DisplayName: 灵雾石
+		Tooltip: 被灵雾笼罩的石头，若隐若现
+	}
+	灵石堆: {
+		DisplayName: 灵石堆
+		Tooltip: 自然堆积的灵石，灵气外溢
+	}
+	灵木桩: {
+		DisplayName: 灵木桩
+		Tooltip: 灵木砍伐后留下的树桩，仍含灵气
+	}
+	古树根: {
+		DisplayName: 古树根
+		Tooltip: 古老树木的粗壮根系
+	}
+	灵气漩涡: {
+		DisplayName: 灵气漩涡
+		Tooltip: 灵气自然形成的漩涡现象
+	}
+	星光石: {
+		DisplayName: 星光石
+		Tooltip: 夜间散发星光的石头
+	}
+	灵草花圃: {
+		DisplayName: 灵草花圃
+		Tooltip: 精心培育的灵草花圃
+	}
+	灵气瀑布石: {
+		DisplayName: 灵气瀑布石
+		Tooltip: 灵气如瀑布般流淌的石头
+	}
+	灵藤架: {
+		DisplayName: 灵藤架
+		Tooltip: 灵藤攀附的木架
+	}
+	风蚀岩: {
+		DisplayName: 风蚀岩
+		Tooltip: 被高空风蚀成奇特形状的岩石
+	}
+	云母石: {
+		DisplayName: 云母石
+		Tooltip: 高空中的云母矿石，轻盈如云
+	}
+	天际花: {
+		DisplayName: 天际花
+		Tooltip: 只在极高处绽放的花朵，花瓣透明
+	}
+	星尘沙: {
+		DisplayName: 星尘沙
+		Tooltip: 星尘沉降形成的沙地，闪烁微光
+	}
+	天光晶: {
+		DisplayName: 天光晶
+		Tooltip: 吸收天光的晶石，光芒耀眼
+	}
+	虹光石: {
+		DisplayName: 虹光石
+		Tooltip: 折射出彩虹光芒的石头
+	}
+	浮空石: {
+		DisplayName: 浮空石
+		Tooltip: 悬浮在空中的石头，蕴含反重力灵气
+	}
+	雷云砖: {
+		DisplayName: 雷云砖
+		Tooltip: 雷云凝结的砖块，偶有电弧闪过
+	}
+	蛊毒花: {
+		DisplayName: 蛊毒花
+		Tooltip: 蛊虫授粉产生的毒花，色彩艳丽
+	}
+	蛊丝茧: {
+		DisplayName: 蛊丝茧
+		Tooltip: 蛊虫吐丝结成的茧，内部有蛊虫蛹
+	}
+	蛊菌团: {
+		DisplayName: 蛊菌团
+		Tooltip: 蛊虫共生菌形成的菌团
+	}
+	蛊虫蜕皮架: {
+		DisplayName: 蛊虫蜕皮架
+		Tooltip: 供蛊虫蜕皮的特殊架子
+	}
+	蛊卵石: {
+		DisplayName: 蛊卵石
+		Tooltip: 内含蛊卵的矿石，敲碎可获得蛊虫
+	}
+	蛊虫食物槽: {
+		DisplayName: 蛊虫食物槽
+		Tooltip: 盛放蛊虫食物的石槽
+	}
+	蛊虫巢穴: {
+		DisplayName: 蛊虫巢穴
+		Tooltip: 野生蛊虫的巢穴，可能有蛊虫栖息
+	}
+	蛊虫排泄晶: {
+		DisplayName: 蛊虫排泄晶
+		Tooltip: 蛊虫排泄物结晶，竟是珍贵材料
+	}
+	蛊虫冬眠石: {
+		DisplayName: 蛊虫冬眠石
+		Tooltip: 蛊虫冬眠时依附的温热石头
+	}
+	蛊蜕壳: {
+		DisplayName: 蛊蜕壳
+		Tooltip: 蛊虫蜕下的外壳，可用于炼制
+	}
+	古月宗灯柱: {
+		DisplayName: 古月宗灯柱
+		Tooltip: 古月宗道路旁的灯柱
+	}
+	王家水晶台: {
+		DisplayName: 王家水晶台
+		Tooltip: 王家的水晶展示台
+	}
+	贾家商铺台: {
+		DisplayName: 贾家商铺台
+		Tooltip: 贾家的商铺展示台
+	}
+	散修营火堆: {
+		DisplayName: 散修营火堆
+		Tooltip: 散修聚集地的营火
+	}
+	古月宗碑: {
+		DisplayName: 古月宗碑
+		Tooltip: 古月宗的宗门石碑，刻有宗门训诫
+	}
+	百家旗帜: {
+		DisplayName: 百家旗帜
+		Tooltip: 百家联盟的旗帜
+	}
+	白家玉石台: {
+		DisplayName: 白家玉石台
+		Tooltip: 白家的玉石展示台
+	}
+	熊家练武桩: {
+		DisplayName: 熊家练武桩
+		Tooltip: 熊家的练武木桩
+	}
+	铁家锻造台: {
+		DisplayName: 铁家锻造台
+		Tooltip: 铁家的锻造工作台
+	}
+	赵家暗影柱: {
+		DisplayName: 赵家暗影柱
+		Tooltip: 赵家的暗影纹路柱子
+	}
+	灵气测量柱: {
+		DisplayName: 灵气测量柱
+		Tooltip: 测量灵气浓度的石柱
+	}
+	突破台: {
+		DisplayName: 突破台
+		Tooltip: 辅助突破境界的特殊台座
+	}
+	灵气导引阵: {
+		DisplayName: 灵气导引阵
+		Tooltip: 导引灵气流动的阵法，辅助修炼
+	}
+	悟道石: {
+		DisplayName: 悟道石
+		Tooltip: 传说能助人悟道的奇石
+	}
+	心魔镜: {
+		DisplayName: 心魔镜
+		Tooltip: 映照心魔的镜子，修炼者必经之试
+	}
+	打坐台: {
+		DisplayName: 打坐台
+		Tooltip: 专门用于打坐修炼的石台
+	}
+	灵气漩涡石: {
+		DisplayName: 灵气漩涡石
+		Tooltip: 灵气形成漩涡的石头，修炼圣地
+	}
+	修炼蒲团: {
+		DisplayName: 修炼蒲团
+		Tooltip: 高级修炼蒲团，提升修炼效率
+	}
+	聚灵阵盘: {
+		DisplayName: 聚灵阵盘
+		Tooltip: 聚灵阵的核心阵盘，加速灵气聚集
+	}
+	闭关石门: {
+		DisplayName: 闭关石门
+		Tooltip: 闭关修炼时封堵洞口的石门
+	}
+	寒冰莲: {
+		DisplayName: 寒冰莲
+		Tooltip: 冰冷水域中的莲花，花瓣如冰雕
+	}
+	灵水莲: {
+		DisplayName: 灵水莲
+		Tooltip: 漂浮在灵水上的莲花，花瓣晶莹
+	}
+	沼泽枯木: {
+		DisplayName: 沼泽枯木
+		Tooltip: 沼泽中半沉的枯木，附着苔藓
+	}
+	灵莲池: {
+		DisplayName: 灵莲池
+		Tooltip: 灵气凝聚的莲花池，池水清澈见底
+	}
+	水母石: {
+		DisplayName: 水母石
+		Tooltip: 形似水母的发光石头
+	}
+	灵鱼化石: {
+		DisplayName: 灵鱼化石
+		Tooltip: 古代灵鱼留下的化石
+	}
+	灵泉石: {
+		DisplayName: 灵泉石
+		Tooltip: 灵泉旁的石头，常年被灵水浸润
+	}
+	水灵草: {
+		DisplayName: 水灵草
+		Tooltip: 水中生长的灵草，随波摇曳
+	}
+	深渊珊瑚: {
+		DisplayName: 深渊珊瑚
+		Tooltip: 深渊水域中的暗色珊瑚
+	}
+	灵蚌壳: {
+		DisplayName: 灵蚌壳
+		Tooltip: 灵蚌的贝壳，内含珍珠
+	}
+	暗河石: {
+		DisplayName: 暗河石
+		Tooltip: 地下暗河旁的湿润石块
+	}
+	地脉结晶: {
+		DisplayName: 地脉结晶
+		Tooltip: 地脉灵气凝结的结晶，极为珍贵
+	}
+	磷光苔: {
+		DisplayName: 磷光苔
+		Tooltip: 散发磷光的苔藓，生长在潮湿洞壁
+	}
+	地下菌毯: {
+		DisplayName: 地下菌毯
+		Tooltip: 地下菌类覆盖的地面，柔软潮湿
+	}
+	倒挂钟乳: {
+		DisplayName: 倒挂钟乳
+		Tooltip: 从洞顶垂下的钟乳石，滴水成珠
+	}
+	荧光蘑菇丛: {
+		DisplayName: 荧光蘑菇丛
+		Tooltip: 地下荧光蘑菇丛，照亮黑暗洞穴
+	}
+	深渊石: {
+		DisplayName: 深渊石
+		Tooltip: 深渊底部的古老石块，沉重而神秘
+	}
+	晶洞壁: {
+		DisplayName: 晶洞壁
+		Tooltip: 布满细小晶体的洞壁
+	}
+	晶化骨: {
+		DisplayName: 晶化骨
+		Tooltip: 矿化结晶的骨骼，兼具骨与晶的特性
+	}
+	地下灵泉眼: {
+		DisplayName: 地下灵泉眼
+		Tooltip: 地下涌出的灵泉之眼，灵气充沛
+	}
+	灵晶簇: {
+		DisplayName: 灵晶簇
+		Tooltip: 地下灵晶自然生长的簇状结晶，散发柔和光芒
+	}
+	溶岩花: {
+		DisplayName: 溶岩花
+		Tooltip: 生长在溶岩旁的耐热花朵
+	}
+	石笋: {
+		DisplayName: 石笋
+		Tooltip: 洞穴中自然形成的尖锐石笋
+	}
+	蛛网茧: {
+		DisplayName: 蛛网茧
+		Tooltip: 洞穴中蛊蛛结成的丝茧
+	}
+	古修残壁: {
+		DisplayName: 古修残壁
+		Tooltip: 古代修士建筑的残壁，刻有模糊符文
+	}
+	古修地砖: {
+		DisplayName: 古修地砖
+		Tooltip: 古代修士铺设的地砖，纹路精美
+	}
+	破碎石像: {
+		DisplayName: 破碎石像
+		Tooltip: 破碎的古代石像，面容已不可辨
+	}
+	残破阵旗: {
+		DisplayName: 残破阵旗
+		Tooltip: 残破的阵法旗帜，布面已褪色
+	}
+	封印残石: {
+		DisplayName: 封印残石
+		Tooltip: 古代封印的残余石块，符文微弱闪烁
+	}
+	古战场遗骸: {
+		DisplayName: 古战场遗骸
+		Tooltip: 古战场遗留的骸骨和残器
+	}
+	荒废祭坛: {
+		DisplayName: 荒废祭坛
+		Tooltip: 被遗弃的祭祀祭坛，仍有残余灵气
+	}
+	古修石碑: {
+		DisplayName: 古修石碑
+		Tooltip: 刻有古代功法的石碑，文字模糊
+	}
+	碎裂玉简: {
+		DisplayName: 碎裂玉简
+		Tooltip: 碎裂的玉简残片，可能残留信息
+	}
+	灵墟土: {
+		DisplayName: 灵墟土
+		Tooltip: 灵气消散后的废墟土壤
+	}}
 
 MapObject: {
 	BlackLacquerAltar: Black Lacquer Altar
@@ -4803,4 +5823,1079 @@ Configs: {
 			Tooltip: ""
 		}
 	}
+	月兰花: {
+		DisplayName: 月兰花
+		Tooltip: 古月山寨栽培的花卉，花瓣如月牙，蓝粉色，是很多蛊虫的食材。
+	}
+	青竹酒: {
+		DisplayName: 青竹酒
+		Tooltip: 一种酒，每坛两块元石，用于喂养酒虫。
+	}
+	青矛竹: {
+		DisplayName: 青矛竹
+		Tooltip: 青茅山常见的竹子品种
+	}
+	影壁: {
+		DisplayName: 影壁
+		Tooltip: 山壁上形成的影像记录，记录了花酒行者和古月四代族长的恩怨，后异变显示花酒行者传承信息。
+	}
+	紫金化石: {
+		DisplayName: 紫金化石
+		Tooltip: 赌石用的石材，内含可能封印的蛊虫，外表紫色金黄。
+	}
+	猴儿酒: {
+		DisplayName: 猴儿酒
+		Tooltip: 猴儿酒类属果酒，酒香清醇香甜，入口绵柔，一杯元石计价。
+	}
+	知心草: {
+		DisplayName: 知心草
+		Tooltip: 一种草药，可节省元石，但被售卖一空。
+	}
+	紫金石: {
+		DisplayName: 紫金石
+		Tooltip: 赌石用的石头，可能开出蛊虫或宝物。
+	}
+	兽皮地图: {
+		DisplayName: 兽皮地图
+		Tooltip: 王家祖传的白色兽皮地图，详细记录了青茅山的地形、陷阱位置和野兽分布，是猎人的传家宝。
+	}
+	野猪獠牙: {
+		DisplayName: 野猪獠牙
+		Tooltip: 野猪的獠牙，可作为蛊虫食物或炼制材料，也是年中考核的成绩凭证。
+	}
+	地藏花: {
+		DisplayName: 地藏花
+		Tooltip: 一种特殊的植物，花中藏有蛊虫，需用黄金花液浸泡。
+	}
+	生机叶: {
+		DisplayName: 生机叶
+		Tooltip: 一转治疗蛊虫，由九叶生机草催生而成，可用于治疗伤势，市价五十元石一片。
+	}
+	苦贝酒: {
+		DisplayName: 苦贝酒
+		Tooltip: 用百年苦贝的汁液酿制的酒，口感又苦又香。
+	}
+	百年苦贝: {
+		DisplayName: 百年苦贝
+		Tooltip: 一种贝壳，能积蓄苦水，百年后苦水变为酒。
+	}
+	战功榜: {
+		DisplayName: 战功榜
+		Tooltip: 巨幡，由游字蛊驱动，实时显示各小组战绩排名。
+	}
+	铭牌: {
+		DisplayName: 铭牌
+		Tooltip: 三族大比中分发的令牌，收集三十块可晋级。
+	}
+	青铜面具: {
+		DisplayName: 青铜面具
+		Tooltip: 方源给夏琳的面具，色彩斑斓，用鱼鳞、鸟羽编织而成。
+	}
+	棺材: {
+		DisplayName: 棺材
+		Tooltip: 古月一代沉睡的血红大棺材，浮于血湖中央。
+	}
+	镇魔塔: {
+		DisplayName: 镇魔塔
+		Tooltip: 铁家在万程山巅建造的百丈高塔，用于关押魔道蛊师，是正道象征。
+	}
+	灰骨巨书: {
+		DisplayName: 灰骨巨书
+		Tooltip: 骨制巨书，记载炼蛊秘方、灰骨才子生平及传承考验。
+	}
+	铁家令牌: {
+		DisplayName: 铁家令牌
+		Tooltip: 三王传承中的保命道具，可传送出福地。
+	}
+	通缉令: {
+		DisplayName: 通缉令
+		Tooltip: 百家发布的追捕方白二人的文书，消息价一千元石，缉杀价五千八百元石。
+	}
+	金簪草: {
+		DisplayName: 金簪草
+		Tooltip: 金家战略物资，用于炼制金蚕蛊的辅料，形态为草类。
+	}
+	白骨秘方: {
+		DisplayName: 白骨秘方
+		Tooltip: 一种蛊师传承秘方，包括骨枪蛊、螺旋骨枪蛊等，正常售价约六十万元石。
+	}
+	星辰石: {
+		DisplayName: 星辰石
+		Tooltip: 一种顽石，内含星辰系蛊，表面有蓝色荧光。
+	}
+	紫荆令牌: {
+		DisplayName: 紫荆令牌
+		Tooltip: 方源拥有的昂贵令牌，可用于进入特定场所或作为代价。
+	}
+	火炭石: {
+		DisplayName: 火炭石
+		Tooltip: 火炭山特产矿石，燃烧长久、热量不高、无烟雾，用于商家城燃料。
+	}
+	骨刺: {
+		DisplayName: 骨刺
+		Tooltip: 方源使用的远程武器，由骨道生成。
+	}
+	泥沼蟹: {
+		DisplayName: 泥沼蟹
+		Tooltip: 巨大如山的荒兽，第六次地灾中出现，拥有强大的甲壳和繁殖能力。后被荡魂山杀死，尸体被小狐仙分解。
+	}
+	魅蓝电影: {
+		DisplayName: 魅蓝电影
+		Tooltip: 一种由蓝色闪电构成的荒兽，能攻击天地造成福地漏洞。被方源设计驱除出福地。
+	}
+	风狼王: {
+		DisplayName: 风狼王
+		Tooltip: 千兽王级别的风狼首领，速度快、攻击强、防御坚固，被方源收服。
+	}
+	星屑草: {
+		DisplayName: 星屑草
+		Tooltip: 星萤虫的食物，生长在云土上，喜阴厌阳。
+	}
+	仙元石: {
+		DisplayName: 仙元石
+		Tooltip: 蛊仙交易货币，天庭量产。可快速补充仙元。目前天庭减少发放，导致五域仙元石紧缺。
+	}
+	气泡鱼: {
+		DisplayName: 气泡鱼
+		Tooltip: 特殊鱼类，能吞食虫子，在体内培育蛊虫，增加虫群产蛊几率。在五域大战时期价值极高。
+	}
+	铁壳花: {
+		DisplayName: 铁壳花
+		Tooltip: 狐仙福地西部移植的植物，形成花海，供养花粉兔。
+	}
+	马群: {
+		DisplayName: 马群
+		Tooltip: 马尊控制的马群，规模达五十万，包括马皇、万兽王等。
+	}
+	夜狼皇: {
+		DisplayName: 夜狼皇
+		Tooltip: 狼群中的皇者，夜狼的兽皇，媲美五转蛊师战力。方源通过它收编大量夜狼群。
+	}
+	真绸: {
+		DisplayName: 真绸
+		Tooltip: 上等丝绸，用于包裹鞋子。
+	}
+	灰白石板: {
+		DisplayName: 灰白石板
+		Tooltip: 含有地丘传承信息的赝品石板，方源从其中获得画意蛊和地形图。
+	}
+	来客令: {
+		DisplayName: 来客令
+		Tooltip: 进入八十八角真阳楼的令牌，只能使用一次，非黄金血脉者需要此令。
+	}
+	琉璃楼主令: {
+		DisplayName: 琉璃楼主令
+		Tooltip: 八十八角真阳楼的通行令牌，通过墨化可增加角数，提升权限，可进入秘藏阁或吞噬其他楼主令。
+	}
+	铁喙飞鹤: {
+		DisplayName: 铁喙飞鹤
+		Tooltip: 仙鹤门驯养的鹤群，用于奴道战斗。
+	}
+	石猴毫毛: {
+		DisplayName: 石猴毫毛
+		Tooltip: 上古炼蛊材料，用于炼制群力蛊，由石磊重现。
+	}
+	幽冥水母: {
+		DisplayName: 幽冥水母
+		Tooltip: 喂养浪迹天涯仙蛊的材料之一。
+	}
+	深海闪电鳗鱼: {
+		DisplayName: 深海闪电鳗鱼
+		Tooltip: 喂养浪迹天涯仙蛊的材料之一，产于深海。
+	}
+	走肉树: {
+		DisplayName: 走肉树
+		Tooltip: 上古荒植，力道植株，枝条如章鱼触手，能攻击
+	}
+	黄玉狮子: {
+		DisplayName: 黄玉狮子
+		Tooltip: 荒兽，大如巨象，褐黄色，浓密鬃毛，沉睡，用于配种或交易。
+	}
+	黑油: {
+		DisplayName: 黑油
+		Tooltip: 食道仙材，黑色油状，易于开采，产量大，可炼蛊、延缓仙僵死窍崩解，具有腐蚀性，常被采油蛊师采集。
+	}
+	真武鲤: {
+		DisplayName: 真武鲤
+		Tooltip: 黑白相间的鲤鱼，天地灵物，异兽王，能言人语。
+	}
+	地老木: {
+		DisplayName: 地老木
+		Tooltip: 一种树木，使用观往蛊可看到往昔景象。
+	}
+	眠云棺椁: {
+		DisplayName: 眠云棺椁
+		Tooltip: 由仙道杀招凝成的棺椁，内封蛊仙俘虏。
+	}
+	九宫鹤: {
+		DisplayName: 九宫鹤
+		Tooltip: 上古荒兽，与鹤风扬关系亲密。
+	}
+	天龙完整骨骼: {
+		DisplayName: 天龙完整骨骼
+		Tooltip: 天龙全身骨骼，炼器或炼蛊材料。
+	}
+	地煞粉: {
+		DisplayName: 地煞粉
+		Tooltip: 三十两地煞粉，炼蛊材料。
+	}
+	天柱风: {
+		DisplayName: 天柱风
+		Tooltip: 风和材料，用于竞拍。
+	}
+	赤练金: {
+		DisplayName: 赤练金
+		Tooltip: 仙材，八百斤。
+	}
+	法眼血: {
+		DisplayName: 法眼血
+		Tooltip: 仙材，十五滴。
+	}
+	正天银: {
+		DisplayName: 正天银
+		Tooltip: 稀有仙材，六百斤。
+	}
+	星意: {
+		DisplayName: 星意
+		Tooltip: 东方长凡死后留下的意志体，拥有本体记忆和部分能力，可操控阵法。
+	}
+	红枣仙元: {
+		DisplayName: 红枣仙元
+		Tooltip: 七转蛊仙使用的仙元，色泽或呈红褐色。方源消耗其催动仙蛊。
+	}
+	方寸山: {
+		DisplayName: 方寸山
+		Tooltip: 小人族拥有的微型山峰，可移动，蕴含律道仙蛊“小”，能施展大而化小杀招。既是重宝也是居所。
+	}
+	散文鲤: {
+		DisplayName: 散文鲤
+		Tooltip: 一种稀有奇鱼，与真武鲤并称文武双鲤。受惊时会化为文气，极难捕捉。东海罕见。
+	}
+	茅草屋: {
+		DisplayName: 茅草屋
+		Tooltip: 东方部族的第一重宝，被方源等人无声无息收走，导致东方长凡恐慌。具体功能未明，但能支撑八转攻击片刻。
+	}
+	裂天粉: {
+		DisplayName: 裂天粉
+		Tooltip: 雪胡老祖战斗后挥洒的洁白粉末，可将白天裂开，威力惊人。
+	}
+	血毒棠: {
+		DisplayName: 血毒棠
+		Tooltip: 地灾中出现的花，从生长到凋零仅十个呼吸，凋谢后化成毒血，污染福地。
+	}
+	血镰草: {
+		DisplayName: 血镰草
+		Tooltip: 地灾后新生的野草，形似镰刀，可炼制三转凡蛊。
+	}
+	赤斧花: {
+		DisplayName: 赤斧花
+		Tooltip: 地灾后新生的野花，花瓣如斧头，白色但绽放赤红光芒，可炼制三转凡蛊。
+	}
+	幽火龙蟒: {
+		DisplayName: 幽火龙蟒
+		Tooltip: 资源，在火炭湖中繁衍，次佳环境是火炭石湖，最佳是碧潭福地的布置。
+	}
+	长恨蛛: {
+		DisplayName: 长恨蛛
+		Tooltip: 资源，在狐仙福地北部豢养基地中。
+	}
+	万里丝廊: {
+		DisplayName: 万里丝廊
+		Tooltip: 萧家拥有的仙蛊屋，能铺设成巨大丝网，加速货物运输，依赖蜘蛛凡蛊维持运转。
+	}
+	幻景园: {
+		DisplayName: 幻景园
+		Tooltip: 天莲派的仙蛊屋，可用于埋伏围困敌人，需要大量仙元催动。
+	}
+	羽圣城: {
+		DisplayName: 羽圣城
+		Tooltip: 七转仙蛊屋，外形辉煌圣城，由薄青操纵，曾与方源的惊鸿乱斗台碰撞。
+	}
+	千年苦贝: {
+		DisplayName: 千年苦贝
+		Tooltip: 炼仙蛊的佳材，外表漆黑有白色纹路如年轮，罕有。
+	}
+	地极天罡: {
+		DisplayName: 地极天罡
+		Tooltip: 由罡气和黑泥组成的仙材，难以处理，需特定杀招。
+	}
+	孪生冰心: {
+		DisplayName: 孪生冰心
+		Tooltip: 蓝色心脏形状的珍贵仙材，分为普通冰心和孪生冰心（七转仙材），产自玉壶山。
+	}
+	刺脊星龙鱼: {
+		DisplayName: 刺脊星龙鱼
+		Tooltip: 普通龙鱼及六转荒兽龙鱼，肉质应用广泛，可做食料和辅助喂养蛊虫。数量巨大，有近百万条。
+	}
+	交易令: {
+		DisplayName: 交易令
+		Tooltip: 萧家发布的贸易伙伴令牌，凭此可享受优惠政策，拓展西漠市场。
+	}
+	风结草: {
+		DisplayName: 风结草
+		Tooltip: 太古绿天特有的草笼，形似灯笼，需拆解，解开者可免被兽人吞食。
+	}
+	仙蛊屋黑牢: {
+		DisplayName: 仙蛊屋黑牢
+		Tooltip: 仙蛊屋，外形如黑色流星，能撞击、干扰敌人，由黑城操纵。
+	}
+	星夜黏涎: {
+		DisplayName: 星夜黏涎
+		Tooltip: 地壳蜗牛分泌的黏涎，采集过程需用星光处理，是方源所需的重要材料。
+	}
+	斑虎蜜蜂蜂翅: {
+		DisplayName: 斑虎蜜蜂蜂翅
+		Tooltip: 疑似斑虎蜜蜂的蜂翅碎片，太古荒兽残骸，金道道痕极多，发出道痕光晕，准九转仙材。
+	}
+	云凰碎片: {
+		DisplayName: 云凰碎片
+		Tooltip: 太古荒兽云凰的身体碎片，似云似雾，蕴含大量云道道痕，可化为凤凰状白云。
+	}
+	惊鸿乱斗台: {
+		DisplayName: 惊鸿乱斗台
+		Tooltip: 一座由红莲蛊仙独创的仙蛊屋，能吸摄封印对手的攻势并反击回去。曾被用于镇压八转蛊仙武斗天王，最后埋藏于南疆无名山峰之下。
+	}
+	红莲鬼脸: {
+		DisplayName: 红莲/鬼脸
+		Tooltip: 在光阴长河中出现的鬼脸和红莲，修复了春秋蝉并帮助方源重生。
+	}
+	万里口蚯: {
+		DisplayName: 万里口蚯
+		Tooltip: 太古荒兽，断肢重生能力强，存在于地沟。
+	}
+	万目大明牛: {
+		DisplayName: 万目大明牛
+		Tooltip: 太古荒兽，八转级数，被剑光杀死，其牛角等为仙材。
+	}
+	生死鲲鹏: {
+		DisplayName: 生死鲲鹏
+		Tooltip: 律道太古荒兽，有生和死两种形态，方源获得其相对完整的尸体。
+	}
+	十绝大阵: {
+		DisplayName: 十绝大阵
+		Tooltip: 影宗布置的仙阵，用于炼制某只神秘仙蛊，以幽魂魔尊的魂道底蕴和万劫力量为养料。
+	}
+	凡草屋: {
+		DisplayName: 凡草屋
+		Tooltip: 影宗的仙蛊屋，回收行动失败，被三茅魔仙传人夺取。
+	}
+	怨气泥人: {
+		DisplayName: 怨气泥人
+		Tooltip: 戚灾用怨气、荒兽泥怪尸躯和气道手段制成的泥人怪物，具有荒兽级战力，心智简单。
+	}
+	太古之光: {
+		DisplayName: 太古之光
+		Tooltip: 炼制定仙游必需的关键蛊材，来自太古时代的光芒，难以捕捉储藏。
+	}
+	传承印记: {
+		DisplayName: 传承印记
+		Tooltip: 大能传承的关键凭证，疑似被刘青玉所得，方源曾试图击溃它。
+	}
+	黄天碎片: {
+		DisplayName: 黄天碎片
+		Tooltip: 太古九天之一的黄天碎片，可用于扩张宝黄天。
+	}
+	板栗牦牛: {
+		DisplayName: 板栗牦牛
+		Tooltip: 荒兽，毛十二的坐骑，被方源拍入坑中，胆怯而无力。
+	}
+	流光果: {
+		DisplayName: 流光果
+		Tooltip: 六转仙材，由浓郁极光凝结而成，颜色多样，需特殊种植。
+	}
+	斑斓霸王花: {
+		DisplayName: 斑斓霸王花
+		Tooltip: 七转仙材，慧剑蛊的食料，巨大花朵，覆盖方圆千里，需光照、甜气、珍珠土。
+	}
+	珍珠土: {
+		DisplayName: 珍珠土
+		Tooltip: 种植斑斓霸王花所需的土壤材料，价格不贵。
+	}
+	炎鸿石: {
+		DisplayName: 炎鸿石
+		Tooltip: 炫光蛊的食料。
+	}
+	六头大蛇黑血: {
+		DisplayName: 六头大蛇黑血
+		Tooltip: 招灾蛊的食料，来自荒兽六头大蛇。
+	}
+	太古墟蝠尸体: {
+		DisplayName: 太古墟蝠尸体
+		Tooltip: 太古荒兽的尸体，曾在太丘战斗中使用，气息能阻挡其他荒兽。
+	}
+	巨人草: {
+		DisplayName: 巨人草
+		Tooltip: 太丘上生长的巨大草类，一棵堪比百年大树，形成原始丛林。
+	}
+	火虹茶: {
+		DisplayName: 火虹茶
+		Tooltip: 琅琊地灵喜爱的茶水，红彤彤散光，内含游鱼般的虹光，需一口喝掉才能真正品味。
+	}
+	金晓大殿: {
+		DisplayName: 金晓大殿
+		Tooltip: 正道一方的基地悬空大殿，恢弘雄壮。
+	}
+	缘木: {
+		DisplayName: 缘木
+		Tooltip: 六转仙材，无根之木，生长于池塘。
+	}
+	青玉风流: {
+		DisplayName: 青玉风流
+		Tooltip: 七转仙材，风系珍贵材料。
+	}
+	霸铜: {
+		DisplayName: 霸铜
+		Tooltip: 七转仙材，金属类。
+	}
+	铁冠鹰: {
+		DisplayName: 铁冠鹰
+		Tooltip: 荒兽，黑家豢养的著名鹰种，大量存在于铁鹰福地。
+	}
+	合鸣鹰: {
+		DisplayName: 合鸣鹰
+		Tooltip: 黑家新的鹰种，实则源自乔家的心血，威力强于龙鹰。
+	}
+	第十三座鹰巢: {
+		DisplayName: 第十三座鹰巢
+		Tooltip: 黑凡留下的一系列考验和宝藏，包括天晶鹰巢、上极天鹰蛋、血道杀招以及黑凡洞天中的本命真传。
+	}
+	鸡年兽: {
+		DisplayName: 鸡年兽
+		Tooltip: 上古年兽的一种形态，体型如山，双翼巨大，羽毛鲜艳，鸡爪锋利。可被年兽召来杀招召唤，喜欢吃年蛊，战力强但不受完全掌控。
+	}
+	五光山: {
+		DisplayName: 五光山
+		Tooltip: 光道资源产地，产大量光道凡蛊，被方源挪入至尊仙窍。
+	}
+	太古上极天鹰: {
+		DisplayName: 太古上极天鹰
+		Tooltip: 太古荒兽，宇道，八转战力，体型巨大，可比巨鲸，可穿透空间进出洞天和太古九天。方源从黑凡真传中获得幼体，通过宙道杀招催熟。
+	}
+	苍蓝龙鲸: {
+		DisplayName: 苍蓝龙鲸
+		Tooltip: 太古传奇荒兽，被乐土仙尊点化，拥有仙窍可修行，体内有龙鲸乐土。
+	}
+	暗流金钢: {
+		DisplayName: 暗流金钢
+		Tooltip: 六转仙材，以坚硬著称，被剑蛟龙息轻易切开。
+	}
+	春梦果树: {
+		DisplayName: 春梦果树
+		Tooltip: 奇特的梦道植株，存在于梦境中，现实需依附树木。
+	}
+	角连营: {
+		DisplayName: 角连营
+		Tooltip: 中洲仙蛊屋，由许多蛊虫组成，包括爱意仙蛊。在逆流河中解体。
+	}
+	揽雀阁: {
+		DisplayName: 揽雀阁
+		Tooltip: 仙蛊屋，由万海龙流驾驭，可发万千鸟鸣。
+	}
+	风满楼: {
+		DisplayName: 风满楼
+		Tooltip: 仙蛊屋，由碧晨天驾驭，可卷起碧绿风柱。
+	}
+	附天菌: {
+		DisplayName: 附天菌
+		Tooltip: 六转仙材，生长在太古九天，单一生长，是安全休整地点。
+	}
+	逆命祭炼大阵: {
+		DisplayName: 逆命祭炼大阵
+		Tooltip: 大雪山福地中的阵法，用于炼制鸿运齐天仙蛊，后被子阵影响崩溃。
+	}
+	光照菌: {
+		DisplayName: 光照菌
+		Tooltip: 荒植，原为嫩绿，需黑暗环境，方源改良为纯白品种用于光照。
+	}
+	物品寒玉: {
+		DisplayName: 物品:寒玉
+		Tooltip: 五转蛊材，含寒玉髓可作六转仙材，是广寒峰的主要资源。
+	}
+	物品神鹿果: {
+		DisplayName: 物品:神鹿果
+		Tooltip: 六转仙材，形如婴儿拳头，生长于荒兽挂果麋鹿的鹿角上，用于喂养金刚念仙蛊。
+	}
+	物品龙鳞土: {
+		DisplayName: 物品:龙鳞土
+		Tooltip: 凡道蛊材，颗颗结粒，土质坚硬，形似龙鳞，能激发龙鱼繁衍。
+	}
+	物品龙鱼: {
+		DisplayName: 物品:龙鱼
+		Tooltip: 一种食道创造的荒兽/普通生物，可用于喂养蛊虫，是宝黄天大宗商品。
+	}
+	脉轮瓜: {
+		DisplayName: 脉轮瓜
+		Tooltip: 七转仙材，蕴藏炼道道痕，可用于炼蛊，瓜熟地洞大量豢养，占宝黄天六成市场。
+	}
+	人祖传: {
+		DisplayName: 人祖传
+		Tooltip: 蛊师世界第一真传，蕴含人道奥义，多位仙尊魔尊从中获益。
+	}
+	星宿棋盘: {
+		DisplayName: 星宿棋盘
+		Tooltip: 仙蛊屋，紫薇仙子所有，可用于推算和支撑星投杀招，若得智慧蛊可升九转。
+	}
+	混天鹰: {
+		DisplayName: 混天鹰
+		Tooltip: 鹰类荒兽、上古荒兽，鹰头人身，喜好用骨棒作战。
+	}
+	追虹鹰: {
+		DisplayName: 追虹鹰
+		Tooltip: 鹰类荒兽，体型较小，喜欢追逐彩虹虹光，速度较快。
+	}
+	天晶: {
+		DisplayName: 天晶
+		Tooltip: 材料，用于催熟上极天鹰，大量消耗。
+	}
+	玉清滴风小竹楼: {
+		DisplayName: 玉清滴风小竹楼
+		Tooltip: 八转仙蛊屋，武庸所有，以风道为核心，可移动、分解和修复。
+	}
+	飞沙阁: {
+		DisplayName: 飞沙阁
+		Tooltip: 侯家的仙蛊屋，移速极快，擅长在土道环境疾驰。
+	}
+	海角阁: {
+		DisplayName: 海角阁
+		Tooltip: 翼家的仙蛊屋，曾被梦境惊吓后退。
+	}
+	烽火台: {
+		DisplayName: 烽火台
+		Tooltip: 铁家的仙蛊屋，具有快速传送功能，散布南疆各处。
+	}
+	太古虎形年兽: {
+		DisplayName: 太古虎形年兽
+		Tooltip: 光阴长河中的太古年兽，虎形，实力强大，主场优势明显。
+	}
+	黑白颠倒云: {
+		DisplayName: 黑白颠倒云
+		Tooltip: 特殊云朵，连通黑天与白天，可让生物随机传送。
+	}
+	雪莲花精: {
+		DisplayName: 雪莲花精
+		Tooltip: 七转仙材，形似雪莲花，表面覆盖冰层，蕴含生机与寒意，产自雪人部族。
+	}
+	铜龙鱼: {
+		DisplayName: 铜龙鱼
+		Tooltip: 龙鱼改良品种，食道资源，比普通赤红龙鱼更优。
+	}
+	铁龙鱼: {
+		DisplayName: 铁龙鱼
+		Tooltip: 龙鱼改良品种，食道资源，比铜龙鱼更优。
+	}
+	银龙鱼: {
+		DisplayName: 银龙鱼
+		Tooltip: 龙鱼改良品种，食道资源，比铁龙鱼更优，蕴含浓郁食道道痕。
+	}
+	金龙鱼: {
+		DisplayName: 金龙鱼
+		Tooltip: 龙鱼最高改良品种，上古荒兽等级，体小鳞金，充满食道道痕，为龙鱼王者。
+	}
+	豆神宫: {
+		DisplayName: 豆神宫
+		Tooltip: 八转仙蛊屋，位于房家大本营，是方源和房家争夺的目标，被方源以因果神树杀招影响。
+	}
+	落英馆: {
+		DisplayName: 落英馆
+		Tooltip: 房家七转仙蛊屋，外观如木屋挂满鲜花，能飞行并自行修复。
+	}
+	无常石: {
+		DisplayName: 无常石
+		Tooltip: 六转仙材，半黑半白，形成于常年征战之地，可用于炼器或修炼。
+	}
+	鸡笼犬舍: {
+		DisplayName: 鸡笼犬舍
+		Tooltip: 房家的仙蛊屋，被房功驾驭用于扫荡万家资源点。
+	}
+	太古魂核: {
+		DisplayName: 太古魂核
+		Tooltip: 魂兽死后留下的核心，可用于魂道修行，房家曾向方源提供包括八转太古魂核在内的多种魂核。
+	}
+	定真树: {
+		DisplayName: 定真树
+		Tooltip: 太古传奇荒植，具有克制大同风的天赋，历史上曾被元莲仙尊杀死。
+	}
+	镇魂殿: {
+		DisplayName: 镇魂殿
+		Tooltip: 八转仙蛊屋，天庭用于囚禁幽魂魔尊的场所。
+	}
+	饮刃酒: {
+		DisplayName: 饮刃酒
+		Tooltip: 七转仙材，由蒙屠足下血迹渗透地底结合刀道道痕形成，可助刀道悟道。方源取走少量。
+	}
+	超级仙阵: {
+		DisplayName: 超级仙阵
+		Tooltip: 方源设计并改进的防御仙阵，由异人蛊仙操控，可对抗离歌等杀招。
+	}
+	太古石龙: {
+		DisplayName: 太古石龙
+		Tooltip: 上古荒兽，全身由石块组成，防御极高，有特殊疗伤手段。
+	}
+	太古年兽: {
+		DisplayName: 太古年兽
+		Tooltip: 光阴长河中生存的荒兽级生物，种类多样，如太古年鸡、太古年猴等，可被奴役。
+	}
+	太宇寺: {
+		DisplayName: 太宇寺
+		Tooltip: 池家八转仙蛊屋，排名天下第九，拥有转宇寰空杀招。
+	}
+	今古亭: {
+		DisplayName: 今古亭
+		Tooltip: 七转宙道仙蛊屋，凉亭状，擅长在光阴长河中侦查和操控水流。
+	}
+	恒舟: {
+		DisplayName: 恒舟
+		Tooltip: 天庭宙道仙蛊屋，楼船模样，速度较快，支援今古亭但未能及时。
+	}
+	仙蛊屋雏形: {
+		DisplayName: 仙蛊屋雏形
+		Tooltip: 方源自创的仙蛊屋雏形，以宙道仙蛊为主，擅长隐匿，在石莲岛被威猛老者摧毁。
+	}
+	年华池: {
+		DisplayName: 年华池
+		Tooltip: 至尊仙窍内的特殊建筑，沟通光阴支流，用于拘禁和驯化太古年兽。
+	}
+	功德方尖碑: {
+		DisplayName: 功德方尖碑
+		Tooltip: 八转仙蛊屋，位于龙鲸乐土，发布任务并给予功德奖励，可兑换仙材、名号等。
+	}
+	水核: {
+		DisplayName: 水核
+		Tooltip: 水道仙材，是道兽死后留下的核心之一。
+	}
+	巨音贝: {
+		DisplayName: 巨音贝
+		Tooltip: 荒兽巨音贝死后留下的贝壳，具有音道道痕，可作为舞台扩大声音。
+	}
+	白荔仙元: {
+		DisplayName: 白荔仙元
+		Tooltip: 八转蛊仙独有的仙元，方源通过仙窍自产。
+	}
+	龙宫: {
+		DisplayName: 龙宫
+		Tooltip: 八转仙蛊屋，内含神秘梦道仙蛊，外形如宫殿，拥有攻伐防护威能，行驶在东海高空，引发八转争夺。
+	}
+	劫运坛: {
+		DisplayName: 劫运坛
+		Tooltip: 八转仙蛊屋，巨阳仙尊所创，被冰塞川操纵，曾附着无极魔尊的杀招。
+	}
+	中央大殿: {
+		DisplayName: 中央大殿
+		Tooltip: 天庭宫殿的中枢，被劫运坛撞毁。
+	}
+	一缺抱憾亭: {
+		DisplayName: 一缺抱憾亭
+		Tooltip: 八转仙蛊屋，位于星驰山顶峰，星宿仙尊与无极魔尊对弈之地。
+	}
+	炼道大阵: {
+		DisplayName: 炼道大阵
+		Tooltip: 天庭布置用于修复宿命蛊的大阵，有袁琼都主持。
+	}
+	针灸树: {
+		DisplayName: 针灸树
+		Tooltip: 一种特殊的树木，栽种在天露绿洲外围，内含针灸蛊，用于协防。
+	}
+	天露: {
+		DisplayName: 天露
+		Tooltip: 八转仙材，透明水滴状，由黑白水每天面对苍穹昼夜轮转而凝聚，是天露绿洲的核心产物。
+	}
+	万年斗飞车: {
+		DisplayName: 万年斗飞车
+		Tooltip: 八转仙蛊屋，方源所用，具备多种杀招如破晓剑、激流勇进、万年围猎。
+	}
+	珠线水: {
+		DisplayName: 珠线水
+		Tooltip: 八转水道仙材，太古水蜘蛛涎水凝聚。
+	}
+	五相赌斗门: {
+		DisplayName: 五相赌斗门
+		Tooltip: 黄铜质地门楼，上写五相赌斗门
+	}
+	金精: {
+		DisplayName: 金精
+		Tooltip: 一种金属材料，金山牛喜食
+	}
+	煮运锅: {
+		DisplayName: 煮运锅
+		Tooltip: 七转仙蛊屋（煮运锅），大如水盆，浑身金黄作色，笼罩一层洁白光晕，用于煮运、改变气运。
+	}
+	小箭尾雕: {
+		DisplayName: 小箭尾雕
+		Tooltip: 从荒兽蛋中孵化出的仙兽小雕，认战部渡为至亲
+	}
+	松鹤亭: {
+		DisplayName: 松鹤亭
+		Tooltip: 中洲仙鹤门的仙蛊屋，被方源埋伏吞噬，后由龙公送出战场。
+	}
+	六声茶: {
+		DisplayName: 六声茶
+		Tooltip: 沈家名茶，共有六杯，每杯有独特口感与功效。
+	}
+	军团蚁: {
+		DisplayName: 军团蚁
+		Tooltip: 绿蚁居士创造的物种，适合奴道蛊仙使用，通过蚁穴蛊孵化。
+	}
+	万象宫殿: {
+		DisplayName: 万象宫殿
+		Tooltip: 仙蛊屋，可以变作世间万物，内部有雕像，千变老祖利用其化身假扮自己。
+	}
+	刹那台: {
+		DisplayName: 刹那台
+		Tooltip: 八转宙道仙蛊屋，具有瞬移能力（刹那挪移），由顾六如驾驭。
+	}
+	旱魃炎: {
+		DisplayName: 旱魃炎
+		Tooltip: 八转旱魃仙僵的火焰，死寂炽热，可配合旱魃仙僵延寿法使用。
+	}
+	鬼嘤音: {
+		DisplayName: 鬼嘤音
+		Tooltip: 七转音道仙材，储存在小音贝中，可影响心神。
+	}
+	日月观: {
+		DisplayName: 日月观
+		Tooltip: 灵缘斋的宙道仙蛊屋，七转层次，在光阴长河战役中被毁。
+	}
+	涛声依旧: {
+		DisplayName: 涛声依旧
+		Tooltip: 七转音道仙材，沈家特产，海螺状荒兽，内含经年环响的涛声。
+	}
+	诛魔榜: {
+		DisplayName: 诛魔榜
+		Tooltip: 八转仙蛊屋，外表为朱红墓碑，榜文游动，由古月方正和秦鼎菱操控
+	}
+	安土重山堡: {
+		DisplayName: 安土重山堡
+		Tooltip: 八转土道仙蛊屋，防御强大，是方源的重要据点。
+	}
+	乾清一气: {
+		DisplayName: 乾清一气
+		Tooltip: 八面威风蛊的主材，被武碑发现大量。
+	}
+	宠心: {
+		DisplayName: 宠心
+		Tooltip: 九转运道仙材，从藏地中获得。
+	}
+	贼巢: {
+		DisplayName: 贼巢
+		Tooltip: 仙蛊屋，方源改良过的全新版本，拥有偷道杀招。
+	}
+	升天真传: {
+		DisplayName: 升天真传
+		Tooltip: 孔升天留下的八转传承，包含仙蛊和仙元，已被方源交易获得内容。
+	}
+	火雷真传: {
+		DisplayName: 火雷真传
+		Tooltip: 火雷神君留下的八转真传，包含炎道雷道传承。
+	}
+	天难真传: {
+		DisplayName: 天难真传
+		Tooltip: 天难老怪留下的炼道真传，被宋家获得并视为核心传承。
+	}
+	九子龙图: {
+		DisplayName: 九子龙图
+		Tooltip: 商燕飞早年获得的仙缘，九张兽皮，每张描绘一种龙兽，有墨文注释，蕴含秘密。
+	}
+	人海雏形: {
+		DisplayName: 人海雏形
+		Tooltip: 人造天地秘境雏形，源自东海夏家，方源用于人道修行，需屠戮大量人族完善。
+	}
+	黑金铠甲: {
+		DisplayName: 黑金铠甲
+		Tooltip: 黑月仙子身穿的铠甲，给人沉重压迫感。
+	}
+	令牌信物: {
+		DisplayName: 令牌信物
+		Tooltip: 陈诚与友人的赌约信物，被黑月仙子出示。
+	}
+	事实浮冰: {
+		DisplayName: 事实浮冰
+		Tooltip: 无极魔尊用衍化仙蛊和天外混沌推演出的物品，蕴藏衍化仙蛊和天机蛊仙蛊方。
+	}
+	搬拦亭: {
+		DisplayName: 搬拦亭
+		Tooltip: 七转力道仙蛊屋，形如鸟笼，八根蓝金大柱弯曲。苏家所有，用于深海开采。
+	}
+	肝命仙蛊屋: {
+		DisplayName: 肝命仙蛊屋
+		Tooltip: 原为肝命大阵，后被方源改良为仙蛊屋，具有治疗和恢复功效。
+	}
+	贡献榜: {
+		DisplayName: 贡献榜
+		Tooltip: 至尊仙窍中的三大榜单之一，记录蛊仙贡献值，排名前列者为重臣。
+	}
+	任务榜: {
+		DisplayName: 任务榜
+		Tooltip: 至尊仙窍中的三大榜单之一，列出各种任务供蛊仙接取以获取贡献。
+	}
+	兑换榜: {
+		DisplayName: 兑换榜
+		Tooltip: 至尊仙窍中的三大榜单之一，列出可用贡献兑换的修行资源，极其丰富。
+	}
+	万岁楼: {
+		DisplayName: 万岁楼
+		Tooltip: 万家的仙蛊屋，随万家蛊仙一同撤走。
+	}
+	夜壶: {
+		DisplayName: 夜壶
+		Tooltip: 萧夜壶手中的暗道仙蛊屋，袖珍，能将蛊仙强行摄入其中，困上一夜化为一滩屎尿。
+	}
+	飞沙地洞: {
+		DisplayName: 飞沙地洞
+		Tooltip: 土道资源点，被移至至尊仙窍中作为地脉节点之一。
+	}
+	光明华轮火: {
+		DisplayName: 光明华轮火
+		Tooltip: 天下三火之一的天火，九转炎道仙材，太阳崩解后大量散落。
+	}
+	送生庙: {
+		DisplayName: 送生庙
+		Tooltip: 人道仙蛊屋，能快速让女子怀孕生子并附生蛊虫。
+	}
+	漂游炼巢: {
+		DisplayName: 漂游炼巢
+		Tooltip: 天地秘境雏形，状如蜂巢，漂浮炼海上，用于炼蛊。
+	}
+	市井: {
+		DisplayName: 市井
+		Tooltip: 天地秘境，方源用于天网恢恢杀招的防御核心。
+	}
+	心境: {
+		DisplayName: 心境
+		Tooltip: 天地秘境，星宿仙尊持有，灯笼形态，可抽取情绪和智道道痕。
+	}
+	血海雏形: {
+		DisplayName: 血海雏形
+		Tooltip: 巨阳仙尊拥有的天地秘境雏形，未发展完整。
+	}
+	乾坤晶壁雏形: {
+		DisplayName: 乾坤晶壁雏形
+		Tooltip: 天地秘境之一，书道阁收藏的一部分，信道底蕴。
+	}
+	气功果核: {
+		DisplayName: 气功果核
+		Tooltip: 天庭的气道造物，极为巨大，成为致命弱点。后被气海老祖炼化缩小，最终被方源用于炼成气道分身。
+	}
+	元石砖.MapEntry: 元石砖
+	影砖.MapEntry: 影砖
+	暗砖.MapEntry: 暗砖
+	律砖.MapEntry: 律砖
+	血砖.MapEntry: 血砖
+	宙砖.MapEntry: 宙砖
+	灵苔石.MapEntry: 灵苔石
+	灵壤.MapEntry: 灵壤
+	蛊纹砖.MapEntry: 蛊纹砖
+	雷砖.MapEntry: 雷砖
+	龙鳞砖.MapEntry: 龙鳞砖
+	魂砖.MapEntry: 魂砖
+	阳砖.MapEntry: 阳砖
+	云砖.MapEntry: 云砖
+	蛊土.MapEntry: 蛊土
+	毒砖.MapEntry: 毒砖
+	梦砖.MapEntry: 梦砖
+	晶化沙.MapEntry: 晶化沙
+	月砖.MapEntry: 月砖
+	灵骨砖.MapEntry: 灵骨砖
+	星辉砖.MapEntry: 星辉砖
+	深层血沙.MapEntry: 深层血沙
+	骨砖.MapEntry: 骨砖
+	玄武砖.MapEntry: 玄武砖
+	冰砖.MapEntry: 冰砖
+	风砖.MapEntry: 风砖
+	土砖.MapEntry: 土砖
+	星砖.MapEntry: 星砖
+	凤羽砖.MapEntry: 凤羽砖
+	火砖.MapEntry: 火砖
+	灵木方块.MapEntry: 灵木方块
+	冥铁砖.MapEntry: 冥铁砖
+	赤金矿.MapEntry: 赤金矿
+	深层元石矿.MapEntry: 深层元石矿
+	魂银矿石.MapEntry: 魂银矿石
+	火炭矿石.MapEntry: 火炭矿石
+	血铜矿石.MapEntry: 血铜矿石
+	灵髓矿.MapEntry: 灵髓矿
+	龙骨矿.MapEntry: 龙骨矿
+	骨玉矿石.MapEntry: 骨玉矿石
+	天晶矿.MapEntry: 天晶矿
+	蛊晶矿.MapEntry: 蛊晶矿
+	毒铁矿石.MapEntry: 毒铁矿石
+	幽冥矿.MapEntry: 幽冥矿
+	星辰矿石.MapEntry: 星辰矿石
+	灵晶矿石.MapEntry: 灵晶矿石
+	镇魂柱.MapEntry: 镇魂柱
+	毒沼泽.MapEntry: 毒沼泽
+	蛊茧.MapEntry: 蛊茧
+	骸骨柱.MapEntry: 骸骨柱
+	尸砖.MapEntry: 尸砖
+	小型蛊祭坛.MapEntry: 小型蛊祭坛
+	枯木方块.MapEntry: 枯木方块
+	腐骨堆.MapEntry: 腐骨堆
+	小型血池.MapEntry: 小型血池
+	怨灵碑.MapEntry: 怨灵碑
+	蛊丝方块.MapEntry: 蛊丝方块
+	暗灵烛.MapEntry: 暗灵烛
+	血蛊池.MapEntry: 血蛊池
+	血肉墙.MapEntry: 血肉墙
+	毒雾池.MapEntry: 毒雾池
+	古月储物箱.MapEntry: 古月储物箱
+	古月木地板.MapEntry: 古月木地板
+	古月蛊架.MapEntry: 古月蛊架
+	青茅石台.MapEntry: 青茅石台
+	古月练功桩.MapEntry: 古月练功桩
+	古月赤铜方块.MapEntry: 古月赤铜方块
+	青茅石砖.MapEntry: 青茅石砖
+	古月旗杆.MapEntry: 古月旗杆
+	古月药柜.MapEntry: 古月药柜
+	古月石灯.MapEntry: 古月石灯
+	古月灯笼.MapEntry: 古月灯笼
+	古月兵器架.MapEntry: 古月兵器架
+	古月灵泉.MapEntry: 古月灵泉
+	古月书架.MapEntry: 古月书架
+	古月屏风.MapEntry: 古月屏风
+	古月旗帜.MapEntry: 古月旗帜
+	青茅竹方块.MapEntry: 青茅竹方块
+	古月石碑.MapEntry: 古月石碑
+	青茅石柱.MapEntry: 青茅石柱
+	蛊卵孵化器.MapEntry: 蛊卵孵化器
+	冰心莲.MapEntry: 冰心莲
+	金针草.MapEntry: 金针草
+	灵兽笼.MapEntry: 灵兽笼
+	聚灵灯.MapEntry: 聚灵灯
+	蛊虫隔离笼.MapEntry: 蛊虫隔离笼
+	蛊炼化台.MapEntry: 蛊炼化台
+	光照菌.MapEntry: 光照菌
+	灵雾兰.MapEntry: 灵雾兰
+	针灸树.MapEntry: 针灸树
+	蛊母花.MapEntry: 蛊母花
+	灵石研磨器.MapEntry: 灵石研磨器
+	赤斧花.MapEntry: 赤斧花
+	血毒棠.MapEntry: 血毒棠
+	灵液收集器.MapEntry: 灵液收集器
+	灵气导引柱.MapEntry: 灵气导引柱
+	风结草.MapEntry: 风结草
+	血藤.MapEntry: 血藤
+	火棘草.MapEntry: 火棘草
+	九叶芝.MapEntry: 九叶芝
+	蛊虫喂养槽.MapEntry: 蛊虫喂养槽
+	聚气阵.MapEntry: 聚气阵
+	蛊虫鉴定台.MapEntry: 蛊虫鉴定台
+	铁壳花.MapEntry: 铁壳花
+	月兰野花.MapEntry: 月兰野花
+	金簪草.MapEntry: 金簪草
+	真元凝聚器.MapEntry: 真元凝聚器
+	灵气聚拢阵.MapEntry: 灵气聚拢阵
+	蛊虫净化池.MapEntry: 蛊虫净化池
+	地藏花.MapEntry: 地藏花
+	蛊虫养殖池.MapEntry: 蛊虫养殖池
+	蛊虫饲料槽.MapEntry: 蛊虫饲料槽
+	鬼面菇.MapEntry: 鬼面菇
+	春梦果树.MapEntry: 春梦果树
+	元素熔炉.MapEntry: 元素熔炉
+	蛊虫交配台.MapEntry: 蛊虫交配台
+	蛇纹藤.MapEntry: 蛇纹藤
+	碧灵草.MapEntry: 碧灵草
+	蛊虫冬眠箱.MapEntry: 蛊虫冬眠箱
+	巨人草.MapEntry: 巨人草
+	星屑草.MapEntry: 星屑草
+	雷光苔.MapEntry: 雷光苔
+	紫云花.MapEntry: 紫云花
+	暗影菌.MapEntry: 暗影菌
+	血镰草.MapEntry: 血镰草
+	蛊炼制鼎.MapEntry: 蛊炼制鼎
+	蛊虫交易摊.MapEntry: 蛊虫交易摊
+	蛊虫培养皿.MapEntry: 蛊虫培养皿
+	蛊虫储存罐.MapEntry: 蛊虫储存罐
+	龙涎花.MapEntry: 龙涎花
+	知心草.MapEntry: 知心草
+	冰晶柱.MapEntry: 冰晶柱
+	旱地裂纹石.MapEntry: 旱地裂纹石
+	雷击木.MapEntry: 雷击木
+	霜花.MapEntry: 霜花
+	熔岩石.MapEntry: 熔岩石
+	熔岩晶.MapEntry: 熔岩晶
+	冰封花.MapEntry: 冰封花
+	火山灰砖.MapEntry: 火山灰砖
+	风化岩.MapEntry: 风化岩
+	雪灵花.MapEntry: 雪灵花
+	灵气结晶树.MapEntry: 灵气结晶树
+	灵雾石.MapEntry: 灵雾石
+	灵石堆.MapEntry: 灵石堆
+	灵木桩.MapEntry: 灵木桩
+	古树根.MapEntry: 古树根
+	灵气漩涡.MapEntry: 灵气漩涡
+	星光石.MapEntry: 星光石
+	灵草花圃.MapEntry: 灵草花圃
+	灵气瀑布石.MapEntry: 灵气瀑布石
+	灵藤架.MapEntry: 灵藤架
+	风蚀岩.MapEntry: 风蚀岩
+	云母石.MapEntry: 云母石
+	天际花.MapEntry: 天际花
+	星尘沙.MapEntry: 星尘沙
+	天光晶.MapEntry: 天光晶
+	虹光石.MapEntry: 虹光石
+	浮空石.MapEntry: 浮空石
+	雷云砖.MapEntry: 雷云砖
+	蛊毒花.MapEntry: 蛊毒花
+	蛊丝茧.MapEntry: 蛊丝茧
+	蛊菌团.MapEntry: 蛊菌团
+	蛊虫蜕皮架.MapEntry: 蛊虫蜕皮架
+	蛊卵石.MapEntry: 蛊卵石
+	蛊虫食物槽.MapEntry: 蛊虫食物槽
+	蛊虫巢穴.MapEntry: 蛊虫巢穴
+	蛊虫排泄晶.MapEntry: 蛊虫排泄晶
+	蛊虫冬眠石.MapEntry: 蛊虫冬眠石
+	蛊蜕壳.MapEntry: 蛊蜕壳
+	古月宗灯柱.MapEntry: 古月宗灯柱
+	王家水晶台.MapEntry: 王家水晶台
+	贾家商铺台.MapEntry: 贾家商铺台
+	散修营火堆.MapEntry: 散修营火堆
+	古月宗碑.MapEntry: 古月宗碑
+	百家旗帜.MapEntry: 百家旗帜
+	白家玉石台.MapEntry: 白家玉石台
+	熊家练武桩.MapEntry: 熊家练武桩
+	铁家锻造台.MapEntry: 铁家锻造台
+	赵家暗影柱.MapEntry: 赵家暗影柱
+	灵气测量柱.MapEntry: 灵气测量柱
+	突破台.MapEntry: 突破台
+	灵气导引阵.MapEntry: 灵气导引阵
+	悟道石.MapEntry: 悟道石
+	心魔镜.MapEntry: 心魔镜
+	打坐台.MapEntry: 打坐台
+	灵气漩涡石.MapEntry: 灵气漩涡石
+	修炼蒲团.MapEntry: 修炼蒲团
+	聚灵阵盘.MapEntry: 聚灵阵盘
+	闭关石门.MapEntry: 闭关石门
+	寒冰莲.MapEntry: 寒冰莲
+	灵水莲.MapEntry: 灵水莲
+	沼泽枯木.MapEntry: 沼泽枯木
+	灵莲池.MapEntry: 灵莲池
+	水母石.MapEntry: 水母石
+	灵鱼化石.MapEntry: 灵鱼化石
+	灵泉石.MapEntry: 灵泉石
+	水灵草.MapEntry: 水灵草
+	深渊珊瑚.MapEntry: 深渊珊瑚
+	灵蚌壳.MapEntry: 灵蚌壳
+	暗河石.MapEntry: 暗河石
+	地脉结晶.MapEntry: 地脉结晶
+	磷光苔.MapEntry: 磷光苔
+	地下菌毯.MapEntry: 地下菌毯
+	倒挂钟乳.MapEntry: 倒挂钟乳
+	荧光蘑菇丛.MapEntry: 荧光蘑菇丛
+	深渊石.MapEntry: 深渊石
+	晶洞壁.MapEntry: 晶洞壁
+	晶化骨.MapEntry: 晶化骨
+	地下灵泉眼.MapEntry: 地下灵泉眼
+	灵晶簇.MapEntry: 灵晶簇
+	溶岩花.MapEntry: 溶岩花
+	石笋.MapEntry: 石笋
+	蛛网茧.MapEntry: 蛛网茧
+	古修残壁.MapEntry: 古修残壁
+	古修地砖.MapEntry: 古修地砖
+	破碎石像.MapEntry: 破碎石像
+	残破阵旗.MapEntry: 残破阵旗
+	封印残石.MapEntry: 封印残石
+	古战场遗骸.MapEntry: 古战场遗骸
+	荒废祭坛.MapEntry: 荒废祭坛
+	古修石碑.MapEntry: 古修石碑
+	碎裂玉简.MapEntry: 碎裂玉简
+	灵墟土.MapEntry: 灵墟土
 }

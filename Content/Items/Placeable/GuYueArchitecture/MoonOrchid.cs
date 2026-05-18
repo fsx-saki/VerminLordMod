@@ -6,7 +6,10 @@ namespace VerminLordMod.Content.Items.Placeable.GuYueArchitecture
     /// <summary>
     /// 月兰花物品 - 可放置为月兰花装饰植物
     /// </summary>
-    public class MoonOrchid : ModItem
+    /// <summary>
+    /// 月兰花（物品） — 古月山寨栽培的花卉
+    /// </summary>
+        public class MoonOrchid : ModItem
     {
         public override void SetDefaults()
         {

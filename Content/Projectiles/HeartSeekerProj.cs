@@ -9,9 +9,9 @@ namespace VerminLordMod.Content.Projectiles
 {
 	/// <summary>
 	/// 寻心蛊弹幕 — 一转情道
-	/// 特性：追踪弹(Homing) + 魅惑Debuff(Lovestruck) + 心形拖尾
+	/// 特性：追踪弹(Homing) + 魅惑Debuff(Lovestruck) + 情道拖尾
 	/// 弹道：慢速追踪(HomingBehavior)，追踪范围600像素
-	/// 视觉：情道拖尾（丝线+心瓣+红晕辉光）
+	/// 视觉：情道拖尾（红线+心形辉光+爱意迷雾）
 	/// 命中效果：附加 Lovestruck 魅惑2秒
 	/// 情道特性：温柔而致命，以情感之力俘获敌人心智
 	/// </summary>
@@ -34,16 +34,12 @@ namespace VerminLordMod.Content.Projectiles
 				SuppressDefaultDraw = true,
 				EnableGhostTrail = true,
 				GhostColor = new Color(255, 140, 180, 160),
-				SilkThreadColor = new Color(255, 160, 200, 220),
-				HeartPetalColor = new Color(255, 120, 160, 200),
-				BlushGlowColor = new Color(255, 180, 210, 180),
+				RedThreadColor = new Color(255, 160, 200, 220),
+				HeartGlowColor = new Color(255, 120, 160, 200),
+				LoveMistColor = new Color(255, 180, 210, 180),
 			});
 
-			Behaviors.Add(new DebuffOnHitBehavior
-			{
-				BuffType = BuffID.Lovestruck,
-				BuffDuration = 120,
-			});
+			Behaviors.Add(new DebuffOnHitBehavior(BuffID.Lovestruck, 120));
 		}
 
 		public override void SetDefaults()

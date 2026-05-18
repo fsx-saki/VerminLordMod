@@ -12,6 +12,21 @@ using Microsoft.Xna.Framework;
 
 namespace VerminLordMod.Content.Projectiles
 {
+	/// <summary>
+
+	/// ElectricTeethKillingWuGu弹幕 — 道道
+
+	/// </summary>
+
+	/// <summary>
+
+
+	/// ElectricTeethKillingWuGu弹幕 — 道道
+
+
+	/// </summary>
+
+
 	class ElectricTeethKillingWuProj : ModProjectile
 	{
 		public override void SetDefaults() {

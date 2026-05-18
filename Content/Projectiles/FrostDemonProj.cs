@@ -9,7 +9,31 @@ using VerminLordMod.Content.Projectiles.Zero;
 using VerminLordMod.Content.Dusts;
 
 namespace VerminLordMod.Content.Projectiles
-{
+{    /// <summary>
+    /// FrostDemonGu弹幕 — 道道
+    /// </summary>    /// <summary>
+    /// FrostDemonGu弹幕 — 道道
+    /// </summary>    /// <summary>
+    /// FrostDemonGu弹幕 — 道道
+    /// </summary>
+
+
+
+    /// <summary>
+
+
+
+
+    /// FrostDemonGu弹幕 — 道道
+
+
+
+
+    /// </summary>
+
+
+
+
     public class FrostDemonProj : BaseBullet
     {
         private const float BlastRadius = 200f;

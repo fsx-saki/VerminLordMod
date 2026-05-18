@@ -12,7 +12,25 @@ using Terraria.ModLoader;
 using VerminLordMod.Common.Players;
 
 namespace VerminLordMod.Content.Projectiles
-{
+{    /// <summary>
+    /// YanTongBeam弹幕 — 道道
+    /// </summary>    /// <summary>
+    /// YanTongBeam弹幕 — 道道
+    /// </summary>
+
+
+	/// <summary>
+
+
+
+	/// YanTongBeam弹幕 — 道道
+
+
+
+	/// </summary>
+
+
+
 	public class YanTongBeam : ModProjectile
 	{
 		// A helpful math constant for performing beam angling calculations.

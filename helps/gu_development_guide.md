@@ -55,7 +55,7 @@
 ## 三、创建新蛊虫的标准流程
 
 ### Step 1: 确定蛊虫属性
-- 在 `novel.db` 中查询蛊虫信息（等级、能力、流派）
+- 在 `novel.db` 中查询蛊虫信息（等级、能力、流派）--必须确认信息准确
 - 确定 `DaoType`（血道/骨道/魂道/冰道/雷道/风道/...）
 - 确定转数（一转→Three/, 二转→Three/, 三转→Four/, 四转→Five/ 目录）
 
@@ -154,12 +154,17 @@ make_texture("MyGuProj.png", (16,36), (200,50,50,255), "tall_oval")
 ### Step 5: 注册本地化
 在 `Localization/zh-Hans_Mods.VerminLordMod.hjson` 和 `en-US_Mods.VerminLordMod.hjson` 中添加物品名和Tooltip。
 
+
 ### Step 6: 编译验证
 ```bash
 cd ModSources/VerminLordMod
 dotnet build VerminLordMod.csproj 2>&1 | grep "error CS"
 ```
 确保零 C# 编译错误。
+
+### Step 7: 将已经实现的蛊虫存储到新数据库
+- 在 `finish.db` 中添加新的蛊虫记录--必须确认信息准确
+- 确保所有属性都正确填写
 
 ---
 

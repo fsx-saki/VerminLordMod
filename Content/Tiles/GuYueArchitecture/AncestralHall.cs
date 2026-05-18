@@ -15,7 +15,13 @@ namespace VerminLordMod.Content.Tiles.GuYueArchitecture
     /// "宗族祠堂中尽是额头碰撞地板的轻响" (gzr_part001.txt:120)
     /// 功能: 大型功能性建筑，可用于开窍/祭祀相关事件
     /// </summary>
-    public class AncestralHall : ModTile
+    /// <summary>
+    /// 祖师殿 — 古月宗的祖师殿
+    /// </summary>
+        /// <summary>
+    /// 祖师殿 — 古月宗的祖师殿
+    /// </summary>
+        public class AncestralHall : ModTile
     {
         public override void SetStaticDefaults()
         {

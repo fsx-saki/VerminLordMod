@@ -7,6 +7,14 @@ using VerminLordMod.Content.Projectiles;
 
 namespace VerminLordMod.Content.Items.Weapons.Four
 {
+	/// <summary>
+
+	/// 四转道蛊虫 — FrostArrowGu
+
+	/// 蛊虫
+
+	/// </summary>
+
 	class FrostArrowGu : IceSnowWeapon
 	{
 		protected override int qiCost => 3;

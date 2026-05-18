@@ -4,7 +4,10 @@ using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.Items.Placeable.Environment
 {
-    public class SpiritHerbPlot : ModItem
+    /// <summary>
+    /// 灵药圃（物品） — 种植灵药的园圃
+    /// </summary>
+        public class SpiritHerbPlot : ModItem
     {
         public override void SetDefaults()
         {
@@ -16,7 +19,10 @@ namespace VerminLordMod.Content.Items.Placeable.Environment
         }
     }
 
-    public class GuBreedingVat : ModItem
+    /// <summary>
+    /// 蛊虫繁殖缸（物品） — 用于繁殖蛊虫的缸
+    /// </summary>
+        public class GuBreedingVat : ModItem
     {
         public override void SetDefaults()
         {
@@ -28,7 +34,10 @@ namespace VerminLordMod.Content.Items.Placeable.Environment
         }
     }
 
-    public class MeditationCushion : ModItem
+    /// <summary>
+    /// 蒲团（物品） — 修炼打坐用的蒲团
+    /// </summary>
+        public class MeditationCushion : ModItem
     {
         public override void SetDefaults()
         {
@@ -40,7 +49,10 @@ namespace VerminLordMod.Content.Items.Placeable.Environment
         }
     }
 
-    public class SpiritLantern : ModItem
+    /// <summary>
+    /// 灵灯（物品） — 灵气点亮的灯笼
+    /// </summary>
+        public class SpiritLantern : ModItem
     {
         public override void SetDefaults()
         {
@@ -52,7 +64,10 @@ namespace VerminLordMod.Content.Items.Placeable.Environment
         }
     }
 
-    public class GuCauldron : ModItem
+    /// <summary>
+    /// 蛊鼎（物品） — 炼制蛊虫的鼎
+    /// </summary>
+        public class GuCauldron : ModItem
     {
         public override void SetDefaults()
         {
@@ -64,7 +79,10 @@ namespace VerminLordMod.Content.Items.Placeable.Environment
         }
     }
 
-    public class YuanStoneCluster : ModItem
+    /// <summary>
+    /// 元石簇（物品） — 元石聚集的矿簇
+    /// </summary>
+        public class YuanStoneCluster : ModItem
     {
         public override void SetDefaults()
         {
@@ -76,7 +94,10 @@ namespace VerminLordMod.Content.Items.Placeable.Environment
         }
     }
 
-    public class SpiritFlower : ModItem
+    /// <summary>
+    /// 灵花（物品） — 蕴含灵气的花朵
+    /// </summary>
+        public class SpiritFlower : ModItem
     {
         public override void SetDefaults()
         {
@@ -88,7 +109,10 @@ namespace VerminLordMod.Content.Items.Placeable.Environment
         }
     }
 
-    public class AncientTreeMoss : ModItem
+    /// <summary>
+    /// 古树苔（物品） — 古老树木上的苔藓
+    /// </summary>
+        public class AncientTreeMoss : ModItem
     {
         public override void SetDefaults()
         {
@@ -100,7 +124,10 @@ namespace VerminLordMod.Content.Items.Placeable.Environment
         }
     }
 
-    public class GuWormHole : ModItem
+    /// <summary>
+    /// 蛊虫洞（物品） — 蛊虫挖掘的洞穴
+    /// </summary>
+        public class GuWormHole : ModItem
     {
         public override void SetDefaults()
         {
@@ -112,7 +139,10 @@ namespace VerminLordMod.Content.Items.Placeable.Environment
         }
     }
 
-    public class MoonlitPond : ModItem
+    /// <summary>
+    /// 月池（物品） — 月光照耀的水池
+    /// </summary>
+        public class MoonlitPond : ModItem
     {
         public override void SetDefaults()
         {
@@ -124,7 +154,10 @@ namespace VerminLordMod.Content.Items.Placeable.Environment
         }
     }
 
-    public class WitheredTree : ModItem
+    /// <summary>
+    /// 枯树（物品） — 枯萎的树木
+    /// </summary>
+        public class WitheredTree : ModItem
     {
         public override void SetDefaults()
         {
@@ -136,7 +169,10 @@ namespace VerminLordMod.Content.Items.Placeable.Environment
         }
     }
 
-    public class SpiritBeastDen : ModItem
+    /// <summary>
+    /// 灵兽穴（物品） — 灵兽栖息的洞穴
+    /// </summary>
+        public class SpiritBeastDen : ModItem
     {
         public override void SetDefaults()
         {
@@ -148,7 +184,10 @@ namespace VerminLordMod.Content.Items.Placeable.Environment
         }
     }
 
-    public class HerbDryingRack : ModItem
+    /// <summary>
+    /// 药草晾架（物品） — 晾干药草的架子
+    /// </summary>
+        public class HerbDryingRack : ModItem
     {
         public override void SetDefaults()
         {

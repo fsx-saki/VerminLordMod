@@ -10,6 +10,14 @@ using VerminLordMod.Content.Projectiles;
 
 namespace VerminLordMod.Content.Items.Weapons.Two
 {
+	/// <summary>
+
+	/// 二转道蛊虫 — PlasmaGu
+
+	/// 蛊虫
+
+	/// </summary>
+
 	class PlasmaGu : LightningWeapon
 	{
 		protected override int _guLevel => 2;

@@ -9,6 +9,12 @@ using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.Projectiles
 {
+	/// <summary>
+
+	/// MoonlightProjS弹幕 — 道道
+
+	/// </summary>
+
 	class MoonlightProjS:ModProjectile
 	{
 		public override void SetStaticDefaults() {

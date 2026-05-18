@@ -8,7 +8,13 @@ using Terraria.ObjectData;
 
 namespace VerminLordMod.Content.Tiles.GuYueArchitecture
 {
-    public class PoisonWeed : ModTile
+    /// <summary>
+    /// 毒草 — 含有毒素的草
+    /// </summary>
+        /// <summary>
+    /// 毒草 — 含有毒素的草
+    /// </summary>
+        public class PoisonWeed : ModTile
     {
         public override void SetStaticDefaults()
         {

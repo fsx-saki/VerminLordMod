@@ -14,6 +14,12 @@ using VerminLordMod.Common.Players;
 
 namespace VerminLordMod.Content.Projectiles
 {
+	/// <summary>
+
+	/// ThunderBall弹幕 — 道道
+
+	/// </summary>
+
 	class ThunderBall:ModProjectile
 	{
 		public override void SetDefaults() {

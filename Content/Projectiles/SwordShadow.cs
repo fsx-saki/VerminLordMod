@@ -12,6 +12,12 @@ using Terraria.DataStructures;
 
 namespace VerminLordMod.Content.Projectiles
 {
+	/// <summary>
+
+	/// SwordShadow弹幕 — 道道
+
+	/// </summary>
+
 	class SwordShadow : ModProjectile
 	{
 		public override void SetDefaults() {

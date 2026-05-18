@@ -34,15 +34,10 @@ namespace VerminLordMod.Content.Projectiles
 				SuppressDefaultDraw = true,
 				EnableGhostTrail = true,
 				GhostColor = new Color(200, 80, 30, 180),
-				BannerColor = new Color(220, 100, 40, 200),
-				HornColor = new Color(240, 120, 50, 220),
-				WeaponEdgeColor = new Color(180, 60, 20, 180),
 			});
 
 			Behaviors.Add(new ExplosionKillBehavior
 			{
-				ExplosionRadius = 80f,
-				ExplosionDamage = 0.6f,
 			});
 		}
 

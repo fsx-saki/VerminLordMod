@@ -12,6 +12,21 @@ using Terraria.GameContent;
 
 namespace VerminLordMod.Content.Projectiles
 {
+	/// <summary>
+
+	/// StarDartGu弹幕 — 星道
+
+	/// </summary>
+
+	/// <summary>
+
+
+	/// StarDartGu弹幕 — 星道
+
+
+	/// </summary>
+
+
 	class StarDartProj : ModProjectile
 	{
 		public override void SetStaticDefaults() {

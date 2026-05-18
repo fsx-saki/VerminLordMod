@@ -13,6 +13,21 @@ using Terraria.GameContent;
 
 namespace VerminLordMod.Content.Projectiles
 {
+	/// <summary>
+
+	/// MoonPoisonGu弹幕 — 毒道
+
+	/// </summary>
+
+	/// <summary>
+
+
+	/// MoonPoisonGu弹幕 — 毒道
+
+
+	/// </summary>
+
+
 	class MoonPoisonProj : ModProjectile
 	{
 		public override void SetStaticDefaults() {

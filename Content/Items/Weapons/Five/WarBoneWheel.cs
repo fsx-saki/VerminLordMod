@@ -9,6 +9,14 @@ using VerminLordMod.Content.Projectiles;
 
 namespace VerminLordMod.Content.Items.Weapons.Five
 {
+	/// <summary>
+
+	/// 五转骨蛊虫 — WarBoneWheel
+
+	/// 蛊虫
+
+	/// </summary>
+
 	class WarBoneWheel : BoneWeapon
 	{
 

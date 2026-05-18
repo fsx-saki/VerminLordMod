@@ -34,9 +34,6 @@ namespace VerminLordMod.Content.Projectiles
 				SuppressDefaultDraw = true,
 				EnableGhostTrail = true,
 				GhostColor = new Color(160, 120, 220, 160),
-				FoldLineColor = new Color(180, 140, 240, 210),
-				WarpPointColor = new Color(140, 100, 200, 180),
-				MirrorShardColor = new Color(200, 180, 255, 220),
 			});
 
 			Behaviors.Add(new SplashBehavior(SplashMode.Radial)

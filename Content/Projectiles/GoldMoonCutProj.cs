@@ -9,6 +9,12 @@ using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.Projectiles
 {
+    /// <summary>
+
+    /// GoldMoonCutProj弹幕 — 道道
+
+    /// </summary>
+
     class GoldMoonCutProj : BaseBullet
     {
         private Texture2D tex;

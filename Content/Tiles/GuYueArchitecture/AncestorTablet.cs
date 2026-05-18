@@ -14,7 +14,13 @@ namespace VerminLordMod.Content.Tiles.GuYueArchitecture
     /// 原文: "供奉着先祖的牌位" (gzr_part001.txt:116)
     /// 功能: 装饰性家具，放置后提供小幅幸运/增益光环
     /// </summary>
-    public class AncestorTablet : ModTile
+    /// <summary>
+    /// 祖先牌位 — 古月宗的祖先牌位
+    /// </summary>
+        /// <summary>
+    /// 祖先牌位 — 古月宗的祖先牌位
+    /// </summary>
+        public class AncestorTablet : ModTile
     {
         public override void SetStaticDefaults()
         {

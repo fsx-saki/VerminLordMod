@@ -8,6 +8,14 @@ using VerminLordMod.Content.Projectiles;
 
 namespace VerminLordMod.Content.Items.Weapons.One
 {
+	/// <summary>
+
+	/// 一转风蛊虫 — Cyclone
+
+	/// 蛊虫
+
+	/// </summary>
+
 	class Cyclone : WindWeapon//必要继承moditem
 	{
 		protected override int controlQiCost => 20;

@@ -6,6 +6,14 @@ using VerminLordMod.Content.Items.Weapons.Daos;
 
 namespace VerminLordMod.Content.Items.Weapons.Two
 {
+	/// <summary>
+
+	/// 二转道蛊虫 — MoonLuminousTextile
+
+	/// 蛊虫
+
+	/// </summary>
+
 	class MoonLuminousTextile : EatingWeapon
 	{
 		protected override int qiCost => 10;

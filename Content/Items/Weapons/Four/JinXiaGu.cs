@@ -5,6 +5,14 @@ using VerminLordMod.Content.Items.Weapons.Daos;
 
 namespace VerminLordMod.Content.Items.Weapons.Four
 {
+	/// <summary>
+
+	/// 四转道蛊虫 — JinXiaGu
+
+	/// 蛊虫
+
+	/// </summary>
+
 	class JinXiaGu : EatingWeapon
 	{
 		protected override int qiCost => 10;

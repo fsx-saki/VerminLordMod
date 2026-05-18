@@ -13,7 +13,13 @@ namespace VerminLordMod.Content.Tiles.GuYueArchitecture
     /// 原文: "蛊的形态，有很多种...还有花草形态，就是方源眼前的...饭袋草蛊" (gzr_part001.txt:1148-1150)
     /// 原文: "草袋中会生长出香喷喷的米饭" (gzr_part001.txt:1150)
     /// </summary>
-    public class RiceBagGrass : ModTile
+    /// <summary>
+    /// 饭袋草 — 形似饭袋的草蛊
+    /// </summary>
+        /// <summary>
+    /// 饭袋草 — 形似饭袋的草蛊
+    /// </summary>
+        public class RiceBagGrass : ModTile
     {
         public override void SetStaticDefaults()
         {

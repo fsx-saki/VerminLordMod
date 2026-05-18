@@ -7,6 +7,14 @@ using VerminLordMod.Content.Projectiles;
 
 namespace VerminLordMod.Content.Items.Weapons.Three
 {
+	/// <summary>
+
+	/// 三转道蛊虫 — ThunderBallGu
+
+	/// 蛊虫
+
+	/// </summary>
+
 	class ThunderBallGu : LightningWeapon
 	{
 		protected override int _guLevel => 3;

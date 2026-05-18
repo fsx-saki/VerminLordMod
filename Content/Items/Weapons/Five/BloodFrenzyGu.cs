@@ -7,7 +7,11 @@ using VerminLordMod.Content.Items.Weapons.Daos;
 using VerminLordMod.Content.Projectiles;
 
 namespace VerminLordMod.Content.Items.Weapons.Five
-{
+{    /// <summary>
+    /// 五转道蛊虫 — BloodFrenzyGu
+    /// 蛊虫
+    /// </summary>
+
     public class BloodFrenzyGu : BloodWeapon, IOnHitEffectProvider
     {
         protected override int qiCost => 50;

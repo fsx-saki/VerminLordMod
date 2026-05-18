@@ -9,6 +9,21 @@ using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.Projectiles
 {
+    /// <summary>
+
+    /// SwordQiGu弹幕 — 道道
+
+    /// </summary>
+
+    /// <summary>
+
+
+    /// SwordQiGu弹幕 — 道道
+
+
+    /// </summary>
+
+
     class SwordQiProj : BaseBullet
     {
         protected override void RegisterBehaviors()

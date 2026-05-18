@@ -6,7 +6,10 @@ namespace VerminLordMod.Content.Items.Placeable.GuYueArchitecture
     /// <summary>
     /// 七彩钟乳石物品 - 可放置为发光钟乳石装饰
     /// </summary>
-    public class GlowingStalactite : ModItem
+    /// <summary>
+    /// 七彩钟乳石（物品） — 散发七彩光芒的钟乳石
+    /// </summary>
+        public class GlowingStalactite : ModItem
     {
         public override void SetDefaults()
         {

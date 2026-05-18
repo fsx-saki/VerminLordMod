@@ -8,7 +8,13 @@ namespace VerminLordMod.Content.Tiles.GuYueArchitecture
     /// 棕黄色地板 - 古月山寨宗族祠堂内的棕黄色地板
     /// 原文: "跪在棕黄色的地板上" (gzr_part001.txt:115)
     /// </summary>
-    public class BrownYellowFloor : ModTile
+    /// <summary>
+    /// 棕黄地板 — 棕黄色的地板
+    /// </summary>
+        /// <summary>
+    /// 棕黄地板 — 棕黄色的地板
+    /// </summary>
+        public class BrownYellowFloor : ModTile
     {
         public override void SetStaticDefaults()
         {

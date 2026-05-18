@@ -7,6 +7,14 @@ using VerminLordMod.Content.Projectiles;
 
 namespace VerminLordMod.Content.Items.Weapons.Two
 {
+	/// <summary>
+
+	/// 二转毒蛊虫 — PoisonNeedleGu
+
+	/// 蛊虫
+
+	/// </summary>
+
 	class PoisonNeedleGu : PoisonWeapon
 	{
 		protected override int qiCost => 5;

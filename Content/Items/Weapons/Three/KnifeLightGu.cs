@@ -7,6 +7,14 @@ using VerminLordMod.Content.Projectiles;
 
 namespace VerminLordMod.Content.Items.Weapons.Three
 {
+	/// <summary>
+
+	/// 三转道蛊虫 — KnifeLightGu
+
+	/// 蛊虫
+
+	/// </summary>
+
 	class KnifeLightGu : KnifeWeapon
 	{
 		protected override int qiCost => 2;

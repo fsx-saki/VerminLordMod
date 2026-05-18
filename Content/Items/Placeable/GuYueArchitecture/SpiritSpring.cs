@@ -6,7 +6,10 @@ namespace VerminLordMod.Content.Items.Placeable.GuYueArchitecture
     /// <summary>
     /// 灵泉物品 - 可放置为灵泉装饰物块
     /// </summary>
-    public class SpiritSpring : ModItem
+    /// <summary>
+    /// 灵泉（物品） — 蕴含灵气的泉水
+    /// </summary>
+        public class SpiritSpring : ModItem
     {
         public override void SetDefaults()
         {

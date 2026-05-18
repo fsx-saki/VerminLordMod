@@ -10,6 +10,12 @@ using Terraria.ID;
 
 namespace VerminLordMod.Content.Projectiles
 {
+	/// <summary>
+
+	/// BoneSpear弹幕 — 道道
+
+	/// </summary>
+
 	class BoneSpear:ModProjectile
 	{
 		public override void SetDefaults() {

@@ -7,7 +7,31 @@ using VerminLordMod.Common.BulletBehaviors;
 using VerminLordMod.Content.DamageClasses;
 
 namespace VerminLordMod.Content.Projectiles
-{
+{    /// <summary>
+    /// BloodDropperGu弹幕 — 道道
+    /// </summary>    /// <summary>
+    /// BloodDropperGu弹幕 — 道道
+    /// </summary>    /// <summary>
+    /// BloodDropperGu弹幕 — 道道
+    /// </summary>
+
+
+
+    /// <summary>
+
+
+
+
+    /// BloodDropperGu弹幕 — 道道
+
+
+
+
+    /// </summary>
+
+
+
+
     public class BloodDropperProj : BaseBullet
     {
         private const float OutwardSpeed = 14f;

@@ -10,6 +10,12 @@ using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.Projectiles
 {
+    /// <summary>
+
+    /// RedNeedle弹幕 — 道道
+
+    /// </summary>
+
     class RedNeedle : BaseBullet
     {
         protected override void RegisterBehaviors()

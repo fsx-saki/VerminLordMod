@@ -14,6 +14,14 @@ using VerminLordMod.Content.Projectiles;
 
 namespace VerminLordMod.Content.Items.Weapons.Three
 {
+	/// <summary>
+
+	/// 三转月蛊虫 — MoonHandKnife
+
+	/// 蛊虫
+
+	/// </summary>
+
 	class MoonHandKnife : MoonWeapon//必要继承moditem
 	{
 		protected override int controlQiCost => 20;

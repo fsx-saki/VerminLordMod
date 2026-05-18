@@ -10,7 +10,31 @@ using VerminLordMod.Content.SmoothMovement.Orbiters;
 using VerminLordMod.Content.SmoothMovement.Trackers;
 
 namespace VerminLordMod.Content.Projectiles
-{
+{    /// <summary>
+    /// FlyingBoneShieldGu弹幕 — 道道
+    /// </summary>    /// <summary>
+    /// FlyingBoneShieldGu弹幕 — 道道
+    /// </summary>    /// <summary>
+    /// FlyingBoneShieldGu弹幕 — 道道
+    /// </summary>
+
+
+
+    /// <summary>
+
+
+
+
+    /// FlyingBoneShieldGu弹幕 — 骨道
+
+
+
+
+    /// </summary>
+
+
+
+
     public class FlyingBoneShieldProj : BaseBullet
     {
         protected override void RegisterBehaviors()

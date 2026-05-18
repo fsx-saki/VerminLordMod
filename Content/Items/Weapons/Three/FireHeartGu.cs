@@ -11,6 +11,14 @@ using VerminLordMod.Content.Items.Weapons.Two;
 
 namespace VerminLordMod.Content.Items.Weapons.Three
 {
+	/// <summary>
+
+	/// 三转火蛊虫 — FireHeartGu
+
+	/// 蛊虫
+
+	/// </summary>
+
 	class FireHeartGu : FireWeapon
 	{
 		protected override int qiCost => 30;

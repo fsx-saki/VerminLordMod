@@ -7,6 +7,14 @@ using VerminLordMod.Content.Projectiles;
 
 namespace VerminLordMod.Content.Items.Weapons.Four
 {
+	/// <summary>
+
+	/// 四转道蛊虫 — SwordQiGu
+
+	/// 蛊虫
+
+	/// </summary>
+
 	class SwordQiGu : SwordWeapon
 	{
 		protected override int qiCost => 100;

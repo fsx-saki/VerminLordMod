@@ -11,6 +11,21 @@ using VerminLordMod.Content.Buffs;
 
 namespace VerminLordMod.Content.Projectiles
 {
+	/// <summary>
+
+	/// PlasmaGu弹幕 — 道道
+
+	/// </summary>
+
+	/// <summary>
+
+
+	/// PlasmaGu弹幕 — 道道
+
+
+	/// </summary>
+
+
 	class PlasmaProj : ModProjectile
 	{
 		public override void SetDefaults() {

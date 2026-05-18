@@ -3,7 +3,10 @@ using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.Items.Placeable.GuYueArchitecture
 {
-    public class QiHerb : ModItem
+    /// <summary>
+    /// 气草（物品） — 蕴含灵气的草
+    /// </summary>
+        public class QiHerb : ModItem
     {
         public override void SetDefaults()
         {

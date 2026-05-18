@@ -12,6 +12,14 @@ using VerminLordMod.Content.Projectiles;
 
 namespace VerminLordMod.Content.Items.Weapons.Five
 {
+	/// <summary>
+
+	/// 五转道蛊虫 — TianDiHongYinGu
+
+	/// 蛊虫
+
+	/// </summary>
+
 	class TianDiHongYinGu : VoiceWeapon
 	{
 		protected override int qiCost => 300;

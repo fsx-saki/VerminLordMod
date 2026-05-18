@@ -9,10 +9,10 @@ namespace VerminLordMod.Content.Projectiles
 {
 	/// <summary>
 	/// 灵盾蛊弹幕 — 一转金道
-	/// 特性：大体积+爆炸范围伤害(ExplosionKill) + 金系拖尾
+	/// 特性：大体积+爆炸效果(ExplosionKill) + 金系拖尾
 	/// 弹道：慢速直线(AimBehavior)，体积较大(1.2倍缩放)
 	/// 视觉：金道拖尾（金碎片+火花+光环+金属尘埃）
-	/// 命中效果：60像素半径爆炸，造成50%溅射伤害
+	/// 命中效果：命中爆炸，短命金属碎片
 	/// 金道特性：坚不可摧，以质量换取伤害
 	/// </summary>
 	public class SpiritGuardProj : BaseBullet
@@ -41,8 +41,10 @@ namespace VerminLordMod.Content.Projectiles
 
 			Behaviors.Add(new ExplosionKillBehavior
 			{
-				ExplosionRadius = 60f,
-				ExplosionDamage = 0.5f,
+				ColorStart = new Color(255, 220, 80, 255),
+				ColorEnd = new Color(255, 60, 0, 0),
+				KillCount = 20,
+				KillSpeed = 5f,
 			});
 		}
 

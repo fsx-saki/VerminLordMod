@@ -13,6 +13,14 @@ using VerminLordMod.Content.Projectiles;
 
 namespace VerminLordMod.Content.Items.Weapons.Two
 {
+	/// <summary>
+
+	/// 二转道蛊虫 — BigBelliedFrogGu
+
+	/// 蛊虫
+
+	/// </summary>
+
 	class BigBelliedFrogGu : GuWeaponItem//必要继承moditem
 	{
 		protected override int controlQiCost => 20;

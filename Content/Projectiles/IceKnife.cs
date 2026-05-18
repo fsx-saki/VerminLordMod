@@ -12,6 +12,12 @@ using Terraria.GameContent;
 
 namespace VerminLordMod.Content.Projectiles
 {
+	/// <summary>
+
+	/// IceKnife弹幕 — 道道
+
+	/// </summary>
+
 	class IceKnife : ModProjectile
 	{
 		public override void SetStaticDefaults() {

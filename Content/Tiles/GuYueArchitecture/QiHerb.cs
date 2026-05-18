@@ -8,7 +8,13 @@ using Terraria.ObjectData;
 
 namespace VerminLordMod.Content.Tiles.GuYueArchitecture
 {
-    public class QiHerb : ModTile
+    /// <summary>
+    /// 气草 — 蕴含灵气的草
+    /// </summary>
+        /// <summary>
+    /// 气草 — 蕴含灵气的草
+    /// </summary>
+        public class QiHerb : ModTile
     {
         public override void SetStaticDefaults()
         {

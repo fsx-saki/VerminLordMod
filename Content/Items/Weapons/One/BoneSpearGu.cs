@@ -7,6 +7,14 @@ using VerminLordMod.Content.Projectiles;
 
 namespace VerminLordMod.Content.Items.Weapons.One
 {
+	/// <summary>
+
+	/// 一转骨蛊虫 — BoneSpearGu
+
+	/// 蛊虫
+
+	/// </summary>
+
 	class BoneSpearGu : BoneWeapon
 	{
 		protected override int qiCost => 2;

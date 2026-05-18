@@ -6,7 +6,10 @@ namespace VerminLordMod.Content.Items.Placeable.GuYueArchitecture
     /// <summary>
     /// 黑漆台案物品 - 可放置为三层供案
     /// </summary>
-    public class BlackLacquerAltar : ModItem
+    /// <summary>
+    /// 黑漆祭坛（物品） — 黑漆涂装的祭坛
+    /// </summary>
+        public class BlackLacquerAltar : ModItem
     {
         public override void SetDefaults()
         {

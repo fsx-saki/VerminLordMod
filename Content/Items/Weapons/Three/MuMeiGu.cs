@@ -6,6 +6,14 @@ using VerminLordMod.Content.Items.Weapons.Daos;
 
 namespace VerminLordMod.Content.Items.Weapons.Three
 {
+	/// <summary>
+
+	/// 三转道蛊虫 — MuMeiGu
+
+	/// 蛊虫
+
+	/// </summary>
+
 	class MuMeiGu : IceSnowWeapon
 	{
 		protected override int qiCost => 30;

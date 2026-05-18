@@ -13,7 +13,13 @@ namespace VerminLordMod.Content.Tiles.GuYueArchitecture
     /// 原文: "我族有灵泉产出元石，在地下溶洞又种植了大片月兰花" (gzr_part001.txt:1189)
     /// 原文: "用元石换购你族的月兰花" (gzr_part001.txt:1186)
     /// </summary>
-    public class MoonOrchid : ModTile
+    /// <summary>
+    /// 月兰花 — 古月山寨栽培的花卉
+    /// </summary>
+        /// <summary>
+    /// 月兰花 — 古月山寨栽培的花卉
+    /// </summary>
+        public class MoonOrchid : ModTile
     {
         public override void SetStaticDefaults()
         {

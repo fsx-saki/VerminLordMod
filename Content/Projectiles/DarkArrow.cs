@@ -7,6 +7,12 @@ using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.Projectiles
 {
+    /// <summary>
+
+    /// DarkArrow弹幕 — 道道
+
+    /// </summary>
+
     class DarkArrow : BaseBullet
     {
         protected override void RegisterBehaviors()

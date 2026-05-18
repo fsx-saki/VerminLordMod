@@ -11,7 +11,7 @@ namespace VerminLordMod.Content.Projectiles
 	/// 疾风蛊弹幕 — 一转飞道
 	/// 特性：极高速度(14) + 波浪轨迹 + 风系拖尾
 	/// 弹道：高速直线(AimBehavior)配合正弦波(WaveBehavior)左右摆动
-	/// 视觉：风系拖尾（阵风+飞叶+涡流）
+	/// 视觉：风系拖尾（风纹+涡流+薄雾）
 	/// 飞道特性：轻快灵动，以速度和不可预测的轨迹迷惑敌人
 	/// </summary>
 	public class SwiftWindProj : BaseBullet
@@ -33,16 +33,12 @@ namespace VerminLordMod.Content.Projectiles
 				SuppressDefaultDraw = true,
 				EnableGhostTrail = true,
 				GhostColor = new Color(80, 200, 120, 140),
-				GustColor = new Color(100, 220, 140, 200),
-				LeafColor = new Color(60, 180, 80, 180),
-				VortexColor = new Color(120, 240, 160, 160),
+				StreakColor = new Color(100, 220, 140, 200),
+				VortexColor = new Color(120, 240, 160, 180),
+				MistColor = new Color(80, 200, 140, 100),
 			});
 
-			Behaviors.Add(new WaveBehavior
-			{
-				Amplitude = 3f,
-				Frequency = 0.15f,
-			});
+			Behaviors.Add(new WaveBehavior(amplitude: 0.03f, frequency: 0.15f));
 		}
 
 		public override void SetDefaults()

@@ -12,6 +12,12 @@ using Terraria.Audio;
 
 namespace VerminLordMod.Content.Projectiles
 {
+	/// <summary>
+
+	/// SpiralBoneSpear弹幕 — 道道
+
+	/// </summary>
+
 	class SpiralBoneSpear : ModProjectile
 	{
 		public override void SetDefaults() {

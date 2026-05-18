@@ -11,6 +11,21 @@ using VerminLordMod.Content.Buffs;
 
 namespace VerminLordMod.Content.Projectiles
 {
+	/// <summary>
+
+	/// StoveGu弹幕 — 火道
+
+	/// </summary>
+
+	/// <summary>
+
+
+	/// StoveGu弹幕 — 火道
+
+
+	/// </summary>
+
+
 	class StoveProj : ModProjectile
 	{
 		public override void SetDefaults() {

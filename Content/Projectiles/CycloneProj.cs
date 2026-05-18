@@ -10,6 +10,21 @@ using Terraria.ID;
 
 namespace VerminLordMod.Content.Projectiles
 {
+	/// <summary>
+
+	/// Cyclone弹幕 — 风道
+
+	/// </summary>
+
+	/// <summary>
+
+
+	/// Cyclone弹幕 — 风道
+
+
+	/// </summary>
+
+
 	class CycloneProj:ModProjectile
 	{
 		public override void SetStaticDefaults() {

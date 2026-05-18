@@ -3,7 +3,10 @@ using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.Items.Placeable.GuYueArchitecture
 {
-    public class HealingHerb : ModItem
+    /// <summary>
+    /// 疗伤草（物品） — 具有疗伤效果的草药
+    /// </summary>
+        public class HealingHerb : ModItem
     {
         public override void SetDefaults()
         {

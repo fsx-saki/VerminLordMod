@@ -10,6 +10,21 @@ using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.Projectiles
 {
+    /// <summary>
+
+    /// LoveToLeave弹幕 — 毒道
+
+    /// </summary>
+
+    /// <summary>
+
+
+    /// LoveToLeave弹幕 — 毒道
+
+
+    /// </summary>
+
+
     class LoveToLeaveProj : BaseBullet
     {
         protected override void RegisterBehaviors()

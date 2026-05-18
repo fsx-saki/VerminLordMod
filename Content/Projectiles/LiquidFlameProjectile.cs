@@ -8,6 +8,12 @@ using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.Projectiles
 {
+	/// <summary>
+
+	/// LiquidFlameProjectile弹幕 — 道道
+
+	/// </summary>
+
 	class LiquidFlameProjectile : ModProjectile
 	{
 		public override void SetStaticDefaults() { }

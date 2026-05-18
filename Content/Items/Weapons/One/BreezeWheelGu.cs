@@ -5,6 +5,14 @@ using VerminLordMod.Content.Items.Weapons.Daos;
 
 namespace VerminLordMod.Content.Items.Weapons.One
 {
+	/// <summary>
+
+	/// 一转道蛊虫 — BreezeWheelGu
+
+	/// 蛊虫
+
+	/// </summary>
+
 	class BreezeWheelGu : EatingWeapon
 	{
 		protected override int qiCost => 10;

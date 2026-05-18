@@ -7,7 +7,11 @@ using VerminLordMod.Content.Items.Weapons.Daos;
 using VerminLordMod.Content.Projectiles;
 
 namespace VerminLordMod.Content.Items.Weapons.Three
-{
+{    /// <summary>
+    /// 三转道蛊虫 — FrostDemonGu
+    /// 蛊虫
+    /// </summary>
+
     public class FrostDemonGu : IceSnowWeapon, IOnHitEffectProvider
     {
         protected override int qiCost => 35;

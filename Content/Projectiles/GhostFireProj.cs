@@ -5,7 +5,58 @@ using Terraria.ModLoader;
 using VerminLordMod.Content.DamageClasses;
 
 namespace VerminLordMod.Content.Projectiles
-{
+{    /// <summary>
+    /// GhostFireGu弹幕 — 道道
+    /// </summary>    /// <summary>
+    /// GhostFireProj弹幕 — 道道
+    /// </summary>    /// <summary>
+    /// GhostFireGu弹幕 — 道道
+    /// </summary>    /// <summary>
+    /// GhostFireProj弹幕 — 道道
+    /// </summary>
+
+
+
+
+	/// <summary>
+
+
+
+
+
+	/// GhostFireGu弹幕 — 魂道
+
+
+
+
+
+	/// </summary>
+
+
+
+
+
+	/// <summary>
+
+
+
+
+
+
+	/// GhostFireGu弹幕 — 魂道
+
+
+
+
+
+
+	/// </summary>
+
+
+
+
+
+
 	public class GhostFireProj : ModProjectile
 	{
 		public override void SetStaticDefaults() {

@@ -4,7 +4,10 @@ using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.Items.Placeable
 {
-    public class CultivationPlatformItem : ModItem
+    /// <summary>
+    /// 修炼台（物品） — 蛊师修炼的平台
+    /// </summary>
+        public class CultivationPlatformItem : ModItem
     {
         public override void SetDefaults()
         {

@@ -5,7 +5,58 @@ using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.Projectiles
-{
+{    /// <summary>
+    /// WaterDrillGu弹幕 — 道道
+    /// </summary>    /// <summary>
+    /// WaterDrillProj弹幕 — 道道
+    /// </summary>    /// <summary>
+    /// WaterDrillGu弹幕 — 道道
+    /// </summary>    /// <summary>
+    /// WaterDrillProj弹幕 — 道道
+    /// </summary>
+
+
+
+
+	/// <summary>
+
+
+
+
+
+	/// WaterDrillGu弹幕 — 水道
+
+
+
+
+
+	/// </summary>
+
+
+
+
+
+	/// <summary>
+
+
+
+
+
+
+	/// WaterDrillGu弹幕 — 水道
+
+
+
+
+
+
+	/// </summary>
+
+
+
+
+
+
 	public class WaterDrillProj : ModProjectile
 	{
 		public override void SetStaticDefaults() {

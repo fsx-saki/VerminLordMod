@@ -5,6 +5,21 @@ using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.Projectiles
 {
+	/// <summary>
+
+	/// JiaoLeiPotatoGu弹幕 — 木道
+
+	/// </summary>
+
+	/// <summary>
+
+
+	/// JiaoLeiPotatoGu弹幕 — 木道
+
+
+	/// </summary>
+
+
 	class JiaoLeiPotatoProj : ModProjectile
 	{
 

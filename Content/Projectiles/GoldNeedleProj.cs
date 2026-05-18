@@ -9,6 +9,21 @@ using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.Projectiles
 {
+    /// <summary>
+
+    /// GoldNeedleGu弹幕 — 道道
+
+    /// </summary>
+
+    /// <summary>
+
+
+    /// GoldNeedleGu弹幕 — 道道
+
+
+    /// </summary>
+
+
     class GoldNeedleProj : BaseBullet
     {
         protected override void RegisterBehaviors()

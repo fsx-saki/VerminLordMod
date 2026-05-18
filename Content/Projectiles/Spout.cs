@@ -15,6 +15,12 @@ using VerminLordMod.Content.DamageClasses;
 
 namespace VerminLordMod.Content.Projectiles
 {
+	/// <summary>
+
+	/// Spout弹幕 — 道道
+
+	/// </summary>
+
 	class Spout : ModProjectile
 	{
 		public override void SetDefaults() {

@@ -10,6 +10,12 @@ using Terraria.GameContent;
 
 namespace VerminLordMod.Content.Projectiles
 {
+	/// <summary>
+
+	/// InvitingMoonProjB弹幕 — 道道
+
+	/// </summary>
+
 	class InvitingMoonProjB: ModProjectile
 	{
 		public override void SetStaticDefaults() {

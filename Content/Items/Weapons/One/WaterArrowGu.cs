@@ -7,6 +7,14 @@ using VerminLordMod.Content.Projectiles;
 
 namespace VerminLordMod.Content.Items.Weapons.One
 {
+	/// <summary>
+
+	/// 一转水蛊虫 — WaterArrowGu
+
+	/// 蛊虫
+
+	/// </summary>
+
 	class WaterArrowGu : WaterWeapon
 	{
 		protected override int qiCost => 7;

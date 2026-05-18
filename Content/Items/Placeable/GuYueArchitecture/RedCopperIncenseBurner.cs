@@ -6,7 +6,10 @@ namespace VerminLordMod.Content.Items.Placeable.GuYueArchitecture
     /// <summary>
     /// 赤铜香炉物品 - 可放置为香炉，发光并产生烟雾粒子
     /// </summary>
-    public class RedCopperIncenseBurner : ModItem
+    /// <summary>
+    /// 赤铜香炉（物品） — 赤铜制成的香炉
+    /// </summary>
+        public class RedCopperIncenseBurner : ModItem
     {
         public override void SetDefaults()
         {

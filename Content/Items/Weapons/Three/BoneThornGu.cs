@@ -8,7 +8,11 @@ using VerminLordMod.Content.Items.Weapons.Daos;
 using VerminLordMod.Content.Projectiles;
 
 namespace VerminLordMod.Content.Items.Weapons.Three
-{
+{    /// <summary>
+    /// 三转道蛊虫 — BoneThornGu
+    /// 蛊虫
+    /// </summary>
+
     public class BoneThornGu : BoneWeapon, IOnHitEffectProvider
     {
         protected override int qiCost => 28;

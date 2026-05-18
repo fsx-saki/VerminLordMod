@@ -12,6 +12,14 @@ using VerminLordMod.Content.Projectiles;
 
 namespace VerminLordMod.Content.Items.Weapons.One
 {
+	/// <summary>
+
+	/// 一转星蛊虫 — StarArrowGu
+
+	/// 蛊虫
+
+	/// </summary>
+
 	class StarArrowGu : StarWeapon
 	{
 		protected override int qiCost => 27;

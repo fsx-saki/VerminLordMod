@@ -9,10 +9,10 @@ namespace VerminLordMod.Content.Projectiles
 {
 	/// <summary>
 	/// 影刺蛊弹幕 — 一转影道
-	/// 特性：穿透(2) + 前方锥形散射 + 暗影拖尾
-	/// 弹道：中速直线(AimBehavior)，穿透敌人后向前方散射暗影碎片
-	/// 视觉：影系拖尾（暗影残像+剪影轮廓+暗影焰）
-	/// 命中效果：锥形散射(SplashMode.Cone) 5枚暗影碎片
+	/// 特性：穿透(2) + 暗影拖尾 + 命中标记敌人
+	/// 弹道：中速直线(AimBehavior)，穿透2个敌人
+	/// 视觉：影系拖尾（暗影残像+触须+暗影池+克隆体）
+	/// 影道特性：暗杀型，穿透敌人并留下暗影标记
 	/// </summary>
 	public class ShadowStingProj : BaseBullet
 	{
@@ -34,25 +34,11 @@ namespace VerminLordMod.Content.Projectiles
 				EnableGhostTrail = true,
 				GhostColor = new Color(80, 20, 120, 160),
 				CloneColor = new Color(100, 30, 140, 200),
-				SilhouetteColor = new Color(60, 15, 100, 180),
+				CloneSpawnChance = 0.03f,
+				CloneLife = 30,
 			});
 
-			Behaviors.Add(new SplashBehavior(SplashMode.Cone)
-			{
-				Count = 5,
-				SpeedMin = 2f,
-				SpeedMax = 6f,
-				SpreadRadius = 3f,
-				ConeAngle = 0.4f,
-				SpawnExtraDust = true,
-				ExtraDustCount = 8,
-				DustType = DustID.Shadowflame,
-				DustColorStart = new Color(100, 30, 150, 200),
-				DustColorEnd = new Color(30, 10, 60, 0),
-				DustScaleMin = 0.3f,
-				DustScaleMax = 0.7f,
-				DustNoGravity = true,
-			});
+			Behaviors.Add(new DebuffOnHitBehavior(BuffID.ShadowFlame, 120));
 		}
 
 		public override void SetDefaults()

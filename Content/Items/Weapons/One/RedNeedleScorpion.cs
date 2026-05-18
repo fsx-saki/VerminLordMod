@@ -7,6 +7,14 @@ using VerminLordMod.Content.Projectiles;
 
 namespace VerminLordMod.Content.Items.Weapons.One
 {
+	/// <summary>
+
+	/// 一转毒蛊虫 — RedNeedleScorpion
+
+	/// 蛊虫
+
+	/// </summary>
+
 	class RedNeedleScorpion : PoisonWeapon
 	{
 		protected override int qiCost => 5;

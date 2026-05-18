@@ -10,6 +10,12 @@ using Terraria.ID;
 
 namespace VerminLordMod.Content.Projectiles
 {
+	/// <summary>
+
+	/// LightningSpear弹幕 — 道道
+
+	/// </summary>
+
 	class LightningSpear : ModProjectile
 	{
 		public override void SetDefaults() {

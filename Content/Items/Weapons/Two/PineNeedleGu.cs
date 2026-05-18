@@ -11,6 +11,14 @@ using VerminLordMod.Content.Projectiles;
 
 namespace VerminLordMod.Content.Items.Weapons.Two
 {
+	/// <summary>
+
+	/// 二转木蛊虫 — PineNeedleGu
+
+	/// 蛊虫
+
+	/// </summary>
+
 	class PineNeedleGu : WoodWeapon//必要继承moditem
 	{
 		protected override int controlQiCost => 20;

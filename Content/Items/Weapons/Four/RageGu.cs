@@ -6,6 +6,14 @@ using VerminLordMod.Content.Items.Weapons.Daos;
 
 namespace VerminLordMod.Content.Items.Weapons.Four
 {
+	/// <summary>
+
+	/// 四转道蛊虫 — RageGu
+
+	/// 蛊虫
+
+	/// </summary>
+
 	class RageGu : PowerWeapon
 	{
 		protected override int controlQiCost => 50;

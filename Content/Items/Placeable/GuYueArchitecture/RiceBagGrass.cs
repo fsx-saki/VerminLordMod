@@ -6,7 +6,10 @@ namespace VerminLordMod.Content.Items.Placeable.GuYueArchitecture
     /// <summary>
     /// 饭袋草蛊物品 - 可放置为饭袋草蛊装饰植物
     /// </summary>
-    public class RiceBagGrass : ModItem
+    /// <summary>
+    /// 饭袋草（物品） — 形似饭袋的草蛊
+    /// </summary>
+        public class RiceBagGrass : ModItem
     {
         public override void SetDefaults()
         {

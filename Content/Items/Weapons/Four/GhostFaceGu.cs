@@ -7,7 +7,11 @@ using VerminLordMod.Content.Items.Weapons.Daos;
 using VerminLordMod.Content.Projectiles;
 
 namespace VerminLordMod.Content.Items.Weapons.Four
-{
+{    /// <summary>
+    /// 四转道蛊虫 — GhostFaceGu
+    /// 蛊虫
+    /// </summary>
+
     public class GhostFaceGu : SoulWeapon, IOnHitEffectProvider
     {
         protected override int qiCost => 40;

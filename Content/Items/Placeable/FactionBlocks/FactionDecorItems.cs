@@ -4,7 +4,10 @@ using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.Items.Placeable.FactionBlocks
 {
-    public class GuYueAltar : ModItem
+    /// <summary>
+    /// 古月祭坛（物品） — 古月宗的祭坛
+    /// </summary>
+        public class GuYueAltar : ModItem
     {
         public override void SetDefaults()
         {
@@ -16,7 +19,10 @@ namespace VerminLordMod.Content.Items.Placeable.FactionBlocks
         }
     }
 
-    public class BaiJadeTable : ModItem
+    /// <summary>
+    /// 白玉桌（物品） — 白玉制成的桌子
+    /// </summary>
+        public class BaiJadeTable : ModItem
     {
         public override void SetDefaults()
         {
@@ -28,7 +34,10 @@ namespace VerminLordMod.Content.Items.Placeable.FactionBlocks
         }
     }
 
-    public class XiongAnvil : ModItem
+    /// <summary>
+    /// 熊家铁砧（物品） — 熊家的铁砧
+    /// </summary>
+        public class XiongAnvil : ModItem
     {
         public override void SetDefaults()
         {
@@ -40,7 +49,10 @@ namespace VerminLordMod.Content.Items.Placeable.FactionBlocks
         }
     }
 
-    public class TieSmeltingFurnace : ModItem
+    /// <summary>
+    /// 铁家熔炉（物品） — 铁家的冶炼熔炉
+    /// </summary>
+        public class TieSmeltingFurnace : ModItem
     {
         public override void SetDefaults()
         {
@@ -52,7 +64,10 @@ namespace VerminLordMod.Content.Items.Placeable.FactionBlocks
         }
     }
 
-    public class WangWaterOrb : ModItem
+    /// <summary>
+    /// 王家水球（物品） — 王家的水球装饰
+    /// </summary>
+        public class WangWaterOrb : ModItem
     {
         public override void SetDefaults()
         {
@@ -64,7 +79,10 @@ namespace VerminLordMod.Content.Items.Placeable.FactionBlocks
         }
     }
 
-    public class ZhaoSecretDoor : ModItem
+    /// <summary>
+    /// 赵家暗门（物品） — 赵家的秘密门
+    /// </summary>
+        public class ZhaoSecretDoor : ModItem
     {
         public override void SetDefaults()
         {
@@ -76,7 +94,10 @@ namespace VerminLordMod.Content.Items.Placeable.FactionBlocks
         }
     }
 
-    public class JiaTradingCounter : ModItem
+    /// <summary>
+    /// 贾家柜台（物品） — 贾家的交易柜台
+    /// </summary>
+        public class JiaTradingCounter : ModItem
     {
         public override void SetDefaults()
         {
@@ -88,7 +109,10 @@ namespace VerminLordMod.Content.Items.Placeable.FactionBlocks
         }
     }
 
-    public class ScatteredCampfire : ModItem
+    /// <summary>
+    /// 散修篝火（物品） — 散修营地的篝火
+    /// </summary>
+        public class ScatteredCampfire : ModItem
     {
         public override void SetDefaults()
         {
@@ -100,7 +124,10 @@ namespace VerminLordMod.Content.Items.Placeable.FactionBlocks
         }
     }
 
-    public class GuYueMedicinePot : ModItem
+    /// <summary>
+    /// 古月药罐（物品） — 古月宗的药罐
+    /// </summary>
+        public class GuYueMedicinePot : ModItem
     {
         public override void SetDefaults()
         {
@@ -112,7 +139,10 @@ namespace VerminLordMod.Content.Items.Placeable.FactionBlocks
         }
     }
 
-    public class BaiJadeScreen : ModItem
+    /// <summary>
+    /// 白玉屏风（物品） — 白玉制成的屏风
+    /// </summary>
+        public class BaiJadeScreen : ModItem
     {
         public override void SetDefaults()
         {
@@ -124,7 +154,10 @@ namespace VerminLordMod.Content.Items.Placeable.FactionBlocks
         }
     }
 
-    public class XiongBoneTotem : ModItem
+    /// <summary>
+    /// 熊家骨图腾（物品） — 熊家的骨制图腾
+    /// </summary>
+        public class XiongBoneTotem : ModItem
     {
         public override void SetDefaults()
         {
@@ -136,7 +169,10 @@ namespace VerminLordMod.Content.Items.Placeable.FactionBlocks
         }
     }
 
-    public class TieWeaponRack : ModItem
+    /// <summary>
+    /// 铁家兵器架（物品） — 铁家的兵器架
+    /// </summary>
+        public class TieWeaponRack : ModItem
     {
         public override void SetDefaults()
         {
@@ -148,7 +184,10 @@ namespace VerminLordMod.Content.Items.Placeable.FactionBlocks
         }
     }
 
-    public class WangWaterBasin : ModItem
+    /// <summary>
+    /// 王家水盆（物品） — 王家的水盆装饰
+    /// </summary>
+        public class WangWaterBasin : ModItem
     {
         public override void SetDefaults()
         {
@@ -160,7 +199,10 @@ namespace VerminLordMod.Content.Items.Placeable.FactionBlocks
         }
     }
 
-    public class ZhaoShadowLantern : ModItem
+    /// <summary>
+    /// 赵家影灯（物品） — 赵家的暗影灯笼
+    /// </summary>
+        public class ZhaoShadowLantern : ModItem
     {
         public override void SetDefaults()
         {
@@ -172,7 +214,10 @@ namespace VerminLordMod.Content.Items.Placeable.FactionBlocks
         }
     }
 
-    public class JiaGoldCoinPile : ModItem
+    /// <summary>
+    /// 贾家金币堆（物品） — 贾家的金币堆装饰
+    /// </summary>
+        public class JiaGoldCoinPile : ModItem
     {
         public override void SetDefaults()
         {
@@ -184,7 +229,10 @@ namespace VerminLordMod.Content.Items.Placeable.FactionBlocks
         }
     }
 
-    public class ScatteredTent : ModItem
+    /// <summary>
+    /// 散修帐篷（物品） — 散修的帐篷
+    /// </summary>
+        public class ScatteredTent : ModItem
     {
         public override void SetDefaults()
         {

@@ -15,6 +15,14 @@ using VerminLordMod.Content.Projectiles;
 
 namespace VerminLordMod.Content.Items.Weapons.Four
 {
+	/// <summary>
+
+	/// 四转道蛊虫 — ElectricTeethKillingWuGu
+
+	/// 蛊虫
+
+	/// </summary>
+
 	class ElectricTeethKillingWuGu : GoldWeapon
 	{
 		protected override int _guLevel => 4;

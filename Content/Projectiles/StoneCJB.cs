@@ -9,6 +9,12 @@ using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.Projectiles
 {
+    /// <summary>
+
+    /// StoneCJB弹幕 — 道道
+
+    /// </summary>
+
     class StoneCJB : BaseBullet
     {
         protected override void RegisterBehaviors()

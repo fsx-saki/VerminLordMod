@@ -8,7 +8,11 @@ using VerminLordMod.Content.Projectiles;
 namespace VerminLordMod.Content.Items.Weapons.One
 {
 	class RiverStream : WaterWeapon
-	{
+	{    /// <summary>
+    /// 一转道蛊虫 — RiverStream
+    /// 蛊虫
+    /// </summary>
+
 		public class Bais : ModPlayer
 		{
 			public bool WaterCircle;

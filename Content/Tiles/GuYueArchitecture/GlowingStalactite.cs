@@ -13,7 +13,13 @@ namespace VerminLordMod.Content.Tiles.GuYueArchitecture
     /// 原文: "地下溶洞美轮美奂，钟乳石散发着赤橙黄绿青蓝紫七色光华" (gzr_part001.txt:324)
     /// 功能: 装饰性发光物块
     /// </summary>
-    public class GlowingStalactite : ModTile
+    /// <summary>
+    /// 七彩钟乳石 — 散发七彩光芒的钟乳石
+    /// </summary>
+        /// <summary>
+    /// 七彩钟乳石 — 散发七彩光芒的钟乳石
+    /// </summary>
+        public class GlowingStalactite : ModTile
     {
         public override void SetStaticDefaults()
         {

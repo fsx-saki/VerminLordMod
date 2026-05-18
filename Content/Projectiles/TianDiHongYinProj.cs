@@ -9,6 +9,21 @@ using VerminLordMod.Content.Buffs;
 
 namespace VerminLordMod.Content.Projectiles
 {
+	/// <summary>
+
+	/// TianDiHongYinGu弹幕 — 道道
+
+	/// </summary>
+
+	/// <summary>
+
+
+	/// TianDiHongYinGu弹幕 — 道道
+
+
+	/// </summary>
+
+
 	class TianDiHongYinProj : ModProjectile
 	{
 		public override void SetStaticDefaults() {

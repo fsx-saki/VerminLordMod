@@ -13,7 +13,13 @@ namespace VerminLordMod.Content.Tiles.GuYueArchitecture
     /// 原文: "青竹酒，可以说是古月山寨中的第一好酒" (gzr_part001.txt:1020)
     /// 功能: 装饰性物块
     /// </summary>
-    public class GreenBambooWineJar : ModTile
+    /// <summary>
+    /// 青竹酒坛 — 青竹制成的酒坛
+    /// </summary>
+        /// <summary>
+    /// 青竹酒坛 — 青竹制成的酒坛
+    /// </summary>
+        public class GreenBambooWineJar : ModTile
     {
         public override void SetStaticDefaults()
         {

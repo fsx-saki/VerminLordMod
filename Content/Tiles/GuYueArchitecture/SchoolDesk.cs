@@ -13,7 +13,13 @@ namespace VerminLordMod.Content.Tiles.GuYueArchitecture
     /// 原文: 古月山寨学堂中学员上课使用的书桌
     /// 功能: 装饰性家具，可作为工作台使用
     /// </summary>
-    public class SchoolDesk : ModTile
+    /// <summary>
+    /// 学堂桌 — 古月宗学堂的桌子
+    /// </summary>
+        /// <summary>
+    /// 学堂桌 — 古月宗学堂的桌子
+    /// </summary>
+        public class SchoolDesk : ModTile
     {
         public override void SetStaticDefaults()
         {

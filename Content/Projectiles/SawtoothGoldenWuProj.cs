@@ -12,6 +12,21 @@ using Microsoft.Xna.Framework;
 
 namespace VerminLordMod.Content.Projectiles
 {
+	/// <summary>
+
+	/// SawtoothGoldenWuGu弹幕 — 道道
+
+	/// </summary>
+
+	/// <summary>
+
+
+	/// SawtoothGoldenWuGu弹幕 — 道道
+
+
+	/// </summary>
+
+
 	class SawtoothGoldenWuProj : ModProjectile
 	{
 		public override void SetDefaults() {

@@ -4,7 +4,10 @@ using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.Items.Placeable.DarkEnvironment
 {
-    public class GuFormationTile : ModItem
+    /// <summary>
+    /// 蛊阵（物品） — 蛊虫阵法的基石
+    /// </summary>
+        public class GuFormationTile : ModItem
     {
         public override void SetDefaults()
         {
@@ -16,7 +19,10 @@ namespace VerminLordMod.Content.Items.Placeable.DarkEnvironment
         }
     }
 
-    public class BloodPoolTile : ModItem
+    /// <summary>
+    /// 血池（物品） — 充满鲜血的池子
+    /// </summary>
+        public class BloodPoolTile : ModItem
     {
         public override void SetDefaults()
         {
@@ -28,7 +34,10 @@ namespace VerminLordMod.Content.Items.Placeable.DarkEnvironment
         }
     }
 
-    public class CorpseCocoon : ModItem
+    /// <summary>
+    /// 尸茧（物品） — 尸体被蛊丝包裹形成的茧
+    /// </summary>
+        public class CorpseCocoon : ModItem
     {
         public override void SetDefaults()
         {
@@ -40,7 +49,10 @@ namespace VerminLordMod.Content.Items.Placeable.DarkEnvironment
         }
     }
 
-    public class SoulCage : ModItem
+    /// <summary>
+    /// 魂笼（物品） — 囚禁灵魂的笼子
+    /// </summary>
+        public class SoulCage : ModItem
     {
         public override void SetDefaults()
         {
@@ -52,7 +64,10 @@ namespace VerminLordMod.Content.Items.Placeable.DarkEnvironment
         }
     }
 
-    public class FleshWall : ModItem
+    /// <summary>
+    /// 血肉墙（物品） — 血肉凝固形成的墙壁
+    /// </summary>
+        public class FleshWall : ModItem
     {
         public override void SetDefaults()
         {
@@ -64,7 +79,10 @@ namespace VerminLordMod.Content.Items.Placeable.DarkEnvironment
         }
     }
 
-    public class GuSacrificeAltar : ModItem
+    /// <summary>
+    /// 蛊祭坛（物品） — 进行蛊虫祭祀的祭坛
+    /// </summary>
+        public class GuSacrificeAltar : ModItem
     {
         public override void SetDefaults()
         {
@@ -76,7 +94,10 @@ namespace VerminLordMod.Content.Items.Placeable.DarkEnvironment
         }
     }
 
-    public class WitheredOrgan : ModItem
+    /// <summary>
+    /// 枯萎器官（物品） — 枯萎的生物器官
+    /// </summary>
+        public class WitheredOrgan : ModItem
     {
         public override void SetDefaults()
         {
@@ -88,7 +109,10 @@ namespace VerminLordMod.Content.Items.Placeable.DarkEnvironment
         }
     }
 
-    public class PoisonMistEmitter : ModItem
+    /// <summary>
+    /// 毒雾发射器（物品） — 释放毒雾的装置
+    /// </summary>
+        public class PoisonMistEmitter : ModItem
     {
         public override void SetDefaults()
         {
@@ -100,7 +124,10 @@ namespace VerminLordMod.Content.Items.Placeable.DarkEnvironment
         }
     }
 
-    public class GuTombstone : ModItem
+    /// <summary>
+    /// 蛊墓碑（物品） — 蛊师墓地的碑石
+    /// </summary>
+        public class GuTombstone : ModItem
     {
         public override void SetDefaults()
         {
@@ -112,7 +139,10 @@ namespace VerminLordMod.Content.Items.Placeable.DarkEnvironment
         }
     }
 
-    public class SpiritSealStone : ModItem
+    /// <summary>
+    /// 封灵石（物品） — 封印灵力的石头
+    /// </summary>
+        public class SpiritSealStone : ModItem
     {
         public override void SetDefaults()
         {

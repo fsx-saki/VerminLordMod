@@ -6,6 +6,14 @@ using VerminLordMod.Content.Items.Weapons.Daos;
 
 namespace VerminLordMod.Content.Items.Weapons.Four
 {
+	/// <summary>
+
+	/// 四转道蛊虫 — GiantSpiritIntentGu
+
+	/// 蛊虫
+
+	/// </summary>
+
 	class GiantSpiritIntentGu : EatingWeapon
 	{
 		protected override int qiCost => 10;

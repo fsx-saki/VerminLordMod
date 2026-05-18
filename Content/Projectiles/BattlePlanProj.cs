@@ -9,10 +9,10 @@ namespace VerminLordMod.Content.Projectiles
 {
 	/// <summary>
 	/// 战策蛊弹幕 — 一转战术道
-	/// 特性：前方分裂弹(4枚) + 灼烧Debuff + 金系拖尾
+	/// 特性：前方分裂弹 + 灼烧Debuff + 金系拖尾 + 极高暴击
 	/// 弹道：中速直线(AimBehavior)，命中后向前方扇形散射4枚子母弹
-	/// 视觉：金系拖尾（金碎片+火花+光环）
-	/// 命中效果：附加着火(OnFire) + 前方分裂(SplashMode.Forward)
+	/// 视觉：金系拖尾（金碎片+火花+光晕环）
+	/// 命中效果：附加着火(OnFire)
 	/// 战术道特性：精准计算，一击多效
 	/// </summary>
 	public class BattlePlanProj : BaseBullet
@@ -34,18 +34,11 @@ namespace VerminLordMod.Content.Projectiles
 				SuppressDefaultDraw = true,
 				EnableGhostTrail = true,
 				GhostColor = new Color(180, 170, 60, 160),
-				ShardColor = new Color(200, 190, 80, 200),
-				SparkColor = new Color(220, 210, 100, 220),
+				ShardColor = new Color(200, 190, 80, 220),
+				SparkColor = new Color(220, 210, 100, 240),
 			});
 
-			Behaviors.Add(new SplashBehavior(SplashMode.Forward)
-			{
-				Count = 4,
-				SpeedMin = 4f,
-				SpeedMax = 8f,
-				SpreadRadius = 2f,
-				ConeAngle = 0.3f,
-			});
+			Behaviors.Add(new DebuffOnHitBehavior(BuffID.OnFire, 120));
 		}
 
 		public override void SetDefaults()
@@ -62,11 +55,6 @@ namespace VerminLordMod.Content.Projectiles
 			Projectile.hostile = false;
 			Projectile.DamageType = ModContent.GetInstance<InsectDamageClass>();
 			Projectile.aiStyle = -1;
-		}
-
-		protected override void OnHit(NPC target, NPC.HitInfo hit, int damageDone)
-		{
-			target.AddBuff(BuffID.OnFire, 120);
 		}
 
 		protected override void OnKilled(int timeLeft)

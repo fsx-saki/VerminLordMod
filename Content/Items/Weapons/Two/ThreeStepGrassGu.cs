@@ -5,6 +5,14 @@ using VerminLordMod.Content.Items.Weapons.Daos;
 
 namespace VerminLordMod.Content.Items.Weapons.Two
 {
+	/// <summary>
+
+	/// 二转道蛊虫 — ThreeStepGrassGu
+
+	/// 蛊虫
+
+	/// </summary>
+
 	class ThreeStepGrassGu : EatingWeapon
 	{
 		protected override int qiCost => 10;

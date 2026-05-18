@@ -7,7 +7,13 @@ using VerminLordMod.Common.Systems;
 
 namespace VerminLordMod.Content.Tiles.GuYueArchitecture
 {
-    public class MiZongZhenTile : ModTile
+    /// <summary>
+    /// 迷踪阵 — 迷踪阵法物块
+    /// </summary>
+        /// <summary>
+    /// 迷踪阵 — 迷踪阵法物块
+    /// </summary>
+        public class MiZongZhenTile : ModTile
     {
         public override void SetStaticDefaults()
         {

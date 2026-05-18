@@ -12,6 +12,21 @@ using Terraria.GameContent;
 
 namespace VerminLordMod.Content.Projectiles
 {
+	/// <summary>
+
+	/// MeteorGu弹幕 — 星道
+
+	/// </summary>
+
+	/// <summary>
+
+
+	/// MeteorGu弹幕 — 星道
+
+
+	/// </summary>
+
+
 	class MeteorProj : ModProjectile
 	{
 		public override void SetStaticDefaults() {

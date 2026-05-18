@@ -10,6 +10,14 @@ using VerminLordMod.Content.Projectiles;
 
 namespace VerminLordMod.Content.Items.Weapons.Three
 {
+	/// <summary>
+
+	/// 三转魂蛊虫 — GhostFireGuPro
+
+	/// 蛊虫
+
+	/// </summary>
+
 	class GhostFireGuPro : SoulWeapon
 	{
 

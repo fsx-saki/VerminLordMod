@@ -13,6 +13,21 @@ using Terraria.GameContent;
 
 namespace VerminLordMod.Content.Projectiles
 {
+	/// <summary>
+
+	/// GratingGu弹幕 — 光道
+
+	/// </summary>
+
+	/// <summary>
+
+
+	/// GratingGu弹幕 — 光道
+
+
+	/// </summary>
+
+
 	class GratingProj : ModProjectile
 	{
 		public override void SetStaticDefaults() {

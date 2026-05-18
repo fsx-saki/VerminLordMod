@@ -10,6 +10,12 @@ using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.Projectiles
 {
+    /// <summary>
+
+    /// IceAwl弹幕 — 道道
+
+    /// </summary>
+
     class IceAwl : BaseBullet
     {
         protected override void RegisterBehaviors()

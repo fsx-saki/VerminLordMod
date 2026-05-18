@@ -10,6 +10,12 @@ using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.Projectiles
 {
+    /// <summary>
+
+    /// SoulShockWave弹幕 — 道道
+
+    /// </summary>
+
     class SoulShockWave : BaseBullet
     {
         private Texture2D tex;

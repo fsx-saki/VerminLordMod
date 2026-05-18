@@ -12,6 +12,14 @@ using VerminLordMod.Content.Projectiles;
 
 namespace VerminLordMod.Content.Items.Weapons.One
 {
+	/// <summary>
+
+	/// 一转星蛊虫 — StarfireGu
+
+	/// 蛊虫
+
+	/// </summary>
+
 	class StarfireGu : StarWeapon
 	{
 		protected override int _guLevel => 2;

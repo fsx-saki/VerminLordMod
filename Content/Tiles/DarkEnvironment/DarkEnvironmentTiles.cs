@@ -7,7 +7,13 @@ using Terraria.DataStructures;
 
 namespace VerminLordMod.Content.Tiles.DarkEnvironment
 {
-    public class CorpseBlock : ModTile
+    /// <summary>
+    /// 尸块 — 尸体矿化形成的方块
+    /// </summary>
+        /// <summary>
+    /// 尸块 — 尸体矿化形成的方块
+    /// </summary>
+        public class CorpseBlock : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -32,7 +38,13 @@ namespace VerminLordMod.Content.Tiles.DarkEnvironment
         }
     }
 
-    public class GuCorpseBlock : ModTile
+    /// <summary>
+    /// 蛊尸块 — 蛊虫与尸体融合的方块
+    /// </summary>
+        /// <summary>
+    /// 蛊尸块 — 蛊虫与尸体融合的方块
+    /// </summary>
+        public class GuCorpseBlock : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -57,7 +69,13 @@ namespace VerminLordMod.Content.Tiles.DarkEnvironment
         }
     }
 
-    public class BoneBlock : ModTile
+    /// <summary>
+    /// 骨块 — 骨骼制成的方块
+    /// </summary>
+        /// <summary>
+    /// 骨块 — 骨骼制成的方块
+    /// </summary>
+        public class BoneBlock : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -82,7 +100,13 @@ namespace VerminLordMod.Content.Tiles.DarkEnvironment
         }
     }
 
-    public class BloodStone : ModTile
+    /// <summary>
+    /// 血石 — 血液凝结形成的石头
+    /// </summary>
+        /// <summary>
+    /// 血石 — 血液凝结形成的石头
+    /// </summary>
+        public class BloodStone : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -115,7 +139,13 @@ namespace VerminLordMod.Content.Tiles.DarkEnvironment
         }
     }
 
-    public class RotWood : ModTile
+    /// <summary>
+    /// 腐木 — 腐烂的木材
+    /// </summary>
+        /// <summary>
+    /// 腐木 — 腐烂的木材
+    /// </summary>
+        public class RotWood : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -140,7 +170,13 @@ namespace VerminLordMod.Content.Tiles.DarkEnvironment
         }
     }
 
-    public class PoisonCrystal : ModTile
+    /// <summary>
+    /// 毒晶 — 毒素结晶体
+    /// </summary>
+        /// <summary>
+    /// 毒晶 — 毒素结晶体
+    /// </summary>
+        public class PoisonCrystal : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -173,7 +209,13 @@ namespace VerminLordMod.Content.Tiles.DarkEnvironment
         }
     }
 
-    public class SoulRemnantBlock : ModTile
+    /// <summary>
+    /// 魂残块 — 灵魂残余凝结的方块
+    /// </summary>
+        /// <summary>
+    /// 魂残块 — 灵魂残余凝结的方块
+    /// </summary>
+        public class SoulRemnantBlock : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -206,7 +248,13 @@ namespace VerminLordMod.Content.Tiles.DarkEnvironment
         }
     }
 
-    public class ChitinShell : ModTile
+    /// <summary>
+    /// 甲壳块 — 蛊虫甲壳制成的方块
+    /// </summary>
+        /// <summary>
+    /// 甲壳块 — 蛊虫甲壳制成的方块
+    /// </summary>
+        public class ChitinShell : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -231,7 +279,13 @@ namespace VerminLordMod.Content.Tiles.DarkEnvironment
         }
     }
 
-    public class GuSilkWeb : ModTile
+    /// <summary>
+    /// 蛊丝网 — 蛊虫吐丝结成的网
+    /// </summary>
+        /// <summary>
+    /// 蛊丝网 — 蛊虫吐丝结成的网
+    /// </summary>
+        public class GuSilkWeb : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -257,7 +311,13 @@ namespace VerminLordMod.Content.Tiles.DarkEnvironment
         }
     }
 
-    public class CursedEarth : ModTile
+    /// <summary>
+    /// 诅咒之土 — 被诅咒的土地
+    /// </summary>
+        /// <summary>
+    /// 诅咒之土 — 被诅咒的土地
+    /// </summary>
+        public class CursedEarth : ModTile
     {
         public override void SetStaticDefaults()
         {

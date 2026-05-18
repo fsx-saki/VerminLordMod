@@ -7,6 +7,14 @@ using VerminLordMod.Content.Projectiles;
 
 namespace VerminLordMod.Content.Items.Weapons.Two
 {
+	/// <summary>
+
+	/// 二转木蛊虫 — QingTengGu
+
+	/// 蛊虫
+
+	/// </summary>
+
 	class QingTengGu : WoodWeapon
 	{
 		// The texture doesn't have the same name as the item, so this property points to it.

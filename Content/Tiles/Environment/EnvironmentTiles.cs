@@ -10,7 +10,13 @@ using Terraria.ObjectData;
 
 namespace VerminLordMod.Content.Tiles.Environment
 {
-    public class SpiritGrass : ModTile
+    /// <summary>
+    /// 灵草 — 灵气滋养的草
+    /// </summary>
+        /// <summary>
+    /// 灵草 — 灵气滋养的草
+    /// </summary>
+        public class SpiritGrass : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -41,7 +47,13 @@ namespace VerminLordMod.Content.Tiles.Environment
         }
     }
 
-    public class YuanQiMushroom : ModTile
+    /// <summary>
+    /// 元气蘑菇 — 蕴含元气的蘑菇
+    /// </summary>
+        /// <summary>
+    /// 元气蘑菇 — 蕴含元气的蘑菇
+    /// </summary>
+        public class YuanQiMushroom : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -80,7 +92,13 @@ namespace VerminLordMod.Content.Tiles.Environment
         }
     }
 
-    public class GuNest : ModTile
+    /// <summary>
+    /// 蛊巢 — 蛊虫的巢穴
+    /// </summary>
+        /// <summary>
+    /// 蛊巢 — 蛊虫的巢穴
+    /// </summary>
+        public class GuNest : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -116,7 +134,13 @@ namespace VerminLordMod.Content.Tiles.Environment
         }
     }
 
-    public class PoisonSwampPlant : ModTile
+    /// <summary>
+    /// 毒沼植物 — 生长在毒沼泽中的植物
+    /// </summary>
+        /// <summary>
+    /// 毒沼植物 — 生长在毒沼泽中的植物
+    /// </summary>
+        public class PoisonSwampPlant : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -148,7 +172,13 @@ namespace VerminLordMod.Content.Tiles.Environment
         }
     }
 
-    public class BonePile : ModTile
+    /// <summary>
+    /// 骨堆 — 骨骼堆积物
+    /// </summary>
+        /// <summary>
+    /// 骨堆 — 骨骼堆积物
+    /// </summary>
+        public class BonePile : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -176,7 +206,13 @@ namespace VerminLordMod.Content.Tiles.Environment
         }
     }
 
-    public class SpiritVine : ModTile
+    /// <summary>
+    /// 灵藤 — 灵气滋养的藤蔓
+    /// </summary>
+        /// <summary>
+    /// 灵藤 — 灵气滋养的藤蔓
+    /// </summary>
+        public class SpiritVine : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -214,7 +250,13 @@ namespace VerminLordMod.Content.Tiles.Environment
         }
     }
 
-    public class RedCopperOre : ModTile
+    /// <summary>
+    /// 赤铜矿石 — 赤铜色的矿石，古月宗常用材料
+    /// </summary>
+        /// <summary>
+    /// 赤铜矿石 — 赤铜色的矿石，古月宗常用材料
+    /// </summary>
+        public class RedCopperOre : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -249,7 +291,13 @@ namespace VerminLordMod.Content.Tiles.Environment
         }
     }
 
-    public class AncientInscription : ModTile
+    /// <summary>
+    /// 古碑文 — 刻有古代文字的石碑
+    /// </summary>
+        /// <summary>
+    /// 古碑文 — 刻有古代文字的石碑
+    /// </summary>
+        public class AncientInscription : ModTile
     {
         public override void SetStaticDefaults()
         {

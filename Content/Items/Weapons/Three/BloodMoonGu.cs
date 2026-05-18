@@ -13,6 +13,14 @@ using VerminLordMod.Content.Projectiles;
 
 namespace VerminLordMod.Content.Items.Weapons.Three
 {
+	/// <summary>
+
+	/// 三转血蛊虫 — BloodMoonGu
+
+	/// 蛊虫
+
+	/// </summary>
+
 	class BloodMoonGu : BloodWeapon
 	{
 		protected override int qiCost => 30;

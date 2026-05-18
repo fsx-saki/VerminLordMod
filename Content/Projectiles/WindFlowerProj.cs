@@ -7,7 +7,31 @@ using VerminLordMod.Common.BulletBehaviors;
 using VerminLordMod.Content.DamageClasses;
 
 namespace VerminLordMod.Content.Projectiles
-{
+{    /// <summary>
+    /// WindFlowerGu弹幕 — 道道
+    /// </summary>    /// <summary>
+    /// WindFlowerGu弹幕 — 道道
+    /// </summary>    /// <summary>
+    /// WindFlowerGu弹幕 — 道道
+    /// </summary>
+
+
+
+    /// <summary>
+
+
+
+
+    /// WindFlowerGu弹幕 — 风道
+
+
+
+
+    /// </summary>
+
+
+
+
     public class WindFlowerProj : BaseBullet
     {
         private const float FlySpeed = 9f;

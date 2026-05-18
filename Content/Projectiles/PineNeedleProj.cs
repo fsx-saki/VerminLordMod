@@ -12,6 +12,21 @@ using Terraria.GameContent;
 
 namespace VerminLordMod.Content.Projectiles
 {
+	/// <summary>
+
+	/// PineNeedleGu弹幕 — 木道
+
+	/// </summary>
+
+	/// <summary>
+
+
+	/// PineNeedleGu弹幕 — 木道
+
+
+	/// </summary>
+
+
 	class PineNeedleProj : ModProjectile
 	{
 		public override void SetStaticDefaults() {

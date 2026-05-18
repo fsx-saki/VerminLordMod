@@ -11,6 +11,21 @@ using Terraria.GameContent;
 
 namespace VerminLordMod.Content.Projectiles
 {
+	/// <summary>
+
+	/// StarArrowGu弹幕 — 星道
+
+	/// </summary>
+
+	/// <summary>
+
+
+	/// StarArrowGu弹幕 — 星道
+
+
+	/// </summary>
+
+
 	class StarArrowProj : ModProjectile
 	{
 		public override void SetStaticDefaults() {

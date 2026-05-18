@@ -10,6 +10,21 @@ using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.Projectiles
 {
+    /// <summary>
+
+    /// FrostArrowGu弹幕 — 道道
+
+    /// </summary>
+
+    /// <summary>
+
+
+    /// FrostArrowGu弹幕 — 道道
+
+
+    /// </summary>
+
+
     class FrostArrowProj : BaseBullet
     {
         protected override void RegisterBehaviors()

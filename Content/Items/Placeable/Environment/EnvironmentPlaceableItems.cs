@@ -4,7 +4,10 @@ using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.Items.Placeable.Environment
 {
-    public class SpiritGrass : ModItem
+    /// <summary>
+    /// 灵草（物品） — 灵气滋养的草
+    /// </summary>
+        public class SpiritGrass : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -26,7 +29,10 @@ namespace VerminLordMod.Content.Items.Placeable.Environment
         }
     }
 
-    public class YuanQiMushroom : ModItem
+    /// <summary>
+    /// 元气蘑菇（物品） — 蕴含元气的蘑菇
+    /// </summary>
+        public class YuanQiMushroom : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -48,7 +54,10 @@ namespace VerminLordMod.Content.Items.Placeable.Environment
         }
     }
 
-    public class GuNest : ModItem
+    /// <summary>
+    /// 蛊巢（物品） — 蛊虫的巢穴
+    /// </summary>
+        public class GuNest : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -70,7 +79,10 @@ namespace VerminLordMod.Content.Items.Placeable.Environment
         }
     }
 
-    public class PoisonSwampPlant : ModItem
+    /// <summary>
+    /// 毒沼植物（物品） — 生长在毒沼泽中的植物
+    /// </summary>
+        public class PoisonSwampPlant : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -92,7 +104,10 @@ namespace VerminLordMod.Content.Items.Placeable.Environment
         }
     }
 
-    public class BonePile : ModItem
+    /// <summary>
+    /// 骨堆（物品） — 骨骼堆积物
+    /// </summary>
+        public class BonePile : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -114,7 +129,10 @@ namespace VerminLordMod.Content.Items.Placeable.Environment
         }
     }
 
-    public class SpiritVine : ModItem
+    /// <summary>
+    /// 灵藤（物品） — 灵气滋养的藤蔓
+    /// </summary>
+        public class SpiritVine : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -158,7 +176,10 @@ namespace VerminLordMod.Content.Items.Placeable.Environment
         }
     }
 
-    public class AncientInscription : ModItem
+    /// <summary>
+    /// 古碑文（物品） — 刻有古代文字的石碑
+    /// </summary>
+        public class AncientInscription : ModItem
     {
         public override void SetStaticDefaults()
         {

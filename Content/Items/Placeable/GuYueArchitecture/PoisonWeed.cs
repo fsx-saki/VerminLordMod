@@ -3,7 +3,10 @@ using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.Items.Placeable.GuYueArchitecture
 {
-    public class PoisonWeed : ModItem
+    /// <summary>
+    /// 毒草（物品） — 含有毒素的草
+    /// </summary>
+        public class PoisonWeed : ModItem
     {
         public override void SetDefaults()
         {

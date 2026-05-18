@@ -7,7 +7,13 @@ using Terraria.ObjectData;
 
 namespace VerminLordMod.Content.Tiles.Terrain
 {
-    public class AncientStonePath : ModTile
+    /// <summary>
+    /// 古石径 — 古老的石板路
+    /// </summary>
+        /// <summary>
+    /// 古石径 — 古老的石板路
+    /// </summary>
+        public class AncientStonePath : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -32,7 +38,13 @@ namespace VerminLordMod.Content.Tiles.Terrain
         }
     }
 
-    public class SpiritSoil : ModTile
+    /// <summary>
+    /// 灵壤 — 灵气充盈的土壤
+    /// </summary>
+        /// <summary>
+    /// 灵壤 — 灵气充盈的土壤
+    /// </summary>
+        public class SpiritSoil : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -65,7 +77,13 @@ namespace VerminLordMod.Content.Tiles.Terrain
         }
     }
 
-    public class SwampMud : ModTile
+    /// <summary>
+    /// 沼泽泥 — 毒沼泽中的淤泥
+    /// </summary>
+        /// <summary>
+    /// 沼泽泥 — 毒沼泽中的淤泥
+    /// </summary>
+        public class SwampMud : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -90,7 +108,13 @@ namespace VerminLordMod.Content.Tiles.Terrain
         }
     }
 
-    public class WastelandSand : ModTile
+    /// <summary>
+    /// 荒漠沙 — 荒芜之地的沙土
+    /// </summary>
+        /// <summary>
+    /// 荒漠沙 — 荒芜之地的沙土
+    /// </summary>
+        public class WastelandSand : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -115,7 +139,13 @@ namespace VerminLordMod.Content.Tiles.Terrain
         }
     }
 
-    public class ColdIronFloor : ModTile
+    /// <summary>
+    /// 寒铁地板 — 寒铁制成的地板，冰冷刺骨
+    /// </summary>
+        /// <summary>
+    /// 寒铁地板 — 寒铁制成的地板，冰冷刺骨
+    /// </summary>
+        public class ColdIronFloor : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -140,7 +170,13 @@ namespace VerminLordMod.Content.Tiles.Terrain
         }
     }
 
-    public class JadeBrickPath : ModTile
+    /// <summary>
+    /// 玉石砖径 — 玉石铺就的小径
+    /// </summary>
+        /// <summary>
+    /// 玉石砖径 — 玉石铺就的小径
+    /// </summary>
+        public class JadeBrickPath : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -173,7 +209,13 @@ namespace VerminLordMod.Content.Tiles.Terrain
         }
     }
 
-    public class BloodSand : ModTile
+    /// <summary>
+    /// 血沙 — 被鲜血浸染的沙土，暗红色
+    /// </summary>
+        /// <summary>
+    /// 血沙 — 被鲜血浸染的沙土，暗红色
+    /// </summary>
+        public class BloodSand : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -206,7 +248,13 @@ namespace VerminLordMod.Content.Tiles.Terrain
         }
     }
 
-    public class DarkMossStone : ModTile
+    /// <summary>
+    /// 暗苔石 — 覆盖暗色苔藓的石头
+    /// </summary>
+        /// <summary>
+    /// 暗苔石 — 覆盖暗色苔藓的石头
+    /// </summary>
+        public class DarkMossStone : ModTile
     {
         public override void SetStaticDefaults()
         {

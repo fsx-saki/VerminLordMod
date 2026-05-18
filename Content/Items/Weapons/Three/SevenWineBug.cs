@@ -12,6 +12,14 @@ using VerminLordMod.Content.Items.Weapons.Two;
 
 namespace VerminLordMod.Content.Items.Weapons.Three
 {
+	/// <summary>
+
+	/// 三转道蛊虫 — SevenWineBug
+
+	/// 蛊虫
+
+	/// </summary>
+
 	class SevenWineBugWeapon : PractiseWeapon
 	{
 		protected override int qiCost => 10;

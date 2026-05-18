@@ -10,6 +10,14 @@ using VerminLordMod.Content.Projectiles;
 
 namespace VerminLordMod.Content.Items.Weapons.Three
 {
+	/// <summary>
+
+	/// 三转魂蛊虫 — GhostlyCallingGu
+
+	/// 蛊虫
+
+	/// </summary>
+
 	class GhostlyCallingGu : SoulWeapon//必要继承moditem
 	{
 		protected override int controlQiCost => 20;

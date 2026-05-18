@@ -14,6 +14,14 @@ using VerminLordMod.Content.Projectiles;
 
 namespace VerminLordMod.Content.Items.Weapons.Four
 {
+	/// <summary>
+
+	/// 四转血蛊虫 — BloodSkullGu
+
+	/// 蛊虫
+
+	/// </summary>
+
 	class BloodSkullGu : BloodWeapon//必要继承moditem
 	{
 		protected override int controlQiCost => 20;

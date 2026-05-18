@@ -10,6 +10,12 @@ using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.Projectiles
 {
+    /// <summary>
+
+    /// PoisonNeedle弹幕 — 道道
+
+    /// </summary>
+
     class PoisonNeedle : BaseBullet
     {
         protected override void RegisterBehaviors()

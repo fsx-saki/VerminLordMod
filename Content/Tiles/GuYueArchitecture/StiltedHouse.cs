@@ -14,7 +14,13 @@ namespace VerminLordMod.Content.Tiles.GuYueArchitecture
     /// 原文: "一座座高脚吊楼" (gzr_part001.txt:112)
     /// 功能: 大型装饰建筑，可作为NPC房屋
     /// </summary>
-    public class StiltedHouse : ModTile
+    /// <summary>
+    /// 吊脚楼 — 古月宗的吊脚楼建筑
+    /// </summary>
+        /// <summary>
+    /// 吊脚楼 — 古月宗的吊脚楼建筑
+    /// </summary>
+        public class StiltedHouse : ModTile
     {
         public override void SetStaticDefaults()
         {

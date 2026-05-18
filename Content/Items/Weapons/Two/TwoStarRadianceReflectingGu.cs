@@ -6,6 +6,14 @@ using VerminLordMod.Content.Items.Weapons.Daos;
 
 namespace VerminLordMod.Content.Items.Weapons.Two
 {
+	/// <summary>
+
+	/// 二转星蛊虫 — TwoStarRadianceReflectingGu
+
+	/// 蛊虫
+
+	/// </summary>
+
 	class TwoStarRadianceReflectingGu : StarWeapon
 	{
 		protected override int controlQiCost => 5;

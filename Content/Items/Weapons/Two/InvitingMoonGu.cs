@@ -11,6 +11,14 @@ using VerminLordMod.Content.Projectiles;
 
 namespace VerminLordMod.Content.Items.Weapons.Two
 {
+	/// <summary>
+
+	/// 二转月蛊虫 — InvitingMoonGu
+
+	/// 蛊虫
+
+	/// </summary>
+
 	class InvitingMoonGu : MoonWeapon//必要继承moditem
 	{
 		protected override int controlQiCost => 20;

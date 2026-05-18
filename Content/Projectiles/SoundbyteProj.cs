@@ -12,6 +12,21 @@ using Terraria.GameContent;
 
 namespace VerminLordMod.Content.Projectiles
 {
+	/// <summary>
+
+	/// SoundbyteGu弹幕 — 道道
+
+	/// </summary>
+
+	/// <summary>
+
+
+	/// SoundbyteGu弹幕 — 道道
+
+
+	/// </summary>
+
+
 	class SoundbyteProj : ModProjectile
 	{
 		public override void SetStaticDefaults() {

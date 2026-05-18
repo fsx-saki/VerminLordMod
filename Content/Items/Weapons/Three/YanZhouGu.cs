@@ -6,6 +6,14 @@ using VerminLordMod.Content.Items.Weapons.Daos;
 
 namespace VerminLordMod.Content.Items.Weapons.Three
 {
+	/// <summary>
+
+	/// 三转火蛊虫 — YanZhouGu
+
+	/// 蛊虫
+
+	/// </summary>
+
 	class YanZhouGu : FireWeapon
 	{
 

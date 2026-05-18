@@ -11,6 +11,14 @@ using VerminLordMod.Content.Projectiles;
 
 namespace VerminLordMod.Content.Items.Weapons.One
 {
+	/// <summary>
+
+	/// 一转月蛊虫 — Moonlight
+
+	/// 蛊虫
+
+	/// </summary>
+
 	class Moonlight : MoonWeapon//必要继承moditem
 	{
 		//物品属性

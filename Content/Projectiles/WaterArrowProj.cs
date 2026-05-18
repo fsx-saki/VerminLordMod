@@ -9,6 +9,21 @@ using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.Projectiles
 {
+    /// <summary>
+
+    /// WaterArrowGu弹幕 — 水道
+
+    /// </summary>
+
+    /// <summary>
+
+
+    /// WaterArrowGu弹幕 — 水道
+
+
+    /// </summary>
+
+
     class WaterArrowProj : BaseBullet
     {
         protected override void RegisterBehaviors()

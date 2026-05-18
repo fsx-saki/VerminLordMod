@@ -6,7 +6,10 @@ namespace VerminLordMod.Content.Items.Placeable.GuYueArchitecture
     /// <summary>
     /// 宗族祠堂物品 - 可放置为大型祠堂建筑
     /// </summary>
-    public class AncestralHall : ModItem
+    /// <summary>
+    /// 祖师殿（物品） — 古月宗的祖师殿
+    /// </summary>
+        public class AncestralHall : ModItem
     {
         public override void SetDefaults()
         {

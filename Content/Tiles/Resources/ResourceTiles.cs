@@ -7,7 +7,13 @@ using Terraria.ObjectData;
 
 namespace VerminLordMod.Content.Tiles.Resources
 {
-    public class YuanStoneOre : ModTile
+    /// <summary>
+    /// 元石矿 — 蕴含灵气的元石矿石，是蛊师修炼的基础资源
+    /// </summary>
+        /// <summary>
+    /// 元石矿 — 蕴含灵气的元石矿石，是蛊师修炼的基础资源
+    /// </summary>
+        public class YuanStoneOre : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -41,7 +47,13 @@ namespace VerminLordMod.Content.Tiles.Resources
         }
     }
 
-    public class SpiritVeinStone : ModTile
+    /// <summary>
+    /// 灵脉石 — 灵脉中凝结的矿石，灵气含量极高
+    /// </summary>
+        /// <summary>
+    /// 灵脉石 — 灵脉中凝结的矿石，灵气含量极高
+    /// </summary>
+        public class SpiritVeinStone : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -75,7 +87,13 @@ namespace VerminLordMod.Content.Tiles.Resources
         }
     }
 
-    public class HerbGardenSoil : ModTile
+    /// <summary>
+    /// 药园土壤 — 适合种植灵草的特殊土壤
+    /// </summary>
+        /// <summary>
+    /// 药园土壤 — 适合种植灵草的特殊土壤
+    /// </summary>
+        public class HerbGardenSoil : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -100,7 +118,13 @@ namespace VerminLordMod.Content.Tiles.Resources
         }
     }
 
-    public class PoisonCrystalOre : ModTile
+    /// <summary>
+    /// 毒晶矿石 — 毒素结晶形成的矿石，危险但珍贵
+    /// </summary>
+        /// <summary>
+    /// 毒晶矿石 — 毒素结晶形成的矿石，危险但珍贵
+    /// </summary>
+        public class PoisonCrystalOre : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -134,7 +158,13 @@ namespace VerminLordMod.Content.Tiles.Resources
         }
     }
 
-    public class SoulEssenceOre : ModTile
+    /// <summary>
+    /// 魂精矿石 — 蕴含魂力的矿石，散发幽蓝光芒
+    /// </summary>
+        /// <summary>
+    /// 魂精矿石 — 蕴含魂力的矿石，散发幽蓝光芒
+    /// </summary>
+        public class SoulEssenceOre : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -168,7 +198,13 @@ namespace VerminLordMod.Content.Tiles.Resources
         }
     }
 
-    public class ResourceRedCopperOre : ModTile
+    /// <summary>
+    /// 赤铜矿脉 — 赤铜矿的矿脉形态
+    /// </summary>
+        /// <summary>
+    /// 赤铜矿脉 — 赤铜矿的矿脉形态
+    /// </summary>
+        public class ResourceRedCopperOre : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -202,7 +238,13 @@ namespace VerminLordMod.Content.Tiles.Resources
         }
     }
 
-    public class DarkIronOre : ModTile
+    /// <summary>
+    /// 暗铁矿石 — 暗属性铁矿石，用于锻造暗系蛊器
+    /// </summary>
+        /// <summary>
+    /// 暗铁矿石 — 暗属性铁矿石，用于锻造暗系蛊器
+    /// </summary>
+        public class DarkIronOre : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -228,7 +270,13 @@ namespace VerminLordMod.Content.Tiles.Resources
         }
     }
 
-    public class SpiritBoneOre : ModTile
+    /// <summary>
+    /// 灵骨矿石 — 灵兽骨骼矿化后的矿石
+    /// </summary>
+        /// <summary>
+    /// 灵骨矿石 — 灵兽骨骼矿化后的矿石
+    /// </summary>
+        public class SpiritBoneOre : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -262,7 +310,13 @@ namespace VerminLordMod.Content.Tiles.Resources
         }
     }
 
-    public class GuEggCluster : ModTile
+    /// <summary>
+    /// 蛊卵簇 — 蛊虫卵聚集的矿脉，可能孵化出蛊虫
+    /// </summary>
+        /// <summary>
+    /// 蛊卵簇 — 蛊虫卵聚集的矿脉，可能孵化出蛊虫
+    /// </summary>
+        public class GuEggCluster : ModTile
     {
         public override void SetStaticDefaults()
         {

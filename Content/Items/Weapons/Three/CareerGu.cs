@@ -10,6 +10,14 @@ using VerminLordMod.Content.Projectiles;
 
 namespace VerminLordMod.Content.Items.Weapons.Three
 {
+	/// <summary>
+
+	/// 三转道蛊虫 — CareerGu
+
+	/// 蛊虫
+
+	/// </summary>
+
 	class CareerGu : FlyingWeapon
 	{
 		protected override int _guLevel => 3;

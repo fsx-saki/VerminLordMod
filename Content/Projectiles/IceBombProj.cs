@@ -9,7 +9,31 @@ using VerminLordMod.Content.Projectiles.Zero;
 using VerminLordMod.Content.Dusts;
 
 namespace VerminLordMod.Content.Projectiles
-{
+{    /// <summary>
+    /// IceBombGu弹幕 — 道道
+    /// </summary>    /// <summary>
+    /// IceBombGu弹幕 — 道道
+    /// </summary>    /// <summary>
+    /// IceBombGu弹幕 — 道道
+    /// </summary>
+
+
+
+    /// <summary>
+
+
+
+
+    /// IceBombGu弹幕 — 道道
+
+
+
+
+    /// </summary>
+
+
+
+
     public class IceBombProj : BaseBullet
     {
         private const float FlySpeed = 8f;

@@ -12,7 +12,13 @@ namespace VerminLordMod.Content.Tiles.GuYueArchitecture
     /// 原文: "龙丸蛐蛐，也唱响了窸窸窣窣的生命之歌。它们是夜间才出来活动，身上都散发红光的昆虫" (gzr_part001.txt:1053-1055)
     /// 功能: 装饰性物块，发出微弱的红光
     /// </summary>
-    public class DragonCricketJar : ModTile
+    /// <summary>
+    /// 龙丸蛐蛐罐 — 饲养龙丸蛐蛐的罐子
+    /// </summary>
+        /// <summary>
+    /// 龙丸蛐蛐罐 — 饲养龙丸蛐蛐的罐子
+    /// </summary>
+        public class DragonCricketJar : ModTile
     {
         public override void SetStaticDefaults()
         {

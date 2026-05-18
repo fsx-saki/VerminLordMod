@@ -9,7 +9,10 @@ namespace VerminLordMod.Content.Items.Placeable
     /// 迷踪阵旗物品
     /// 放置后生成迷踪阵区域，降低玩家感知，增加守卫风险阈值
     /// </summary>
-    public class MiZongZhenItem : ModItem
+    /// <summary>
+    /// 迷踪阵（物品） — 迷踪阵法物块
+    /// </summary>
+        public class MiZongZhenItem : ModItem
     {
         public override void SetDefaults()
         {

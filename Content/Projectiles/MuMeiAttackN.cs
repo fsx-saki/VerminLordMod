@@ -9,7 +9,25 @@ using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.Projectiles
-{
+{    /// <summary>
+    /// MuMeiAttackN弹幕 — 道道
+    /// </summary>    /// <summary>
+    /// MuMeiAttackN弹幕 — 道道
+    /// </summary>
+
+
+	/// <summary>
+
+
+
+	/// MuMeiAttackN弹幕 — 道道
+
+
+
+	/// </summary>
+
+
+
 	public class MuMeiAttackN : ModProjectile
 	{
 		// The texture doesn't have the same name as the item, so this property points to it.

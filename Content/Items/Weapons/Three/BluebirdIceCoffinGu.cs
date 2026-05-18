@@ -8,6 +8,14 @@ using VerminLordMod.Content.Projectiles;
 
 namespace VerminLordMod.Content.Items.Weapons.Three
 {
+	/// <summary>
+
+	/// 三转道蛊虫 — BluebirdIceCoffinGu
+
+	/// 蛊虫
+
+	/// </summary>
+
 	class BluebirdIceCoffinGu : IceSnowWeapon//必要继承moditem
 	{
 		protected override int controlQiCost => 20;

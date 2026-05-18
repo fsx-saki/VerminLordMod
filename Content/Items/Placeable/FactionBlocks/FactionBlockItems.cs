@@ -4,7 +4,10 @@ using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.Items.Placeable.FactionBlocks
 {
-    public class GuYueWoodBlock : ModItem
+    /// <summary>
+    /// 古月木块（物品） — 古月宗的木制方块
+    /// </summary>
+        public class GuYueWoodBlock : ModItem
     {
         public override void SetDefaults()
         {
@@ -16,7 +19,10 @@ namespace VerminLordMod.Content.Items.Placeable.FactionBlocks
         }
     }
 
-    public class GuYueBambooPlatform : ModItem
+    /// <summary>
+    /// 古月竹台（物品） — 古月宗的竹制平台
+    /// </summary>
+        public class GuYueBambooPlatform : ModItem
     {
         public override void SetDefaults()
         {
@@ -28,7 +34,10 @@ namespace VerminLordMod.Content.Items.Placeable.FactionBlocks
         }
     }
 
-    public class BaiJadeBlock : ModItem
+    /// <summary>
+    /// 白玉方块（物品） — 白玉制成的方块
+    /// </summary>
+        public class BaiJadeBlock : ModItem
     {
         public override void SetDefaults()
         {
@@ -40,7 +49,10 @@ namespace VerminLordMod.Content.Items.Placeable.FactionBlocks
         }
     }
 
-    public class BaiSilverBrick : ModItem
+    /// <summary>
+    /// 白银砖（物品） — 白银色的砖块
+    /// </summary>
+        public class BaiSilverBrick : ModItem
     {
         public override void SetDefaults()
         {
@@ -52,7 +64,10 @@ namespace VerminLordMod.Content.Items.Placeable.FactionBlocks
         }
     }
 
-    public class XiongDarkStone : ModItem
+    /// <summary>
+    /// 熊家暗石（物品） — 熊家的暗色石块
+    /// </summary>
+        public class XiongDarkStone : ModItem
     {
         public override void SetDefaults()
         {
@@ -64,7 +79,10 @@ namespace VerminLordMod.Content.Items.Placeable.FactionBlocks
         }
     }
 
-    public class XiongIronBeam : ModItem
+    /// <summary>
+    /// 熊家铁梁（物品） — 熊家的铁制梁柱
+    /// </summary>
+        public class XiongIronBeam : ModItem
     {
         public override void SetDefaults()
         {
@@ -76,7 +94,10 @@ namespace VerminLordMod.Content.Items.Placeable.FactionBlocks
         }
     }
 
-    public class TieForgeStone : ModItem
+    /// <summary>
+    /// 铁家锻造石（物品） — 铁家的锻造石
+    /// </summary>
+        public class TieForgeStone : ModItem
     {
         public override void SetDefaults()
         {
@@ -88,7 +109,10 @@ namespace VerminLordMod.Content.Items.Placeable.FactionBlocks
         }
     }
 
-    public class WangCrystalBlock : ModItem
+    /// <summary>
+    /// 王家水晶砖（物品） — 王家的水晶砖
+    /// </summary>
+        public class WangCrystalBlock : ModItem
     {
         public override void SetDefaults()
         {
@@ -100,7 +124,10 @@ namespace VerminLordMod.Content.Items.Placeable.FactionBlocks
         }
     }
 
-    public class ZhaoShadowBrick : ModItem
+    /// <summary>
+    /// 赵家影砖（物品） — 赵家的暗影砖
+    /// </summary>
+        public class ZhaoShadowBrick : ModItem
     {
         public override void SetDefaults()
         {
@@ -112,7 +139,10 @@ namespace VerminLordMod.Content.Items.Placeable.FactionBlocks
         }
     }
 
-    public class JiaGoldSilkBlock : ModItem
+    /// <summary>
+    /// 贾家金丝砖（物品） — 贾家的金丝装饰砖
+    /// </summary>
+        public class JiaGoldSilkBlock : ModItem
     {
         public override void SetDefaults()
         {
@@ -124,7 +154,10 @@ namespace VerminLordMod.Content.Items.Placeable.FactionBlocks
         }
     }
 
-    public class ScatteredMudBrick : ModItem
+    /// <summary>
+    /// 散修泥砖（物品） — 散修使用的泥砖
+    /// </summary>
+        public class ScatteredMudBrick : ModItem
     {
         public override void SetDefaults()
         {
@@ -136,7 +169,10 @@ namespace VerminLordMod.Content.Items.Placeable.FactionBlocks
         }
     }
 
-    public class GuYueBambooWall : ModItem
+    /// <summary>
+    /// 古月竹墙（物品） — 古月宗的竹墙
+    /// </summary>
+        public class GuYueBambooWall : ModItem
     {
         public override void SetDefaults()
         {
@@ -148,7 +184,10 @@ namespace VerminLordMod.Content.Items.Placeable.FactionBlocks
         }
     }
 
-    public class BaiJadePillar : ModItem
+    /// <summary>
+    /// 白玉柱（物品） — 白玉制成的柱子
+    /// </summary>
+        public class BaiJadePillar : ModItem
     {
         public override void SetDefaults()
         {
@@ -160,7 +199,10 @@ namespace VerminLordMod.Content.Items.Placeable.FactionBlocks
         }
     }
 
-    public class TieForgeWall : ModItem
+    /// <summary>
+    /// 铁家锻造墙（物品） — 铁家的锻造墙壁
+    /// </summary>
+        public class TieForgeWall : ModItem
     {
         public override void SetDefaults()
         {
@@ -172,7 +214,10 @@ namespace VerminLordMod.Content.Items.Placeable.FactionBlocks
         }
     }
 
-    public class WangCrystalPillar : ModItem
+    /// <summary>
+    /// 王家水晶柱（物品） — 王家的水晶柱
+    /// </summary>
+        public class WangCrystalPillar : ModItem
     {
         public override void SetDefaults()
         {
@@ -184,7 +229,10 @@ namespace VerminLordMod.Content.Items.Placeable.FactionBlocks
         }
     }
 
-    public class ZhaoShadowCurtain : ModItem
+    /// <summary>
+    /// 赵家影幕（物品） — 赵家的暗影幕帘
+    /// </summary>
+        public class ZhaoShadowCurtain : ModItem
     {
         public override void SetDefaults()
         {
@@ -196,7 +244,10 @@ namespace VerminLordMod.Content.Items.Placeable.FactionBlocks
         }
     }
 
-    public class JiaSilkCurtain : ModItem
+    /// <summary>
+    /// 贾家丝绸幕（物品） — 贾家的丝绸幕帘
+    /// </summary>
+        public class JiaSilkCurtain : ModItem
     {
         public override void SetDefaults()
         {

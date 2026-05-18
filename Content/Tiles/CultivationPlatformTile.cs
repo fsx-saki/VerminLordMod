@@ -4,7 +4,13 @@ using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.Tiles
 {
-    public class CultivationPlatformTile : ModTile
+    /// <summary>
+    /// 修炼台 — 蛊师修炼的平台
+    /// </summary>
+        /// <summary>
+    /// 修炼台 — 蛊师修炼的平台
+    /// </summary>
+        public class CultivationPlatformTile : ModTile
     {
         public override void SetStaticDefaults()
         {

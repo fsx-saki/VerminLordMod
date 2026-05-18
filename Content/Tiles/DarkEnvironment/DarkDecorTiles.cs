@@ -8,7 +8,13 @@ using Terraria.ObjectData;
 
 namespace VerminLordMod.Content.Tiles.DarkEnvironment
 {
-    public class GuFormationTile : ModTile
+    /// <summary>
+    /// 蛊阵 — 蛊虫阵法的基石
+    /// </summary>
+        /// <summary>
+    /// 蛊阵 — 蛊虫阵法的基石
+    /// </summary>
+        public class GuFormationTile : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -50,7 +56,13 @@ namespace VerminLordMod.Content.Tiles.DarkEnvironment
         }
     }
 
-    public class BloodPoolTile : ModTile
+    /// <summary>
+    /// 血池 — 充满鲜血的池子
+    /// </summary>
+        /// <summary>
+    /// 血池 — 充满鲜血的池子
+    /// </summary>
+        public class BloodPoolTile : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -88,7 +100,13 @@ namespace VerminLordMod.Content.Tiles.DarkEnvironment
         }
     }
 
-    public class CorpseCocoon : ModTile
+    /// <summary>
+    /// 尸茧 — 尸体被蛊丝包裹形成的茧
+    /// </summary>
+        /// <summary>
+    /// 尸茧 — 尸体被蛊丝包裹形成的茧
+    /// </summary>
+        public class CorpseCocoon : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -118,7 +136,13 @@ namespace VerminLordMod.Content.Tiles.DarkEnvironment
         }
     }
 
-    public class SoulCage : ModTile
+    /// <summary>
+    /// 魂笼 — 囚禁灵魂的笼子
+    /// </summary>
+        /// <summary>
+    /// 魂笼 — 囚禁灵魂的笼子
+    /// </summary>
+        public class SoulCage : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -154,7 +178,13 @@ namespace VerminLordMod.Content.Tiles.DarkEnvironment
         }
     }
 
-    public class FleshWall : ModTile
+    /// <summary>
+    /// 血肉墙 — 血肉凝固形成的墙壁
+    /// </summary>
+        /// <summary>
+    /// 血肉墙 — 血肉凝固形成的墙壁
+    /// </summary>
+        public class FleshWall : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -179,7 +209,13 @@ namespace VerminLordMod.Content.Tiles.DarkEnvironment
         }
     }
 
-    public class GuSacrificeAltar : ModTile
+    /// <summary>
+    /// 蛊祭坛 — 进行蛊虫祭祀的祭坛
+    /// </summary>
+        /// <summary>
+    /// 蛊祭坛 — 进行蛊虫祭祀的祭坛
+    /// </summary>
+        public class GuSacrificeAltar : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -221,7 +257,13 @@ namespace VerminLordMod.Content.Tiles.DarkEnvironment
         }
     }
 
-    public class WitheredOrgan : ModTile
+    /// <summary>
+    /// 枯萎器官 — 枯萎的生物器官
+    /// </summary>
+        /// <summary>
+    /// 枯萎器官 — 枯萎的生物器官
+    /// </summary>
+        public class WitheredOrgan : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -249,7 +291,13 @@ namespace VerminLordMod.Content.Tiles.DarkEnvironment
         }
     }
 
-    public class PoisonMistEmitter : ModTile
+    /// <summary>
+    /// 毒雾发射器 — 释放毒雾的装置
+    /// </summary>
+        /// <summary>
+    /// 毒雾发射器 — 释放毒雾的装置
+    /// </summary>
+        public class PoisonMistEmitter : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -285,7 +333,13 @@ namespace VerminLordMod.Content.Tiles.DarkEnvironment
         }
     }
 
-    public class GuTombstone : ModTile
+    /// <summary>
+    /// 蛊墓碑 — 蛊师墓地的碑石
+    /// </summary>
+        /// <summary>
+    /// 蛊墓碑 — 蛊师墓地的碑石
+    /// </summary>
+        public class GuTombstone : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -315,7 +369,13 @@ namespace VerminLordMod.Content.Tiles.DarkEnvironment
         }
     }
 
-    public class SpiritSealStone : ModTile
+    /// <summary>
+    /// 封灵石 — 封印灵力的石头
+    /// </summary>
+        /// <summary>
+    /// 封灵石 — 封印灵力的石头
+    /// </summary>
+        public class SpiritSealStone : ModTile
     {
         public override void SetStaticDefaults()
         {

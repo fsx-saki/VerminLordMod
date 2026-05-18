@@ -6,6 +6,14 @@ using VerminLordMod.Content.Items.Weapons.Daos;
 
 namespace VerminLordMod.Content.Items.Weapons.Four
 {
+	/// <summary>
+
+	/// 四转星蛊虫 — FourStarCubeGu
+
+	/// 蛊虫
+
+	/// </summary>
+
 	class FourStarCubeGu : StarWeapon
 	{
 		protected override int controlQiCost => 5;

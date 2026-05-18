@@ -10,6 +10,21 @@ using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.Projectiles
 {
+    /// <summary>
+
+    /// DingShenGu弹幕 — 道道
+
+    /// </summary>
+
+    /// <summary>
+
+
+    /// DingShenGu弹幕 — 道道
+
+
+    /// </summary>
+
+
     class DingShenProj : BaseBullet
     {
         protected override void RegisterBehaviors()
