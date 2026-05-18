@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,22 +10,9 @@ using Terraria.ID;
 using VerminLordMod.Content.Buffs;
 
 namespace VerminLordMod.Content.Projectiles
-{
-	/// <summary>
-
+{	/// <summary>
 	/// StoveGu弹幕 — 火道
-
 	/// </summary>
-
-	/// <summary>
-
-
-	/// StoveGu弹幕 — 火道
-
-
-	/// </summary>
-
-
 	class StoveProj : ModProjectile
 	{
 		public override void SetDefaults() {

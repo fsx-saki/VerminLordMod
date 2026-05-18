@@ -11,7 +11,6 @@ namespace VerminLordMod.Content.Items.Weapons.Four
     /// 四转火道蛊虫 — 油龙蛊
     /// 四转蛊，化作黑色油龙，喷吐黑油辅助火焰攻击。
     /// </summary>
-
     public class YouLongGu : DarkWeapon, IOnHitEffectProvider
     {
         protected override int qiCost => 42;

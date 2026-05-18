@@ -1,4 +1,4 @@
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -7,11 +7,7 @@ using Terraria.ModLoader;
 using Terraria.ObjectData;
 
 namespace VerminLordMod.Content.Tiles.Environment
-{
-    /// <summary>
-    /// 灵药圃 — 种植灵药的园圃
-    /// </summary>
-        /// <summary>
+{        /// <summary>
     /// 灵药圃 — 种植灵药的园圃
     /// </summary>
         public class SpiritHerbPlot : ModTile
@@ -48,12 +44,7 @@ namespace VerminLordMod.Content.Tiles.Environment
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 16,
                 ModContent.ItemType<Items.Placeable.Environment.SpiritHerbPlot>());
         }
-    }
-
-    /// <summary>
-    /// 蛊虫繁殖缸 — 用于繁殖蛊虫的缸
-    /// </summary>
-        /// <summary>
+    }        /// <summary>
     /// 蛊虫繁殖缸 — 用于繁殖蛊虫的缸
     /// </summary>
         public class GuBreedingVat : ModTile
@@ -90,12 +81,7 @@ namespace VerminLordMod.Content.Tiles.Environment
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32,
                 ModContent.ItemType<Items.Placeable.Environment.GuBreedingVat>());
         }
-    }
-
-    /// <summary>
-    /// 蒲团 — 修炼打坐用的蒲团
-    /// </summary>
-        /// <summary>
+    }        /// <summary>
     /// 蒲团 — 修炼打坐用的蒲团
     /// </summary>
         public class MeditationCushion : ModTile
@@ -130,12 +116,7 @@ namespace VerminLordMod.Content.Tiles.Environment
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16,
                 ModContent.ItemType<Items.Placeable.Environment.MeditationCushion>());
         }
-    }
-
-    /// <summary>
-    /// 灵灯 — 灵气点亮的灯笼
-    /// </summary>
-        /// <summary>
+    }        /// <summary>
     /// 灵灯 — 灵气点亮的灯笼
     /// </summary>
         public class SpiritLantern : ModTile
@@ -173,12 +154,7 @@ namespace VerminLordMod.Content.Tiles.Environment
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 48,
                 ModContent.ItemType<Items.Placeable.Environment.SpiritLantern>());
         }
-    }
-
-    /// <summary>
-    /// 蛊鼎 — 炼制蛊虫的鼎
-    /// </summary>
-        /// <summary>
+    }        /// <summary>
     /// 蛊鼎 — 炼制蛊虫的鼎
     /// </summary>
         public class GuCauldron : ModTile
@@ -221,12 +197,7 @@ namespace VerminLordMod.Content.Tiles.Environment
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32,
                 ModContent.ItemType<Items.Placeable.Environment.GuCauldron>());
         }
-    }
-
-    /// <summary>
-    /// 元石簇 — 元石聚集的矿簇
-    /// </summary>
-        /// <summary>
+    }        /// <summary>
     /// 元石簇 — 元石聚集的矿簇
     /// </summary>
         public class YuanStoneCluster : ModTile
@@ -263,12 +234,7 @@ namespace VerminLordMod.Content.Tiles.Environment
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 16,
                 ModContent.ItemType<Items.Placeable.Environment.YuanStoneCluster>());
         }
-    }
-
-    /// <summary>
-    /// 灵花 — 蕴含灵气的花朵
-    /// </summary>
-        /// <summary>
+    }        /// <summary>
     /// 灵花 — 蕴含灵气的花朵
     /// </summary>
         public class SpiritFlower : ModTile
@@ -309,12 +275,7 @@ namespace VerminLordMod.Content.Tiles.Environment
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 32,
                 ModContent.ItemType<Items.Placeable.Environment.SpiritFlower>());
         }
-    }
-
-    /// <summary>
-    /// 古树苔 — 古老树木上的苔藓
-    /// </summary>
-        /// <summary>
+    }        /// <summary>
     /// 古树苔 — 古老树木上的苔藓
     /// </summary>
         public class AncientTreeMoss : ModTile
@@ -345,12 +306,7 @@ namespace VerminLordMod.Content.Tiles.Environment
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16,
                 ModContent.ItemType<Items.Placeable.Environment.AncientTreeMoss>());
         }
-    }
-
-    /// <summary>
-    /// 蛊虫洞 — 蛊虫挖掘的洞穴
-    /// </summary>
-        /// <summary>
+    }        /// <summary>
     /// 蛊虫洞 — 蛊虫挖掘的洞穴
     /// </summary>
         public class GuWormHole : ModTile
@@ -387,12 +343,7 @@ namespace VerminLordMod.Content.Tiles.Environment
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16,
                 ModContent.ItemType<Items.Placeable.Environment.GuWormHole>());
         }
-    }
-
-    /// <summary>
-    /// 月池 — 月光照耀的水池
-    /// </summary>
-        /// <summary>
+    }        /// <summary>
     /// 月池 — 月光照耀的水池
     /// </summary>
         public class MoonlitPond : ModTile
@@ -431,12 +382,7 @@ namespace VerminLordMod.Content.Tiles.Environment
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 48, 32,
                 ModContent.ItemType<Items.Placeable.Environment.MoonlitPond>());
         }
-    }
-
-    /// <summary>
-    /// 枯树 — 枯萎的树木
-    /// </summary>
-        /// <summary>
+    }        /// <summary>
     /// 枯树 — 枯萎的树木
     /// </summary>
         public class WitheredTree : ModTile
@@ -467,12 +413,7 @@ namespace VerminLordMod.Content.Tiles.Environment
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 64,
                 ModContent.ItemType<Items.Placeable.Environment.WitheredTree>());
         }
-    }
-
-    /// <summary>
-    /// 灵兽穴 — 灵兽栖息的洞穴
-    /// </summary>
-        /// <summary>
+    }        /// <summary>
     /// 灵兽穴 — 灵兽栖息的洞穴
     /// </summary>
         public class SpiritBeastDen : ModTile
@@ -501,12 +442,7 @@ namespace VerminLordMod.Content.Tiles.Environment
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 48, 32,
                 ModContent.ItemType<Items.Placeable.Environment.SpiritBeastDen>());
         }
-    }
-
-    /// <summary>
-    /// 药草晾架 — 晾干药草的架子
-    /// </summary>
-        /// <summary>
+    }        /// <summary>
     /// 药草晾架 — 晾干药草的架子
     /// </summary>
         public class HerbDryingRack : ModTile

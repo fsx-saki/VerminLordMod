@@ -10,6 +10,7 @@ using Terraria.ModLoader.IO;
 using VerminLordMod.Common;
 using VerminLordMod.Common.Players;
 using VerminLordMod.Content.Dusts;
+using VerminLordMod.Common.Abstractions;
 
 namespace VerminLordMod.Content.Items.Weapons
 {
@@ -25,6 +26,16 @@ namespace VerminLordMod.Content.Items.Weapons
 	/// </summary>
 	public class GuWeaponItem :ModItem, IWeaponCanReforge,IGu
 	{
+	int IGu.GuLevel => _guLevel;
+	float IGu.QiCost => qiCost;
+	float IGu.ControlQiCost => controlQiCost;
+	float IGu.ControlRate { get => controlRate; set => controlRate = value; }
+	bool IGu.IsControlled => hasBeenControlled;
+	float IGu.Loyalty { get => 100f; set { } }
+	GuCategory IGu.Category => GuCategory.Attack;
+	GuElement IGu.Element => GuElement.None;
+	ulong IGu.DaoHenTags => 0;
+
 		/// <summary>
 		/// 是否需要炼化
 		/// </summary>

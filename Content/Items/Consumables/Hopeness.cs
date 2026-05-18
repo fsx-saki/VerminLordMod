@@ -8,10 +8,11 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria;
 using VerminLordMod.Content.Items.Accessories;
+using VerminLordMod.Common.Abstractions;
 
 namespace VerminLordMod.Content.Items.Consumables
 {
-	class Hopeness : ModItem, IGu
+	class Hopeness : ModItem
 	{
 		public override void SetDefaults() {
 			Item.width = 24;//碰撞箱宽度 一般设置为贴图宽度

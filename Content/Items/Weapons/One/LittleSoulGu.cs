@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using VerminLordMod.Common.Players;
@@ -7,13 +7,10 @@ using VerminLordMod.Content.Items.Weapons.Daos;
 namespace VerminLordMod.Content.Items.Weapons.One
 {
 	/// <summary>
-
 	/// 一转道蛊虫 — LittleSoulGu
-
 	/// 蛊虫
 
 	/// </summary>
-
 	class LittleSoulGu : EatingWeapon
 	{
 		protected override int qiCost => 10;

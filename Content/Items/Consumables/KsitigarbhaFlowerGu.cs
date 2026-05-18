@@ -9,10 +9,11 @@ using Terraria.ModLoader;
 using VerminLordMod.Content.Items.Weapons;
 using VerminLordMod.Content.Items.Accessories.One;
 using VerminLordMod.Content.Items.Weapons.One;
+using VerminLordMod.Common.Abstractions;
 
 namespace VerminLordMod.Content.Items.Consumables
 {
-	class KsitigarbhaFlowerGu : ModItem, IGu
+	class KsitigarbhaFlowerGu : ModItem
 	{
 		public override void SetDefaults() {
 			Item.width = 24;//碰撞箱宽度 一般设置为贴图宽度

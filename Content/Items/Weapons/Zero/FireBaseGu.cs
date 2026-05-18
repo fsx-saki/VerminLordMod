@@ -52,7 +52,7 @@ namespace VerminLordMod.Content.Items.Weapons.Zero
         };
 
         /// <summary>所有攻击模式对应的弹幕类型</summary>
-        private int[] _modeProjectileTypes;
+        [CloneByReference] private int[] _modeProjectileTypes;
 
         /// <summary>所有攻击模式对应的 shootSpeed</summary>
         private readonly float[] _modeShootSpeeds = new[]

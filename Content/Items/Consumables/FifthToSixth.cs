@@ -9,10 +9,11 @@ using System.Threading.Tasks;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using VerminLordMod.Common.Abstractions;
 
 namespace VerminLordMod.Content.Items.Consumables
 {
-	class FifthToSixth : ModItem, IGu
+	class FifthToSixth : ModItem
 	{
 		public override void SetDefaults() {
 

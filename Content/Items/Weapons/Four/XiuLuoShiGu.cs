@@ -11,7 +11,6 @@ namespace VerminLordMod.Content.Items.Weapons.Four
     /// 四转道蛊虫 — XiuLuoShiGu
     /// 蛊虫
     /// </summary>
-
     public class XiuLuoShiGu : VariationWeapon, IOnHitEffectProvider
     {
         protected override int qiCost => 40;

@@ -1,4 +1,4 @@
-﻿using VerminLordMod.Content.DamageClasses;
+using VerminLordMod.Content.DamageClasses;
 using VerminLordMod.Content.Trails;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -10,22 +10,9 @@ using Terraria.ID;
 using Terraria.GameContent;
 
 namespace VerminLordMod.Content.Projectiles
-{
-	/// <summary>
-
+{	/// <summary>
 	/// StarArrowGu弹幕 — 星道
-
 	/// </summary>
-
-	/// <summary>
-
-
-	/// StarArrowGu弹幕 — 星道
-
-
-	/// </summary>
-
-
 	class StarArrowProj : ModProjectile
 	{
 		public override void SetStaticDefaults() {

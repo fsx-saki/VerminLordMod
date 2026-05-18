@@ -10,7 +10,6 @@ namespace VerminLordMod.Content.Projectiles
 {    /// <summary>
     /// 霸力蛊弹幕 — 力道
     /// </summary>
-
     public class BaLiProj : BaseBullet
     {
         private const float FlySpeed = 8f;

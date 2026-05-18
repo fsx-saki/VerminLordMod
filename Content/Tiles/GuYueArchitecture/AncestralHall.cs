@@ -10,15 +10,6 @@ using Terraria.ObjectData;
 namespace VerminLordMod.Content.Tiles.GuYueArchitecture
 {
     /// <summary>
-    /// 宗族祠堂 - 古月山寨最中央的大气辉煌楼阁，举办祭祀大典的场所
-    /// 原文: "古月山寨的最中央，是一座大气辉煌的楼阁。此时正举办着祭祀大典" (gzr_part001.txt:114)
-    /// "宗族祠堂中尽是额头碰撞地板的轻响" (gzr_part001.txt:120)
-    /// 功能: 大型功能性建筑，可用于开窍/祭祀相关事件
-    /// </summary>
-    /// <summary>
-    /// 祖师殿 — 古月宗的祖师殿
-    /// </summary>
-        /// <summary>
     /// 祖师殿 — 古月宗的祖师殿
     /// </summary>
         public class AncestralHall : ModTile

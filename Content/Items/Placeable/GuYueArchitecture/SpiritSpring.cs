@@ -1,12 +1,8 @@
-using Terraria;
+﻿using Terraria;
 using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.Items.Placeable.GuYueArchitecture
-{
-    /// <summary>
-    /// 灵泉物品 - 可放置为灵泉装饰物块
-    /// </summary>
-    /// <summary>
+{    /// <summary>
     /// 灵泉（物品） — 蕴含灵气的泉水
     /// </summary>
         public class SpiritSpring : ModItem

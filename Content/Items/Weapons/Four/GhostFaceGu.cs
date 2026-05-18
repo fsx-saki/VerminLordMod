@@ -11,7 +11,6 @@ namespace VerminLordMod.Content.Items.Weapons.Four
     /// 四转道蛊虫 — GhostFaceGu
     /// 蛊虫
     /// </summary>
-
     public class GhostFaceGu : SoulWeapon, IOnHitEffectProvider
     {
         protected override int qiCost => 40;

@@ -7,6 +7,7 @@
 // - 内部可包含按钮、物品格子等子元素
 // - 内容超出时出现垂直/水平滚动条
 // ============================================================
+#nullable enable
 using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;

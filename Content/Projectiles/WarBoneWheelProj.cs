@@ -1,62 +1,14 @@
-﻿
+
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using VerminLordMod.Content.DamageClasses;
 
 namespace VerminLordMod.Content.Projectiles
-{    /// <summary>
-    /// WarBoneWheel弹幕 — 道道
-    /// </summary>    /// <summary>
-    /// WarBoneWheelProj弹幕 — 道道
-    /// </summary>    /// <summary>
-    /// WarBoneWheel弹幕 — 道道
-    /// </summary>    /// <summary>
-    /// WarBoneWheelProj弹幕 — 道道
-    /// </summary>
-
-
-
-
-	/// <summary>
-
-
-
-
-
+{
+    /// <summary>
 	/// WarBoneWheel弹幕 — 骨道
-
-
-
-
-
 	/// </summary>
-
-
-
-
-
-	/// <summary>
-
-
-
-
-
-
-	/// WarBoneWheel弹幕 — 骨道
-
-
-
-
-
-
-	/// </summary>
-
-
-
-
-
-
 	public class WarBoneWheelProj : ModProjectile
 	{
 		public override void SetStaticDefaults() {

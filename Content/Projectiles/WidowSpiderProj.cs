@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,22 +10,9 @@ using Terraria.ID;
 using VerminLordMod.Content.Buffs.AddToEnemy;
 
 namespace VerminLordMod.Content.Projectiles
-{
-	/// <summary>
-
+{	/// <summary>
 	/// WidowSpider弹幕 — 毒道
-
 	/// </summary>
-
-	/// <summary>
-
-
-	/// WidowSpider弹幕 — 毒道
-
-
-	/// </summary>
-
-
 	class WidowSpiderProj:ModProjectile
 	{
 		public override void SetDefaults() {

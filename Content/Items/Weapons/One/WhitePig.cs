@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
@@ -8,13 +8,10 @@ using VerminLordMod.Content.Items.Weapons.Daos;
 namespace VerminLordMod.Content.Items.Weapons.One
 {
 	/// <summary>
-
 	/// 一转道蛊虫 — WhitePig
-
 	/// 蛊虫
 
 	/// </summary>
-
 	class WhitePig : PowerWeapon
 	{
 		protected override int qiCost => 50;

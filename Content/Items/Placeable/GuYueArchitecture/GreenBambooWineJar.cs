@@ -1,12 +1,8 @@
-using Terraria;
+﻿using Terraria;
 using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.Items.Placeable.GuYueArchitecture
-{
-    /// <summary>
-    /// 青竹酒坛物品 - 可放置为青竹酒坛装饰
-    /// </summary>
-    /// <summary>
+{    /// <summary>
     /// 青竹酒坛（物品） — 青竹制成的酒坛
     /// </summary>
         public class GreenBambooWineJar : ModItem

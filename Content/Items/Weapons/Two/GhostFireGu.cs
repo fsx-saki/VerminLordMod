@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
@@ -10,13 +10,10 @@ using VerminLordMod.Content.Projectiles;
 namespace VerminLordMod.Content.Items.Weapons.Two
 {
 	/// <summary>
-
 	/// 二转魂蛊虫 — GhostFireGu
-
 	/// 蛊虫
 
 	/// </summary>
-
 	class GhostFireGu : SoulWeapon
 	{
 

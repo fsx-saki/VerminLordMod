@@ -1,25 +1,12 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.Projectiles
-{
-	/// <summary>
-
+{	/// <summary>
 	/// JiaoLeiPotatoGu弹幕 — 木道
-
 	/// </summary>
-
-	/// <summary>
-
-
-	/// JiaoLeiPotatoGu弹幕 — 木道
-
-
-	/// </summary>
-
-
 	class JiaoLeiPotatoProj : ModProjectile
 	{
 

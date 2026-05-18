@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
@@ -10,13 +10,10 @@ using VerminLordMod.Content.Projectiles;
 namespace VerminLordMod.Content.Items.Weapons.Five
 {
 	/// <summary>
-
 	/// 五转骨蛊虫 — WarBoneWheel
-
 	/// 蛊虫
 
 	/// </summary>
-
 	class WarBoneWheel : BoneWeapon
 	{
 

@@ -1,4 +1,4 @@
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -133,12 +133,7 @@ namespace VerminLordMod.Common.Players
         /// 获取已启用的被动蛊列表。
         /// </summary>
         public List<KongQiaoSlot> GetActivePassiveGus() =>
-            KongQiao.Where(s => s.IsActive && s.IsPassiveGu).ToList();
-
-        /// <summary>
-        /// 重新计算占据额度并写入 QiResourcePlayer。
-        /// </summary>
-        /// <summary>
+            KongQiao.Where(s => s.IsActive && s.IsPassiveGu).ToList();        /// <summary>
         /// 获取所有蛊虫的总占据额度（供UI显示）。
         /// </summary>
         public int GetTotalQiOccupation()

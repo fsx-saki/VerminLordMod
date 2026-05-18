@@ -11,7 +11,6 @@ namespace VerminLordMod.Content.Items.Weapons.Three
     /// 三转冰雪道蛊虫 — 冰爆蛊
     /// 白凝冰的创新蛊虫，能引爆冰块造成范围爆炸。
     /// </summary>
-
     public class BingBaoGu : IceSnowWeapon, IOnHitEffectProvider
     {
         protected override int qiCost => 30;

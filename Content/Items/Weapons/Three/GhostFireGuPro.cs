@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using VerminLordMod.Common.UI;
@@ -11,13 +11,10 @@ using VerminLordMod.Content.Projectiles;
 namespace VerminLordMod.Content.Items.Weapons.Three
 {
 	/// <summary>
-
 	/// 三转魂蛊虫 — GhostFireGuPro
-
 	/// 蛊虫
 
 	/// </summary>
-
 	class GhostFireGuPro : SoulWeapon
 	{
 

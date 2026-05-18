@@ -1,4 +1,4 @@
-﻿using Terraria.ID;
+using Terraria.ID;
 using Terraria.ModLoader;
 using VerminLordMod.Content.DamageClasses;
 using VerminLordMod.Content.Items.Weapons.Daos;
@@ -7,13 +7,10 @@ using VerminLordMod.Content.Projectiles;
 namespace VerminLordMod.Content.Items.Weapons.One
 {
 	/// <summary>
-
 	/// 一转道蛊虫 — TraceStoneGu
-
 	/// 蛊虫
 
 	/// </summary>
-
 	class TraceStoneGu : MudWeapon
 	{
 		public override void SetDefaults() {

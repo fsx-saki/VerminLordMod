@@ -164,7 +164,19 @@ namespace VerminLordMod.Content
 			if (fragments.Count == 0)
 				return false;
 
-			Texture2D tex = trailTex ?? TextureAssets.Projectile[proj.type].Value;
+			Texture2D tex;
+			if (trailTex != null)
+			{
+				tex = trailTex;
+			}
+			else if (proj.ModProjectile != null)
+			{
+				tex = ModContent.Request<Texture2D>(proj.ModProjectile.Texture).Value;
+			}
+			else
+			{
+				tex = TextureAssets.Projectile[proj.type].Value;
+			}
 
 			sb.End();
 			sb.Begin(SpriteSortMode.Deferred, BlendState.Additive, SamplerState.AnisotropicClamp,

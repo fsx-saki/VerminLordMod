@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using VerminLordMod.Content.DamageClasses;
@@ -8,13 +8,10 @@ using VerminLordMod.Content.Projectiles;
 namespace VerminLordMod.Content.Items.Weapons.Three
 {
 	/// <summary>
-
 	/// 三转光蛊虫 — GratingGu
-
 	/// 蛊虫
 
 	/// </summary>
-
 	class GratingGu : LightWeapon
 	{
 		protected override int qiCost => 2;

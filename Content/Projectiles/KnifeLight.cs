@@ -1,4 +1,4 @@
-﻿using VerminLordMod.Common.BulletBehaviors;
+using VerminLordMod.Common.BulletBehaviors;
 using VerminLordMod.Content.DamageClasses;
 using Microsoft.Xna.Framework;
 using Terraria;
@@ -8,11 +8,8 @@ using Terraria.ModLoader;
 namespace VerminLordMod.Content.Projectiles
 {
     /// <summary>
-
     /// KnifeLight弹幕 — 道道
-
     /// </summary>
-
     class KnifeLight : BaseBullet
     {
         protected override void RegisterBehaviors()

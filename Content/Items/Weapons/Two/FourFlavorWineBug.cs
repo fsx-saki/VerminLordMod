@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
@@ -13,13 +13,10 @@ using VerminLordMod.Content.Items.Weapons.One;
 namespace VerminLordMod.Content.Items.Weapons.Two
 {
 	/// <summary>
-
 	/// 二转道蛊虫 — FourFlavorWineBug
-
 	/// 蛊虫
 
 	/// </summary>
-
 	class FourFlavorWineBugWeapon : PractiseWeapon
 	{
 		protected override int qiCost => 10;

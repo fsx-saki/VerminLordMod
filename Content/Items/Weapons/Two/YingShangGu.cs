@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using VerminLordMod.Content.Buffs.AddToSelf.Pobuff;
@@ -7,13 +7,10 @@ using VerminLordMod.Content.Items.Weapons.Daos;
 namespace VerminLordMod.Content.Items.Weapons.Two
 {
 	/// <summary>
-
 	/// 二转影蛊虫 — YingShangGu
-
 	/// 蛊虫
 
 	/// </summary>
-
 	class YingShangGu : ShadowWeapon
 	{
 		protected override int qiCost => 25;

@@ -12,7 +12,6 @@ namespace VerminLordMod.Content.Items.Weapons.Three
     /// 三转骨道蛊虫 — 天蓬蛊
     /// 方源使用的防御蛊，形成白光虚甲。
     /// </summary>
-
     public class TianPengGu : LightWeapon, IOnHitEffectProvider
     {
         protected override int qiCost => 20;

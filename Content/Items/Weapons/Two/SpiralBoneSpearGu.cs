@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using VerminLordMod.Common.UI;
@@ -11,13 +11,10 @@ using VerminLordMod.Content.Projectiles;
 namespace VerminLordMod.Content.Items.Weapons.Two
 {
 	/// <summary>
-
 	/// 二转骨蛊虫 — SpiralBoneSpearGu
-
 	/// 蛊虫
 
 	/// </summary>
-
 	class SpiralBoneSpearGu : BoneWeapon
 	{
 		protected override int qiCost => 5;

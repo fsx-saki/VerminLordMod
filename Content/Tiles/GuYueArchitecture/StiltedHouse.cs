@@ -10,14 +10,6 @@ using Terraria.ObjectData;
 namespace VerminLordMod.Content.Tiles.GuYueArchitecture
 {
     /// <summary>
-    /// 高脚吊楼 - 古月山寨的特色建筑，吊脚楼风格
-    /// 原文: "一座座高脚吊楼" (gzr_part001.txt:112)
-    /// 功能: 大型装饰建筑，可作为NPC房屋
-    /// </summary>
-    /// <summary>
-    /// 吊脚楼 — 古月宗的吊脚楼建筑
-    /// </summary>
-        /// <summary>
     /// 吊脚楼 — 古月宗的吊脚楼建筑
     /// </summary>
         public class StiltedHouse : ModTile

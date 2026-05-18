@@ -837,7 +837,6 @@ namespace VerminLordMod.Content.NPCs.GuMasters
                 Main.NewText(message, color ?? Color.White);
         }
 
-        /// <summary> 通知附近同阵营NPC：有人被攻击了，一起参战 </summary>
         /// <summary>
         /// 通知附近同阵营NPC：有人被玩家攻击了
         /// 目击到攻击事件的同阵营NPC直接进入战斗状态（HasBeenHitByPlayer = true）

@@ -11,7 +11,6 @@ namespace VerminLordMod.Content.Items.Weapons.Three
     /// 三转水道蛊虫 — 水龙蛊
     /// 三转攻击蛊，召唤水龙
     /// </summary>
-
     public class ShuiLongGu : WaterWeapon, IOnHitEffectProvider
     {
         protected override int qiCost => 30;

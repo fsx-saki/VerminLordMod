@@ -3,6 +3,7 @@
 // 玩家靠近可搜索目标时，在目标上方显示"搜索"按钮
 // 基于 SimpleLightBox 实现
 // ============================================================
+#nullable enable
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;

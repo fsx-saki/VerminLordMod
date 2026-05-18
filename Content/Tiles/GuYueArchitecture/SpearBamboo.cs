@@ -9,14 +9,6 @@ using Terraria.ObjectData;
 namespace VerminLordMod.Content.Tiles.GuYueArchitecture
 {
     /// <summary>
-    /// 青矛竹 - 青茅山特有的竹子，笔直如矛，玉质光泽
-    /// 原文: "青矛竹挺得笔直，如根根玉竿" (gzr_part001.txt:1018)
-    /// 原文: "碧玉的青矛竹在月色下，闪现着莹润如玉的光华" (gzr_part001.txt:1056)
-    /// </summary>
-    /// <summary>
-    /// 青矛竹 — 青茅山的竹子品种
-    /// </summary>
-        /// <summary>
     /// 青矛竹 — 青茅山的竹子品种
     /// </summary>
         public class SpearBamboo : ModTile

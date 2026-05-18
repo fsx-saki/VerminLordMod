@@ -10,7 +10,6 @@ namespace VerminLordMod.Content.Projectiles
 {    /// <summary>
     /// 丹火蛊弹幕 — 火道
     /// </summary>
-
     public class DanHuoProj : BaseBullet
     {
         private const float FlySpeed = 9f;

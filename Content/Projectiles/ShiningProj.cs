@@ -1,4 +1,4 @@
-﻿using VerminLordMod.Common.BulletBehaviors;
+using VerminLordMod.Common.BulletBehaviors;
 using VerminLordMod.Content.DamageClasses;
 using VerminLordMod.Content.Trails;
 using Microsoft.Xna.Framework;
@@ -8,22 +8,9 @@ using Terraria.GameContent;
 using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.Projectiles
-{
-    /// <summary>
-
+{    /// <summary>
     /// ShiningGu弹幕 — 木道
-
     /// </summary>
-
-    /// <summary>
-
-
-    /// ShiningGu弹幕 — 木道
-
-
-    /// </summary>
-
-
     class ShiningProj : BaseBullet
     {
         protected override void RegisterBehaviors()

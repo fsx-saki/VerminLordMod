@@ -1,4 +1,4 @@
-﻿using VerminLordMod.Content.Trails;
+using VerminLordMod.Content.Trails;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
@@ -9,22 +9,9 @@ using Terraria.ModLoader;
 using VerminLordMod.Content.DamageClasses;
 
 namespace VerminLordMod.Content.Projectiles
-{
-	/// <summary>
-
+{	/// <summary>
 	/// StarfireGu弹幕 — 星道
-
 	/// </summary>
-
-	/// <summary>
-
-
-	/// StarfireGu弹幕 — 星道
-
-
-	/// </summary>
-
-
 	class StarfireProj : ModProjectile
 	{
 		public override void SetDefaults() {

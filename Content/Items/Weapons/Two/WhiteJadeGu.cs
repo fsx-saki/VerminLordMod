@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using VerminLordMod.Content.Buffs.AddToSelf.Pobuff;
@@ -7,13 +7,10 @@ using VerminLordMod.Content.Items.Weapons.Daos;
 namespace VerminLordMod.Content.Items.Weapons.Two
 {
 	/// <summary>
-
 	/// 二转道蛊虫 — WhiteJadeGu
-
 	/// 蛊虫
 
 	/// </summary>
-
 	class WhiteJadeGu : RuleWeapon
 	{
 		protected override int qiCost => 25;

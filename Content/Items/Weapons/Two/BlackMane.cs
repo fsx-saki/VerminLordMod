@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using VerminLordMod.Common.UI;
@@ -10,13 +10,10 @@ using VerminLordMod.Content.Items.Weapons.One;
 namespace VerminLordMod.Content.Items.Weapons.Two
 {
 	/// <summary>
-
 	/// 二转道蛊虫 — BlackMane
-
 	/// 蛊虫
 
 	/// </summary>
-
 	class BlackMane : PersonWeapon
 	{
 		protected override int qiCost => 25;

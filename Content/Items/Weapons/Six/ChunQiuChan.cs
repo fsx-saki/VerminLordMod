@@ -54,7 +54,7 @@ namespace VerminLordMod.Content.Items.Weapons.Six
 		/// <summary>
 		/// 位置历史记录缓冲区，存储过去4分钟内玩家经过的随机位置
 		/// </summary>
-		public List<Vector2> positionHistory = new List<Vector2>();
+		[CloneByReference] public List<Vector2> positionHistory = new List<Vector2>();
 
 		/// <summary>
 		/// 位置记录计时器，每60 tick（1秒）记录一次

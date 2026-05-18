@@ -10,7 +10,6 @@ namespace VerminLordMod.Content.Projectiles
 {    /// <summary>
     /// 冰爆蛊弹幕 — 冰雪道
     /// </summary>
-
     public class BingBaoProj : BaseBullet
     {
         private const float BlastRadius = 180f;

@@ -7,31 +7,10 @@ using VerminLordMod.Common.BulletBehaviors;
 using VerminLordMod.Content.DamageClasses;
 
 namespace VerminLordMod.Content.Projectiles
-{    /// <summary>
-    /// DieYingGu弹幕 — 道道
-    /// </summary>    /// <summary>
-    /// DieYingGu弹幕 — 道道
-    /// </summary>    /// <summary>
-    /// DieYingGu弹幕 — 道道
-    /// </summary>
-
-
-
+{
     /// <summary>
-
-
-
-
     /// DieYingGu弹幕 — 影道
-
-
-
-
     /// </summary>
-
-
-
-
     public class DieYingProj : BaseBullet
     {
         private const float FlySpeed = 14f;

@@ -1,12 +1,8 @@
-using Terraria;
+﻿using Terraria;
 using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.Items.Placeable.GuYueArchitecture
-{
-    /// <summary>
-    /// 龙丸蛐蛐罐物品 - 可放置为龙丸蛐蛐罐装饰
-    /// </summary>
-    /// <summary>
+{    /// <summary>
     /// 龙丸蛐蛐罐（物品） — 饲养龙丸蛐蛐的罐子
     /// </summary>
         public class DragonCricketJar : ModItem

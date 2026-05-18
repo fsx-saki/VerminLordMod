@@ -1,4 +1,4 @@
-﻿using VerminLordMod.Content.DamageClasses;
+using VerminLordMod.Content.DamageClasses;
 using VerminLordMod.Content.Trails;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -10,11 +10,8 @@ using Terraria.ModLoader;
 namespace VerminLordMod.Content.Projectiles
 {
 	/// <summary>
-
 	/// MoonlightProjG弹幕 — 道道
-
 	/// </summary>
-
 	class MoonlightProjG:ModProjectile
 	{
 		public override void SetStaticDefaults() {

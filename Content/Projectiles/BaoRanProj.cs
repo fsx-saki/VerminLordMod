@@ -7,31 +7,10 @@ using VerminLordMod.Common.BulletBehaviors;
 using VerminLordMod.Content.DamageClasses;
 
 namespace VerminLordMod.Content.Projectiles
-{    /// <summary>
-    /// BaoRanGu弹幕 — 道道
-    /// </summary>    /// <summary>
-    /// BaoRanGu弹幕 — 道道
-    /// </summary>    /// <summary>
-    /// BaoRanGu弹幕 — 道道
-    /// </summary>
-
-
-
+{
     /// <summary>
-
-
-
-
     /// BaoRanGu弹幕 — 火道
-
-
-
-
     /// </summary>
-
-
-
-
     public class BaoRanProj : BaseBullet
     {
         private const float FlySpeed = 7f;

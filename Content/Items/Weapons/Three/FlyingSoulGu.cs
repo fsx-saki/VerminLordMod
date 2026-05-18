@@ -11,7 +11,6 @@ namespace VerminLordMod.Content.Items.Weapons.Three
     /// 三转道蛊虫 — FlyingSoulGu
     /// 蛊虫
     /// </summary>
-
     public class FlyingSoulGu : SoulWeapon, IOnHitEffectProvider
     {
         protected override int qiCost => 22;

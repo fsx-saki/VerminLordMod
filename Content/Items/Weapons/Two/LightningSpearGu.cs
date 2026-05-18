@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using VerminLordMod.Content.DamageClasses;
@@ -8,13 +8,10 @@ using VerminLordMod.Content.Projectiles;
 namespace VerminLordMod.Content.Items.Weapons.Two
 {
 	/// <summary>
-
 	/// 二转道蛊虫 — LightningSpearGu
-
 	/// 蛊虫
 
 	/// </summary>
-
 	class LightningSpearGu : LightningWeapon
 	{
 		protected override int qiCost => 2;

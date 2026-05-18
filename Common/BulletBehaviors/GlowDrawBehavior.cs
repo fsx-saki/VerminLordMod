@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.DataStructures;
+using Terraria.ModLoader;
 
 namespace VerminLordMod.Common.BulletBehaviors
 {
@@ -51,7 +52,18 @@ namespace VerminLordMod.Common.BulletBehaviors
 
         public void OnSpawn(Projectile projectile, IEntitySource source)
         {
-            _mainTexture = CustomTexture ?? Terraria.GameContent.TextureAssets.Projectile[projectile.type].Value;
+            if (CustomTexture != null)
+            {
+                _mainTexture = CustomTexture;
+            }
+            else if (projectile.ModProjectile != null)
+            {
+                _mainTexture = ModContent.Request<Texture2D>(projectile.ModProjectile.Texture).Value;
+            }
+            else
+            {
+                _mainTexture = Terraria.GameContent.TextureAssets.Projectile[projectile.type].Value;
+            }
         }
 
         public void Update(Projectile projectile)

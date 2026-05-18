@@ -1,4 +1,4 @@
-﻿using VerminLordMod.Common.BulletBehaviors;
+using VerminLordMod.Common.BulletBehaviors;
 using VerminLordMod.Content.DamageClasses;
 using VerminLordMod.Content.Trails;
 using Microsoft.Xna.Framework;
@@ -9,22 +9,9 @@ using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.Projectiles
-{
-    /// <summary>
-
+{    /// <summary>
     /// FrostArrowGu弹幕 — 道道
-
     /// </summary>
-
-    /// <summary>
-
-
-    /// FrostArrowGu弹幕 — 道道
-
-
-    /// </summary>
-
-
     class FrostArrowProj : BaseBullet
     {
         protected override void RegisterBehaviors()

@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using VerminLordMod.Content.Buffs.AddToSelf.Pobuff;
@@ -7,13 +7,10 @@ using VerminLordMod.Content.Items.Weapons.Daos;
 namespace VerminLordMod.Content.Items.Weapons.One
 {
 	/// <summary>
-
 	/// 一转火蛊虫 — FireClothesGu
-
 	/// 蛊虫
 
 	/// </summary>
-
 	class FireClothesGu : FireWeapon
 	{
 

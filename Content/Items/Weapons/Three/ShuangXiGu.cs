@@ -1,4 +1,4 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using System;
 using Terraria;
 using Terraria.DataStructures;
@@ -14,13 +14,10 @@ using VerminLordMod.Content.Projectiles;
 namespace VerminLordMod.Content.Items.Weapons.Three
 {
 	/// <summary>
-
 	/// 三转道蛊虫 — ShuangXiGu
-
 	/// 蛊虫
 
 	/// </summary>
-
 	class ShuangXiGu : IceSnowWeapon
 	{
 		protected override int _guLevel => 3;

@@ -1,12 +1,8 @@
-using Terraria;
+﻿using Terraria;
 using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.Items.Placeable.GuYueArchitecture
-{
-    /// <summary>
-    /// 棕黄色地板物品 - 可放置为棕黄色地板物块
-    /// </summary>
-    /// <summary>
+{    /// <summary>
     /// 棕黄地板（物品） — 棕黄色的地板
     /// </summary>
         public class BrownYellowFloor : ModItem

@@ -7,10 +7,6 @@ using VerminLordMod.Common.SubWorlds;
 namespace VerminLordMod.Content.Items.Placeable
 {
     /// <summary>
-    /// 古月族地传送门物品
-    /// 使用后进入 GuYueTerritory 小世界
-    /// </summary>
-    /// <summary>
     /// 古月传送门（物品） — 通往古月世界的传送门
     /// </summary>
         public class SubworldPortalGuYue : ModItem

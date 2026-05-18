@@ -11,7 +11,6 @@ namespace VerminLordMod.Content.Items.Weapons.Four
     /// 四转道蛊虫 — TieShouQinNaGu
     /// 蛊虫
     /// </summary>
-
     public class TieShouQinNaGu : GoldWeapon, IOnHitEffectProvider
     {
         protected override int qiCost => 35;

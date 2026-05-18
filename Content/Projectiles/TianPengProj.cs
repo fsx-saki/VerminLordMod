@@ -10,7 +10,6 @@ namespace VerminLordMod.Content.Projectiles
 {    /// <summary>
     /// 天蓬蛊弹幕 — 骨道
     /// </summary>
-
     public class TianPengProj : BaseBullet
     {
         protected override void RegisterBehaviors()

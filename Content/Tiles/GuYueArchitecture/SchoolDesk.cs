@@ -9,14 +9,6 @@ using Terraria.ObjectData;
 namespace VerminLordMod.Content.Tiles.GuYueArchitecture
 {
     /// <summary>
-    /// 古月学堂书桌 - 学堂中学员使用的书桌
-    /// 原文: 古月山寨学堂中学员上课使用的书桌
-    /// 功能: 装饰性家具，可作为工作台使用
-    /// </summary>
-    /// <summary>
-    /// 学堂桌 — 古月宗学堂的桌子
-    /// </summary>
-        /// <summary>
     /// 学堂桌 — 古月宗学堂的桌子
     /// </summary>
         public class SchoolDesk : ModTile

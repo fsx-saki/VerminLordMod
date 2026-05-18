@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,11 +13,8 @@ using Terraria.Audio;
 namespace VerminLordMod.Content.Projectiles
 {
 	/// <summary>
-
 	/// SpiralBoneSpear弹幕 — 道道
-
 	/// </summary>
-
 	class SpiralBoneSpear : ModProjectile
 	{
 		public override void SetDefaults() {

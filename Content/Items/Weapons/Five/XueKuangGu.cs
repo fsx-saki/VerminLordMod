@@ -11,7 +11,6 @@ namespace VerminLordMod.Content.Items.Weapons.Five
     /// 五转血道蛊虫 — 血狂蛊
     /// 五转蛊，能释放血雾污染其他蛊虫，使其发狂或化为血水。
     /// </summary>
-
     public class XueKuangGu : BloodWeapon, IOnHitEffectProvider
     {
         protected override int qiCost => 50;

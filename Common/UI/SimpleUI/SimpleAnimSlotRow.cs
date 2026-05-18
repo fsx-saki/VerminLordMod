@@ -7,6 +7,7 @@
 // - 整体始终保持居中
 // - 点击格子可取走其中的物品
 // ============================================================
+#nullable enable
 using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;

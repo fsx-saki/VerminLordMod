@@ -1,4 +1,4 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
@@ -9,25 +9,10 @@ using VerminLordMod.Common.Players;
 using VerminLordMod.Content.Items.Weapons.Four;
 
 namespace VerminLordMod.Content.Projectiles
-{    /// <summary>
-    /// YanTongHoldout弹幕 — 道道
-    /// </summary>    /// <summary>
-    /// YanTongHoldout弹幕 — 道道
-    /// </summary>
-
-
-	/// <summary>
-
-
-
+{
+    /// <summary>
 	/// YanTongHoldout弹幕 — 道道
-
-
-
 	/// </summary>
-
-
-
 	public class YanTongHoldout : ModProjectile
 	{
 		public override string Texture => "Terraria/Images/Projectile_" + ProjectileID.LastPrism;

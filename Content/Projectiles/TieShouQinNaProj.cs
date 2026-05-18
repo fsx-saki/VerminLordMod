@@ -7,31 +7,10 @@ using VerminLordMod.Common.BulletBehaviors;
 using VerminLordMod.Content.DamageClasses;
 
 namespace VerminLordMod.Content.Projectiles
-{    /// <summary>
-    /// TieShouQinNaGu弹幕 — 道道
-    /// </summary>    /// <summary>
-    /// TieShouQinNaGu弹幕 — 道道
-    /// </summary>    /// <summary>
-    /// TieShouQinNaGu弹幕 — 道道
-    /// </summary>
-
-
-
+{
     /// <summary>
-
-
-
-
     /// TieShouQinNaGu弹幕 — 道道
-
-
-
-
     /// </summary>
-
-
-
-
     public class TieShouQinNaProj : BaseBullet
     {
         private const float FlySpeed = 10f;

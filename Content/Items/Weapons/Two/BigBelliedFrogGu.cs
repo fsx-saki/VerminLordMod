@@ -1,4 +1,4 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
 using Terraria;
@@ -9,18 +9,16 @@ using Terraria.ModLoader.IO;
 using VerminLordMod.Content.DamageClasses;
 using VerminLordMod.Content.Items.Weapons.Daos;
 using VerminLordMod.Content.Projectiles;
+using VerminLordMod.Common.Abstractions;
 
 
 namespace VerminLordMod.Content.Items.Weapons.Two
 {
 	/// <summary>
-
 	/// 二转道蛊虫 — BigBelliedFrogGu
-
 	/// 蛊虫
 
 	/// </summary>
-
 	class BigBelliedFrogGu : GuWeaponItem//必要继承moditem
 	{
 		protected override int controlQiCost => 20;
@@ -89,7 +87,7 @@ namespace VerminLordMod.Content.Items.Weapons.Two
 		//	if(hasBeenControlled) return true;
 		//	return false;
 		//}
-		public List<Item> items = new List<Item>();
+		[CloneByReference] public List<Item> items = new List<Item>();
 		public override void SaveData(TagCompound tag) {
 			base.SaveData(tag);
 			tag["items"] = items;

@@ -7,31 +7,10 @@ using VerminLordMod.Common.BulletBehaviors;
 using VerminLordMod.Content.DamageClasses;
 
 namespace VerminLordMod.Content.Projectiles
-{    /// <summary>
-    /// GhostFaceGu弹幕 — 道道
-    /// </summary>    /// <summary>
-    /// GhostFaceGu弹幕 — 道道
-    /// </summary>    /// <summary>
-    /// GhostFaceGu弹幕 — 道道
-    /// </summary>
-
-
-
+{
     /// <summary>
-
-
-
-
     /// GhostFaceGu弹幕 — 魂道
-
-
-
-
     /// </summary>
-
-
-
-
     public class GhostFaceProj : BaseBullet
     {
         private const float FlySpeed = 7f;

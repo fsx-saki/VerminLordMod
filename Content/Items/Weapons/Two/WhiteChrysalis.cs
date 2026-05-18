@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using VerminLordMod.Common.UI;
@@ -12,13 +12,10 @@ using VerminLordMod.Content.Projectiles;
 namespace VerminLordMod.Content.Items.Weapons.Two
 {
 	/// <summary>
-
 	/// 二转毒蛊虫 — WhiteChrysalis
-
 	/// 蛊虫
 
 	/// </summary>
-
 	class WhiteChrysalis : PoisonWeapon//必要继承moditem
 	{
 		protected override int controlQiCost => 0;

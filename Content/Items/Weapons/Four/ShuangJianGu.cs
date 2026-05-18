@@ -11,7 +11,6 @@ namespace VerminLordMod.Content.Items.Weapons.Four
     /// 四转冰雪道蛊虫 — 霜箭蛊
     /// 发射霜箭的冰道蛊虫
     /// </summary>
-
     public class ShuangJianGu : IceSnowWeapon, IOnHitEffectProvider
     {
         protected override int qiCost => 38;

@@ -1,4 +1,4 @@
-﻿using VerminLordMod.Common.BulletBehaviors;
+using VerminLordMod.Common.BulletBehaviors;
 using VerminLordMod.Content.Buffs.AddToEnemy;
 using VerminLordMod.Content.DamageClasses;
 using VerminLordMod.Content.Trails;
@@ -11,11 +11,8 @@ using Terraria.ModLoader;
 namespace VerminLordMod.Content.Projectiles
 {
     /// <summary>
-
     /// SoulShockWave弹幕 — 道道
-
     /// </summary>
-
     class SoulShockWave : BaseBullet
     {
         private Texture2D tex;

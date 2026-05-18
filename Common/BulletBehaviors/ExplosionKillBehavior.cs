@@ -122,7 +122,18 @@ namespace VerminLordMod.Common.BulletBehaviors
         public void OnSpawn(Projectile projectile, IEntitySource source)
         {
             _hasKillExploded = false;
-            _resolvedTexture = TrailTexture ?? Terraria.GameContent.TextureAssets.Projectile[projectile.type].Value;
+            if (TrailTexture != null)
+            {
+                _resolvedTexture = TrailTexture;
+            }
+            else if (projectile.ModProjectile != null)
+            {
+                _resolvedTexture = ModContent.Request<Texture2D>(projectile.ModProjectile.Texture).Value;
+            }
+            else
+            {
+                _resolvedTexture = Terraria.GameContent.TextureAssets.Projectile[projectile.type].Value;
+            }
         }
 
         public void Update(Projectile projectile) { }

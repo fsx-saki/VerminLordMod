@@ -54,7 +54,7 @@ namespace VerminLordMod.Common.Abstractions
                 if (modItem is null) continue;
 
                 bool isAbstractionsGu = modItem is IGu;
-                bool isMarkerGu = modItem is Content.Items.IGu;
+                bool isMarkerGu = modItem is IGu;
                 if (!isAbstractionsGu && !isMarkerGu) continue;
 
                 var entry = new GuClassificationEntry

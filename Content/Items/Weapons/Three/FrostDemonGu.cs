@@ -11,7 +11,6 @@ namespace VerminLordMod.Content.Items.Weapons.Three
     /// 三转道蛊虫 — FrostDemonGu
     /// 蛊虫
     /// </summary>
-
     public class FrostDemonGu : IceSnowWeapon, IOnHitEffectProvider
     {
         protected override int qiCost => 35;

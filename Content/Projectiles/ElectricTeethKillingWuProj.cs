@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,22 +11,9 @@ using VerminLordMod.Content.Buffs.AddToEnemy;
 using Microsoft.Xna.Framework;
 
 namespace VerminLordMod.Content.Projectiles
-{
-	/// <summary>
-
+{	/// <summary>
 	/// ElectricTeethKillingWuGu弹幕 — 道道
-
 	/// </summary>
-
-	/// <summary>
-
-
-	/// ElectricTeethKillingWuGu弹幕 — 道道
-
-
-	/// </summary>
-
-
 	class ElectricTeethKillingWuProj : ModProjectile
 	{
 		public override void SetDefaults() {

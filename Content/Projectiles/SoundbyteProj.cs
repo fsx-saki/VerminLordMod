@@ -1,4 +1,4 @@
-﻿using VerminLordMod.Content.DamageClasses;
+using VerminLordMod.Content.DamageClasses;
 using VerminLordMod.Content.Trails;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -11,22 +11,9 @@ using Terraria.ID;
 using Terraria.GameContent;
 
 namespace VerminLordMod.Content.Projectiles
-{
-	/// <summary>
-
+{	/// <summary>
 	/// SoundbyteGu弹幕 — 道道
-
 	/// </summary>
-
-	/// <summary>
-
-
-	/// SoundbyteGu弹幕 — 道道
-
-
-	/// </summary>
-
-
 	class SoundbyteProj : ModProjectile
 	{
 		public override void SetStaticDefaults() {

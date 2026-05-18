@@ -33,7 +33,7 @@ namespace VerminLordMod.Content.Items.Weapons.Zero
             "雷霆万钧",
         };
 
-        private int[] _modeProjectileTypes;
+        [CloneByReference] private int[] _modeProjectileTypes;
 
         private readonly float[] _modeShootSpeeds = new[]
         {

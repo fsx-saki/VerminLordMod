@@ -12,7 +12,6 @@ namespace VerminLordMod.Content.Items.Weapons.Three
     /// 三转光道蛊虫 — 光虹蛊
     /// 三转移动蛊，可令蛊师化光遁走，速度在三转中号称第一。
     /// </summary>
-
     public class GuangHongGu : LightWeapon, IOnHitEffectProvider
     {
         protected override int qiCost => 22;

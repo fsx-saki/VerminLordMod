@@ -1,4 +1,4 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Mono.Cecil;
 using System.Collections.Generic;
 using Terraria;
@@ -16,13 +16,10 @@ using VerminLordMod.Content.Projectiles;
 namespace VerminLordMod.Content.Items.Weapons.Four
 {
 	/// <summary>
-
 	/// 四转道蛊虫 — ElectricTeethKillingWuGu
-
 	/// 蛊虫
 
 	/// </summary>
-
 	class ElectricTeethKillingWuGu : GoldWeapon
 	{
 		protected override int _guLevel => 4;
@@ -52,7 +49,7 @@ namespace VerminLordMod.Content.Items.Weapons.Four
 			Item.shootSpeed = 3f;
 
 		}
-		List<Projectile> projectiles = new List<Projectile>();
+		[CloneByReference] List<Projectile> projectiles = new List<Projectile>();
 		int maxProjNum = 40;
 		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback) {
 

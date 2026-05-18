@@ -1,4 +1,4 @@
-﻿using VerminLordMod.Content.DamageClasses;
+using VerminLordMod.Content.DamageClasses;
 using VerminLordMod.Content.Trails;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -11,22 +11,9 @@ using Terraria.ID;
 using Terraria.GameContent;
 
 namespace VerminLordMod.Content.Projectiles
-{
-	/// <summary>
-
+{	/// <summary>
 	/// PineNeedleGu弹幕 — 木道
-
 	/// </summary>
-
-	/// <summary>
-
-
-	/// PineNeedleGu弹幕 — 木道
-
-
-	/// </summary>
-
-
 	class PineNeedleProj : ModProjectile
 	{
 		public override void SetStaticDefaults() {

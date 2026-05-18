@@ -11,7 +11,6 @@ namespace VerminLordMod.Content.Items.Weapons.Three
     /// 三转道蛊虫 — BaoRanGu
     /// 蛊虫
     /// </summary>
-
     public class BaoRanGu : FireWeapon, IOnHitEffectProvider
     {
         protected override int qiCost => 32;

@@ -1,4 +1,4 @@
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -7,11 +7,7 @@ using Terraria.ModLoader;
 using Terraria.ObjectData;
 
 namespace VerminLordMod.Content.Tiles.GuYueArchitecture
-{
-    /// <summary>
-    /// 气草 — 蕴含灵气的草
-    /// </summary>
-        /// <summary>
+{        /// <summary>
     /// 气草 — 蕴含灵气的草
     /// </summary>
         public class QiHerb : ModTile

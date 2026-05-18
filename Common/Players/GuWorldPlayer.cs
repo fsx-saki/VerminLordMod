@@ -235,7 +235,6 @@ namespace VerminLordMod.Common.Players
 
         // ===== 恶名/声望 =====
 
-        /// <summary> 增加恶名（击杀NPC等行为） </summary>
         /// <summary>
         /// 添加恶名值
         /// 恶名影响新家族首次接触时的初始声望，但不直接修改已有家族的声望值。

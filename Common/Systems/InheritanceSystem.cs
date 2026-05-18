@@ -58,7 +58,6 @@ namespace VerminLordMod.Common.Systems
         public InheritanceRarity Rarity;
         public InheritanceState State;
         public Vector2 EntrancePosition;
-        int SubworldID;
         public List<InheritanceChallenge> Challenges = new();
         public int CurrentChallengeIndex;
         public FactionID OriginalOwnerFaction;

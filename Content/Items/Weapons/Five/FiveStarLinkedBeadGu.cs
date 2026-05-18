@@ -1,4 +1,4 @@
-﻿using VerminLordMod.Common.Players;
+using VerminLordMod.Common.Players;
 using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
@@ -12,13 +12,10 @@ using VerminLordMod.Content.Items.Weapons.Daos;
 namespace VerminLordMod.Content.Items.Weapons.Five
 {
 	/// <summary>
-
 	/// 五转星蛊虫 — FiveStarLinkedBeadGu
-
 	/// 蛊虫
 
 	/// </summary>
-
 	class FiveStarLinkedBeadGu : StarWeapon
 	{
 		protected override int controlQiCost => 5;

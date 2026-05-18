@@ -3,6 +3,7 @@
 // 搜索完成后显示获得的物品列表
 // 复用 CorpseLootUI 的格子布局风格
 // ============================================================
+#nullable enable
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;

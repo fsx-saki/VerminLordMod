@@ -1,15 +1,12 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ModLoader;
 using VerminLordMod.Content.DamageClasses;
 
 namespace VerminLordMod.Content.Projectiles
 {
 	/// <summary>
-
 	/// WhiteLightProj弹幕 — 道道
-
 	/// </summary>
-
 	class WhiteLightProj : ModProjectile
 	{
 		public override void SetDefaults() {

@@ -1,4 +1,4 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using System;
 using Terraria;
 using Terraria.DataStructures;
@@ -11,13 +11,10 @@ using VerminLordMod.Content.Projectiles;
 namespace VerminLordMod.Content.Items.Weapons.Four
 {
 	/// <summary>
-
 	/// 四转木蛊虫 — TengClawGu
-
 	/// 蛊虫
 
 	/// </summary>
-
 	class TengClawGu : WoodWeapon
 	{
 		// The texture doesn't have the same name as the item, so this property points to it.

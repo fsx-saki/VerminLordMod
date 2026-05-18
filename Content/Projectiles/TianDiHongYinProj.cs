@@ -1,4 +1,4 @@
-﻿using VerminLordMod.Content.DamageClasses;
+using VerminLordMod.Content.DamageClasses;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
@@ -8,22 +8,9 @@ using Terraria.ModLoader;
 using VerminLordMod.Content.Buffs;
 
 namespace VerminLordMod.Content.Projectiles
-{
-	/// <summary>
-
+{	/// <summary>
 	/// TianDiHongYinGu弹幕 — 道道
-
 	/// </summary>
-
-	/// <summary>
-
-
-	/// TianDiHongYinGu弹幕 — 道道
-
-
-	/// </summary>
-
-
 	class TianDiHongYinProj : ModProjectile
 	{
 		public override void SetStaticDefaults() {

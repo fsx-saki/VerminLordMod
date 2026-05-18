@@ -1,4 +1,4 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using System;
 using Terraria;
 using Terraria.DataStructures;
@@ -11,13 +11,10 @@ using VerminLordMod.Content.Projectiles;
 namespace VerminLordMod.Content.Items.Weapons.One
 {
 	/// <summary>
-
 	/// 一转火蛊虫 — StoveGu
-
 	/// 蛊虫
 
 	/// </summary>
-
 	class StoveGu : FireWeapon
 	{
 		protected override int _guLevel => 1;

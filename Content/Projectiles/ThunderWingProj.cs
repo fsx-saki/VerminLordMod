@@ -8,31 +8,10 @@ using VerminLordMod.Common.BulletBehaviors;
 using VerminLordMod.Content.DamageClasses;
 
 namespace VerminLordMod.Content.Projectiles
-{    /// <summary>
-    /// ThunderWingGu弹幕 — 道道
-    /// </summary>    /// <summary>
-    /// ThunderWingGu弹幕 — 道道
-    /// </summary>    /// <summary>
-    /// ThunderWingGu弹幕 — 道道
-    /// </summary>
-
-
-
+{
     /// <summary>
-
-
-
-
     /// ThunderWingGu弹幕 — 道道
-
-
-
-
     /// </summary>
-
-
-
-
     public class ThunderWingProj : BaseBullet
     {
         private const float FlySpeed = 16f;

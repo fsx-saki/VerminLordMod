@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using VerminLordMod.Common.Players;
 using VerminLordMod.Content.Items.Weapons.Daos;
@@ -6,13 +6,10 @@ using VerminLordMod.Content.Items.Weapons.Daos;
 namespace VerminLordMod.Content.Items.Weapons.Four
 {
 	/// <summary>
-
 	/// 四转道蛊虫 — ThunderShieldGu
-
 	/// 蛊虫
 
 	/// </summary>
-
 	class ThunderShieldGu : EatingWeapon
 	{
 		protected override int qiCost => 10;

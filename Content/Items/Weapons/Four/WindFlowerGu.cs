@@ -12,7 +12,6 @@ namespace VerminLordMod.Content.Items.Weapons.Four
     /// 四转道蛊虫 — WindFlowerGu
     /// 蛊虫
     /// </summary>
-
     public class WindFlowerGu : WindWeapon, IOnHitEffectProvider
     {
         protected override int qiCost => 35;

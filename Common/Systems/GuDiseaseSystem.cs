@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 using VerminLordMod.Common.Players;
@@ -311,7 +312,7 @@ namespace VerminLordMod.Common.Systems
                 Player.statLife -= (int)dmg;
                 if (Player.statLife <= 0)
                     Player.KillMe(Terraria.DataStructures.PlayerDeathReason.ByCustomReason(
-                        $"{Player.name}被蛊病夺去了生命"), dmg, 0);
+                        NetworkText.FromLiteral($"{Player.name}被蛊病夺去了生命")), dmg, 0);
             }
 
             if (qiDrain > 0)

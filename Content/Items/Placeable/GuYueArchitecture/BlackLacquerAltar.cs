@@ -1,12 +1,8 @@
-using Terraria;
+﻿using Terraria;
 using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.Items.Placeable.GuYueArchitecture
-{
-    /// <summary>
-    /// 黑漆台案物品 - 可放置为三层供案
-    /// </summary>
-    /// <summary>
+{    /// <summary>
     /// 黑漆祭坛（物品） — 黑漆涂装的祭坛
     /// </summary>
         public class BlackLacquerAltar : ModItem

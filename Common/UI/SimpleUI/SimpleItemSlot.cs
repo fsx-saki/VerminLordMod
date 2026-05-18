@@ -6,6 +6,7 @@
 // - 鼠标悬停高亮
 // - 点击取走物品
 // ============================================================
+#nullable enable
 using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;

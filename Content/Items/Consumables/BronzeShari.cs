@@ -6,11 +6,22 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.DataStructures;
+using VerminLordMod.Common.Abstractions;
 
 namespace VerminLordMod.Content.Items.Consumables
 {
 	class BronzeShari : ModItem,IGu
 	{
+	int IGu.GuLevel => _guLevel;
+	float IGu.QiCost => 0;
+	float IGu.ControlQiCost => 0;
+	float IGu.ControlRate { get => 0; set { } }
+	bool IGu.IsControlled => true;
+	float IGu.Loyalty { get => 100f; set { } }
+	GuCategory IGu.Category => GuCategory.Special;
+	GuElement IGu.Element => GuElement.None;
+	ulong IGu.DaoHenTags => 0;
+
 		//舍利蛊唯一需要改变的属性就是转数
 		private int _guLevel = 1;
 		public static LocalizedText GuLevel { get; private set; }

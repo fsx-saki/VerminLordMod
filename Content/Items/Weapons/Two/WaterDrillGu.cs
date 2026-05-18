@@ -1,4 +1,4 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using System.Collections.Generic;
 using Terraria;
 using Terraria.DataStructures;
@@ -14,13 +14,10 @@ namespace VerminLordMod.Content.Items.Weapons.Two
 	// ExampleDrill closely mimics Titanium Drill, except where noted.
 	// Of note, this example showcases Item.tileBoost and teaches the basic concepts of a held projectile.
 	/// <summary>
-
 	/// 二转水蛊虫 — WaterDrillGu
-
 	/// 蛊虫
 
 	/// </summary>
-
 	class WaterDrillGu : WaterWeapon
 	{
 		public override void SetStaticDefaults() {

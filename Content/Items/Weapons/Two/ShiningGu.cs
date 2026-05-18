@@ -1,4 +1,4 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
@@ -11,13 +11,10 @@ using VerminLordMod.Content.Projectiles;
 namespace VerminLordMod.Content.Items.Weapons.Two
 {
 	/// <summary>
-
 	/// 二转木蛊虫 — ShiningGu
-
 	/// 蛊虫
 
 	/// </summary>
-
 	class ShiningGu : WoodWeapon//必要继承moditem
 	{
 		protected override int controlQiCost => 5;

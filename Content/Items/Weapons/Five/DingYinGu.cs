@@ -11,7 +11,6 @@ namespace VerminLordMod.Content.Items.Weapons.Five
     /// 五转力道蛊虫 — 定音蛊
     /// 黑楼兰的五转蛊，能发出无形声波束缚目标。
     /// </summary>
-
     public class DingYinGu : VoiceWeapon, IOnHitEffectProvider
     {
         protected override int qiCost => 48;

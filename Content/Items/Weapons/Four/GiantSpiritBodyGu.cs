@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using VerminLordMod.Common.Players;
@@ -7,13 +7,10 @@ using VerminLordMod.Content.Items.Weapons.Daos;
 namespace VerminLordMod.Content.Items.Weapons.Four
 {
 	/// <summary>
-
 	/// 四转道蛊虫 — GiantSpiritBodyGu
-
 	/// 蛊虫
 
 	/// </summary>
-
 	class GiantSpiritBodyGu : EatingWeapon
 	{
 		protected override int qiCost => 10;

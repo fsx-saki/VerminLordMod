@@ -9,11 +9,8 @@ using Terraria.ModLoader;
 namespace VerminLordMod.Content.Projectiles
 {
     /// <summary>
-
     /// IceFlameProjectile弹幕 — 道道
-
     /// </summary>
-
     class IceFlameProjectile : BaseBullet
     {
         protected override void RegisterBehaviors()

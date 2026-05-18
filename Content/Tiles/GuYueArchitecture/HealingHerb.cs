@@ -1,4 +1,4 @@
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -7,11 +7,7 @@ using Terraria.ModLoader;
 using Terraria.ObjectData;
 
 namespace VerminLordMod.Content.Tiles.GuYueArchitecture
-{
-    /// <summary>
-    /// 疗伤草 — 具有疗伤效果的草药
-    /// </summary>
-        /// <summary>
+{        /// <summary>
     /// 疗伤草 — 具有疗伤效果的草药
     /// </summary>
         public class HealingHerb : ModTile

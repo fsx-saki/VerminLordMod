@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,11 +11,8 @@ using Terraria.ID;
 namespace VerminLordMod.Content.Projectiles
 {
 	/// <summary>
-
 	/// LightningSpear弹幕 — 道道
-
 	/// </summary>
-
 	class LightningSpear : ModProjectile
 	{
 		public override void SetDefaults() {

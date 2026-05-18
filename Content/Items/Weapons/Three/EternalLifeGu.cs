@@ -1,4 +1,4 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Mono.Cecil;
 using System.Collections.Generic;
 using Terraria;
@@ -13,13 +13,10 @@ using VerminLordMod.Content.Projectiles;
 namespace VerminLordMod.Content.Items.Weapons.Three
 {
 	/// <summary>
-
 	/// 三转木蛊虫 — EternalLifeGu
-
 	/// 蛊虫
 
 	/// </summary>
-
 	class EternalLifeGu : WoodWeapon
 	{
 		protected override int _guLevel => 3;

@@ -1,12 +1,8 @@
-using Terraria;
+﻿using Terraria;
 using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.Items.Placeable.GuYueArchitecture
-{
-    /// <summary>
-    /// 家主阁物品 - 可放置为家主阁大型建筑
-    /// </summary>
-    /// <summary>
+{    /// <summary>
     /// 族长阁（物品） — 古月宗族长的居所
     /// </summary>
         public class PatriarchPavilion : ModItem

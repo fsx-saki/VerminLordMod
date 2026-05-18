@@ -7,25 +7,10 @@ using VerminLordMod.Common.BulletBehaviors;
 using VerminLordMod.Content.DamageClasses;
 
 namespace VerminLordMod.Content.Projectiles
-{    /// <summary>
-    /// HuoGuangZhuTianGu弹幕 — 道道
-    /// </summary>    /// <summary>
-    /// HuoGuangZhuTianGu弹幕 — 道道
-    /// </summary>
-
-
+{
     /// <summary>
-
-
-
     /// HuoGuangZhuTianGu弹幕 — 火道
-
-
-
     /// </summary>
-
-
-
     public class HuoGuangZhuTianProj : BaseBullet
     {
         private const float BlastRadius = 300f;

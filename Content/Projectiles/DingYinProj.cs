@@ -10,7 +10,6 @@ namespace VerminLordMod.Content.Projectiles
 {    /// <summary>
     /// 定音蛊弹幕 — 力道
     /// </summary>
-
     public class DingYinProj : BaseBullet
     {
         private const float BlastRadius = 250f;

@@ -1,4 +1,4 @@
-﻿using VerminLordMod.Common.BulletBehaviors;
+using VerminLordMod.Common.BulletBehaviors;
 using VerminLordMod.Content.DamageClasses;
 using VerminLordMod.Content.Trails;
 using Microsoft.Xna.Framework;
@@ -11,11 +11,8 @@ using Terraria.ModLoader;
 namespace VerminLordMod.Content.Projectiles
 {
     /// <summary>
-
     /// IceAwl弹幕 — 道道
-
     /// </summary>
-
     class IceAwl : BaseBullet
     {
         protected override void RegisterBehaviors()

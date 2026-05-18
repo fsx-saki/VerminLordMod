@@ -1,4 +1,4 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using System;
 using Terraria;
 using Terraria.DataStructures;
@@ -12,13 +12,10 @@ using VerminLordMod.Content.Projectiles;
 namespace VerminLordMod.Content.Items.Weapons.Two
 {
 	/// <summary>
-
 	/// 二转毒蛊虫 — AcidWaterGu
-
 	/// 蛊虫
 
 	/// </summary>
-
 	class AcidWaterGu : PoisonWeapon//必要继承moditem
 	{
 		protected override int controlQiCost => 20;

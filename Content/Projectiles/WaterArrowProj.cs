@@ -1,4 +1,4 @@
-﻿using VerminLordMod.Common.BulletBehaviors;
+using VerminLordMod.Common.BulletBehaviors;
 using VerminLordMod.Content.DamageClasses;
 using VerminLordMod.Content.Trails;
 using Microsoft.Xna.Framework;
@@ -8,22 +8,9 @@ using Terraria.GameContent;
 using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.Projectiles
-{
-    /// <summary>
-
+{    /// <summary>
     /// WaterArrowGu弹幕 — 水道
-
     /// </summary>
-
-    /// <summary>
-
-
-    /// WaterArrowGu弹幕 — 水道
-
-
-    /// </summary>
-
-
     class WaterArrowProj : BaseBullet
     {
         protected override void RegisterBehaviors()

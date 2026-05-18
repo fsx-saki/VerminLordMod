@@ -1,4 +1,4 @@
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -7,11 +7,7 @@ using Terraria.ModLoader;
 using Terraria.ObjectData;
 
 namespace VerminLordMod.Content.Tiles.GuYueArchitecture
-{
-    /// <summary>
-    /// 毒草 — 含有毒素的草
-    /// </summary>
-        /// <summary>
+{        /// <summary>
     /// 毒草 — 含有毒素的草
     /// </summary>
         public class PoisonWeed : ModTile

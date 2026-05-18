@@ -1,4 +1,4 @@
-﻿using VerminLordMod.Content.DamageClasses;
+using VerminLordMod.Content.DamageClasses;
 using VerminLordMod.Content.Trails;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -12,22 +12,9 @@ using VerminLordMod.Content.Buffs.AddToEnemy;
 using Terraria.GameContent;
 
 namespace VerminLordMod.Content.Projectiles
-{
-	/// <summary>
-
+{	/// <summary>
 	/// GratingGu弹幕 — 光道
-
 	/// </summary>
-
-	/// <summary>
-
-
-	/// GratingGu弹幕 — 光道
-
-
-	/// </summary>
-
-
 	class GratingProj : ModProjectile
 	{
 		public override void SetStaticDefaults() {

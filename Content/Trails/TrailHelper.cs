@@ -96,7 +96,11 @@ namespace VerminLordMod.Content.Trails
 		public static GhostTrail AddDefaultGlowTrail(this TrailManager manager, Projectile projectile,
 			Color? color = null, float widthScale = 0.4f, float lengthScale = 2f)
 		{
-			Texture2D tex = Terraria.GameContent.TextureAssets.Projectile[projectile.type].Value;
+			Texture2D tex;
+			if (projectile.ModProjectile != null)
+				tex = ModContent.Request<Texture2D>(projectile.ModProjectile.Texture).Value;
+			else
+				tex = Terraria.GameContent.TextureAssets.Projectile[projectile.type].Value;
 			return manager.AddGhostTrail(tex, color ?? new Color(150, 220, 255),
 				maxPositions: 16, widthScale: widthScale, lengthScale: lengthScale,
 				alpha: 0.8f, recordInterval: 2, enableGlow: true);
@@ -113,7 +117,11 @@ namespace VerminLordMod.Content.Trails
 		public static LiquidTrail AddDefaultLiquidTrail(this TrailManager manager, Projectile projectile,
 			Color? colorStart = null, Color? colorEnd = null)
 		{
-			Texture2D tex = Terraria.GameContent.TextureAssets.Projectile[projectile.type].Value;
+			Texture2D tex;
+			if (projectile.ModProjectile != null)
+				tex = ModContent.Request<Texture2D>(projectile.ModProjectile.Texture).Value;
+			else
+				tex = Terraria.GameContent.TextureAssets.Projectile[projectile.type].Value;
 			return manager.AddLiquidTrail(tex, colorStart, colorEnd);
 		}
 

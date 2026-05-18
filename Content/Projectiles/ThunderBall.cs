@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,11 +15,8 @@ using VerminLordMod.Common.Players;
 namespace VerminLordMod.Content.Projectiles
 {
 	/// <summary>
-
 	/// ThunderBall弹幕 — 道道
-
 	/// </summary>
-
 	class ThunderBall:ModProjectile
 	{
 		public override void SetDefaults() {

@@ -1,4 +1,4 @@
-﻿using VerminLordMod.Content.DamageClasses;
+using VerminLordMod.Content.DamageClasses;
 using VerminLordMod.Content.Trails;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -9,22 +9,9 @@ using Terraria.ModLoader;
 using Terraria.ID;
 
 namespace VerminLordMod.Content.Projectiles
-{
-	/// <summary>
-
+{	/// <summary>
 	/// Cyclone弹幕 — 风道
-
 	/// </summary>
-
-	/// <summary>
-
-
-	/// Cyclone弹幕 — 风道
-
-
-	/// </summary>
-
-
 	class CycloneProj:ModProjectile
 	{
 		public override void SetStaticDefaults() {

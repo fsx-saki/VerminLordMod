@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
@@ -12,13 +12,10 @@ using VerminLordMod.Content.Items.Weapons.Daos;
 namespace VerminLordMod.Content.Items.Weapons.Four
 {
 	/// <summary>
-
 	/// 四转道蛊虫 — NineWineBug
-
 	/// 蛊虫
 
 	/// </summary>
-
 	class NineWineBugWeapon : PractiseWeapon
 	{
 		protected override int qiCost => 10;

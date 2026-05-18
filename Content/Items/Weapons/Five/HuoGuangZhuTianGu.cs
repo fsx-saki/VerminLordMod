@@ -11,7 +11,6 @@ namespace VerminLordMod.Content.Items.Weapons.Five
     /// 五转道蛊虫 — HuoGuangZhuTianGu
     /// 蛊虫
     /// </summary>
-
     public class HuoGuangZhuTianGu : FireWeapon, IOnHitEffectProvider
     {
         protected override int qiCost => 60;

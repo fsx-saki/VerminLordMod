@@ -11,7 +11,6 @@ namespace VerminLordMod.Content.Items.Weapons.Five
     /// 五转道蛊虫 — XueHeMang
     /// 蛊虫
     /// </summary>
-
     public class XueHeMang : BloodWeapon, IOnHitEffectProvider
     {
         protected override int qiCost => 52;

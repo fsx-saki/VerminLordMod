@@ -3,6 +3,7 @@
 // 管理搜索的进度、风险检测、中断处理
 // 状态流：Idle → Searching → Success/Failed/Interrupted
 // ============================================================
+#nullable enable
 using Microsoft.Xna.Framework;
 using System;
 using Terraria;

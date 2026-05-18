@@ -1,12 +1,8 @@
-using Terraria;
+﻿using Terraria;
 using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.Items.Placeable.GuYueArchitecture
-{
-    /// <summary>
-    /// 先祖牌位物品 - 可放置为供奉牌位
-    /// </summary>
-    /// <summary>
+{    /// <summary>
     /// 祖先牌位（物品） — 古月宗的祖先牌位
     /// </summary>
         public class AncestorTablet : ModItem

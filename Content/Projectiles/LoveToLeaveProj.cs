@@ -1,4 +1,4 @@
-﻿using VerminLordMod.Common.BulletBehaviors;
+using VerminLordMod.Common.BulletBehaviors;
 using VerminLordMod.Content.Buffs.AddToEnemy;
 using VerminLordMod.Content.DamageClasses;
 using VerminLordMod.Content.Trails;
@@ -9,22 +9,9 @@ using Terraria.GameContent;
 using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.Projectiles
-{
-    /// <summary>
-
+{    /// <summary>
     /// LoveToLeave弹幕 — 毒道
-
     /// </summary>
-
-    /// <summary>
-
-
-    /// LoveToLeave弹幕 — 毒道
-
-
-    /// </summary>
-
-
     class LoveToLeaveProj : BaseBullet
     {
         protected override void RegisterBehaviors()

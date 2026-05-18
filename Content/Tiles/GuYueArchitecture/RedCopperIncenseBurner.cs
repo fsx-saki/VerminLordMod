@@ -13,14 +13,6 @@ using Terraria.ObjectData;
 namespace VerminLordMod.Content.Tiles.GuYueArchitecture
 {
     /// <summary>
-    /// 赤铜香炉 - 摆放在黑漆台案两侧，香烟袅袅
-    /// 原文: "牌位两侧摆着赤铜香炉，香烟袅袅" (gzr_part001.txt:116)
-    /// 功能: 装饰性家具，发光并产生烟雾粒子效果
-    /// </summary>
-    /// <summary>
-    /// 赤铜香炉 — 赤铜制成的香炉
-    /// </summary>
-        /// <summary>
     /// 赤铜香炉 — 赤铜制成的香炉
     /// </summary>
         public class RedCopperIncenseBurner : ModTile

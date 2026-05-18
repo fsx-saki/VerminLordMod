@@ -11,7 +11,6 @@ namespace VerminLordMod.Content.Items.Weapons.Four
     /// 四转火道蛊虫 — 火龙蛊
     /// 四转蛊，化作火龙，能在火海中恢复体型。
     /// </summary>
-
     public class HuoLongGu : FireWeapon, IOnHitEffectProvider
     {
         protected override int qiCost => 45;

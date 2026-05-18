@@ -1,4 +1,4 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
@@ -15,13 +15,10 @@ using VerminLordMod.Content.Projectiles;
 namespace VerminLordMod.Content.Items.Weapons.Three
 {
 	/// <summary>
-
 	/// 三转月蛊虫 — GoldMoon
-
 	/// 蛊虫
 
 	/// </summary>
-
 	class GoldMoon : MoonWeapon//必要继承moditem
 	{
 		protected override int controlQiCost => 20;

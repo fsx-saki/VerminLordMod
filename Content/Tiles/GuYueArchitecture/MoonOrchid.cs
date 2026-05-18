@@ -9,14 +9,6 @@ using Terraria.ObjectData;
 namespace VerminLordMod.Content.Tiles.GuYueArchitecture
 {
     /// <summary>
-    /// 月兰花 - 古月一族特产，花瓣可入药/制蛊
-    /// 原文: "我族有灵泉产出元石，在地下溶洞又种植了大片月兰花" (gzr_part001.txt:1189)
-    /// 原文: "用元石换购你族的月兰花" (gzr_part001.txt:1186)
-    /// </summary>
-    /// <summary>
-    /// 月兰花 — 古月山寨栽培的花卉
-    /// </summary>
-        /// <summary>
     /// 月兰花 — 古月山寨栽培的花卉
     /// </summary>
         public class MoonOrchid : ModTile

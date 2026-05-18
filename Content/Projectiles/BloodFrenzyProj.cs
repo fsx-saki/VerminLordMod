@@ -7,31 +7,10 @@ using VerminLordMod.Common.BulletBehaviors;
 using VerminLordMod.Content.DamageClasses;
 
 namespace VerminLordMod.Content.Projectiles
-{    /// <summary>
-    /// BloodFrenzyGu弹幕 — 道道
-    /// </summary>    /// <summary>
-    /// BloodFrenzyGu弹幕 — 道道
-    /// </summary>    /// <summary>
-    /// BloodFrenzyGu弹幕 — 道道
-    /// </summary>
-
-
-
+{
     /// <summary>
-
-
-
-
     /// BloodFrenzyGu弹幕 — 血道
-
-
-
-
     /// </summary>
-
-
-
-
     public class BloodFrenzyProj : BaseBullet
     {
         private const float FlySpeed = 10f;

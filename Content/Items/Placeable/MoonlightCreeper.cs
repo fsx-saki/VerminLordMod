@@ -1,10 +1,10 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.Items.Placeable
 {
-	internal class MoonlightCreeper : ModItem,IGu
+	internal class MoonlightCreeper : ModItem
 	{
 		// This example uses LocalizedText.Empty to prevent any translation key from being generated. This can be used for items that definitely won't have a tooltip, keeping the localization file cleaner.
 		public override LocalizedText Tooltip => LocalizedText.Empty;

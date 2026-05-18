@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using VerminLordMod.Common.Players;
 using VerminLordMod.Content.Items.Weapons.Daos;
@@ -6,13 +6,10 @@ using VerminLordMod.Content.Items.Weapons.Daos;
 namespace VerminLordMod.Content.Items.Weapons.Three
 {
 	/// <summary>
-
 	/// 三转道蛊虫 — PotatoMotherGu
-
 	/// 蛊虫
 
 	/// </summary>
-
 	class PotatoMotherGu : EatingWeapon
 	{
 		protected override int qiCost => 10;

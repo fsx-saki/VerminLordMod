@@ -11,7 +11,6 @@ namespace VerminLordMod.Content.Items.Weapons.Three
     /// 三转道蛊虫 — DaoChiXueFuGu
     /// 蛊虫
     /// </summary>
-
     public class DaoChiXueFuGu : BloodWeapon, IOnHitEffectProvider
     {
         protected override int qiCost => 28;

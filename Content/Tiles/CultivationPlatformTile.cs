@@ -1,13 +1,9 @@
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.Tiles
-{
-    /// <summary>
-    /// 修炼台 — 蛊师修炼的平台
-    /// </summary>
-        /// <summary>
+{        /// <summary>
     /// 修炼台 — 蛊师修炼的平台
     /// </summary>
         public class CultivationPlatformTile : ModTile

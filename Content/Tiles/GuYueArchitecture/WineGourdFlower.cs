@@ -9,14 +9,6 @@ using Terraria.ObjectData;
 namespace VerminLordMod.Content.Tiles.GuYueArchitecture
 {
     /// <summary>
-    /// 酒囊花蛊 - 一转花蛊，分泌花蜜酒
-    /// 原文: "蛊的形态，有很多种...还有花草形态，就是方源眼前的酒囊花蛊" (gzr_part001.txt:1148-1150)
-    /// 原文: "只有灌注真元，就能生长。长成之后，花心中会分泌出花蜜酒" (gzr_part001.txt:1150)
-    /// </summary>
-    /// <summary>
-    /// 酒囊花 — 形似酒囊的花蛊
-    /// </summary>
-        /// <summary>
     /// 酒囊花 — 形似酒囊的花蛊
     /// </summary>
         public class WineGourdFlower : ModTile

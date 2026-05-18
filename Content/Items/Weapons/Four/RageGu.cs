@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using VerminLordMod.Content.Buffs.AddToSelf.Pobuff;
@@ -7,13 +7,10 @@ using VerminLordMod.Content.Items.Weapons.Daos;
 namespace VerminLordMod.Content.Items.Weapons.Four
 {
 	/// <summary>
-
 	/// 四转道蛊虫 — RageGu
-
 	/// 蛊虫
 
 	/// </summary>
-
 	class RageGu : PowerWeapon
 	{
 		protected override int controlQiCost => 50;

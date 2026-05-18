@@ -3,6 +3,7 @@
 // 不依赖任何现有UI系统（ModernUI等）
 // 管理 SimplePanel / SimpleInfoBox / SearchChairItem / CorpseLootUI / SearchSystem / DialogueTreeUI 的生命周期、更新和绘制
 // ============================================================
+#nullable enable
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;

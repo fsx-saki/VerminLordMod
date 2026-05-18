@@ -12,7 +12,6 @@ namespace VerminLordMod.Content.Items.Weapons.Four
     /// 四转道蛊虫 — DieYingGu
     /// 蛊虫
     /// </summary>
-
     public class DieYingGu : ShadowWeapon, IOnHitEffectProvider
     {
         protected override int qiCost => 38;

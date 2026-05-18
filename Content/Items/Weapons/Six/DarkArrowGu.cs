@@ -1,4 +1,4 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using System;
 using Terraria;
 using Terraria.DataStructures;
@@ -12,13 +12,10 @@ using VerminLordMod.Content.Projectiles;
 namespace VerminLordMod.Content.Items.Weapons.Six
 {
 	/// <summary>
-
 	/// 六转暗蛊虫 — DarkArrowGu
-
 	/// 蛊虫
 
 	/// </summary>
-
 	class DarkArrowGu : DarkWeapon//必要继承moditem
 	{
 		protected override int controlQiCost => 100;

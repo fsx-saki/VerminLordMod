@@ -1,4 +1,4 @@
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -6,11 +6,7 @@ using Terraria.ObjectData;
 using Terraria.DataStructures;
 
 namespace VerminLordMod.Content.Tiles.FactionBlocks
-{
-    /// <summary>
-    /// 古月木块 — 古月宗的木制方块
-    /// </summary>
-        /// <summary>
+{        /// <summary>
     /// 古月木块 — 古月宗的木制方块
     /// </summary>
         public class GuYueWoodBlock : ModTile
@@ -36,12 +32,7 @@ namespace VerminLordMod.Content.Tiles.FactionBlocks
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16,
                 ModContent.ItemType<Items.Placeable.FactionBlocks.GuYueWoodBlock>());
         }
-    }
-
-    /// <summary>
-    /// 古月竹台 — 古月宗的竹制平台
-    /// </summary>
-        /// <summary>
+    }        /// <summary>
     /// 古月竹台 — 古月宗的竹制平台
     /// </summary>
         public class GuYueBambooPlatform : ModTile
@@ -67,12 +58,7 @@ namespace VerminLordMod.Content.Tiles.FactionBlocks
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16,
                 ModContent.ItemType<Items.Placeable.FactionBlocks.GuYueBambooPlatform>());
         }
-    }
-
-    /// <summary>
-    /// 白玉方块 — 白玉制成的方块
-    /// </summary>
-        /// <summary>
+    }        /// <summary>
     /// 白玉方块 — 白玉制成的方块
     /// </summary>
         public class BaiJadeBlock : ModTile
@@ -106,12 +92,7 @@ namespace VerminLordMod.Content.Tiles.FactionBlocks
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16,
                 ModContent.ItemType<Items.Placeable.FactionBlocks.BaiJadeBlock>());
         }
-    }
-
-    /// <summary>
-    /// 白银砖 — 白银色的砖块
-    /// </summary>
-        /// <summary>
+    }        /// <summary>
     /// 白银砖 — 白银色的砖块
     /// </summary>
         public class BaiSilverBrick : ModTile
@@ -137,12 +118,7 @@ namespace VerminLordMod.Content.Tiles.FactionBlocks
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16,
                 ModContent.ItemType<Items.Placeable.FactionBlocks.BaiSilverBrick>());
         }
-    }
-
-    /// <summary>
-    /// 熊家暗石 — 熊家的暗色石块
-    /// </summary>
-        /// <summary>
+    }        /// <summary>
     /// 熊家暗石 — 熊家的暗色石块
     /// </summary>
         public class XiongDarkStone : ModTile
@@ -170,12 +146,7 @@ namespace VerminLordMod.Content.Tiles.FactionBlocks
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16,
                 ModContent.ItemType<Items.Placeable.FactionBlocks.XiongDarkStone>());
         }
-    }
-
-    /// <summary>
-    /// 熊家铁梁 — 熊家的铁制梁柱
-    /// </summary>
-        /// <summary>
+    }        /// <summary>
     /// 熊家铁梁 — 熊家的铁制梁柱
     /// </summary>
         public class XiongIronBeam : ModTile
@@ -203,12 +174,7 @@ namespace VerminLordMod.Content.Tiles.FactionBlocks
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16,
                 ModContent.ItemType<Items.Placeable.FactionBlocks.XiongIronBeam>());
         }
-    }
-
-    /// <summary>
-    /// 铁家锻造石 — 铁家的锻造石
-    /// </summary>
-        /// <summary>
+    }        /// <summary>
     /// 铁家锻造石 — 铁家的锻造石
     /// </summary>
         public class TieForgeStone : ModTile
@@ -242,12 +208,7 @@ namespace VerminLordMod.Content.Tiles.FactionBlocks
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16,
                 ModContent.ItemType<Items.Placeable.FactionBlocks.TieForgeStone>());
         }
-    }
-
-    /// <summary>
-    /// 王家水晶砖 — 王家的水晶砖
-    /// </summary>
-        /// <summary>
+    }        /// <summary>
     /// 王家水晶砖 — 王家的水晶砖
     /// </summary>
         public class WangCrystalBlock : ModTile
@@ -281,12 +242,7 @@ namespace VerminLordMod.Content.Tiles.FactionBlocks
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16,
                 ModContent.ItemType<Items.Placeable.FactionBlocks.WangCrystalBlock>());
         }
-    }
-
-    /// <summary>
-    /// 赵家影砖 — 赵家的暗影砖
-    /// </summary>
-        /// <summary>
+    }        /// <summary>
     /// 赵家影砖 — 赵家的暗影砖
     /// </summary>
         public class ZhaoShadowBrick : ModTile
@@ -312,12 +268,7 @@ namespace VerminLordMod.Content.Tiles.FactionBlocks
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16,
                 ModContent.ItemType<Items.Placeable.FactionBlocks.ZhaoShadowBrick>());
         }
-    }
-
-    /// <summary>
-    /// 贾家金丝砖 — 贾家的金丝装饰砖
-    /// </summary>
-        /// <summary>
+    }        /// <summary>
     /// 贾家金丝砖 — 贾家的金丝装饰砖
     /// </summary>
         public class JiaGoldSilkBlock : ModTile
@@ -351,12 +302,7 @@ namespace VerminLordMod.Content.Tiles.FactionBlocks
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16,
                 ModContent.ItemType<Items.Placeable.FactionBlocks.JiaGoldSilkBlock>());
         }
-    }
-
-    /// <summary>
-    /// 散修泥砖 — 散修使用的泥砖
-    /// </summary>
-        /// <summary>
+    }        /// <summary>
     /// 散修泥砖 — 散修使用的泥砖
     /// </summary>
         public class ScatteredMudBrick : ModTile
@@ -382,12 +328,7 @@ namespace VerminLordMod.Content.Tiles.FactionBlocks
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16,
                 ModContent.ItemType<Items.Placeable.FactionBlocks.ScatteredMudBrick>());
         }
-    }
-
-    /// <summary>
-    /// 古月竹墙 — 古月宗的竹墙
-    /// </summary>
-        /// <summary>
+    }        /// <summary>
     /// 古月竹墙 — 古月宗的竹墙
     /// </summary>
         public class GuYueBambooWall : ModTile
@@ -412,12 +353,7 @@ namespace VerminLordMod.Content.Tiles.FactionBlocks
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16,
                 ModContent.ItemType<Items.Placeable.FactionBlocks.GuYueBambooWall>());
         }
-    }
-
-    /// <summary>
-    /// 白玉柱 — 白玉制成的柱子
-    /// </summary>
-        /// <summary>
+    }        /// <summary>
     /// 白玉柱 — 白玉制成的柱子
     /// </summary>
         public class BaiJadePillar : ModTile
@@ -450,12 +386,7 @@ namespace VerminLordMod.Content.Tiles.FactionBlocks
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16,
                 ModContent.ItemType<Items.Placeable.FactionBlocks.BaiJadePillar>());
         }
-    }
-
-    /// <summary>
-    /// 铁家锻造墙 — 铁家的锻造墙壁
-    /// </summary>
-        /// <summary>
+    }        /// <summary>
     /// 铁家锻造墙 — 铁家的锻造墙壁
     /// </summary>
         public class TieForgeWall : ModTile
@@ -488,12 +419,7 @@ namespace VerminLordMod.Content.Tiles.FactionBlocks
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16,
                 ModContent.ItemType<Items.Placeable.FactionBlocks.TieForgeWall>());
         }
-    }
-
-    /// <summary>
-    /// 王家水晶柱 — 王家的水晶柱
-    /// </summary>
-        /// <summary>
+    }        /// <summary>
     /// 王家水晶柱 — 王家的水晶柱
     /// </summary>
         public class WangCrystalPillar : ModTile
@@ -526,12 +452,7 @@ namespace VerminLordMod.Content.Tiles.FactionBlocks
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16,
                 ModContent.ItemType<Items.Placeable.FactionBlocks.WangCrystalPillar>());
         }
-    }
-
-    /// <summary>
-    /// 赵家影幕 — 赵家的暗影幕帘
-    /// </summary>
-        /// <summary>
+    }        /// <summary>
     /// 赵家影幕 — 赵家的暗影幕帘
     /// </summary>
         public class ZhaoShadowCurtain : ModTile
@@ -556,12 +477,7 @@ namespace VerminLordMod.Content.Tiles.FactionBlocks
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16,
                 ModContent.ItemType<Items.Placeable.FactionBlocks.ZhaoShadowCurtain>());
         }
-    }
-
-    /// <summary>
-    /// 贾家丝绸幕 — 贾家的丝绸幕帘
-    /// </summary>
-        /// <summary>
+    }        /// <summary>
     /// 贾家丝绸幕 — 贾家的丝绸幕帘
     /// </summary>
         public class JiaSilkCurtain : ModTile

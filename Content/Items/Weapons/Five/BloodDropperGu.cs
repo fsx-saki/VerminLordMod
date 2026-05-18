@@ -12,7 +12,6 @@ namespace VerminLordMod.Content.Items.Weapons.Five
     /// 五转道蛊虫 — BloodDropperGu
     /// 蛊虫
     /// </summary>
-
     public class BloodDropperGu : ChargeWeaponTemplate
     {
         protected override int qiCost => 350;

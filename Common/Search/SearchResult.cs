@@ -2,6 +2,7 @@
 // SearchResult - 搜索结果数据结构
 // 包含搜索成功/失败、获得的物品、触发的风险等信息
 // ============================================================
+#nullable enable
 using System.Collections.Generic;
 using Terraria;
 

@@ -1,4 +1,4 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using System;
 using System.Linq;
 using Terraria;
@@ -13,13 +13,10 @@ using VerminLordMod.Content.Projectiles;
 namespace VerminLordMod.Content.Items.Weapons.One
 {
 	/// <summary>
-
 	/// 一转星蛊虫 — MeteorGu
-
 	/// 蛊虫
 
 	/// </summary>
-
 	class MeteorGu : StarWeapon
 	{
 		protected override int qiCost => 7;

@@ -10,7 +10,6 @@ namespace VerminLordMod.Content.Projectiles
 {    /// <summary>
     /// 霜箭蛊弹幕 — 冰雪道
     /// </summary>
-
     public class ShuangJianProj : BaseBullet
     {
         private const float FlySpeed = 12f;

@@ -1,4 +1,4 @@
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -7,11 +7,7 @@ using Terraria.ModLoader;
 using Terraria.ObjectData;
 
 namespace VerminLordMod.Content.Tiles.DarkEnvironment
-{
-    /// <summary>
-    /// 蛊阵 — 蛊虫阵法的基石
-    /// </summary>
-        /// <summary>
+{        /// <summary>
     /// 蛊阵 — 蛊虫阵法的基石
     /// </summary>
         public class GuFormationTile : ModTile
@@ -54,12 +50,7 @@ namespace VerminLordMod.Content.Tiles.DarkEnvironment
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 48, 48,
                 ModContent.ItemType<Items.Placeable.DarkEnvironment.GuFormationTile>());
         }
-    }
-
-    /// <summary>
-    /// 血池 — 充满鲜血的池子
-    /// </summary>
-        /// <summary>
+    }        /// <summary>
     /// 血池 — 充满鲜血的池子
     /// </summary>
         public class BloodPoolTile : ModTile
@@ -98,12 +89,7 @@ namespace VerminLordMod.Content.Tiles.DarkEnvironment
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 16,
                 ModContent.ItemType<Items.Placeable.DarkEnvironment.BloodPoolTile>());
         }
-    }
-
-    /// <summary>
-    /// 尸茧 — 尸体被蛊丝包裹形成的茧
-    /// </summary>
-        /// <summary>
+    }        /// <summary>
     /// 尸茧 — 尸体被蛊丝包裹形成的茧
     /// </summary>
         public class CorpseCocoon : ModTile
@@ -134,12 +120,7 @@ namespace VerminLordMod.Content.Tiles.DarkEnvironment
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 48,
                 ModContent.ItemType<Items.Placeable.DarkEnvironment.CorpseCocoon>());
         }
-    }
-
-    /// <summary>
-    /// 魂笼 — 囚禁灵魂的笼子
-    /// </summary>
-        /// <summary>
+    }        /// <summary>
     /// 魂笼 — 囚禁灵魂的笼子
     /// </summary>
         public class SoulCage : ModTile
@@ -176,12 +157,7 @@ namespace VerminLordMod.Content.Tiles.DarkEnvironment
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 48,
                 ModContent.ItemType<Items.Placeable.DarkEnvironment.SoulCage>());
         }
-    }
-
-    /// <summary>
-    /// 血肉墙 — 血肉凝固形成的墙壁
-    /// </summary>
-        /// <summary>
+    }        /// <summary>
     /// 血肉墙 — 血肉凝固形成的墙壁
     /// </summary>
         public class FleshWall : ModTile
@@ -207,12 +183,7 @@ namespace VerminLordMod.Content.Tiles.DarkEnvironment
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16,
                 ModContent.ItemType<Items.Placeable.DarkEnvironment.FleshWall>());
         }
-    }
-
-    /// <summary>
-    /// 蛊祭坛 — 进行蛊虫祭祀的祭坛
-    /// </summary>
-        /// <summary>
+    }        /// <summary>
     /// 蛊祭坛 — 进行蛊虫祭祀的祭坛
     /// </summary>
         public class GuSacrificeAltar : ModTile
@@ -255,12 +226,7 @@ namespace VerminLordMod.Content.Tiles.DarkEnvironment
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 48, 32,
                 ModContent.ItemType<Items.Placeable.DarkEnvironment.GuSacrificeAltar>());
         }
-    }
-
-    /// <summary>
-    /// 枯萎器官 — 枯萎的生物器官
-    /// </summary>
-        /// <summary>
+    }        /// <summary>
     /// 枯萎器官 — 枯萎的生物器官
     /// </summary>
         public class WitheredOrgan : ModTile
@@ -289,12 +255,7 @@ namespace VerminLordMod.Content.Tiles.DarkEnvironment
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16,
                 ModContent.ItemType<Items.Placeable.DarkEnvironment.WitheredOrgan>());
         }
-    }
-
-    /// <summary>
-    /// 毒雾发射器 — 释放毒雾的装置
-    /// </summary>
-        /// <summary>
+    }        /// <summary>
     /// 毒雾发射器 — 释放毒雾的装置
     /// </summary>
         public class PoisonMistEmitter : ModTile
@@ -331,12 +292,7 @@ namespace VerminLordMod.Content.Tiles.DarkEnvironment
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16,
                 ModContent.ItemType<Items.Placeable.DarkEnvironment.PoisonMistEmitter>());
         }
-    }
-
-    /// <summary>
-    /// 蛊墓碑 — 蛊师墓地的碑石
-    /// </summary>
-        /// <summary>
+    }        /// <summary>
     /// 蛊墓碑 — 蛊师墓地的碑石
     /// </summary>
         public class GuTombstone : ModTile
@@ -367,12 +323,7 @@ namespace VerminLordMod.Content.Tiles.DarkEnvironment
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 32,
                 ModContent.ItemType<Items.Placeable.DarkEnvironment.GuTombstone>());
         }
-    }
-
-    /// <summary>
-    /// 封灵石 — 封印灵力的石头
-    /// </summary>
-        /// <summary>
+    }        /// <summary>
     /// 封灵石 — 封印灵力的石头
     /// </summary>
         public class SpiritSealStone : ModTile

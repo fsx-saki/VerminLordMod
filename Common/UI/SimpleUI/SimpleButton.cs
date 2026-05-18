@@ -7,6 +7,7 @@
 // - 点击时有按下效果
 // - 点击后在聊天栏发送信息
 // ============================================================
+#nullable enable
 using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;

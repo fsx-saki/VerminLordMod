@@ -11,7 +11,6 @@ namespace VerminLordMod.Content.Items.Weapons.Three
     /// 三转道蛊虫 — ThunderWingGu
     /// 蛊虫
     /// </summary>
-
     public class ThunderWingGu : LightningWeapon, IOnHitEffectProvider
     {
         protected override int qiCost => 25;

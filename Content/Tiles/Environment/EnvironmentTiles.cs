@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,11 +9,7 @@ using Terraria.ModLoader;
 using Terraria.ObjectData;
 
 namespace VerminLordMod.Content.Tiles.Environment
-{
-    /// <summary>
-    /// 灵草 — 灵气滋养的草
-    /// </summary>
-        /// <summary>
+{        /// <summary>
     /// 灵草 — 灵气滋养的草
     /// </summary>
         public class SpiritGrass : ModTile
@@ -45,12 +41,7 @@ namespace VerminLordMod.Content.Tiles.Environment
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16,
                 ModContent.ItemType<Items.Placeable.Environment.SpiritGrass>());
         }
-    }
-
-    /// <summary>
-    /// 元气蘑菇 — 蕴含元气的蘑菇
-    /// </summary>
-        /// <summary>
+    }        /// <summary>
     /// 元气蘑菇 — 蕴含元气的蘑菇
     /// </summary>
         public class YuanQiMushroom : ModTile
@@ -90,12 +81,7 @@ namespace VerminLordMod.Content.Tiles.Environment
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16,
                 ModContent.ItemType<Items.Placeable.Environment.YuanQiMushroom>());
         }
-    }
-
-    /// <summary>
-    /// 蛊巢 — 蛊虫的巢穴
-    /// </summary>
-        /// <summary>
+    }        /// <summary>
     /// 蛊巢 — 蛊虫的巢穴
     /// </summary>
         public class GuNest : ModTile
@@ -132,12 +118,7 @@ namespace VerminLordMod.Content.Tiles.Environment
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 32,
                 ModContent.ItemType<Items.Placeable.Environment.GuNest>());
         }
-    }
-
-    /// <summary>
-    /// 毒沼植物 — 生长在毒沼泽中的植物
-    /// </summary>
-        /// <summary>
+    }        /// <summary>
     /// 毒沼植物 — 生长在毒沼泽中的植物
     /// </summary>
         public class PoisonSwampPlant : ModTile
@@ -170,12 +151,7 @@ namespace VerminLordMod.Content.Tiles.Environment
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 32,
                 ModContent.ItemType<Items.Placeable.Environment.PoisonSwampPlant>());
         }
-    }
-
-    /// <summary>
-    /// 骨堆 — 骨骼堆积物
-    /// </summary>
-        /// <summary>
+    }        /// <summary>
     /// 骨堆 — 骨骼堆积物
     /// </summary>
         public class BonePile : ModTile
@@ -204,12 +180,7 @@ namespace VerminLordMod.Content.Tiles.Environment
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 16,
                 ModContent.ItemType<Items.Placeable.Environment.BonePile>());
         }
-    }
-
-    /// <summary>
-    /// 灵藤 — 灵气滋养的藤蔓
-    /// </summary>
-        /// <summary>
+    }        /// <summary>
     /// 灵藤 — 灵气滋养的藤蔓
     /// </summary>
         public class SpiritVine : ModTile
@@ -248,12 +219,7 @@ namespace VerminLordMod.Content.Tiles.Environment
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16,
                 ModContent.ItemType<Items.Placeable.Environment.SpiritVine>());
         }
-    }
-
-    /// <summary>
-    /// 赤铜矿石 — 赤铜色的矿石，古月宗常用材料
-    /// </summary>
-        /// <summary>
+    }        /// <summary>
     /// 赤铜矿石 — 赤铜色的矿石，古月宗常用材料
     /// </summary>
         public class RedCopperOre : ModTile
@@ -289,12 +255,7 @@ namespace VerminLordMod.Content.Tiles.Environment
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16,
                 ModContent.ItemType<Items.Placeable.Environment.RedCopperOre>());
         }
-    }
-
-    /// <summary>
-    /// 古碑文 — 刻有古代文字的石碑
-    /// </summary>
-        /// <summary>
+    }        /// <summary>
     /// 古碑文 — 刻有古代文字的石碑
     /// </summary>
         public class AncientInscription : ModTile

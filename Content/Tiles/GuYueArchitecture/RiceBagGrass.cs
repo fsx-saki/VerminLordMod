@@ -9,14 +9,6 @@ using Terraria.ObjectData;
 namespace VerminLordMod.Content.Tiles.GuYueArchitecture
 {
     /// <summary>
-    /// 饭袋草蛊 - 一转草蛊，结出香喷喷的米饭
-    /// 原文: "蛊的形态，有很多种...还有花草形态，就是方源眼前的...饭袋草蛊" (gzr_part001.txt:1148-1150)
-    /// 原文: "草袋中会生长出香喷喷的米饭" (gzr_part001.txt:1150)
-    /// </summary>
-    /// <summary>
-    /// 饭袋草 — 形似饭袋的草蛊
-    /// </summary>
-        /// <summary>
     /// 饭袋草 — 形似饭袋的草蛊
     /// </summary>
         public class RiceBagGrass : ModTile

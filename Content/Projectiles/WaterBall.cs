@@ -1,4 +1,4 @@
-﻿using VerminLordMod.Content.DamageClasses;
+using VerminLordMod.Content.DamageClasses;
 using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
@@ -14,11 +14,8 @@ using Terraria.ModLoader;
 namespace VerminLordMod.Content.Projectiles
 {
 	/// <summary>
-
 	/// WaterBall弹幕 — 道道
-
 	/// </summary>
-
 	class WaterBall:ModProjectile
 	{
 		public override void SetDefaults() {

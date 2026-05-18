@@ -10,14 +10,6 @@ using Terraria.ObjectData;
 namespace VerminLordMod.Content.Tiles.GuYueArchitecture
 {
     /// <summary>
-    /// 灵泉 - 产出元石的灵泉，古月一族的修行资源
-    /// 原文: "我族有灵泉产出元石" (gzr_part001.txt:1189)
-    /// 功能: 装饰性水源物块，发出微光
-    /// </summary>
-    /// <summary>
-    /// 灵泉 — 蕴含灵气的泉水
-    /// </summary>
-        /// <summary>
     /// 灵泉 — 蕴含灵气的泉水
     /// </summary>
         public class SpiritSpring : ModTile

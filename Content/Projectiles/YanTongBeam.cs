@@ -1,4 +1,4 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.IO;
@@ -12,25 +12,10 @@ using Terraria.ModLoader;
 using VerminLordMod.Common.Players;
 
 namespace VerminLordMod.Content.Projectiles
-{    /// <summary>
-    /// YanTongBeam弹幕 — 道道
-    /// </summary>    /// <summary>
-    /// YanTongBeam弹幕 — 道道
-    /// </summary>
-
-
-	/// <summary>
-
-
-
+{
+    /// <summary>
 	/// YanTongBeam弹幕 — 道道
-
-
-
 	/// </summary>
-
-
-
 	public class YanTongBeam : ModProjectile
 	{
 		// A helpful math constant for performing beam angling calculations.

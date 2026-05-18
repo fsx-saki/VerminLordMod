@@ -87,7 +87,6 @@ public class DialogueTreeUI
     private bool _escapeWasDown;
 
     // ===== 键盘导航 =====
-    private int _keyboardSelectedIndex = -1;
     private Keys[] _lastKeys = Array.Empty<Keys>();
 
     // ===== 动画 =====
@@ -116,7 +115,6 @@ public class DialogueTreeUI
         _scrollOffset = 0;
         _lastScrollValue = Mouse.GetState().ScrollWheelValue;
         _escapeWasDown = false;
-        _keyboardSelectedIndex = -1;
         _openProgress = 0f;
         _openVelocity = 0f;
         _isOpen = true;

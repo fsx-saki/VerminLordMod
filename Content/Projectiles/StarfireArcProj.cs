@@ -10,11 +10,8 @@ using VerminLordMod.Content.DamageClasses;
 namespace VerminLordMod.Content.Projectiles
 {
 	/// <summary>
-
 	/// StarfireArcProj弹幕 — 道道
-
 	/// </summary>
-
 	class StarfireArcProj : ModProjectile
 	{
 		public override void SetDefaults() {

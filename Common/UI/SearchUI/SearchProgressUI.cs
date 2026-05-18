@@ -3,6 +3,7 @@
 // 搜索过程中显示进度条/动画
 // 基于 SimplePanel + SimpleAnimSlotRow 实现
 // ============================================================
+#nullable enable
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;

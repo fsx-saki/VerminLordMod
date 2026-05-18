@@ -11,7 +11,6 @@ namespace VerminLordMod.Content.Items.Weapons.Three
     /// 三转火道蛊虫 — 丹火蛊
     /// 三转火道蛊虫，能发射火球。
     /// </summary>
-
     public class DanHuoGu : FireWeapon, IOnHitEffectProvider
     {
         protected override int qiCost => 25;

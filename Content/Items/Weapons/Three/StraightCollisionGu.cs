@@ -1,4 +1,4 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using System;
 using Terraria;
 using Terraria.DataStructures;
@@ -11,13 +11,10 @@ using VerminLordMod.Content.Projectiles;
 namespace VerminLordMod.Content.Items.Weapons.Three
 {
 	/// <summary>
-
 	/// 三转道蛊虫 — StraightCollisionGu
-
 	/// 蛊虫
 
 	/// </summary>
-
 	class StraightCollisionGu : FlyingWeapon
 	{
 		protected override int _guLevel => 3;

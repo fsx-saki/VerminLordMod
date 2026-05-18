@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using VerminLordMod.Common.UI;
@@ -12,13 +12,10 @@ using VerminLordMod.Content.Projectiles;
 namespace VerminLordMod.Content.Items.Weapons.Two
 {
 	/// <summary>
-
 	/// 二转月蛊虫 — MoonTrace
-
 	/// 蛊虫
 
 	/// </summary>
-
 	class MoonTrace : MoonWeapon//必要继承moditem
 	{
 		protected override int controlQiCost => 20;

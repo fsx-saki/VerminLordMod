@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using VerminLordMod.Content.DamageClasses;
@@ -8,13 +8,10 @@ using VerminLordMod.Content.Projectiles;
 namespace VerminLordMod.Content.Items.Weapons.Three
 {
 	/// <summary>
-
 	/// 三转道蛊虫 — SoundbyteGu
-
 	/// 蛊虫
 
 	/// </summary>
-
 	class SoundbyteGu : VoiceWeapon
 	{
 		protected override int _guLevel => 3;

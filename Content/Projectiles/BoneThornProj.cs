@@ -7,31 +7,10 @@ using VerminLordMod.Common.BulletBehaviors;
 using VerminLordMod.Content.DamageClasses;
 
 namespace VerminLordMod.Content.Projectiles
-{    /// <summary>
-    /// BoneThornGu弹幕 — 道道
-    /// </summary>    /// <summary>
-    /// BoneThornGu弹幕 — 道道
-    /// </summary>    /// <summary>
-    /// BoneThornGu弹幕 — 道道
-    /// </summary>
-
-
-
+{
     /// <summary>
-
-
-
-
     /// BoneThornGu弹幕 — 骨道
-
-
-
-
     /// </summary>
-
-
-
-
     public class BoneThornProj : BaseBullet
     {
         private const int SpikeCount = 16;

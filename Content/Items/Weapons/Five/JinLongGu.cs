@@ -11,7 +11,6 @@ namespace VerminLordMod.Content.Items.Weapons.Five
     /// 五转金道蛊虫 — 金龙蛊
     /// 五转攻伐蛊虫，化为金龙攻击。
     /// </summary>
-
     public class JinLongGu : GoldWeapon, IOnHitEffectProvider
     {
         protected override int qiCost => 55;

@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using VerminLordMod.Common.Players;
@@ -7,13 +7,10 @@ using VerminLordMod.Content.Items.Weapons.Daos;
 namespace VerminLordMod.Content.Items.Weapons.One
 {
 	/// <summary>
-
 	/// 一转道蛊虫 — WineBug
-
 	/// 蛊虫
 
 	/// </summary>
-
 	class WineBugWeapon : PractiseWeapon
 	{
 		protected override int qiCost => 10;

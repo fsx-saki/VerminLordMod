@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -8,13 +8,10 @@ using VerminLordMod.Content.Items.Weapons.Daos;
 namespace VerminLordMod.Content.Items.Weapons.One
 {
 	/// <summary>
-
 	/// 一转木蛊虫 — GrassPuppet
-
 	/// 蛊虫
 
 	/// </summary>
-
 	class GrassPuppet : WoodWeapon
 	{
 		protected override int qiCost => 2;

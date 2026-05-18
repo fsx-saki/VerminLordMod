@@ -149,7 +149,14 @@ namespace VerminLordMod.Common.BulletBehaviors
             Texture2D tex = TrailTexture;
             if (tex == null)
             {
-                tex = Terraria.GameContent.TextureAssets.Projectile[projectile.type].Value;
+                if (projectile.ModProjectile != null)
+                {
+                    tex = ModContent.Request<Texture2D>(projectile.ModProjectile.Texture).Value;
+                }
+                else
+                {
+                    tex = Terraria.GameContent.TextureAssets.Projectile[projectile.type].Value;
+                }
             }
 
             // 创建并配置 LiquidTrail

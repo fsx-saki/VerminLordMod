@@ -11,7 +11,6 @@ namespace VerminLordMod.Content.Items.Weapons.Four
     /// 四转力道蛊虫 — 霸力蛊
     /// 四转力道蛊虫，增强力量。
     /// </summary>
-
     public class BaLiGu : PowerWeapon, IOnHitEffectProvider
     {
         protected override int qiCost => 36;

@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using VerminLordMod.Content.DamageClasses;
@@ -12,7 +12,6 @@ namespace VerminLordMod.Content.Items.Weapons.One
     /// 一转道蛊虫 — RiverStream
     /// 蛊虫
     /// </summary>
-
 		public class Bais : ModPlayer
 		{
 			public bool WaterCircle;

@@ -10,13 +10,6 @@ using Terraria.ObjectData;
 namespace VerminLordMod.Content.Tiles.GuYueArchitecture
 {
     /// <summary>
-    /// 黑漆台案 - 三层供案，用于摆放先祖牌位和香炉
-    /// 原文: "高高的黑漆台案，在台案有三层，供奉着先祖的牌位。牌位两侧摆着赤铜香炉" (gzr_part001.txt:116)
-    /// </summary>
-    /// <summary>
-    /// 黑漆祭坛 — 黑漆涂装的祭坛
-    /// </summary>
-        /// <summary>
     /// 黑漆祭坛 — 黑漆涂装的祭坛
     /// </summary>
         public class BlackLacquerAltar : ModTile
