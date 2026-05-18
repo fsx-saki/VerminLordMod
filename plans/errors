@@ -1,9 +1,59 @@
+ReLogic.Content.AssetLoadException: Asset could not be found: "Content/Projectiles/BoneSpikeProj"
+   at ReLogic.Content.AssetRepository.LoadAssetWithPotentialAsync[T](Asset`1 asset, AssetRequestMode mode) in D:\a\tModLoader\tModLoader\src\tModLoader\ReLogic\Content\AssetRepository.cs:line 276
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at ReLogic.Content.AssetRepository.LoadAssetWithPotentialAsync[T](Asset`1 asset, AssetRequestMode mode)
+   at ReLogic.Content.AssetRepository.LoadAsset[T](Asset`1 asset, AssetRequestMode mode) in D:\a\tModLoader\tModLoader\src\tModLoader\ReLogic\Content\AssetRepository.cs:line 214
+   at ReLogic.Content.AssetRepository.Request[T](String assetName, AssetRequestMode mode) in D:\a\tModLoader\tModLoader\src\tModLoader\ReLogic\Content\AssetRepository.cs:line 143
+   at Terraria.ModLoader.ModContent.Request[T](String name, AssetRequestMode mode) in tModLoader\Terraria\ModLoader\ModContent.cs:line 116
+   at Terraria.ModLoader.ModProjectile.AutoStaticDefaults() in tModLoader\Terraria\ModLoader\ModProjectile.cs:line 96
+   at Terraria.ModLoader.ModProjectile.SetupContent() in tModLoader\Terraria\ModLoader\ModProjectile.cs:line 71
+   at Terraria.ModLoader.Core.LoaderUtils.ForEachAndAggregateExceptions[T](IEnumerable`1 enumerable, Action`1 action) in tModLoader\Terraria\ModLoader\Core\LoaderUtils.cs:line 129
+   at Terraria.ModLoader.Mod.SetupContent() in tModLoader\Terraria\ModLoader\Mod.Internals.cs:line 25
+   at Terraria.ModLoader.ModContent.<>c.<Load>b__45_1(Mod mod) in tModLoader\Terraria\ModLoader\ModContent.cs:line 332
+   at Terraria.ModLoader.ModContent.LoadModContent(CancellationToken token, Action`1 loadAction) in tModLoader\Terraria\ModLoader\ModContent.cs:line 447
+   at Terraria.ModLoader.ModContent.Load(CancellationToken token) in tModLoader\Terraria\ModLoader\ModContent.cs:line 331
+   at Terraria.ModLoader.ModLoader.Load(CancellationToken token) in tModLoader\Terraria\ModLoader\ModLoader.cs:line 138
+   at Terraria.ModLoader.ModLoader.<>c__DisplayClass51_0.<BeginLoad>b__0() in tModLoader\Terraria\ModLoader\ModLoader.cs:line 116
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading.PortableThreadPool.WorkerThread.WorkerThreadStart()
+
+[20:28:22.485] [.NET TP Worker/INFO] [tML]: 完成最后步骤：ModLoader (tModLoader) v2026.3.3.0
+[20:28:22.486] [.NET TP Worker/INFO] [tML]: 完成最后步骤：HEROsMod (HERO's Mod) v0.4.18
+[20:28:23.085] [.NET TP Worker/WARN] [tML]: HEROsMod spent 540ms blocking on asset loading. Avoid using AssetRequestMode.ImmediateLoad during mod loading where possible
+[20:28:23.086] [.NET TP Worker/INFO] [tML]: 完成最后步骤：SubworldLibrary (Subworld Library) v2.2.3.3
+[20:28:23.102] [.NET TP Worker/INFO] [tML]: 完成最后步骤：VerminLordMod (VerminLordMod) v1.1.0.4
+[20:28:23.119] [.NET TP Worker/WARN] [tML]: 静默捕获异常: 
 Terraria.ModLoader.Exceptions.MissingResourceException: 未找到预期的资源:
-    Content/Items/Breeding/AncestralAltar
+    Content/Projectiles/BoneSpikeProj
 很可能：（是否拼写或文件夹放置错误？）
-    Content/Items/Breeding/GuBox
-Content/Items/Breeding/[c/ff0000:Ancestral][c/ffff00:Altar]
-Content/Items/Breeding/         [c/ffff00:GuBox]
+    Content/Projectiles/JieProj
+Content/Projectiles/[c/ff0000:BoneS][c/ffff00:p]i[c/ff0000:k]eProj
+Content/Projectiles/     [c/ffff00:J]i eProj
+
+   at Terraria.ModLoader.Core.LoaderUtils.RethrowAggregatedExceptions(IReadOnlyCollection`1 exceptions) in tModLoader\Terraria\ModLoader\Core\LoaderUtils.cs:line 143
+   at Terraria.ModLoader.Mod.TransferAllAssets() in tModLoader\Terraria\ModLoader\Mod.Internals.cs:line 103
+   at Terraria.ModLoader.ModContent.<>c.<Load>b__45_2(Mod mod) in tModLoader\Terraria\ModLoader\ModContent.cs:line 344
+   at Terraria.ModLoader.ModContent.LoadModContent(CancellationToken token, Action`1 loadAction) in tModLoader\Terraria\ModLoader\ModContent.cs:line 447
+   at Terraria.ModLoader.ModContent.Load(CancellationToken token) in tModLoader\Terraria\ModLoader\ModContent.cs:line 341
+   at Terraria.ModLoader.ModLoader.Load(CancellationToken token) in tModLoader\Terraria\ModLoader\ModLoader.cs:line 138
+   at Terraria.ModLoader.ModLoader.<>c__DisplayClass51_0.<BeginLoad>b__0() in tModLoader\Terraria\ModLoader\ModLoader.cs:line 116
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading.PortableThreadPool.WorkerThread.WorkerThreadStart()
+
+[20:28:23.120] [.NET TP Worker/INFO] [tML]: Marked tModLoader installation files as corrupt in Steam. On Next Launch, User will have 'Verify Local Files' ran
+[20:28:23.120] [.NET TP Worker/INFO] [tML]: Disabling Mod: VerminLordMod
+[20:28:23.121] [.NET TP Worker/ERROR] [tML]: 该模组加载时发生错误 VerminLordMod v1.1.0.4
+该模组已被禁用。
+Terraria.ModLoader.Exceptions.MissingResourceException: 未找到预期的资源:
+    Content/Projectiles/BoneSpikeProj
+很可能：（是否拼写或文件夹放置错误？）
+    Content/Projectiles/JieProj
+Content/Projectiles/[c/ff0000:BoneS][c/ffff00:p]i[c/ff0000:k]eProj
+Content/Projectiles/     [c/ffff00:J]i eProj
 
    at Terraria.ModLoader.Core.LoaderUtils.RethrowAggregatedExceptions(IReadOnlyCollection`1 exceptions) in tModLoader\Terraria\ModLoader\Core\LoaderUtils.cs:line 143
    at Terraria.ModLoader.Mod.TransferAllAssets() in tModLoader\Terraria\ModLoader\Mod.Internals.cs:line 103

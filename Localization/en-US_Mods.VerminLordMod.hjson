@@ -196,6 +196,327 @@ Projectiles: {
 	TunJiangChanProj.DisplayName: Tun Jiang Chan Proj
 	XueHeMangProj.DisplayName: Xue He Mang Proj
 	HuoGuangZhuTianProj.DisplayName: Huo Guang Zhu Tian Proj
+	AnDuProj.DisplayName: An Du Proj
+	AnJianXianProj.DisplayName: An Jian Xian Proj
+	BaiChongJianProj.DisplayName: Bai Chong Jian Proj
+	BaiProjCheLunGu.DisplayName: Bai Proj Che Lun Gu
+	BaiWuYiShiProj.DisplayName: Bai Wu Yi Shi Proj
+	BaiXiangXianSheProj.DisplayName: Bai Xiang Xian She Proj
+	BaiXSheXProj.DisplayName: Bai X She X Proj
+	BaiYuProj.DisplayName: Bai Yu Proj
+	BaiZhanXXProj.DisplayName: Bai Zhan X X Proj
+	BaoDanProjGu.DisplayName: Bao Dan Proj Gu
+	BaoXProj.DisplayName: Bao X Proj
+	BaoYueProjangWangGu.DisplayName: Bao Yue Projang Wang Gu
+	BaShanProj.DisplayName: Ba Shan Proj
+	BaShanXianProj.DisplayName: Ba Shan Xian Proj
+	BattlePlanProj.DisplayName: Battle Plan Proj
+	BeiShanHaMaProj.DisplayName: Bei Shan Ha Ma Proj
+	BianXingProj.DisplayName: Bian Xing Proj
+	BianXingXianProj.DisplayName: Bian Xing Xian Proj
+	BiKongProj.DisplayName: Bi Kong Proj
+	BingPoXianProj.DisplayName: Bing Po Xian Proj
+	BingXinXianProj.DisplayName: Bing Xin Xian Proj
+	BingXProj.DisplayName: Bing X Proj
+	BingZhuiProj.DisplayName: Bing Zhui Proj
+	BiProjYiGu.DisplayName: Bi Proj Yi Gu
+	BloodDropperProj.DisplayName: Blood Dropper Proj
+	BloodFrenzyProj.DisplayName: Blood Frenzy Proj
+	BoneSpikeProj.DisplayName: Bone Spike Proj
+	BoneThornProj.DisplayName: Bone Thorn Proj
+	BoXXXProj.DisplayName: Bo X X X Proj
+	CaiFuXProj.DisplayName: Cai Fu X Proj
+	CaiYouProj.DisplayName: Cai You Proj
+	ChaYunProj.DisplayName: Cha Yun Proj
+	ChaYunXianProj.DisplayName: Cha Yun Xian Proj
+	ChengZhuXianProj.DisplayName: Cheng Zhu Xian Proj
+	ChiLiXianProj.DisplayName: Chi Li Xian Proj
+	ChiTieSheXProj.DisplayName: Chi Tie She X Proj
+	ChiXiangXianProj.DisplayName: Chi Xiang Xian Proj
+	ChouPiFeiChongProj.DisplayName: Chou Pi Fei Chong Proj
+	ChouPiProj.DisplayName: Chou Pi Proj
+	ChouPiProjGu.DisplayName: Chou Pi Proj Gu
+	ChuiYanProj.DisplayName: Chui Yan Proj
+	ChuiYanProjGu.DisplayName: Chui Yan Proj Gu
+	ChunProjangWuXianGu.DisplayName: Chun Projang Wu Xian Gu
+	ChunYuProj.DisplayName: Chun Yu Proj
+	CunXiYuXProj.DisplayName: Cun Xi Yu X Proj
+	DaDuWaProj.DisplayName: Da Du Wa Proj
+	DaHunChongProj.DisplayName: Da Hun Chong Proj
+	DaLiEShiProj.DisplayName: Da Li E Shi Proj
+	DaLiProj.DisplayName: Da Li Proj
+	DaLiProjGu.DisplayName: Da Li Proj Gu
+	DaoLinWangProj.DisplayName: Dao Lin Wang Proj
+	DaoProjangGu.DisplayName: Dao Projang Gu
+	DaoXXueFuProj.DisplayName: Dao X Xue Fu Proj
+	DaXiaProj.DisplayName: Da Xia Proj
+	DianJiangProj.DisplayName: Dian Jiang Proj
+	DianJinProj.DisplayName: Dian Jin Proj
+	DingLiXianProj.DisplayName: Ding Li Xian Proj
+	DingXianXXianProj.DisplayName: Ding Xian X Xian Proj
+	DiXXXCaoProj.DisplayName: Di X X X Cao Proj
+	DongChuangProj.DisplayName: Dong Chuang Proj
+	DouShuaiHuaProj.DisplayName: Dou Shuai Hua Proj
+	DreamBiteProj.DisplayName: Dream Bite Proj
+	DuanYunXianProj.DisplayName: Duan Yun Xian Proj
+	DuoSheXianProj.DisplayName: Duo She Xian Proj
+	DuShiProj.DisplayName: Du Shi Proj
+	ENianProj.DisplayName: E Nian Proj
+	ErZhuanYuLangProj.DisplayName: Er Zhuan Yu Lang Proj
+	FanDaiCaoProj.DisplayName: Fan Dai Cao Proj
+	FanDaiCaoProjGu.DisplayName: Fan Dai Cao Proj Gu
+	FeiGeChuanXProj.DisplayName: Fei Ge Chuan X Proj
+	FeiHunProj.DisplayName: Fei Hun Proj
+	FeiProjDunGu.DisplayName: Fei Proj Dun Gu
+	FeiXiongXuXiangProj.DisplayName: Fei Xiong Xu Xiang Proj
+	FeiXiongZhiLiProj.DisplayName: Fei Xiong Zhi Li Proj
+	FeiXiongZhiLiXianProj.DisplayName: Fei Xiong Zhi Li Xian Proj
+	FeiYanProj.DisplayName: Fei Yan Proj
+	FengYunProj.DisplayName: Feng Yun Proj
+	FenShenProj.DisplayName: Fen Shen Proj
+	FlyingBoneShieldProj.DisplayName: Flying Bone Shield Proj
+	FlyingSoulProj.DisplayName: Flying Soul Proj
+	FrostDemonProj.DisplayName: Frost Demon Proj
+	FuDiChouXinProj.DisplayName: Fu Di Chou Xin Proj
+	FuRenXinXianProj.DisplayName: Fu Ren Xin Xian Proj
+	FuXueCaoProj.DisplayName: Fu Xue Cao Proj
+	GangYiProj.DisplayName: Gang Yi Proj
+	GhostFaceProj.DisplayName: Ghost Face Proj
+	GouShiYunProj.DisplayName: Gou Shi Yun Proj
+	GouXProj.DisplayName: Gou X Proj
+	HaoYunXianProj.DisplayName: Hao Yun Xian Proj
+	HeartSeekerProj.DisplayName: Heart Seeker Proj
+	HeavenGazeProj.DisplayName: Heaven Gaze Proj
+	HeHunProj.DisplayName: He Hun Proj
+	HengChongProj.DisplayName: Heng Chong Proj
+	HengChongZhiZhuangProj.DisplayName: Heng Chong Zhi Zhuang Proj
+	HenShiProj.DisplayName: Hen Shi Proj
+	HenShiProjGu.DisplayName: Hen Shi Proj Gu
+	HongYanMangProj.DisplayName: Hong Yan Mang Proj
+	HuangJinJiaProj.DisplayName: Huang Jin Jia Proj
+	HunLianProj.DisplayName: Hun Lian Proj
+	HuoProjangXTianGu.DisplayName: Huo Projang X Tian Gu
+	HuoSheProj.DisplayName: Huo She Proj
+	HuoYanPiFengProj.DisplayName: Huo Yan Pi Feng Proj
+	HuoZhuaProj.DisplayName: Huo Zhua Proj
+	IceBombProj.DisplayName: Ice Bomb Proj
+	JianMoProj.DisplayName: Jian Mo Proj
+	JianQiaoProj.DisplayName: Jian Qiao Proj
+	JianYingProj.DisplayName: Jian Ying Proj
+	JieMiProj.DisplayName: Jie Mi Proj
+	JieProj.DisplayName: Jie Proj
+	JinCanProj.DisplayName: Jin Can Proj
+	JinFengSongShuangProj.DisplayName: Jin Feng Song Shuang Proj
+	JinGangNianXianProj.DisplayName: Jin Gang Nian Xian Proj
+	JinGangProj.DisplayName: Jin Gang Proj
+	JingHunXianProj.DisplayName: Jing Hun Xian Proj
+	JinJiaoWuGongProj.DisplayName: Jin Jiao Wu Gong Proj
+	JinXiuShiHeProj.DisplayName: Jin Xiu Shi He Proj
+	JinXProj.DisplayName: Jin X Proj
+	JinZhenProj.DisplayName: Jin Zhen Proj
+	JiTuProj.DisplayName: Ji Tu Proj
+	JiuNangHuaProj.DisplayName: Jiu Nang Hua Proj
+	JiuNangHuaProjGu.DisplayName: Jiu Nang Hua Proj Gu
+	JiuXJiuChongProj.DisplayName: Jiu X Jiu Chong Proj
+	JiuYeShengXCaoProj.DisplayName: Jiu Ye Sheng X Cao Proj
+	JuChiJinWuProj.DisplayName: Ju Chi Jin Wu Proj
+	KaiMenProj.DisplayName: Kai Men Proj
+	LaiTuHaMaProj.DisplayName: Lai Tu Ha Ma Proj
+	LangHaoProj.DisplayName: Lang Hao Proj
+	LangHunProj.DisplayName: Lang Hun Proj
+	LangTuProj.DisplayName: Lang Tu Proj
+	LangYanProj.DisplayName: Lang Yan Proj
+	LanNiaoBingProjanGu.DisplayName: Lan Niao Bing Projan Gu
+	LeiProjDunGu.DisplayName: Lei Proj Dun Gu
+	LeiYiProj.DisplayName: Lei Yi Proj
+	LeShanLeShuiProj.DisplayName: Le Shan Le Shui Proj
+	LeShanLeShuiXianProj.DisplayName: Le Shan Le Shui Xian Proj
+	LianYunXianProj.DisplayName: Lian Yun Xian Proj
+	LiuYingCunShengProj.DisplayName: Liu Ying Cun Sheng Proj
+	LiuYingCunShengProjGu.DisplayName: Liu Ying Cun Sheng Proj Gu
+	LongWanQuQuProj.DisplayName: Long Wan Qu Qu Proj
+	LongWanQuQuProjGu.DisplayName: Long Wan Qu Qu Proj Gu
+	LuoXuanProjQiangGu.DisplayName: Luo Xuan Proj Qiang Gu
+	LuoXuanShuiJianProj.DisplayName: Luo Xuan Shui Jian Proj
+	MengHanDieProj.DisplayName: Meng Han Die Proj
+	MuXProj.DisplayName: Mu X Proj
+	NiXiProjGu.DisplayName: Ni Xi Proj Gu
+	NuoYiProj.DisplayName: Nuo Yi Proj
+	NuShouXianProj.DisplayName: Nu Shou Xian Proj
+	NuXXianProj.DisplayName: Nu X Xian Proj
+	PingBuQingXXianProj.DisplayName: Ping Bu Qing X Xian Proj
+	ProjangQiuGu.DisplayName: Projang Qiu Gu
+	ProjangZhaGu.DisplayName: Projang Zha Gu
+	ProjanMenGu.DisplayName: Projan Men Gu
+	ProjaShuaiGu.DisplayName: Proja Shuai Gu
+	ProjCiGu.DisplayName: Proj Ci Gu
+	ProjCiXianGu.DisplayName: Proj Ci Xian Gu
+	ProjiJiaoGu.DisplayName: Proji Jiao Gu
+	ProjiXGu.DisplayName: Proji X Gu
+	ProjiXiGu.DisplayName: Proji Xi Gu
+	ProjiXinGu.DisplayName: Proji Xin Gu
+	ProjiYuLangPiGu.DisplayName: Proji Yu Lang Pi Gu
+	QianLiDiLangZhuProj.DisplayName: Qian Li Di Lang Zhu Proj
+	QiNangProj.DisplayName: Qi Nang Proj
+	QingShuiProj.DisplayName: Qing Shui Proj
+	QingShuiProjGu.DisplayName: Qing Shui Proj Gu
+	QingSiProj.DisplayName: Qing Si Proj
+	QingSiProjGu.DisplayName: Qing Si Proj Gu
+	QinProj.DisplayName: Qin Proj
+	QiXiangJiuChongProj.DisplayName: Qi Xiang Jiu Chong Proj
+	QiYunProj.DisplayName: Qi Yun Proj
+	QiYunXianProj.DisplayName: Qi Yun Xian Proj
+	QuanLiXFuProj.DisplayName: Quan Li X Fu Proj
+	QuanXProj.DisplayName: Quan X Proj
+	QunLiProj.DisplayName: Qun Li Proj
+	RenShouXShengProj.DisplayName: Ren Shou X Sheng Proj
+	RenXProjGu.DisplayName: Ren X Proj Gu
+	RenXProjXianGu.DisplayName: Ren X Proj Xian Gu
+	RenYaoProj.DisplayName: Ren Yao Proj
+	RiProj.DisplayName: Ri Proj
+	SanGengProj.DisplayName: San Geng Proj
+	SanZhuanYuLangProj.DisplayName: San Zhuan Yu Lang Proj
+	ShadowStingProj.DisplayName: Shadow Sting Proj
+	ShaKengProj.DisplayName: Sha Keng Proj
+	ShaKengProjGu.DisplayName: Sha Keng Proj Gu
+	ShanMengProj.DisplayName: Shan Meng Proj
+	ShanNianProj.DisplayName: Shan Nian Proj
+	ShanQiuXKuiProj.DisplayName: Shan Qiu X Kui Proj
+	ShengShengXXiProj.DisplayName: Sheng Sheng X Xi Proj
+	ShengTieProj.DisplayName: Sheng Tie Proj
+	SheXinProj.DisplayName: She Xin Proj
+	ShiXProj.DisplayName: Shi X Proj
+	ShiXZhiLiProj.DisplayName: Shi X Zhi Li Proj
+	ShiYunProj.DisplayName: Shi Yun Proj
+	ShouXProj.DisplayName: Shou X Proj
+	ShuangTuProj.DisplayName: Shuang Tu Proj
+	ShuangYaoProj.DisplayName: Shuang Yao Proj
+	ShuiBiProj.DisplayName: Shui Bi Proj
+	ShuiJiaProj.DisplayName: Shui Jia Proj
+	ShuiJiProj.DisplayName: Shui Ji Proj
+	ShuiKeProj.DisplayName: Shui Ke Proj
+	ShuiLaoProj.DisplayName: Shui Lao Proj
+	ShuiPuProj.DisplayName: Shui Pu Proj
+	ShuiXiangProj.DisplayName: Shui Xiang Proj
+	ShuiXProj.DisplayName: Shui X Proj
+	ShunXZhuanProj.DisplayName: Shun X Zhuan Proj
+	ShuoXProj.DisplayName: Shuo X Proj
+	SiWeiJiuChongProj.DisplayName: Si Wei Jiu Chong Proj
+	SiZhuanYuLangProj.DisplayName: Si Zhuan Yu Lang Proj
+	SongProjGu.DisplayName: Song Proj Gu
+	SongZhenProj.DisplayName: Song Zhen Proj
+	SouHunProj.DisplayName: Sou Hun Proj
+	SoulReapProj.DisplayName: Soul Reap Proj
+	SpiritGuardProj.DisplayName: Spirit Guard Proj
+	SwiftWindProj.DisplayName: Swift Wind Proj
+	TaoHuaYunXianProj.DisplayName: Tao Hua Yun Xian Proj
+	TengXProj.DisplayName: Teng X Proj
+	TengXunProjGu.DisplayName: Teng Xun Proj Gu
+	ThunderWingProj.DisplayName: Thunder Wing Proj
+	TianQingLangPiProj.DisplayName: Tian Qing Lang Pi Proj
+	TieProjanYingLiGu.DisplayName: Tie Projan Ying Li Gu
+	TieProjGu.DisplayName: Tie Proj Gu
+	TieShouProj.DisplayName: Tie Shou Proj
+	TieShouXXProj.DisplayName: Tie Shou X X Proj
+	TongGanXianProj.DisplayName: Tong Gan Xian Proj
+	TongPiProj.DisplayName: Tong Pi Proj
+	TongTianProj.DisplayName: Tong Tian Proj
+	TouShengXianProj.DisplayName: Tou Sheng Xian Proj
+	TouXiProj.DisplayName: Tou Xi Proj
+	TuBaWangProj.DisplayName: Tu Ba Wang Proj
+	TunHuoProj.DisplayName: Tun Huo Proj
+	TunXXProj.DisplayName: Tun X X Proj
+	VoidRipProj.DisplayName: Void Rip Proj
+	WanLanProj.DisplayName: Wan Lan Proj
+	WanLanXianProj.DisplayName: Wan Lan Xian Proj
+	WarHornProj.DisplayName: War Horn Proj
+	WindFlowerProj.DisplayName: Wind Flower Proj
+	WuChangProjGu.DisplayName: Wu Chang Proj Gu
+	WuKongYuXiaoProj.DisplayName: Wu Kong Yu Xiao Proj
+	WuQiProj.DisplayName: Wu Qi Proj
+	WuQueProj.DisplayName: Wu Que Proj
+	WuXHuoTaProj.DisplayName: Wu X Huo Ta Proj
+	XBaiProjGu.DisplayName: X Bai Proj Gu
+	XChongProj.DisplayName: X Chong Proj
+	XHuaiGangZongProj.DisplayName: X Huai Gang Zong Proj
+	XHunShouYiProj.DisplayName: X Hun Shou Yi Proj
+	XiaoProjangGu.DisplayName: Xiao Projang Gu
+	XiaoProjangGuGu.DisplayName: Xiao Projang Gu Gu
+	XingHenXianProj.DisplayName: Xing Hen Xian Proj
+	XingMenProj.DisplayName: Xing Men Proj
+	XingProjangXianGu.DisplayName: Xing Projang Xian Gu
+	XingShanProj.DisplayName: Xing Shan Proj
+	XingXinProj.DisplayName: Xing Xin Proj
+	XingXProj.DisplayName: Xing X Proj
+	XingXXianProj.DisplayName: Xing X Xian Proj
+	XingYingProj.DisplayName: Xing Ying Proj
+	XinYinProj.DisplayName: Xin Yin Proj
+	XJiTianXXianProj.DisplayName: X Ji Tian X Xian Proj
+	XLeiTuDouProj.DisplayName: X Lei Tu Dou Proj
+	XLiGengShengProj.DisplayName: X Li Geng Sheng Proj
+	XLingXinProj.DisplayName: X Ling Xin Proj
+	XLiProj.DisplayName: X Li Proj
+	XNianProj.DisplayName: X Nian Proj
+	XQingProj.DisplayName: X Qing Proj
+	XShengProj.DisplayName: X Sheng Proj
+	XShiProj.DisplayName: X Shi Proj
+	XShiProjGu.DisplayName: X Shi Proj Gu
+	XSiCaoProj.DisplayName: X Si Cao Proj
+	XuanFengProj.DisplayName: Xuan Feng Proj
+	XuanFengProjGu.DisplayName: Xuan Feng Proj Gu
+	XueDiZiProj.DisplayName: Xue Di Zi Proj
+	XueGanYingProj.DisplayName: Xue Gan Ying Proj
+	XueLuProj.DisplayName: Xue Lu Proj
+	XueProjiShiGu.DisplayName: Xue Proji Shi Gu
+	XueQiuProj.DisplayName: Xue Qiu Proj
+	XueXProj.DisplayName: Xue X Proj
+	XueXTianHuaProj.DisplayName: Xue X Tian Hua Proj
+	XueXXianProj.DisplayName: Xue X Xian Proj
+	XueYueProj.DisplayName: Xue Yue Proj
+	XunDianLiuProjangGu.DisplayName: Xun Dian Liu Projang Gu
+	XunYingProj.DisplayName: Xun Ying Proj
+	XXiaProj.DisplayName: X Xia Proj
+	XXinProj.DisplayName: X Xin Proj
+	XXiProj.DisplayName: X Xi Proj
+	XXProj.DisplayName: X X Proj
+	XXShiProj.DisplayName: X X Shi Proj
+	XYiProj.DisplayName: X Yi Proj
+	XZhenProj.DisplayName: X Zhen Proj
+	YanXWuXinProj.DisplayName: Yan X Wu Xin Proj
+	YaoYueProj.DisplayName: Yao Yue Proj
+	YingYangProj.DisplayName: Ying Yang Proj
+	YinLinProj.DisplayName: Yin Lin Proj
+	YinShiProj.DisplayName: Yin Shi Proj
+	YinShiProjGu.DisplayName: Yin Shi Proj Gu
+	YinYangZhuanShenProj.DisplayName: Yin Yang Zhuan Shen Proj
+	YinYunXianProj.DisplayName: Yin Yun Xian Proj
+	YuanLaoProj.DisplayName: Yuan Lao Proj
+	YueHenProj.DisplayName: Yue Hen Proj
+	YueProjangGu.DisplayName: Yue Projang Gu
+	YueProjangGuGu.DisplayName: Yue Projang Gu Gu
+	YueRenProjGu.DisplayName: Yue Ren Proj Gu
+	YueXProj.DisplayName: Yue X Proj
+	YueXuanProj.DisplayName: Yue Xuan Proj
+	YueXXProj.DisplayName: Yue X X Proj
+	YueYingProj.DisplayName: Yue Ying Proj
+	YunChouXianProj.DisplayName: Yun Chou Xian Proj
+	YuPiProj.DisplayName: Yu Pi Proj
+	YuPiProjGu.DisplayName: Yu Pi Proj Gu
+	YuQuanProj.DisplayName: Yu Quan Proj
+	YuQuanProjGu.DisplayName: Yu Quan Proj Gu
+	ZhaLeiProj.DisplayName: Zha Lei Proj
+	ZhanLiZhuWangProj.DisplayName: Zhan Li Zhu Wang Proj
+	ZhanProjCheLunGu.DisplayName: Zhan Proj Che Lun Gu
+	ZhenChaXChongProj.DisplayName: Zhen Cha X Chong Proj
+	ZhenXinProjGu.DisplayName: Zhen Xin Proj Gu
+	ZhiHeProj.DisplayName: Zhi He Proj
+	ZhiHeProjGu.DisplayName: Zhi He Proj Gu
+	ZhuanYunProj.DisplayName: Zhuan Yun Proj
+	ZhuiNianXianProj.DisplayName: Zhui Nian Xian Proj
+	ZhuJunZiProj.DisplayName: Zhu Jun Zi Proj
+	ZiJingSheXProj.DisplayName: Zi Jing She X Proj
+	ZiYanXProj.DisplayName: Zi Yan X Proj
+	ZouYunProj.DisplayName: Zou Yun Proj
 }
 
 Prefixes: {
@@ -4436,842 +4757,4661 @@ Items: {
 		DisplayName: 元石砖
 		Tooltip: 元石制成的砖块，价值不菲
 	}
+
 	影砖: {
 		DisplayName: 影砖
 		Tooltip: 隐入暗影的砖块，影道建筑常用
 	}
+
 	暗砖: {
 		DisplayName: 暗砖
 		Tooltip: 阴暗的砖块，暗道建筑常用
 	}
+
 	律砖: {
 		DisplayName: 律砖
 		Tooltip: 规则纹理的砖块，律道建筑常用
 	}
+
 	血砖: {
 		DisplayName: 血砖
 		Tooltip: 血红色的砖块，血道建筑常用
 	}
+
 	宙砖: {
 		DisplayName: 宙砖
 		Tooltip: 时间痕迹的砖块，宙道建筑常用
 	}
+
 	灵苔石: {
 		DisplayName: 灵苔石
 		Tooltip: 覆盖灵苔的石头，散发微弱灵气
 	}
+
 	灵壤: {
 		DisplayName: 灵壤
 		Tooltip: 灵气充盈的土壤，适合种植灵草
 	}
+
 	蛊纹砖: {
 		DisplayName: 蛊纹砖
 		Tooltip: 刻有蛊纹的砖块，用于蛊师建筑
 	}
+
 	雷砖: {
 		DisplayName: 雷砖
 		Tooltip: 带电的砖块，雷道建筑常用
 	}
+
 	龙鳞砖: {
 		DisplayName: 龙鳞砖
 		Tooltip: 龙鳞纹路的砖块，坚固且美观
 	}
+
 	魂砖: {
 		DisplayName: 魂砖
 		Tooltip: 散发幽光的砖块，魂道建筑常用
 	}
+
 	阳砖: {
 		DisplayName: 阳砖
 		Tooltip: 散发暖光的砖块，阳道建筑常用
 	}
+
 	云砖: {
 		DisplayName: 云砖
 		Tooltip: 如云般轻盈的砖块，宇道建筑常用
 	}
+
 	蛊土: {
 		DisplayName: 蛊土
 		Tooltip: 被蛊虫之力侵蚀的土壤
 	}
+
 	毒砖: {
 		DisplayName: 毒砖
 		Tooltip: 泛绿的砖块，毒道建筑常用
 	}
+
 	梦砖: {
 		DisplayName: 梦砖
 		Tooltip: 虚幻的砖块，梦道建筑常用
 	}
+
 	晶化沙: {
 		DisplayName: 晶化沙
 		Tooltip: 灵气晶化后的沙土，闪烁微光
 	}
+
 	月砖: {
 		DisplayName: 月砖
 		Tooltip: 散发月光的砖块，月道建筑常用
 	}
+
 	灵骨砖: {
 		DisplayName: 灵骨砖
 		Tooltip: 灵骨制成的砖块，带有灵气
 	}
+
 	星辉砖: {
 		DisplayName: 星辉砖
 		Tooltip: 星光凝结的砖块，夜间发光
 	}
+
 	深层血沙: {
 		DisplayName: 深层血沙
 		Tooltip: 深层地下的血沙，颜色更深
 	}
+
 	骨砖: {
 		DisplayName: 骨砖
 		Tooltip: 骨质砖块，骨道建筑常用
 	}
+
 	玄武砖: {
 		DisplayName: 玄武砖
 		Tooltip: 玄武纹路的砖块，厚重沉稳
 	}
+
 	冰砖: {
 		DisplayName: 冰砖
 		Tooltip: 冰寒的砖块，冰道建筑常用
 	}
+
 	风砖: {
 		DisplayName: 风砖
 		Tooltip: 轻盈的砖块，风道建筑常用
 	}
+
 	土砖: {
 		DisplayName: 土砖
 		Tooltip: 厚重的砖块，土道建筑常用
 	}
+
 	星砖: {
 		DisplayName: 星砖
 		Tooltip: 闪烁星光的砖块，星辰道建筑常用
 	}
+
 	凤羽砖: {
 		DisplayName: 凤羽砖
 		Tooltip: 凤羽纹路的砖块，温暖如春
 	}
+
 	火砖: {
 		DisplayName: 火砖
 		Tooltip: 耐火的砖块，火道建筑常用
 	}
+
 	灵木方块: {
 		DisplayName: 灵木方块
 		Tooltip: 灵木制成的建筑方块
 	}
+
 	冥铁砖: {
 		DisplayName: 冥铁砖
 		Tooltip: 冥铁锻造的砖块，坚硬无比
 	}
+
 	赤金矿: {
 		DisplayName: 赤金矿
 		Tooltip: 赤金色的珍贵矿石，可用于锻造高级蛊器
 	}
+
 	深层元石矿: {
 		DisplayName: 深层元石矿
 		Tooltip: 深层地下的元石矿脉，蕴含更纯净的灵气
 	}
+
 	魂银矿石: {
 		DisplayName: 魂银矿石
 		Tooltip: 散发幽光的银色矿石，含有魂道道痕
 	}
+
 	火炭矿石: {
 		DisplayName: 火炭矿石
 		Tooltip: 火炭山特产矿石，燃烧长久无烟
 	}
+
 	血铜矿石: {
 		DisplayName: 血铜矿石
 		Tooltip: 血红色的铜矿石，常见于血道环境
 	}
+
 	灵髓矿: {
 		DisplayName: 灵髓矿
 		Tooltip: 灵气凝结而成的矿髓，极为稀有
 	}
+
 	龙骨矿: {
 		DisplayName: 龙骨矿
 		Tooltip: 远古龙族遗骸矿化后的珍贵矿石
 	}
+
 	骨玉矿石: {
 		DisplayName: 骨玉矿石
 		Tooltip: 骨质中凝结的玉石，可用于骨道炼蛊
 	}
+
 	天晶矿: {
 		DisplayName: 天晶矿
 		Tooltip: 蕴含天晶之力的稀有矿石，发出淡蓝色微光
 	}
+
+	天晶: {
+		DisplayName: 天晶
+		Tooltip: ""
+	}
+
 	蛊晶矿: {
 		DisplayName: 蛊晶矿
 		Tooltip: 蛊虫之力结晶形成的矿石，蕴含诡异能量
 	}
+
 	毒铁矿石: {
 		DisplayName: 毒铁矿石
 		Tooltip: 被毒气浸染的铁矿石，表面泛绿
 	}
+
 	幽冥矿: {
 		DisplayName: 幽冥矿
 		Tooltip: 来自幽冥深处的暗色矿石，散发阴冷气息
 	}
+
 	星辰矿石: {
 		DisplayName: 星辰矿石
 		Tooltip: 内含星辰系蛊的顽石，表面有蓝色荧光
 	}
+
 	灵晶矿石: {
 		DisplayName: 灵晶矿石
 		Tooltip: 蕴含灵气的结晶矿石，发出微弱光芒
 	}
+
 	镇魂柱: {
 		DisplayName: 镇魂柱
 		Tooltip: 镇压魂魄的石柱，刻满符文
 	}
+
 	毒沼泽: {
 		DisplayName: 毒沼泽
 		Tooltip: 充满毒素的沼泽地块
 	}
+
 	蛊茧: {
 		DisplayName: 蛊茧
 		Tooltip: 蛊虫结成的茧，内部蛰伏着未知
 	}
+
 	骸骨柱: {
 		DisplayName: 骸骨柱
 		Tooltip: 由骸骨堆砌的柱子
 	}
+
 	尸砖: {
 		DisplayName: 尸砖
 		Tooltip: 尸骸制成的砖块，令人不安
 	}
+
 	小型蛊祭坛: {
 		DisplayName: 小型蛊祭坛
 		Tooltip: 小型蛊虫祭祀坛，散发诡异气息
 	}
+
 	枯木方块: {
 		DisplayName: 枯木方块
 		Tooltip: 枯萎的木材方块
 	}
+
 	腐骨堆: {
 		DisplayName: 腐骨堆
 		Tooltip: 腐朽的骨骼堆积，散发恶臭
 	}
+
 	小型血池: {
 		DisplayName: 小型血池
 		Tooltip: 小型的血道池子，散发血腥气息
 	}
+
 	怨灵碑: {
 		DisplayName: 怨灵碑
 		Tooltip: 刻满怨灵符文的石碑
 	}
+
 	蛊丝方块: {
 		DisplayName: 蛊丝方块
 		Tooltip: 蛊虫吐丝凝结的方块
 	}
+
 	暗灵烛: {
 		DisplayName: 暗灵烛
 		Tooltip: 暗灵之火点燃的蜡烛，散发幽暗光芒
 	}
+
 	血蛊池: {
 		DisplayName: 血蛊池
 		Tooltip: 血色蛊虫聚集的池子
 	}
+
 	血肉墙: {
 		DisplayName: 血肉墙
 		Tooltip: 血肉凝固形成的墙壁，令人不寒而栗
 	}
+
 	毒雾池: {
 		DisplayName: 毒雾池
 		Tooltip: 不断冒出毒雾的池子
 	}
+
 	古月储物箱: {
 		DisplayName: 古月储物箱
 		Tooltip: 古月寨的储物箱
 	}
+
 	古月木地板: {
 		DisplayName: 古月木地板
 		Tooltip: 古月寨风格的木地板
 	}
+
 	古月蛊架: {
 		DisplayName: 古月蛊架
 		Tooltip: 放置蛊虫的专用架子
 	}
+
 	青茅石台: {
 		DisplayName: 青茅石台
 		Tooltip: 青茅石制成的平台
 	}
+
 	古月练功桩: {
 		DisplayName: 古月练功桩
 		Tooltip: 古月宗弟子练功用的木桩
 	}
+
 	古月赤铜方块: {
 		DisplayName: 古月赤铜方块
 		Tooltip: 赤铜制成的古月风格方块
 	}
+
 	青茅石砖: {
 		DisplayName: 青茅石砖
 		Tooltip: 青茅山特产石砖
 	}
+
 	古月旗杆: {
 		DisplayName: 古月旗杆
 		Tooltip: 古月宗的旗帜杆，彰显宗门威仪
 	}
+
 	古月药柜: {
 		DisplayName: 古月药柜
 		Tooltip: 存放蛊药和灵草的柜子
 	}
+
 	古月石灯: {
 		DisplayName: 古月石灯
 		Tooltip: 古月宗特有的石灯，散发柔和光芒
 	}
+
 	古月灯笼: {
 		DisplayName: 古月灯笼
 		Tooltip: 古月寨的灯笼，发出暖光
 	}
+
 	古月兵器架: {
 		DisplayName: 古月兵器架
 		Tooltip: 古月寨的兵器架
 	}
+
 	古月灵泉: {
 		DisplayName: 古月灵泉
 		Tooltip: 古月宗灵泉，泉水蕴含灵气
 	}
+
 	古月书架: {
 		DisplayName: 古月书架
 		Tooltip: 古月寨的书架，存放蛊方
 	}
+
 	古月屏风: {
 		DisplayName: 古月屏风
 		Tooltip: 古月宗风格的屏风
 	}
+
 	古月旗帜: {
 		DisplayName: 古月旗帜
 		Tooltip: 古月一族的旗帜
 	}
+
 	青茅竹方块: {
 		DisplayName: 青茅竹方块
 		Tooltip: 青矛竹制成的建筑方块
 	}
+
 	古月石碑: {
 		DisplayName: 古月石碑
 		Tooltip: 刻有古月宗训的石碑
 	}
+
 	青茅石柱: {
 		DisplayName: 青茅石柱
 		Tooltip: 青茅石制成的柱子
 	}
+
 	蛊卵孵化器: {
 		DisplayName: 蛊卵孵化器
 		Tooltip: 用于孵化蛊虫卵的温控装置
 	}
+
 	冰心莲: {
 		DisplayName: 冰心莲
 		Tooltip: 冰寒之地的莲花，花瓣晶莹如冰
 	}
+
 	金针草: {
 		DisplayName: 金针草
 		Tooltip: 叶片如金针的草药，可用于炼蛊
 	}
+
 	灵兽笼: {
 		DisplayName: 灵兽笼
 		Tooltip: 关押灵兽的笼子
 	}
+
 	聚灵灯: {
 		DisplayName: 聚灵灯
 		Tooltip: 聚集灵气的灯笼，发出柔和光芒
 	}
+
 	蛊虫隔离笼: {
 		DisplayName: 蛊虫隔离笼
 		Tooltip: 隔离危险蛊虫的笼子
 	}
+
 	蛊炼化台: {
 		DisplayName: 蛊炼化台
 		Tooltip: 用于炼化蛊虫的专用台座
 	}
+
 	灵雾兰: {
 		DisplayName: 灵雾兰
 		Tooltip: 被灵雾笼罩的兰花，散发清幽香气
 	}
+
 	蛊母花: {
 		DisplayName: 蛊母花
 		Tooltip: 蛊母栖息的花朵，是蛊虫繁殖的温床
 	}
+
 	灵石研磨器: {
 		DisplayName: 灵石研磨器
 		Tooltip: 研磨灵石为粉的器具
 	}
+
 	灵液收集器: {
 		DisplayName: 灵液收集器
 		Tooltip: 收集灵液的装置
 	}
+
 	灵气导引柱: {
 		DisplayName: 灵气导引柱
 		Tooltip: 导引灵气流动的石柱
 	}
+
 	血藤: {
 		DisplayName: 血藤
 		Tooltip: 暗红色的吸血藤蔓，触碰会吸取灵气
 	}
+
 	火棘草: {
 		DisplayName: 火棘草
 		Tooltip: 燃烧着微弱火焰的荆棘草
 	}
+
 	九叶芝: {
 		DisplayName: 九叶芝
 		Tooltip: 九片叶子的灵芝，药效非凡
 	}
+
 	蛊虫喂养槽: {
 		DisplayName: 蛊虫喂养槽
 		Tooltip: 喂养蛊虫的专用食槽
 	}
+
 	聚气阵: {
 		DisplayName: 聚气阵
 		Tooltip: 聚集天地灵气的阵法，修炼辅助
 	}
+
 	蛊虫鉴定台: {
 		DisplayName: 蛊虫鉴定台
 		Tooltip: 鉴定蛊虫品质和属性的工作台
 	}
+
 	月兰野花: {
 		DisplayName: 月兰野花
 		Tooltip: 野外生长的月兰花，花瓣如月牙
 	}
+
 	真元凝聚器: {
 		DisplayName: 真元凝聚器
 		Tooltip: 凝聚真元的装置，辅助修行
 	}
+
 	灵气聚拢阵: {
 		DisplayName: 灵气聚拢阵
 		Tooltip: 聚拢灵气的阵法装置
 	}
+
 	蛊虫净化池: {
 		DisplayName: 蛊虫净化池
 		Tooltip: 净化蛊虫的灵水池
 	}
+
 	蛊虫养殖池: {
 		DisplayName: 蛊虫养殖池
 		Tooltip: 养殖蛊虫的水池
 	}
+
 	蛊虫饲料槽: {
 		DisplayName: 蛊虫饲料槽
 		Tooltip: 投放蛊虫食物的槽
 	}
+
 	鬼面菇: {
 		DisplayName: 鬼面菇
 		Tooltip: 形似鬼面的蘑菇，具有致幻效果
 	}
+
 	元素熔炉: {
 		DisplayName: 元素熔炉
 		Tooltip: 融合多种元素的炼蛊熔炉
 	}
+
 	蛊虫交配台: {
 		DisplayName: 蛊虫交配台
 		Tooltip: 蛊虫交配繁殖的专用台
 	}
+
 	蛇纹藤: {
 		DisplayName: 蛇纹藤
 		Tooltip: 蛇纹般的藤蔓植物，可攀附生长
 	}
+
 	碧灵草: {
 		DisplayName: 碧灵草
 		Tooltip: 碧绿色灵草，常见于灵气浓郁之地
 	}
+
 	蛊虫冬眠箱: {
 		DisplayName: 蛊虫冬眠箱
 		Tooltip: 让蛊虫进入冬眠状态的保温箱
 	}
+
 	雷光苔: {
 		DisplayName: 雷光苔
 		Tooltip: 闪烁微弱电光的苔藓，生长在雷击之地
 	}
+
 	紫云花: {
 		DisplayName: 紫云花
 		Tooltip: 紫色云雾般的花朵，可入蛊药
 	}
+
 	暗影菌: {
 		DisplayName: 暗影菌
 		Tooltip: 暗影中生长的菌类，吸收阴暗能量
 	}
+
 	蛊炼制鼎: {
 		DisplayName: 蛊炼制鼎
 		Tooltip: 大型炼蛊鼎，可同时炼制多只蛊虫
 	}
+
 	蛊虫交易摊: {
 		DisplayName: 蛊虫交易摊
 		Tooltip: 蛊虫交易市场的摊位
 	}
+
 	蛊虫培养皿: {
 		DisplayName: 蛊虫培养皿
 		Tooltip: 用于培养蛊虫的特殊器皿
 	}
+
 	蛊虫储存罐: {
 		DisplayName: 蛊虫储存罐
 		Tooltip: 储存蛊虫的特制陶罐
 	}
+
 	龙涎花: {
 		DisplayName: 龙涎花
 		Tooltip: 传说龙族涎液浇灌而成的奇异花朵
 	}
+
 	冰晶柱: {
 		DisplayName: 冰晶柱
 		Tooltip: 极寒之地自然形成的冰晶柱
 	}
+
 	旱地裂纹石: {
 		DisplayName: 旱地裂纹石
 		Tooltip: 干旱地面开裂的石头
 	}
+
 	雷击木: {
 		DisplayName: 雷击木
 		Tooltip: 被雷电击中的树木，蕴含雷属性灵气
 	}
+
 	霜花: {
 		DisplayName: 霜花
 		Tooltip: 严寒中绽放的冰霜之花
 	}
+
 	熔岩石: {
 		DisplayName: 熔岩石
 		Tooltip: 火山熔岩冷却后的岩石，余温犹存
 	}
+
 	熔岩晶: {
 		DisplayName: 熔岩晶
 		Tooltip: 熔岩中凝结的晶石，灼热发光
 	}
+
 	冰封花: {
 		DisplayName: 冰封花
 		Tooltip: 被冰封保存的远古花朵
 	}
+
 	火山灰砖: {
 		DisplayName: 火山灰砖
 		Tooltip: 火山灰制成的砖块，耐高温
 	}
+
 	风化岩: {
 		DisplayName: 风化岩
 		Tooltip: 长期风化侵蚀的岩石，纹理独特
 	}
+
 	雪灵花: {
 		DisplayName: 雪灵花
 		Tooltip: 雪地中盛开的灵花，洁白无瑕
 	}
+
 	灵气结晶树: {
 		DisplayName: 灵气结晶树
 		Tooltip: 灵气结晶形成的树状结构
 	}
+
 	灵雾石: {
 		DisplayName: 灵雾石
 		Tooltip: 被灵雾笼罩的石头，若隐若现
 	}
+
 	灵石堆: {
 		DisplayName: 灵石堆
 		Tooltip: 自然堆积的灵石，灵气外溢
 	}
+
 	灵木桩: {
 		DisplayName: 灵木桩
 		Tooltip: 灵木砍伐后留下的树桩，仍含灵气
 	}
+
 	古树根: {
 		DisplayName: 古树根
 		Tooltip: 古老树木的粗壮根系
 	}
+
 	灵气漩涡: {
 		DisplayName: 灵气漩涡
 		Tooltip: 灵气自然形成的漩涡现象
 	}
+
 	星光石: {
 		DisplayName: 星光石
 		Tooltip: 夜间散发星光的石头
 	}
+
 	灵草花圃: {
 		DisplayName: 灵草花圃
 		Tooltip: 精心培育的灵草花圃
 	}
+
 	灵气瀑布石: {
 		DisplayName: 灵气瀑布石
 		Tooltip: 灵气如瀑布般流淌的石头
 	}
+
 	灵藤架: {
 		DisplayName: 灵藤架
 		Tooltip: 灵藤攀附的木架
 	}
+
 	风蚀岩: {
 		DisplayName: 风蚀岩
 		Tooltip: 被高空风蚀成奇特形状的岩石
 	}
+
 	云母石: {
 		DisplayName: 云母石
 		Tooltip: 高空中的云母矿石，轻盈如云
 	}
+
 	天际花: {
 		DisplayName: 天际花
 		Tooltip: 只在极高处绽放的花朵，花瓣透明
 	}
+
 	星尘沙: {
 		DisplayName: 星尘沙
 		Tooltip: 星尘沉降形成的沙地，闪烁微光
 	}
+
 	天光晶: {
 		DisplayName: 天光晶
 		Tooltip: 吸收天光的晶石，光芒耀眼
 	}
+
 	虹光石: {
 		DisplayName: 虹光石
 		Tooltip: 折射出彩虹光芒的石头
 	}
+
 	浮空石: {
 		DisplayName: 浮空石
 		Tooltip: 悬浮在空中的石头，蕴含反重力灵气
 	}
+
 	雷云砖: {
 		DisplayName: 雷云砖
 		Tooltip: 雷云凝结的砖块，偶有电弧闪过
 	}
+
 	蛊毒花: {
 		DisplayName: 蛊毒花
 		Tooltip: 蛊虫授粉产生的毒花，色彩艳丽
 	}
+
 	蛊丝茧: {
 		DisplayName: 蛊丝茧
 		Tooltip: 蛊虫吐丝结成的茧，内部有蛊虫蛹
 	}
+
 	蛊菌团: {
 		DisplayName: 蛊菌团
 		Tooltip: 蛊虫共生菌形成的菌团
 	}
+
 	蛊虫蜕皮架: {
 		DisplayName: 蛊虫蜕皮架
 		Tooltip: 供蛊虫蜕皮的特殊架子
 	}
+
 	蛊卵石: {
 		DisplayName: 蛊卵石
 		Tooltip: 内含蛊卵的矿石，敲碎可获得蛊虫
 	}
+
 	蛊虫食物槽: {
 		DisplayName: 蛊虫食物槽
 		Tooltip: 盛放蛊虫食物的石槽
 	}
+
 	蛊虫巢穴: {
 		DisplayName: 蛊虫巢穴
 		Tooltip: 野生蛊虫的巢穴，可能有蛊虫栖息
 	}
+
 	蛊虫排泄晶: {
 		DisplayName: 蛊虫排泄晶
 		Tooltip: 蛊虫排泄物结晶，竟是珍贵材料
 	}
+
 	蛊虫冬眠石: {
 		DisplayName: 蛊虫冬眠石
 		Tooltip: 蛊虫冬眠时依附的温热石头
 	}
+
 	蛊蜕壳: {
 		DisplayName: 蛊蜕壳
 		Tooltip: 蛊虫蜕下的外壳，可用于炼制
 	}
+
 	古月宗灯柱: {
 		DisplayName: 古月宗灯柱
 		Tooltip: 古月宗道路旁的灯柱
 	}
+
 	王家水晶台: {
 		DisplayName: 王家水晶台
 		Tooltip: 王家的水晶展示台
 	}
+
 	贾家商铺台: {
 		DisplayName: 贾家商铺台
 		Tooltip: 贾家的商铺展示台
 	}
+
 	散修营火堆: {
 		DisplayName: 散修营火堆
 		Tooltip: 散修聚集地的营火
 	}
+
 	古月宗碑: {
 		DisplayName: 古月宗碑
 		Tooltip: 古月宗的宗门石碑，刻有宗门训诫
 	}
+
 	百家旗帜: {
 		DisplayName: 百家旗帜
 		Tooltip: 百家联盟的旗帜
 	}
+
 	白家玉石台: {
 		DisplayName: 白家玉石台
 		Tooltip: 白家的玉石展示台
 	}
+
 	熊家练武桩: {
 		DisplayName: 熊家练武桩
 		Tooltip: 熊家的练武木桩
 	}
+
 	铁家锻造台: {
 		DisplayName: 铁家锻造台
 		Tooltip: 铁家的锻造工作台
 	}
+
 	赵家暗影柱: {
 		DisplayName: 赵家暗影柱
 		Tooltip: 赵家的暗影纹路柱子
 	}
+
 	灵气测量柱: {
 		DisplayName: 灵气测量柱
 		Tooltip: 测量灵气浓度的石柱
 	}
+
 	突破台: {
 		DisplayName: 突破台
 		Tooltip: 辅助突破境界的特殊台座
 	}
+
 	灵气导引阵: {
 		DisplayName: 灵气导引阵
 		Tooltip: 导引灵气流动的阵法，辅助修炼
 	}
+
 	悟道石: {
 		DisplayName: 悟道石
 		Tooltip: 传说能助人悟道的奇石
 	}
+
 	心魔镜: {
 		DisplayName: 心魔镜
 		Tooltip: 映照心魔的镜子，修炼者必经之试
 	}
+
 	打坐台: {
 		DisplayName: 打坐台
 		Tooltip: 专门用于打坐修炼的石台
 	}
+
 	灵气漩涡石: {
 		DisplayName: 灵气漩涡石
 		Tooltip: 灵气形成漩涡的石头，修炼圣地
 	}
+
 	修炼蒲团: {
 		DisplayName: 修炼蒲团
 		Tooltip: 高级修炼蒲团，提升修炼效率
 	}
+
 	聚灵阵盘: {
 		DisplayName: 聚灵阵盘
 		Tooltip: 聚灵阵的核心阵盘，加速灵气聚集
 	}
+
 	闭关石门: {
 		DisplayName: 闭关石门
 		Tooltip: 闭关修炼时封堵洞口的石门
 	}
+
 	寒冰莲: {
 		DisplayName: 寒冰莲
 		Tooltip: 冰冷水域中的莲花，花瓣如冰雕
 	}
+
 	灵水莲: {
 		DisplayName: 灵水莲
 		Tooltip: 漂浮在灵水上的莲花，花瓣晶莹
 	}
+
 	沼泽枯木: {
 		DisplayName: 沼泽枯木
 		Tooltip: 沼泽中半沉的枯木，附着苔藓
 	}
+
 	灵莲池: {
 		DisplayName: 灵莲池
 		Tooltip: 灵气凝聚的莲花池，池水清澈见底
 	}
+
 	水母石: {
 		DisplayName: 水母石
 		Tooltip: 形似水母的发光石头
 	}
+
 	灵鱼化石: {
 		DisplayName: 灵鱼化石
 		Tooltip: 古代灵鱼留下的化石
 	}
+
 	灵泉石: {
 		DisplayName: 灵泉石
 		Tooltip: 灵泉旁的石头，常年被灵水浸润
 	}
+
 	水灵草: {
 		DisplayName: 水灵草
 		Tooltip: 水中生长的灵草，随波摇曳
 	}
+
 	深渊珊瑚: {
 		DisplayName: 深渊珊瑚
 		Tooltip: 深渊水域中的暗色珊瑚
 	}
+
 	灵蚌壳: {
 		DisplayName: 灵蚌壳
 		Tooltip: 灵蚌的贝壳，内含珍珠
 	}
+
 	暗河石: {
 		DisplayName: 暗河石
 		Tooltip: 地下暗河旁的湿润石块
 	}
+
 	地脉结晶: {
 		DisplayName: 地脉结晶
 		Tooltip: 地脉灵气凝结的结晶，极为珍贵
 	}
+
 	磷光苔: {
 		DisplayName: 磷光苔
 		Tooltip: 散发磷光的苔藓，生长在潮湿洞壁
 	}
+
 	地下菌毯: {
 		DisplayName: 地下菌毯
 		Tooltip: 地下菌类覆盖的地面，柔软潮湿
 	}
+
 	倒挂钟乳: {
 		DisplayName: 倒挂钟乳
 		Tooltip: 从洞顶垂下的钟乳石，滴水成珠
 	}
+
 	荧光蘑菇丛: {
 		DisplayName: 荧光蘑菇丛
 		Tooltip: 地下荧光蘑菇丛，照亮黑暗洞穴
 	}
+
 	深渊石: {
 		DisplayName: 深渊石
 		Tooltip: 深渊底部的古老石块，沉重而神秘
 	}
+
 	晶洞壁: {
 		DisplayName: 晶洞壁
 		Tooltip: 布满细小晶体的洞壁
 	}
+
 	晶化骨: {
 		DisplayName: 晶化骨
 		Tooltip: 矿化结晶的骨骼，兼具骨与晶的特性
 	}
+
 	地下灵泉眼: {
 		DisplayName: 地下灵泉眼
 		Tooltip: 地下涌出的灵泉之眼，灵气充沛
 	}
+
 	灵晶簇: {
 		DisplayName: 灵晶簇
 		Tooltip: 地下灵晶自然生长的簇状结晶，散发柔和光芒
 	}
+
 	溶岩花: {
 		DisplayName: 溶岩花
 		Tooltip: 生长在溶岩旁的耐热花朵
 	}
+
 	石笋: {
 		DisplayName: 石笋
 		Tooltip: 洞穴中自然形成的尖锐石笋
 	}
+
 	蛛网茧: {
 		DisplayName: 蛛网茧
 		Tooltip: 洞穴中蛊蛛结成的丝茧
 	}
+
 	古修残壁: {
 		DisplayName: 古修残壁
 		Tooltip: 古代修士建筑的残壁，刻有模糊符文
 	}
+
 	古修地砖: {
 		DisplayName: 古修地砖
 		Tooltip: 古代修士铺设的地砖，纹路精美
 	}
+
 	破碎石像: {
 		DisplayName: 破碎石像
 		Tooltip: 破碎的古代石像，面容已不可辨
 	}
+
 	残破阵旗: {
 		DisplayName: 残破阵旗
 		Tooltip: 残破的阵法旗帜，布面已褪色
 	}
+
 	封印残石: {
 		DisplayName: 封印残石
 		Tooltip: 古代封印的残余石块，符文微弱闪烁
 	}
+
 	古战场遗骸: {
 		DisplayName: 古战场遗骸
 		Tooltip: 古战场遗留的骸骨和残器
 	}
+
 	荒废祭坛: {
 		DisplayName: 荒废祭坛
 		Tooltip: 被遗弃的祭祀祭坛，仍有残余灵气
 	}
+
 	古修石碑: {
 		DisplayName: 古修石碑
 		Tooltip: 刻有古代功法的石碑，文字模糊
 	}
+
 	碎裂玉简: {
 		DisplayName: 碎裂玉简
 		Tooltip: 碎裂的玉简残片，可能残留信息
 	}
+
 	灵墟土: {
 		DisplayName: 灵墟土
 		Tooltip: 灵气消散后的废墟土壤
-	}}
+	}
+
+	BaiGuCheLunGu: {
+		UsesXQi: Mods.VerminLordMod.Items.BaiGuCheLunGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BaiGuCheLunGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BaiGuCheLunGu.GuLevel
+		DisplayName: Bai Gu Che Lun Gu
+		Tooltip: ""
+	}
+
+	BaiXiangXianSheGu: {
+		UsesXQi: Mods.VerminLordMod.Items.BaiXiangXianSheGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BaiXiangXianSheGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BaiXiangXianSheGu.GuLevel
+		DisplayName: Bai Xiang Xian She Gu
+		Tooltip: ""
+	}
+
+	BaiZhanXXGu: {
+		UsesXQi: Mods.VerminLordMod.Items.BaiZhanXXGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BaiZhanXXGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BaiZhanXXGu.GuLevel
+		DisplayName: Bai Zhan X X Gu
+		Tooltip: ""
+	}
+
+	BaoYueGuangWangGu: {
+		UsesXQi: Mods.VerminLordMod.Items.BaoYueGuangWangGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BaoYueGuangWangGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BaoYueGuangWangGu.GuLevel
+		DisplayName: Bao Yue Guang Wang Gu
+		Tooltip: ""
+	}
+
+	BiKongGu: {
+		UsesXQi: Mods.VerminLordMod.Items.BiKongGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BiKongGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BiKongGu.GuLevel
+		DisplayName: Bi Kong Gu
+		Tooltip: ""
+	}
+
+	BloodDropperGu: {
+		UsesXQi: Mods.VerminLordMod.Items.BloodDropperGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BloodDropperGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BloodDropperGu.GuLevel
+		DisplayName: Blood Dropper Gu
+		Tooltip: ""
+	}
+
+	BloodFrenzyGu: {
+		UsesXQi: Mods.VerminLordMod.Items.BloodFrenzyGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BloodFrenzyGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BloodFrenzyGu.GuLevel
+		DisplayName: Blood Frenzy Gu
+		Tooltip: ""
+	}
+
+	BoXXXGu: {
+		UsesXQi: Mods.VerminLordMod.Items.BoXXXGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BoXXXGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BoXXXGu.GuLevel
+		DisplayName: Bo X X X Gu
+		Tooltip: ""
+	}
+
+	CaiFuXGu: {
+		UsesXQi: Mods.VerminLordMod.Items.CaiFuXGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.CaiFuXGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.CaiFuXGu.GuLevel
+		DisplayName: Cai Fu X Gu
+		Tooltip: ""
+	}
+
+	CaiYouGu: {
+		UsesXQi: Mods.VerminLordMod.Items.CaiYouGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.CaiYouGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.CaiYouGu.GuLevel
+		DisplayName: Cai You Gu
+		Tooltip: ""
+	}
+
+	ChaYunGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ChaYunGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ChaYunGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ChaYunGu.GuLevel
+		DisplayName: Cha Yun Gu
+		Tooltip: ""
+	}
+
+	ChunGuangWuXianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ChunGuangWuXianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ChunGuangWuXianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ChunGuangWuXianGu.GuLevel
+		DisplayName: Chun Guang Wu Xian Gu
+		Tooltip: ""
+	}
+
+	CunXiYuXGu: {
+		UsesXQi: Mods.VerminLordMod.Items.CunXiYuXGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.CunXiYuXGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.CunXiYuXGu.GuLevel
+		DisplayName: Cun Xi Yu X Gu
+		Tooltip: ""
+	}
+
+	DaXiaGu: {
+		UsesXQi: Mods.VerminLordMod.Items.DaXiaGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.DaXiaGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.DaXiaGu.GuLevel
+		DisplayName: Da Xia Gu
+		Tooltip: ""
+	}
+
+	DianJinGu: {
+		UsesXQi: Mods.VerminLordMod.Items.DianJinGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.DianJinGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.DianJinGu.GuLevel
+		DisplayName: Dian Jin Gu
+		Tooltip: ""
+	}
+
+	ENianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ENianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ENianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ENianGu.GuLevel
+		DisplayName: E Nian Gu
+		Tooltip: ""
+	}
+
+	FeiGeChuanXGu: {
+		UsesXQi: Mods.VerminLordMod.Items.FeiGeChuanXGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.FeiGeChuanXGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.FeiGeChuanXGu.GuLevel
+		DisplayName: Fei Ge Chuan X Gu
+		Tooltip: ""
+	}
+
+	FeiYanGu: {
+		UsesXQi: Mods.VerminLordMod.Items.FeiYanGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.FeiYanGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.FeiYanGu.GuLevel
+		DisplayName: Fei Yan Gu
+		Tooltip: ""
+	}
+
+	GuanMenGu: {
+		UsesXQi: Mods.VerminLordMod.Items.GuanMenGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.GuanMenGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.GuanMenGu.GuLevel
+		DisplayName: Guan Men Gu
+		Tooltip: ""
+	}
+
+	GuaShuaiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.GuaShuaiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.GuaShuaiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.GuaShuaiGu.GuLevel
+		DisplayName: Gua Shuai Gu
+		Tooltip: ""
+	}
+
+	GuiYuLangPiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.GuiYuLangPiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.GuiYuLangPiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.GuiYuLangPiGu.GuLevel
+		DisplayName: Gui Yu Lang Pi Gu
+		Tooltip: ""
+	}
+
+	HuangJinJiaGu: {
+		UsesXQi: Mods.VerminLordMod.Items.HuangJinJiaGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.HuangJinJiaGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.HuangJinJiaGu.GuLevel
+		DisplayName: Huang Jin Jia Gu
+		Tooltip: ""
+	}
+
+	HuoGuangXTianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.HuoGuangXTianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.HuoGuangXTianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.HuoGuangXTianGu.GuLevel
+		DisplayName: Huo Guang X Tian Gu
+		Tooltip: ""
+	}
+
+	HuoYanPiFengGu: {
+		UsesXQi: Mods.VerminLordMod.Items.HuoYanPiFengGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.HuoYanPiFengGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.HuoYanPiFengGu.GuLevel
+		DisplayName: Huo Yan Pi Feng Gu
+		Tooltip: ""
+	}
+
+	JianMoGu: {
+		UsesXQi: Mods.VerminLordMod.Items.JianMoGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.JianMoGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.JianMoGu.GuLevel
+		DisplayName: Jian Mo Gu
+		Tooltip: ""
+	}
+
+	JianQiaoGu: {
+		UsesXQi: Mods.VerminLordMod.Items.JianQiaoGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.JianQiaoGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.JianQiaoGu.GuLevel
+		DisplayName: Jian Qiao Gu
+		Tooltip: ""
+	}
+
+	JinJiaoWuGongGu: {
+		UsesXQi: Mods.VerminLordMod.Items.JinJiaoWuGongGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.JinJiaoWuGongGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.JinJiaoWuGongGu.GuLevel
+		DisplayName: Jin Jiao Wu Gong Gu
+		Tooltip: ""
+	}
+
+	JinXGu: {
+		UsesXQi: Mods.VerminLordMod.Items.JinXGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.JinXGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.JinXGu.GuLevel
+		DisplayName: Jin X Gu
+		Tooltip: ""
+	}
+
+	JinXiuShiHeGu: {
+		UsesXQi: Mods.VerminLordMod.Items.JinXiuShiHeGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.JinXiuShiHeGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.JinXiuShiHeGu.GuLevel
+		DisplayName: Jin Xiu Shi He Gu
+		Tooltip: ""
+	}
+
+	JiTuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.JiTuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.JiTuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.JiTuGu.GuLevel
+		DisplayName: Ji Tu Gu
+		Tooltip: ""
+	}
+
+	KaiMenGu: {
+		UsesXQi: Mods.VerminLordMod.Items.KaiMenGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.KaiMenGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.KaiMenGu.GuLevel
+		DisplayName: Kai Men Gu
+		Tooltip: ""
+	}
+
+	LangTuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.LangTuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.LangTuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.LangTuGu.GuLevel
+		DisplayName: Lang Tu Gu
+		Tooltip: ""
+	}
+
+	NuoYiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.NuoYiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.NuoYiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.NuoYiGu.GuLevel
+		DisplayName: Nuo Yi Gu
+		Tooltip: ""
+	}
+
+	QianLiDiLangZhuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.QianLiDiLangZhuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.QianLiDiLangZhuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.QianLiDiLangZhuGu.GuLevel
+		DisplayName: Qian Li Di Lang Zhu Gu
+		Tooltip: ""
+	}
+
+	QuanXGu: {
+		UsesXQi: Mods.VerminLordMod.Items.QuanXGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.QuanXGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.QuanXGu.GuLevel
+		DisplayName: Quan X Gu
+		Tooltip: ""
+	}
+
+	QunLiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.QunLiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.QunLiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.QunLiGu.GuLevel
+		DisplayName: Qun Li Gu
+		Tooltip: ""
+	}
+
+	RenXGuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.RenXGuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.RenXGuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.RenXGuGu.GuLevel
+		DisplayName: Ren X Gu Gu
+		Tooltip: ""
+	}
+
+	SanGengGu: {
+		UsesXQi: Mods.VerminLordMod.Items.SanGengGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.SanGengGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.SanGengGu.GuLevel
+		DisplayName: San Geng Gu
+		Tooltip: ""
+	}
+
+	ShanQiuXKuiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ShanQiuXKuiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ShanQiuXKuiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ShanQiuXKuiGu.GuLevel
+		DisplayName: Shan Qiu X Kui Gu
+		Tooltip: ""
+	}
+
+	ShuoXGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ShuoXGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ShuoXGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ShuoXGu.GuLevel
+		DisplayName: Shuo X Gu
+		Tooltip: ""
+	}
+
+	SongGuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.SongGuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.SongGuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.SongGuGu.GuLevel
+		DisplayName: Song Gu Gu
+		Tooltip: ""
+	}
+
+	TongTianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.TongTianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.TongTianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.TongTianGu.GuLevel
+		DisplayName: Tong Tian Gu
+		Tooltip: ""
+	}
+
+	TuBaWangGu: {
+		UsesXQi: Mods.VerminLordMod.Items.TuBaWangGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.TuBaWangGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.TuBaWangGu.GuLevel
+		DisplayName: Tu Ba Wang Gu
+		Tooltip: ""
+	}
+
+	TunXXGu: {
+		UsesXQi: Mods.VerminLordMod.Items.TunXXGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.TunXXGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.TunXXGu.GuLevel
+		DisplayName: Tun X X Gu
+		Tooltip: ""
+	}
+
+	WuKongYuXiaoGu: {
+		UsesXQi: Mods.VerminLordMod.Items.WuKongYuXiaoGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.WuKongYuXiaoGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.WuKongYuXiaoGu.GuLevel
+		DisplayName: Wu Kong Yu Xiao Gu
+		Tooltip: ""
+	}
+
+	WuQiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.WuQiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.WuQiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.WuQiGu.GuLevel
+		DisplayName: Wu Qi Gu
+		Tooltip: ""
+	}
+
+	WuXHuoTaGu: {
+		UsesXQi: Mods.VerminLordMod.Items.WuXHuoTaGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.WuXHuoTaGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.WuXHuoTaGu.GuLevel
+		DisplayName: Wu X Huo Ta Gu
+		Tooltip: ""
+	}
+
+	XHuaiGangZongGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XHuaiGangZongGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XHuaiGangZongGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XHuaiGangZongGu.GuLevel
+		DisplayName: X Huai Gang Zong Gu
+		Tooltip: ""
+	}
+
+	XHunShouYiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XHunShouYiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XHunShouYiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XHunShouYiGu.GuLevel
+		DisplayName: X Hun Shou Yi Gu
+		Tooltip: ""
+	}
+
+	XingMenGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XingMenGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XingMenGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XingMenGu.GuLevel
+		DisplayName: Xing Men Gu
+		Tooltip: ""
+	}
+
+	XingShanGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XingShanGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XingShanGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XingShanGu.GuLevel
+		DisplayName: Xing Shan Gu
+		Tooltip: ""
+	}
+
+	XNianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XNianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XNianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XNianGu.GuLevel
+		DisplayName: X Nian Gu
+		Tooltip: ""
+	}
+
+	XSheng5Gu: {
+		UsesXQi: Mods.VerminLordMod.Items.XSheng5Gu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XSheng5Gu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XSheng5Gu.GuLevel
+		DisplayName: X Sheng5 Gu
+		Tooltip: ""
+	}
+
+	XueDiZiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XueDiZiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XueDiZiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XueDiZiGu.GuLevel
+		DisplayName: Xue Di Zi Gu
+		Tooltip: ""
+	}
+
+	XueGanYingGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XueGanYingGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XueGanYingGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XueGanYingGu.GuLevel
+		DisplayName: Xue Gan Ying Gu
+		Tooltip: ""
+	}
+
+	XueGuiShiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XueGuiShiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XueGuiShiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XueGuiShiGu.GuLevel
+		DisplayName: Xue Gui Shi Gu
+		Tooltip: ""
+	}
+
+	XueHeMangGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XueHeMangGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XueHeMangGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XueHeMangGu.GuLevel
+		DisplayName: Xue He Mang Gu
+		Tooltip: ""
+	}
+
+	XueXTianHuaGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XueXTianHuaGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XueXTianHuaGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XueXTianHuaGu.GuLevel
+		DisplayName: Xue X Tian Hua Gu
+		Tooltip: ""
+	}
+
+	XunDianLiuGuangGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XunDianLiuGuangGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XunDianLiuGuangGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XunDianLiuGuangGu.GuLevel
+		DisplayName: Xun Dian Liu Guang Gu
+		Tooltip: ""
+	}
+
+	XYiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XYiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XYiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XYiGu.GuLevel
+		DisplayName: X Yi Gu
+		Tooltip: ""
+	}
+
+	XZhenGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XZhenGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XZhenGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XZhenGu.GuLevel
+		DisplayName: X Zhen Gu
+		Tooltip: ""
+	}
+
+	ZhanGuCheLunGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ZhanGuCheLunGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ZhanGuCheLunGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ZhanGuCheLunGu.GuLevel
+		DisplayName: Zhan Gu Che Lun Gu
+		Tooltip: ""
+	}
+
+	ZhenChaXChongGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ZhenChaXChongGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ZhenChaXChongGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ZhenChaXChongGu.GuLevel
+		DisplayName: Zhen Cha X Chong Gu
+		Tooltip: ""
+	}
+
+	ZiJingSheXGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ZiJingSheXGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ZiJingSheXGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ZiJingSheXGu.GuLevel
+		DisplayName: Zi Jing She X Gu
+		Tooltip: ""
+	}
+
+	ZiYanXGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ZiYanXGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ZiYanXGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ZiYanXGu.GuLevel
+		DisplayName: Zi Yan X Gu
+		Tooltip: ""
+	}
+
+	DongChuangGu: {
+		UsesXQi: Mods.VerminLordMod.Items.DongChuangGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.DongChuangGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.DongChuangGu.GuLevel
+		DisplayName: Dong Chuang Gu
+		Tooltip: ""
+	}
+
+	FuDiChouXinGu: {
+		UsesXQi: Mods.VerminLordMod.Items.FuDiChouXinGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.FuDiChouXinGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.FuDiChouXinGu.GuLevel
+		DisplayName: Fu Di Chou Xin Gu
+		Tooltip: ""
+	}
+
+	GhostFaceGu: {
+		UsesXQi: Mods.VerminLordMod.Items.GhostFaceGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.GhostFaceGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.GhostFaceGu.GuLevel
+		DisplayName: Ghost Face Gu
+		Tooltip: ""
+	}
+
+	GuiXGu: {
+		UsesXQi: Mods.VerminLordMod.Items.GuiXGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.GuiXGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.GuiXGu.GuLevel
+		DisplayName: Gui X Gu
+		Tooltip: ""
+	}
+
+	GuiXiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.GuiXiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.GuiXiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.GuiXiGu.GuLevel
+		DisplayName: Gui Xi Gu
+		Tooltip: ""
+	}
+
+	HeHunGu: {
+		UsesXQi: Mods.VerminLordMod.Items.HeHunGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.HeHunGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.HeHunGu.GuLevel
+		DisplayName: He Hun Gu
+		Tooltip: ""
+	}
+
+	HengChongZhiZhuangGu: {
+		UsesXQi: Mods.VerminLordMod.Items.HengChongZhiZhuangGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.HengChongZhiZhuangGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.HengChongZhiZhuangGu.GuLevel
+		DisplayName: Heng Chong Zhi Zhuang Gu
+		Tooltip: ""
+	}
+
+	HuoSheGu: {
+		UsesXQi: Mods.VerminLordMod.Items.HuoSheGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.HuoSheGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.HuoSheGu.GuLevel
+		DisplayName: Huo She Gu
+		Tooltip: ""
+	}
+
+	JinFengSongShuangGu: {
+		UsesXQi: Mods.VerminLordMod.Items.JinFengSongShuangGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.JinFengSongShuangGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.JinFengSongShuangGu.GuLevel
+		DisplayName: Jin Feng Song Shuang Gu
+		Tooltip: ""
+	}
+
+	JiuXJiuChongGu: {
+		UsesXQi: Mods.VerminLordMod.Items.JiuXJiuChongGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.JiuXJiuChongGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.JiuXJiuChongGu.GuLevel
+		DisplayName: Jiu X Jiu Chong Gu
+		Tooltip: ""
+	}
+
+	LangHaoGu: {
+		UsesXQi: Mods.VerminLordMod.Items.LangHaoGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.LangHaoGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.LangHaoGu.GuLevel
+		DisplayName: Lang Hao Gu
+		Tooltip: ""
+	}
+
+	LangYanGu: {
+		UsesXQi: Mods.VerminLordMod.Items.LangYanGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.LangYanGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.LangYanGu.GuLevel
+		DisplayName: Lang Yan Gu
+		Tooltip: ""
+	}
+
+	ShiXZhiLiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ShiXZhiLiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ShiXZhiLiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ShiXZhiLiGu.GuLevel
+		DisplayName: Shi X Zhi Li Gu
+		Tooltip: ""
+	}
+
+	ShuiBiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ShuiBiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ShuiBiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ShuiBiGu.GuLevel
+		DisplayName: Shui Bi Gu
+		Tooltip: ""
+	}
+
+	ShuiPuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ShuiPuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ShuiPuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ShuiPuGu.GuLevel
+		DisplayName: Shui Pu Gu
+		Tooltip: ""
+	}
+
+	ShuiXiangGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ShuiXiangGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ShuiXiangGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ShuiXiangGu.GuLevel
+		DisplayName: Shui Xiang Gu
+		Tooltip: ""
+	}
+
+	SiZhuanYuLangGu: {
+		UsesXQi: Mods.VerminLordMod.Items.SiZhuanYuLangGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.SiZhuanYuLangGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.SiZhuanYuLangGu.GuLevel
+		DisplayName: Si Zhuan Yu Lang Gu
+		Tooltip: ""
+	}
+
+	TianQingLangPiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.TianQingLangPiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.TianQingLangPiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.TianQingLangPiGu.GuLevel
+		DisplayName: Tian Qing Lang Pi Gu
+		Tooltip: ""
+	}
+
+	TieShouXXGu: {
+		UsesXQi: Mods.VerminLordMod.Items.TieShouXXGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.TieShouXXGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.TieShouXXGu.GuLevel
+		DisplayName: Tie Shou X X Gu
+		Tooltip: ""
+	}
+
+	TunHuoGu: {
+		UsesXQi: Mods.VerminLordMod.Items.TunHuoGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.TunHuoGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.TunHuoGu.GuLevel
+		DisplayName: Tun Huo Gu
+		Tooltip: ""
+	}
+
+	WindFlowerGu: {
+		UsesXQi: Mods.VerminLordMod.Items.WindFlowerGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.WindFlowerGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.WindFlowerGu.GuLevel
+		DisplayName: Wind Flower Gu
+		Tooltip: ""
+	}
+
+	WuChangGuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.WuChangGuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.WuChangGuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.WuChangGuGu.GuLevel
+		DisplayName: Wu Chang Gu Gu
+		Tooltip: ""
+	}
+
+	X4Gu: {
+		UsesXQi: Mods.VerminLordMod.Items.X4Gu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.X4Gu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.X4Gu.GuLevel
+		DisplayName: X4 Gu
+		Tooltip: ""
+	}
+
+	XingXinGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XingXinGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XingXinGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XingXinGu.GuLevel
+		DisplayName: Xing Xin Gu
+		Tooltip: ""
+	}
+
+	XQingGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XQingGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XQingGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XQingGu.GuLevel
+		DisplayName: X Qing Gu
+		Tooltip: ""
+	}
+
+	XueLuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XueLuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XueLuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XueLuGu.GuLevel
+		DisplayName: Xue Lu Gu
+		Tooltip: ""
+	}
+
+	XXShiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XXShiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XXShiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XXShiGu.GuLevel
+		DisplayName: X X Shi Gu
+		Tooltip: ""
+	}
+
+	YingYangGu: {
+		UsesXQi: Mods.VerminLordMod.Items.YingYangGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.YingYangGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.YingYangGu.GuLevel
+		DisplayName: Ying Yang Gu
+		Tooltip: ""
+	}
+
+	YinYangZhuanShenGu: {
+		UsesXQi: Mods.VerminLordMod.Items.YinYangZhuanShenGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.YinYangZhuanShenGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.YinYangZhuanShenGu.GuLevel
+		DisplayName: Yin Yang Zhuan Shen Gu
+		Tooltip: ""
+	}
+
+	YueYingGu: {
+		UsesXQi: Mods.VerminLordMod.Items.YueYingGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.YueYingGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.YueYingGu.GuLevel
+		DisplayName: Yue Ying Gu
+		Tooltip: ""
+	}
+
+	ZhuJunZiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ZhuJunZiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ZhuJunZiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ZhuJunZiGu.GuLevel
+		DisplayName: Zhu Jun Zi Gu
+		Tooltip: ""
+	}
+
+	BaoDanGuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.BaoDanGuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BaoDanGuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BaoDanGuGu.GuLevel
+		DisplayName: Bao Dan Gu Gu
+		Tooltip: ""
+	}
+
+	BaoXGu: {
+		UsesXQi: Mods.VerminLordMod.Items.BaoXGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BaoXGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BaoXGu.GuLevel
+		DisplayName: Bao X Gu
+		Tooltip: ""
+	}
+
+	ChouPiFeiChongGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ChouPiFeiChongGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ChouPiFeiChongGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ChouPiFeiChongGu.GuLevel
+		DisplayName: Chou Pi Fei Chong Gu
+		Tooltip: ""
+	}
+
+	ChouPiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ChouPiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ChouPiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ChouPiGu.GuLevel
+		DisplayName: Chou Pi Gu
+		Tooltip: ""
+	}
+
+	ChouPiGuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ChouPiGuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ChouPiGuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ChouPiGuGu.GuLevel
+		DisplayName: Chou Pi Gu Gu
+		Tooltip: ""
+	}
+
+	ChuiYanGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ChuiYanGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ChuiYanGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ChuiYanGu.GuLevel
+		DisplayName: Chui Yan Gu
+		Tooltip: ""
+	}
+
+	ChuiYanGuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ChuiYanGuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ChuiYanGuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ChuiYanGuGu.GuLevel
+		DisplayName: Chui Yan Gu Gu
+		Tooltip: ""
+	}
+
+	DaLiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.DaLiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.DaLiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.DaLiGu.GuLevel
+		DisplayName: Da Li Gu
+		Tooltip: ""
+	}
+
+	DaLiGuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.DaLiGuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.DaLiGuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.DaLiGuGu.GuLevel
+		DisplayName: Da Li Gu Gu
+		Tooltip: ""
+	}
+
+	FanDaiCaoGu: {
+		UsesXQi: Mods.VerminLordMod.Items.FanDaiCaoGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.FanDaiCaoGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.FanDaiCaoGu.GuLevel
+		DisplayName: Fan Dai Cao Gu
+		Tooltip: ""
+	}
+
+	FanDaiCaoGuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.FanDaiCaoGuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.FanDaiCaoGuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.FanDaiCaoGuGu.GuLevel
+		DisplayName: Fan Dai Cao Gu Gu
+		Tooltip: ""
+	}
+
+	HenShiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.HenShiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.HenShiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.HenShiGu.GuLevel
+		DisplayName: Hen Shi Gu
+		Tooltip: ""
+	}
+
+	HenShiGuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.HenShiGuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.HenShiGuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.HenShiGuGu.GuLevel
+		DisplayName: Hen Shi Gu Gu
+		Tooltip: ""
+	}
+
+	JiuNangHuaGu: {
+		UsesXQi: Mods.VerminLordMod.Items.JiuNangHuaGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.JiuNangHuaGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.JiuNangHuaGu.GuLevel
+		DisplayName: Jiu Nang Hua Gu
+		Tooltip: ""
+	}
+
+	JiuNangHuaGuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.JiuNangHuaGuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.JiuNangHuaGuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.JiuNangHuaGuGu.GuLevel
+		DisplayName: Jiu Nang Hua Gu Gu
+		Tooltip: ""
+	}
+
+	LiuYingCunShengGu: {
+		UsesXQi: Mods.VerminLordMod.Items.LiuYingCunShengGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.LiuYingCunShengGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.LiuYingCunShengGu.GuLevel
+		DisplayName: Liu Ying Cun Sheng Gu
+		Tooltip: ""
+	}
+
+	LiuYingCunShengGuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.LiuYingCunShengGuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.LiuYingCunShengGuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.LiuYingCunShengGuGu.GuLevel
+		DisplayName: Liu Ying Cun Sheng Gu Gu
+		Tooltip: ""
+	}
+
+	LongWanQuQuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.LongWanQuQuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.LongWanQuQuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.LongWanQuQuGu.GuLevel
+		DisplayName: Long Wan Qu Qu Gu
+		Tooltip: ""
+	}
+
+	LongWanQuQuGuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.LongWanQuQuGuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.LongWanQuQuGuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.LongWanQuQuGuGu.GuLevel
+		DisplayName: Long Wan Qu Qu Gu Gu
+		Tooltip: ""
+	}
+
+	NiXiGuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.NiXiGuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.NiXiGuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.NiXiGuGu.GuLevel
+		DisplayName: Ni Xi Gu Gu
+		Tooltip: ""
+	}
+
+	QingShuiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.QingShuiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.QingShuiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.QingShuiGu.GuLevel
+		DisplayName: Qing Shui Gu
+		Tooltip: ""
+	}
+
+	QingShuiGuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.QingShuiGuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.QingShuiGuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.QingShuiGuGu.GuLevel
+		DisplayName: Qing Shui Gu Gu
+		Tooltip: ""
+	}
+
+	QingSiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.QingSiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.QingSiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.QingSiGu.GuLevel
+		DisplayName: Qing Si Gu
+		Tooltip: ""
+	}
+
+	QingSiGuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.QingSiGuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.QingSiGuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.QingSiGuGu.GuLevel
+		DisplayName: Qing Si Gu Gu
+		Tooltip: ""
+	}
+
+	ShaKengGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ShaKengGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ShaKengGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ShaKengGu.GuLevel
+		DisplayName: Sha Keng Gu
+		Tooltip: ""
+	}
+
+	ShaKengGuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ShaKengGuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ShaKengGuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ShaKengGuGu.GuLevel
+		DisplayName: Sha Keng Gu Gu
+		Tooltip: ""
+	}
+
+	TengXGu: {
+		UsesXQi: Mods.VerminLordMod.Items.TengXGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.TengXGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.TengXGu.GuLevel
+		DisplayName: Teng X Gu
+		Tooltip: ""
+	}
+
+	TengXunGuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.TengXunGuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.TengXunGuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.TengXunGuGu.GuLevel
+		DisplayName: Teng Xun Gu Gu
+		Tooltip: ""
+	}
+
+	XiaoGuangGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XiaoGuangGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XiaoGuangGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XiaoGuangGu.GuLevel
+		DisplayName: Xiao Guang Gu
+		Tooltip: ""
+	}
+
+	XiaoGuangGuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XiaoGuangGuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XiaoGuangGuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XiaoGuangGuGu.GuLevel
+		DisplayName: Xiao Guang Gu Gu
+		Tooltip: ""
+	}
+
+	XShiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XShiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XShiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XShiGu.GuLevel
+		DisplayName: X Shi Gu
+		Tooltip: ""
+	}
+
+	XShiGuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XShiGuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XShiGuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XShiGuGu.GuLevel
+		DisplayName: X Shi Gu Gu
+		Tooltip: ""
+	}
+
+	XuanFengGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XuanFengGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XuanFengGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XuanFengGu.GuLevel
+		DisplayName: Xuan Feng Gu
+		Tooltip: ""
+	}
+
+	XuanFengGuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XuanFengGuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XuanFengGuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XuanFengGuGu.GuLevel
+		DisplayName: Xuan Feng Gu Gu
+		Tooltip: ""
+	}
+
+	XXiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XXiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XXiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XXiGu.GuLevel
+		DisplayName: X Xi Gu
+		Tooltip: ""
+	}
+
+	XXinGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XXinGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XXinGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XXinGu.GuLevel
+		DisplayName: X Xin Gu
+		Tooltip: ""
+	}
+
+	YinShiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.YinShiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.YinShiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.YinShiGu.GuLevel
+		DisplayName: Yin Shi Gu
+		Tooltip: ""
+	}
+
+	YinShiGuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.YinShiGuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.YinShiGuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.YinShiGuGu.GuLevel
+		DisplayName: Yin Shi Gu Gu
+		Tooltip: ""
+	}
+
+	YueGuangGu: {
+		UsesXQi: Mods.VerminLordMod.Items.YueGuangGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.YueGuangGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.YueGuangGu.GuLevel
+		DisplayName: Yue Guang Gu
+		Tooltip: ""
+	}
+
+	YueGuangGuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.YueGuangGuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.YueGuangGuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.YueGuangGuGu.GuLevel
+		DisplayName: Yue Guang Gu Gu
+		Tooltip: ""
+	}
+
+	YueRenGuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.YueRenGuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.YueRenGuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.YueRenGuGu.GuLevel
+		DisplayName: Yue Ren Gu Gu
+		Tooltip: ""
+	}
+
+	YueXGu: {
+		UsesXQi: Mods.VerminLordMod.Items.YueXGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.YueXGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.YueXGu.GuLevel
+		DisplayName: Yue X Gu
+		Tooltip: ""
+	}
+
+	YuPiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.YuPiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.YuPiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.YuPiGu.GuLevel
+		DisplayName: Yu Pi Gu
+		Tooltip: ""
+	}
+
+	YuPiGuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.YuPiGuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.YuPiGuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.YuPiGuGu.GuLevel
+		DisplayName: Yu Pi Gu Gu
+		Tooltip: ""
+	}
+
+	YuQuanGu: {
+		UsesXQi: Mods.VerminLordMod.Items.YuQuanGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.YuQuanGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.YuQuanGu.GuLevel
+		DisplayName: Yu Quan Gu
+		Tooltip: ""
+	}
+
+	YuQuanGuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.YuQuanGuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.YuQuanGuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.YuQuanGuGu.GuLevel
+		DisplayName: Yu Quan Gu Gu
+		Tooltip: ""
+	}
+
+	ZhenXinGuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ZhenXinGuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ZhenXinGuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ZhenXinGuGu.GuLevel
+		DisplayName: Zhen Xin Gu Gu
+		Tooltip: ""
+	}
+
+	ZhiHeGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ZhiHeGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ZhiHeGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ZhiHeGu.GuLevel
+		DisplayName: Zhi He Gu
+		Tooltip: ""
+	}
+
+	ZhiHeGuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ZhiHeGuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ZhiHeGuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ZhiHeGuGu.GuLevel
+		DisplayName: Zhi He Gu Gu
+		Tooltip: ""
+	}
+
+	AnDuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.AnDuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.AnDuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.AnDuGu.GuLevel
+		DisplayName: An Du Gu
+		Tooltip: ""
+	}
+
+	AnJianXianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.AnJianXianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.AnJianXianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.AnJianXianGu.GuLevel
+		DisplayName: An Jian Xian Gu
+		Tooltip: ""
+	}
+
+	BaiWuYiShiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.BaiWuYiShiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BaiWuYiShiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BaiWuYiShiGu.GuLevel
+		DisplayName: Bai Wu Yi Shi Gu
+		Tooltip: ""
+	}
+
+	BaShanGu: {
+		UsesXQi: Mods.VerminLordMod.Items.BaShanGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BaShanGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BaShanGu.GuLevel
+		DisplayName: Ba Shan Gu
+		Tooltip: ""
+	}
+
+	BaShanXianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.BaShanXianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BaShanXianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BaShanXianGu.GuLevel
+		DisplayName: Ba Shan Xian Gu
+		Tooltip: ""
+	}
+
+	BianXingGu: {
+		UsesXQi: Mods.VerminLordMod.Items.BianXingGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BianXingGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BianXingGu.GuLevel
+		DisplayName: Bian Xing Gu
+		Tooltip: ""
+	}
+
+	BianXingXianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.BianXingXianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BianXingXianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BianXingXianGu.GuLevel
+		DisplayName: Bian Xing Xian Gu
+		Tooltip: ""
+	}
+
+	BingPoXianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.BingPoXianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BingPoXianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BingPoXianGu.GuLevel
+		DisplayName: Bing Po Xian Gu
+		Tooltip: ""
+	}
+
+	BingXinXianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.BingXinXianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BingXinXianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BingXinXianGu.GuLevel
+		DisplayName: Bing Xin Xian Gu
+		Tooltip: ""
+	}
+
+	ChaYunXianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ChaYunXianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ChaYunXianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ChaYunXianGu.GuLevel
+		DisplayName: Cha Yun Xian Gu
+		Tooltip: ""
+	}
+
+	ChengZhuXianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ChengZhuXianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ChengZhuXianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ChengZhuXianGu.GuLevel
+		DisplayName: Cheng Zhu Xian Gu
+		Tooltip: ""
+	}
+
+	ChiLiXianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ChiLiXianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ChiLiXianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ChiLiXianGu.GuLevel
+		DisplayName: Chi Li Xian Gu
+		Tooltip: ""
+	}
+
+	ChiXiangXianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ChiXiangXianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ChiXiangXianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ChiXiangXianGu.GuLevel
+		DisplayName: Chi Xiang Xian Gu
+		Tooltip: ""
+	}
+
+	DingLiXianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.DingLiXianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.DingLiXianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.DingLiXianGu.GuLevel
+		DisplayName: Ding Li Xian Gu
+		Tooltip: ""
+	}
+
+	DingXianXXianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.DingXianXXianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.DingXianXXianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.DingXianXXianGu.GuLevel
+		DisplayName: Ding Xian X Xian Gu
+		Tooltip: ""
+	}
+
+	DuanYunXianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.DuanYunXianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.DuanYunXianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.DuanYunXianGu.GuLevel
+		DisplayName: Duan Yun Xian Gu
+		Tooltip: ""
+	}
+
+	DuoSheXianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.DuoSheXianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.DuoSheXianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.DuoSheXianGu.GuLevel
+		DisplayName: Duo She Xian Gu
+		Tooltip: ""
+	}
+
+	FeiXiongXuXiangGu: {
+		UsesXQi: Mods.VerminLordMod.Items.FeiXiongXuXiangGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.FeiXiongXuXiangGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.FeiXiongXuXiangGu.GuLevel
+		DisplayName: Fei Xiong Xu Xiang Gu
+		Tooltip: ""
+	}
+
+	FeiXiongZhiLiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.FeiXiongZhiLiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.FeiXiongZhiLiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.FeiXiongZhiLiGu.GuLevel
+		DisplayName: Fei Xiong Zhi Li Gu
+		Tooltip: ""
+	}
+
+	FeiXiongZhiLiXianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.FeiXiongZhiLiXianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.FeiXiongZhiLiXianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.FeiXiongZhiLiXianGu.GuLevel
+		DisplayName: Fei Xiong Zhi Li Xian Gu
+		Tooltip: ""
+	}
+
+	FengYunGu: {
+		UsesXQi: Mods.VerminLordMod.Items.FengYunGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.FengYunGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.FengYunGu.GuLevel
+		DisplayName: Feng Yun Gu
+		Tooltip: ""
+	}
+
+	FuRenXinXianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.FuRenXinXianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.FuRenXinXianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.FuRenXinXianGu.GuLevel
+		DisplayName: Fu Ren Xin Xian Gu
+		Tooltip: ""
+	}
+
+	GouShiYunGu: {
+		UsesXQi: Mods.VerminLordMod.Items.GouShiYunGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.GouShiYunGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.GouShiYunGu.GuLevel
+		DisplayName: Gou Shi Yun Gu
+		Tooltip: ""
+	}
+
+	GuCiXianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.GuCiXianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.GuCiXianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.GuCiXianGu.GuLevel
+		DisplayName: Gu Ci Xian Gu
+		Tooltip: ""
+	}
+
+	HaoYunXianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.HaoYunXianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.HaoYunXianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.HaoYunXianGu.GuLevel
+		DisplayName: Hao Yun Xian Gu
+		Tooltip: ""
+	}
+
+	JieGu: {
+		UsesXQi: Mods.VerminLordMod.Items.JieGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.JieGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.JieGu.GuLevel
+		DisplayName: Jie Gu
+		Tooltip: ""
+	}
+
+	JieMiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.JieMiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.JieMiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.JieMiGu.GuLevel
+		DisplayName: Jie Mi Gu
+		Tooltip: ""
+	}
+
+	JinGangNianXianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.JinGangNianXianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.JinGangNianXianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.JinGangNianXianGu.GuLevel
+		DisplayName: Jin Gang Nian Xian Gu
+		Tooltip: ""
+	}
+
+	JingHunXianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.JingHunXianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.JingHunXianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.JingHunXianGu.GuLevel
+		DisplayName: Jing Hun Xian Gu
+		Tooltip: ""
+	}
+
+	LeShanLeShuiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.LeShanLeShuiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.LeShanLeShuiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.LeShanLeShuiGu.GuLevel
+		DisplayName: Le Shan Le Shui Gu
+		Tooltip: ""
+	}
+
+	LeShanLeShuiXianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.LeShanLeShuiXianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.LeShanLeShuiXianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.LeShanLeShuiXianGu.GuLevel
+		DisplayName: Le Shan Le Shui Xian Gu
+		Tooltip: ""
+	}
+
+	LianYunXianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.LianYunXianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.LianYunXianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.LianYunXianGu.GuLevel
+		DisplayName: Lian Yun Xian Gu
+		Tooltip: ""
+	}
+
+	MuXGu: {
+		UsesXQi: Mods.VerminLordMod.Items.MuXGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.MuXGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.MuXGu.GuLevel
+		DisplayName: Mu X Gu
+		Tooltip: ""
+	}
+
+	NuShouXianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.NuShouXianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.NuShouXianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.NuShouXianGu.GuLevel
+		DisplayName: Nu Shou Xian Gu
+		Tooltip: ""
+	}
+
+	NuXXianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.NuXXianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.NuXXianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.NuXXianGu.GuLevel
+		DisplayName: Nu X Xian Gu
+		Tooltip: ""
+	}
+
+	PingBuQingXXianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.PingBuQingXXianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.PingBuQingXXianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.PingBuQingXXianGu.GuLevel
+		DisplayName: Ping Bu Qing X Xian Gu
+		Tooltip: ""
+	}
+
+	QiYunGu: {
+		UsesXQi: Mods.VerminLordMod.Items.QiYunGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.QiYunGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.QiYunGu.GuLevel
+		DisplayName: Qi Yun Gu
+		Tooltip: ""
+	}
+
+	QiYunXianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.QiYunXianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.QiYunXianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.QiYunXianGu.GuLevel
+		DisplayName: Qi Yun Xian Gu
+		Tooltip: ""
+	}
+
+	RenXGuXianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.RenXGuXianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.RenXGuXianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.RenXGuXianGu.GuLevel
+		DisplayName: Ren X Gu Xian Gu
+		Tooltip: ""
+	}
+
+	RiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.RiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.RiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.RiGu.GuLevel
+		DisplayName: Ri Gu
+		Tooltip: ""
+	}
+
+	ShanMengGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ShanMengGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ShanMengGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ShanMengGu.GuLevel
+		DisplayName: Shan Meng Gu
+		Tooltip: ""
+	}
+
+	ShanNianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ShanNianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ShanNianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ShanNianGu.GuLevel
+		DisplayName: Shan Nian Gu
+		Tooltip: ""
+	}
+
+	ShiYunGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ShiYunGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ShiYunGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ShiYunGu.GuLevel
+		DisplayName: Shi Yun Gu
+		Tooltip: ""
+	}
+
+	ShunXZhuanGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ShunXZhuanGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ShunXZhuanGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ShunXZhuanGu.GuLevel
+		DisplayName: Shun X Zhuan Gu
+		Tooltip: ""
+	}
+
+	TaoHuaYunXianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.TaoHuaYunXianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.TaoHuaYunXianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.TaoHuaYunXianGu.GuLevel
+		DisplayName: Tao Hua Yun Xian Gu
+		Tooltip: ""
+	}
+
+	TieGuanYingLiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.TieGuanYingLiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.TieGuanYingLiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.TieGuanYingLiGu.GuLevel
+		DisplayName: Tie Guan Ying Li Gu
+		Tooltip: ""
+	}
+
+	TongGanXianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.TongGanXianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.TongGanXianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.TongGanXianGu.GuLevel
+		DisplayName: Tong Gan Xian Gu
+		Tooltip: ""
+	}
+
+	TouShengXianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.TouShengXianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.TouShengXianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.TouShengXianGu.GuLevel
+		DisplayName: Tou Sheng Xian Gu
+		Tooltip: ""
+	}
+
+	WanLanGu: {
+		UsesXQi: Mods.VerminLordMod.Items.WanLanGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.WanLanGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.WanLanGu.GuLevel
+		DisplayName: Wan Lan Gu
+		Tooltip: ""
+	}
+
+	WanLanXianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.WanLanXianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.WanLanXianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.WanLanXianGu.GuLevel
+		DisplayName: Wan Lan Xian Gu
+		Tooltip: ""
+	}
+
+	XingGuangXianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XingGuangXianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XingGuangXianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XingGuangXianGu.GuLevel
+		DisplayName: Xing Guang Xian Gu
+		Tooltip: ""
+	}
+
+	XingHenXianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XingHenXianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XingHenXianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XingHenXianGu.GuLevel
+		DisplayName: Xing Hen Xian Gu
+		Tooltip: ""
+	}
+
+	XingXGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XingXGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XingXGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XingXGu.GuLevel
+		DisplayName: Xing X Gu
+		Tooltip: ""
+	}
+
+	XingXXianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XingXXianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XingXXianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XingXXianGu.GuLevel
+		DisplayName: Xing X Xian Gu
+		Tooltip: ""
+	}
+
+	XJiTianXXianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XJiTianXXianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XJiTianXXianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XJiTianXXianGu.GuLevel
+		DisplayName: X Ji Tian X Xian Gu
+		Tooltip: ""
+	}
+
+	XLiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XLiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XLiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XLiGu.GuLevel
+		DisplayName: X Li Gu
+		Tooltip: ""
+	}
+
+	XShi6Gu: {
+		UsesXQi: Mods.VerminLordMod.Items.XShi6Gu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XShi6Gu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XShi6Gu.GuLevel
+		DisplayName: X Shi6 Gu
+		Tooltip: ""
+	}
+
+	XueXGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XueXGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XueXGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XueXGu.GuLevel
+		DisplayName: Xue X Gu
+		Tooltip: ""
+	}
+
+	XueXXianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XueXXianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XueXXianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XueXXianGu.GuLevel
+		DisplayName: Xue X Xian Gu
+		Tooltip: ""
+	}
+
+	YinYunXianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.YinYunXianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.YinYunXianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.YinYunXianGu.GuLevel
+		DisplayName: Yin Yun Xian Gu
+		Tooltip: ""
+	}
+
+	YunChouXianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.YunChouXianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.YunChouXianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.YunChouXianGu.GuLevel
+		DisplayName: Yun Chou Xian Gu
+		Tooltip: ""
+	}
+
+	ZhuanYunGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ZhuanYunGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ZhuanYunGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ZhuanYunGu.GuLevel
+		DisplayName: Zhuan Yun Gu
+		Tooltip: ""
+	}
+
+	ZhuiNianXianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ZhuiNianXianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ZhuiNianXianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ZhuiNianXianGu.GuLevel
+		DisplayName: Zhui Nian Xian Gu
+		Tooltip: ""
+	}
+
+	ZouYunGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ZouYunGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ZouYunGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ZouYunGu.GuLevel
+		DisplayName: Zou Yun Gu
+		Tooltip: ""
+	}
+
+	BaiXSheXGu: {
+		UsesXQi: Mods.VerminLordMod.Items.BaiXSheXGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BaiXSheXGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BaiXSheXGu.GuLevel
+		DisplayName: Bai X She X Gu
+		Tooltip: ""
+	}
+
+	BaoX3Gu: {
+		UsesXQi: Mods.VerminLordMod.Items.BaoX3Gu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BaoX3Gu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BaoX3Gu.GuLevel
+		DisplayName: Bao X3 Gu
+		Tooltip: ""
+	}
+
+	BeiShanHaMaGu: {
+		UsesXQi: Mods.VerminLordMod.Items.BeiShanHaMaGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BeiShanHaMaGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BeiShanHaMaGu.GuLevel
+		DisplayName: Bei Shan Ha Ma Gu
+		Tooltip: ""
+	}
+
+	BiGuYiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.BiGuYiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BiGuYiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BiGuYiGu.GuLevel
+		DisplayName: Bi Gu Yi Gu
+		Tooltip: ""
+	}
+
+	BoneThornGu: {
+		UsesXQi: Mods.VerminLordMod.Items.BoneThornGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BoneThornGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BoneThornGu.GuLevel
+		DisplayName: Bone Thorn Gu
+		Tooltip: ""
+	}
+
+	ChunYuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ChunYuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ChunYuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ChunYuGu.GuLevel
+		DisplayName: Chun Yu Gu
+		Tooltip: ""
+	}
+
+	DaLiEShiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.DaLiEShiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.DaLiEShiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.DaLiEShiGu.GuLevel
+		DisplayName: Da Li E Shi Gu
+		Tooltip: ""
+	}
+
+	DaoGuangGu: {
+		UsesXQi: Mods.VerminLordMod.Items.DaoGuangGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.DaoGuangGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.DaoGuangGu.GuLevel
+		DisplayName: Dao Guang Gu
+		Tooltip: ""
+	}
+
+	DaoXXueFuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.DaoXXueFuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.DaoXXueFuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.DaoXXueFuGu.GuLevel
+		DisplayName: Dao X Xue Fu Gu
+		Tooltip: ""
+	}
+
+	DouShuaiHuaGu: {
+		UsesXQi: Mods.VerminLordMod.Items.DouShuaiHuaGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.DouShuaiHuaGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.DouShuaiHuaGu.GuLevel
+		DisplayName: Dou Shuai Hua Gu
+		Tooltip: ""
+	}
+
+	DuShiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.DuShiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.DuShiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.DuShiGu.GuLevel
+		DisplayName: Du Shi Gu
+		Tooltip: ""
+	}
+
+	FeiGuDunGu: {
+		UsesXQi: Mods.VerminLordMod.Items.FeiGuDunGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.FeiGuDunGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.FeiGuDunGu.GuLevel
+		DisplayName: Fei Gu Dun Gu
+		Tooltip: ""
+	}
+
+	FeiHunGu: {
+		UsesXQi: Mods.VerminLordMod.Items.FeiHunGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.FeiHunGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.FeiHunGu.GuLevel
+		DisplayName: Fei Hun Gu
+		Tooltip: ""
+	}
+
+	FenShenGu: {
+		UsesXQi: Mods.VerminLordMod.Items.FenShenGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.FenShenGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.FenShenGu.GuLevel
+		DisplayName: Fen Shen Gu
+		Tooltip: ""
+	}
+
+	FlyingBoneShieldGu: {
+		UsesXQi: Mods.VerminLordMod.Items.FlyingBoneShieldGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.FlyingBoneShieldGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.FlyingBoneShieldGu.GuLevel
+		DisplayName: Flying Bone Shield Gu
+		Tooltip: ""
+	}
+
+	FlyingSoulGu: {
+		UsesXQi: Mods.VerminLordMod.Items.FlyingSoulGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.FlyingSoulGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.FlyingSoulGu.GuLevel
+		DisplayName: Flying Soul Gu
+		Tooltip: ""
+	}
+
+	FrostDemonGu: {
+		UsesXQi: Mods.VerminLordMod.Items.FrostDemonGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.FrostDemonGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.FrostDemonGu.GuLevel
+		DisplayName: Frost Demon Gu
+		Tooltip: ""
+	}
+
+	GangYiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.GangYiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.GangYiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.GangYiGu.GuLevel
+		DisplayName: Gang Yi Gu
+		Tooltip: ""
+	}
+
+	GuangZhaGu: {
+		UsesXQi: Mods.VerminLordMod.Items.GuangZhaGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.GuangZhaGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.GuangZhaGu.GuLevel
+		DisplayName: Guang Zha Gu
+		Tooltip: ""
+	}
+
+	GuCiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.GuCiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.GuCiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.GuCiGu.GuLevel
+		DisplayName: Gu Ci Gu
+		Tooltip: ""
+	}
+
+	GuiJiaoGu: {
+		UsesXQi: Mods.VerminLordMod.Items.GuiJiaoGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.GuiJiaoGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.GuiJiaoGu.GuLevel
+		DisplayName: Gui Jiao Gu
+		Tooltip: ""
+	}
+
+	GuiXinGu: {
+		UsesXQi: Mods.VerminLordMod.Items.GuiXinGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.GuiXinGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.GuiXinGu.GuLevel
+		DisplayName: Gui Xin Gu
+		Tooltip: ""
+	}
+
+	HengChongGu: {
+		UsesXQi: Mods.VerminLordMod.Items.HengChongGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.HengChongGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.HengChongGu.GuLevel
+		DisplayName: Heng Chong Gu
+		Tooltip: ""
+	}
+
+	HunLianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.HunLianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.HunLianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.HunLianGu.GuLevel
+		DisplayName: Hun Lian Gu
+		Tooltip: ""
+	}
+
+	HuoZhuaGu: {
+		UsesXQi: Mods.VerminLordMod.Items.HuoZhuaGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.HuoZhuaGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.HuoZhuaGu.GuLevel
+		DisplayName: Huo Zhua Gu
+		Tooltip: ""
+	}
+
+	IceBombGu: {
+		UsesXQi: Mods.VerminLordMod.Items.IceBombGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.IceBombGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.IceBombGu.GuLevel
+		DisplayName: Ice Bomb Gu
+		Tooltip: ""
+	}
+
+	JianYingGu: {
+		UsesXQi: Mods.VerminLordMod.Items.JianYingGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.JianYingGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.JianYingGu.GuLevel
+		DisplayName: Jian Ying Gu
+		Tooltip: ""
+	}
+
+	JinCanGu: {
+		UsesXQi: Mods.VerminLordMod.Items.JinCanGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.JinCanGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.JinCanGu.GuLevel
+		DisplayName: Jin Can Gu
+		Tooltip: ""
+	}
+
+	JinGangGu: {
+		UsesXQi: Mods.VerminLordMod.Items.JinGangGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.JinGangGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.JinGangGu.GuLevel
+		DisplayName: Jin Gang Gu
+		Tooltip: ""
+	}
+
+	JuChiJinWuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.JuChiJinWuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.JuChiJinWuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.JuChiJinWuGu.GuLevel
+		DisplayName: Ju Chi Jin Wu Gu
+		Tooltip: ""
+	}
+
+	LangHunGu: {
+		UsesXQi: Mods.VerminLordMod.Items.LangHunGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.LangHunGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.LangHunGu.GuLevel
+		DisplayName: Lang Hun Gu
+		Tooltip: ""
+	}
+
+	LanNiaoBingGuanGu: {
+		UsesXQi: Mods.VerminLordMod.Items.LanNiaoBingGuanGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.LanNiaoBingGuanGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.LanNiaoBingGuanGu.GuLevel
+		DisplayName: Lan Niao Bing Guan Gu
+		Tooltip: ""
+	}
+
+	LeiGuDunGu: {
+		UsesXQi: Mods.VerminLordMod.Items.LeiGuDunGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.LeiGuDunGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.LeiGuDunGu.GuLevel
+		DisplayName: Lei Gu Dun Gu
+		Tooltip: ""
+	}
+
+	LeiYiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.LeiYiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.LeiYiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.LeiYiGu.GuLevel
+		DisplayName: Lei Yi Gu
+		Tooltip: ""
+	}
+
+	LuoXuanShuiJianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.LuoXuanShuiJianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.LuoXuanShuiJianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.LuoXuanShuiJianGu.GuLevel
+		DisplayName: Luo Xuan Shui Jian Gu
+		Tooltip: ""
+	}
+
+	MengHanDieGu: {
+		UsesXQi: Mods.VerminLordMod.Items.MengHanDieGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.MengHanDieGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.MengHanDieGu.GuLevel
+		DisplayName: Meng Han Die Gu
+		Tooltip: ""
+	}
+
+	QiNangGu: {
+		UsesXQi: Mods.VerminLordMod.Items.QiNangGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.QiNangGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.QiNangGu.GuLevel
+		DisplayName: Qi Nang Gu
+		Tooltip: ""
+	}
+
+	QinGu: {
+		UsesXQi: Mods.VerminLordMod.Items.QinGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.QinGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.QinGu.GuLevel
+		DisplayName: Qin Gu
+		Tooltip: ""
+	}
+
+	QiXiangJiuChongGu: {
+		UsesXQi: Mods.VerminLordMod.Items.QiXiangJiuChongGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.QiXiangJiuChongGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.QiXiangJiuChongGu.GuLevel
+		DisplayName: Qi Xiang Jiu Chong Gu
+		Tooltip: ""
+	}
+
+	QuanLiXFuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.QuanLiXFuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.QuanLiXFuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.QuanLiXFuGu.GuLevel
+		DisplayName: Quan Li X Fu Gu
+		Tooltip: ""
+	}
+
+	RenShouXShengGu: {
+		UsesXQi: Mods.VerminLordMod.Items.RenShouXShengGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.RenShouXShengGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.RenShouXShengGu.GuLevel
+		DisplayName: Ren Shou X Sheng Gu
+		Tooltip: ""
+	}
+
+	RenYaoGu: {
+		UsesXQi: Mods.VerminLordMod.Items.RenYaoGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.RenYaoGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.RenYaoGu.GuLevel
+		DisplayName: Ren Yao Gu
+		Tooltip: ""
+	}
+
+	SanZhuanYuLangGu: {
+		UsesXQi: Mods.VerminLordMod.Items.SanZhuanYuLangGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.SanZhuanYuLangGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.SanZhuanYuLangGu.GuLevel
+		DisplayName: San Zhuan Yu Lang Gu
+		Tooltip: ""
+	}
+
+	ShengShengXXiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ShengShengXXiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ShengShengXXiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ShengShengXXiGu.GuLevel
+		DisplayName: Sheng Sheng X Xi Gu
+		Tooltip: ""
+	}
+
+	ShiXGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ShiXGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ShiXGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ShiXGu.GuLevel
+		DisplayName: Shi X Gu
+		Tooltip: ""
+	}
+
+	ShouXGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ShouXGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ShouXGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ShouXGu.GuLevel
+		DisplayName: Shou X Gu
+		Tooltip: ""
+	}
+
+	ShuangTuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ShuangTuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ShuangTuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ShuangTuGu.GuLevel
+		DisplayName: Shuang Tu Gu
+		Tooltip: ""
+	}
+
+	ShuangYaoGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ShuangYaoGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ShuangYaoGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ShuangYaoGu.GuLevel
+		DisplayName: Shuang Yao Gu
+		Tooltip: ""
+	}
+
+	ShuiJiaGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ShuiJiaGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ShuiJiaGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ShuiJiaGu.GuLevel
+		DisplayName: Shui Jia Gu
+		Tooltip: ""
+	}
+
+	ShuiJiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ShuiJiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ShuiJiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ShuiJiGu.GuLevel
+		DisplayName: Shui Ji Gu
+		Tooltip: ""
+	}
+
+	ShuiLaoGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ShuiLaoGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ShuiLaoGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ShuiLaoGu.GuLevel
+		DisplayName: Shui Lao Gu
+		Tooltip: ""
+	}
+
+	SouHunGu: {
+		UsesXQi: Mods.VerminLordMod.Items.SouHunGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.SouHunGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.SouHunGu.GuLevel
+		DisplayName: Sou Hun Gu
+		Tooltip: ""
+	}
+
+	ThunderWingGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ThunderWingGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ThunderWingGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ThunderWingGu.GuLevel
+		DisplayName: Thunder Wing Gu
+		Tooltip: ""
+	}
+
+	TieGuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.TieGuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.TieGuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.TieGuGu.GuLevel
+		DisplayName: Tie Gu Gu
+		Tooltip: ""
+	}
+
+	TieShouGu: {
+		UsesXQi: Mods.VerminLordMod.Items.TieShouGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.TieShouGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.TieShouGu.GuLevel
+		DisplayName: Tie Shou Gu
+		Tooltip: ""
+	}
+
+	TongPiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.TongPiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.TongPiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.TongPiGu.GuLevel
+		DisplayName: Tong Pi Gu
+		Tooltip: ""
+	}
+
+	WuQueGu: {
+		UsesXQi: Mods.VerminLordMod.Items.WuQueGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.WuQueGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.WuQueGu.GuLevel
+		DisplayName: Wu Que Gu
+		Tooltip: ""
+	}
+
+	XBaiGuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XBaiGuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XBaiGuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XBaiGuGu.GuLevel
+		DisplayName: X Bai Gu Gu
+		Tooltip: ""
+	}
+
+	XChongGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XChongGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XChongGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XChongGu.GuLevel
+		DisplayName: X Chong Gu
+		Tooltip: ""
+	}
+
+	XingYingGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XingYingGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XingYingGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XingYingGu.GuLevel
+		DisplayName: Xing Ying Gu
+		Tooltip: ""
+	}
+
+	XLiGengShengGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XLiGengShengGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XLiGengShengGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XLiGengShengGu.GuLevel
+		DisplayName: X Li Geng Sheng Gu
+		Tooltip: ""
+	}
+
+	XLingXinGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XLingXinGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XLingXinGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XLingXinGu.GuLevel
+		DisplayName: X Ling Xin Gu
+		Tooltip: ""
+	}
+
+	XSiCaoGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XSiCaoGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XSiCaoGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XSiCaoGu.GuLevel
+		DisplayName: X Si Cao Gu
+		Tooltip: ""
+	}
+
+	XueQiuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XueQiuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XueQiuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XueQiuGu.GuLevel
+		DisplayName: Xue Qiu Gu
+		Tooltip: ""
+	}
+
+	XueYueGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XueYueGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XueYueGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XueYueGu.GuLevel
+		DisplayName: Xue Yue Gu
+		Tooltip: ""
+	}
+
+	XunYingGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XunYingGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XunYingGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XunYingGu.GuLevel
+		DisplayName: Xun Ying Gu
+		Tooltip: ""
+	}
+
+	XXiaGu: {
+		UsesXQi: Mods.VerminLordMod.Items.XXiaGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XXiaGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XXiaGu.GuLevel
+		DisplayName: X Xia Gu
+		Tooltip: ""
+	}
+
+	XXin3Gu: {
+		UsesXQi: Mods.VerminLordMod.Items.XXin3Gu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.XXin3Gu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.XXin3Gu.GuLevel
+		DisplayName: X Xin3 Gu
+		Tooltip: ""
+	}
+
+	YanXWuXinGu: {
+		UsesXQi: Mods.VerminLordMod.Items.YanXWuXinGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.YanXWuXinGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.YanXWuXinGu.GuLevel
+		DisplayName: Yan X Wu Xin Gu
+		Tooltip: ""
+	}
+
+	YuanLaoGu: {
+		UsesXQi: Mods.VerminLordMod.Items.YuanLaoGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.YuanLaoGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.YuanLaoGu.GuLevel
+		DisplayName: Yuan Lao Gu
+		Tooltip: ""
+	}
+
+	ZhaLeiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ZhaLeiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ZhaLeiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ZhaLeiGu.GuLevel
+		DisplayName: Zha Lei Gu
+		Tooltip: ""
+	}
+
+	BaiChongJianGu: {
+		UsesXQi: Mods.VerminLordMod.Items.BaiChongJianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BaiChongJianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BaiChongJianGu.GuLevel
+		DisplayName: Bai Chong Jian Gu
+		Tooltip: ""
+	}
+
+	BaiYuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.BaiYuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BaiYuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BaiYuGu.GuLevel
+		DisplayName: Bai Yu Gu
+		Tooltip: ""
+	}
+
+	BingXGu: {
+		UsesXQi: Mods.VerminLordMod.Items.BingXGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BingXGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BingXGu.GuLevel
+		DisplayName: Bing X Gu
+		Tooltip: ""
+	}
+
+	BingZhuiGu: {
+		UsesXQi: Mods.VerminLordMod.Items.BingZhuiGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.BingZhuiGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.BingZhuiGu.GuLevel
+		DisplayName: Bing Zhui Gu
+		Tooltip: ""
+	}
+
+	ChiTieSheXGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ChiTieSheXGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ChiTieSheXGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ChiTieSheXGu.GuLevel
+		DisplayName: Chi Tie She X Gu
+		Tooltip: ""
+	}
+
+	DaDuWaGu: {
+		UsesXQi: Mods.VerminLordMod.Items.DaDuWaGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.DaDuWaGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.DaDuWaGu.GuLevel
+		DisplayName: Da Du Wa Gu
+		Tooltip: ""
+	}
+
+	DaHunChongGu: {
+		UsesXQi: Mods.VerminLordMod.Items.DaHunChongGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.DaHunChongGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.DaHunChongGu.GuLevel
+		DisplayName: Da Hun Chong Gu
+		Tooltip: ""
+	}
+
+	DaoLinWangGu: {
+		UsesXQi: Mods.VerminLordMod.Items.DaoLinWangGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.DaoLinWangGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.DaoLinWangGu.GuLevel
+		DisplayName: Dao Lin Wang Gu
+		Tooltip: ""
+	}
+
+	DianJiangGu: {
+		UsesXQi: Mods.VerminLordMod.Items.DianJiangGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.DianJiangGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.DianJiangGu.GuLevel
+		DisplayName: Dian Jiang Gu
+		Tooltip: ""
+	}
+
+	DiXXXCaoGu: {
+		UsesXQi: Mods.VerminLordMod.Items.DiXXXCaoGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.DiXXXCaoGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.DiXXXCaoGu.GuLevel
+		DisplayName: Di X X X Cao Gu
+		Tooltip: ""
+	}
+
+	ErZhuanYuLangGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ErZhuanYuLangGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.ErZhuanYuLangGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.ErZhuanYuLangGu.GuLevel
+		DisplayName: Er Zhuan Yu Lang Gu
+		Tooltip: ""
+	}
+
+	FuXueCaoGu: {
+		UsesXQi: Mods.VerminLordMod.Items.FuXueCaoGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.FuXueCaoGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.FuXueCaoGu.GuLevel
+		DisplayName: Fu Xue Cao Gu
+		Tooltip: ""
+	}
+
+	GouXGu: {
+		UsesXQi: Mods.VerminLordMod.Items.GouXGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.GouXGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.GouXGu.GuLevel
+		DisplayName: Gou X Gu
+		Tooltip: ""
+	}
+
+	GuangQiuGu: {
+		UsesXQi: Mods.VerminLordMod.Items.GuangQiuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.GuangQiuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.GuangQiuGu.GuLevel
+		DisplayName: Guang Qiu Gu
+		Tooltip: ""
+	}
+
+	HongYanMangGu: {
+		UsesXQi: Mods.VerminLordMod.Items.HongYanMangGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.HongYanMangGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.HongYanMangGu.GuLevel
+		DisplayName: Hong Yan Mang Gu
+		Tooltip: ""
+	}
+
+	JinZhenGu: {
+		UsesXQi: Mods.VerminLordMod.Items.JinZhenGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.JinZhenGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.JinZhenGu.GuLevel
+		DisplayName: Jin Zhen Gu
+		Tooltip: ""
+	}
+
+	JiuYeShengXCaoGu: {
+		UsesXQi: Mods.VerminLordMod.Items.JiuYeShengXCaoGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.JiuYeShengXCaoGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.JiuYeShengXCaoGu.GuLevel
+		DisplayName: Jiu Ye Sheng X Cao Gu
+		Tooltip: ""
+	}
+
+	LaiTuHaMaGu: {
+		UsesXQi: Mods.VerminLordMod.Items.LaiTuHaMaGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.LaiTuHaMaGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.LaiTuHaMaGu.GuLevel
+		DisplayName: Lai Tu Ha Ma Gu
+		Tooltip: ""
+	}
+
+	LuoXuanGuQiangGu: {
+		UsesXQi: Mods.VerminLordMod.Items.LuoXuanGuQiangGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.LuoXuanGuQiangGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.LuoXuanGuQiangGu.GuLevel
+		DisplayName: Luo Xuan Gu Qiang Gu
+		Tooltip: ""
+	}
+
+	ShengTieGu: {
+		UsesXQi: Mods.VerminLordMod.Items.ShengTieGu.UsesXQi
+		GuLevel: Mods.VerminLordMod.Items.ShengTieGu.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.ShengTieGu.ControlRate
+		DisplayName: Sheng Tie Gu
+		Tooltip: ""
+	}
+
+	ZhanLiZhuWangGu: {
+		GuLevel: Mods.VerminLordMod.Items.ZhanLiZhuWangGu.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.ZhanLiZhuWangGu.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.ZhanLiZhuWangGu.UsesXQi
+		DisplayName: Zhan Li Zhu Wang Gu
+		Tooltip: ""
+	}
+
+	YueXXGu: {
+		GuLevel: Mods.VerminLordMod.Items.YueXXGu.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.YueXXGu.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.YueXXGu.UsesXQi
+		DisplayName: Yue X X Gu
+		Tooltip: ""
+	}
+
+	YueXuanGu: {
+		GuLevel: Mods.VerminLordMod.Items.YueXuanGu.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.YueXuanGu.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.YueXuanGu.UsesXQi
+		DisplayName: Yue Xuan Gu
+		Tooltip: ""
+	}
+
+	YueX2Gu: {
+		GuLevel: Mods.VerminLordMod.Items.YueX2Gu.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.YueX2Gu.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.YueX2Gu.UsesXQi
+		DisplayName: Yue X2 Gu
+		Tooltip: ""
+	}
+
+	YueHenGu: {
+		GuLevel: Mods.VerminLordMod.Items.YueHenGu.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.YueHenGu.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.YueHenGu.UsesXQi
+		DisplayName: Yue Hen Gu
+		Tooltip: ""
+	}
+
+	YinLinGu: {
+		GuLevel: Mods.VerminLordMod.Items.YinLinGu.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.YinLinGu.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.YinLinGu.UsesXQi
+		DisplayName: Yin Lin Gu
+		Tooltip: ""
+	}
+
+	YaoYueGu: {
+		GuLevel: Mods.VerminLordMod.Items.YaoYueGu.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.YaoYueGu.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.YaoYueGu.UsesXQi
+		DisplayName: Yao Yue Gu
+		Tooltip: ""
+	}
+
+	XXGu: {
+		GuLevel: Mods.VerminLordMod.Items.XXGu.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.XXGu.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.XXGu.UsesXQi
+		DisplayName: X X Gu
+		Tooltip: ""
+	}
+
+	XShi2Gu: {
+		GuLevel: Mods.VerminLordMod.Items.XShi2Gu.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.XShi2Gu.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.XShi2Gu.UsesXQi
+		DisplayName: X Shi2 Gu
+		Tooltip: ""
+	}
+
+	XShengGu: {
+		GuLevel: Mods.VerminLordMod.Items.XShengGu.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.XShengGu.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.XShengGu.UsesXQi
+		DisplayName: X Sheng Gu
+		Tooltip: ""
+	}
+
+	XLeiTuDouGu: {
+		GuLevel: Mods.VerminLordMod.Items.XLeiTuDouGu.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.XLeiTuDouGu.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.XLeiTuDouGu.UsesXQi
+		DisplayName: X Lei Tu Dou Gu
+		Tooltip: ""
+	}
+
+	XinYinGu: {
+		GuLevel: Mods.VerminLordMod.Items.XinYinGu.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.XinYinGu.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.XinYinGu.UsesXQi
+		DisplayName: Xin Yin Gu
+		Tooltip: ""
+	}
+
+	TouXiGu: {
+		GuLevel: Mods.VerminLordMod.Items.TouXiGu.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.TouXiGu.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.TouXiGu.UsesXQi
+		DisplayName: Tou Xi Gu
+		Tooltip: ""
+	}
+
+	SongZhenGu: {
+		GuLevel: Mods.VerminLordMod.Items.SongZhenGu.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.SongZhenGu.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.SongZhenGu.UsesXQi
+		DisplayName: Song Zhen Gu
+		Tooltip: ""
+	}
+
+	SiWeiJiuChongGu: {
+		GuLevel: Mods.VerminLordMod.Items.SiWeiJiuChongGu.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.SiWeiJiuChongGu.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.SiWeiJiuChongGu.UsesXQi
+		DisplayName: Si Wei Jiu Chong Gu
+		Tooltip: ""
+	}
+
+	ShuiXGu: {
+		GuLevel: Mods.VerminLordMod.Items.ShuiXGu.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.ShuiXGu.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.ShuiXGu.UsesXQi
+		DisplayName: Shui X Gu
+		Tooltip: ""
+	}
+
+	ShuiKeGu: {
+		GuLevel: Mods.VerminLordMod.Items.ShuiKeGu.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.ShuiKeGu.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.ShuiKeGu.UsesXQi
+		DisplayName: Shui Ke Gu
+		Tooltip: ""
+	}
+
+	SheXinGu: {
+		GuLevel: Mods.VerminLordMod.Items.SheXinGu.GuLevel
+		ControlRate: Mods.VerminLordMod.Items.SheXinGu.ControlRate
+		UsesXQi: Mods.VerminLordMod.Items.SheXinGu.UsesXQi
+		DisplayName: She Xin Gu
+		Tooltip: ""
+	}
+
+	乾坤晶壁雏形: {
+		DisplayName: 乾坤晶壁雏形
+		Tooltip: ""
+	}
+
+	兽皮地图: {
+		DisplayName: 兽皮地图
+		Tooltip: ""
+	}
+
+	黑白颠倒云: {
+		DisplayName: 黑白颠倒云
+		Tooltip: ""
+	}
+
+	影壁: {
+		DisplayName: 影壁
+		Tooltip: ""
+	}
+
+	气泡鱼: {
+		DisplayName: 气泡鱼
+		Tooltip: ""
+	}
+
+	火虹茶: {
+		DisplayName: 火虹茶
+		Tooltip: ""
+	}
+
+	猴儿酒: {
+		DisplayName: 猴儿酒
+		Tooltip: ""
+	}
+
+	生机叶: {
+		DisplayName: 生机叶
+		Tooltip: ""
+	}
+
+	百年苦贝: {
+		DisplayName: 百年苦贝
+		Tooltip: ""
+	}
+
+	苦贝酒: {
+		DisplayName: 苦贝酒
+		Tooltip: ""
+	}
+
+	野猪獠牙: {
+		DisplayName: 野猪獠牙
+		Tooltip: ""
+	}
+
+	青竹酒: {
+		DisplayName: 青竹酒
+		Tooltip: ""
+	}
+
+	真绸: {
+		DisplayName: 真绸
+		Tooltip: ""
+	}
+
+	万目大明牛: {
+		DisplayName: 万目大明牛
+		Tooltip: ""
+	}
+
+	中央大殿: {
+		DisplayName: 中央大殿
+		Tooltip: ""
+	}
+
+	九子龙图: {
+		DisplayName: 九子龙图
+		Tooltip: ""
+	}
+
+	九宫鹤: {
+		DisplayName: 九宫鹤
+		Tooltip: ""
+	}
+
+	乾清一气: {
+		DisplayName: 乾清一气
+		Tooltip: ""
+	}
+
+	五光山: {
+		DisplayName: 五光山
+		Tooltip: ""
+	}
+
+	五相赌斗门: {
+		DisplayName: 五相赌斗门
+		Tooltip: ""
+	}
+
+	人海雏形: {
+		DisplayName: 人海雏形
+		Tooltip: ""
+	}
+
+	仙元石: {
+		DisplayName: 仙元石
+		Tooltip: ""
+	}
+
+	任务榜: {
+		DisplayName: 任务榜
+		Tooltip: ""
+	}
+
+	光明华轮火: {
+		DisplayName: 光明华轮火
+		Tooltip: ""
+	}
+
+	兑换榜: {
+		DisplayName: 兑换榜
+		Tooltip: ""
+	}
+
+	六声茶: {
+		DisplayName: 六声茶
+		Tooltip: ""
+	}
+
+	六头大蛇黑血: {
+		DisplayName: 六头大蛇黑血
+		Tooltip: ""
+	}
+
+	军团蚁: {
+		DisplayName: 军团蚁
+		Tooltip: ""
+	}
+
+	刺脊星龙鱼: {
+		DisplayName: 刺脊星龙鱼
+		Tooltip: ""
+	}
+
+	功德方尖碑: {
+		DisplayName: 功德方尖碑
+		Tooltip: ""
+	}
+
+	合鸣鹰: {
+		DisplayName: 合鸣鹰
+		Tooltip: ""
+	}
+
+	地极天罡: {
+		DisplayName: 地极天罡
+		Tooltip: ""
+	}
+
+	地煞粉: {
+		DisplayName: 地煞粉
+		Tooltip: ""
+	}
+
+	地老木: {
+		DisplayName: 地老木
+		Tooltip: ""
+	}
+
+	夜狼皇: {
+		DisplayName: 夜狼皇
+		Tooltip: ""
+	}
+
+	天柱风: {
+		DisplayName: 天柱风
+		Tooltip: ""
+	}
+
+	天露: {
+		DisplayName: 天露
+		Tooltip: ""
+	}
+
+	天龙完整骨骼: {
+		DisplayName: 天龙完整骨骼
+		Tooltip: ""
+	}
+
+	孪生冰心: {
+		DisplayName: 孪生冰心
+		Tooltip: ""
+	}
+
+	宠心: {
+		DisplayName: 宠心
+		Tooltip: ""
+	}
+
+	小箭尾雕: {
+		DisplayName: 小箭尾雕
+		Tooltip: ""
+	}
+
+	巨音贝: {
+		DisplayName: 巨音贝
+		Tooltip: ""
+	}
+
+	市井: {
+		DisplayName: 市井
+		Tooltip: ""
+	}
+
+	幽火龙蟒: {
+		DisplayName: 幽火龙蟒
+		Tooltip: ""
+	}
+
+	心境: {
+		DisplayName: 心境
+		Tooltip: ""
+	}
+
+	怨气泥人: {
+		DisplayName: 怨气泥人
+		Tooltip: ""
+	}
+
+	战功榜: {
+		DisplayName: 战功榜
+		Tooltip: ""
+	}
+
+	散文鲤: {
+		DisplayName: 散文鲤
+		Tooltip: ""
+	}
+
+	斑斓霸王花: {
+		DisplayName: 斑斓霸王花
+		Tooltip: ""
+	}
+
+	斑虎蜜蜂蜂翅: {
+		DisplayName: 斑虎蜜蜂蜂翅
+		Tooltip: ""
+	}
+
+	无常石: {
+		DisplayName: 无常石
+		Tooltip: ""
+	}
+
+	星夜黏涎: {
+		DisplayName: 星夜黏涎
+		Tooltip: ""
+	}
+
+	星意: {
+		DisplayName: 星意
+		Tooltip: ""
+	}
+
+	星辰石: {
+		DisplayName: 星辰石
+		Tooltip: ""
+	}
+
+	暗流金钢: {
+		DisplayName: 暗流金钢
+		Tooltip: ""
+	}
+
+	月兰花: {
+		DisplayName: 月兰花
+		Tooltip: ""
+	}
+
+	板栗牦牛: {
+		DisplayName: 板栗牦牛
+		Tooltip: ""
+	}
+
+	棺材: {
+		DisplayName: 棺材
+		Tooltip: ""
+	}
+
+	正天银: {
+		DisplayName: 正天银
+		Tooltip: ""
+	}
+
+	气功果核: {
+		DisplayName: 气功果核
+		Tooltip: ""
+	}
+
+	水核: {
+		DisplayName: 水核
+		Tooltip: ""
+	}
+
+	法眼血: {
+		DisplayName: 法眼血
+		Tooltip: ""
+	}
+
+	泥沼蟹: {
+		DisplayName: 泥沼蟹
+		Tooltip: ""
+	}
+
+	流光果: {
+		DisplayName: 流光果
+		Tooltip: ""
+	}
+
+	涛声依旧: {
+		DisplayName: 涛声依旧
+		Tooltip: ""
+	}
+
+	混天鹰: {
+		DisplayName: 混天鹰
+		Tooltip: ""
+	}
+
+	漂游炼巢: {
+		DisplayName: 漂游炼巢
+		Tooltip: ""
+	}
+
+	火炭石: {
+		DisplayName: 火炭石
+		Tooltip: ""
+	}
+
+	炎鸿石: {
+		DisplayName: 炎鸿石
+		Tooltip: ""
+	}
+
+	炼道大阵: {
+		DisplayName: 炼道大阵
+		Tooltip: ""
+	}
+
+	物品寒玉: {
+		DisplayName: 物品寒玉
+		Tooltip: ""
+	}
+
+	物品神鹿果: {
+		DisplayName: 物品神鹿果
+		Tooltip: ""
+	}
+
+	物品龙鱼: {
+		DisplayName: 物品龙鱼
+		Tooltip: ""
+	}
+
+	物品龙鳞土: {
+		DisplayName: 物品龙鳞土
+		Tooltip: ""
+	}
+
+	珍珠土: {
+		DisplayName: 珍珠土
+		Tooltip: ""
+	}
+
+	珠线水: {
+		DisplayName: 珠线水
+		Tooltip: ""
+	}
+
+	真武鲤: {
+		DisplayName: 真武鲤
+		Tooltip: ""
+	}
+
+	眠云棺椁: {
+		DisplayName: 眠云棺椁
+		Tooltip: ""
+	}
+
+	石猴毫毛: {
+		DisplayName: 石猴毫毛
+		Tooltip: ""
+	}
+
+	紫金化石: {
+		DisplayName: 紫金化石
+		Tooltip: ""
+	}
+
+	紫金石: {
+		DisplayName: 紫金石
+		Tooltip: ""
+	}
+
+	红莲鬼脸: {
+		DisplayName: 红莲鬼脸
+		Tooltip: ""
+	}
+
+	缘木: {
+		DisplayName: 缘木
+		Tooltip: ""
+	}
+
+	脉轮瓜: {
+		DisplayName: 脉轮瓜
+		Tooltip: ""
+	}
+
+	血海雏形: {
+		DisplayName: 血海雏形
+		Tooltip: ""
+	}
+
+	裂天粉: {
+		DisplayName: 裂天粉
+		Tooltip: ""
+	}
+
+	贡献榜: {
+		DisplayName: 贡献榜
+		Tooltip: ""
+	}
+
+	赤练金: {
+		DisplayName: 赤练金
+		Tooltip: ""
+	}
+
+	走肉树: {
+		DisplayName: 走肉树
+		Tooltip: ""
+	}
+
+	超级仙阵: {
+		DisplayName: 超级仙阵
+		Tooltip: ""
+	}
+
+	追虹鹰: {
+		DisplayName: 追虹鹰
+		Tooltip: ""
+	}
+
+	金晓大殿: {
+		DisplayName: 金晓大殿
+		Tooltip: ""
+	}
+
+	金精: {
+		DisplayName: 金精
+		Tooltip: ""
+	}
+
+	金龙鱼: {
+		DisplayName: 金龙鱼
+		Tooltip: ""
+	}
+
+	铁冠鹰: {
+		DisplayName: 铁冠鹰
+		Tooltip: ""
+	}
+
+	铁喙飞鹤: {
+		DisplayName: 铁喙飞鹤
+		Tooltip: ""
+	}
+
+	铁龙鱼: {
+		DisplayName: 铁龙鱼
+		Tooltip: ""
+	}
+
+	铜龙鱼: {
+		DisplayName: 铜龙鱼
+		Tooltip: ""
+	}
+
+	银龙鱼: {
+		DisplayName: 银龙鱼
+		Tooltip: ""
+	}
+
+	镇魔塔: {
+		DisplayName: 镇魔塔
+		Tooltip: ""
+	}
+
+	长恨蛛: {
+		DisplayName: 长恨蛛
+		Tooltip: ""
+	}
+
+	附天菌: {
+		DisplayName: 附天菌
+		Tooltip: ""
+	}
+
+	雪莲花精: {
+		DisplayName: 雪莲花精
+		Tooltip: ""
+	}
+
+	霸铜: {
+		DisplayName: 霸铜
+		Tooltip: ""
+	}
+
+	青玉风流: {
+		DisplayName: 青玉风流
+		Tooltip: ""
+	}
+
+	青矛竹: {
+		DisplayName: 青矛竹
+		Tooltip: ""
+	}
+
+	青铜面具: {
+		DisplayName: 青铜面具
+		Tooltip: ""
+	}
+
+	风狼王: {
+		DisplayName: 风狼王
+		Tooltip: ""
+	}
+
+	飞沙地洞: {
+		DisplayName: 飞沙地洞
+		Tooltip: ""
+	}
+
+	饮刃酒: {
+		DisplayName: 饮刃酒
+		Tooltip: ""
+	}
+
+	马群: {
+		DisplayName: 马群
+		Tooltip: ""
+	}
+
+	骨刺: {
+		DisplayName: 骨刺
+		Tooltip: ""
+	}
+
+	鬼嘤音: {
+		DisplayName: 鬼嘤音
+		Tooltip: ""
+	}
+
+	魅蓝电影: {
+		DisplayName: 魅蓝电影
+		Tooltip: ""
+	}
+
+	鸡年兽: {
+		DisplayName: 鸡年兽
+		Tooltip: ""
+	}
+
+	黄玉狮子: {
+		DisplayName: 黄玉狮子
+		Tooltip: ""
+	}
+
+	黑油: {
+		DisplayName: 黑油
+		Tooltip: ""
+	}
+
+	黑金铠甲: {
+		DisplayName: 黑金铠甲
+		Tooltip: ""
+	}
+
+	光照菌: {
+		DisplayName: 光照菌
+		Tooltip: ""
+	}
+
+	地藏花: {
+		DisplayName: 地藏花
+		Tooltip: ""
+	}
+
+	巨人草: {
+		DisplayName: 巨人草
+		Tooltip: ""
+	}
+
+	星屑草: {
+		DisplayName: 星屑草
+		Tooltip: ""
+	}
+
+	春梦果树: {
+		DisplayName: 春梦果树
+		Tooltip: ""
+	}
+
+	知心草: {
+		DisplayName: 知心草
+		Tooltip: ""
+	}
+
+	血毒棠: {
+		DisplayName: 血毒棠
+		Tooltip: ""
+	}
+
+	血镰草: {
+		DisplayName: 血镰草
+		Tooltip: ""
+	}
+
+	赤斧花: {
+		DisplayName: 赤斧花
+		Tooltip: ""
+	}
+
+	金簪草: {
+		DisplayName: 金簪草
+		Tooltip: ""
+	}
+
+	针灸树: {
+		DisplayName: 针灸树
+		Tooltip: ""
+	}
+
+	铁壳花: {
+		DisplayName: 铁壳花
+		Tooltip: ""
+	}
+
+	风结草: {
+		DisplayName: 风结草
+		Tooltip: ""
+	}
+
+	人祖传: {
+		DisplayName: 人祖传
+		Tooltip: ""
+	}
+
+	传承印记: {
+		DisplayName: 传承印记
+		Tooltip: ""
+	}
+
+	天难真传: {
+		DisplayName: 天难真传
+		Tooltip: ""
+	}
+
+	灰白石板: {
+		DisplayName: 灰白石板
+		Tooltip: ""
+	}
+
+	灰骨巨书: {
+		DisplayName: 灰骨巨书
+		Tooltip: ""
+	}
+
+	白骨秘方: {
+		DisplayName: 白骨秘方
+		Tooltip: ""
+	}
+
+	第十三座鹰巢: {
+		DisplayName: 第十三座鹰巢
+		Tooltip: ""
+	}
+
+	一缺抱憾亭: {
+		DisplayName: 一缺抱憾亭
+		Tooltip: ""
+	}
+
+	万岁楼: {
+		DisplayName: 万岁楼
+		Tooltip: ""
+	}
+
+	万年斗飞车: {
+		DisplayName: 万年斗飞车
+		Tooltip: ""
+	}
+
+	万象宫殿: {
+		DisplayName: 万象宫殿
+		Tooltip: ""
+	}
+
+	万里丝廊: {
+		DisplayName: 万里丝廊
+		Tooltip: ""
+	}
+
+	万里口蚯: {
+		DisplayName: 万里口蚯
+		Tooltip: ""
+	}
+
+	事实浮冰: {
+		DisplayName: 事实浮冰
+		Tooltip: ""
+	}
+
+	云凰碎片: {
+		DisplayName: 云凰碎片
+		Tooltip: ""
+	}
+
+	今古亭: {
+		DisplayName: 今古亭
+		Tooltip: ""
+	}
+
+	仙蛊屋雏形: {
+		DisplayName: 仙蛊屋雏形
+		Tooltip: ""
+	}
+
+	仙蛊屋黑牢: {
+		DisplayName: 仙蛊屋黑牢
+		Tooltip: ""
+	}
+
+	凡草屋: {
+		DisplayName: 凡草屋
+		Tooltip: ""
+	}
+
+	刹那台: {
+		DisplayName: 刹那台
+		Tooltip: ""
+	}
+
+	劫运坛: {
+		DisplayName: 劫运坛
+		Tooltip: ""
+	}
+
+	十绝大阵: {
+		DisplayName: 十绝大阵
+		Tooltip: ""
+	}
+
+	千年苦贝: {
+		DisplayName: 千年苦贝
+		Tooltip: ""
+	}
+
+	升天真传: {
+		DisplayName: 升天真传
+		Tooltip: ""
+	}
+
+	夜壶: {
+		DisplayName: 夜壶
+		Tooltip: ""
+	}
+
+	太古上极天鹰: {
+		DisplayName: 太古上极天鹰
+		Tooltip: ""
+	}
+
+	太古之光: {
+		DisplayName: 太古之光
+		Tooltip: ""
+	}
+
+	太古墟蝠尸体: {
+		DisplayName: 太古墟蝠尸体
+		Tooltip: ""
+	}
+
+	太古年兽: {
+		DisplayName: 太古年兽
+		Tooltip: ""
+	}
+
+	太古石龙: {
+		DisplayName: 太古石龙
+		Tooltip: ""
+	}
+
+	太古虎形年兽: {
+		DisplayName: 太古虎形年兽
+		Tooltip: ""
+	}
+
+	太古魂核: {
+		DisplayName: 太古魂核
+		Tooltip: ""
+	}
+
+	太宇寺: {
+		DisplayName: 太宇寺
+		Tooltip: ""
+	}
+
+	安土重山堡: {
+		DisplayName: 安土重山堡
+		Tooltip: ""
+	}
+
+	定真树: {
+		DisplayName: 定真树
+		Tooltip: ""
+	}
+
+	年华池: {
+		DisplayName: 年华池
+		Tooltip: ""
+	}
+
+	幻景园: {
+		DisplayName: 幻景园
+		Tooltip: ""
+	}
+
+	幽冥水母: {
+		DisplayName: 幽冥水母
+		Tooltip: ""
+	}
+
+	恒舟: {
+		DisplayName: 恒舟
+		Tooltip: ""
+	}
+
+	惊鸿乱斗台: {
+		DisplayName: 惊鸿乱斗台
+		Tooltip: ""
+	}
+
+	揽雀阁: {
+		DisplayName: 揽雀阁
+		Tooltip: ""
+	}
+
+	搬拦亭: {
+		DisplayName: 搬拦亭
+		Tooltip: ""
+	}
+
+	方寸山: {
+		DisplayName: 方寸山
+		Tooltip: ""
+	}
+
+	日月观: {
+		DisplayName: 日月观
+		Tooltip: ""
+	}
+
+	旱魃炎: {
+		DisplayName: 旱魃炎
+		Tooltip: ""
+	}
+
+	星宿棋盘: {
+		DisplayName: 星宿棋盘
+		Tooltip: ""
+	}
+
+	松鹤亭: {
+		DisplayName: 松鹤亭
+		Tooltip: ""
+	}
+
+	海角阁: {
+		DisplayName: 海角阁
+		Tooltip: ""
+	}
+
+	深海闪电鳗鱼: {
+		DisplayName: 深海闪电鳗鱼
+		Tooltip: ""
+	}
+
+	火雷真传: {
+		DisplayName: 火雷真传
+		Tooltip: ""
+	}
+
+	烽火台: {
+		DisplayName: 烽火台
+		Tooltip: ""
+	}
+
+	煮运锅: {
+		DisplayName: 煮运锅
+		Tooltip: ""
+	}
+
+	玉清滴风小竹楼: {
+		DisplayName: 玉清滴风小竹楼
+		Tooltip: ""
+	}
+
+	生死鲲鹏: {
+		DisplayName: 生死鲲鹏
+		Tooltip: ""
+	}
+
+	白荔仙元: {
+		DisplayName: 白荔仙元
+		Tooltip: ""
+	}
+
+	红枣仙元: {
+		DisplayName: 红枣仙元
+		Tooltip: ""
+	}
+
+	羽圣城: {
+		DisplayName: 羽圣城
+		Tooltip: ""
+	}
+
+	肝命仙蛊屋: {
+		DisplayName: 肝命仙蛊屋
+		Tooltip: ""
+	}
+
+	苍蓝龙鲸: {
+		DisplayName: 苍蓝龙鲸
+		Tooltip: ""
+	}
+
+	茅草屋: {
+		DisplayName: 茅草屋
+		Tooltip: ""
+	}
+
+	落英馆: {
+		DisplayName: 落英馆
+		Tooltip: ""
+	}
+
+	角连营: {
+		DisplayName: 角连营
+		Tooltip: ""
+	}
+
+	诛魔榜: {
+		DisplayName: 诛魔榜
+		Tooltip: ""
+	}
+
+	豆神宫: {
+		DisplayName: 豆神宫
+		Tooltip: ""
+	}
+
+	贼巢: {
+		DisplayName: 贼巢
+		Tooltip: ""
+	}
+
+	送生庙: {
+		DisplayName: 送生庙
+		Tooltip: ""
+	}
+
+	逆命祭炼大阵: {
+		DisplayName: 逆命祭炼大阵
+		Tooltip: ""
+	}
+
+	镇魂殿: {
+		DisplayName: 镇魂殿
+		Tooltip: ""
+	}
+
+	风满楼: {
+		DisplayName: 风满楼
+		Tooltip: ""
+	}
+
+	飞沙阁: {
+		DisplayName: 飞沙阁
+		Tooltip: ""
+	}
+
+	鸡笼犬舍: {
+		DisplayName: 鸡笼犬舍
+		Tooltip: ""
+	}
+
+	黄天碎片: {
+		DisplayName: 黄天碎片
+		Tooltip: ""
+	}
+
+	龙宫: {
+		DisplayName: 龙宫
+		Tooltip: ""
+	}
+
+	交易令: {
+		DisplayName: 交易令
+		Tooltip: ""
+	}
+
+	令牌信物: {
+		DisplayName: 令牌信物
+		Tooltip: ""
+	}
+
+	来客令: {
+		DisplayName: 来客令
+		Tooltip: ""
+	}
+
+	琉璃楼主令: {
+		DisplayName: 琉璃楼主令
+		Tooltip: ""
+	}
+
+	紫荆令牌: {
+		DisplayName: 紫荆令牌
+		Tooltip: ""
+	}
+
+	通缉令: {
+		DisplayName: 通缉令
+		Tooltip: ""
+	}
+
+	铁家令牌: {
+		DisplayName: 铁家令牌
+		Tooltip: ""
+	}
+
+	铭牌: {
+		DisplayName: 铭牌
+		Tooltip: ""
+	}
+}
 
 MapObject: {
 	BlackLacquerAltar: Black Lacquer Altar
@@ -5797,6 +9937,229 @@ Tiles: {
 	GuYueBambooWall.MapEntry: Gu Yue Bamboo Wall
 	BaiJadeScreen.MapEntry: Bai Jade Screen
 	BaiJadePillar.MapEntry: Bai Jade Pillar
+	灵鱼化石.MapEntry: 灵鱼化石
+	灵蚌壳.MapEntry: 灵蚌壳
+	灵莲池.MapEntry: 灵莲池
+	灵泉石.MapEntry: 灵泉石
+	灵水莲.MapEntry: 灵水莲
+	深渊珊瑚.MapEntry: 深渊珊瑚
+	沼泽枯木.MapEntry: 沼泽枯木
+	水灵草.MapEntry: 水灵草
+	水母石.MapEntry: 水母石
+	寒冰莲.MapEntry: 寒冰莲
+	龙鳞砖.MapEntry: 龙鳞砖
+	魂砖.MapEntry: 魂砖
+	骨砖.MapEntry: 骨砖
+	风砖.MapEntry: 风砖
+	雷砖.MapEntry: 雷砖
+	阳砖.MapEntry: 阳砖
+	血砖.MapEntry: 血砖
+	蛊纹砖.MapEntry: 蛊纹砖
+	蛊土.MapEntry: 蛊土
+	玄武砖.MapEntry: 玄武砖
+	灵骨砖.MapEntry: 灵骨砖
+	灵苔石.MapEntry: 灵苔石
+	灵木方块.MapEntry: 灵木方块
+	灵壤.MapEntry: 灵壤
+	火砖.MapEntry: 火砖
+	深层血沙.MapEntry: 深层血沙
+	毒砖.MapEntry: 毒砖
+	梦砖.MapEntry: 梦砖
+	月砖.MapEntry: 月砖
+	暗砖.MapEntry: 暗砖
+	晶化沙.MapEntry: 晶化沙
+	星辉砖.MapEntry: 星辉砖
+	星砖.MapEntry: 星砖
+	律砖.MapEntry: 律砖
+	影砖.MapEntry: 影砖
+	宙砖.MapEntry: 宙砖
+	土砖.MapEntry: 土砖
+	凤羽砖.MapEntry: 凤羽砖
+	冰砖.MapEntry: 冰砖
+	冥铁砖.MapEntry: 冥铁砖
+	元石砖.MapEntry: 元石砖
+	云砖.MapEntry: 云砖
+	风蚀岩.MapEntry: 风蚀岩
+	雷云砖.MapEntry: 雷云砖
+	虹光石.MapEntry: 虹光石
+	浮空石.MapEntry: 浮空石
+	星尘沙.MapEntry: 星尘沙
+	天际花.MapEntry: 天际花
+	天光晶.MapEntry: 天光晶
+	云母石.MapEntry: 云母石
+	铁家锻造台.MapEntry: 铁家锻造台
+	赵家暗影柱.MapEntry: 赵家暗影柱
+	贾家商铺台.MapEntry: 贾家商铺台
+	百家旗帜.MapEntry: 百家旗帜
+	白家玉石台.MapEntry: 白家玉石台
+	王家水晶台.MapEntry: 王家水晶台
+	熊家练武桩.MapEntry: 熊家练武桩
+	散修营火堆.MapEntry: 散修营火堆
+	古月宗碑.MapEntry: 古月宗碑
+	古月宗灯柱.MapEntry: 古月宗灯柱
+	荒废祭坛.MapEntry: 荒废祭坛
+	碎裂玉简.MapEntry: 碎裂玉简
+	破碎石像.MapEntry: 破碎石像
+	灵墟土.MapEntry: 灵墟土
+	残破阵旗.MapEntry: 残破阵旗
+	封印残石.MapEntry: 封印残石
+	古战场遗骸.MapEntry: 古战场遗骸
+	古修石碑.MapEntry: 古修石碑
+	古修残壁.MapEntry: 古修残壁
+	古修地砖.MapEntry: 古修地砖
+	龙骨矿.MapEntry: 龙骨矿
+	魂银矿石.MapEntry: 魂银矿石
+	骨玉矿石.MapEntry: 骨玉矿石
+	赤金矿.MapEntry: 赤金矿
+	血铜矿石.MapEntry: 血铜矿石
+	蛊晶矿.MapEntry: 蛊晶矿
+	灵髓矿.MapEntry: 灵髓矿
+	灵晶矿石.MapEntry: 灵晶矿石
+	火炭矿石.MapEntry: 火炭矿石
+	深层元石矿.MapEntry: 深层元石矿
+	毒铁矿石.MapEntry: 毒铁矿石
+	星辰矿石.MapEntry: 星辰矿石
+	幽冥矿.MapEntry: 幽冥矿
+	天晶矿.MapEntry: 天晶矿
+	灵雾石.MapEntry: 灵雾石
+	灵藤架.MapEntry: 灵藤架
+	灵草花圃.MapEntry: 灵草花圃
+	灵石堆.MapEntry: 灵石堆
+	灵气结晶树.MapEntry: 灵气结晶树
+	灵气瀑布石.MapEntry: 灵气瀑布石
+	灵气漩涡.MapEntry: 灵气漩涡
+	灵木桩.MapEntry: 灵木桩
+	星光石.MapEntry: 星光石
+	古树根.MapEntry: 古树根
+	青茅竹方块.MapEntry: 青茅竹方块
+	青茅石砖.MapEntry: 青茅石砖
+	青茅石柱.MapEntry: 青茅石柱
+	青茅石台.MapEntry: 青茅石台
+	古月赤铜方块.MapEntry: 古月赤铜方块
+	古月蛊架.MapEntry: 古月蛊架
+	古月药柜.MapEntry: 古月药柜
+	古月练功桩.MapEntry: 古月练功桩
+	古月石碑.MapEntry: 古月石碑
+	古月石灯.MapEntry: 古月石灯
+	古月灵泉.MapEntry: 古月灵泉
+	古月灯笼.MapEntry: 古月灯笼
+	古月木地板.MapEntry: 古月木地板
+	古月旗杆.MapEntry: 古月旗杆
+	古月旗帜.MapEntry: 古月旗帜
+	古月屏风.MapEntry: 古月屏风
+	古月兵器架.MapEntry: 古月兵器架
+	古月储物箱.MapEntry: 古月储物箱
+	古月书架.MapEntry: 古月书架
+	蛊蜕壳.MapEntry: 蛊蜕壳
+	蛊虫食物槽.MapEntry: 蛊虫食物槽
+	蛊虫蜕皮架.MapEntry: 蛊虫蜕皮架
+	蛊虫排泄晶.MapEntry: 蛊虫排泄晶
+	蛊虫巢穴.MapEntry: 蛊虫巢穴
+	蛊虫冬眠石.MapEntry: 蛊虫冬眠石
+	蛊菌团.MapEntry: 蛊菌团
+	蛊毒花.MapEntry: 蛊毒花
+	蛊卵石.MapEntry: 蛊卵石
+	蛊丝茧.MapEntry: 蛊丝茧
+	龙涎花.MapEntry: 龙涎花
+	鬼面菇.MapEntry: 鬼面菇
+	风结草.MapEntry: 风结草
+	雷光苔.MapEntry: 雷光苔
+	铁壳花.MapEntry: 铁壳花
+	针灸树.MapEntry: 针灸树
+	金针草.MapEntry: 金针草
+	金簪草.MapEntry: 金簪草
+	赤斧花.MapEntry: 赤斧花
+	血镰草.MapEntry: 血镰草
+	血藤.MapEntry: 血藤
+	血毒棠.MapEntry: 血毒棠
+	蛊虫饲料槽.MapEntry: 蛊虫饲料槽
+	蛊虫隔离笼.MapEntry: 蛊虫隔离笼
+	蛊虫鉴定台.MapEntry: 蛊虫鉴定台
+	蛊虫培养皿.MapEntry: 蛊虫培养皿
+	蛊虫喂养槽.MapEntry: 蛊虫喂养槽
+	蛊虫净化池.MapEntry: 蛊虫净化池
+	蛊虫冬眠箱.MapEntry: 蛊虫冬眠箱
+	蛊虫养殖池.MapEntry: 蛊虫养殖池
+	蛊虫储存罐.MapEntry: 蛊虫储存罐
+	蛊虫交配台.MapEntry: 蛊虫交配台
+	蛊虫交易摊.MapEntry: 蛊虫交易摊
+	蛊炼化台.MapEntry: 蛊炼化台
+	蛊炼制鼎.MapEntry: 蛊炼制鼎
+	蛊母花.MapEntry: 蛊母花
+	蛊卵孵化器.MapEntry: 蛊卵孵化器
+	蛇纹藤.MapEntry: 蛇纹藤
+	聚灵灯.MapEntry: 聚灵灯
+	聚气阵.MapEntry: 聚气阵
+	紫云花.MapEntry: 紫云花
+	碧灵草.MapEntry: 碧灵草
+	知心草.MapEntry: 知心草
+	真元凝聚器.MapEntry: 真元凝聚器
+	灵雾兰.MapEntry: 灵雾兰
+	灵石研磨器.MapEntry: 灵石研磨器
+	灵液收集器.MapEntry: 灵液收集器
+	灵气聚拢阵.MapEntry: 灵气聚拢阵
+	灵气导引柱.MapEntry: 灵气导引柱
+	灵兽笼.MapEntry: 灵兽笼
+	火棘草.MapEntry: 火棘草
+	月兰野花.MapEntry: 月兰野花
+	暗影菌.MapEntry: 暗影菌
+	春梦果树.MapEntry: 春梦果树
+	星屑草.MapEntry: 星屑草
+	巨人草.MapEntry: 巨人草
+	地藏花.MapEntry: 地藏花
+	冰心莲.MapEntry: 冰心莲
+	光照菌.MapEntry: 光照菌
+	元素熔炉.MapEntry: 元素熔炉
+	九叶芝.MapEntry: 九叶芝
+	骸骨柱.MapEntry: 骸骨柱
+	镇魂柱.MapEntry: 镇魂柱
+	血蛊池.MapEntry: 血蛊池
+	血肉墙.MapEntry: 血肉墙
+	蛊茧.MapEntry: 蛊茧
+	蛊丝方块.MapEntry: 蛊丝方块
+	腐骨堆.MapEntry: 腐骨堆
+	毒雾池.MapEntry: 毒雾池
+	毒沼泽.MapEntry: 毒沼泽
+	枯木方块.MapEntry: 枯木方块
+	暗灵烛.MapEntry: 暗灵烛
+	怨灵碑.MapEntry: 怨灵碑
+	尸砖.MapEntry: 尸砖
+	小型血池.MapEntry: 小型血池
+	小型蛊祭坛.MapEntry: 小型蛊祭坛
+	闭关石门.MapEntry: 闭关石门
+	聚灵阵盘.MapEntry: 聚灵阵盘
+	突破台.MapEntry: 突破台
+	灵气漩涡石.MapEntry: 灵气漩涡石
+	灵气测量柱.MapEntry: 灵气测量柱
+	灵气导引阵.MapEntry: 灵气导引阵
+	打坐台.MapEntry: 打坐台
+	悟道石.MapEntry: 悟道石
+	心魔镜.MapEntry: 心魔镜
+	修炼蒲团.MapEntry: 修炼蒲团
+	风化岩.MapEntry: 风化岩
+	霜花.MapEntry: 霜花
+	雷击木.MapEntry: 雷击木
+	雪灵花.MapEntry: 雪灵花
+	熔岩石.MapEntry: 熔岩石
+	熔岩晶.MapEntry: 熔岩晶
+	火山灰砖.MapEntry: 火山灰砖
+	旱地裂纹石.MapEntry: 旱地裂纹石
+	冰晶柱.MapEntry: 冰晶柱
+	冰封花.MapEntry: 冰封花
+	蛛网茧.MapEntry: 蛛网茧
+	荧光蘑菇丛.MapEntry: 荧光蘑菇丛
+	磷光苔.MapEntry: 磷光苔
+	石笋.MapEntry: 石笋
+	灵晶簇.MapEntry: 灵晶簇
+	溶岩花.MapEntry: 溶岩花
+	深渊石.MapEntry: 深渊石
+	暗河石.MapEntry: 暗河石
+	晶洞壁.MapEntry: 晶洞壁
+	晶化骨.MapEntry: 晶化骨
+	地脉结晶.MapEntry: 地脉结晶
+	地下菌毯.MapEntry: 地下菌毯
+	地下灵泉眼.MapEntry: 地下灵泉眼
+	倒挂钟乳.MapEntry: 倒挂钟乳
 }
 
 WorldGen: {
@@ -5823,858 +10186,1085 @@ Configs: {
 			Tooltip: ""
 		}
 	}
+
 	月兰花: {
 		DisplayName: 月兰花
 		Tooltip: 古月山寨栽培的花卉，花瓣如月牙，蓝粉色，是很多蛊虫的食材。
 	}
+
 	青竹酒: {
 		DisplayName: 青竹酒
 		Tooltip: 一种酒，每坛两块元石，用于喂养酒虫。
 	}
+
 	青矛竹: {
 		DisplayName: 青矛竹
 		Tooltip: 青茅山常见的竹子品种
 	}
+
 	影壁: {
 		DisplayName: 影壁
 		Tooltip: 山壁上形成的影像记录，记录了花酒行者和古月四代族长的恩怨，后异变显示花酒行者传承信息。
 	}
+
 	紫金化石: {
 		DisplayName: 紫金化石
 		Tooltip: 赌石用的石材，内含可能封印的蛊虫，外表紫色金黄。
 	}
+
 	猴儿酒: {
 		DisplayName: 猴儿酒
 		Tooltip: 猴儿酒类属果酒，酒香清醇香甜，入口绵柔，一杯元石计价。
 	}
+
 	知心草: {
 		DisplayName: 知心草
 		Tooltip: 一种草药，可节省元石，但被售卖一空。
+		MapEntry: 知心草
 	}
+
 	紫金石: {
 		DisplayName: 紫金石
 		Tooltip: 赌石用的石头，可能开出蛊虫或宝物。
 	}
+
 	兽皮地图: {
 		DisplayName: 兽皮地图
 		Tooltip: 王家祖传的白色兽皮地图，详细记录了青茅山的地形、陷阱位置和野兽分布，是猎人的传家宝。
 	}
+
 	野猪獠牙: {
 		DisplayName: 野猪獠牙
 		Tooltip: 野猪的獠牙，可作为蛊虫食物或炼制材料，也是年中考核的成绩凭证。
 	}
+
 	地藏花: {
 		DisplayName: 地藏花
 		Tooltip: 一种特殊的植物，花中藏有蛊虫，需用黄金花液浸泡。
+		MapEntry: 地藏花
 	}
+
 	生机叶: {
 		DisplayName: 生机叶
 		Tooltip: 一转治疗蛊虫，由九叶生机草催生而成，可用于治疗伤势，市价五十元石一片。
 	}
+
 	苦贝酒: {
 		DisplayName: 苦贝酒
 		Tooltip: 用百年苦贝的汁液酿制的酒，口感又苦又香。
 	}
+
 	百年苦贝: {
 		DisplayName: 百年苦贝
 		Tooltip: 一种贝壳，能积蓄苦水，百年后苦水变为酒。
 	}
+
 	战功榜: {
 		DisplayName: 战功榜
 		Tooltip: 巨幡，由游字蛊驱动，实时显示各小组战绩排名。
 	}
+
 	铭牌: {
 		DisplayName: 铭牌
 		Tooltip: 三族大比中分发的令牌，收集三十块可晋级。
 	}
+
 	青铜面具: {
 		DisplayName: 青铜面具
 		Tooltip: 方源给夏琳的面具，色彩斑斓，用鱼鳞、鸟羽编织而成。
 	}
+
 	棺材: {
 		DisplayName: 棺材
 		Tooltip: 古月一代沉睡的血红大棺材，浮于血湖中央。
 	}
+
 	镇魔塔: {
 		DisplayName: 镇魔塔
 		Tooltip: 铁家在万程山巅建造的百丈高塔，用于关押魔道蛊师，是正道象征。
 	}
+
 	灰骨巨书: {
 		DisplayName: 灰骨巨书
 		Tooltip: 骨制巨书，记载炼蛊秘方、灰骨才子生平及传承考验。
 	}
+
 	铁家令牌: {
 		DisplayName: 铁家令牌
 		Tooltip: 三王传承中的保命道具，可传送出福地。
 	}
+
 	通缉令: {
 		DisplayName: 通缉令
 		Tooltip: 百家发布的追捕方白二人的文书，消息价一千元石，缉杀价五千八百元石。
 	}
+
 	金簪草: {
 		DisplayName: 金簪草
 		Tooltip: 金家战略物资，用于炼制金蚕蛊的辅料，形态为草类。
+		MapEntry: 金簪草
 	}
+
 	白骨秘方: {
 		DisplayName: 白骨秘方
 		Tooltip: 一种蛊师传承秘方，包括骨枪蛊、螺旋骨枪蛊等，正常售价约六十万元石。
 	}
+
 	星辰石: {
 		DisplayName: 星辰石
 		Tooltip: 一种顽石，内含星辰系蛊，表面有蓝色荧光。
 	}
+
 	紫荆令牌: {
 		DisplayName: 紫荆令牌
 		Tooltip: 方源拥有的昂贵令牌，可用于进入特定场所或作为代价。
 	}
+
 	火炭石: {
 		DisplayName: 火炭石
 		Tooltip: 火炭山特产矿石，燃烧长久、热量不高、无烟雾，用于商家城燃料。
 	}
+
 	骨刺: {
 		DisplayName: 骨刺
 		Tooltip: 方源使用的远程武器，由骨道生成。
 	}
+
 	泥沼蟹: {
 		DisplayName: 泥沼蟹
 		Tooltip: 巨大如山的荒兽，第六次地灾中出现，拥有强大的甲壳和繁殖能力。后被荡魂山杀死，尸体被小狐仙分解。
 	}
+
 	魅蓝电影: {
 		DisplayName: 魅蓝电影
 		Tooltip: 一种由蓝色闪电构成的荒兽，能攻击天地造成福地漏洞。被方源设计驱除出福地。
 	}
+
 	风狼王: {
 		DisplayName: 风狼王
 		Tooltip: 千兽王级别的风狼首领，速度快、攻击强、防御坚固，被方源收服。
 	}
+
 	星屑草: {
 		DisplayName: 星屑草
 		Tooltip: 星萤虫的食物，生长在云土上，喜阴厌阳。
+		MapEntry: 星屑草
 	}
+
 	仙元石: {
 		DisplayName: 仙元石
 		Tooltip: 蛊仙交易货币，天庭量产。可快速补充仙元。目前天庭减少发放，导致五域仙元石紧缺。
 	}
+
 	气泡鱼: {
 		DisplayName: 气泡鱼
 		Tooltip: 特殊鱼类，能吞食虫子，在体内培育蛊虫，增加虫群产蛊几率。在五域大战时期价值极高。
 	}
+
 	铁壳花: {
 		DisplayName: 铁壳花
 		Tooltip: 狐仙福地西部移植的植物，形成花海，供养花粉兔。
+		MapEntry: 铁壳花
 	}
+
 	马群: {
 		DisplayName: 马群
 		Tooltip: 马尊控制的马群，规模达五十万，包括马皇、万兽王等。
 	}
+
 	夜狼皇: {
 		DisplayName: 夜狼皇
 		Tooltip: 狼群中的皇者，夜狼的兽皇，媲美五转蛊师战力。方源通过它收编大量夜狼群。
 	}
+
 	真绸: {
 		DisplayName: 真绸
 		Tooltip: 上等丝绸，用于包裹鞋子。
 	}
+
 	灰白石板: {
 		DisplayName: 灰白石板
 		Tooltip: 含有地丘传承信息的赝品石板，方源从其中获得画意蛊和地形图。
 	}
+
 	来客令: {
 		DisplayName: 来客令
 		Tooltip: 进入八十八角真阳楼的令牌，只能使用一次，非黄金血脉者需要此令。
 	}
+
 	琉璃楼主令: {
 		DisplayName: 琉璃楼主令
 		Tooltip: 八十八角真阳楼的通行令牌，通过墨化可增加角数，提升权限，可进入秘藏阁或吞噬其他楼主令。
 	}
+
 	铁喙飞鹤: {
 		DisplayName: 铁喙飞鹤
 		Tooltip: 仙鹤门驯养的鹤群，用于奴道战斗。
 	}
+
 	石猴毫毛: {
 		DisplayName: 石猴毫毛
 		Tooltip: 上古炼蛊材料，用于炼制群力蛊，由石磊重现。
 	}
+
 	幽冥水母: {
 		DisplayName: 幽冥水母
 		Tooltip: 喂养浪迹天涯仙蛊的材料之一。
 	}
+
 	深海闪电鳗鱼: {
 		DisplayName: 深海闪电鳗鱼
 		Tooltip: 喂养浪迹天涯仙蛊的材料之一，产于深海。
 	}
+
 	走肉树: {
 		DisplayName: 走肉树
 		Tooltip: 上古荒植，力道植株，枝条如章鱼触手，能攻击
 	}
+
 	黄玉狮子: {
 		DisplayName: 黄玉狮子
 		Tooltip: 荒兽，大如巨象，褐黄色，浓密鬃毛，沉睡，用于配种或交易。
 	}
+
 	黑油: {
 		DisplayName: 黑油
 		Tooltip: 食道仙材，黑色油状，易于开采，产量大，可炼蛊、延缓仙僵死窍崩解，具有腐蚀性，常被采油蛊师采集。
 	}
+
 	真武鲤: {
 		DisplayName: 真武鲤
 		Tooltip: 黑白相间的鲤鱼，天地灵物，异兽王，能言人语。
 	}
+
 	地老木: {
 		DisplayName: 地老木
 		Tooltip: 一种树木，使用观往蛊可看到往昔景象。
 	}
+
 	眠云棺椁: {
 		DisplayName: 眠云棺椁
 		Tooltip: 由仙道杀招凝成的棺椁，内封蛊仙俘虏。
 	}
+
 	九宫鹤: {
 		DisplayName: 九宫鹤
 		Tooltip: 上古荒兽，与鹤风扬关系亲密。
 	}
+
 	天龙完整骨骼: {
 		DisplayName: 天龙完整骨骼
 		Tooltip: 天龙全身骨骼，炼器或炼蛊材料。
 	}
+
 	地煞粉: {
 		DisplayName: 地煞粉
 		Tooltip: 三十两地煞粉，炼蛊材料。
 	}
+
 	天柱风: {
 		DisplayName: 天柱风
 		Tooltip: 风和材料，用于竞拍。
 	}
+
 	赤练金: {
 		DisplayName: 赤练金
 		Tooltip: 仙材，八百斤。
 	}
+
 	法眼血: {
 		DisplayName: 法眼血
 		Tooltip: 仙材，十五滴。
 	}
+
 	正天银: {
 		DisplayName: 正天银
 		Tooltip: 稀有仙材，六百斤。
 	}
+
 	星意: {
 		DisplayName: 星意
 		Tooltip: 东方长凡死后留下的意志体，拥有本体记忆和部分能力，可操控阵法。
 	}
+
 	红枣仙元: {
 		DisplayName: 红枣仙元
 		Tooltip: 七转蛊仙使用的仙元，色泽或呈红褐色。方源消耗其催动仙蛊。
 	}
+
 	方寸山: {
 		DisplayName: 方寸山
 		Tooltip: 小人族拥有的微型山峰，可移动，蕴含律道仙蛊“小”，能施展大而化小杀招。既是重宝也是居所。
 	}
+
 	散文鲤: {
 		DisplayName: 散文鲤
 		Tooltip: 一种稀有奇鱼，与真武鲤并称文武双鲤。受惊时会化为文气，极难捕捉。东海罕见。
 	}
+
 	茅草屋: {
 		DisplayName: 茅草屋
 		Tooltip: 东方部族的第一重宝，被方源等人无声无息收走，导致东方长凡恐慌。具体功能未明，但能支撑八转攻击片刻。
 	}
+
 	裂天粉: {
 		DisplayName: 裂天粉
 		Tooltip: 雪胡老祖战斗后挥洒的洁白粉末，可将白天裂开，威力惊人。
 	}
+
 	血毒棠: {
 		DisplayName: 血毒棠
 		Tooltip: 地灾中出现的花，从生长到凋零仅十个呼吸，凋谢后化成毒血，污染福地。
+		MapEntry: 血毒棠
 	}
+
 	血镰草: {
 		DisplayName: 血镰草
 		Tooltip: 地灾后新生的野草，形似镰刀，可炼制三转凡蛊。
+		MapEntry: 血镰草
 	}
+
 	赤斧花: {
 		DisplayName: 赤斧花
 		Tooltip: 地灾后新生的野花，花瓣如斧头，白色但绽放赤红光芒，可炼制三转凡蛊。
+		MapEntry: 赤斧花
 	}
+
 	幽火龙蟒: {
 		DisplayName: 幽火龙蟒
 		Tooltip: 资源，在火炭湖中繁衍，次佳环境是火炭石湖，最佳是碧潭福地的布置。
 	}
+
 	长恨蛛: {
 		DisplayName: 长恨蛛
 		Tooltip: 资源，在狐仙福地北部豢养基地中。
 	}
+
 	万里丝廊: {
 		DisplayName: 万里丝廊
 		Tooltip: 萧家拥有的仙蛊屋，能铺设成巨大丝网，加速货物运输，依赖蜘蛛凡蛊维持运转。
 	}
+
 	幻景园: {
 		DisplayName: 幻景园
 		Tooltip: 天莲派的仙蛊屋，可用于埋伏围困敌人，需要大量仙元催动。
 	}
+
 	羽圣城: {
 		DisplayName: 羽圣城
 		Tooltip: 七转仙蛊屋，外形辉煌圣城，由薄青操纵，曾与方源的惊鸿乱斗台碰撞。
 	}
+
 	千年苦贝: {
 		DisplayName: 千年苦贝
 		Tooltip: 炼仙蛊的佳材，外表漆黑有白色纹路如年轮，罕有。
 	}
+
 	地极天罡: {
 		DisplayName: 地极天罡
 		Tooltip: 由罡气和黑泥组成的仙材，难以处理，需特定杀招。
 	}
+
 	孪生冰心: {
 		DisplayName: 孪生冰心
 		Tooltip: 蓝色心脏形状的珍贵仙材，分为普通冰心和孪生冰心（七转仙材），产自玉壶山。
 	}
+
 	刺脊星龙鱼: {
 		DisplayName: 刺脊星龙鱼
 		Tooltip: 普通龙鱼及六转荒兽龙鱼，肉质应用广泛，可做食料和辅助喂养蛊虫。数量巨大，有近百万条。
 	}
+
 	交易令: {
 		DisplayName: 交易令
 		Tooltip: 萧家发布的贸易伙伴令牌，凭此可享受优惠政策，拓展西漠市场。
 	}
+
 	风结草: {
 		DisplayName: 风结草
 		Tooltip: 太古绿天特有的草笼，形似灯笼，需拆解，解开者可免被兽人吞食。
+		MapEntry: 风结草
 	}
+
 	仙蛊屋黑牢: {
 		DisplayName: 仙蛊屋黑牢
 		Tooltip: 仙蛊屋，外形如黑色流星，能撞击、干扰敌人，由黑城操纵。
 	}
+
 	星夜黏涎: {
 		DisplayName: 星夜黏涎
 		Tooltip: 地壳蜗牛分泌的黏涎，采集过程需用星光处理，是方源所需的重要材料。
 	}
+
 	斑虎蜜蜂蜂翅: {
 		DisplayName: 斑虎蜜蜂蜂翅
 		Tooltip: 疑似斑虎蜜蜂的蜂翅碎片，太古荒兽残骸，金道道痕极多，发出道痕光晕，准九转仙材。
 	}
+
 	云凰碎片: {
 		DisplayName: 云凰碎片
 		Tooltip: 太古荒兽云凰的身体碎片，似云似雾，蕴含大量云道道痕，可化为凤凰状白云。
 	}
+
 	惊鸿乱斗台: {
 		DisplayName: 惊鸿乱斗台
 		Tooltip: 一座由红莲蛊仙独创的仙蛊屋，能吸摄封印对手的攻势并反击回去。曾被用于镇压八转蛊仙武斗天王，最后埋藏于南疆无名山峰之下。
 	}
+
 	红莲鬼脸: {
 		DisplayName: 红莲/鬼脸
 		Tooltip: 在光阴长河中出现的鬼脸和红莲，修复了春秋蝉并帮助方源重生。
 	}
+
 	万里口蚯: {
 		DisplayName: 万里口蚯
 		Tooltip: 太古荒兽，断肢重生能力强，存在于地沟。
 	}
+
 	万目大明牛: {
 		DisplayName: 万目大明牛
 		Tooltip: 太古荒兽，八转级数，被剑光杀死，其牛角等为仙材。
 	}
+
 	生死鲲鹏: {
 		DisplayName: 生死鲲鹏
 		Tooltip: 律道太古荒兽，有生和死两种形态，方源获得其相对完整的尸体。
 	}
+
 	十绝大阵: {
 		DisplayName: 十绝大阵
 		Tooltip: 影宗布置的仙阵，用于炼制某只神秘仙蛊，以幽魂魔尊的魂道底蕴和万劫力量为养料。
 	}
+
 	凡草屋: {
 		DisplayName: 凡草屋
 		Tooltip: 影宗的仙蛊屋，回收行动失败，被三茅魔仙传人夺取。
 	}
+
 	怨气泥人: {
 		DisplayName: 怨气泥人
 		Tooltip: 戚灾用怨气、荒兽泥怪尸躯和气道手段制成的泥人怪物，具有荒兽级战力，心智简单。
 	}
+
 	太古之光: {
 		DisplayName: 太古之光
 		Tooltip: 炼制定仙游必需的关键蛊材，来自太古时代的光芒，难以捕捉储藏。
 	}
+
 	传承印记: {
 		DisplayName: 传承印记
 		Tooltip: 大能传承的关键凭证，疑似被刘青玉所得，方源曾试图击溃它。
 	}
+
 	黄天碎片: {
 		DisplayName: 黄天碎片
 		Tooltip: 太古九天之一的黄天碎片，可用于扩张宝黄天。
 	}
+
 	板栗牦牛: {
 		DisplayName: 板栗牦牛
 		Tooltip: 荒兽，毛十二的坐骑，被方源拍入坑中，胆怯而无力。
 	}
+
 	流光果: {
 		DisplayName: 流光果
 		Tooltip: 六转仙材，由浓郁极光凝结而成，颜色多样，需特殊种植。
 	}
+
 	斑斓霸王花: {
 		DisplayName: 斑斓霸王花
 		Tooltip: 七转仙材，慧剑蛊的食料，巨大花朵，覆盖方圆千里，需光照、甜气、珍珠土。
 	}
+
 	珍珠土: {
 		DisplayName: 珍珠土
 		Tooltip: 种植斑斓霸王花所需的土壤材料，价格不贵。
 	}
+
 	炎鸿石: {
 		DisplayName: 炎鸿石
 		Tooltip: 炫光蛊的食料。
 	}
+
 	六头大蛇黑血: {
 		DisplayName: 六头大蛇黑血
 		Tooltip: 招灾蛊的食料，来自荒兽六头大蛇。
 	}
+
 	太古墟蝠尸体: {
 		DisplayName: 太古墟蝠尸体
 		Tooltip: 太古荒兽的尸体，曾在太丘战斗中使用，气息能阻挡其他荒兽。
 	}
+
 	巨人草: {
 		DisplayName: 巨人草
 		Tooltip: 太丘上生长的巨大草类，一棵堪比百年大树，形成原始丛林。
+		MapEntry: 巨人草
 	}
+
 	火虹茶: {
 		DisplayName: 火虹茶
 		Tooltip: 琅琊地灵喜爱的茶水，红彤彤散光，内含游鱼般的虹光，需一口喝掉才能真正品味。
 	}
+
 	金晓大殿: {
 		DisplayName: 金晓大殿
 		Tooltip: 正道一方的基地悬空大殿，恢弘雄壮。
 	}
+
 	缘木: {
 		DisplayName: 缘木
 		Tooltip: 六转仙材，无根之木，生长于池塘。
 	}
+
 	青玉风流: {
 		DisplayName: 青玉风流
 		Tooltip: 七转仙材，风系珍贵材料。
 	}
+
 	霸铜: {
 		DisplayName: 霸铜
 		Tooltip: 七转仙材，金属类。
 	}
+
 	铁冠鹰: {
 		DisplayName: 铁冠鹰
 		Tooltip: 荒兽，黑家豢养的著名鹰种，大量存在于铁鹰福地。
 	}
+
 	合鸣鹰: {
 		DisplayName: 合鸣鹰
 		Tooltip: 黑家新的鹰种，实则源自乔家的心血，威力强于龙鹰。
 	}
+
 	第十三座鹰巢: {
 		DisplayName: 第十三座鹰巢
 		Tooltip: 黑凡留下的一系列考验和宝藏，包括天晶鹰巢、上极天鹰蛋、血道杀招以及黑凡洞天中的本命真传。
 	}
+
 	鸡年兽: {
 		DisplayName: 鸡年兽
 		Tooltip: 上古年兽的一种形态，体型如山，双翼巨大，羽毛鲜艳，鸡爪锋利。可被年兽召来杀招召唤，喜欢吃年蛊，战力强但不受完全掌控。
 	}
+
 	五光山: {
 		DisplayName: 五光山
 		Tooltip: 光道资源产地，产大量光道凡蛊，被方源挪入至尊仙窍。
 	}
+
 	太古上极天鹰: {
 		DisplayName: 太古上极天鹰
 		Tooltip: 太古荒兽，宇道，八转战力，体型巨大，可比巨鲸，可穿透空间进出洞天和太古九天。方源从黑凡真传中获得幼体，通过宙道杀招催熟。
 	}
+
 	苍蓝龙鲸: {
 		DisplayName: 苍蓝龙鲸
 		Tooltip: 太古传奇荒兽，被乐土仙尊点化，拥有仙窍可修行，体内有龙鲸乐土。
 	}
+
 	暗流金钢: {
 		DisplayName: 暗流金钢
 		Tooltip: 六转仙材，以坚硬著称，被剑蛟龙息轻易切开。
 	}
+
 	春梦果树: {
 		DisplayName: 春梦果树
 		Tooltip: 奇特的梦道植株，存在于梦境中，现实需依附树木。
+		MapEntry: 春梦果树
 	}
+
 	角连营: {
 		DisplayName: 角连营
 		Tooltip: 中洲仙蛊屋，由许多蛊虫组成，包括爱意仙蛊。在逆流河中解体。
 	}
+
 	揽雀阁: {
 		DisplayName: 揽雀阁
 		Tooltip: 仙蛊屋，由万海龙流驾驭，可发万千鸟鸣。
 	}
+
 	风满楼: {
 		DisplayName: 风满楼
 		Tooltip: 仙蛊屋，由碧晨天驾驭，可卷起碧绿风柱。
 	}
+
 	附天菌: {
 		DisplayName: 附天菌
 		Tooltip: 六转仙材，生长在太古九天，单一生长，是安全休整地点。
 	}
+
 	逆命祭炼大阵: {
 		DisplayName: 逆命祭炼大阵
 		Tooltip: 大雪山福地中的阵法，用于炼制鸿运齐天仙蛊，后被子阵影响崩溃。
 	}
+
 	光照菌: {
 		DisplayName: 光照菌
 		Tooltip: 荒植，原为嫩绿，需黑暗环境，方源改良为纯白品种用于光照。
+		MapEntry: 光照菌
 	}
+
 	物品寒玉: {
 		DisplayName: 物品:寒玉
 		Tooltip: 五转蛊材，含寒玉髓可作六转仙材，是广寒峰的主要资源。
 	}
+
 	物品神鹿果: {
 		DisplayName: 物品:神鹿果
 		Tooltip: 六转仙材，形如婴儿拳头，生长于荒兽挂果麋鹿的鹿角上，用于喂养金刚念仙蛊。
 	}
+
 	物品龙鳞土: {
 		DisplayName: 物品:龙鳞土
 		Tooltip: 凡道蛊材，颗颗结粒，土质坚硬，形似龙鳞，能激发龙鱼繁衍。
 	}
+
 	物品龙鱼: {
 		DisplayName: 物品:龙鱼
 		Tooltip: 一种食道创造的荒兽/普通生物，可用于喂养蛊虫，是宝黄天大宗商品。
 	}
+
 	脉轮瓜: {
 		DisplayName: 脉轮瓜
 		Tooltip: 七转仙材，蕴藏炼道道痕，可用于炼蛊，瓜熟地洞大量豢养，占宝黄天六成市场。
 	}
+
 	人祖传: {
 		DisplayName: 人祖传
 		Tooltip: 蛊师世界第一真传，蕴含人道奥义，多位仙尊魔尊从中获益。
 	}
+
 	星宿棋盘: {
 		DisplayName: 星宿棋盘
 		Tooltip: 仙蛊屋，紫薇仙子所有，可用于推算和支撑星投杀招，若得智慧蛊可升九转。
 	}
+
 	混天鹰: {
 		DisplayName: 混天鹰
 		Tooltip: 鹰类荒兽、上古荒兽，鹰头人身，喜好用骨棒作战。
 	}
+
 	追虹鹰: {
 		DisplayName: 追虹鹰
 		Tooltip: 鹰类荒兽，体型较小，喜欢追逐彩虹虹光，速度较快。
 	}
+
 	天晶: {
 		DisplayName: 天晶
 		Tooltip: 材料，用于催熟上极天鹰，大量消耗。
 	}
+
 	玉清滴风小竹楼: {
 		DisplayName: 玉清滴风小竹楼
 		Tooltip: 八转仙蛊屋，武庸所有，以风道为核心，可移动、分解和修复。
 	}
+
 	飞沙阁: {
 		DisplayName: 飞沙阁
 		Tooltip: 侯家的仙蛊屋，移速极快，擅长在土道环境疾驰。
 	}
+
 	海角阁: {
 		DisplayName: 海角阁
 		Tooltip: 翼家的仙蛊屋，曾被梦境惊吓后退。
 	}
+
 	烽火台: {
 		DisplayName: 烽火台
 		Tooltip: 铁家的仙蛊屋，具有快速传送功能，散布南疆各处。
 	}
+
 	太古虎形年兽: {
 		DisplayName: 太古虎形年兽
 		Tooltip: 光阴长河中的太古年兽，虎形，实力强大，主场优势明显。
 	}
+
 	黑白颠倒云: {
 		DisplayName: 黑白颠倒云
 		Tooltip: 特殊云朵，连通黑天与白天，可让生物随机传送。
 	}
+
 	雪莲花精: {
 		DisplayName: 雪莲花精
 		Tooltip: 七转仙材，形似雪莲花，表面覆盖冰层，蕴含生机与寒意，产自雪人部族。
 	}
+
 	铜龙鱼: {
 		DisplayName: 铜龙鱼
 		Tooltip: 龙鱼改良品种，食道资源，比普通赤红龙鱼更优。
 	}
+
 	铁龙鱼: {
 		DisplayName: 铁龙鱼
 		Tooltip: 龙鱼改良品种，食道资源，比铜龙鱼更优。
 	}
+
 	银龙鱼: {
 		DisplayName: 银龙鱼
 		Tooltip: 龙鱼改良品种，食道资源，比铁龙鱼更优，蕴含浓郁食道道痕。
 	}
+
 	金龙鱼: {
 		DisplayName: 金龙鱼
 		Tooltip: 龙鱼最高改良品种，上古荒兽等级，体小鳞金，充满食道道痕，为龙鱼王者。
 	}
+
 	豆神宫: {
 		DisplayName: 豆神宫
 		Tooltip: 八转仙蛊屋，位于房家大本营，是方源和房家争夺的目标，被方源以因果神树杀招影响。
 	}
+
 	落英馆: {
 		DisplayName: 落英馆
 		Tooltip: 房家七转仙蛊屋，外观如木屋挂满鲜花，能飞行并自行修复。
 	}
+
 	无常石: {
 		DisplayName: 无常石
 		Tooltip: 六转仙材，半黑半白，形成于常年征战之地，可用于炼器或修炼。
 	}
+
 	鸡笼犬舍: {
 		DisplayName: 鸡笼犬舍
 		Tooltip: 房家的仙蛊屋，被房功驾驭用于扫荡万家资源点。
 	}
+
 	太古魂核: {
 		DisplayName: 太古魂核
 		Tooltip: 魂兽死后留下的核心，可用于魂道修行，房家曾向方源提供包括八转太古魂核在内的多种魂核。
 	}
+
 	定真树: {
 		DisplayName: 定真树
 		Tooltip: 太古传奇荒植，具有克制大同风的天赋，历史上曾被元莲仙尊杀死。
 	}
+
 	镇魂殿: {
 		DisplayName: 镇魂殿
 		Tooltip: 八转仙蛊屋，天庭用于囚禁幽魂魔尊的场所。
 	}
+
 	饮刃酒: {
 		DisplayName: 饮刃酒
 		Tooltip: 七转仙材，由蒙屠足下血迹渗透地底结合刀道道痕形成，可助刀道悟道。方源取走少量。
 	}
+
 	超级仙阵: {
 		DisplayName: 超级仙阵
 		Tooltip: 方源设计并改进的防御仙阵，由异人蛊仙操控，可对抗离歌等杀招。
 	}
+
 	太古石龙: {
 		DisplayName: 太古石龙
 		Tooltip: 上古荒兽，全身由石块组成，防御极高，有特殊疗伤手段。
 	}
+
 	太古年兽: {
 		DisplayName: 太古年兽
 		Tooltip: 光阴长河中生存的荒兽级生物，种类多样，如太古年鸡、太古年猴等，可被奴役。
 	}
+
 	太宇寺: {
 		DisplayName: 太宇寺
 		Tooltip: 池家八转仙蛊屋，排名天下第九，拥有转宇寰空杀招。
 	}
+
 	今古亭: {
 		DisplayName: 今古亭
 		Tooltip: 七转宙道仙蛊屋，凉亭状，擅长在光阴长河中侦查和操控水流。
 	}
+
 	恒舟: {
 		DisplayName: 恒舟
 		Tooltip: 天庭宙道仙蛊屋，楼船模样，速度较快，支援今古亭但未能及时。
 	}
+
 	仙蛊屋雏形: {
 		DisplayName: 仙蛊屋雏形
 		Tooltip: 方源自创的仙蛊屋雏形，以宙道仙蛊为主，擅长隐匿，在石莲岛被威猛老者摧毁。
 	}
+
 	年华池: {
 		DisplayName: 年华池
 		Tooltip: 至尊仙窍内的特殊建筑，沟通光阴支流，用于拘禁和驯化太古年兽。
 	}
+
 	功德方尖碑: {
 		DisplayName: 功德方尖碑
 		Tooltip: 八转仙蛊屋，位于龙鲸乐土，发布任务并给予功德奖励，可兑换仙材、名号等。
 	}
+
 	水核: {
 		DisplayName: 水核
 		Tooltip: 水道仙材，是道兽死后留下的核心之一。
 	}
+
 	巨音贝: {
 		DisplayName: 巨音贝
 		Tooltip: 荒兽巨音贝死后留下的贝壳，具有音道道痕，可作为舞台扩大声音。
 	}
+
 	白荔仙元: {
 		DisplayName: 白荔仙元
 		Tooltip: 八转蛊仙独有的仙元，方源通过仙窍自产。
 	}
+
 	龙宫: {
 		DisplayName: 龙宫
 		Tooltip: 八转仙蛊屋，内含神秘梦道仙蛊，外形如宫殿，拥有攻伐防护威能，行驶在东海高空，引发八转争夺。
 	}
+
 	劫运坛: {
 		DisplayName: 劫运坛
 		Tooltip: 八转仙蛊屋，巨阳仙尊所创，被冰塞川操纵，曾附着无极魔尊的杀招。
 	}
+
 	中央大殿: {
 		DisplayName: 中央大殿
 		Tooltip: 天庭宫殿的中枢，被劫运坛撞毁。
 	}
+
 	一缺抱憾亭: {
 		DisplayName: 一缺抱憾亭
 		Tooltip: 八转仙蛊屋，位于星驰山顶峰，星宿仙尊与无极魔尊对弈之地。
 	}
+
 	炼道大阵: {
 		DisplayName: 炼道大阵
 		Tooltip: 天庭布置用于修复宿命蛊的大阵，有袁琼都主持。
 	}
+
 	针灸树: {
 		DisplayName: 针灸树
 		Tooltip: 一种特殊的树木，栽种在天露绿洲外围，内含针灸蛊，用于协防。
+		MapEntry: 针灸树
 	}
+
 	天露: {
 		DisplayName: 天露
 		Tooltip: 八转仙材，透明水滴状，由黑白水每天面对苍穹昼夜轮转而凝聚，是天露绿洲的核心产物。
 	}
+
 	万年斗飞车: {
 		DisplayName: 万年斗飞车
 		Tooltip: 八转仙蛊屋，方源所用，具备多种杀招如破晓剑、激流勇进、万年围猎。
 	}
+
 	珠线水: {
 		DisplayName: 珠线水
 		Tooltip: 八转水道仙材，太古水蜘蛛涎水凝聚。
 	}
+
 	五相赌斗门: {
 		DisplayName: 五相赌斗门
 		Tooltip: 黄铜质地门楼，上写五相赌斗门
 	}
+
 	金精: {
 		DisplayName: 金精
 		Tooltip: 一种金属材料，金山牛喜食
 	}
+
 	煮运锅: {
 		DisplayName: 煮运锅
 		Tooltip: 七转仙蛊屋（煮运锅），大如水盆，浑身金黄作色，笼罩一层洁白光晕，用于煮运、改变气运。
 	}
+
 	小箭尾雕: {
 		DisplayName: 小箭尾雕
 		Tooltip: 从荒兽蛋中孵化出的仙兽小雕，认战部渡为至亲
 	}
+
 	松鹤亭: {
 		DisplayName: 松鹤亭
 		Tooltip: 中洲仙鹤门的仙蛊屋，被方源埋伏吞噬，后由龙公送出战场。
 	}
+
 	六声茶: {
 		DisplayName: 六声茶
 		Tooltip: 沈家名茶，共有六杯，每杯有独特口感与功效。
 	}
+
 	军团蚁: {
 		DisplayName: 军团蚁
 		Tooltip: 绿蚁居士创造的物种，适合奴道蛊仙使用，通过蚁穴蛊孵化。
 	}
+
 	万象宫殿: {
 		DisplayName: 万象宫殿
 		Tooltip: 仙蛊屋，可以变作世间万物，内部有雕像，千变老祖利用其化身假扮自己。
 	}
+
 	刹那台: {
 		DisplayName: 刹那台
 		Tooltip: 八转宙道仙蛊屋，具有瞬移能力（刹那挪移），由顾六如驾驭。
 	}
+
 	旱魃炎: {
 		DisplayName: 旱魃炎
 		Tooltip: 八转旱魃仙僵的火焰，死寂炽热，可配合旱魃仙僵延寿法使用。
 	}
+
 	鬼嘤音: {
 		DisplayName: 鬼嘤音
 		Tooltip: 七转音道仙材，储存在小音贝中，可影响心神。
 	}
+
 	日月观: {
 		DisplayName: 日月观
 		Tooltip: 灵缘斋的宙道仙蛊屋，七转层次，在光阴长河战役中被毁。
 	}
+
 	涛声依旧: {
 		DisplayName: 涛声依旧
 		Tooltip: 七转音道仙材，沈家特产，海螺状荒兽，内含经年环响的涛声。
 	}
+
 	诛魔榜: {
 		DisplayName: 诛魔榜
 		Tooltip: 八转仙蛊屋，外表为朱红墓碑，榜文游动，由古月方正和秦鼎菱操控
 	}
+
 	安土重山堡: {
 		DisplayName: 安土重山堡
 		Tooltip: 八转土道仙蛊屋，防御强大，是方源的重要据点。
 	}
+
 	乾清一气: {
 		DisplayName: 乾清一气
 		Tooltip: 八面威风蛊的主材，被武碑发现大量。
 	}
+
 	宠心: {
 		DisplayName: 宠心
 		Tooltip: 九转运道仙材，从藏地中获得。
 	}
+
 	贼巢: {
 		DisplayName: 贼巢
 		Tooltip: 仙蛊屋，方源改良过的全新版本，拥有偷道杀招。
 	}
+
 	升天真传: {
 		DisplayName: 升天真传
 		Tooltip: 孔升天留下的八转传承，包含仙蛊和仙元，已被方源交易获得内容。
 	}
+
 	火雷真传: {
 		DisplayName: 火雷真传
 		Tooltip: 火雷神君留下的八转真传，包含炎道雷道传承。
 	}
+
 	天难真传: {
 		DisplayName: 天难真传
 		Tooltip: 天难老怪留下的炼道真传，被宋家获得并视为核心传承。
 	}
+
 	九子龙图: {
 		DisplayName: 九子龙图
 		Tooltip: 商燕飞早年获得的仙缘，九张兽皮，每张描绘一种龙兽，有墨文注释，蕴含秘密。
 	}
+
 	人海雏形: {
 		DisplayName: 人海雏形
 		Tooltip: 人造天地秘境雏形，源自东海夏家，方源用于人道修行，需屠戮大量人族完善。
 	}
+
 	黑金铠甲: {
 		DisplayName: 黑金铠甲
 		Tooltip: 黑月仙子身穿的铠甲，给人沉重压迫感。
 	}
+
 	令牌信物: {
 		DisplayName: 令牌信物
 		Tooltip: 陈诚与友人的赌约信物，被黑月仙子出示。
 	}
+
 	事实浮冰: {
 		DisplayName: 事实浮冰
 		Tooltip: 无极魔尊用衍化仙蛊和天外混沌推演出的物品，蕴藏衍化仙蛊和天机蛊仙蛊方。
 	}
+
 	搬拦亭: {
 		DisplayName: 搬拦亭
 		Tooltip: 七转力道仙蛊屋，形如鸟笼，八根蓝金大柱弯曲。苏家所有，用于深海开采。
 	}
+
 	肝命仙蛊屋: {
 		DisplayName: 肝命仙蛊屋
 		Tooltip: 原为肝命大阵，后被方源改良为仙蛊屋，具有治疗和恢复功效。
 	}
+
 	贡献榜: {
 		DisplayName: 贡献榜
 		Tooltip: 至尊仙窍中的三大榜单之一，记录蛊仙贡献值，排名前列者为重臣。
 	}
+
 	任务榜: {
 		DisplayName: 任务榜
 		Tooltip: 至尊仙窍中的三大榜单之一，列出各种任务供蛊仙接取以获取贡献。
 	}
+
 	兑换榜: {
 		DisplayName: 兑换榜
 		Tooltip: 至尊仙窍中的三大榜单之一，列出可用贡献兑换的修行资源，极其丰富。
 	}
+
 	万岁楼: {
 		DisplayName: 万岁楼
 		Tooltip: 万家的仙蛊屋，随万家蛊仙一同撤走。
 	}
+
 	夜壶: {
 		DisplayName: 夜壶
 		Tooltip: 萧夜壶手中的暗道仙蛊屋，袖珍，能将蛊仙强行摄入其中，困上一夜化为一滩屎尿。
 	}
+
 	飞沙地洞: {
 		DisplayName: 飞沙地洞
 		Tooltip: 土道资源点，被移至至尊仙窍中作为地脉节点之一。
 	}
+
 	光明华轮火: {
 		DisplayName: 光明华轮火
 		Tooltip: 天下三火之一的天火，九转炎道仙材，太阳崩解后大量散落。
 	}
+
 	送生庙: {
 		DisplayName: 送生庙
 		Tooltip: 人道仙蛊屋，能快速让女子怀孕生子并附生蛊虫。
 	}
+
 	漂游炼巢: {
 		DisplayName: 漂游炼巢
 		Tooltip: 天地秘境雏形，状如蜂巢，漂浮炼海上，用于炼蛊。
 	}
+
 	市井: {
 		DisplayName: 市井
 		Tooltip: 天地秘境，方源用于天网恢恢杀招的防御核心。
 	}
+
 	心境: {
 		DisplayName: 心境
 		Tooltip: 天地秘境，星宿仙尊持有，灯笼形态，可抽取情绪和智道道痕。
 	}
+
 	血海雏形: {
 		DisplayName: 血海雏形
 		Tooltip: 巨阳仙尊拥有的天地秘境雏形，未发展完整。
 	}
+
 	乾坤晶壁雏形: {
 		DisplayName: 乾坤晶壁雏形
 		Tooltip: 天地秘境之一，书道阁收藏的一部分，信道底蕴。
 	}
+
 	气功果核: {
 		DisplayName: 气功果核
 		Tooltip: 天庭的气道造物，极为巨大，成为致命弱点。后被气海老祖炼化缩小，最终被方源用于炼成气道分身。
 	}
+
 	元石砖.MapEntry: 元石砖
 	影砖.MapEntry: 影砖
 	暗砖.MapEntry: 暗砖
@@ -6762,50 +11352,37 @@ Configs: {
 	聚灵灯.MapEntry: 聚灵灯
 	蛊虫隔离笼.MapEntry: 蛊虫隔离笼
 	蛊炼化台.MapEntry: 蛊炼化台
-	光照菌.MapEntry: 光照菌
 	灵雾兰.MapEntry: 灵雾兰
-	针灸树.MapEntry: 针灸树
 	蛊母花.MapEntry: 蛊母花
 	灵石研磨器.MapEntry: 灵石研磨器
-	赤斧花.MapEntry: 赤斧花
-	血毒棠.MapEntry: 血毒棠
 	灵液收集器.MapEntry: 灵液收集器
 	灵气导引柱.MapEntry: 灵气导引柱
-	风结草.MapEntry: 风结草
 	血藤.MapEntry: 血藤
 	火棘草.MapEntry: 火棘草
 	九叶芝.MapEntry: 九叶芝
 	蛊虫喂养槽.MapEntry: 蛊虫喂养槽
 	聚气阵.MapEntry: 聚气阵
 	蛊虫鉴定台.MapEntry: 蛊虫鉴定台
-	铁壳花.MapEntry: 铁壳花
 	月兰野花.MapEntry: 月兰野花
-	金簪草.MapEntry: 金簪草
 	真元凝聚器.MapEntry: 真元凝聚器
 	灵气聚拢阵.MapEntry: 灵气聚拢阵
 	蛊虫净化池.MapEntry: 蛊虫净化池
-	地藏花.MapEntry: 地藏花
 	蛊虫养殖池.MapEntry: 蛊虫养殖池
 	蛊虫饲料槽.MapEntry: 蛊虫饲料槽
 	鬼面菇.MapEntry: 鬼面菇
-	春梦果树.MapEntry: 春梦果树
 	元素熔炉.MapEntry: 元素熔炉
 	蛊虫交配台.MapEntry: 蛊虫交配台
 	蛇纹藤.MapEntry: 蛇纹藤
 	碧灵草.MapEntry: 碧灵草
 	蛊虫冬眠箱.MapEntry: 蛊虫冬眠箱
-	巨人草.MapEntry: 巨人草
-	星屑草.MapEntry: 星屑草
 	雷光苔.MapEntry: 雷光苔
 	紫云花.MapEntry: 紫云花
 	暗影菌.MapEntry: 暗影菌
-	血镰草.MapEntry: 血镰草
 	蛊炼制鼎.MapEntry: 蛊炼制鼎
 	蛊虫交易摊.MapEntry: 蛊虫交易摊
 	蛊虫培养皿.MapEntry: 蛊虫培养皿
 	蛊虫储存罐.MapEntry: 蛊虫储存罐
 	龙涎花.MapEntry: 龙涎花
-	知心草.MapEntry: 知心草
 	冰晶柱.MapEntry: 冰晶柱
 	旱地裂纹石.MapEntry: 旱地裂纹石
 	雷击木.MapEntry: 雷击木
