@@ -1,5 +1,4 @@
 using VerminLordMod.Common.Players;
-using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;

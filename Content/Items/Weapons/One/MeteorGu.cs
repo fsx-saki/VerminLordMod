@@ -1,6 +1,5 @@
 using Microsoft.Xna.Framework;
 using System;
-using System.Linq;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
@@ -62,8 +61,6 @@ namespace VerminLordMod.Content.Items.Weapons.One
 				return false;
 			return true;
 		}
-
-
 
 	}
 }

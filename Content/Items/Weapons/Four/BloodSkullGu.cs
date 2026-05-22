@@ -11,7 +11,6 @@ using VerminLordMod.Content.DamageClasses;
 using VerminLordMod.Content.Items.Weapons.Daos;
 using VerminLordMod.Content.Projectiles;
 
-
 namespace VerminLordMod.Content.Items.Weapons.Four
 {
 	/// <summary>

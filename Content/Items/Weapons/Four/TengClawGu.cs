@@ -50,7 +50,6 @@ namespace VerminLordMod.Content.Items.Weapons.Four
 			// 计算玩家到鼠标的向量弧度
 			float r = (float)Math.Atan2(plrToMouse.Y, plrToMouse.X);
 
-
 			for (int i = -2; i <= 2; i++) {
 				// 发射向量的弧度，给原来的弧度加了一些偏移：-2*5 = -10， -1*5 = -5 ...
 				float r2 = r + i * MathHelper.Pi / 72f;

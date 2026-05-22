@@ -35,7 +35,6 @@ namespace VerminLordMod.Content.Items.Weapons.Two
 			ControlRate = this.GetLocalization("ControlRate");
 			GuLevel = this.GetLocalization("GuLevel");
 
-
 		}
 
 		public override void ModifyTooltips(List<TooltipLine> tooltips) {
@@ -49,7 +48,6 @@ namespace VerminLordMod.Content.Items.Weapons.Two
 				tooltips.Add(new TooltipLine(Mod, "ControlRate", "右键使用开始炼化"));
 			}
 		}
-
 
 		public override void SetDefaults() {
 			Item.width = 24; // The width of the item's hitbox.

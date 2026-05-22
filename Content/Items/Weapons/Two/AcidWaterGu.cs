@@ -8,7 +8,6 @@ using VerminLordMod.Content.DamageClasses;
 using VerminLordMod.Content.Items.Weapons.Daos;
 using VerminLordMod.Content.Projectiles;
 
-
 namespace VerminLordMod.Content.Items.Weapons.Two
 {
 	/// <summary>
@@ -48,13 +47,9 @@ namespace VerminLordMod.Content.Items.Weapons.Two
 			Item.shootSpeed = 5f;
 		}
 
-
-
-
 		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback) {
 			if (player.altFunctionUse == 2)
 				return false;
-
 
 			// 计算玩家中心到鼠标的向量，Main.MouseWorld就是鼠标在世界的位置
 			Vector2 plrToMouse = Main.MouseWorld - player.Center;
@@ -67,7 +62,6 @@ namespace VerminLordMod.Content.Items.Weapons.Two
 				Vector2 shootVel = velocity + velocity * i * 0.1f;
 				Projectile.NewProjectile(source, position, shootVel, type, damage, knockback, player.whoAmI);
 			}
-
 
 			return false;
 		}

@@ -1,4 +1,4 @@
-﻿using VerminLordMod.Common.Players;
+using VerminLordMod.Common.Players;
 using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
@@ -24,7 +24,6 @@ namespace VerminLordMod.Content.Items.Debuggers
 			Item.maxStack = 1;//最大堆叠数量 默认一个
 			Item.value = 100;//价值 为购买价格 从右向左为铜币银币金币铂金币 卖出价格是购买价格的五分之一
 
-
 			Item.useTime = 20;
 			Item.useAnimation = 20;
 			Item.useStyle = ItemUseStyleID.HoldUp;
@@ -38,8 +37,6 @@ namespace VerminLordMod.Content.Items.Debuggers
 		//	player.AddBuff(ModContent.BuffType<Minilightbuff>(),1800);
 		//	return true;
 		//}
-
-
 
 		public override void ModifyTooltips(List<TooltipLine> tooltips) {
 			

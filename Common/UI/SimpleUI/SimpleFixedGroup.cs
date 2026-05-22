@@ -4,7 +4,6 @@
 // 内部元素使用固定像素间距，不随面板缩放变化。
 // 组本身不能调整大小，尺寸由内部元素自动计算。
 // ============================================================
-using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;

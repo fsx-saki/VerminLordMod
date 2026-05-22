@@ -1,4 +1,3 @@
-using System;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
@@ -16,7 +15,6 @@ namespace VerminLordMod.Content.Items.Weapons.One
 	{
 		protected override int qiCost => 50;
 
-
 		//不会改变的属
 		public override void SetDefaults() {
 			Item.width = 24;//碰撞箱宽度 一般设置为贴图宽度
@@ -30,8 +28,6 @@ namespace VerminLordMod.Content.Items.Weapons.One
 			Item.useTurn = true;
 			Item.UseSound = SoundID.Item1;
 		}
-
-
 
 		// Reduce resource on use
 		public override bool? UseItem(Player player) {

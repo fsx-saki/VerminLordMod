@@ -1,8 +1,3 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -27,7 +22,6 @@ namespace VerminLordMod.Content.Items.Consumables
 		public override bool CanRightClick() {
 			return true;
 		}
-
 
 		// 这个函数的执行条件跟上面的RightClick是一致的
 		//public override void ModifyItemLoot(ItemLoot itemLoot) {

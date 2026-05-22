@@ -1,25 +1,20 @@
-﻿using VerminLordMod.Common.Players;
+using VerminLordMod.Common.Players;
 using VerminLordMod.Content.Buffs;
 using VerminLordMod.Content.DamageClasses;
 using VerminLordMod.Content.Projectiles;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Humanizer;
 
-
 namespace VerminLordMod.Content.Prefixes
 {
 	class CrustaceaPrefix:ModPrefix
 	{
-
 
 		//public override IEnumerable<TooltipLine> GetTooltipLines(Item item) {
 		//	LocalizedText localizedText = new LocalizedText() Language.GetTextValue("Mods.VerminLordMod.CommonItemTooltip.PrefixAddDefense");
@@ -36,7 +31,6 @@ namespace VerminLordMod.Content.Prefixes
 			List<TooltipLine> tooltipLines = new List<TooltipLine>() { line1, line2 };
 			return tooltipLines;
 		}
-
 
 		// 声明一个自定义的 *virtual* 属性，所以另一种前缀，ExampleDerivedPrefix，可以重写它自己的Power（效力）
 		public virtual int Power => 6;

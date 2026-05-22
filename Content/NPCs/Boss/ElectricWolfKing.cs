@@ -1,4 +1,4 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
 using Terraria;
@@ -25,7 +25,6 @@ namespace VerminLordMod.Content.NPCs.Boss
 		//给二阶段另一个小地图上的boss图标
 		public static int secondStageHeadSlot = -1;
 
-
 		//这里的代码称为属性：它的作用类似于变量，但可以修改其他内容。在这种情况下，它使用具有四个条目的NPC.ai[]数组。
 		//我们使用属性是因为它使代码更具可读性（“if（SecondStage）”vs“if（NPC.ai[0]==1f）”）。
 		//我们使用NPC.ai[]，因为结合NPC.netUpdate，我们可以使其兼容多人游戏。否则（创建我们自己的字段），我们将不得不编写额外的代码来使其工作（此处不涉及）
@@ -34,7 +33,6 @@ namespace VerminLordMod.Content.NPCs.Boss
 			set => NPC.ai[0] = value ? 1f : 0f;
 		}
 		//如果你的boss有两个以上的阶段，并且由于这是一个布尔值，只能是两个值（true、false），请考虑使用整数或枚举
-
 
 		//属性的更高级用法，用于环绕浮点数以充当Vector2
 		public Vector2 FirstStageDestination {
@@ -45,12 +43,10 @@ namespace VerminLordMod.Content.NPCs.Boss
 			}
 		}
 
-
 		public int MinionMaxHealthTotal {
 			get => (int)NPC.ai[3];
 			set => NPC.ai[3] = value;
 		}
-
 
 		public int MinionHealthTotal { get; set; }
 
@@ -71,7 +67,6 @@ namespace VerminLordMod.Content.NPCs.Boss
 		//如果你选择为NPC.ai[]选择“包装属性”的路线，请确保它们不会重叠（两个属性以不同的方式使用相同的变量），并且你不会意外地直接使用NPC.ai[]
 		public ref float SecondStageTimer_SpawnEyes => ref NPC.localAI[3];
 		//召唤小弟的类型
-
 
 		//小弟数量
 		public static int MinionCount() {
@@ -162,7 +157,6 @@ namespace VerminLordMod.Content.NPCs.Boss
 			});
 		}
 
-
 		public override void ModifyNPCLoot(NPCLoot npcLoot) {
 			// Do NOT misuse the ModifyNPCLoot and OnKill hooks: the former is only used for registering drops, the latter for everything else
 
@@ -214,8 +208,6 @@ namespace VerminLordMod.Content.NPCs.Boss
 			//npcLoot.Add(ItemDropRule.MasterModeDropOnAllPlayers(ModContent.ItemType<YuanS>(), 4));
 		}
 
-
-
 		public override void OnKill() {
 
 			if (WolfSystem.isWolfWave) {
@@ -223,7 +215,6 @@ namespace VerminLordMod.Content.NPCs.Boss
 				WolfSystem.WolfWaveRate = 100;
 				WolfSystem.isWolfWave = false;
 			}
-
 
 			// The first time this boss is killed, spawn ExampleOre into the world. This code is above SetEventFlagCleared because that will set downedMinionBoss to true.
 			if (!DownBossSystem.downedMinionBoss) {
@@ -340,7 +331,6 @@ namespace VerminLordMod.Content.NPCs.Boss
 
 		private void SpawnMinions() {
 
-
 			if (Main.netMode == NetmodeID.MultiplayerClient) {
 				// Because we want to spawn minions, and minions are NPCs, we have to do this on the server (or singleplayer, "!= NetmodeID.MultiplayerClient" covers both)
 				// This means we also have to sync it after we spawned and set up the minion
@@ -376,7 +366,6 @@ namespace VerminLordMod.Content.NPCs.Boss
 				NPC.netUpdate = true;
 			}
 		}
-
 
 		private void DoFirstStage(Player player) {
 			// Each time the timer is 0, pick a random position a fixed distance away from the player but towards the opposite side
@@ -445,8 +434,6 @@ namespace VerminLordMod.Content.NPCs.Boss
 			float remainingShields = MinionHealthTotal / (float)MinionMaxHealthTotal;
 			//NPC.alpha = (int)(remainingShields * 255);
 
-
-
 			NPC.spriteDirection = Math.Cos(NPC.velocity.ToRotation()) > 0 ? 1 : -1;
 		}
 
@@ -484,7 +471,6 @@ namespace VerminLordMod.Content.NPCs.Boss
 			Vector2 moveTo = toAbovePlayerNormalized * speed;
 			NPC.velocity = (NPC.velocity * (inertia - 1) + moveTo) / inertia;
 
-
 			if(Randommer.Roll(10))
 			DoSecondStage_SpawnEyes(player);
 
@@ -493,7 +479,6 @@ namespace VerminLordMod.Content.NPCs.Boss
 			NPC.alpha = 0;
 
 			NPC.spriteDirection = Math.Cos(NPC.velocity.ToRotation()) > 0 ? 1 : -1;
-
 
 		}
 

@@ -43,12 +43,8 @@ namespace VerminLordMod.Content.Items.Weapons.Three
 			}
 			player.AddBuff(ModContent.BuffType<IceCrystalbuff>(), 300);
 
-
 			return true;
 		}
-
-
-
 
 	}
 }

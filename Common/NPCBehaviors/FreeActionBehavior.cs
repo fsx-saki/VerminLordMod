@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using Terraria;
 using VerminLordMod.Common.DialogueTree;
 using VerminLordMod.Common.UI.DialogueTreeUI;

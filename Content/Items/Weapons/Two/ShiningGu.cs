@@ -7,7 +7,6 @@ using VerminLordMod.Content.DamageClasses;
 using VerminLordMod.Content.Items.Weapons.Daos;
 using VerminLordMod.Content.Projectiles;
 
-
 namespace VerminLordMod.Content.Items.Weapons.Two
 {
 	/// <summary>
@@ -23,7 +22,6 @@ namespace VerminLordMod.Content.Items.Weapons.Two
 		protected override int _guLevel => 2;
 		protected override float unitConntrolRate => 101;
 		protected override bool needCtrl => false;
-
 
 		//物品属性
 		public override void SetDefaults() {

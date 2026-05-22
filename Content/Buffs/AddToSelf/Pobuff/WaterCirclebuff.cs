@@ -1,9 +1,4 @@
-﻿using VerminLordMod.Content.Projectiles;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using VerminLordMod.Content.Projectiles;
 using Terraria;
 using Terraria.ModLoader;
 using static VerminLordMod.Content.Items.Weapons.One.RiverStream;

@@ -5,7 +5,6 @@
 // ============================================================
 #nullable enable
 using Microsoft.Xna.Framework;
-using System;
 using Terraria;
 
 namespace VerminLordMod.Common.Search;

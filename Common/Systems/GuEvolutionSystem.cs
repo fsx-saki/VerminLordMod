@@ -111,6 +111,39 @@ namespace VerminLordMod.Common.Systems
                 ModContent.ItemType<Content.Items.Weapons.Six.DarkArrowGu>(),
                 EvolutionType.NormalUpgrade, 6, 400, 0.35f);
 
+            // ============================================================
+            // 六转 → 七转 进化路径（凡蛊升仙蛊）
+            // ============================================================
+            RegisterPath(ModContent.ItemType<Content.Items.Weapons.Six.DarkArrowGu>(),
+                ModContent.ItemType<Content.Items.Weapons.Seven.ZhaoZaiGu>(),
+                EvolutionType.SpecialUpgrade, 7, 1000, 0.2f);
+
+            RegisterPath(ModContent.ItemType<Content.Items.Weapons.Six.BaiWuYiShiGu>(),
+                ModContent.ItemType<Content.Items.Weapons.Seven.YuShouGu>(),
+                EvolutionType.SpecialUpgrade, 7, 1000, 0.2f);
+
+            // ============================================================
+            // 七转 → 八转 进化路径
+            // ============================================================
+            RegisterPath(ModContent.ItemType<Content.Items.Weapons.Seven.ZhaoZaiGu>(),
+                ModContent.ItemType<Content.Items.Weapons.Eight.HongYunQiTianGu>(),
+                EvolutionType.SpecialUpgrade, 8, 3000, 0.1f);
+
+            RegisterPath(ModContent.ItemType<Content.Items.Weapons.Seven.YuShouGu>(),
+                ModContent.ItemType<Content.Items.Weapons.Eight.BaoGuangGu>(),
+                EvolutionType.SpecialUpgrade, 8, 3000, 0.1f);
+
+            // ============================================================
+            // 八转 → 九转 进化路径（至高之路）
+            // ============================================================
+            RegisterPath(ModContent.ItemType<Content.Items.Weapons.Eight.HongYunQiTianGu>(),
+                ModContent.ItemType<Content.Items.Weapons.Nine.ZhiZunXianTaiGu>(),
+                EvolutionType.SpecialUpgrade, 9, 10000, 0.05f);
+
+            RegisterPath(ModContent.ItemType<Content.Items.Weapons.Eight.BaoGuangGu>(),
+                ModContent.ItemType<Content.Items.Weapons.Nine.ZhiZunXianTaiGu>(),
+                EvolutionType.SpecialUpgrade, 9, 10000, 0.05f);
+
             RegisterPath(ModContent.ItemType<Content.Items.Weapons.Two.FourFlavorWineBugWeapon>(),
                 ModContent.ItemType<Content.Items.Weapons.Three.SevenWineBugWeapon>(),
                 EvolutionType.NormalUpgrade, 3, 100, 0.6f);

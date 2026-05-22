@@ -1,11 +1,10 @@
-﻿using VerminLordMod.Common.Players;
+using VerminLordMod.Common.Players;
 using VerminLordMod.Content.Buffs;
 using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using Terraria.DataStructures;
 using VerminLordMod.Common.Abstractions;
 
 namespace VerminLordMod.Content.Items.Consumables
@@ -37,7 +36,6 @@ namespace VerminLordMod.Content.Items.Consumables
 			Item.rare = ItemRarityID.White;//物品稀有度
 			Item.maxStack = 9999;//最大堆叠数量 默认一个
 			Item.value = 50000;//价值 为购买价格 从右向左为铜币银币金币铂金币 卖出价格是购买价格的五分之一
-
 
 			Item.useTime = 20;
 			Item.useAnimation = 20;

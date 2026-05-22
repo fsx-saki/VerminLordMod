@@ -1,6 +1,5 @@
 using Microsoft.Xna.Framework;
 using Mono.Cecil;
-using System.Collections.Generic;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;

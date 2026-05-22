@@ -74,7 +74,6 @@ namespace VerminLordMod.Content.Items.Weapons.Three
 				return false;
 			}
 
-
 			// 计算玩家中心到鼠标的向量，Main.MouseWorld就是鼠标在世界的位置
 			Vector2 plrToMouse = Main.MouseWorld - player.Center;
 			// 计算玩家到鼠标的向量弧度
@@ -89,7 +88,6 @@ namespace VerminLordMod.Content.Items.Weapons.Three
 				float f = Main.rand.NextFloat(0.97f, 1.03f);
 				Projectile.NewProjectile(source, position, shootVel*f, type, damage, knockback, player.whoAmI);
 			}
-
 
 			return false;
 		}

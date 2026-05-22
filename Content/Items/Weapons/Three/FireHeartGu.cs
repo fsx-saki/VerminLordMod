@@ -41,7 +41,6 @@ namespace VerminLordMod.Content.Items.Weapons.Three
 			}
 			player.AddBuff(ModContent.BuffType<FireHeartbuff>(), 1600);
 
-
 			return true;
 		}
 	}

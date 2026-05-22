@@ -1,7 +1,6 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-
 
 namespace VerminLordMod.Content.Buffs.AddToEnemy
 {
@@ -40,8 +39,6 @@ namespace VerminLordMod.Content.Buffs.AddToEnemy
 			Main.vanityPet[Type] = false;
 		}
 
-
-
 		public override void Update(NPC npc, ref int buffIndex) {
 
 			if (Main.rand.NextBool(2)) {
@@ -50,7 +47,6 @@ namespace VerminLordMod.Content.Buffs.AddToEnemy
 			}
 
 			npc.defense = npc.defDefense - 10;
-
 
 		}
 

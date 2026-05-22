@@ -63,7 +63,6 @@ namespace VerminLordMod.Content.Items.Weapons.One
 				Projectile.NewProjectile(source, position, shootVel * f, type, damage, knockback, player.whoAmI);
 			}
 
-
 			return false;
 		}
 	}

@@ -1,5 +1,4 @@
 using Microsoft.Xna.Framework;
-using System;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
@@ -7,7 +6,6 @@ using Terraria.ModLoader;
 using VerminLordMod.Content.DamageClasses;
 using VerminLordMod.Content.Items.Weapons.Daos;
 using VerminLordMod.Content.Projectiles;
-
 
 namespace VerminLordMod.Content.Items.Weapons.Two
 {
@@ -47,9 +45,6 @@ namespace VerminLordMod.Content.Items.Weapons.Two
 			Item.shoot = ModContent.ProjectileType<AcidWaterProj>();
 			Item.shootSpeed = 5f;
 		}
-
-
-
 
 		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback) {
 			if (player.altFunctionUse == 2)

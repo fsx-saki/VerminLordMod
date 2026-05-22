@@ -1,8 +1,4 @@
-﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
@@ -46,7 +42,6 @@ namespace VerminLordMod.Content.Items.Accessories.Four
 			Item.accessory = true;
 			Item.useStyle = ItemUseStyleID.Guitar;
 		}
-
 
 		// 控制垂直飞行的函数
 		public override void VerticalWingSpeeds(Player player, ref float ascentWhenFalling, ref float ascentWhenRising, ref float maxCanAscendMultiplier, ref float maxAscentMultiplier, ref float constantAscend) {

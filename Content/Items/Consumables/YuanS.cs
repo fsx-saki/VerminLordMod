@@ -1,4 +1,4 @@
-﻿using VerminLordMod.Content.Items.Placeable;
+using VerminLordMod.Content.Items.Placeable;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -41,7 +41,6 @@ namespace VerminLordMod.Content.Items.Consumables
 		
 			return true;
 		}
-
 
 		//合成表处理
 		public override void AddRecipes() {

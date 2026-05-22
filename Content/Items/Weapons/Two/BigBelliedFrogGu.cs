@@ -1,5 +1,4 @@
 using Microsoft.Xna.Framework;
-using System;
 using System.Collections.Generic;
 using Terraria;
 using Terraria.DataStructures;
@@ -10,7 +9,6 @@ using VerminLordMod.Content.DamageClasses;
 using VerminLordMod.Content.Items.Weapons.Daos;
 using VerminLordMod.Content.Projectiles;
 using VerminLordMod.Common.Abstractions;
-
 
 namespace VerminLordMod.Content.Items.Weapons.Two
 {

@@ -123,10 +123,7 @@ namespace VerminLordMod.Content.Items.Weapons.Three
 			Text.ShowTextRed(player,$"使用七香酒虫，真元恢复永久提升。");
 			return true;
 
-
-
 		}
-
 
 		public override void AddRecipes() {// 这个括号里有一个默认的参数1，你可以填任何大于0的整数。它代表了这个合成表会生成多少个物品
 			CreateRecipe()

@@ -42,9 +42,6 @@ namespace VerminLordMod.Content.Projectiles
 			Projectile.position += Projectile.velocity; // 更新位置
 		}
 
-
-
-
 		private void Explode() {
 			// 创建爆炸效果
 			Projectile.NewProjectileDirect(Projectile.GetSource_FromThis(), Projectile.Center, Vector2.Zero, ProjectileID.Grenade, 100, 10f, Main.myPlayer).alpha=254;

@@ -3,7 +3,6 @@
 // 选择选项后触发的副作用
 // ============================================================
 using Microsoft.Xna.Framework;
-using System.Collections.Generic;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;

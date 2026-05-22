@@ -461,7 +461,6 @@ public class SimplePanel
         return new Rectangle(left, top, width, height);
     }
 
-
     /// <summary>
     /// 计算缩放动画值
     /// </summary>

@@ -18,7 +18,6 @@ namespace VerminLordMod.Content.Items.Weapons.One
 		protected override float unitConntrolRate => 5;
 		protected override int controlQiCost => 5;
 
-
 		//不会改变的属
 		public override void SetDefaults() {
 			Item.width = 24;//碰撞箱宽度 一般设置为贴图宽度

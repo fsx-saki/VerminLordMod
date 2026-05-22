@@ -23,7 +23,6 @@ namespace VerminLordMod.Content.Items.Weapons.Three
 		protected override int _useTime => 26;
 		protected override int _guLevel => 3;
 
-
 		public override void SetDefaults() {
 			Item.width = 24; // The width of the item's hitbox.
 			Item.height = 24; // The height of the item's hitbox.

@@ -17,7 +17,6 @@ namespace VerminLordMod.Content.Items.Weapons.One
 		protected override int qiCost => 7;
 		protected override int _useTime => 15;
 
-
 		//物品属性
 		public override void SetDefaults() {
 			//静态属性

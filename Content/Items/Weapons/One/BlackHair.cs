@@ -35,13 +35,10 @@ namespace VerminLordMod.Content.Items.Weapons.One
 				return false;
 			player.AddBuff(ModContent.BuffType<BlackHairbuff>(), 420);
 
-
 			return true;
 		}
 
-
 		
-
 
 	}
 }

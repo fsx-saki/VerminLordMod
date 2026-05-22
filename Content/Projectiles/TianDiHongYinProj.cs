@@ -39,15 +39,11 @@ namespace VerminLordMod.Content.Projectiles
 									 // Projectile.extraUpdates = 0; // 弹幕每帧的额外更新次数，默认0，这个之后细讲
 									 // 以及写一些关于无敌帧的设定
 
-
 		}
 		public override void AI() {
 
 			Projectile.rotation = Projectile.velocity.ToRotation() + (float)(0.5 * MathHelper.Pi);  //弹幕方向对正
 		}
-
-
-
 
 		public override void OnSpawn(IEntitySource source) {
 

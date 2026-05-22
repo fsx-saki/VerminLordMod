@@ -5,7 +5,6 @@ using VerminLordMod.Content.DamageClasses;
 using VerminLordMod.Content.Items.Weapons.Daos;
 using VerminLordMod.Content.Projectiles;
 
-
 namespace VerminLordMod.Content.Items.Weapons.One
 {
 	/// <summary>
@@ -18,7 +17,6 @@ namespace VerminLordMod.Content.Items.Weapons.One
 		protected override int controlQiCost => 20;
 		protected override int qiCost => 5;
 		protected override int _useTime => 25;
-
 
 		//物品属性
 		public override void SetDefaults() {

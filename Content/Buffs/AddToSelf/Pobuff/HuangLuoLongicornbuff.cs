@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -32,7 +32,6 @@ namespace VerminLordMod.Content.Buffs.AddToSelf.Pobuff
 			// 决定这个buff是不是一个装饰性宠物，用来判定的，比如消除buff的时候不会消除它
 			Main.vanityPet[Type] = false;
 		}
-
 
 		// 这里给的第二个buffIndex是buff在玩家身上的索引
 		public override void Update(Player player, ref int buffIndex) {

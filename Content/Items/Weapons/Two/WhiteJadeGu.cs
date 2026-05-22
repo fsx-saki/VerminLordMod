@@ -35,7 +35,6 @@ namespace VerminLordMod.Content.Items.Weapons.Two
 				return false;
 			player.AddBuff(ModContent.BuffType<WhiteJadebuff>(), 3600);
 
-
 			return true;
 		}
 	}

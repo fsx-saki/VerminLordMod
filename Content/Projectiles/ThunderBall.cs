@@ -1,13 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Terraria.ModLoader;
 using Terraria;
 using VerminLordMod.Content.DamageClasses;
 using Terraria.ID;
-using Terraria.DataStructures;
 using Terraria.Audio;
 using Microsoft.Xna.Framework;
 using VerminLordMod.Common.Players;

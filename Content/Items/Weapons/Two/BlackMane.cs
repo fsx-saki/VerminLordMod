@@ -38,7 +38,6 @@ namespace VerminLordMod.Content.Items.Weapons.Two
 			player.AddBuff(ModContent.BuffType<BlackManebuff>(), 420);
 			player.AddBuff(BuffID.Thorns, 420);
 
-
 			return true;
 		}
 
@@ -57,8 +56,6 @@ namespace VerminLordMod.Content.Items.Weapons.Two
 										//.AddCondition(Condition.NearWater)//环境条件
 			.Register();
 		}
-
-
 
 	}
 }

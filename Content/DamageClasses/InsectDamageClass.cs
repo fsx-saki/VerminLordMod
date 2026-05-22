@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ModLoader;
 
 namespace VerminLordMod.Content.DamageClasses
@@ -20,8 +20,6 @@ namespace VerminLordMod.Content.DamageClasses
 
 			return StatInheritanceData.None;//不吃其他任何加成
 
-
-
 		}
 		public override bool GetEffectInheritance(DamageClass damageClass) {
 			// 此方法允许你使你的伤害类型触发本该由其它伤害类型触发的效果 (如岩浆石只对近战伤害生效)
@@ -32,7 +30,6 @@ namespace VerminLordMod.Content.DamageClasses
 			return false;//不触发其他效果
 		}
 
-
 		public override void SetDefaultStats(Player player) {
 			// 此方法让你设置此伤害类型的默认属性加成 (像原版的伤害默认有+4%暴击率)
 			//player.GetCritChance<AlchemicalDamageClass>() += 0;
@@ -40,12 +37,10 @@ namespace VerminLordMod.Content.DamageClasses
 			// 你也可以在这里写伤害 (GetDamage), 击退 (GetKnockback), 和攻速 (GetAttackSpeed)
 		}
 
-
 		// 此属性决定此伤害类型是否使用标准的暴击计算公式
 		// 请注意将其设为 false 会阻止描述中 "暴击率" 一行的显示
 		// 并且即使你在 ShowStatTooltipLine 返回 true 也不行, 所以要小心!
 		public override bool UseStandardCritCalcs => true;
-
 
 		public override bool ShowStatTooltipLine(Player player, string lineName) {
 			// 此方法允许你隐藏物品描述中特定伤害类型的数据显示

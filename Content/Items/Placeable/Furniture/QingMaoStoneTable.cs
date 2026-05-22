@@ -18,7 +18,6 @@ namespace VerminLordMod.Content.Items.Placeable.Furniture
 			CreateRecipe()
 				.AddIngredient(ModContent.GetInstance<QingMaoStoneBlock>(), 8).AddTile(TileID.WorkBenches)
 
-
 				.Register();
 		}
 	}

@@ -1,4 +1,3 @@
-using System;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
@@ -30,8 +29,6 @@ namespace VerminLordMod.Content.Items.Weapons.One
 			Item.useTurn = true;
 			Item.UseSound = SoundID.Item1;
 		}
-
-
 
 		// Reduce resource on use
 		public override bool? UseItem(Player player) {

@@ -1,10 +1,5 @@
 using VerminLordMod.Common.Players;
 using Microsoft.Xna.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
@@ -67,14 +62,12 @@ namespace VerminLordMod.Content.Projectiles
 			frametime++;
 		}
 
-
 		private void MoveAroundPlayer(Player player)
         {
 			Vector2 offset = new Vector2(-24,0);
 			Vector2 diff = player.Center-Projectile.Center+offset;
 			Projectile.position += diff;
         }
-
 
 		public override void OnSpawn(IEntitySource source) {
 			player = Main.player[Projectile.owner];

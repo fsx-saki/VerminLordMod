@@ -354,7 +354,6 @@ namespace VerminLordMod.Content.Projectiles
 			shaderData.QueueRipple(ripplePos, waveData, beamDims, RippleShape.Square, Projectile.rotation);
 		}
 
-
 		// Automatically iterates through every tile the laser is overlapping to cut grass at all those locations.
 		public override void CutTiles() {
 			// tilecut_0 is an unnamed decompiled variable which tells CutTiles how the tiles are being cut (in this case, via a Projectile).

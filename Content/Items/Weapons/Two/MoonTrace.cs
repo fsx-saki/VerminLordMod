@@ -8,7 +8,6 @@ using VerminLordMod.Content.Items.Weapons.Daos;
 using VerminLordMod.Content.Items.Weapons.One;
 using VerminLordMod.Content.Projectiles;
 
-
 namespace VerminLordMod.Content.Items.Weapons.Two
 {
 	/// <summary>

@@ -8,7 +8,6 @@ using VerminLordMod.Content.DamageClasses;
 using VerminLordMod.Content.Items.Weapons.Daos;
 using VerminLordMod.Content.Projectiles;
 
-
 namespace VerminLordMod.Content.Items.Weapons.Six
 {
 	/// <summary>
@@ -48,7 +47,6 @@ namespace VerminLordMod.Content.Items.Weapons.Six
 			Item.shootSpeed = 10f;
 		}
 
-
 		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback) {
 			if (player.altFunctionUse == 2)
 				return false;
@@ -73,7 +71,6 @@ namespace VerminLordMod.Content.Items.Weapons.Six
 			return false;
 
 		}
-
 
 	}
 }

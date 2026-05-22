@@ -1,8 +1,7 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using VerminLordMod.Content.DamageClasses;
-
 
 namespace VerminLordMod.Content.Buffs.AddToSelf.Pobuff
 {

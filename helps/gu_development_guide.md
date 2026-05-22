@@ -57,7 +57,8 @@
 ### Step 1: 确定蛊虫属性
 - 在 `novel.db` 中查询蛊虫信息（等级、能力、流派）--必须确认信息准确
 - 确定 `DaoType`（血道/骨道/魂道/冰道/雷道/风道/...）
-- 确定转数（一转→Three/, 二转→Three/, 三转→Four/, 四转→Five/ 目录）
+- 确定转数（一转→One/, 二转→Two/, 三转→Three/, 四转→Four/, 五转→Five/, 六转→Six/ 目录）
+- 七转→Seven/, 八转→Eight/, 九转→Nine/ 目录（高阶仙蛊）
 
 ### Step 2: 创建武器类 (GuWeapon)
 ```

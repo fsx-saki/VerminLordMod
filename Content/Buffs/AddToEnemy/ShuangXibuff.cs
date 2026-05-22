@@ -1,9 +1,7 @@
-﻿using Microsoft.Xna.Framework;
-using System;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-
 
 namespace VerminLordMod.Content.Buffs.AddToEnemy
 {
@@ -41,7 +39,6 @@ namespace VerminLordMod.Content.Buffs.AddToEnemy
 			// 决定这个buff是不是一个装饰性宠物，用来判定的，比如消除buff的时候不会消除它
 			Main.vanityPet[Type] = false;
 		}
-
 
 		public override void Update(NPC npc, ref int buffIndex) {
 			Dust.NewDust(npc.position, npc.width, npc.height, DustID.BlueFlare);

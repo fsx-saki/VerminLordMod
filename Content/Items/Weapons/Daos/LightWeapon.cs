@@ -1,4 +1,3 @@
-
 using Terraria.ModLoader;
 using VerminLordMod.Content.Dusts;
 

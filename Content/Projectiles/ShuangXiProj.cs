@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Terraria.ModLoader;
 using Terraria;
 using VerminLordMod.Content.DamageClasses;
@@ -38,8 +33,6 @@ namespace VerminLordMod.Content.Projectiles
 			// Projectile.extraUpdates = 0; // 弹幕每帧的额外更新次数，默认0，这个之后细讲
 			// 以及写一些关于无敌帧的设定
 		}
-
-
 
 		public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone) {
 			target.AddBuff(ModContent.BuffType<ShuangXibuff>(), 120);

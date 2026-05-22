@@ -36,7 +36,6 @@ namespace VerminLordMod.Content.Items.Weapons.One
 			Item.shoot = ModContent.ProjectileType<StoneCJB>();
 			Item.shootSpeed = 5f;
 
-
 		}
 	}
 }

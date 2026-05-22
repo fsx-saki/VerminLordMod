@@ -32,7 +32,6 @@ namespace VerminLordMod.Content.Items.Weapons.One
 			Item.UseSound = SoundID.Item1;
 		}
 
-
 		public override bool? UseItem(Player player) {
 			if (player.altFunctionUse == 2)
 				return false;

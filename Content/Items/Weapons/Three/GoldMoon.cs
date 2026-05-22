@@ -11,7 +11,6 @@ using VerminLordMod.Content.Items.Weapons.Daos;
 using VerminLordMod.Content.Items.Weapons.Two;
 using VerminLordMod.Content.Projectiles;
 
-
 namespace VerminLordMod.Content.Items.Weapons.Three
 {
 	/// <summary>
@@ -49,7 +48,6 @@ namespace VerminLordMod.Content.Items.Weapons.Three
 			Item.shoot = ModContent.ProjectileType<MoonlightProjG>();
 			Item.shootSpeed = 8f;
 		}
-
 
 		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback) {
 			if (player.altFunctionUse == 2) {

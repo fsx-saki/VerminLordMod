@@ -1,6 +1,5 @@
 using Microsoft.Xna.Framework;
 using System;
-using System.Linq;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
@@ -47,7 +46,6 @@ namespace VerminLordMod.Content.Items.Weapons.One
 			Item.shootSpeed =9f;
 		}
 
-
 		public override void UpdateInventory(Player player) {
 			int power = 0;
 			foreach (var buff in Starbuff.starbuffs) {
@@ -65,8 +63,6 @@ namespace VerminLordMod.Content.Items.Weapons.One
 				return false;
 			return true;
 		}
-
-
 
 	}
 }

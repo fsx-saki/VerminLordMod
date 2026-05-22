@@ -1,4 +1,4 @@
-﻿using VerminLordMod.Common.Players;
+using VerminLordMod.Common.Players;
 using VerminLordMod.Content.Projectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -50,7 +50,6 @@ namespace VerminLordMod.Content.NPCs.Town
 			};
 			NPCID.Sets.NPCBestiaryDrawOffset.Add(Type, drawModifiers);
 
-
 			NPC.Happiness
 			.SetBiomeAffection<DesertBiome>(AffectionLevel.Hate) // Example Person prefers the forest.
 			.SetBiomeAffection<SnowBiome>(AffectionLevel.Dislike) // Example Person prefers the forest.
@@ -63,12 +62,7 @@ namespace VerminLordMod.Content.NPCs.Town
 			.SetNPCAffection(NPCID.Angler, AffectionLevel.Hate) // Hates living near the demolitionist.
 			; // < Mind the semicolon!
 
-
 			NPCProfile = new Profiles.StackedNPCProfile(new Profiles.DefaultNPCProfile(Texture, NPCHeadLoader.GetHeadSlot(HeadTexture), Texture + "_Party"));
-
-
-
-
 
 		}
 		public override void SetDefaults() {
@@ -86,7 +80,6 @@ namespace VerminLordMod.Content.NPCs.Town
 
 			AnimationType = NPCID.Guide;
 		}
-
 
 		public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry) {
 			// We can use AddRange instead of calling Add multiple times in order to add multiple items at once
@@ -182,15 +175,11 @@ namespace VerminLordMod.Content.NPCs.Town
 			//}
 		}
 
-
 		public override void OnChatButtonClicked(bool firstButton, ref string shop) {
 			if (firstButton) {
 				shop = ShopName;
 			}
 		}
-
-
-
 
 		public override void AddShops() {
 			var npcShop = new NPCShop(Type, ShopName)
@@ -226,7 +215,6 @@ namespace VerminLordMod.Content.NPCs.Town
 			npcShop.Register();
 		}
 
-
 		public override void ModifyActiveShop(string shopName, Item[] items) {
 			foreach (Item item in items) {
 				// Skip 'air' items and null items.
@@ -236,11 +224,8 @@ namespace VerminLordMod.Content.NPCs.Town
 			}
 		}
 
-
 		// Make this Town NPC teleport to the King and/or Queen statue when triggered. Return toKingStatue for only King Statues. Return !toKingStatue for only Queen Statues. Return true for both.
 		public override bool CanGoToStatue(bool toKingStatue) => true;
-
-
 
 		public override void TownNPCAttackStrength(ref int damage, ref float knockback) {
 			damage = 20;

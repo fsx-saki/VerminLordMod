@@ -95,8 +95,6 @@ namespace VerminLordMod.Content.Items.Weapons.Three
 				return false;
 			}
 
-
-
 		}
 		public float yuanRate = 0f;
 		public override void UpdateInventory(Player player) {

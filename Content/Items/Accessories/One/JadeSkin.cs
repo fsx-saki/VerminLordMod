@@ -1,9 +1,5 @@
-﻿using VerminLordMod.Common.Players;
-using System;
+using VerminLordMod.Common.Players;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;

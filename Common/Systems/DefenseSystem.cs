@@ -3,7 +3,6 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
-using Terraria.DataStructures;
 using VerminLordMod.Common.Players;
 using VerminLordMod.Content.Items.Consumables;
 

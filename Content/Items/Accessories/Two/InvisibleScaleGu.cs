@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
@@ -58,7 +58,6 @@ namespace VerminLordMod.Content.Items.Accessories.Two
 			}
 			qiResource.QiMaxCurrent -= qiCost;
 		}
-
 
 		//合成表处理
 		public override void AddRecipes() {

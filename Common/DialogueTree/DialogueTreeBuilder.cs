@@ -2,7 +2,6 @@
 // DialogueTreeBuilder - 对话树构建器（Fluent API）
 // 提供链式调用来构建对话树
 // ============================================================
-using System.Collections.Generic;
 
 namespace VerminLordMod.Common.DialogueTree;
 

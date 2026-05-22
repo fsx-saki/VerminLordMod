@@ -17,7 +17,6 @@ namespace VerminLordMod.Content.Items.Weapons.Four
 		protected override int qiCost => 10;
 		protected override int _useTime => 5;
 
-
 		protected override int controlQiCost => 5;
 		protected override float unitConntrolRate => 25;
 

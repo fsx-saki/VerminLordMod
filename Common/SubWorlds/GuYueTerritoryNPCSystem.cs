@@ -1,7 +1,6 @@
 using Microsoft.Xna.Framework;
 using SubworldLibrary;
 using System.Collections.Generic;
-using System.Linq;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;

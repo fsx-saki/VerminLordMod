@@ -202,7 +202,6 @@ namespace VerminLordMod.Content.Projectiles.Minions
 				vector96.X -= Projectile.minionPos * 40 * player4.direction;
 			}
 
-
 			bool flag20 = true;
 			int num915 = -1;
 			float num916 = 450f;
@@ -545,7 +544,6 @@ namespace VerminLordMod.Content.Projectiles.Minions
 			}
 
 		}
-
 
 		private bool CheckActive(Player owner) {
 			if (owner.dead || !owner.active) {

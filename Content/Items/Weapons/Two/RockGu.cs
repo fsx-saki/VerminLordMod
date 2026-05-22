@@ -35,13 +35,8 @@ namespace VerminLordMod.Content.Items.Weapons.Two
 				return false;
 			player.AddBuff(ModContent.BuffType<Rockbuff>(), 300);
 
-
 			return true;
 		}
-
-
-
-
 
 	}
 }
