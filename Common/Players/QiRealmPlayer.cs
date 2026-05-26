@@ -7,6 +7,7 @@ using Terraria.ModLoader.IO;
 using VerminLordMod.Common.Events;
 using VerminLordMod.Content.Items.Consumables;
 using VerminLordMod.Content.Items.Weapons;
+using VerminLordMod.Common.Players;
 
 namespace VerminLordMod.Common.Players
 {

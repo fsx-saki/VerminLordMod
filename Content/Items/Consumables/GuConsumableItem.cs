@@ -6,6 +6,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.DataStructures;
 using VerminLordMod.Common.Players;
+using Terraria.GameContent;
 
 namespace VerminLordMod.Content.Items.Consumables
 {

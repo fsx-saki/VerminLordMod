@@ -1,6 +1,7 @@
 using Terraria.ID;
 using VerminLordMod.Common.DialogueTree;
 using VerminLordMod.Common.Systems;
+using Microsoft.Xna.Framework;
 
 namespace VerminLordMod.Content.Dialogues.Stories
 {

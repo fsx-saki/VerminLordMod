@@ -4,6 +4,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using VerminLordMod.Content.Buffs.AddToSelf.Pobuff;
 using VerminLordMod.Content.Items.Weapons.Daos;
+using Terraria.GameContent;
 
 namespace VerminLordMod.Content.Items.Weapons.One
 {

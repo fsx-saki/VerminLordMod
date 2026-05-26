@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.ModLoader;
 using VerminLordMod.Common.Players;
 using VerminLordMod.Content.Buffs.AddToSelf.Debuff;
+using Terraria.GameContent;
 
 namespace VerminLordMod.Content.Items.Consumables
 {

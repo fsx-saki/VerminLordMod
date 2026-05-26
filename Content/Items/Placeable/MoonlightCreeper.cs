@@ -1,6 +1,7 @@
 using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using Terraria.GameContent;
 
 namespace VerminLordMod.Content.Items.Placeable
 {

@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 using VerminLordMod.Common.Configs;
+using VerminLordMod.Common.Players;
 
 namespace VerminLordMod.Common.Players
 {

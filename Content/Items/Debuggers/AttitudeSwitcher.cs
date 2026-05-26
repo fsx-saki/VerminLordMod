@@ -11,6 +11,7 @@ using Terraria.ModLoader;
 using VerminLordMod.Common.Systems;
 using VerminLordMod.Common.UI.UIUtils;
 using VerminLordMod.Content.NPCs.GuMasters;
+using System;
 
 namespace VerminLordMod.Content.Items.Debuggers;
 

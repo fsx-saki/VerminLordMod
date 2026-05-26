@@ -10,6 +10,8 @@ using Terraria.ModLoader.IO;
 using VerminLordMod.Common.Players;
 using VerminLordMod.Content.DamageClasses;
 using VerminLordMod.Content.Dusts;
+using Terraria.GameContent;
+using VerminLordMod.Content.Items.Weapons;
 
 namespace VerminLordMod.Content.Items.Weapons.Six
 {

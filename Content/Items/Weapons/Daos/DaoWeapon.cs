@@ -8,6 +8,7 @@ using VerminLordMod.Common.GuBehaviors;
 using VerminLordMod.Common.GlobalProjectiles;
 using VerminLordMod.Common.Players;
 using VerminLordMod.Content.Dusts;
+using VerminLordMod.Content.Items.Weapons;
 
 namespace VerminLordMod.Content.Items.Weapons.Daos
 {

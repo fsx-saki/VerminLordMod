@@ -4,6 +4,7 @@ using Terraria.ModLoader;
 using VerminLordMod.Content.Buffs.AddToSelf.Debuff;
 using VerminLordMod.Content.Buffs.Combo.IceBladeStorm;
 using VerminLordMod.Content.Items.Weapons.Daos;
+using Microsoft.Xna.Framework;
 
 namespace VerminLordMod.Content.Items.Weapons.Three
 {

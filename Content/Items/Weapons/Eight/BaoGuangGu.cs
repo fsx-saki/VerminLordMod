@@ -5,7 +5,7 @@ using VerminLordMod.Common.GuBehaviors;
 using VerminLordMod.Common.ImplementationTracker;
 using VerminLordMod.Content.DamageClasses;
 using VerminLordMod.Content.Items.Weapons.Daos;
-using VerminLordMod.Content.Projectiles.Eight;
+using VerminLordMod.Content.Projectiles;
 
 namespace VerminLordMod.Content.Items.Weapons.Eight
 {
@@ -14,7 +14,7 @@ namespace VerminLordMod.Content.Items.Weapons.Eight
     /// 八转光道仙蛊，可释放璀璨宝光，照耀天地。
     /// 攻击时释放强光弹幕，对敌人造成巨额光道伤害并致盲。
     /// </summary>
-    [ImplStatus(ImplStatus.Implemented, note = "八转仙蛊示例 — 宝光蛊", plannedTurn = "八转", daoType = "光")]
+    [ImplStatus(ImplStatus.Implemented, "八转仙蛊示例 — 宝光蛊", "八转", "光")]
     public class BaoGuangGu : LightWeapon, IOnHitEffectProvider
     {
         protected override int qiCost => 500;

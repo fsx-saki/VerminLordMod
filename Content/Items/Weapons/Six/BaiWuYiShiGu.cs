@@ -13,7 +13,7 @@ namespace VerminLordMod.Content.Items.Weapons.Six
     /// 六转力道蛊虫 — 百无一失蛊
     /// 武家六转仙蛊，可回收贵重蛊虫。
     /// </summary>
-    [ImplStatus(ImplStatus.Implemented, note = "完整实现，有 IOnHitEffectProvider 接口", plannedTurn = "六转", daoType = "力")]
+    [ImplStatus(ImplStatus.Implemented, "完整实现，有 IOnHitEffectProvider 接口", "六转", "力")]
     public class BaiWuYiShiGu : PowerWeapon, IOnHitEffectProvider
     {
         protected override int qiCost => 80;

@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 using VerminLordMod.Content.Trails;
+using Terraria.DataStructures;
 
 namespace VerminLordMod.Common.BulletBehaviors
 {

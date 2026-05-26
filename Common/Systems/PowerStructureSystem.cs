@@ -4,6 +4,7 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 using VerminLordMod.Common.Events;
+using Terraria.ID;
 
 namespace VerminLordMod.Common.Systems
 {

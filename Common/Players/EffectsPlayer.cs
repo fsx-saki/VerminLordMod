@@ -11,6 +11,7 @@ using VerminLordMod.Content.Items.Weapons.Daos;
 using VerminLordMod.Content.Projectiles;
 using VerminLordMod.Content.Trails;
 using Terraria.GameContent;
+using VerminLordMod.Common.Players;
 
 namespace VerminLordMod.Common.Players
 {
@@ -45,7 +46,7 @@ namespace VerminLordMod.Common.Players
 				// 首次激活时初始化拖尾
 				if (!breezeTrailInitialized) {
 					Texture2D trailTex = ModContent.Request<Texture2D>("VerminLordMod/Content/Projectiles/MoonlightProjTail").Value;
-					breezeTrailManager.AddGhostTrail(trailTex,
+					breezeTrailManager.NewTrail(trailTex,
 						color: new Color(70, 255, 160),
 						maxPositions: 12,
 						widthScale: 0.8f,

@@ -3,6 +3,7 @@ using System.Linq;
 using Terraria;
 using Terraria.ModLoader;
 using VerminLordMod.Common.GlobalNPCs;
+using VerminLordMod.Common.Players;
 
 namespace VerminLordMod.Common.GuBehaviors
 {

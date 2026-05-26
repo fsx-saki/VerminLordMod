@@ -4,6 +4,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using VerminLordMod.Common.Abstractions;
 using VerminLordMod.Common.Players;
+using Microsoft.Xna.Framework;
 
 namespace VerminLordMod.Content.Items
 {

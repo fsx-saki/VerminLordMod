@@ -39,7 +39,7 @@ namespace VerminLordMod.Content.Projectiles
             if (trail != null)
             {
                 Texture2D myTex = ModContent.Request<Texture2D>("VerminLordMod/Content/Projectiles/IceFlameProjectile").Value;
-                trail.TrailManager.AddGhostTrail(myTex,
+                trail.TrailManager.NewTrail(myTex,
                     color: new Color(255, 255, 200),
                     maxPositions: 50,
                     widthScale: 0.5f,

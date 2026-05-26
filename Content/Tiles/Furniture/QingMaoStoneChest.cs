@@ -9,6 +9,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
+using Terraria.GameContent;
 
 namespace VerminLordMod.Content.Tiles.Furniture
 {

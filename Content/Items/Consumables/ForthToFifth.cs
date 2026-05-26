@@ -4,6 +4,7 @@ using VerminLordMod.Content.Projectiles;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.GameContent;
 
 namespace VerminLordMod.Content.Items.Consumables
 {

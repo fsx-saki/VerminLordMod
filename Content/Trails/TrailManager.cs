@@ -46,6 +46,24 @@ namespace VerminLordMod.Content.Trails
 			}
 		}
 
+		public void NewTrail(Texture2D trailTex, Color color = default, int maxPositions = 16,
+			float widthScale = 0.4f, float lengthScale = 2f, float alpha = 0.8f,
+			int recordInterval = 2, bool enableGlow = false)
+		{
+			var trail = new GhostTrail
+			{
+				TrailTexture = trailTex,
+				TrailColor = color == default ? new Color(150, 220, 255) : color,
+				MaxPositions = maxPositions,
+				WidthScale = widthScale,
+				LengthScale = lengthScale,
+				Alpha = alpha,
+				RecordInterval = recordInterval,
+				EnableGlow = enableGlow
+			};
+			Add(trail);
+		}
+
 		/// <summary>
 		/// 添加一个拖尾
 		/// </summary>

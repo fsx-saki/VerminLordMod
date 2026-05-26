@@ -5,6 +5,7 @@ using Terraria.ModLoader.IO;
 using VerminLordMod.Common.Events;
 using VerminLordMod.Common.GuBehaviors;
 using VerminLordMod.Common.Players;
+using Microsoft.Xna.Framework;
 
 namespace VerminLordMod.Common.Systems
 {

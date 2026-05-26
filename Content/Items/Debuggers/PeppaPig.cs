@@ -4,6 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using Terraria.GameContent;
 
 namespace VerminLordMod.Content.Items.Debuggers
 {

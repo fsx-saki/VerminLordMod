@@ -9,6 +9,8 @@ using VerminLordMod.Common.UI;
 using VerminLordMod.Content.Items.Consumables;
 using VerminLordMod.Content.Items.Weapons.Daos;
 using VerminLordMod.Content.Items.Weapons.Two;
+using Terraria.GameContent;
+using System;
 
 namespace VerminLordMod.Content.Items.Weapons.Three
 {

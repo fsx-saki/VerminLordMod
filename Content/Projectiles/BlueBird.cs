@@ -56,7 +56,7 @@ namespace VerminLordMod.Content.Projectiles
             var trailBehavior = Behaviors.Find(b => b is TrailBehavior) as TrailBehavior;
             if (trailBehavior != null)
             {
-                trailBehavior.TrailManager.AddGhostTrail(
+                trailBehavior.TrailManager.NewTrail(
                     trailTex: Terraria.GameContent.TextureAssets.Projectile[Projectile.type].Value,
                     color: new Color(150, 200, 255),
                     maxPositions: 16,

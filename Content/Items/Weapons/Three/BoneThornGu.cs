@@ -6,6 +6,9 @@ using VerminLordMod.Common.GuBehaviors;
 using VerminLordMod.Content.DamageClasses;
 using VerminLordMod.Content.Items.Weapons.Daos;
 using VerminLordMod.Content.Projectiles;
+using Terraria.DataStructures;
+using Terraria.GameContent;
+using Microsoft.Xna.Framework;
 
 namespace VerminLordMod.Content.Items.Weapons.Three
 {    /// <summary>

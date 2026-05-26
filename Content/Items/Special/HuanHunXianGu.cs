@@ -1,13 +1,11 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using VerminLordMod.Common.ImplementationTracker;
 
 namespace VerminLordMod.Content.Items.Special
 {
-    /// <summary>
-    /// 特殊物品 — 换魂仙蛊
-    /// 未知
-    /// </summary>
+    [ImplStatus(ImplStatus.Implemented, "六转魂道仙蛊", "六转", "魂")]
     public class HuanHunXianGu : ModItem
     {
         public override void SetDefaults()

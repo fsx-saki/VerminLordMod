@@ -40,7 +40,7 @@ namespace VerminLordMod.Content.Projectiles
             var trail = Behaviors.Find(b => b is TrailBehavior) as TrailBehavior;
             if (trail != null)
             {
-                trail.TrailManager.AddGhostTrail(
+                trail.TrailManager.NewTrail(
                     trailTex: TextureAssets.Projectile[Projectile.type].Value,
                     color: new Color(180, 180, 200),
                     maxPositions: 16,

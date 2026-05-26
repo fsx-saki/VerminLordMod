@@ -5,7 +5,7 @@ using VerminLordMod.Common.GuBehaviors;
 using VerminLordMod.Common.ImplementationTracker;
 using VerminLordMod.Content.DamageClasses;
 using VerminLordMod.Content.Items.Weapons.Daos;
-using VerminLordMod.Content.Projectiles.Seven;
+using VerminLordMod.Content.Projectiles;
 
 namespace VerminLordMod.Content.Items.Weapons.Seven
 {
@@ -14,7 +14,7 @@ namespace VerminLordMod.Content.Items.Weapons.Seven
     /// 七转仙蛊，可操控荒兽甚至太古荒兽，是兽道至高仙蛊之一。
     /// 攻击时召唤荒兽虚影协同作战，对敌人造成大量伤害。
     /// </summary>
-    [ImplStatus(ImplStatus.Implemented, note = "七转仙蛊示例 — 驭兽蛊", plannedTurn = "七转", daoType = "兽")]
+    [ImplStatus(ImplStatus.Implemented, "七转仙蛊示例 — 驭兽蛊", "七转", "兽")]
     public class YuShouGu : SlaveWeapon, IOnHitEffectProvider
     {
         protected override int qiCost => 200;

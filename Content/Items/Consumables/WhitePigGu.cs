@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 using VerminLordMod.Common.Players;
+using Terraria.GameContent;
 
 namespace VerminLordMod.Content.Items.Consumables
 {

@@ -11,6 +11,7 @@ using VerminLordMod.Common;
 using VerminLordMod.Common.Players;
 using VerminLordMod.Content.Dusts;
 using VerminLordMod.Common.Abstractions;
+using VerminLordMod.Content.Items.Weapons;
 
 namespace VerminLordMod.Content.Items.Weapons
 {

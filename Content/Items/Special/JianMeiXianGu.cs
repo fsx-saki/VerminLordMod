@@ -1,22 +1,60 @@
+using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using VerminLordMod.Common.ImplementationTracker;
+using VerminLordMod.Common.Players;
+using VerminLordMod.Content.Buffs.AddToSelf.Pobuff;
 
 namespace VerminLordMod.Content.Items.Special
 {
-    /// <summary>
-    /// 特殊物品 — 剑眉仙蛊
-    /// 七转
-    /// </summary>
+    [ImplStatus(ImplStatus.Implemented, "五转战道辅助仙蛊", "五转", "战")]
     public class JianMeiXianGu : ModItem
     {
+        private const int QiCostPerUse = 18;
+        private const int BuffDuration = 480;
+
         public override void SetDefaults()
         {
             Item.width = 24;
             Item.height = 24;
-            Item.rare = ItemRarityID.Lime;
+            Item.rare = ItemRarityID.Orange;
             Item.maxStack = 1;
-            Item.value = 500000;
+            Item.value = 20000;
+            Item.consumable = false;
+            Item.useStyle = ItemUseStyleID.HoldUp;
+            Item.useTime = 30;
+            Item.useAnimation = 30;
+            Item.UseSound = SoundID.Item46;
+            Item.autoReuse = false;
+            Item.useTurn = true;
+        }
+
+        public override bool CanUseItem(Player player)
+        {
+            var qiResource = player.GetModPlayer<QiResourcePlayer>();
+            return qiResource.QiCurrent >= QiCostPerUse;
+        }
+
+        public override bool? UseItem(Player player)
+        {
+            if (player.whoAmI != Main.myPlayer)
+                return null;
+
+            var qiResource = player.GetModPlayer<QiResourcePlayer>();
+            qiResource.ConsumeQi(QiCostPerUse);
+
+            int buffType = ModContent.BuffType<JianMeiXianBuff>();
+            player.AddBuff(buffType, BuffDuration);
+
+            return true;
+        }
+
+        public override void ModifyTooltips(List<TooltipLine> tooltips)
+        {
+            tooltips.Add(new TooltipLine(Mod, "JianMeiXianEffect", "剑眉仙蛊：伤害+12%，暴击+10%，攻速+8%"));
+            tooltips.Add(new TooltipLine(Mod, "JianMeiXianDuration", $"持续：{BuffDuration / 60}秒"));
+            tooltips.Add(new TooltipLine(Mod, "JianMeiXianQiCost", $"消耗真元：{QiCostPerUse}"));
         }
     }
 }

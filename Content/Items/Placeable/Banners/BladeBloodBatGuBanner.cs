@@ -2,6 +2,7 @@ using Terraria;
 using Terraria.Enums;
 using Terraria.ModLoader;
 using VerminLordMod.Content.Tiles.Banners;
+using Microsoft.Xna.Framework;
 
 namespace VerminLordMod.Content.Items.Placeable.Banners
 {

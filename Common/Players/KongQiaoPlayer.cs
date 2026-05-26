@@ -9,6 +9,7 @@ using Terraria.ModLoader.IO;
 using VerminLordMod.Common.Events;
 using VerminLordMod.Common.Systems;
 using VerminLordMod.Content.Projectiles;
+using VerminLordMod.Common.Players;
 
 namespace VerminLordMod.Common.Players
 {
@@ -21,6 +22,9 @@ namespace VerminLordMod.Common.Players
     {
         /// <summary>空窍中的蛊虫列表</summary>
         public List<KongQiaoSlot> KongQiao = new();
+
+        /// <summary>上次死亡时损失的蛊虫类型ID列表（供悔蛊恢复使用）</summary>
+        public List<int> LostGusOnDeath = new();
 
         /// <summary>空窍格子数硬上限</summary>
         public int MaxSlots;
@@ -204,6 +208,10 @@ namespace VerminLordMod.Common.Players
                 else retained.Add(slot);
             }
 
+            LostGusOnDeath = escaped.Select(s => s.GuTypeID)
+                .Concat(selfDestructed.Select(s => s.GuTypeID))
+                .ToList();
+
             EventBus.Publish(new PlayerGusLostOnDeathEvent
             {
                 PlayerID = Player.whoAmI,
@@ -243,6 +251,7 @@ namespace VerminLordMod.Common.Players
         public override void SaveData(TagCompound tag)
         {
             tag["MaxSlots"] = MaxSlots;
+            tag["LostGusOnDeath"] = LostGusOnDeath;
             var list = new List<TagCompound>();
             foreach (var slot in KongQiao)
             {
@@ -268,6 +277,7 @@ namespace VerminLordMod.Common.Players
         public override void LoadData(TagCompound tag)
         {
             MaxSlots = tag.GetInt("MaxSlots");
+            LostGusOnDeath = tag.GetList<int>("LostGusOnDeath")?.ToList() ?? new List<int>();
             KongQiao.Clear();
             foreach (var st in tag.GetList<TagCompound>("KongQiao"))
             {

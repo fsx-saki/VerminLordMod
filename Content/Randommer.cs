@@ -1,3 +1,4 @@
+using System;
 namespace VerminLordMod.Content
 {
 	public class Randommer

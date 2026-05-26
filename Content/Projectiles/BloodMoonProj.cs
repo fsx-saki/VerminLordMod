@@ -83,7 +83,7 @@ namespace VerminLordMod.Content.Projectiles
             {
                 Texture2D trailTex = ModContent.Request<Texture2D>(
                     "VerminLordMod/Content/Projectiles/MoonlightProjTail").Value;
-                trailBehavior.TrailManager.AddGhostTrail(trailTex,
+                trailBehavior.TrailManager.NewTrail(trailTex,
                     color: new Color(220, 60, 60),
                     maxPositions: 16,
                     widthScale: 1f,

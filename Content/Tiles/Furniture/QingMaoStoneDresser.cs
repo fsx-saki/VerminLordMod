@@ -5,8 +5,10 @@ using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using Terraria.DataStructures;
+using Terraria.Enums;
 using Terraria.ObjectData;
-
+using Terraria.GameContent;
 namespace VerminLordMod.Content.Tiles.Furniture
 {
 	public class QingMaoStoneDresser : ModTile

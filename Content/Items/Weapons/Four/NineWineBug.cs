@@ -8,6 +8,8 @@ using VerminLordMod.Common.Players;
 using VerminLordMod.Common.UI;
 using VerminLordMod.Content.Items.Consumables;
 using VerminLordMod.Content.Items.Weapons.Daos;
+using Terraria.GameContent;
+using System;
 
 namespace VerminLordMod.Content.Items.Weapons.Four
 {

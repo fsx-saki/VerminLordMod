@@ -3,6 +3,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using VerminLordMod.Common.Abstractions;
 using VerminLordMod.Common.ImplementationTracker;
+using Microsoft.Xna.Framework;
 
 namespace VerminLordMod.Content.Items.GuHouses
 {
@@ -11,7 +12,7 @@ namespace VerminLordMod.Content.Items.GuHouses
     /// 方源自创的仙蛊屋雏形，以宙道仙蛊为主，擅长隐匿，在石莲岛被威猛老者摧毁。
     /// 七转仙蛊屋，具备基础的隐匿和移动能力。
     /// </summary>
-    [ImplStatus(ImplStatus.Implemented, note = "仙蛊屋雏形 — 七转仙蛊屋", plannedTurn = "七转", daoType = "宙")]
+    [ImplStatus(ImplStatus.Implemented, "仙蛊屋雏形 — 七转仙蛊屋", "七转", "宙")]
     public class XianGuWuChuXing : GuHouseItem
     {
         public override int HouseLevel => 7;

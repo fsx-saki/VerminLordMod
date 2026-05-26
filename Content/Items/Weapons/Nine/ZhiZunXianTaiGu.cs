@@ -5,7 +5,7 @@ using VerminLordMod.Common.GuBehaviors;
 using VerminLordMod.Common.ImplementationTracker;
 using VerminLordMod.Content.DamageClasses;
 using VerminLordMod.Content.Items.Weapons.Daos;
-using VerminLordMod.Content.Projectiles.Nine;
+using VerminLordMod.Content.Projectiles;
 
 namespace VerminLordMod.Content.Items.Weapons.Nine
 {
@@ -14,7 +14,7 @@ namespace VerminLordMod.Content.Items.Weapons.Nine
     /// 九转至高仙蛊，传说中可炼成至尊仙体，拥有无穷变化。
     /// 攻击时释放至尊之力，毁天灭地。
     /// </summary>
-    [ImplStatus(ImplStatus.Implemented, note = "九转仙蛊示例 — 至尊仙胎蛊", plannedTurn = "九转", daoType = "变化")]
+    [ImplStatus(ImplStatus.Implemented, "九转仙蛊示例 — 至尊仙胎蛊", "九转", "变化")]
     public class ZhiZunXianTaiGu : VariationWeapon, IOnHitEffectProvider
     {
         protected override int qiCost => 2000;

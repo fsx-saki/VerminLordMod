@@ -6,6 +6,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static VerminLordMod.Content.Items.Weapons.One.RiverStream;
 using VerminLordMod.Content.DamageClasses;
+using System;
 
 namespace VerminLordMod.Content.Projectiles
 {

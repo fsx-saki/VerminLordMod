@@ -7,6 +7,7 @@ using VerminLordMod.Content.Items;
 using VerminLordMod.Content.Items.Accessories;
 using VerminLordMod.Content.Items.Weapons;
 using VerminLordMod.Content.Prefixes;
+using System;
 
 namespace VerminLordMod.Common.GlobalItems
 {

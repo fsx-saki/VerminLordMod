@@ -18,6 +18,7 @@ using VerminLordMod.Common.UI.UIUtils;
 using VerminLordMod.Content.Items.Debuggers;
 using VerminLordMod.Content.Items.Consumables;
 using VerminLordMod.Content.NPCs.GuMasters;
+using System;
 
 namespace VerminLordMod.Content.NPCs;
 

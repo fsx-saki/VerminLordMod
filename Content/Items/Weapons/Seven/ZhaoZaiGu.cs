@@ -5,7 +5,7 @@ using VerminLordMod.Common.GuBehaviors;
 using VerminLordMod.Common.ImplementationTracker;
 using VerminLordMod.Content.DamageClasses;
 using VerminLordMod.Content.Items.Weapons.Daos;
-using VerminLordMod.Content.Projectiles.Seven;
+using VerminLordMod.Content.Projectiles;
 
 namespace VerminLordMod.Content.Items.Weapons.Seven
 {
@@ -14,7 +14,7 @@ namespace VerminLordMod.Content.Items.Weapons.Seven
     /// 七转运道仙蛊，可招来灾祸降临敌身，大幅降低敌人运势。
     /// 攻击附带厄运效果，使敌人受到额外伤害。
     /// </summary>
-    [ImplStatus(ImplStatus.Implemented, note = "七转仙蛊示例 — 招灾蛊", plannedTurn = "七转", daoType = "运")]
+    [ImplStatus(ImplStatus.Implemented, "七转仙蛊示例 — 招灾蛊", "七转", "运")]
     public class ZhaoZaiGu : LuckWeapon, IOnHitEffectProvider
     {
         protected override int qiCost => 180;

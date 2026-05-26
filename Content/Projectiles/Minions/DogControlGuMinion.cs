@@ -8,6 +8,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using VerminLordMod.Content.DamageClasses;
 using VerminLordMod.Content.Items.Weapons;
+using Terraria.GameContent;
 
 namespace VerminLordMod.Content.Projectiles.Minions
 {

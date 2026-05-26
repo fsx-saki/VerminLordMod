@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using Terraria.ModLoader;
 using VerminLordMod.Common.ImplementationTracker;
 using VerminLordMod.Content.Items.Accessories.One;
@@ -11,7 +11,7 @@ namespace VerminLordMod.Content.Items
 	/// 蛊虫注册列表 — 管理所有可从顽石开出的蛊虫。
 	/// 此列表与 ImplementationTracker 配合使用，追踪每个蛊虫的实现状态。
 	/// </summary>
-	[ImplStatus(ImplStatus.Implemented, note = "蛊虫注册列表，持续更新中")]
+	[ImplStatus(ImplStatus.Implemented, "蛊虫注册列表，持续更新中")]
 	public static class GuLists
 	{
 		public static List<int> GusCanFromWanShi = new List<int>() {

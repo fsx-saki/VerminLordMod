@@ -1,5 +1,6 @@
 ﻿using Terraria.ModLoader;
 using VerminLordMod.Content.Dusts;
+using VerminLordMod.Content.Items.Weapons;
 
 namespace VerminLordMod.Content.Items.Weapons.Daos
 {

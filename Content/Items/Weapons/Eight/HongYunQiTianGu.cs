@@ -5,7 +5,7 @@ using VerminLordMod.Common.GuBehaviors;
 using VerminLordMod.Common.ImplementationTracker;
 using VerminLordMod.Content.DamageClasses;
 using VerminLordMod.Content.Items.Weapons.Daos;
-using VerminLordMod.Content.Projectiles.Eight;
+using VerminLordMod.Content.Projectiles;
 
 namespace VerminLordMod.Content.Items.Weapons.Eight
 {
@@ -14,7 +14,7 @@ namespace VerminLordMod.Content.Items.Weapons.Eight
     /// 八转运道仙蛊，可汇聚天地气运，使持有者鸿运齐天。
     /// 攻击时释放气运之力，大幅提升暴击率和伤害。
     /// </summary>
-    [ImplStatus(ImplStatus.Implemented, note = "八转仙蛊示例 — 鸿运齐天蛊", plannedTurn = "八转", daoType = "运")]
+    [ImplStatus(ImplStatus.Implemented, "八转仙蛊示例 — 鸿运齐天蛊", "八转", "运")]
     public class HongYunQiTianGu : LuckWeapon, IOnHitEffectProvider
     {
         protected override int qiCost => 550;

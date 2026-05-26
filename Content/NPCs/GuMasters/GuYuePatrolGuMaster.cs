@@ -8,6 +8,8 @@ using VerminLordMod.Common.Players;
 using VerminLordMod.Common.Systems;
 using VerminLordMod.Content.Biomes;
 using VerminLordMod.Content.Projectiles;
+using System;
+using Terraria.GameContent;
 
 namespace VerminLordMod.Content.NPCs.GuMasters
 {

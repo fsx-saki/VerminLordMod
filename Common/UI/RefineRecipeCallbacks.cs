@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using VerminLordMod.Content;
+using Terraria.GameContent;
 
 namespace VerminLordMod.Common.UI
 {

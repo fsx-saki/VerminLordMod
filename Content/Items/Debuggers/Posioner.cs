@@ -6,6 +6,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using VerminLordMod.Content.Items.Weapons;
 using VerminLordMod.Content.Dusts;
+using Terraria.GameContent;
 
 namespace VerminLordMod.Content.Items.Debuggers
 {

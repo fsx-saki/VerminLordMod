@@ -8,6 +8,7 @@ using VerminLordMod.Common.Events;
 using VerminLordMod.Common.Players;
 using VerminLordMod.Common.Systems;
 using VerminLordMod.Content.Items.Consumables;
+using Terraria.ID;
 
 namespace VerminLordMod.Common.Systems
 {

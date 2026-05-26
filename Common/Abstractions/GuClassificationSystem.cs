@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Terraria;
 using Terraria.ModLoader;
 using VerminLordMod.Common.GuBehaviors;
+using VerminLordMod.Content.Items.Weapons;
 
 namespace VerminLordMod.Common.Abstractions
 {

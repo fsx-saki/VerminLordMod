@@ -51,7 +51,7 @@ namespace VerminLordMod.Content.Projectiles
 			targetPos = Main.MouseWorld;
 
 			Texture2D trailTex = TextureAssets.Projectile[Projectile.type].Value;
-			trailManager.AddGhostTrail(trailTex,
+			trailManager.AddTrail(trailTex,
 				color: new Color(180, 100, 255),
 				maxPositions: 16,
 				widthScale: 0.5f,

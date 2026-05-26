@@ -183,7 +183,7 @@ namespace VerminLordMod.Content.Projectiles
 			Texture2D trailTex = ModContent.Request<Texture2D>("VerminLordMod/Content/Projectiles/WhiteTail").Value;
 
 			// 初始化虚影拖尾
-			trailManager.AddGhostTrail(trailTex,
+			trailManager.AddTrail(trailTex,
 				color: new Color(255, 237, 99),
 				maxPositions: 16,
 				widthScale: 0.2f,

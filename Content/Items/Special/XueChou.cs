@@ -1,22 +1,55 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using VerminLordMod.Common.GuBehaviors;
+using VerminLordMod.Common.ImplementationTracker;
+using VerminLordMod.Content.DamageClasses;
+using VerminLordMod.Content.Items.Weapons.Daos;
+using VerminLordMod.Content.Projectiles;
 
 namespace VerminLordMod.Content.Items.Special
 {
-    /// <summary>
-    /// 特殊物品 — 血仇
-    /// 未明确（推测六转或以上）
-    /// </summary>
-    public class XueChou : ModItem
+    [ImplStatus(ImplStatus.Implemented, "二转暗道攻击蛊", "二转", "暗")]
+    public class XueChou : DarkWeapon, IOnHitEffectProvider
     {
+        protected override int qiCost => 14;
+        protected override int _useTime => 24;
+        protected override int _guLevel => 2;
+        protected override int controlQiCost => 10;
+
+        public DaoEffectTags[] OnHitEffects => new[] { DaoEffectTags.DoT };
+        public float DoTDuration => 3f;
+        public float DoTDamage => 4f;
+        public float SlowPercent => 0f;
+        public int SlowDuration => 0;
+        public float ArmorShredAmount => 0f;
+        public int ArmorShredDuration => 0;
+        public float WeakenPercent => 0f;
+        public float LifeStealPercent => 0f;
+
+        public void CustomOnHitNPC(NPC target, Player player, Projectile projectile, int damage) { }
+
         public override void SetDefaults()
         {
             Item.width = 24;
             Item.height = 24;
-            Item.rare = ItemRarityID.LightPurple;
+            Item.damage = 30;
+            Item.DamageType = ModContent.GetInstance<InsectDamageClass>();
+            Item.knockBack = 3f;
+            Item.crit = 4;
+            Item.rare = ItemRarityID.Green;
             Item.maxStack = 1;
-            Item.value = 100000;
+            Item.value = 3000;
+            Item.useStyle = ItemUseStyleID.Shoot;
+            Item.useAnimation = 24;
+            Item.useTime = 24;
+            Item.UseSound = SoundID.Item20;
+            Item.scale = 1f;
+            Item.shoot = ModContent.ProjectileType<XueChouProj>();
+            Item.shootSpeed = 9f;
+            Item.noMelee = true;
+            Item.noUseGraphic = false;
+            Item.autoReuse = true;
         }
     }
 }

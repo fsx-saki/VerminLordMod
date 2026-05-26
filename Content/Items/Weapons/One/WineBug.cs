@@ -3,6 +3,8 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using VerminLordMod.Common.Players;
 using VerminLordMod.Content.Items.Weapons.Daos;
+using Terraria.GameContent;
+using System;
 
 namespace VerminLordMod.Content.Items.Weapons.One
 {

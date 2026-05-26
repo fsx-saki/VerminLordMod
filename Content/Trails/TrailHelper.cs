@@ -23,7 +23,7 @@ namespace VerminLordMod.Content.Trails
 		/// <param name="recordInterval">记录间隔（帧）</param>
 		/// <param name="enableGlow">是否启用发光</param>
 		/// <returns>创建的 GhostTrail 实例</returns>
-		public static GhostTrail AddGhostTrail(this TrailManager manager,
+		public static GhostTrail AddTrail(this TrailManager manager,
 			Texture2D trailTex,
 			Color? color = null,
 			int maxPositions = 16,
@@ -101,7 +101,7 @@ namespace VerminLordMod.Content.Trails
 				tex = ModContent.Request<Texture2D>(projectile.ModProjectile.Texture).Value;
 			else
 				tex = Terraria.GameContent.TextureAssets.Projectile[projectile.type].Value;
-			return manager.AddGhostTrail(tex, color ?? new Color(150, 220, 255),
+			return manager.AddTrail(tex, color ?? new Color(150, 220, 255),
 				maxPositions: 16, widthScale: widthScale, lengthScale: lengthScale,
 				alpha: 0.8f, recordInterval: 2, enableGlow: true);
 		}

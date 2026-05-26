@@ -6,6 +6,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using VerminLordMod.Common.Abstractions;
+using Terraria.GameContent;
 
 namespace VerminLordMod.Content.Items.Consumables
 {

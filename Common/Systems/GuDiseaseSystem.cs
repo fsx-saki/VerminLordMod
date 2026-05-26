@@ -5,6 +5,8 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 using VerminLordMod.Common.Players;
+using Terraria.GameContent;
+using Terraria.ID;
 
 namespace VerminLordMod.Common.Systems
 {

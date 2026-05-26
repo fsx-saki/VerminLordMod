@@ -5,6 +5,7 @@ using Terraria.ModLoader.IO;
 using VerminLordMod.Common.DialogueTree.Actions;
 using VerminLordMod.Content.Dialogues.Stories;
 using VerminLordMod.Content.NPCs.GuMasters;
+using Microsoft.Xna.Framework;
 
 namespace VerminLordMod.Common.DialogueTree
 {

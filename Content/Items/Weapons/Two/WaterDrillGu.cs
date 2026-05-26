@@ -8,6 +8,7 @@ using Terraria.ModLoader;
 using VerminLordMod.Content.DamageClasses;
 using VerminLordMod.Content.Items.Weapons.Daos;
 using VerminLordMod.Content.Projectiles;
+using Terraria.GameContent;
 
 namespace VerminLordMod.Content.Items.Weapons.Two
 {

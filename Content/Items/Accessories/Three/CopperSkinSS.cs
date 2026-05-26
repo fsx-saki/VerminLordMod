@@ -9,6 +9,8 @@ using VerminLordMod.Common.UI;
 using VerminLordMod.Content.Items.Accessories.Two;
 using VerminLordMod.Content.Items.Consumables;
 using VerminLordMod.Content.Items.Weapons;
+using Terraria.GameContent;
+using VerminLordMod.Content.Items.Accessories;
 
 namespace VerminLordMod.Content.Items.Accessories.Three
 {

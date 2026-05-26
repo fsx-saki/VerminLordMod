@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using Terraria.ModLoader;
+using VerminLordMod.Common.ImplementationTracker;
 
 namespace VerminLordMod.Common.ImplementationTracker
 {
@@ -58,7 +59,7 @@ namespace VerminLordMod.Common.ImplementationTracker
             ByTurn.Clear();
             ByDaoType.Clear();
 
-            var modTypes = VerminLordMod.Instance.GetType().Assembly.GetTypes();
+            var modTypes = ModContent.GetInstance<VerminLordMod>().GetType().Assembly.GetTypes();
 
             foreach (var type in modTypes)
             {
@@ -184,7 +185,7 @@ namespace VerminLordMod.Common.ImplementationTracker
             {
                 // 尝试获取贴图 — 如果 Mod 已加载，可以通过 ModContent.RequestTexture 检查
                 // 但更简单的方式是检查文件是否存在
-                var mod = VerminLordMod.Instance;
+                var mod = ModContent.GetInstance<VerminLordMod>();
                 if (mod == null) return false;
 
                 // 通过反射尝试获取贴图

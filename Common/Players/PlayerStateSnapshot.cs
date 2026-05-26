@@ -1,6 +1,8 @@
 using Terraria;
 using VerminLordMod.Common.Systems;
 using VerminLordMod.Content.Items.Weapons.Six;
+using System;
+using VerminLordMod.Common.Players;
 
 namespace VerminLordMod.Common.Players
 {

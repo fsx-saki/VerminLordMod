@@ -43,7 +43,7 @@ namespace VerminLordMod.Content.Projectiles
 			Projectile.rotation = (float)Math.Atan2(Projectile.velocity.X, -Projectile.velocity.Y);
 
 			Texture2D trailTex = ModContent.Request<Texture2D>("VerminLordMod/Content/Projectiles/MoonlightProjTail").Value;
-			trailManager.AddGhostTrail(trailTex,
+			trailManager.AddTrail(trailTex,
 				color: new Color(150, 220, 255),
 				maxPositions: 16,
 				widthScale: 0.4f,

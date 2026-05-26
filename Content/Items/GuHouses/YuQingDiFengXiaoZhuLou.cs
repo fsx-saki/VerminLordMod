@@ -3,6 +3,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using VerminLordMod.Common.Abstractions;
 using VerminLordMod.Common.ImplementationTracker;
+using Microsoft.Xna.Framework;
 
 namespace VerminLordMod.Content.Items.GuHouses
 {
@@ -11,7 +12,7 @@ namespace VerminLordMod.Content.Items.GuHouses
     /// 八转仙蛊屋，以风道仙蛊为核心构建，轻盈飘逸，攻防一体。
     /// 具备强大的风道攻击能力和移动速度加成。
     /// </summary>
-    [ImplStatus(ImplStatus.Implemented, note = "玉清滴风小竹楼 — 八转仙蛊屋", plannedTurn = "八转", daoType = "风")]
+    [ImplStatus(ImplStatus.Implemented, "玉清滴风小竹楼 — 八转仙蛊屋", "八转", "风")]
     public class YuQingDiFengXiaoZhuLou : GuHouseItem
     {
         public override int HouseLevel => 8;
@@ -36,7 +37,7 @@ namespace VerminLordMod.Content.Items.GuHouses
         {
             base.OnActivate(player);
             player.AddBuff(BuffID.WindPushed, 600);
-            player.AddBuff(BuffID.Agile, 600);
+            player.AddBuff(BuffID.Swiftness, 600);
             Main.NewText("玉清滴风小竹楼展开，清风环绕，身法如风！", Color.Cyan);
         }
     }

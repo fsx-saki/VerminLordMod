@@ -5,6 +5,8 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using VerminLordMod.Common.Players;
+using Terraria.GameContent;
+using VerminLordMod.Content.Items.Accessories;
 
 namespace VerminLordMod.Content.Items.Accessories.Four
 {

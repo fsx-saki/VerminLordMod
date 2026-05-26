@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.ModLoader;
 using VerminLordMod.Common.Players;
 using VerminLordMod.Common.Systems;
+using Microsoft.Xna.Framework;
 
 namespace VerminLordMod.Common.Systems
 {

@@ -7,6 +7,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using VerminLordMod.Content.Items.Weapons;
 using VerminLordMod.Content.Items.Weapons.Daos;
+using Terraria.GameContent;
 
 namespace VerminLordMod.Common.BulletBehaviors
 {

@@ -9,6 +9,7 @@ using VerminLordMod.Content.Items.Consumables;
 using VerminLordMod.Content.Items.Weapons.Daos;
 using VerminLordMod.Content.Items.Weapons.Two;
 using VerminLordMod.Content.Projectiles;
+using Terraria.GameContent;
 
 namespace VerminLordMod.Content.Items.Weapons.Three
 {

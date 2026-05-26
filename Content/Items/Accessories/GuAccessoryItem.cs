@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
@@ -7,6 +7,8 @@ using Terraria.ModLoader.IO;
 using VerminLordMod.Common;
 using VerminLordMod.Common.Configs;
 using VerminLordMod.Common.Players;
+using Terraria.GameContent;
+using VerminLordMod.Content.Items.Accessories;
 
 namespace VerminLordMod.Content.Items.Accessories
 {
@@ -18,7 +20,7 @@ namespace VerminLordMod.Content.Items.Accessories
 	/// <para>蛊虫脱离炼化的速度uncontrolRate = 0.01f</para>
 	/// <para>转数_guLevel = 1</para>
 	/// </summary>
-	class GuAccessoryItem :ModItem,IAccCanReforge
+	public class GuAccessoryItem :ModItem,IAccCanReforge
 	{
 		/// <summary>
 		/// 使用时占据的真元

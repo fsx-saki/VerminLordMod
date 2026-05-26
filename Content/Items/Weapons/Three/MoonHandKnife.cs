@@ -10,6 +10,7 @@ using VerminLordMod.Content.Buffs.Combo.GoldMoonCut;
 using VerminLordMod.Content.DamageClasses;
 using VerminLordMod.Content.Items.Weapons.Daos;
 using VerminLordMod.Content.Projectiles;
+using Terraria.GameContent;
 
 namespace VerminLordMod.Content.Items.Weapons.Three
 {

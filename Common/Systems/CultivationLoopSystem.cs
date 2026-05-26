@@ -3,6 +3,7 @@ using Terraria.ModLoader;
 using VerminLordMod.Common.Players;
 using VerminLordMod.Common.Systems;
 using VerminLordMod.Content.Items.Consumables;
+using Microsoft.Xna.Framework;
 
 namespace VerminLordMod.Common.Systems
 {

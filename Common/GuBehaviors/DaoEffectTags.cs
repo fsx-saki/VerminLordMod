@@ -4,6 +4,8 @@
 /// 多个标签可通过位运算组合（如 DoT | Slow 表示持续伤害+减速）。
 /// </summary>
 
+using System;
+
 namespace VerminLordMod.Common.GuBehaviors
 {
     [Flags]

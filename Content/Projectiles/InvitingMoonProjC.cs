@@ -60,7 +60,7 @@ namespace VerminLordMod.Content.Projectiles
 
 			// 紫色虚影拖尾 — 参照月光弹幕方式
 			Texture2D trailTex = ModContent.Request<Texture2D>("VerminLordMod/Content/Projectiles/MoonlightProjTailP").Value;
-			var ghost = trailManager.AddGhostTrail(trailTex,
+			var ghost = trailManager.AddTrail(trailTex,
 				color: new Color(205, 135, 255),
 				maxPositions: 16,
 				widthScale: 3f,

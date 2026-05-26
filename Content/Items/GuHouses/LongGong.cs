@@ -3,6 +3,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using VerminLordMod.Common.Abstractions;
 using VerminLordMod.Common.ImplementationTracker;
+using Microsoft.Xna.Framework;
 
 namespace VerminLordMod.Content.Items.GuHouses
 {
@@ -11,7 +12,7 @@ namespace VerminLordMod.Content.Items.GuHouses
     /// 八转仙蛊屋，以水道仙蛊为核心构建，气势恢宏，可召唤水龙攻击。
     /// 具备强大的水道攻击和防御能力。
     /// </summary>
-    [ImplStatus(ImplStatus.Implemented, note = "龙宫 — 八转仙蛊屋", plannedTurn = "八转", daoType = "水")]
+    [ImplStatus(ImplStatus.Implemented, "龙宫 — 八转仙蛊屋", "八转", "水")]
     public class LongGong : GuHouseItem
     {
         public override int HouseLevel => 8;

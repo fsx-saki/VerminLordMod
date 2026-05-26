@@ -1,15 +1,17 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using VerminLordMod.Common.ImplementationTracker;
+using VerminLordMod.Common.Players;
+using VerminLordMod.Content.Buffs.AddToSelf.Pobuff;
 
 namespace VerminLordMod.Content.Items.Special
 {
-    /// <summary>
-    /// 特殊物品 — 年华池
-    /// 至尊仙窍内的特殊建筑，沟通光阴支流，用于拘禁和驯化太古年兽。
-    /// </summary>
+    [ImplStatus(ImplStatus.Implemented, "四转宙道功能蛊屋", "四转", "宙")]
     public class 年华池 : ModItem
     {
+        private const int QiCost = 25;
+
         public override void SetDefaults()
         {
             Item.width = 24;
@@ -17,6 +19,26 @@ namespace VerminLordMod.Content.Items.Special
             Item.rare = ItemRarityID.LightPurple;
             Item.maxStack = 1;
             Item.value = 100000;
+            Item.useStyle = ItemUseStyleID.HoldUp;
+            Item.useTime = 30;
+            Item.useAnimation = 30;
+            Item.UseSound = SoundID.Item4;
+            Item.consumable = false;
+            Item.noMelee = true;
+        }
+
+        public override bool CanUseItem(Player player)
+        {
+            var qiResource = player.GetModPlayer<QiResourcePlayer>();
+            return qiResource.QiCurrent >= QiCost;
+        }
+
+        public override bool? UseItem(Player player)
+        {
+            var qiResource = player.GetModPlayer<QiResourcePlayer>();
+            qiResource.ConsumeQi(QiCost);
+            player.AddBuff(ModContent.BuffType<NianHuaBuff>(), 300);
+            return true;
         }
     }
 }

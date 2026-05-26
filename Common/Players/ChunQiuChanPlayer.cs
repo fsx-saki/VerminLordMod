@@ -7,6 +7,8 @@ using VerminLordMod.Content;
 using VerminLordMod.Content.Items.Weapons;
 using VerminLordMod.Content.Items.Weapons.Six;
 using VerminLordMod.Content.NPCs.GuMasters;
+using Terraria.GameContent;
+using VerminLordMod.Common.Players;
 
 namespace VerminLordMod.Common.Players
 {

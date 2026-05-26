@@ -8,6 +8,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using VerminLordMod.Content.DamageClasses;
 using VerminLordMod.Content.Trails;
+using Terraria.DataStructures;
 
 namespace VerminLordMod.Content.Projectiles
 {
@@ -44,7 +45,7 @@ namespace VerminLordMod.Content.Projectiles
             Texture2D trailTex = ModContent.Request<Texture2D>("VerminLordMod/Content/Projectiles/ShaZhaoJiuYueZhanTail").Value;
 
             // 初始化金色拖尾效果（发光效果在PreDraw中手动控制）
-            trailManager.AddGhostTrail(trailTex,
+            trailManager.AddTrail(trailTex,
                 color: new Color(255, 220, 100),
                 maxPositions: 20,
                 widthScale: 1.5f,

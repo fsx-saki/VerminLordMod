@@ -12,6 +12,7 @@ using VerminLordMod.Common.GuBehaviors;
 using VerminLordMod.Content.DamageClasses;
 using VerminLordMod.Content.Items.Weapons.Daos;
 using VerminLordMod.Content.Projectiles.Zero;
+using Terraria.GameContent;
 
 namespace VerminLordMod.Content.Items.Weapons.Zero
 {

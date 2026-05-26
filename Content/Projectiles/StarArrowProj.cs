@@ -128,7 +128,7 @@ namespace VerminLordMod.Content.Projectiles
 			Texture2D trailTex = ModContent.Request<Texture2D>("VerminLordMod/Content/Projectiles/WhiteTail").Value;
 
 			// 初始化虚影拖尾（带偏移量修正贴图宽度导致的视觉偏移）
-			var ghost = trailManager.AddGhostTrail(trailTex,
+			var ghost = trailManager.AddTrail(trailTex,
 				color: new Color(255, 237, 99),
 				maxPositions: 45,
 				widthScale: 0.6f,

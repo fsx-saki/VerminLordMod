@@ -430,5 +430,39 @@ namespace VerminLordMod.Common.GlobalNPCs
             }
             return false;
         }
+
+        private static List<int> _allDropItemsCache;
+
+        public static List<int> GetAllDropItems()
+        {
+            if (_allDropItemsCache != null)
+                return _allDropItemsCache;
+
+            _allDropItemsCache = new List<int>();
+            CollectItems(UniversalDrops);
+            CollectItems(BossCommonDrops);
+            foreach (var boss in BossDrops)
+                CollectItems(boss.Drops);
+            foreach (var group in EarlyBossGroupDrops)
+                CollectItems(group.Drops);
+            foreach (var group in SpecialNpcDrops)
+                CollectItems(group.Drops);
+            foreach (var group in PreHardmodeElementDrops)
+                CollectItems(group.Drops);
+            foreach (var group in HardmodeElementDrops)
+                CollectItems(group.Drops);
+            foreach (var group in TownNpcDrops)
+                CollectItems(group.Drops);
+            return _allDropItemsCache;
+        }
+
+        private static void CollectItems(GuDropEntry[] entries)
+        {
+            foreach (var entry in entries)
+            {
+                if (!_allDropItemsCache.Contains(entry.ItemType))
+                    _allDropItemsCache.Add(entry.ItemType);
+            }
+        }
     }
 }

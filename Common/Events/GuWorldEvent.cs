@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using System.Collections.Generic;
 using Terraria;
 using VerminLordMod.Common.Systems;
+using VerminLordMod.Common.Players;
 
 namespace VerminLordMod.Common.Events
 {

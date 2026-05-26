@@ -4,6 +4,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using VerminLordMod.Common.Players;
 using VerminLordMod.Common.UI;
+using Terraria.GameContent;
 
 namespace VerminLordMod.Content.Items.Consumables
 {

@@ -51,7 +51,7 @@ namespace VerminLordMod.Content.Projectiles
 			
 			// 初始化虚影拖尾
 			Texture2D trailTex = TextureAssets.Projectile[Projectile.type].Value;
-			trailManager.AddGhostTrail(trailTex,
+			trailManager.AddTrail(trailTex,
 				color: new Color(100, 200, 255),
 				maxPositions: 16,
 				widthScale: 0.5f,

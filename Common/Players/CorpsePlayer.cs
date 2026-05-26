@@ -2,6 +2,7 @@ using Terraria;
 using Terraria.ModLoader;
 using VerminLordMod.Common.Events;
 using VerminLordMod.Common.Systems;
+using VerminLordMod.Common.Players;
 
 namespace VerminLordMod.Common.Players
 {

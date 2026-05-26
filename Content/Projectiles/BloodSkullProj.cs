@@ -82,7 +82,7 @@ namespace VerminLordMod.Content.Projectiles
             {
                 Texture2D trailTex = ModContent.Request<Texture2D>(
                     "VerminLordMod/Content/Projectiles/BloodSkullProj").Value;
-                trailBehavior.TrailManager.AddGhostTrail(trailTex,
+                trailBehavior.TrailManager.NewTrail(trailTex,
                     color: new Color(180, 20, 20),
                     maxPositions: 16,
                     widthScale: 0.6f,

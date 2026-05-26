@@ -51,7 +51,7 @@ namespace VerminLordMod.Content.Projectiles
 			Texture2D trailTex = ModContent.Request<Texture2D>("VerminLordMod/Content/Projectiles/MoonlightProjTail").Value;
 
 			// 初始化虚影拖尾（发光效果在PreDraw中手动控制）
-			trailManager.AddGhostTrail(trailTex,
+			trailManager.AddTrail(trailTex,
 				color: new Color(70, 255, 160),
 				maxPositions: 20,
 				widthScale: 1.6f,

@@ -1,13 +1,11 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using VerminLordMod.Common.ImplementationTracker;
 
 namespace VerminLordMod.Content.Items.Special
 {
-    /// <summary>
-    /// 特殊物品 — 大盗仙蛊
-    /// 七转
-    /// </summary>
+    [ImplStatus(ImplStatus.Implemented, "六转规则道仙蛊", "六转", "规则")]
     public class DaDaoXianGu : ModItem
     {
         public override void SetDefaults()

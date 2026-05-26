@@ -9,6 +9,7 @@ using VerminLordMod.Common.GuBehaviors;
 using VerminLordMod.Common.Players;
 using VerminLordMod.Common.Systems;
 using VerminLordMod.Common.UI.DialogueTreeUI;
+using Terraria.GameContent;
 
 namespace VerminLordMod.Content.NPCs.GuMasters
 {

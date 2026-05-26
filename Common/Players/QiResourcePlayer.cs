@@ -5,6 +5,7 @@ using Terraria.ModLoader.IO;
 using Terraria.Utilities;
 using VerminLordMod.Common.Events;
 using VerminLordMod.Content.Buffs.AddToSelf.Pobuff;
+using VerminLordMod.Common.Players;
 
 namespace VerminLordMod.Common.Players
 {
@@ -41,6 +42,9 @@ namespace VerminLordMod.Common.Players
         /// <summary>额外恢复加成（由装备/Buff/酒虫通过 ExtraQiRegen 写入）</summary>
         public float ExtraQiRegen;
 
+        /// <summary>真元消耗减免比例（由Buff写入，如小家子气蛊减少25%）。每帧ResetEffects归零。</summary>
+        public float QiCostReduction;
+
         /// <summary>离散恢复计时器</summary>
         private int regenTimer;
 
@@ -57,9 +61,10 @@ namespace VerminLordMod.Common.Players
         /// </summary>
         public bool ConsumeQi(float amount)
         {
-            if (QiCurrent < amount) return false;
+            float effectiveCost = amount * (1f - MathHelper.Clamp(QiCostReduction, 0f, 0.75f));
+            if (QiCurrent < effectiveCost) return false;
             float oldQi = QiCurrent;
-            QiCurrent -= amount;
+            QiCurrent -= effectiveCost;
             EventBus.Publish(new PlayerQiChangedEvent
             {
                 PlayerID = Player.whoAmI,
@@ -143,6 +148,7 @@ namespace VerminLordMod.Common.Players
         {
             QiMaxCurrent = QiMaxBase;
             ExtraQiRegen = 0;
+            QiCostReduction = 0;
             // 复活后重置死亡清空标记
             if (!Player.dead)
                 _deathCleared = false;

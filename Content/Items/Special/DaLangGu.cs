@@ -1,13 +1,11 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using VerminLordMod.Common.ImplementationTracker;
 
 namespace VerminLordMod.Content.Items.Special
 {
-    /// <summary>
-    /// 特殊物品 — 大浪蛊
-    /// 八转
-    /// </summary>
+    [ImplStatus(ImplStatus.Implemented, "二转水道攻击蛊", "二转", "水")]
     public class DaLangGu : ModItem
     {
         public override void SetDefaults()
