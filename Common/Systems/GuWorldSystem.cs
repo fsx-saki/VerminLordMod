@@ -23,6 +23,11 @@ namespace VerminLordMod.Common.Systems
         Zhao,       // 赵家
         Jia,        // 贾家（商队）
         Scattered,  // 散修（无势力）
+        Shang,      // 商家
+        Heaven,     // 天庭
+        ShadowSect, // 影宗
+        LingYuanZhai, // 灵缘斋
+        ChangShengTian, // 长生天
     }
 
     /// <summary> 声望等级 </summary>
@@ -85,6 +90,24 @@ namespace VerminLordMod.Common.Systems
         Zhuan5_Zhong = 51,
         Zhuan5_Gao = 52,
         Zhuan5_DianFeng = 53,
+        Zhuan6_Chu = 60,
+        Zhuan6_Zhong = 61,
+        Zhuan6_Gao = 62,
+        Zhuan6_DianFeng = 63,
+        Zhuan7_Chu = 70,
+        Zhuan7_Zhong = 71,
+        Zhuan7_Gao = 72,
+        Zhuan7_DianFeng = 73,
+        Zhuan8_Chu = 80,
+        Zhuan8_Zhong = 81,
+        Zhuan8_Gao = 82,
+        Zhuan8_DianFeng = 83,
+        Zhuan9_Chu = 90,
+        Zhuan9_Zhong = 91,
+        Zhuan9_Gao = 92,
+        Zhuan9_DianFeng = 93,
+        AncientBeast = 100,
+        AncientLegendary = 101,
     }
 
     /// <summary> 蛊师性格类型（影响AI决策） </summary>
@@ -100,6 +123,31 @@ namespace VerminLordMod.Common.Systems
         Proud,          // 高傲 - 被挑衅必反击
         Cruel,          // 残忍 - 以折磨敌人为乐
         Cold,           // 冷酷 - 无情无义，只看利益
+        Cunning,        // 阴险狡诈 - 善于算计，以利益为导向
+        Ambitious,      // 志向远大 - 野心勃勃
+        Fierce,         // 刚烈 - 宁折不弯
+        Gentle,         // 温婉 - 温柔善良
+        Mysterious,     // 神秘 - 难以捉摸
+        Devoted,        // 痴情 - 一往情深
+        DualFaced,      // 双面 - 表里不一
+        Arrogant,       // 傲慢 - 看不起他人
+        Warlike,        // 好战 - 热衷战斗
+        Righteous,      // 正义 - 坚持正道
+        Compassionate,  // 慈悲 - 大慈大悲
+        Ruthless,       // 狠辣 - 心狠手辣
+        FreeSpirited,   // 洒脱 - 不受拘束
+        Ferocious,      // 凶暴 - 野蛮凶残
+        Vengeful,       // 仇恨 - 被仇恨驱动
+        Wise,           // 博学 - 智慧深沉
+        Resolute,       // 刚毅 - 意志坚定，不屈不挠
+        Steadfast,      // 坚定 - 稳如磐石，不可动摇
+        Hypocritical,   // 伪善 - 表面仁义，内心阴暗
+        Calculating,    // 算计 - 精于谋划，步步为营
+        Reckless,       // 孤注一掷 - 不计后果，全力一搏
+        Wild,           // 野性 - 天然野性，不受驯服
+        Bold,           // 豪迈 - 豪爽大气，不拘小节
+        Clever,         // 聪慧 - 聪明机智，善于应变
+        Hidden,         // 隐忍 - 隐藏实力，伺机而动
     }
 
     /// <summary> 蛊师对玩家的态度（动态计算） </summary>

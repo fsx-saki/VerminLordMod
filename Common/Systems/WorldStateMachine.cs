@@ -48,6 +48,11 @@ namespace VerminLordMod.Common.Systems
             FactionID.Zhao => "赵家",
             FactionID.Jia => "贾家",
             FactionID.Scattered => "散修",
+            FactionID.Shang => "商家",
+            FactionID.Heaven => "天庭",
+            FactionID.ShadowSect => "影宗",
+            FactionID.LingYuanZhai => "灵缘斋",
+            FactionID.ChangShengTian => "长生天",
             _ => "未知"
         };
 
@@ -184,6 +189,11 @@ namespace VerminLordMod.Common.Systems
             AllFactions[FID.Wang] = new FactionState(FID.Wang, "汪家", "WangTerritory");
             AllFactions[FID.Zhao] = new FactionState(FID.Zhao, "赵家", "ZhaoTerritory");
             AllFactions[FID.Jia] = new FactionState(FID.Jia, "贾家", null);
+            AllFactions[FID.Shang] = new FactionState(FID.Shang, "商家", "ShangTerritory");
+            AllFactions[FID.Heaven] = new FactionState(FID.Heaven, "天庭", "HeavenTerritory");
+            AllFactions[FID.ShadowSect] = new FactionState(FID.ShadowSect, "影宗", "ShadowSectTerritory");
+            AllFactions[FID.LingYuanZhai] = new FactionState(FID.LingYuanZhai, "灵缘斋", "LingYuanZhaiTerritory");
+            AllFactions[FID.ChangShengTian] = new FactionState(FID.ChangShengTian, "长生天", "ChangShengTianTerritory");
 
             SetDefaultRelations();
 
@@ -223,6 +233,14 @@ namespace VerminLordMod.Common.Systems
             SetRelation(FID.Bai, FID.Tie, 10);
             SetRelation(FID.Xiong, FID.GuYue, -20);
             SetRelation(FID.Xiong, FID.Tie, -10);
+            SetRelation(FID.Heaven, FID.ShadowSect, -100);
+            SetRelation(FID.ShadowSect, FID.Heaven, -100);
+            SetRelation(FID.Shang, FID.Bai, 50);
+            SetRelation(FID.Bai, FID.Shang, 50);
+            SetRelation(FID.LingYuanZhai, FID.Heaven, 30);
+            SetRelation(FID.Heaven, FID.LingYuanZhai, 30);
+            SetRelation(FID.ChangShengTian, FID.Heaven, -50);
+            SetRelation(FID.Heaven, FID.ChangShengTian, -50);
         }
 
         private void SetRelation(FactionID a, FactionID b, int value)

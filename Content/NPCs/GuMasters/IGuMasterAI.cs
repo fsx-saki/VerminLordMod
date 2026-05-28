@@ -221,11 +221,18 @@ namespace VerminLordMod.Content.NPCs.GuMasters
             // 性格修正 RiskThreshold
             threshold = personality switch
             {
-                GuPersonality.Aggressive => threshold - 0.15f,  // 好斗：更激进
-                GuPersonality.Cautious => threshold + 0.15f,     // 谨慎：更保守
-                GuPersonality.Greedy when belief.HasTraded => threshold - 0.1f, // 贪婪且知道你有货
-                GuPersonality.Proud => threshold - 0.05f,        // 高傲：略激进
-                GuPersonality.Benevolent => threshold + 0.2f,    // 仁慈：更保守
+                GuPersonality.Aggressive => threshold - 0.15f,
+                GuPersonality.Cautious => threshold + 0.15f,
+                GuPersonality.Greedy when belief.HasTraded => threshold - 0.1f,
+                GuPersonality.Proud => threshold - 0.05f,
+                GuPersonality.Benevolent => threshold + 0.2f,
+                GuPersonality.Cunning => threshold - 0.05f,
+                GuPersonality.Ambitious => threshold - 0.1f,
+                GuPersonality.Fierce => threshold - 0.15f,
+                GuPersonality.Gentle => threshold + 0.15f,
+                GuPersonality.Mysterious => threshold,
+                GuPersonality.Devoted => threshold + 0.1f,
+                GuPersonality.DualFaced => threshold,
                 _ => threshold
             };
 
