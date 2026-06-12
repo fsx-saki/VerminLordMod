@@ -8,7 +8,6 @@ using VerminLordMod.Content.NPCs.GuMasters;
 
 namespace VerminLordMod.Content.NPCs.GuYue
 {
-    [AutoloadHead]
     public class GuYueMedicineElder : GuYueNPCBase
     {
         public override GuYueNPCType GetNPCType() => GuYueNPCType.MedicineElder;

@@ -42,6 +42,9 @@ namespace VerminLordMod.Content.NPCs.GuMasters
         public virtual int GuMasterLife => 150;
         public virtual int GuMasterDefense => 10;
 
+        // 每个子类使用独立的头部纹理路径，避免多个NPC注册同一HeadTexture导致重复键异常
+        public override string HeadTexture => "VerminLordMod/" + GetType().FullName.Substring("VerminLordMod.".Length).Replace('.', '/') + "_Head";
+
         // ===== 运行时状态 =====
         public GuMasterAIState CurrentAIState = GuMasterAIState.Idle;
         public GuAttitude CurrentAttitude = GuAttitude.Ignore;
@@ -286,6 +289,32 @@ namespace VerminLordMod.Content.NPCs.GuMasters
             return baseAttitude;
         }
 
+        /// <summary> 提升态度等级 </summary>
+        private GuAttitude UpgradeAttitude(GuAttitude current)
+        {
+            return current switch
+            {
+                GuAttitude.Hostile => GuAttitude.Wary,
+                GuAttitude.Wary => GuAttitude.Ignore,
+                GuAttitude.Ignore => GuAttitude.Friendly,
+                GuAttitude.Friendly => GuAttitude.Respectful,
+                _ => current
+            };
+        }
+
+        /// <summary> 降低态度等级 </summary>
+        private GuAttitude DowngradeAttitude(GuAttitude current)
+        {
+            return current switch
+            {
+                GuAttitude.Respectful => GuAttitude.Friendly,
+                GuAttitude.Friendly => GuAttitude.Ignore,
+                GuAttitude.Ignore => GuAttitude.Wary,
+                GuAttitude.Wary => GuAttitude.Hostile,
+                _ => current
+            };
+        }
+
         /// <summary> 向盟友传播信念（D-20 社交网络集成） </summary>
         protected void SpreadBeliefToAllies(string playerName, BeliefState belief)
         {
@@ -304,11 +333,18 @@ namespace VerminLordMod.Content.NPCs.GuMasters
 
         public virtual GuAttitude CalculateAttitude(NPC npc, AttitudeContext context)
         {
-            return GuAttitudeHelper.CalculateFromBelief(
+            var attitude = GuAttitudeHelper.CalculateFromBelief(
                 context.Belief,
                 context.Personality,
                 context.HasBeenHitByPlayer
             );
+
+            // 应用选择后果修正
+            int choiceModifier = global::VerminLordMod.Common.Systems.ChoiceConsequenceSystem.GetNPCAttitudeModifier(GetType().Name);
+            if (choiceModifier > 20) attitude = UpgradeAttitude(attitude);
+            else if (choiceModifier < -20) attitude = DowngradeAttitude(attitude);
+
+            return attitude;
         }
 
         // ============================================================
@@ -755,9 +791,26 @@ namespace VerminLordMod.Content.NPCs.GuMasters
 
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            // 默认：地表，玩家已开启空窍
-            var qiRealm = spawnInfo.Player.GetModPlayer<QiRealmPlayer>();
-            if (qiRealm.GuLevel <= 0) return 0f;
+            // 基础生成条件：需要玩家是蛊师
+            if (spawnInfo.Player.GetModPlayer<global::VerminLordMod.Common.Players.QiRealmPlayer>().GuLevel <= 0)
+                return 0f;
+
+            // 剧情阶段门控：根据NPC所属势力决定最低阶段要求
+            var phase = global::VerminLordMod.Common.DialogueTree.StoryManager.Instance.GetPhase(spawnInfo.Player);
+            var faction = GetFaction();
+            int minPhaseValue = faction switch
+            {
+                global::VerminLordMod.Common.Systems.FactionID.GuYue => (int)StoryPhase.Arrival,
+                global::VerminLordMod.Common.Systems.FactionID.Scattered => (int)StoryPhase.SouthBorderArrival,
+                global::VerminLordMod.Common.Systems.FactionID.HeiLouLan or global::VerminLordMod.Common.Systems.FactionID.ChangShengTian => (int)StoryPhase.NorthDesertArrival,
+                global::VerminLordMod.Common.Systems.FactionID.Heaven => (int)StoryPhase.DestinyWarBegin,
+                global::VerminLordMod.Common.Systems.FactionID.ShadowSect => (int)StoryPhase.YiTianShanAppears,
+                _ => 0
+            };
+
+            if ((int)phase < minPhaseValue)
+                return 0f;
+
             return 0.03f;
         }
 

@@ -12,7 +12,6 @@ using VerminLordMod.Content.NPCs.GuMasters;
 
 namespace VerminLordMod.Content.NPCs.SouthBorder
 {
-    [AutoloadHead]
     public class TianHeShangRen : GuMasterBase
     {
         private int _attackTimer;

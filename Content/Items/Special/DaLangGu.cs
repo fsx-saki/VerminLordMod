@@ -6,7 +6,7 @@ using VerminLordMod.Common.ImplementationTracker;
 namespace VerminLordMod.Content.Items.Special
 {
     [ImplStatus(ImplStatus.Implemented, "二转水道攻击蛊", "二转", "水")]
-    public class DaLangGu : ModItem
+    public class DaLangGuSpecial : ModItem
     {
         public override void SetDefaults()
         {

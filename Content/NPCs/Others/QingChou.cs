@@ -12,7 +12,6 @@ using VerminLordMod.Content.NPCs.GuMasters;
 
 namespace VerminLordMod.Content.NPCs.Others
 {
-    [AutoloadHead]
     public class QingChou : GuMasterBase
     {
         private int _attackTimer;

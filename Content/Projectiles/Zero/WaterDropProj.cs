@@ -91,5 +91,6 @@ namespace VerminLordMod.Content.Projectiles.Zero
             Projectile.DamageType = ModContent.GetInstance<InsectDamageClass>();
             Projectile.aiStyle = -1;
         }
+        protected override bool OnTileCollided(Vector2 oldVelocity) => false;
     }
 }

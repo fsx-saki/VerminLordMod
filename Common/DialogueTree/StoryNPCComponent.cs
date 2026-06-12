@@ -2,6 +2,7 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
+using VerminLordMod.Content.NPCs.GuMasters;
 using VerminLordMod.Content.NPCs.GuYue;
 
 namespace VerminLordMod.Common.DialogueTree
@@ -10,7 +11,7 @@ namespace VerminLordMod.Common.DialogueTree
     {
         public override bool AppliesToEntity(NPC entity, bool lateInstantiation)
         {
-            return entity.ModNPC is GuYueNPCBase || entity.ModNPC is GuYueVillager;
+            return entity.ModNPC is GuYueNPCBase || entity.ModNPC is GuYueVillager || entity.ModNPC is GuMasterBase;
         }
 
         public override void OnSpawn(NPC npc, IEntitySource source)

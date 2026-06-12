@@ -12,7 +12,6 @@ using VerminLordMod.Content.NPCs.GuMasters;
 
 namespace VerminLordMod.Content.NPCs.Allies
 {
-    [AutoloadHead]
     public class LuWeiYin : GuMasterBase
     {
         private int _attackTimer;

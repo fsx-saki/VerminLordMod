@@ -517,6 +517,105 @@ Projectiles: {
 	// ZiJingSheXProj.DisplayName: Zi Jing She X Proj
 	// ZiYanXProj.DisplayName: Zi Yan X Proj
 	// ZouYunProj.DisplayName: Zou Yun Proj
+	// BaiXueYaoHuaProj.DisplayName: Bai Xue Yao Hua Proj
+	// BaMianXianProj.DisplayName: Ba Mian Xian Proj
+	// BanLanTingProj.DisplayName: Ban Lan Ting Proj
+	// BaoGuangGuProj.DisplayName: Bao Guang Gu Proj
+	// BaoQiExplosionProj.DisplayName: Bao Qi Explosion Proj
+	// BianYiExplosiveProj.DisplayName: Bian Yi Explosive Proj
+	// BianYiHomingProj.DisplayName: Bian Yi Homing Proj
+	// BianYiPierceProj.DisplayName: Bian Yi Pierce Proj
+	// BianYiProj.DisplayName: Bian Yi Proj
+	// BianYiSubProj.DisplayName: Bian Yi Sub Proj
+	// BingXiaoProj.DisplayName: Bing Xiao Proj
+	// CanZhuProj.DisplayName: Can Zhu Proj
+	// ChunGuProj.DisplayName: Chun Gu Proj
+	// ChunQiuChanProj.DisplayName: Chun Qiu Chan Proj
+	// ChunQiuRewindProj.DisplayName: Chun Qiu Rewind Proj
+	// DaDaoProj.DisplayName: Da Dao Proj
+	// DaLangProj.DisplayName: Da Lang Proj
+	// DanDaoProj.DisplayName: Dan Dao Proj
+	// DaoKeDaoProj.DisplayName: Dao Ke Dao Proj
+	// DaoQiProj.DisplayName: Dao Qi Proj
+	// DaoQiXianProj.DisplayName: Dao Qi Xian Proj
+	// DaQiXianProj.DisplayName: Da Qi Xian Proj
+	// DianLuProj.DisplayName: Dian Lu Proj
+	// DingKongProj.DisplayName: Ding Kong Proj
+	// DiQiXianProj.DisplayName: Di Qi Xian Proj
+	// DongGuProj.DisplayName: Dong Gu Proj
+	// DouShenProj.DisplayName: Dou Shen Proj
+	// ELiProj.DisplayName: E Li Proj
+	// FeiJiangProj.DisplayName: Fei Jiang Proj
+	// FeiJianXianProj.DisplayName: Fei Jian Xian Proj
+	// FengChiXianProj.DisplayName: Feng Chi Xian Proj
+	// FengDuProj.DisplayName: Feng Du Proj
+	// FengHuaProj.DisplayName: Feng Hua Proj
+	// FengManLouProj.DisplayName: Feng Man Lou Proj
+	// FuShangProj.DisplayName: Fu Shang Proj
+	// GuangDaoXianProj.DisplayName: Guang Dao Xian Proj
+	// GuanGuProj.DisplayName: Guan Gu Proj
+	// GuangYuanLightProj.DisplayName: Guang Yuan Light Proj
+	// HanBaYanProj.DisplayName: Han Ba Yan Proj
+	// HeiYiProj.DisplayName: Hei Yi Proj
+	// HengGuProj.DisplayName: Heng Gu Proj
+	// HongLeiProj.DisplayName: Hong Lei Proj
+	// HongYunQiTianGuProj.DisplayName: Hong Yun Qi Tian Gu Proj
+	// HuanHunXianProj.DisplayName: Huan Hun Xian Proj
+	// HuanJingCloneProj.DisplayName: Huan Jing Clone Proj
+	// HuiJianXianProj.DisplayName: Hui Jian Xian Proj
+	// HunShouLingProj.DisplayName: Hun Shou Ling Proj
+	// HunXiaoProj.DisplayName: Hun Xiao Proj
+	// HuoLeiProj.DisplayName: Huo Lei Proj
+	// JiuZhuanHuoProj.DisplayName: Jiu Zhuan Huo Proj
+	// KongJuProj.DisplayName: Kong Ju Proj
+	// KunPengWaterProj.DisplayName: Kun Peng Water Proj
+	// KunPengWindProj.DisplayName: Kun Peng Wind Proj
+	// LangJianProj.DisplayName: Lang Jian Proj
+	// LeiDianProj.DisplayName: Lei Dian Proj
+	// LiuShaHeProj.DisplayName: Liu Sha He Proj
+	// LongJuanProj.DisplayName: Long Juan Proj
+	// LongWuProj.DisplayName: Long Wu Proj
+	// LongXiProj.DisplayName: Long Xi Proj
+	// MengDaoFanProj.DisplayName: Meng Dao Fan Proj
+	// MiHunProj.DisplayName: Mi Hun Proj
+	// MuYaProj.DisplayName: Mu Ya Proj
+	// QiJiaReflectProj.DisplayName: Qi Jia Reflect Proj
+	// QiuGuProj.DisplayName: Qiu Gu Proj
+	// QuGuProj.DisplayName: Qu Gu Proj
+	// ShangGuJianJiaoProj.DisplayName: Shang Gu Jian Jiao Proj
+	// ShengTianProj.DisplayName: Sheng Tian Proj
+	// ShenHaiManYuProj.DisplayName: Shen Hai Man Yu Proj
+	// ShenYouProj.DisplayName: Shen You Proj
+	// ShiLongProj.DisplayName: Shi Long Proj
+	// ShiShiFuBingProj.DisplayName: Shi Shi Fu Bing Proj
+	// ShuoShiProj.DisplayName: Shuo Shi Proj
+	// TaiGuNianProj.DisplayName: Tai Gu Nian Proj
+	// TaiGuNianShouProj.DisplayName: Tai Gu Nian Shou Proj
+	// TianDuProj.DisplayName: Tian Du Proj
+	// TianLuoNetProj.DisplayName: Tian Luo Net Proj
+	// TianYingProj.DisplayName: Tian Ying Proj
+	// WanLiSiLangProj.DisplayName: Wan Li Si Lang Proj
+	// XiaGuProj.DisplayName: Xia Gu Proj
+	// XingMoProj.DisplayName: Xing Mo Proj
+	// XuanGuangProj.DisplayName: Xuan Guang Proj
+	// XueChouProj.DisplayName: Xue Chou Proj
+	// XueShenZiChildProj.DisplayName: Xue Shen Zi Child Proj
+	// XueShenZiProj.DisplayName: Xue Shen Zi Proj
+	// YanHuaProj.DisplayName: Yan Hua Proj
+	// YanHuaSubProj.DisplayName: Yan Hua Sub Proj
+	// YeChaZhangYuProj.DisplayName: Ye Cha Zhang Yu Proj
+	// YeHuProj.DisplayName: Ye Hu Proj
+	// YinLangProj.DisplayName: Yin Lang Proj
+	// YiQiJinGuangProj.DisplayName: Yi Qi Jin Guang Proj
+	// YiZhiLiuShaProj.DisplayName: Yi Zhi Liu Sha Proj
+	// YouJiangProj.DisplayName: You Jiang Proj
+	// YouMingShuiMuProj.DisplayName: You Ming Shui Mu Proj
+	// YuShouGuProj.DisplayName: Yu Shou Gu Proj
+	// YuYuFishProj.DisplayName: Yu Yu Fish Proj
+	// ZaoMengCloneProj.DisplayName: Zao Meng Clone Proj
+	// ZhaoZaiGuProj.DisplayName: Zhao Zai Gu Proj
+	// ZhengYiProj.DisplayName: Zheng Yi Proj
+	// ZhiZunXianTaiGuProj.DisplayName: Zhi Zun Xian Tai Gu Proj
 }
 
 Prefixes: {
@@ -1255,6 +1354,504 @@ NPCs: {
 			Princess_LovesNPC: 我喜欢 {NPCName}。
 		}
 	}
+
+	LuWeiYin: {
+		// DisplayName: Lu Wei Yin
+
+		TownNPCMood: {
+			// Content: 我很满足。
+			// NoHome: 我讨厌没有家。
+			// FarFromHome: 我离家太远了。
+			// LoveSpace: 我非常喜欢有这么大的空间。
+			// DislikeCrowded: 我不喜欢这么拥挤。
+			// HateCrowded: 我讨厌这么拥挤。
+			// LikeNPC_Princess: 我喜欢 {NPCName}。
+			// Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	QiJueMoXian: {
+		// DisplayName: Qi Jue Mo Xian
+
+		TownNPCMood: {
+			// Content: 我很满足。
+			// NoHome: 我讨厌没有家。
+			// FarFromHome: 我离家太远了。
+			// LoveSpace: 我非常喜欢有这么大的空间。
+			// DislikeCrowded: 我不喜欢这么拥挤。
+			// HateCrowded: 我讨厌这么拥挤。
+			// LikeNPC_Princess: 我喜欢 {NPCName}。
+			// Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	TaiBaiYunSheng: {
+		// DisplayName: Tai Bai Yun Sheng
+
+		TownNPCMood: {
+			// Content: 我很满足。
+			// NoHome: 我讨厌没有家。
+			// FarFromHome: 我离家太远了。
+			// LoveSpace: 我非常喜欢有这么大的空间。
+			// DislikeCrowded: 我不喜欢这么拥挤。
+			// HateCrowded: 我讨厌这么拥挤。
+			// LikeNPC_Princess: 我喜欢 {NPCName}。
+			// Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	ZhaoLianYun: {
+		// DisplayName: Zhao Lian Yun
+
+		TownNPCMood: {
+			// Content: 我很满足。
+			// NoHome: 我讨厌没有家。
+			// FarFromHome: 我离家太远了。
+			// LoveSpace: 我非常喜欢有这么大的空间。
+			// DislikeCrowded: 我不喜欢这么拥挤。
+			// HateCrowded: 我讨厌这么拥挤。
+			// LikeNPC_Princess: 我喜欢 {NPCName}。
+			// Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	// DiMaiGuardian.DisplayName: Di Mai Guardian
+	// LongGongBoss.DisplayName: Long Gong Boss
+
+	LongGong: {
+		// DisplayName: Long Gong
+
+		TownNPCMood: {
+			// Content: 我很满足。
+			// NoHome: 我讨厌没有家。
+			// FarFromHome: 我离家太远了。
+			// LoveSpace: 我非常喜欢有这么大的空间。
+			// DislikeCrowded: 我不喜欢这么拥挤。
+			// HateCrowded: 我讨厌这么拥挤。
+			// LikeNPC_Princess: 我喜欢 {NPCName}。
+			// Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	// TianHeShangRenBoss.DisplayName: Tian He Shang Ren Boss
+
+	TianHeShangRen: {
+		// DisplayName: Tian He Shang Ren
+
+		TownNPCMood: {
+			// Content: 我很满足。
+			// NoHome: 我讨厌没有家。
+			// FarFromHome: 我离家太远了。
+			// LoveSpace: 我非常喜欢有这么大的空间。
+			// DislikeCrowded: 我不喜欢这么拥挤。
+			// HateCrowded: 我讨厌这么拥挤。
+			// LikeNPC_Princess: 我喜欢 {NPCName}。
+			// Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	// ChaosGuWorm.DisplayName: Chaos Gu Worm
+	// HeavenPatrol.DisplayName: Heaven Patrol
+	// IceWolf.DisplayName: Ice Wolf
+	// PoisonSnake.DisplayName: Poison Snake
+	// RogueGuMaster.DisplayName: Rogue Gu Master
+	// WildBeast.DisplayName: Wild Beast
+
+	GuYueFangYuan: {
+		// DisplayName: Gu Yue Fang Yuan
+
+		TownNPCMood: {
+			// Content: 我很满足。
+			// NoHome: 我讨厌没有家。
+			// FarFromHome: 我离家太远了。
+			// LoveSpace: 我非常喜欢有这么大的空间。
+			// DislikeCrowded: 我不喜欢这么拥挤。
+			// HateCrowded: 我讨厌这么拥挤。
+			// LikeNPC_Princess: 我喜欢 {NPCName}。
+			// Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	HeChunQiu: {
+		// DisplayName: He Chun Qiu
+
+		TownNPCMood: {
+			// Content: 我很满足。
+			// NoHome: 我讨厌没有家。
+			// FarFromHome: 我离家太远了。
+			// LoveSpace: 我非常喜欢有这么大的空间。
+			// DislikeCrowded: 我不喜欢这么拥挤。
+			// HateCrowded: 我讨厌这么拥挤。
+			// LikeNPC_Princess: 我喜欢 {NPCName}。
+			// Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	MengQiuZhen: {
+		// DisplayName: Meng Qiu Zhen
+
+		TownNPCMood: {
+			// Content: 我很满足。
+			// NoHome: 我讨厌没有家。
+			// FarFromHome: 我离家太远了。
+			// LoveSpace: 我非常喜欢有这么大的空间。
+			// DislikeCrowded: 我不喜欢这么拥挤。
+			// HateCrowded: 我讨厌这么拥挤。
+			// LikeNPC_Princess: 我喜欢 {NPCName}。
+			// Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	QiHaiLaoZu: {
+		// DisplayName: Qi Hai Lao Zu
+
+		TownNPCMood: {
+			// Content: 我很满足。
+			// NoHome: 我讨厌没有家。
+			// FarFromHome: 我离家太远了。
+			// LoveSpace: 我非常喜欢有这么大的空间。
+			// DislikeCrowded: 我不喜欢这么拥挤。
+			// HateCrowded: 我讨厌这么拥挤。
+			// LikeNPC_Princess: 我喜欢 {NPCName}。
+			// Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	WuShuai: {
+		// DisplayName: Wu Shuai
+
+		TownNPCMood: {
+			// Content: 我很满足。
+			// NoHome: 我讨厌没有家。
+			// FarFromHome: 我离家太远了。
+			// LoveSpace: 我非常喜欢有这么大的空间。
+			// DislikeCrowded: 我不喜欢这么拥挤。
+			// HateCrowded: 我讨厌这么拥挤。
+			// LikeNPC_Princess: 我喜欢 {NPCName}。
+			// Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	GuYueFangZheng: {
+		// DisplayName: Gu Yue Fang Zheng
+
+		TownNPCMood: {
+			// Content: 我很满足。
+			// NoHome: 我讨厌没有家。
+			// FarFromHome: 我离家太远了。
+			// LoveSpace: 我非常喜欢有这么大的空间。
+			// DislikeCrowded: 我不喜欢这么拥挤。
+			// HateCrowded: 我讨厌这么拥挤。
+			// LikeNPC_Princess: 我喜欢 {NPCName}。
+			// Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	MeiGong: {
+		// DisplayName: Mei Gong
+
+		TownNPCMood: {
+			// Content: 我很满足。
+			// NoHome: 我讨厌没有家。
+			// FarFromHome: 我离家太远了。
+			// LoveSpace: 我非常喜欢有这么大的空间。
+			// DislikeCrowded: 我不喜欢这么拥挤。
+			// HateCrowded: 我讨厌这么拥挤。
+			// LikeNPC_Princess: 我喜欢 {NPCName}。
+			// Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	QinDingLing: {
+		// DisplayName: Qin Ding Ling
+
+		TownNPCMood: {
+			// Content: 我很满足。
+			// NoHome: 我讨厌没有家。
+			// FarFromHome: 我离家太远了。
+			// LoveSpace: 我非常喜欢有这么大的空间。
+			// DislikeCrowded: 我不喜欢这么拥挤。
+			// HateCrowded: 我讨厌这么拥挤。
+			// LikeNPC_Princess: 我喜欢 {NPCName}。
+			// Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	TongGong: {
+		// DisplayName: Tong Gong
+
+		TownNPCMood: {
+			// Content: 我很满足。
+			// NoHome: 我讨厌没有家。
+			// FarFromHome: 我离家太远了。
+			// LoveSpace: 我非常喜欢有这么大的空间。
+			// DislikeCrowded: 我不喜欢这么拥挤。
+			// HateCrowded: 我讨厌这么拥挤。
+			// LikeNPC_Princess: 我喜欢 {NPCName}。
+			// Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	// BaiNingBing.DisplayName: Bai Ning Bing
+	// BaiQingXianZi.DisplayName: Bai Qing Xian Zi
+	// BaiTuGuNiang.DisplayName: Bai Tu Gu Niang
+	// FengJinHuang.DisplayName: Feng Jin Huang
+	// FenTianMoNv.DisplayName: Fen Tian Mo Nv
+	// LiShanXianZi.DisplayName: Li Shan Xian Zi
+	// MiaoYinXianZi.DisplayName: Miao Yin Xian Zi
+	// ShangXinCi.DisplayName: Shang Xin Ci
+	// ZiWeiXianZi.DisplayName: Zi Wei Xian Zi
+
+	BingSaiChuan: {
+		// DisplayName: Bing Sai Chuan
+
+		TownNPCMood: {
+			// Content: 我很满足。
+			// NoHome: 我讨厌没有家。
+			// FarFromHome: 我离家太远了。
+			// LoveSpace: 我非常喜欢有这么大的空间。
+			// DislikeCrowded: 我不喜欢这么拥挤。
+			// HateCrowded: 我讨厌这么拥挤。
+			// LikeNPC_Princess: 我喜欢 {NPCName}。
+			// Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	HeiLouLan: {
+		// DisplayName: Hei Lou Lan
+
+		TownNPCMood: {
+			// Content: 我很满足。
+			// NoHome: 我讨厌没有家。
+			// FarFromHome: 我离家太远了。
+			// LoveSpace: 我非常喜欢有这么大的空间。
+			// DislikeCrowded: 我不喜欢这么拥挤。
+			// HateCrowded: 我讨厌这么拥挤。
+			// LikeNPC_Princess: 我喜欢 {NPCName}。
+			// Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	MaoLiQiu: {
+		// DisplayName: Mao Li Qiu
+
+		TownNPCMood: {
+			// Content: 我很满足。
+			// NoHome: 我讨厌没有家。
+			// FarFromHome: 我离家太远了。
+			// LoveSpace: 我非常喜欢有这么大的空间。
+			// DislikeCrowded: 我不喜欢这么拥挤。
+			// HateCrowded: 我讨厌这么拥挤。
+			// LikeNPC_Princess: 我喜欢 {NPCName}。
+			// Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	WuXingDaFaShi: {
+		// DisplayName: Wu Xing Da Fa Shi
+
+		TownNPCMood: {
+			// Content: 我很满足。
+			// NoHome: 我讨厌没有家。
+			// FarFromHome: 我离家太远了。
+			// LoveSpace: 我非常喜欢有这么大的空间。
+			// DislikeCrowded: 我不喜欢这么拥挤。
+			// HateCrowded: 我讨厌这么拥挤。
+			// LikeNPC_Princess: 我喜欢 {NPCName}。
+			// Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	XueHuLaoZu: {
+		// DisplayName: Xue Hu Lao Zu
+
+		TownNPCMood: {
+			// Content: 我很满足。
+			// NoHome: 我讨厌没有家。
+			// FarFromHome: 我离家太远了。
+			// LoveSpace: 我非常喜欢有这么大的空间。
+			// DislikeCrowded: 我不喜欢这么拥挤。
+			// HateCrowded: 我讨厌这么拥挤。
+			// LikeNPC_Princess: 我喜欢 {NPCName}。
+			// Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	DiCangSheng: {
+		// DisplayName: Di Cang Sheng
+
+		TownNPCMood: {
+			// Content: 我很满足。
+			// NoHome: 我讨厌没有家。
+			// FarFromHome: 我离家太远了。
+			// LoveSpace: 我非常喜欢有这么大的空间。
+			// DislikeCrowded: 我不喜欢这么拥挤。
+			// HateCrowded: 我讨厌这么拥挤。
+			// LikeNPC_Princess: 我喜欢 {NPCName}。
+			// Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	GuYueYiDai: {
+		// DisplayName: Gu Yue Yi Dai
+
+		TownNPCMood: {
+			// Content: 我很满足。
+			// NoHome: 我讨厌没有家。
+			// FarFromHome: 我离家太远了。
+			// LoveSpace: 我非常喜欢有这么大的空间。
+			// DislikeCrowded: 我不喜欢这么拥挤。
+			// HateCrowded: 我讨厌这么拥挤。
+			// LikeNPC_Princess: 我喜欢 {NPCName}。
+			// Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	QingChou: {
+		// DisplayName: Qing Chou
+
+		TownNPCMood: {
+			// Content: 我很满足。
+			// NoHome: 我讨厌没有家。
+			// FarFromHome: 我离家太远了。
+			// LoveSpace: 我非常喜欢有这么大的空间。
+			// DislikeCrowded: 我不喜欢这么拥挤。
+			// HateCrowded: 我讨厌这么拥挤。
+			// LikeNPC_Princess: 我喜欢 {NPCName}。
+			// Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	TieXueLeng: {
+		// DisplayName: Tie Xue Leng
+
+		TownNPCMood: {
+			// Content: 我很满足。
+			// NoHome: 我讨厌没有家。
+			// FarFromHome: 我离家太远了。
+			// LoveSpace: 我非常喜欢有这么大的空间。
+			// DislikeCrowded: 我不喜欢这么拥挤。
+			// HateCrowded: 我讨厌这么拥挤。
+			// LikeNPC_Princess: 我喜欢 {NPCName}。
+			// Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	HanHuiXianGu: {
+		// DisplayName: Han Hui Xian Gu
+
+		TownNPCMood: {
+			// Content: 我很满足。
+			// NoHome: 我讨厌没有家。
+			// FarFromHome: 我离家太远了。
+			// LoveSpace: 我非常喜欢有这么大的空间。
+			// DislikeCrowded: 我不喜欢这么拥挤。
+			// HateCrowded: 我讨厌这么拥挤。
+			// LikeNPC_Princess: 我喜欢 {NPCName}。
+			// Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	QinBaiSheng: {
+		// DisplayName: Qin Bai Sheng
+
+		TownNPCMood: {
+			// Content: 我很满足。
+			// NoHome: 我讨厌没有家。
+			// FarFromHome: 我离家太远了。
+			// LoveSpace: 我非常喜欢有这么大的空间。
+			// DislikeCrowded: 我不喜欢这么拥挤。
+			// HateCrowded: 我讨厌这么拥挤。
+			// LikeNPC_Princess: 我喜欢 {NPCName}。
+			// Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	YanShiLaoRen: {
+		// DisplayName: Yan Shi Lao Ren
+
+		TownNPCMood: {
+			// Content: 我很满足。
+			// NoHome: 我讨厌没有家。
+			// FarFromHome: 我离家太远了。
+			// LoveSpace: 我非常喜欢有这么大的空间。
+			// DislikeCrowded: 我不喜欢这么拥挤。
+			// HateCrowded: 我讨厌这么拥挤。
+			// LikeNPC_Princess: 我喜欢 {NPCName}。
+			// Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	YingWuXie: {
+		// DisplayName: Ying Wu Xie
+
+		TownNPCMood: {
+			// Content: 我很满足。
+			// NoHome: 我讨厌没有家。
+			// FarFromHome: 我离家太远了。
+			// LoveSpace: 我非常喜欢有这么大的空间。
+			// DislikeCrowded: 我不喜欢这么拥挤。
+			// HateCrowded: 我讨厌这么拥挤。
+			// LikeNPC_Princess: 我喜欢 {NPCName}。
+			// Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	ZhengYuanLaoRen: {
+		// DisplayName: Zheng Yuan Lao Ren
+
+		TownNPCMood: {
+			// Content: 我很满足。
+			// NoHome: 我讨厌没有家。
+			// FarFromHome: 我离家太远了。
+			// LoveSpace: 我非常喜欢有这么大的空间。
+			// DislikeCrowded: 我不喜欢这么拥挤。
+			// HateCrowded: 我讨厌这么拥挤。
+			// LikeNPC_Princess: 我喜欢 {NPCName}。
+			// Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	FengJiuGe: {
+		// DisplayName: Feng Jiu Ge
+
+		TownNPCMood: {
+			// Content: 我很满足。
+			// NoHome: 我讨厌没有家。
+			// FarFromHome: 我离家太远了。
+			// LoveSpace: 我非常喜欢有这么大的空间。
+			// DislikeCrowded: 我不喜欢这么拥挤。
+			// HateCrowded: 我讨厌这么拥挤。
+			// LikeNPC_Princess: 我喜欢 {NPCName}。
+			// Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	WuYong: {
+		// DisplayName: Wu Yong
+
+		TownNPCMood: {
+			// Content: 我很满足。
+			// NoHome: 我讨厌没有家。
+			// FarFromHome: 我离家太远了。
+			// LoveSpace: 我非常喜欢有这么大的空间。
+			// DislikeCrowded: 我不喜欢这么拥挤。
+			// HateCrowded: 我讨厌这么拥挤。
+			// LikeNPC_Princess: 我喜欢 {NPCName}。
+			// Princess_LovesNPC: 我喜欢 {NPCName}。
+		}
+	}
+
+	// DaoTianMoZun.DisplayName: Dao Tian Mo Zun
+	// HongLianMoZun.DisplayName: Hong Lian Mo Zun
+	// JuYangXianZun.DisplayName: Ju Yang Xian Zun
+	// KuangManMoZun.DisplayName: Kuang Man Mo Zun
+	// LeTuXianZun.DisplayName: Le Tu Xian Zun
+	// WuJiMoZun.DisplayName: Wu Ji Mo Zun
+	// XingSuXianZun.DisplayName: Xing Su Xian Zun
+	// YouHunMoZun.DisplayName: You Hun Mo Zun
+	// YuanLianXianZun.DisplayName: Yuan Lian Xian Zun
+	// YuanShiXianZun.DisplayName: Yuan Shi Xian Zun
 }
 
 Items: {
@@ -5941,6 +6538,14 @@ Items: {
 		// Tooltip: ""
 	}
 
+	ChunGu: {
+		// GuLevel: Mods.VerminLordMod.Items.ChunGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.ChunGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.ChunGu.UsesXQi
+		// DisplayName: Chun Gu
+		// Tooltip: ""
+	}
+
 	CunXiYuXGu: {
 		// UsesXQi: Mods.VerminLordMod.Items.CunXiYuXGu.UsesXQi
 		// ControlRate: Mods.VerminLordMod.Items.CunXiYuXGu.ControlRate
@@ -6850,6 +7455,11 @@ Items: {
 		// ControlRate: Mods.VerminLordMod.Items.XiaoGuangGuGu.ControlRate
 		// GuLevel: Mods.VerminLordMod.Items.XiaoGuangGuGu.GuLevel
 		// DisplayName: Xiao Guang Gu Gu
+		// Tooltip: ""
+	}
+
+	XiaoGu: {
+		// DisplayName: Xiao Gu
 		// Tooltip: ""
 	}
 
@@ -9157,11 +9767,17 @@ Items: {
 	千年苦贝: {
 		// DisplayName: 千年苦贝
 		// Tooltip: ""
+		// GuLevel: Mods.VerminLordMod.Items.千年苦贝.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.千年苦贝.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.千年苦贝.UsesXQi
 	}
 
 	升天真传: {
 		// DisplayName: 升天真传
 		// Tooltip: ""
+		// GuLevel: Mods.VerminLordMod.Items.升天真传.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.升天真传.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.升天真传.UsesXQi
 	}
 
 	夜壶: {
@@ -9172,6 +9788,9 @@ Items: {
 	太古上极天鹰: {
 		// DisplayName: 太古上极天鹰
 		// Tooltip: ""
+		// GuLevel: Mods.VerminLordMod.Items.太古上极天鹰.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.太古上极天鹰.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.太古上极天鹰.UsesXQi
 	}
 
 	太古之光: {
@@ -9187,21 +9806,33 @@ Items: {
 	太古年兽: {
 		// DisplayName: 太古年兽
 		// Tooltip: ""
+		// GuLevel: Mods.VerminLordMod.Items.太古年兽.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.太古年兽.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.太古年兽.UsesXQi
 	}
 
 	太古石龙: {
 		// DisplayName: 太古石龙
 		// Tooltip: ""
+		// GuLevel: Mods.VerminLordMod.Items.太古石龙.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.太古石龙.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.太古石龙.UsesXQi
 	}
 
 	太古虎形年兽: {
 		// DisplayName: 太古虎形年兽
 		// Tooltip: ""
+		// GuLevel: Mods.VerminLordMod.Items.太古虎形年兽.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.太古虎形年兽.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.太古虎形年兽.UsesXQi
 	}
 
 	太古魂核: {
 		// DisplayName: 太古魂核
 		// Tooltip: ""
+		// GuLevel: Mods.VerminLordMod.Items.太古魂核.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.太古魂核.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.太古魂核.UsesXQi
 	}
 
 	太宇寺: {
@@ -9232,6 +9863,9 @@ Items: {
 	幽冥水母: {
 		// DisplayName: 幽冥水母
 		// Tooltip: ""
+		// GuLevel: Mods.VerminLordMod.Items.幽冥水母.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.幽冥水母.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.幽冥水母.UsesXQi
 	}
 
 	恒舟: {
@@ -9267,6 +9901,9 @@ Items: {
 	旱魃炎: {
 		// DisplayName: 旱魃炎
 		// Tooltip: ""
+		// GuLevel: Mods.VerminLordMod.Items.旱魃炎.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.旱魃炎.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.旱魃炎.UsesXQi
 	}
 
 	星宿棋盘: {
@@ -9287,11 +9924,17 @@ Items: {
 	深海闪电鳗鱼: {
 		// DisplayName: 深海闪电鳗鱼
 		// Tooltip: ""
+		// GuLevel: Mods.VerminLordMod.Items.深海闪电鳗鱼.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.深海闪电鳗鱼.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.深海闪电鳗鱼.UsesXQi
 	}
 
 	火雷真传: {
 		// DisplayName: 火雷真传
 		// Tooltip: ""
+		// GuLevel: Mods.VerminLordMod.Items.火雷真传.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.火雷真传.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.火雷真传.UsesXQi
 	}
 
 	烽火台: {
@@ -9312,6 +9955,9 @@ Items: {
 	生死鲲鹏: {
 		// DisplayName: 生死鲲鹏
 		// Tooltip: ""
+		// GuLevel: Mods.VerminLordMod.Items.生死鲲鹏.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.生死鲲鹏.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.生死鲲鹏.UsesXQi
 	}
 
 	白荔仙元: {
@@ -9446,6 +10092,1805 @@ Items: {
 
 	铭牌: {
 		// DisplayName: 铭牌
+		// Tooltip: ""
+	}
+
+	DaLangGu: {
+		// GuLevel: Mods.VerminLordMod.Items.DaLangGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.DaLangGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.DaLangGu.UsesXQi
+		// DisplayName: Da Lang Gu
+		// Tooltip: ""
+	}
+
+	HuanHunXianGu: {
+		// GuLevel: Mods.VerminLordMod.Items.HuanHunXianGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.HuanHunXianGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.HuanHunXianGu.UsesXQi
+		// DisplayName: Huan Hun Xian Gu
+		// Tooltip: ""
+	}
+
+	DaDaoXianGu: {
+		// GuLevel: Mods.VerminLordMod.Items.DaDaoXianGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.DaDaoXianGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.DaDaoXianGu.UsesXQi
+		// DisplayName: Da Dao Xian Gu
+		// Tooltip: ""
+	}
+
+	ZhaoZaiGu: {
+		// GuLevel: Mods.VerminLordMod.Items.ZhaoZaiGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.ZhaoZaiGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.ZhaoZaiGu.UsesXQi
+		// DisplayName: Zhao Zai Gu
+		// Tooltip: ""
+	}
+
+	YuShouGu: {
+		// GuLevel: Mods.VerminLordMod.Items.YuShouGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.YuShouGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.YuShouGu.UsesXQi
+		// DisplayName: Yu Shou Gu
+		// Tooltip: ""
+	}
+
+	ZhiZunXianTaiGu: {
+		// GuLevel: Mods.VerminLordMod.Items.ZhiZunXianTaiGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.ZhiZunXianTaiGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.ZhiZunXianTaiGu.UsesXQi
+		// DisplayName: Zhi Zun Xian Tai Gu
+		// Tooltip: ""
+	}
+
+	HongYunQiTianGu: {
+		// GuLevel: Mods.VerminLordMod.Items.HongYunQiTianGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.HongYunQiTianGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.HongYunQiTianGu.UsesXQi
+		// DisplayName: Hong Yun Qi Tian Gu
+		// Tooltip: ""
+	}
+
+	BaoGuangGu: {
+		// GuLevel: Mods.VerminLordMod.Items.BaoGuangGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.BaoGuangGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.BaoGuangGu.UsesXQi
+		// DisplayName: Bao Guang Gu
+		// Tooltip: ""
+	}
+
+	ZuJiGu: {
+		// GuLevel: Mods.VerminLordMod.Items.ZuJiGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.ZuJiGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.ZuJiGu.UsesXQi
+		// DisplayName: Zu Ji Gu
+		// Tooltip: ""
+	}
+
+	ZhengYiXianGu: {
+		// GuLevel: Mods.VerminLordMod.Items.ZhengYiXianGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.ZhengYiXianGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.ZhengYiXianGu.UsesXQi
+		// DisplayName: Zheng Yi Xian Gu
+		// Tooltip: ""
+	}
+
+	YunSuoGu: {
+		// UsesXQi: Mods.VerminLordMod.Items.YunSuoGu.UsesXQi
+		// DisplayName: Yun Suo Gu
+		// Tooltip: ""
+	}
+
+	YuGuGu: {
+		// GuLevel: Mods.VerminLordMod.Items.YuGuGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.YuGuGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.YuGuGu.UsesXQi
+		// DisplayName: Yu Gu Gu
+		// Tooltip: ""
+	}
+
+	YouJiangGu: {
+		// GuLevel: Mods.VerminLordMod.Items.YouJiangGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.YouJiangGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.YouJiangGu.UsesXQi
+		// DisplayName: You Jiang Gu
+		// Tooltip: ""
+	}
+
+	YiZhiLiuSha: {
+		// GuLevel: Mods.VerminLordMod.Items.YiZhiLiuSha.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.YiZhiLiuSha.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.YiZhiLiuSha.UsesXQi
+		// DisplayName: Yi Zhi Liu Sha
+		// Tooltip: ""
+	}
+
+	YiYiGu: {
+		// UsesXQi: Mods.VerminLordMod.Items.YiYiGu.UsesXQi
+		// DisplayName: Yi Yi Gu
+		// Tooltip: ""
+	}
+
+	YiXueGu: {
+		// UsesXQi: Mods.VerminLordMod.Items.YiXueGu.UsesXQi
+		// DisplayName: Yi Xue Gu
+		// Tooltip: ""
+	}
+
+	YiSiYiShengGu: {
+		// UsesXQi: Mods.VerminLordMod.Items.YiSiYiShengGu.UsesXQi
+		// DisplayName: Yi Si Yi Sheng Gu
+		// Tooltip: ""
+	}
+
+	YiQiJinGuangChong: {
+		// GuLevel: Mods.VerminLordMod.Items.YiQiJinGuangChong.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.YiQiJinGuangChong.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.YiQiJinGuangChong.UsesXQi
+		// DisplayName: Yi Qi Jin Guang Chong
+		// Tooltip: ""
+	}
+
+	YingYunXianGu: {
+		// UsesXQi: Mods.VerminLordMod.Items.YingYunXianGu.UsesXQi
+		// DisplayName: Ying Yun Xian Gu
+		// Tooltip: ""
+	}
+
+	YingShengChong: {
+		// UsesXQi: Mods.VerminLordMod.Items.YingShengChong.UsesXQi
+		// DisplayName: Ying Sheng Chong
+		// Tooltip: ""
+	}
+
+	YingGanXianGu: {
+		// GuLevel: Mods.VerminLordMod.Items.YingGanXianGu.GuLevel
+		// UsesXQi: Mods.VerminLordMod.Items.YingGanXianGu.UsesXQi
+		// DisplayName: Ying Gan Xian Gu
+		// Tooltip: ""
+	}
+
+	YiHouXianGu: {
+		// UsesXQi: Mods.VerminLordMod.Items.YiHouXianGu.UsesXQi
+		// DisplayName: Yi Hou Xian Gu
+		// Tooltip: ""
+	}
+
+	YeChaZhangYuWang: {
+		// GuLevel: Mods.VerminLordMod.Items.YeChaZhangYuWang.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.YeChaZhangYuWang.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.YeChaZhangYuWang.UsesXQi
+		// DisplayName: Ye Cha Zhang Yu Wang
+		// Tooltip: ""
+	}
+
+	YanHuaXianGu: {
+		// GuLevel: Mods.VerminLordMod.Items.YanHuaXianGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.YanHuaXianGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.YanHuaXianGu.UsesXQi
+		// DisplayName: Yan Hua Xian Gu
+		// Tooltip: ""
+	}
+
+	XueShenZi: {
+		// GuLevel: Mods.VerminLordMod.Items.XueShenZi.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.XueShenZi.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.XueShenZi.UsesXQi
+		// DisplayName: Xue Shen Zi
+		// Tooltip: ""
+	}
+
+	XueChou: {
+		// GuLevel: Mods.VerminLordMod.Items.XueChou.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.XueChou.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.XueChou.UsesXQi
+		// DisplayName: Xue Chou
+		// Tooltip: ""
+	}
+
+	XuanGuangGu: {
+		// GuLevel: Mods.VerminLordMod.Items.XuanGuangGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.XuanGuangGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.XuanGuangGu.UsesXQi
+		// DisplayName: Xuan Guang Gu
+		// Tooltip: ""
+	}
+
+	XingMoFu: {
+		// GuLevel: Mods.VerminLordMod.Items.XingMoFu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.XingMoFu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.XingMoFu.UsesXQi
+		// DisplayName: Xing Mo Fu
+		// Tooltip: ""
+	}
+
+	XiaGu: {
+		// GuLevel: Mods.VerminLordMod.Items.XiaGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.XiaGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.XiaGu.UsesXQi
+		// DisplayName: Xia Gu
+		// Tooltip: ""
+	}
+
+	TuoYuXianGu: {
+		// UsesXQi: Mods.VerminLordMod.Items.TuoYuXianGu.UsesXQi
+		// DisplayName: Tuo Yu Xian Gu
+		// Tooltip: ""
+	}
+
+	TieGuiGu: {
+		// GuLevel: Mods.VerminLordMod.Items.TieGuiGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.TieGuiGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.TieGuiGu.UsesXQi
+		// DisplayName: Tie Gui Gu
+		// Tooltip: ""
+	}
+
+	TianDuXianGu: {
+		// GuLevel: Mods.VerminLordMod.Items.TianDuXianGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.TianDuXianGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.TianDuXianGu.UsesXQi
+		// DisplayName: Tian Du Xian Gu
+		// Tooltip: ""
+	}
+
+	ShuoShiDaoFei: {
+		// GuLevel: Mods.VerminLordMod.Items.ShuoShiDaoFei.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.ShuoShiDaoFei.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.ShuoShiDaoFei.UsesXQi
+		// DisplayName: Shuo Shi Dao Fei
+		// Tooltip: ""
+	}
+
+	ShuiLianXianGu: {
+		// GuLevel: Mods.VerminLordMod.Items.ShuiLianXianGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.ShuiLianXianGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.ShuiLianXianGu.UsesXQi
+		// DisplayName: Shui Lian Xian Gu
+		// Tooltip: ""
+	}
+
+	ShuiFuGu: {
+		// UsesXQi: Mods.VerminLordMod.Items.ShuiFuGu.UsesXQi
+		// DisplayName: Shui Fu Gu
+		// Tooltip: ""
+	}
+
+	ShaPiGu: {
+		// GuLevel: Mods.VerminLordMod.Items.ShaPiGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.ShaPiGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.ShaPiGu.UsesXQi
+		// DisplayName: Sha Pi Gu
+		// Tooltip: ""
+	}
+
+	ShangGuJianJiao: {
+		// GuLevel: Mods.VerminLordMod.Items.ShangGuJianJiao.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.ShangGuJianJiao.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.ShangGuJianJiao.UsesXQi
+		// DisplayName: Shang Gu Jian Jiao
+		// Tooltip: ""
+	}
+
+	QuGu: {
+		// GuLevel: Mods.VerminLordMod.Items.QuGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.QuGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.QuGu.UsesXQi
+		// DisplayName: Qu Gu
+		// Tooltip: ""
+	}
+
+	QiuGu: {
+		// GuLevel: Mods.VerminLordMod.Items.QiuGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.QiuGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.QiuGu.UsesXQi
+		// DisplayName: Qiu Gu
+		// Tooltip: ""
+	}
+
+	QiJiaGu: {
+		// GuLevel: Mods.VerminLordMod.Items.QiJiaGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.QiJiaGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.QiJiaGu.UsesXQi
+		// DisplayName: Qi Jia Gu
+		// Tooltip: ""
+	}
+
+	MuYa: {
+		// GuLevel: Mods.VerminLordMod.Items.MuYa.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.MuYa.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.MuYa.UsesXQi
+		// DisplayName: Mu Ya
+		// Tooltip: ""
+	}
+
+	MiHun: {
+		// GuLevel: Mods.VerminLordMod.Items.MiHun.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.MiHun.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.MiHun.UsesXQi
+		// DisplayName: Mi Hun
+		// Tooltip: ""
+	}
+
+	MengJiaXianGu: {
+		// GuLevel: Mods.VerminLordMod.Items.MengJiaXianGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.MengJiaXianGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.MengJiaXianGu.UsesXQi
+		// DisplayName: Meng Jia Xian Gu
+		// Tooltip: ""
+	}
+
+	MengJiaGu: {
+		// GuLevel: Mods.VerminLordMod.Items.MengJiaGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.MengJiaGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.MengJiaGu.UsesXQi
+		// DisplayName: Meng Jia Gu
+		// Tooltip: ""
+	}
+
+	MengDaoFanGu: {
+		// GuLevel: Mods.VerminLordMod.Items.MengDaoFanGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.MengDaoFanGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.MengDaoFanGu.UsesXQi
+		// DisplayName: Meng Dao Fan Gu
+		// Tooltip: ""
+	}
+
+	LongXiXianGu: {
+		// GuLevel: Mods.VerminLordMod.Items.LongXiXianGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.LongXiXianGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.LongXiXianGu.UsesXQi
+		// DisplayName: Long Xi Xian Gu
+		// Tooltip: ""
+	}
+
+	LongWuXianGu: {
+		// GuLevel: Mods.VerminLordMod.Items.LongWuXianGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.LongWuXianGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.LongWuXianGu.UsesXQi
+		// DisplayName: Long Wu Xian Gu
+		// Tooltip: ""
+	}
+
+	LongJuanGu: {
+		// GuLevel: Mods.VerminLordMod.Items.LongJuanGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.LongJuanGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.LongJuanGu.UsesXQi
+		// DisplayName: Long Juan Gu
+		// Tooltip: ""
+	}
+
+	LeiDianGu: {
+		// GuLevel: Mods.VerminLordMod.Items.LeiDianGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.LeiDianGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.LeiDianGu.UsesXQi
+		// DisplayName: Lei Dian Gu
+		// Tooltip: ""
+	}
+
+	LangJianGu: {
+		// GuLevel: Mods.VerminLordMod.Items.LangJianGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.LangJianGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.LangJianGu.UsesXQi
+		// DisplayName: Lang Jian Gu
+		// Tooltip: ""
+	}
+
+	KongJuGu: {
+		// GuLevel: Mods.VerminLordMod.Items.KongJuGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.KongJuGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.KongJuGu.UsesXQi
+		// DisplayName: Kong Ju Gu
+		// Tooltip: ""
+	}
+
+	JiuZhuanHuoGu: {
+		// GuLevel: Mods.VerminLordMod.Items.JiuZhuanHuoGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.JiuZhuanHuoGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.JiuZhuanHuoGu.UsesXQi
+		// DisplayName: Jiu Zhuan Huo Gu
+		// Tooltip: ""
+	}
+
+	JinLvYiGu: {
+		// GuLevel: Mods.VerminLordMod.Items.JinLvYiGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.JinLvYiGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.JinLvYiGu.UsesXQi
+		// DisplayName: Jin Lv Yi Gu
+		// Tooltip: ""
+	}
+
+	HunXiaoXianGu: {
+		// GuLevel: Mods.VerminLordMod.Items.HunXiaoXianGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.HunXiaoXianGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.HunXiaoXianGu.UsesXQi
+		// DisplayName: Hun Xiao Xian Gu
+		// Tooltip: ""
+	}
+
+	HunShouLingXianGu: {
+		// GuLevel: Mods.VerminLordMod.Items.HunShouLingXianGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.HunShouLingXianGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.HunShouLingXianGu.UsesXQi
+		// DisplayName: Hun Shou Ling Xian Gu
+		// Tooltip: ""
+	}
+
+	HuiJianXianGu: {
+		// GuLevel: Mods.VerminLordMod.Items.HuiJianXianGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.HuiJianXianGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.HuiJianXianGu.UsesXQi
+		// DisplayName: Hui Jian Xian Gu
+		// Tooltip: ""
+	}
+
+	HuanBuGu: {
+		// GuLevel: Mods.VerminLordMod.Items.HuanBuGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.HuanBuGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.HuanBuGu.UsesXQi
+		// DisplayName: Huan Bu Gu
+		// Tooltip: ""
+	}
+
+	HongLeiGu: {
+		// GuLevel: Mods.VerminLordMod.Items.HongLeiGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.HongLeiGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.HongLeiGu.UsesXQi
+		// DisplayName: Hong Lei Gu
+		// Tooltip: ""
+	}
+
+	HengGu: {
+		// GuLevel: Mods.VerminLordMod.Items.HengGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.HengGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.HengGu.UsesXQi
+		// DisplayName: Heng Gu
+		// Tooltip: ""
+	}
+
+	GuanGu: {
+		// GuLevel: Mods.VerminLordMod.Items.GuanGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.GuanGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.GuanGu.UsesXQi
+		// DisplayName: Guan Gu
+		// Tooltip: ""
+	}
+
+	GuangDaoXianGu: {
+		// GuLevel: Mods.VerminLordMod.Items.GuangDaoXianGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.GuangDaoXianGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.GuangDaoXianGu.UsesXQi
+		// DisplayName: Guang Dao Xian Gu
+		// Tooltip: ""
+	}
+
+	FuShang: {
+		// GuLevel: Mods.VerminLordMod.Items.FuShang.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.FuShang.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.FuShang.UsesXQi
+		// DisplayName: Fu Shang
+		// Tooltip: ""
+	}
+
+	FengDuGu: {
+		// GuLevel: Mods.VerminLordMod.Items.FengDuGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.FengDuGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.FengDuGu.UsesXQi
+		// DisplayName: Feng Du Gu
+		// Tooltip: ""
+	}
+
+	FengChiXianGu: {
+		// GuLevel: Mods.VerminLordMod.Items.FengChiXianGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.FengChiXianGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.FengChiXianGu.UsesXQi
+		// DisplayName: Feng Chi Xian Gu
+		// Tooltip: ""
+	}
+
+	FeiJianXianGu: {
+		// GuLevel: Mods.VerminLordMod.Items.FeiJianXianGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.FeiJianXianGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.FeiJianXianGu.UsesXQi
+		// DisplayName: Fei Jian Xian Gu
+		// Tooltip: ""
+	}
+
+	FeiJiangGu: {
+		// GuLevel: Mods.VerminLordMod.Items.FeiJiangGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.FeiJiangGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.FeiJiangGu.UsesXQi
+		// DisplayName: Fei Jiang Gu
+		// Tooltip: ""
+	}
+
+	ELiGu: {
+		// GuLevel: Mods.VerminLordMod.Items.ELiGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.ELiGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.ELiGu.UsesXQi
+		// DisplayName: E Li Gu
+		// Tooltip: ""
+	}
+
+	DongGu: {
+		// GuLevel: Mods.VerminLordMod.Items.DongGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.DongGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.DongGu.UsesXQi
+		// DisplayName: Dong Gu
+		// Tooltip: ""
+	}
+
+	DiQiXianGu: {
+		// GuLevel: Mods.VerminLordMod.Items.DiQiXianGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.DiQiXianGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.DiQiXianGu.UsesXQi
+		// DisplayName: Di Qi Xian Gu
+		// Tooltip: ""
+	}
+
+	DingKongXianGu: {
+		// GuLevel: Mods.VerminLordMod.Items.DingKongXianGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.DingKongXianGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.DingKongXianGu.UsesXQi
+		// DisplayName: Ding Kong Xian Gu
+		// Tooltip: ""
+	}
+
+	DianLuGu: {
+		// GuLevel: Mods.VerminLordMod.Items.DianLuGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.DianLuGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.DianLuGu.UsesXQi
+		// DisplayName: Dian Lu Gu
+		// Tooltip: ""
+	}
+
+	DaQiXianGu: {
+		// GuLevel: Mods.VerminLordMod.Items.DaQiXianGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.DaQiXianGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.DaQiXianGu.UsesXQi
+		// DisplayName: Da Qi Xian Gu
+		// Tooltip: ""
+	}
+
+	DaoQiXianGu: {
+		// GuLevel: Mods.VerminLordMod.Items.DaoQiXianGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.DaoQiXianGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.DaoQiXianGu.UsesXQi
+		// DisplayName: Dao Qi Xian Gu
+		// Tooltip: ""
+	}
+
+	DaoQiGu: {
+		// GuLevel: Mods.VerminLordMod.Items.DaoQiGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.DaoQiGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.DaoQiGu.UsesXQi
+		// DisplayName: Dao Qi Gu
+		// Tooltip: ""
+	}
+
+	DaoKeDaoXianGu: {
+		// GuLevel: Mods.VerminLordMod.Items.DaoKeDaoXianGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.DaoKeDaoXianGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.DaoKeDaoXianGu.UsesXQi
+		// DisplayName: Dao Ke Dao Xian Gu
+		// Tooltip: ""
+	}
+
+	DanDaoGu: {
+		// GuLevel: Mods.VerminLordMod.Items.DanDaoGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.DanDaoGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.DanDaoGu.UsesXQi
+		// DisplayName: Dan Dao Gu
+		// Tooltip: ""
+	}
+
+	ChunQiuChanXianGu: {
+		// GuLevel: Mods.VerminLordMod.Items.ChunQiuChanXianGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.ChunQiuChanXianGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.ChunQiuChanXianGu.UsesXQi
+		// DisplayName: Chun Qiu Chan Xian Gu
+		// Tooltip: ""
+	}
+
+	CaoGuiGu: {
+		// GuLevel: Mods.VerminLordMod.Items.CaoGuiGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.CaoGuiGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.CaoGuiGu.UsesXQi
+		// DisplayName: Cao Gui Gu
+		// Tooltip: ""
+	}
+
+	CanZhu: {
+		// GuLevel: Mods.VerminLordMod.Items.CanZhu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.CanZhu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.CanZhu.UsesXQi
+		// DisplayName: Can Zhu
+		// Tooltip: ""
+	}
+
+	BuGuaGuiBeiXianGu: {
+		// GuLevel: Mods.VerminLordMod.Items.BuGuaGuiBeiXianGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.BuGuaGuiBeiXianGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.BuGuaGuiBeiXianGu.UsesXQi
+		// DisplayName: Bu Gua Gui Bei Xian Gu
+		// Tooltip: ""
+	}
+
+	BingXiao: {
+		// GuLevel: Mods.VerminLordMod.Items.BingXiao.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.BingXiao.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.BingXiao.UsesXQi
+		// DisplayName: Bing Xiao
+		// Tooltip: ""
+	}
+
+	BianYiXianGu: {
+		// GuLevel: Mods.VerminLordMod.Items.BianYiXianGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.BianYiXianGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.BianYiXianGu.UsesXQi
+		// DisplayName: Bian Yi Xian Gu
+		// Tooltip: ""
+	}
+
+	BaoQiHuangTongChan: {
+		// GuLevel: Mods.VerminLordMod.Items.BaoQiHuangTongChan.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.BaoQiHuangTongChan.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.BaoQiHuangTongChan.UsesXQi
+		// DisplayName: Bao Qi Huang Tong Chan
+		// Tooltip: ""
+	}
+
+	BaoQiGu: {
+		// GuLevel: Mods.VerminLordMod.Items.BaoQiGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.BaoQiGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.BaoQiGu.UsesXQi
+		// DisplayName: Bao Qi Gu
+		// Tooltip: ""
+	}
+
+	BaMianWeiFengXianGu: {
+		// GuLevel: Mods.VerminLordMod.Items.BaMianWeiFengXianGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.BaMianWeiFengXianGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.BaMianWeiFengXianGu.UsesXQi
+		// DisplayName: Ba Mian Wei Feng Xian Gu
+		// Tooltip: ""
+	}
+
+	BaiXueYaoHuaGu: {
+		// GuLevel: Mods.VerminLordMod.Items.BaiXueYaoHuaGu.GuLevel
+		// ControlRate: Mods.VerminLordMod.Items.BaiXueYaoHuaGu.ControlRate
+		// UsesXQi: Mods.VerminLordMod.Items.BaiXueYaoHuaGu.UsesXQi
+		// DisplayName: Bai Xue Yao Hua Gu
+		// Tooltip: ""
+	}
+
+	DiMaiSummon: {
+		// DisplayName: Di Mai Summon
+		// Tooltip: ""
+	}
+
+	LongGongSummon: {
+		// DisplayName: Long Gong Summon
+		// Tooltip: ""
+	}
+
+	LongGong: {
+		// DisplayName: Long Gong
+		// Tooltip: ""
+	}
+
+	TianHeSummon: {
+		// DisplayName: Tian He Summon
+		// Tooltip: ""
+	}
+
+	WolfKingSummon: {
+		// DisplayName: Wolf King Summon
+		// Tooltip: ""
+	}
+
+	GuAdeptArmor: {
+		// DisplayName: Gu Adept Armor
+		// Tooltip: ""
+	}
+
+	GuAdeptBoots: {
+		// DisplayName: Gu Adept Boots
+		// Tooltip: ""
+	}
+
+	GuAdeptHood: {
+		// DisplayName: Gu Adept Hood
+		// Tooltip: ""
+	}
+
+	GuExpertArmor: {
+		// DisplayName: Gu Expert Armor
+		// Tooltip: ""
+	}
+
+	GuExpertCrown: {
+		// DisplayName: Gu Expert Crown
+		// Tooltip: ""
+	}
+
+	GuExpertLeggings: {
+		// DisplayName: Gu Expert Leggings
+		// Tooltip: ""
+	}
+
+	GuImmortalBoots: {
+		// DisplayName: Gu Immortal Boots
+		// Tooltip: ""
+	}
+
+	GuImmortalCrown: {
+		// DisplayName: Gu Immortal Crown
+		// Tooltip: ""
+	}
+
+	GuImmortalRobe: {
+		// DisplayName: Gu Immortal Robe
+		// Tooltip: ""
+	}
+
+	GuLordBattleArmor: {
+		// DisplayName: Gu Lord Battle Armor
+		// Tooltip: ""
+	}
+
+	GuLordBattleLeggings: {
+		// DisplayName: Gu Lord Battle Leggings
+		// Tooltip: ""
+	}
+
+	GuLordDiadem: {
+		// DisplayName: Gu Lord Diadem
+		// Tooltip: ""
+	}
+
+	GuMasterHat: {
+		// DisplayName: Gu Master Hat
+		// Tooltip: ""
+	}
+
+	GuMasterPants: {
+		// DisplayName: Gu Master Pants
+		// Tooltip: ""
+	}
+
+	GuMasterRobe: {
+		// DisplayName: Gu Master Robe
+		// Tooltip: ""
+	}
+
+	GuMasterWarGreaves: {
+		// DisplayName: Gu Master War Greaves
+		// Tooltip: ""
+	}
+
+	GuMasterWarHelm: {
+		// DisplayName: Gu Master War Helm
+		// Tooltip: ""
+	}
+
+	GuMasterWarPlate: {
+		// DisplayName: Gu Master War Plate
+		// Tooltip: ""
+	}
+
+	XianGuWuChuXing: {
+		// DisplayName: Xian Gu Wu Chu Xing
+		// Tooltip: ""
+	}
+
+	XianGuWuHeiLao: {
+		// DisplayName: Xian Gu Wu Hei Lao
+		// Tooltip: ""
+	}
+
+	YuQingDiFengXiaoZhuLou: {
+		// DisplayName: Yu Qing Di Feng Xiao Zhu Lou
+		// Tooltip: ""
+	}
+
+	AiQingXianGu: {
+		// DisplayName: Ai Qing Xian Gu
+		// Tooltip: ""
+	}
+
+	AiYiXianGu: {
+		// DisplayName: Ai Yi Xian Gu
+		// Tooltip: ""
+	}
+
+	AnTouGu: {
+		// DisplayName: An Tou Gu
+		// Tooltip: ""
+	}
+
+	BaiHeXinLou: {
+		// DisplayName: Bai He Xin Lou
+		// Tooltip: ""
+	}
+
+	BaiLianJuCanGu: {
+		// DisplayName: Bai Lian Ju Can Gu
+		// Tooltip: ""
+	}
+
+	BaMianWeiFengGu: {
+		// DisplayName: Ba Mian Wei Feng Gu
+		// Tooltip: ""
+	}
+
+	BingJingGu: {
+		// DisplayName: Bing Jing Gu
+		// Tooltip: ""
+	}
+
+	BoZhongZhu: {
+		// DisplayName: Bo Zhong Zhu
+		// Tooltip: ""
+	}
+
+	BuXianGu: {
+		// DisplayName: Bu Xian Gu
+		// Tooltip: ""
+	}
+
+	ChaoQiGu: {
+		// DisplayName: Chao Qi Gu
+		// Tooltip: ""
+	}
+
+	ChouHenGu: {
+		// DisplayName: Chou Hen Gu
+		// Tooltip: ""
+	}
+
+	CunGuangYinGu: {
+		// DisplayName: Cun Guang Yin Gu
+		// Tooltip: ""
+	}
+
+	DaDaoXianGuSpecial: {
+		// DisplayName: Da Dao Xian Gu Special
+		// Tooltip: ""
+	}
+
+	DaJiaZhiQiXianGu: {
+		// DisplayName: Da Jia Zhi Qi Xian Gu
+		// Tooltip: ""
+	}
+
+	DaJingGu: {
+		// DisplayName: Da Jing Gu
+		// Tooltip: ""
+	}
+
+	DaLangGuSpecial: {
+		// DisplayName: Da Lang Gu Special
+		// Tooltip: ""
+	}
+
+	DanShiGu: {
+		// DisplayName: Dan Shi Gu
+		// Tooltip: ""
+	}
+
+	DianYanGu: {
+		// DisplayName: Dian Yan Gu
+		// Tooltip: ""
+	}
+
+	DiErKongQiaoGu: {
+		// DisplayName: Di Er Kong Qiao Gu
+		// Tooltip: ""
+	}
+
+	DingXingGu: {
+		// DisplayName: Ding Xing Gu
+		// Tooltip: ""
+	}
+
+	DiQiaoWoNiu: {
+		// DisplayName: Di Qiao Wo Niu
+		// Tooltip: ""
+	}
+
+	DongDiGu: {
+		// DisplayName: Dong Di Gu
+		// Tooltip: ""
+	}
+
+	DouKongGu: {
+		// DisplayName: Dou Kong Gu
+		// Tooltip: ""
+	}
+
+	DunKongGu: {
+		// DisplayName: Dun Kong Gu
+		// Tooltip: ""
+	}
+
+	DuoTaiGu: {
+		// DisplayName: Duo Tai Gu
+		// Tooltip: ""
+	}
+
+	FangBeiXianGu: {
+		// DisplayName: Fang Bei Xian Gu
+		// Tooltip: ""
+	}
+
+	FangWeiGu: {
+		// DisplayName: Fang Wei Gu
+		// Tooltip: ""
+	}
+
+	FangYuGu: {
+		// DisplayName: Fang Yu Gu
+		// Tooltip: ""
+	}
+
+	FaQingGu: {
+		// DisplayName: Fa Qing Gu
+		// Tooltip: ""
+	}
+
+	FengHuaGu: {
+		// DisplayName: Feng Hua Gu
+		// Tooltip: ""
+	}
+
+	FengYuXianGu: {
+		// DisplayName: Feng Yu Xian Gu
+		// Tooltip: ""
+	}
+
+	FenYingXianGu: {
+		// DisplayName: Fen Ying Xian Gu
+		// Tooltip: ""
+	}
+
+	GangJinGu: {
+		// DisplayName: Gang Jin Gu
+		// Tooltip: ""
+	}
+
+	GongBeiGu: {
+		// DisplayName: Gong Bei Gu
+		// Tooltip: ""
+	}
+
+	GongPingGu: {
+		// DisplayName: Gong Ping Gu
+		// Tooltip: ""
+	}
+
+	GuangYuanGu: {
+		// DisplayName: Guang Yuan Gu
+		// Tooltip: ""
+	}
+
+	GuanWangGu: {
+		// DisplayName: Guan Wang Gu
+		// Tooltip: ""
+	}
+
+	GuiGu: {
+		// DisplayName: Gui Gu
+		// Tooltip: ""
+	}
+
+	GuiZeGu: {
+		// DisplayName: Gui Ze Gu
+		// Tooltip: ""
+	}
+
+	GuoDeQu: {
+		// DisplayName: Guo De Qu
+		// Tooltip: ""
+	}
+
+	GuRouTuanYuanGu: {
+		// DisplayName: Gu Rou Tuan Yuan Gu
+		// Tooltip: ""
+	}
+
+	HaoZhuGu: {
+		// DisplayName: Hao Zhu Gu
+		// Tooltip: ""
+	}
+
+	HeiBaiShiGu: {
+		// DisplayName: Hei Bai Shi Gu
+		// Tooltip: ""
+	}
+
+	HeiShiGu: {
+		// DisplayName: Hei Shi Gu
+		// Tooltip: ""
+	}
+
+	HeiYiFanGu: {
+		// DisplayName: Hei Yi Fan Gu
+		// Tooltip: ""
+	}
+
+	HeZeGu: {
+		// DisplayName: He Ze Gu
+		// Tooltip: ""
+	}
+
+	HuangJinSheLiGu: {
+		// DisplayName: Huang Jin She Li Gu
+		// Tooltip: ""
+	}
+
+	HuangLuoTianNiuGu: {
+		// DisplayName: Huang Luo Tian Niu Gu
+		// Tooltip: ""
+	}
+
+	HuanHunGu: {
+		// DisplayName: Huan Hun Gu
+		// Tooltip: ""
+	}
+
+	HuanHunXianGuSpecial: {
+		// DisplayName: Huan Hun Xian Gu Special
+		// Tooltip: ""
+	}
+
+	HuaQiGu: {
+		// DisplayName: Hua Qi Gu
+		// Tooltip: ""
+	}
+
+	HuiGu: {
+		// DisplayName: Hui Gu
+		// Tooltip: ""
+	}
+
+	HuiJianGu: {
+		// DisplayName: Hui Jian Gu
+		// Tooltip: ""
+	}
+
+	HunDengGu: {
+		// DisplayName: Hun Deng Gu
+		// Tooltip: ""
+	}
+
+	HuoXiNiXianGu: {
+		// DisplayName: Huo Xi Ni Xian Gu
+		// Tooltip: ""
+	}
+
+	JiaGu: {
+		// DisplayName: Jia Gu
+		// Tooltip: ""
+	}
+
+	JianChiXianGu: {
+		// DisplayName: Jian Chi Xian Gu
+		// Tooltip: ""
+	}
+
+	JianDunGu: {
+		// DisplayName: Jian Dun Gu
+		// Tooltip: ""
+	}
+
+	JianDunXianGu: {
+		// DisplayName: Jian Dun Xian Gu
+		// Tooltip: ""
+	}
+
+	JiangRuGuGu: {
+		// DisplayName: Jiang Ru Gu Gu
+		// Tooltip: ""
+	}
+
+	JiangShanRuGuGu: {
+		// DisplayName: Jiang Shan Ru Gu Gu
+		// Tooltip: ""
+	}
+
+	JiangShanRuGuXianGu: {
+		// DisplayName: Jiang Shan Ru Gu Xian Gu
+		// Tooltip: ""
+	}
+
+	JianMeiGu: {
+		// DisplayName: Jian Mei Gu
+		// Tooltip: ""
+	}
+
+	JianMeiXianGu: {
+		// DisplayName: Jian Mei Xian Gu
+		// Tooltip: ""
+	}
+
+	JianQiGu: {
+		// DisplayName: Jian Qi Gu
+		// Tooltip: ""
+	}
+
+	JiaoAoGu: {
+		// DisplayName: Jiao Ao Gu
+		// Tooltip: ""
+	}
+
+	JiDeGu: {
+		// DisplayName: Ji De Gu
+		// Tooltip: ""
+	}
+
+	JieLiGu: {
+		// DisplayName: Jie Li Gu
+		// Tooltip: ""
+	}
+
+	JiGuiYunGu: {
+		// DisplayName: Ji Gui Yun Gu
+		// Tooltip: ""
+	}
+
+	JiHunZao: {
+		// DisplayName: Ji Hun Zao
+		// Tooltip: ""
+	}
+
+	JingShuiGu: {
+		// DisplayName: Jing Shui Gu
+		// Tooltip: ""
+	}
+
+	JinGuangCanCanGu: {
+		// DisplayName: Jin Guang Can Can Gu
+		// Tooltip: ""
+	}
+
+	JingXueGu: {
+		// DisplayName: Jing Xue Gu
+		// Tooltip: ""
+	}
+
+	JinSeNianHuaGu: {
+		// DisplayName: Jin Se Nian Hua Gu
+		// Tooltip: ""
+	}
+
+	JiuTuGu: {
+		// DisplayName: Jiu Tu Gu
+		// Tooltip: ""
+	}
+
+	JiuZhuanXingChenGu: {
+		// DisplayName: Jiu Zhuan Xing Chen Gu
+		// Tooltip: ""
+	}
+
+	JiWangGu: {
+		// DisplayName: Ji Wang Gu
+		// Tooltip: ""
+	}
+
+	JiYiGu: {
+		// DisplayName: Ji Yi Gu
+		// Tooltip: ""
+	}
+
+	JuGu: {
+		// DisplayName: Ju Gu
+		// Tooltip: ""
+	}
+
+	KanHuiShou: {
+		// DisplayName: Kan Hui Shou
+		// Tooltip: ""
+	}
+
+	KuAiGu: {
+		// DisplayName: Ku Ai Gu
+		// Tooltip: ""
+	}
+
+	KuLiGu: {
+		// DisplayName: Ku Li Gu
+		// Tooltip: ""
+	}
+
+	KuXinGu: {
+		// DisplayName: Ku Xin Gu
+		// Tooltip: ""
+	}
+
+	LangGuGu: {
+		// DisplayName: Lang Gu Gu
+		// Tooltip: ""
+	}
+
+	LangLiGu: {
+		// DisplayName: Lang Li Gu
+		// Tooltip: ""
+	}
+
+	LangTaiDiZangGu: {
+		// DisplayName: Lang Tai Di Zang Gu
+		// Tooltip: ""
+	}
+
+	LianHunGu: {
+		// DisplayName: Lian Hun Gu
+		// Tooltip: ""
+	}
+
+	LianJingHuaShenGu: {
+		// DisplayName: Lian Jing Hua Shen Gu
+		// Tooltip: ""
+	}
+
+	LianLu: {
+		// DisplayName: Lian Lu
+		// Tooltip: ""
+	}
+
+	LianXiGu: {
+		// DisplayName: Lian Xi Gu
+		// Tooltip: ""
+	}
+
+	LiLiangGu: {
+		// DisplayName: Li Liang Gu
+		// Tooltip: ""
+	}
+
+	LiLiZaiMuGu: {
+		// DisplayName: Li Li Zai Mu Gu
+		// Tooltip: ""
+	}
+
+	LingTuGu: {
+		// DisplayName: Ling Tu Gu
+		// Tooltip: ""
+	}
+
+	LingWuGu: {
+		// DisplayName: Ling Wu Gu
+		// Tooltip: ""
+	}
+
+	LingYinGu: {
+		// DisplayName: Ling Yin Gu
+		// Tooltip: ""
+	}
+
+	LiQiGu: {
+		// DisplayName: Li Qi Gu
+		// Tooltip: ""
+	}
+
+	LiuShaHe: {
+		// DisplayName: Liu Sha He
+		// Tooltip: ""
+	}
+
+	MaiDiGu: {
+		// DisplayName: Mai Di Gu
+		// Tooltip: ""
+	}
+
+	MengChenGu: {
+		// DisplayName: Meng Chen Gu
+		// Tooltip: ""
+	}
+
+	MengDieXianGu: {
+		// DisplayName: Meng Die Xian Gu
+		// Tooltip: ""
+	}
+
+	MengYiXianGu: {
+		// DisplayName: Meng Yi Xian Gu
+		// Tooltip: ""
+	}
+
+	MingJiangXianGu: {
+		// DisplayName: Ming Jiang Xian Gu
+		// Tooltip: ""
+	}
+
+	MingJiaXianGu: {
+		// DisplayName: Ming Jia Xian Gu
+		// Tooltip: ""
+	}
+
+	MingLuDie: {
+		// DisplayName: Ming Lu Die
+		// Tooltip: ""
+	}
+
+	MingPaiGu: {
+		// DisplayName: Ming Pai Gu
+		// Tooltip: ""
+	}
+
+	MingShengGu: {
+		// DisplayName: Ming Sheng Gu
+		// Tooltip: ""
+	}
+
+	NengLiGu: {
+		// DisplayName: Neng Li Gu
+		// Tooltip: ""
+	}
+
+	NianGuFanJi: {
+		// DisplayName: Nian Gu Fan Ji
+		// Tooltip: ""
+	}
+
+	PaiNanGu: {
+		// DisplayName: Pai Nan Gu
+		// Tooltip: ""
+	}
+
+	PaiNanXianGu: {
+		// DisplayName: Pai Nan Xian Gu
+		// Tooltip: ""
+	}
+
+	QiangGu: {
+		// DisplayName: Qiang Gu
+		// Tooltip: ""
+	}
+
+	QiangQuGu: {
+		// DisplayName: Qiang Qu Gu
+		// Tooltip: ""
+	}
+
+	QianXuGu: {
+		// DisplayName: Qian Xu Gu
+		// Tooltip: ""
+	}
+
+	QiDunGu: {
+		// DisplayName: Qi Dun Gu
+		// Tooltip: ""
+	}
+
+	QiGaiE: {
+		// DisplayName: Qi Gai E
+		// Tooltip: ""
+	}
+
+	QingReGu: {
+		// DisplayName: Qing Re Gu
+		// Tooltip: ""
+	}
+
+	QingTongSheLiGu: {
+		// DisplayName: Qing Tong She Li Gu
+		// Tooltip: ""
+	}
+
+	RanYouGu: {
+		// DisplayName: Ran You Gu
+		// Tooltip: ""
+	}
+
+	RenGu: {
+		// DisplayName: Ren Gu
+		// Tooltip: ""
+	}
+
+	RenPiGu: {
+		// DisplayName: Ren Pi Gu
+		// Tooltip: ""
+	}
+
+	RenQiGu: {
+		// DisplayName: Ren Qi Gu
+		// Tooltip: ""
+	}
+
+	RenQiXianGu: {
+		// DisplayName: Ren Qi Xian Gu
+		// Tooltip: ""
+	}
+
+	RenYuGu: {
+		// DisplayName: Ren Yu Gu
+		// Tooltip: ""
+	}
+
+	RouXiaoGu: {
+		// DisplayName: Rou Xiao Gu
+		// Tooltip: ""
+	}
+
+	RuMengLing: {
+		// DisplayName: Ru Meng Ling
+		// Tooltip: ""
+	}
+
+	SanLianGu: {
+		// DisplayName: San Lian Gu
+		// Tooltip: ""
+	}
+
+	SanQiuHuangHeTai: {
+		// DisplayName: San Qiu Huang He Tai
+		// Tooltip: ""
+	}
+
+	ShangHenXianGu: {
+		// DisplayName: Shang Hen Xian Gu
+		// Tooltip: ""
+	}
+
+	ShanJianGu: {
+		// DisplayName: Shan Jian Gu
+		// Tooltip: ""
+	}
+
+	ShengLianGu: {
+		// DisplayName: Sheng Lian Gu
+		// Tooltip: ""
+	}
+
+	ShenMiXianGuZhouDaoZhenCha: {
+		// DisplayName: Shen Mi Xian Gu Zhou Dao Zhen Cha
+		// Tooltip: ""
+	}
+
+	ShenYouGu: {
+		// DisplayName: Shen You Gu
+		// Tooltip: ""
+	}
+
+	ShiHouGu: {
+		// DisplayName: Shi Hou Gu
+		// Tooltip: ""
+	}
+
+	ShiJianGu: {
+		// DisplayName: Shi Jian Gu
+		// Tooltip: ""
+	}
+
+	ShouGu: {
+		// DisplayName: Shou Gu
+		// Tooltip: ""
+	}
+
+	ShouLiTaiPanGu: {
+		// DisplayName: Shou Li Tai Pan Gu
+		// Tooltip: ""
+	}
+
+	ShuiFuXianGu: {
+		// DisplayName: Shui Fu Xian Gu
+		// Tooltip: ""
+	}
+
+	ShuiRuJiaoRongGu: {
+		// DisplayName: Shui Ru Jiao Rong Gu
+		// Tooltip: ""
+	}
+
+	ShuiZhuGu: {
+		// DisplayName: Shui Zhu Gu
+		// Tooltip: ""
+	}
+
+	ShuiZuGu: {
+		// DisplayName: Shui Zu Gu
+		// Tooltip: ""
+	}
+
+	SiGu: {
+		// DisplayName: Si Gu
+		// Tooltip: ""
+	}
+
+	SiShuiLiuNianGu: {
+		// DisplayName: Si Shui Liu Nian Gu
+		// Tooltip: ""
+	}
+
+	SiShuiLiuNianXianGu: {
+		// DisplayName: Si Shui Liu Nian Xian Gu
+		// Tooltip: ""
+	}
+
+	SiXiangGu: {
+		// DisplayName: Si Xiang Gu
+		// Tooltip: ""
+	}
+
+	SuMingXianGu: {
+		// DisplayName: Su Ming Xian Gu
+		// Tooltip: ""
+	}
+
+	TaiDuGu: {
+		// DisplayName: Tai Du Gu
+		// Tooltip: ""
+	}
+
+	TeYiGuKeYiGuRuiYiGu: {
+		// DisplayName: Te Yi Gu Ke Yi Gu Rui Yi Gu
+		// Tooltip: ""
+	}
+
+	TianJiGu: {
+		// DisplayName: Tian Ji Gu
+		// Tooltip: ""
+	}
+
+	TianLuoGu: {
+		// DisplayName: Tian Luo Gu
+		// Tooltip: ""
+	}
+
+	TianQiXianGu: {
+		// DisplayName: Tian Qi Xian Gu
+		// Tooltip: ""
+	}
+
+	TianShengGu: {
+		// DisplayName: Tian Sheng Gu
+		// Tooltip: ""
+	}
+
+	TianWangGu: {
+		// DisplayName: Tian Wang Gu
+		// Tooltip: ""
+	}
+
+	TianYuanBaoHuangLianXianGu: {
+		// DisplayName: Tian Yuan Bao Huang Lian Xian Gu
+		// Tooltip: ""
+	}
+
+	TianYuanBaoLian: {
+		// DisplayName: Tian Yuan Bao Lian
+		// Tooltip: ""
+	}
+
+	TiaoTiaoCao: {
+		// DisplayName: Tiao Tiao Cao
+		// Tooltip: ""
+	}
+
+	TuiBeiHuanZhanGu: {
+		// DisplayName: Tui Bei Huan Zhan Gu
+		// Tooltip: ""
+	}
+
+	TuiChenGu: {
+		// DisplayName: Tui Chen Gu
+		// Tooltip: ""
+	}
+
+	WanWoXianGu: {
+		// DisplayName: Wan Wo Xian Gu
+		// Tooltip: ""
+	}
+
+	WoSuXianGu: {
+		// DisplayName: Wo Su Xian Gu
+		// Tooltip: ""
+	}
+
+	WuZuNiaoGu: {
+		// DisplayName: Wu Zu Niao Gu
+		// Tooltip: ""
+	}
+
+	XianGuJia: {
+		// DisplayName: Xian Gu Jia
+		// Tooltip: ""
+	}
+
+	XiaoChiXianGu: {
+		// DisplayName: Xiao Chi Xian Gu
+		// Tooltip: ""
+	}
+
+	XiaoJiaZiQiGu: {
+		// DisplayName: Xiao Jia Zi Qi Gu
+		// Tooltip: ""
+	}
+
+	XinDaoGuChong: {
+		// DisplayName: Xin Dao Gu Chong
+		// Tooltip: ""
+	}
+
+	XinDaoXianGu: {
+		// DisplayName: Xin Dao Xian Gu
+		// Tooltip: ""
+	}
+
+	XinFengGu: {
+		// DisplayName: Xin Feng Gu
+		// Tooltip: ""
+	}
+
+	XingNianGu: {
+		// DisplayName: Xing Nian Gu
+		// Tooltip: ""
+	}
+
+	XingNianXianGu: {
+		// DisplayName: Xing Nian Xian Gu
+		// Tooltip: ""
+	}
+
+	XiWangGu: {
+		// DisplayName: Xi Wang Gu
+		// Tooltip: ""
+	}
+
+	XuanZhongGu: {
+		// DisplayName: Xuan Zhong Gu
+		// Tooltip: ""
+	}
+
+	XueMaiXianGu: {
+		// DisplayName: Xue Mai Xian Gu
+		// Tooltip: ""
+	}
+
+	XunShouShiGu: {
+		// DisplayName: Xun Shou Shi Gu
+		// Tooltip: ""
+	}
+
+	XuQingJiaYiGu: {
+		// DisplayName: Xu Qing Jia Yi Gu
+		// Tooltip: ""
+	}
+
+	XuRongGu: {
+		// DisplayName: Xu Rong Gu
+		// Tooltip: ""
+	}
+
+	YangGu: {
+		// DisplayName: Yang Gu
+		// Tooltip: ""
+	}
+
+	YiNianGu: {
+		// DisplayName: Yi Nian Gu
+		// Tooltip: ""
+	}
+
+	YinLangGu: {
+		// DisplayName: Yin Lang Gu
+		// Tooltip: ""
+	}
+
+	YiWaiGu: {
+		// DisplayName: Yi Wai Gu
+		// Tooltip: ""
+	}
+
+	YiXingGu: {
+		// DisplayName: Yi Xing Gu
+		// Tooltip: ""
+	}
+
+	YiXinSanYongGu: {
+		// DisplayName: Yi Xin San Yong Gu
+		// Tooltip: ""
+	}
+
+	YongQiGu: {
+		// DisplayName: Yong Qi Gu
+		// Tooltip: ""
+	}
+
+	YongShengGu: {
+		// DisplayName: Yong Sheng Gu
+		// Tooltip: ""
+	}
+
+	YouHuanGu: {
+		// DisplayName: You Huan Gu
+		// Tooltip: ""
+	}
+
+	YuYuGu: {
+		// DisplayName: Yu Yu Gu
+		// Tooltip: ""
+	}
+
+	YuZhiGu: {
+		// DisplayName: Yu Zhi Gu
+		// Tooltip: ""
+	}
+
+	ZaiHuXianGu: {
+		// DisplayName: Zai Hu Xian Gu
+		// Tooltip: ""
+	}
+
+	ZaoMengXianGu: {
+		// DisplayName: Zao Meng Xian Gu
+		// Tooltip: ""
+	}
+
+	ZaoQiuZhongQiuWanQiu: {
+		// DisplayName: Zao Qiu Zhong Qiu Wan Qiu
+		// Tooltip: ""
+	}
+
+	ZhenQiXianGu: {
+		// DisplayName: Zhen Qi Xian Gu
+		// Tooltip: ""
+	}
+
+	ZhenXianGu: {
+		// DisplayName: Zhen Xian Gu
+		// Tooltip: ""
+	}
+
+	ZhenYuXianGu: {
+		// DisplayName: Zhen Yu Xian Gu
+		// Tooltip: ""
+	}
+
+	ZhiHuiGu: {
+		// DisplayName: Zhi Hui Gu
+		// Tooltip: ""
+	}
+
+	ZhiXueGu: {
+		// DisplayName: Zhi Xue Gu
+		// Tooltip: ""
+	}
+
+	ZhiZhangXianGu: {
+		// DisplayName: Zhi Zhang Xian Gu
+		// Tooltip: ""
+	}
+
+	ZhouMaoGu: {
+		// DisplayName: Zhou Mao Gu
+		// Tooltip: ""
+	}
+
+	ZhuoXiGu: {
+		// DisplayName: Zhuo Xi Gu
+		// Tooltip: ""
+	}
+
+	ZiAiXianGu: {
+		// DisplayName: Zi Ai Xian Gu
+		// Tooltip: ""
+	}
+
+	ZiJiGu: {
+		// DisplayName: Zi Ji Gu
+		// Tooltip: ""
+	}
+
+	ZongXiongBenLiGu: {
+		// DisplayName: Zong Xiong Ben Li Gu
+		// Tooltip: ""
+	}
+
+	ZuoMengGu: {
+		// DisplayName: Zuo Meng Gu
 		// Tooltip: ""
 	}
 }
@@ -9835,6 +12280,1031 @@ Buffs: {
 		DisplayName: 迷踪自增益
 		Description: 迷踪阵法加持自身
 	}
+
+	ChaNaStunDebuff: {
+		// DisplayName: Cha Na Stun Debuff
+		// Description: Mods.VerminLordMod.Buffs.ChaNaStunDebuff.Description
+	}
+
+	CunGuangYinDebuff: {
+		// DisplayName: Cun Guang Yin Debuff
+		// Description: Mods.VerminLordMod.Buffs.CunGuangYinDebuff.Description
+	}
+
+	GuanGuSealBuff: {
+		// DisplayName: Guan Gu Seal Buff
+		// Description: Mods.VerminLordMod.Buffs.GuanGuSealBuff.Description
+	}
+
+	HeiLaoDebuff: {
+		// DisplayName: Hei Lao Debuff
+		// Description: Mods.VerminLordMod.Buffs.HeiLaoDebuff.Description
+	}
+
+	RenGuLinkedBuff: {
+		// DisplayName: Ren Gu Linked Buff
+		// Description: Mods.VerminLordMod.Buffs.RenGuLinkedBuff.Description
+	}
+
+	ZhuMoDebuff: {
+		// DisplayName: Zhu Mo Debuff
+		// Description: Mods.VerminLordMod.Buffs.ZhuMoDebuff.Description
+	}
+
+	ZuJiGubuff: {
+		// DisplayName: Zu Ji Gubuff
+		// Description: Mods.VerminLordMod.Buffs.ZuJiGubuff.Description
+	}
+
+	AiQingBuff: {
+		// DisplayName: Ai Qing Buff
+		// Description: Mods.VerminLordMod.Buffs.AiQingBuff.Description
+	}
+
+	AnTouBuff: {
+		// DisplayName: An Tou Buff
+		// Description: Mods.VerminLordMod.Buffs.AnTouBuff.Description
+	}
+
+	BaiHeBuff: {
+		// DisplayName: Bai He Buff
+		// Description: Mods.VerminLordMod.Buffs.BaiHeBuff.Description
+	}
+
+	BaiLianJuCanBuff: {
+		// DisplayName: Bai Lian Ju Can Buff
+		// Description: Mods.VerminLordMod.Buffs.BaiLianJuCanBuff.Description
+	}
+
+	BaMianBuff: {
+		// DisplayName: Ba Mian Buff
+		// Description: Mods.VerminLordMod.Buffs.BaMianBuff.Description
+	}
+
+	BingJingBuff: {
+		// DisplayName: Bing Jing Buff
+		// Description: Mods.VerminLordMod.Buffs.BingJingBuff.Description
+	}
+
+	BuXianBuff: {
+		// DisplayName: Bu Xian Buff
+		// Description: Mods.VerminLordMod.Buffs.BuXianBuff.Description
+	}
+
+	ChaoQiBuff: {
+		// DisplayName: Chao Qi Buff
+		// Description: Mods.VerminLordMod.Buffs.ChaoQiBuff.Description
+	}
+
+	ChouHenBuff: {
+		// DisplayName: Chou Hen Buff
+		// Description: Mods.VerminLordMod.Buffs.ChouHenBuff.Description
+	}
+
+	DaJiaBuff: {
+		// DisplayName: Da Jia Buff
+		// Description: Mods.VerminLordMod.Buffs.DaJiaBuff.Description
+	}
+
+	DaJingBuff: {
+		// DisplayName: Da Jing Buff
+		// Description: Mods.VerminLordMod.Buffs.DaJingBuff.Description
+	}
+
+	DianYanBuff: {
+		// DisplayName: Dian Yan Buff
+		// Description: Mods.VerminLordMod.Buffs.DianYanBuff.Description
+	}
+
+	DingXingBuff: {
+		// DisplayName: Ding Xing Buff
+		// Description: Mods.VerminLordMod.Buffs.DingXingBuff.Description
+	}
+
+	DingZhenBuff: {
+		// DisplayName: Ding Zhen Buff
+		// Description: Mods.VerminLordMod.Buffs.DingZhenBuff.Description
+	}
+
+	FanCaoWuBuff: {
+		// DisplayName: Fan Cao Wu Buff
+		// Description: Mods.VerminLordMod.Buffs.FanCaoWuBuff.Description
+	}
+
+	FangCunBuff: {
+		// DisplayName: Fang Cun Buff
+		// Description: Mods.VerminLordMod.Buffs.FangCunBuff.Description
+	}
+
+	FangWeiBuff: {
+		// DisplayName: Fang Wei Buff
+		// Description: Mods.VerminLordMod.Buffs.FangWeiBuff.Description
+	}
+
+	FaQingBuff: {
+		// DisplayName: Fa Qing Buff
+		// Description: Mods.VerminLordMod.Buffs.FaQingBuff.Description
+	}
+
+	FeiShaBuff: {
+		// DisplayName: Fei Sha Buff
+		// Description: Mods.VerminLordMod.Buffs.FeiShaBuff.Description
+	}
+
+	FeiShaNPC: {
+		// DisplayName: Fei Sha N P C
+		// Description: Mods.VerminLordMod.Buffs.FeiShaNPC.Description
+	}
+
+	FengHuoBuff: {
+		// DisplayName: Feng Huo Buff
+		// Description: Mods.VerminLordMod.Buffs.FengHuoBuff.Description
+	}
+
+	FengYuBuff: {
+		// DisplayName: Feng Yu Buff
+		// Description: Mods.VerminLordMod.Buffs.FengYuBuff.Description
+	}
+
+	FenYingBuff: {
+		// DisplayName: Fen Ying Buff
+		// Description: Mods.VerminLordMod.Buffs.FenYingBuff.Description
+	}
+
+	GangJinBuff: {
+		// DisplayName: Gang Jin Buff
+		// Description: Mods.VerminLordMod.Buffs.GangJinBuff.Description
+	}
+
+	GanMingBuff: {
+		// DisplayName: Gan Ming Buff
+		// Description: Mods.VerminLordMod.Buffs.GanMingBuff.Description
+	}
+
+	GongBeiBuff: {
+		// DisplayName: Gong Bei Buff
+		// Description: Mods.VerminLordMod.Buffs.GongBeiBuff.Description
+	}
+
+	GongBeiNPC: {
+		// DisplayName: Gong Bei N P C
+		// Description: Mods.VerminLordMod.Buffs.GongBeiNPC.Description
+	}
+
+	GongPingBuff: {
+		// DisplayName: Gong Ping Buff
+		// Description: Mods.VerminLordMod.Buffs.GongPingBuff.Description
+	}
+
+	GuanWangBuff: {
+		// DisplayName: Guan Wang Buff
+		// Description: Mods.VerminLordMod.Buffs.GuanWangBuff.Description
+	}
+
+	GuiGuBuff: {
+		// DisplayName: Gui Gu Buff
+		// Description: Mods.VerminLordMod.Buffs.GuiGuBuff.Description
+	}
+
+	GuiZeBuff: {
+		// DisplayName: Gui Ze Buff
+		// Description: Mods.VerminLordMod.Buffs.GuiZeBuff.Description
+	}
+
+	HaiJiaoBuff: {
+		// DisplayName: Hai Jiao Buff
+		// Description: Mods.VerminLordMod.Buffs.HaiJiaoBuff.Description
+	}
+
+	HaoZhuBuff: {
+		// DisplayName: Hao Zhu Buff
+		// Description: Mods.VerminLordMod.Buffs.HaoZhuBuff.Description
+	}
+
+	HengZhouBuff: {
+		// DisplayName: Heng Zhou Buff
+		// Description: Mods.VerminLordMod.Buffs.HengZhouBuff.Description
+	}
+
+	HeZeBuff: {
+		// DisplayName: He Ze Buff
+		// Description: Mods.VerminLordMod.Buffs.HeZeBuff.Description
+	}
+
+	HuangLuoBuff: {
+		// DisplayName: Huang Luo Buff
+		// Description: Mods.VerminLordMod.Buffs.HuangLuoBuff.Description
+	}
+
+	HuanHunBuff: {
+		// DisplayName: Huan Hun Buff
+		// Description: Mods.VerminLordMod.Buffs.HuanHunBuff.Description
+	}
+
+	HuanJingBuff: {
+		// DisplayName: Huan Jing Buff
+		// Description: Mods.VerminLordMod.Buffs.HuanJingBuff.Description
+	}
+
+	HuiJianBuff: {
+		// DisplayName: Hui Jian Buff
+		// Description: Mods.VerminLordMod.Buffs.HuiJianBuff.Description
+	}
+
+	HunDengBuff: {
+		// DisplayName: Hun Deng Buff
+		// Description: Mods.VerminLordMod.Buffs.HunDengBuff.Description
+	}
+
+	JianChiBuff: {
+		// DisplayName: Jian Chi Buff
+		// Description: Mods.VerminLordMod.Buffs.JianChiBuff.Description
+	}
+
+	JianDunBuff: {
+		// DisplayName: Jian Dun Buff
+		// Description: Mods.VerminLordMod.Buffs.JianDunBuff.Description
+	}
+
+	JianMeiBuff: {
+		// DisplayName: Jian Mei Buff
+		// Description: Mods.VerminLordMod.Buffs.JianMeiBuff.Description
+	}
+
+	JianMeiXianBuff: {
+		// DisplayName: Jian Mei Xian Buff
+		// Description: Mods.VerminLordMod.Buffs.JianMeiXianBuff.Description
+	}
+
+	JianQiBuff: {
+		// DisplayName: Jian Qi Buff
+		// Description: Mods.VerminLordMod.Buffs.JianQiBuff.Description
+	}
+
+	JiaoAoBuff: {
+		// DisplayName: Jiao Ao Buff
+		// Description: Mods.VerminLordMod.Buffs.JiaoAoBuff.Description
+	}
+
+	JiaoLianAllyBuff: {
+		// DisplayName: Jiao Lian Ally Buff
+		// Description: Mods.VerminLordMod.Buffs.JiaoLianAllyBuff.Description
+	}
+
+	JiaoLianBuff: {
+		// DisplayName: Jiao Lian Buff
+		// Description: Mods.VerminLordMod.Buffs.JiaoLianBuff.Description
+	}
+
+	JieLiBuff: {
+		// DisplayName: Jie Li Buff
+		// Description: Mods.VerminLordMod.Buffs.JieLiBuff.Description
+	}
+
+	JieYunBuff: {
+		// DisplayName: Jie Yun Buff
+		// Description: Mods.VerminLordMod.Buffs.JieYunBuff.Description
+	}
+
+	JiGuiYunBuff: {
+		// DisplayName: Ji Gui Yun Buff
+		// Description: Mods.VerminLordMod.Buffs.JiGuiYunBuff.Description
+	}
+
+	JiLongQuanSheBuff: {
+		// DisplayName: Ji Long Quan She Buff
+		// Description: Mods.VerminLordMod.Buffs.JiLongQuanSheBuff.Description
+	}
+
+	JingHongBuff: {
+		// DisplayName: Jing Hong Buff
+		// Description: Mods.VerminLordMod.Buffs.JingHongBuff.Description
+	}
+
+	JinGuangCanCanBuff: {
+		// DisplayName: Jin Guang Can Can Buff
+		// Description: Mods.VerminLordMod.Buffs.JinGuangCanCanBuff.Description
+	}
+
+	JinGuBuff: {
+		// DisplayName: Jin Gu Buff
+		// Description: Mods.VerminLordMod.Buffs.JinGuBuff.Description
+	}
+
+	JinSeNianHuaBuff: {
+		// DisplayName: Jin Se Nian Hua Buff
+		// Description: Mods.VerminLordMod.Buffs.JinSeNianHuaBuff.Description
+	}
+
+	JiuTuBuff: {
+		// DisplayName: Jiu Tu Buff
+		// Description: Mods.VerminLordMod.Buffs.JiuTuBuff.Description
+	}
+
+	JiuZhuanBuff: {
+		// DisplayName: Jiu Zhuan Buff
+		// Description: Mods.VerminLordMod.Buffs.JiuZhuanBuff.Description
+	}
+
+	JiWangBuff: {
+		// DisplayName: Ji Wang Buff
+		// Description: Mods.VerminLordMod.Buffs.JiWangBuff.Description
+	}
+
+	JiYiBuff: {
+		// DisplayName: Ji Yi Buff
+		// Description: Mods.VerminLordMod.Buffs.JiYiBuff.Description
+	}
+
+	JuGuExhaustBuff: {
+		// DisplayName: Ju Gu Exhaust Buff
+		// Description: Mods.VerminLordMod.Buffs.JuGuExhaustBuff.Description
+	}
+
+	JuGuShieldBuff: {
+		// DisplayName: Ju Gu Shield Buff
+		// Description: Mods.VerminLordMod.Buffs.JuGuShieldBuff.Description
+	}
+
+	KanHuiBuff: {
+		// DisplayName: Kan Hui Buff
+		// Description: Mods.VerminLordMod.Buffs.KanHuiBuff.Description
+	}
+
+	KuAiBuff: {
+		// DisplayName: Ku Ai Buff
+		// Description: Mods.VerminLordMod.Buffs.KuAiBuff.Description
+	}
+
+	KuLiBuff: {
+		// DisplayName: Ku Li Buff
+		// Description: Mods.VerminLordMod.Buffs.KuLiBuff.Description
+	}
+
+	KuXinBuff: {
+		// DisplayName: Ku Xin Buff
+		// Description: Mods.VerminLordMod.Buffs.KuXinBuff.Description
+	}
+
+	LangGuBuff: {
+		// DisplayName: Lang Gu Buff
+		// Description: Mods.VerminLordMod.Buffs.LangGuBuff.Description
+	}
+
+	LangTaiBuff: {
+		// DisplayName: Lang Tai Buff
+		// Description: Mods.VerminLordMod.Buffs.LangTaiBuff.Description
+	}
+
+	LanQueBuff: {
+		// DisplayName: Lan Que Buff
+		// Description: Mods.VerminLordMod.Buffs.LanQueBuff.Description
+	}
+
+	LianHunBuff: {
+		// DisplayName: Lian Hun Buff
+		// Description: Mods.VerminLordMod.Buffs.LianHunBuff.Description
+	}
+
+	LianJingHuaShenBuff: {
+		// DisplayName: Lian Jing Hua Shen Buff
+		// Description: Mods.VerminLordMod.Buffs.LianJingHuaShenBuff.Description
+	}
+
+	LianLuBuff: {
+		// DisplayName: Lian Lu Buff
+		// Description: Mods.VerminLordMod.Buffs.LianLuBuff.Description
+	}
+
+	LianXiBuff: {
+		// DisplayName: Lian Xi Buff
+		// Description: Mods.VerminLordMod.Buffs.LianXiBuff.Description
+	}
+
+	LiLiangBuff: {
+		// DisplayName: Li Liang Buff
+		// Description: Mods.VerminLordMod.Buffs.LiLiangBuff.Description
+	}
+
+	LiLiZaiMuBuff: {
+		// DisplayName: Li Li Zai Mu Buff
+		// Description: Mods.VerminLordMod.Buffs.LiLiZaiMuBuff.Description
+	}
+
+	LingTuBuff: {
+		// DisplayName: Ling Tu Buff
+		// Description: Mods.VerminLordMod.Buffs.LingTuBuff.Description
+	}
+
+	LingWuBuff: {
+		// DisplayName: Ling Wu Buff
+		// Description: Mods.VerminLordMod.Buffs.LingWuBuff.Description
+	}
+
+	LingYinBuff: {
+		// DisplayName: Ling Yin Buff
+		// Description: Mods.VerminLordMod.Buffs.LingYinBuff.Description
+	}
+
+	LiQiBuff: {
+		// DisplayName: Li Qi Buff
+		// Description: Mods.VerminLordMod.Buffs.LiQiBuff.Description
+	}
+
+	LongGongBuff: {
+		// DisplayName: Long Gong Buff
+		// Description: Mods.VerminLordMod.Buffs.LongGongBuff.Description
+	}
+
+	LuoYingBuff: {
+		// DisplayName: Luo Ying Buff
+		// Description: Mods.VerminLordMod.Buffs.LuoYingBuff.Description
+	}
+
+	LuoYingNPC: {
+		// DisplayName: Luo Ying N P C
+		// Description: Mods.VerminLordMod.Buffs.LuoYingNPC.Description
+	}
+
+	MaiDiBuff: {
+		// DisplayName: Mai Di Buff
+		// Description: Mods.VerminLordMod.Buffs.MaiDiBuff.Description
+	}
+
+	MaoCaoWuBuff: {
+		// DisplayName: Mao Cao Wu Buff
+		// Description: Mods.VerminLordMod.Buffs.MaoCaoWuBuff.Description
+	}
+
+	MengChenBuff: {
+		// DisplayName: Meng Chen Buff
+		// Description: Mods.VerminLordMod.Buffs.MengChenBuff.Description
+	}
+
+	MengDieBuff: {
+		// DisplayName: Meng Die Buff
+		// Description: Mods.VerminLordMod.Buffs.MengDieBuff.Description
+	}
+
+	MengYiBuff: {
+		// DisplayName: Meng Yi Buff
+		// Description: Mods.VerminLordMod.Buffs.MengYiBuff.Description
+	}
+
+	MingJiangBuff: {
+		// DisplayName: Ming Jiang Buff
+		// Description: Mods.VerminLordMod.Buffs.MingJiangBuff.Description
+	}
+
+	MingJiaXianBuff: {
+		// DisplayName: Ming Jia Xian Buff
+		// Description: Mods.VerminLordMod.Buffs.MingJiaXianBuff.Description
+	}
+
+	MingLuBuff: {
+		// DisplayName: Ming Lu Buff
+		// Description: Mods.VerminLordMod.Buffs.MingLuBuff.Description
+	}
+
+	MingPaiBuff: {
+		// DisplayName: Ming Pai Buff
+		// Description: Mods.VerminLordMod.Buffs.MingPaiBuff.Description
+	}
+
+	MingShengBuff: {
+		// DisplayName: Ming Sheng Buff
+		// Description: Mods.VerminLordMod.Buffs.MingShengBuff.Description
+	}
+
+	NengLiBuff: {
+		// DisplayName: Neng Li Buff
+		// Description: Mods.VerminLordMod.Buffs.NengLiBuff.Description
+	}
+
+	NianGuFanBuff: {
+		// DisplayName: Nian Gu Fan Buff
+		// Description: Mods.VerminLordMod.Buffs.NianGuFanBuff.Description
+	}
+
+	NianHuaBuff: {
+		// DisplayName: Nian Hua Buff
+		// Description: Mods.VerminLordMod.Buffs.NianHuaBuff.Description
+	}
+
+	NiMingBuff: {
+		// DisplayName: Ni Ming Buff
+		// Description: Mods.VerminLordMod.Buffs.NiMingBuff.Description
+	}
+
+	PaiNanXianBuff: {
+		// DisplayName: Pai Nan Xian Buff
+		// Description: Mods.VerminLordMod.Buffs.PaiNanXianBuff.Description
+	}
+
+	QiangBuff: {
+		// DisplayName: Qiang Buff
+		// Description: Mods.VerminLordMod.Buffs.QiangBuff.Description
+	}
+
+	QianXuBuff: {
+		// DisplayName: Qian Xu Buff
+		// Description: Mods.VerminLordMod.Buffs.QianXuBuff.Description
+	}
+
+	RanYouBuff: {
+		// DisplayName: Ran You Buff
+		// Description: Mods.VerminLordMod.Buffs.RanYouBuff.Description
+	}
+
+	RenGuLinkBuff: {
+		// DisplayName: Ren Gu Link Buff
+		// Description: Mods.VerminLordMod.Buffs.RenGuLinkBuff.Description
+	}
+
+	RenPiBuff: {
+		// DisplayName: Ren Pi Buff
+		// Description: Mods.VerminLordMod.Buffs.RenPiBuff.Description
+	}
+
+	RenQiBuff: {
+		// DisplayName: Ren Qi Buff
+		// Description: Mods.VerminLordMod.Buffs.RenQiBuff.Description
+	}
+
+	RenQiXianBuff: {
+		// DisplayName: Ren Qi Xian Buff
+		// Description: Mods.VerminLordMod.Buffs.RenQiXianBuff.Description
+	}
+
+	RenYuBuff: {
+		// DisplayName: Ren Yu Buff
+		// Description: Mods.VerminLordMod.Buffs.RenYuBuff.Description
+	}
+
+	RiYueBuff: {
+		// DisplayName: Ri Yue Buff
+		// Description: Mods.VerminLordMod.Buffs.RiYueBuff.Description
+	}
+
+	RouXiaoBuff: {
+		// DisplayName: Rou Xiao Buff
+		// Description: Mods.VerminLordMod.Buffs.RouXiaoBuff.Description
+	}
+
+	RuMengBuff: {
+		// DisplayName: Ru Meng Buff
+		// Description: Mods.VerminLordMod.Buffs.RuMengBuff.Description
+	}
+
+	SanLianBuff: {
+		// DisplayName: San Lian Buff
+		// Description: Mods.VerminLordMod.Buffs.SanLianBuff.Description
+	}
+
+	SanQiuBuff: {
+		// DisplayName: San Qiu Buff
+		// Description: Mods.VerminLordMod.Buffs.SanQiuBuff.Description
+	}
+
+	ShangHenBuff: {
+		// DisplayName: Shang Hen Buff
+		// Description: Mods.VerminLordMod.Buffs.ShangHenBuff.Description
+	}
+
+	ShanJianBuff: {
+		// DisplayName: Shan Jian Buff
+		// Description: Mods.VerminLordMod.Buffs.ShanJianBuff.Description
+	}
+
+	ShengLianBuff: {
+		// DisplayName: Sheng Lian Buff
+		// Description: Mods.VerminLordMod.Buffs.ShengLianBuff.Description
+	}
+
+	ShenMiZhenChaBuff: {
+		// DisplayName: Shen Mi Zhen Cha Buff
+		// Description: Mods.VerminLordMod.Buffs.ShenMiZhenChaBuff.Description
+	}
+
+	ShiHouBuff: {
+		// DisplayName: Shi Hou Buff
+		// Description: Mods.VerminLordMod.Buffs.ShiHouBuff.Description
+	}
+
+	ShiJianBuff: {
+		// DisplayName: Shi Jian Buff
+		// Description: Mods.VerminLordMod.Buffs.ShiJianBuff.Description
+	}
+
+	ShiJueBuff: {
+		// DisplayName: Shi Jue Buff
+		// Description: Mods.VerminLordMod.Buffs.ShiJueBuff.Description
+	}
+
+	ShouGuBuff: {
+		// DisplayName: Shou Gu Buff
+		// Description: Mods.VerminLordMod.Buffs.ShouGuBuff.Description
+	}
+
+	ShuiFuBuff: {
+		// DisplayName: Shui Fu Buff
+		// Description: Mods.VerminLordMod.Buffs.ShuiFuBuff.Description
+	}
+
+	ShuiFuSleepingBuff: {
+		// DisplayName: Shui Fu Sleeping Buff
+		// Description: Mods.VerminLordMod.Buffs.ShuiFuSleepingBuff.Description
+	}
+
+	ShuiFuXianBuff: {
+		// DisplayName: Shui Fu Xian Buff
+		// Description: Mods.VerminLordMod.Buffs.ShuiFuXianBuff.Description
+	}
+
+	ShuiRuBuff: {
+		// DisplayName: Shui Ru Buff
+		// Description: Mods.VerminLordMod.Buffs.ShuiRuBuff.Description
+	}
+
+	ShuiZhuBuff: {
+		// DisplayName: Shui Zhu Buff
+		// Description: Mods.VerminLordMod.Buffs.ShuiZhuBuff.Description
+	}
+
+	ShuiZuBuff: {
+		// DisplayName: Shui Zu Buff
+		// Description: Mods.VerminLordMod.Buffs.ShuiZuBuff.Description
+	}
+
+	SiGuBuff: {
+		// DisplayName: Si Gu Buff
+		// Description: Mods.VerminLordMod.Buffs.SiGuBuff.Description
+	}
+
+	SiShuiBuff: {
+		// DisplayName: Si Shui Buff
+		// Description: Mods.VerminLordMod.Buffs.SiShuiBuff.Description
+	}
+
+	SiShuiXianBuff: {
+		// DisplayName: Si Shui Xian Buff
+		// Description: Mods.VerminLordMod.Buffs.SiShuiXianBuff.Description
+	}
+
+	SiXiangBuff: {
+		// DisplayName: Si Xiang Buff
+		// Description: Mods.VerminLordMod.Buffs.SiXiangBuff.Description
+	}
+
+	SongHeBuff: {
+		// DisplayName: Song He Buff
+		// Description: Mods.VerminLordMod.Buffs.SongHeBuff.Description
+	}
+
+	SongShengBuff: {
+		// DisplayName: Song Sheng Buff
+		// Description: Mods.VerminLordMod.Buffs.SongShengBuff.Description
+	}
+
+	SuMingBuff: {
+		// DisplayName: Su Ming Buff
+		// Description: Mods.VerminLordMod.Buffs.SuMingBuff.Description
+	}
+
+	TaiDuBuff: {
+		// DisplayName: Tai Du Buff
+		// Description: Mods.VerminLordMod.Buffs.TaiDuBuff.Description
+	}
+
+	TaiGuGuangBuff: {
+		// DisplayName: Tai Gu Guang Buff
+		// Description: Mods.VerminLordMod.Buffs.TaiGuGuangBuff.Description
+	}
+
+	TeYiBuff: {
+		// DisplayName: Te Yi Buff
+		// Description: Mods.VerminLordMod.Buffs.TeYiBuff.Description
+	}
+
+	TianJiBuff: {
+		// DisplayName: Tian Ji Buff
+		// Description: Mods.VerminLordMod.Buffs.TianJiBuff.Description
+	}
+
+	TianQiBuff: {
+		// DisplayName: Tian Qi Buff
+		// Description: Mods.VerminLordMod.Buffs.TianQiBuff.Description
+	}
+
+	TianWangBuff: {
+		// DisplayName: Tian Wang Buff
+		// Description: Mods.VerminLordMod.Buffs.TianWangBuff.Description
+	}
+
+	TianYuanBuff: {
+		// DisplayName: Tian Yuan Buff
+		// Description: Mods.VerminLordMod.Buffs.TianYuanBuff.Description
+	}
+
+	TianYuanExhaustBuff: {
+		// DisplayName: Tian Yuan Exhaust Buff
+		// Description: Mods.VerminLordMod.Buffs.TianYuanExhaustBuff.Description
+	}
+
+	TianYuanLianBuff: {
+		// DisplayName: Tian Yuan Lian Buff
+		// Description: Mods.VerminLordMod.Buffs.TianYuanLianBuff.Description
+	}
+
+	TiaoTiaoCaoBuff: {
+		// DisplayName: Tiao Tiao Cao Buff
+		// Description: Mods.VerminLordMod.Buffs.TiaoTiaoCaoBuff.Description
+	}
+
+	TuiBeiBuff: {
+		// DisplayName: Tui Bei Buff
+		// Description: Mods.VerminLordMod.Buffs.TuiBeiBuff.Description
+	}
+
+	TuiChenBuff: {
+		// DisplayName: Tui Chen Buff
+		// Description: Mods.VerminLordMod.Buffs.TuiChenBuff.Description
+	}
+
+	TuoYuBuff: {
+		// DisplayName: Tuo Yu Buff
+		// Description: Mods.VerminLordMod.Buffs.TuoYuBuff.Description
+	}
+
+	WanLiKouQiuBuff: {
+		// DisplayName: Wan Li Kou Qiu Buff
+		// Description: Mods.VerminLordMod.Buffs.WanLiKouQiuBuff.Description
+	}
+
+	WanNianDouBuff: {
+		// DisplayName: Wan Nian Dou Buff
+		// Description: Mods.VerminLordMod.Buffs.WanNianDouBuff.Description
+	}
+
+	WanSuiBuff: {
+		// DisplayName: Wan Sui Buff
+		// Description: Mods.VerminLordMod.Buffs.WanSuiBuff.Description
+	}
+
+	WanWoXianBuff: {
+		// DisplayName: Wan Wo Xian Buff
+		// Description: Mods.VerminLordMod.Buffs.WanWoXianBuff.Description
+	}
+
+	WanXiangBuff: {
+		// DisplayName: Wan Xiang Buff
+		// Description: Mods.VerminLordMod.Buffs.WanXiangBuff.Description
+	}
+
+	WanXiangShrinkDebuff: {
+		// DisplayName: Wan Xiang Shrink Debuff
+		// Description: Mods.VerminLordMod.Buffs.WanXiangShrinkDebuff.Description
+	}
+
+	WoSuXianBuff: {
+		// DisplayName: Wo Su Xian Buff
+		// Description: Mods.VerminLordMod.Buffs.WoSuXianBuff.Description
+	}
+
+	WuZuNiaoBuff: {
+		// DisplayName: Wu Zu Niao Buff
+		// Description: Mods.VerminLordMod.Buffs.WuZuNiaoBuff.Description
+	}
+
+	XianGuJiaBuff: {
+		// DisplayName: Xian Gu Jia Buff
+		// Description: Mods.VerminLordMod.Buffs.XianGuJiaBuff.Description
+	}
+
+	XianGuWuChuBuff: {
+		// DisplayName: Xian Gu Wu Chu Buff
+		// Description: Mods.VerminLordMod.Buffs.XianGuWuChuBuff.Description
+	}
+
+	XiaoGuBuff: {
+		// DisplayName: Xiao Gu Buff
+		// Description: Mods.VerminLordMod.Buffs.XiaoGuBuff.Description
+	}
+
+	XiaoJiaZiQiBuff: {
+		// DisplayName: Xiao Jia Zi Qi Buff
+		// Description: Mods.VerminLordMod.Buffs.XiaoJiaZiQiBuff.Description
+	}
+
+	XinDaoBuff: {
+		// DisplayName: Xin Dao Buff
+		// Description: Mods.VerminLordMod.Buffs.XinDaoBuff.Description
+	}
+
+	XinDaoXianBuff: {
+		// DisplayName: Xin Dao Xian Buff
+		// Description: Mods.VerminLordMod.Buffs.XinDaoXianBuff.Description
+	}
+
+	XinFengBuff: {
+		// DisplayName: Xin Feng Buff
+		// Description: Mods.VerminLordMod.Buffs.XinFengBuff.Description
+	}
+
+	XingNianBuff: {
+		// DisplayName: Xing Nian Buff
+		// Description: Mods.VerminLordMod.Buffs.XingNianBuff.Description
+	}
+
+	XingNianXianBuff: {
+		// DisplayName: Xing Nian Xian Buff
+		// Description: Mods.VerminLordMod.Buffs.XingNianXianBuff.Description
+	}
+
+	XingSuBuff: {
+		// DisplayName: Xing Su Buff
+		// Description: Mods.VerminLordMod.Buffs.XingSuBuff.Description
+	}
+
+	XueMaiBuff: {
+		// DisplayName: Xue Mai Buff
+		// Description: Mods.VerminLordMod.Buffs.XueMaiBuff.Description
+	}
+
+	XuFuBuff: {
+		// DisplayName: Xu Fu Buff
+		// Description: Mods.VerminLordMod.Buffs.XuFuBuff.Description
+	}
+
+	XunShouShiBuff: {
+		// DisplayName: Xun Shou Shi Buff
+		// Description: Mods.VerminLordMod.Buffs.XunShouShiBuff.Description
+	}
+
+	XuQingBuff: {
+		// DisplayName: Xu Qing Buff
+		// Description: Mods.VerminLordMod.Buffs.XuQingBuff.Description
+	}
+
+	XuRongBuff: {
+		// DisplayName: Xu Rong Buff
+		// Description: Mods.VerminLordMod.Buffs.XuRongBuff.Description
+	}
+
+	YangGuBuff: {
+		// DisplayName: Yang Gu Buff
+		// Description: Mods.VerminLordMod.Buffs.YangGuBuff.Description
+	}
+
+	YiHouBuff: {
+		// DisplayName: Yi Hou Buff
+		// Description: Mods.VerminLordMod.Buffs.YiHouBuff.Description
+	}
+
+	YingYunBuff: {
+		// DisplayName: Ying Yun Buff
+		// Description: Mods.VerminLordMod.Buffs.YingYunBuff.Description
+	}
+
+	YiNianBuff: {
+		// DisplayName: Yi Nian Buff
+		// Description: Mods.VerminLordMod.Buffs.YiNianBuff.Description
+	}
+
+	YiQueBuff: {
+		// DisplayName: Yi Que Buff
+		// Description: Mods.VerminLordMod.Buffs.YiQueBuff.Description
+	}
+
+	YiSiYiShengBuff: {
+		// DisplayName: Yi Si Yi Sheng Buff
+		// Description: Mods.VerminLordMod.Buffs.YiSiYiShengBuff.Description
+	}
+
+	YiXinSanYongBuff: {
+		// DisplayName: Yi Xin San Yong Buff
+		// Description: Mods.VerminLordMod.Buffs.YiXinSanYongBuff.Description
+	}
+
+	YiYiBuff: {
+		// DisplayName: Yi Yi Buff
+		// Description: Mods.VerminLordMod.Buffs.YiYiBuff.Description
+	}
+
+	YongQiBuff: {
+		// DisplayName: Yong Qi Buff
+		// Description: Mods.VerminLordMod.Buffs.YongQiBuff.Description
+	}
+
+	YongShengBuff: {
+		// DisplayName: Yong Sheng Buff
+		// Description: Mods.VerminLordMod.Buffs.YongShengBuff.Description
+	}
+
+	YongShengCDBuff: {
+		// DisplayName: Yong Sheng C D Buff
+		// Description: Mods.VerminLordMod.Buffs.YongShengCDBuff.Description
+	}
+
+	YongShengExhaustBuff: {
+		// DisplayName: Yong Sheng Exhaust Buff
+		// Description: Mods.VerminLordMod.Buffs.YongShengExhaustBuff.Description
+	}
+
+	YouHuanBuff: {
+		// DisplayName: You Huan Buff
+		// Description: Mods.VerminLordMod.Buffs.YouHuanBuff.Description
+	}
+
+	YunHuangBuff: {
+		// DisplayName: Yun Huang Buff
+		// Description: Mods.VerminLordMod.Buffs.YunHuangBuff.Description
+	}
+
+	YunSuoBuff: {
+		// DisplayName: Yun Suo Buff
+		// Description: Mods.VerminLordMod.Buffs.YunSuoBuff.Description
+	}
+
+	YuQingBuff: {
+		// DisplayName: Yu Qing Buff
+		// Description: Mods.VerminLordMod.Buffs.YuQingBuff.Description
+	}
+
+	YuShengBuff: {
+		// DisplayName: Yu Sheng Buff
+		// Description: Mods.VerminLordMod.Buffs.YuShengBuff.Description
+	}
+
+	YuZhiBuff: {
+		// DisplayName: Yu Zhi Buff
+		// Description: Mods.VerminLordMod.Buffs.YuZhiBuff.Description
+	}
+
+	ZaoMengBuff: {
+		// DisplayName: Zao Meng Buff
+		// Description: Mods.VerminLordMod.Buffs.ZaoMengBuff.Description
+	}
+
+	ZaoQiuBuff: {
+		// DisplayName: Zao Qiu Buff
+		// Description: Mods.VerminLordMod.Buffs.ZaoQiuBuff.Description
+	}
+
+	ZhenHunBuff: {
+		// DisplayName: Zhen Hun Buff
+		// Description: Mods.VerminLordMod.Buffs.ZhenHunBuff.Description
+	}
+
+	ZhiZhangBuff: {
+		// DisplayName: Zhi Zhang Buff
+		// Description: Mods.VerminLordMod.Buffs.ZhiZhangBuff.Description
+	}
+
+	ZhouMaoBuff: {
+		// DisplayName: Zhou Mao Buff
+		// Description: Mods.VerminLordMod.Buffs.ZhouMaoBuff.Description
+	}
+
+	ZhuYunBuff: {
+		// DisplayName: Zhu Yun Buff
+		// Description: Mods.VerminLordMod.Buffs.ZhuYunBuff.Description
+	}
+
+	ZiAiBuff: {
+		// DisplayName: Zi Ai Buff
+		// Description: Mods.VerminLordMod.Buffs.ZiAiBuff.Description
+	}
+
+	ZiJiBuff: {
+		// DisplayName: Zi Ji Buff
+		// Description: Mods.VerminLordMod.Buffs.ZiJiBuff.Description
+	}
+
+	ZuoMengBuff: {
+		// DisplayName: Zuo Meng Buff
+		// Description: Mods.VerminLordMod.Buffs.ZuoMengBuff.Description
+	}
+
+	JiangRuGuBuff: {
+		// DisplayName: Jiang Ru Gu Buff
+		// Description: Mods.VerminLordMod.Buffs.JiangRuGuBuff.Description
+	}
+
+	JiangShanRuGuCDBuff: {
+		// DisplayName: Jiang Shan Ru Gu C D Buff
+		// Description: Mods.VerminLordMod.Buffs.JiangShanRuGuCDBuff.Description
+	}
+
+	PaiNanBuff: {
+		// DisplayName: Pai Nan Buff
+		// Description: Mods.VerminLordMod.Buffs.PaiNanBuff.Description
+	}
+
+	ShenYouImmobilizeBuff: {
+		// DisplayName: Shen You Immobilize Buff
+		// Description: Mods.VerminLordMod.Buffs.ShenYouImmobilizeBuff.Description
+	}
 }
 
 DamageClasses.InsectDamageClass.DisplayName: 蛊术伤害
@@ -9858,6 +13328,16 @@ Biomes: {
 	GuYueCompoundBiome: {
 		DisplayName: 古月山寨
 		TownNPCDialogueName: 古月山寨
+	}
+
+	SouthBorderBiome: {
+		// TownNPCDialogueName: the South Border Biome
+		// DisplayName: South Border Biome
+	}
+
+	NorthDesertBiome: {
+		// TownNPCDialogueName: the North Desert Biome
+		// DisplayName: North Desert Biome
 	}
 }
 

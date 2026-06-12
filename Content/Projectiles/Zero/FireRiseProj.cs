@@ -204,5 +204,6 @@ namespace VerminLordMod.Content.Projectiles.Zero
             if (Projectile.velocity != Vector2.Zero)
                 Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.PiOver2;
         }
+        protected override bool OnTileCollided(Vector2 oldVelocity) => false;
     }
 }

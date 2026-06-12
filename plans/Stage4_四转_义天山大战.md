@@ -318,6 +318,266 @@ debuff可被"净化类"蛊虫移除
 | 亚仙尊遗物 | 10% | 1 | 制作特殊饰品 |
 | 元石 | 100% | 30~50 | 基础货币 |
 
+## 3.5 义天山副本详细布局
+
+**新副本**：`Common/SubWorlds/YiTianShanDungeon.cs`
+
+**小说依据**：第500~700章，义天山大战，方源暴露真面目
+
+**副本入口**：
+- 在义天山区域中心有入口
+- 使用"义天山令"物品进入
+- 副本为多人副本（1~4人）
+
+**副本结构**（5层）：
+
+```
+第1层：义天山脚（100×60格）
+  - 大量正道/魔道NPC混战
+  - 玩家需要选择阵营穿过战场
+  - 阵营选择影响第2~4层的敌人类型
+    ↓
+第2层：义天山腰（80×50格）
+  - 走廊+房间结构
+  - 每个房间有1~2个精英敌人
+  - 3条分支路线（对应3种真传碎片）
+    ↓
+第3层：义天山大殿（60×60格）
+  - 中央大殿，四周有4个侧殿
+  - 每个侧殿有一个小Boss
+  - 击败4个小Boss后大殿门开启
+    ↓
+第4层：地下密室（40×40格）
+  - 盗天迷宫（随机生成）
+  - 需要在迷宫中找到3个机关
+  - 机关全部激活后进入第5层
+    ↓
+第5层：义天山核心（50×50竞技场）
+  - Boss战区域
+  - 根据阵营选择，Boss不同：
+    正道：凤九歌
+    魔道：秦百胜
+    中立：两者同时出现
+```
+
+**第1层战场NPC**：
+
+| 阵营 | NPC | 数量 | 转数 | 行为 |
+|------|-----|------|------|------|
+| 正道 | 正道蛊师 | 15 | 三转 | 攻击魔道玩家 |
+| 正道 | 正道精英 | 5 | 四转 | 攻击魔道玩家 |
+| 魔道 | 魔道蛊师 | 15 | 三转 | 攻击正道玩家 |
+| 魔道 | 魔道精英 | 5 | 四转 | 攻击正道玩家 |
+| 中立 | 逃难平民 | 10 | 无 | 四处逃跑 |
+
+**第2层分支路线**：
+
+| 路线 | 主题 | 精英敌人 | 真传碎片 |
+|------|------|---------|---------|
+| 左路 | 炼道 | 炼道守卫×3 | 炼道真传碎片 |
+| 中路 | 战道 | 战道守卫×3 | 战道真传碎片 |
+| 右路 | 智道 | 智道守卫×3 | 智道真传碎片 |
+
+**第3层侧殿小Boss**：
+
+| 侧殿 | Boss | 生命 | 伤害 | 机制 |
+|------|------|------|------|------|
+| 东殿 | 影宗刺客 | 15000 | 70 | 隐身+暗杀 |
+| 西殿 | 天庭守卫 | 20000 | 60 | 高防御+反击 |
+| 南殿 | 散修高手 | 12000 | 80 | 灵活+多变 |
+| 北殿 | 僵尸蛊师 | 18000 | 65 | 不死+再生 |
+
+**第4层盗天迷宫**：
+
+```
+迷宫为随机生成（每次进入不同）
+    ↓
+迷宫大小：40×40格
+    ↓
+迷宫中有3个机关：
+  机关1：击杀迷宫守护者
+  机关2：解开谜题（按顺序踩压力板）
+  机关3：找到隐藏房间中的钥匙
+    ↓
+迷宫中有大量陷阱：
+  - 传送陷阱（随机传送）
+  - 幻术陷阱（方向反转）
+  - 毒雾陷阱（持续伤害）
+    ↓
+迷宫中有宝箱（随机位置）：
+  - 元石箱（50~100元石）
+  - 蛊虫箱（随机三转蛊虫）
+  - 真传箱（随机真传碎片）
+```
+
+### 3.6 大同风世界事件
+
+**新事件**：`Common/Systems/DaTongFengEvent.cs`
+
+**小说依据**：第700~750章，大同风席卷义天山，所有参与者被迫合作求生
+
+**触发条件**：
+- 义天山副本第3层完成
+- 玩家四转以上
+
+**大同风事件流程**：
+```
+触发条件满足 → 天空变为暗红色
+    ↓
+世界消息："大同风来了——！"
+    ↓
+强风开始吹袭（持续120秒）
+    ↓
+大同风分为3个阶段：
+    ↓
+第1阶段（0~40秒）：风起
+  - 全屏强风效果（玩家被推动）
+  - 弹幕偏移+30%
+  - 飞行敌人被吹走
+  - 地面出现风刃（随机位置，50伤害）
+    ↓
+第2阶段（40~80秒）：风盛
+  - 全屏强风+沙尘暴（视野降低50%）
+  - 弹幕偏移+60%
+  - 所有NPC停止战斗（被风吹散）
+  - 地面风刃密度×2
+  - 建筑开始损坏（方块被吹走）
+    ↓
+第3阶段（80~120秒）：风极
+  - 全屏飓风（玩家无法站立，必须躲在掩体后）
+  - 弹幕完全无法使用（被风吹走）
+  - 天空出现巨大风眼
+  - 风眼中掉落稀有材料
+  - 玩家需要在掩体间移动收集材料
+    ↓
+120秒后大同风结束
+    ↓
+世界消息："大同风……过去了。"
+    ↓
+义天山区域部分崩塌
+```
+
+**大同风生存机制**：
+```
+玩家需要找到掩体（墙壁/岩石后方）
+    ↓
+掩体判定：玩家与风源之间有实心方块
+    ↓
+无掩体时：
+  - 玩家每秒被推动5格
+  - 每秒受到20点伤害
+  - 无法使用弹幕类攻击
+    ↓
+有掩体时：
+  - 不受推动
+  - 不受伤害
+  - 可以使用近战攻击
+    ↓
+风眼掉落材料：
+  - 大同风晶（制作风道高级蛊虫）
+  - 天地精华（制作四转突破丹药）
+  - 风之精髓（制作大同风相关装备）
+```
+
+**大同风对NPC的影响**：
+
+| NPC | 影响 | 后续 |
+|-----|------|------|
+| 凤九歌 | 使用音道抵抗风 | 存活，继续Boss战 |
+| 秦百胜 | 使用杀道开辟安全区 | 存活，继续Boss战 |
+| 影无邪 | 隐身躲避 | 存活，提供情报 |
+| 普通蛊师 | 被吹散 | 部分死亡，部分受伤 |
+| 方源 | 不受影响（炼道护体） | 大同风后消失 |
+
+### 3.7 真传系统详细设计
+
+**新系统**：`Common/Systems/InheritanceSystem.cs`
+
+**小说依据**：真传是蛊师的核心传承，包含道系知识和强力蛊虫配方
+
+**真传等级**：
+
+| 等级 | 来源 | 效果 | 对应转数 |
+|------|------|------|---------|
+| 碎片 | 副本小怪/Boss部分掉落 | 道痕+5 | 三转 |
+| 半卷 | 副本Boss掉落 | 道痕+15+解锁配方 | 四转 |
+| 完整真传 | 碎片×3合成 | 道痕+30+解锁全部配方+特殊技能 | 五转 |
+| 仙级真传 | 完整真传+仙材升级 | 道痕+50+仙级配方+仙级技能 | 七转+ |
+
+**真传合成配方**：
+
+| 真传 | 碎片来源 | 合成材料 | 解锁内容 |
+|------|---------|---------|---------|
+| 炼道真传 | 义天山左路+铁骨王+黑楼兰 | 碎片×3+元石×100 | 炼道四转武器+炼道技能 |
+| 智道真传 | 义天山右路+幻影王+星宿 | 碎片×3+元石×100 | 智道四转武器+预判技能 |
+| 战道真传 | 义山中路+毒蛇王+战道Boss | 碎片×3+元石×100 | 战道四转武器+战意技能 |
+| 力道真传 | 黑楼兰掉落 | 碎片×3+元石×100 | 力道五转武器+霸拳技能 |
+| 宙道真传 | 冰塞川掉落 | 碎片×3+元石×100 | 宙道五转武器+时间技能 |
+| 五行真传 | 五行大法师掉落 | 碎片×3+元石×100 | 五行五转武器+五行轮转 |
+
+**真传技能系统**：
+
+每个完整真传解锁一个"真传技能"——比普通蛊虫更强大的主动技能：
+
+| 真传 | 技能名 | 效果 | 冷却 | 仙元消耗 |
+|------|--------|------|------|---------|
+| 炼道 | 万物熔炉 | 将范围内敌人炼化，造成持续伤害+回复自身 | 60秒 | 5000 |
+| 智道 | 全知之眼 | 显示所有敌人弱点和攻击预判10秒 | 45秒 | 3000 |
+| 战道 | 不灭战意 | 10秒内免疫死亡（生命不低于1） | 120秒 | 8000 |
+| 力道 | 霸拳·极限 | 一拳造成10倍伤害 | 90秒 | 6000 |
+| 宙道 | 时间冻结 | 冻结所有敌人5秒 | 120秒 | 10000 |
+| 五行 | 五行轮转·极 | 同时释放5种元素攻击 | 60秒 | 7000 |
+
+**真传技能实现**：
+```csharp
+public class InheritanceSystem : ModSystem
+{
+    public static Dictionary<int, List<InheritanceRecord>> PlayerInheritances = new();
+
+    public static bool HasInheritance(int playerID, DaoType daoType, InheritanceLevel level)
+    {
+        if (!PlayerInheritances.ContainsKey(playerID)) return false;
+        return PlayerInheritances[playerID].Any(i =>
+            i.DaoType == daoType && i.Level >= level);
+    }
+
+    public static void AddInheritance(int playerID, DaoType daoType, InheritanceLevel level)
+    {
+        if (!PlayerInheritances.ContainsKey(playerID))
+            PlayerInheritances[playerID] = new List<InheritanceRecord>();
+
+        var existing = PlayerInheritances[playerID]
+            .FirstOrDefault(i => i.DaoType == daoType);
+
+        if (existing != null)
+            existing.Level = (InheritanceLevel)Math.Max((int)existing.Level, (int)level);
+        else
+            PlayerInheritances[playerID].Add(new InheritanceRecord
+            {
+                DaoType = daoType,
+                Level = level,
+                DaoHenBonus = level switch
+                {
+                    InheritanceLevel.Fragment => 5,
+                    InheritanceLevel.Half => 15,
+                    InheritanceLevel.Full => 30,
+                    InheritanceLevel.Immortal => 50,
+                    _ => 0
+                }
+            });
+    }
+}
+
+public enum InheritanceLevel { Fragment, Half, Full, Immortal }
+
+public class InheritanceRecord
+{
+    public DaoType DaoType;
+    public InheritanceLevel Level;
+    public int DaoHenBonus;
+}
+```
+
 ---
 
 ## 4. 秦百胜Boss战
@@ -701,9 +961,65 @@ public class FactionAllegianceSystem : ModSystem
 
 ---
 
-## 8. 具体实现任务清单
+## 8. 阶段过渡：四转 → 五转（北原远征）
 
-### 8.1 基础设施（优先级：🔴最高）
+### 8.1 过渡触发条件
+
+| 条件 | 具体要求 | 检测方式 |
+|------|---------|---------|
+| 境界 | 玩家达到五转初期 | `QiRealmPlayer.GuLevel >= 5` |
+| Boss前置 | 击败凤九歌或秦百胜 | `DownBossSystem.downedFengJiuGe \|\| downedQinBaiSheng` |
+| 剧情前置 | 义天山事件完成 | `DownBossSystem.yiTianShanCompleted` |
+| 大同风 | 存活大同风事件 | `DownBossSystem.daTongFengSurvived` |
+
+### 8.2 过渡流程
+
+```
+满足所有条件 → 与散修营地太白云生对话
+    ↓
+太白云生："北原传来消息，长生天蠢蠢欲动……"
+太白云生："那里或许有你需要的力量。"
+    ↓
+获得"北原通行证"物品
+    ↓
+世界地图上生成北原冰原区域
+    ↓
+使用北原通行证 → 传送至北原王庭入口
+    ↓
+正式进入Stage5内容
+```
+
+### 8.3 义天山NPC后续处理
+
+| NPC | 过渡后状态 | 后续出现 |
+|-----|-----------|---------|
+| 凤九歌 | 根据战斗结果：存活则离开，死亡则不再出现 | Stage6宿命大战可能再出现 |
+| 砚石老人 | 根据是否被击败 | Stage6影宗阵营 |
+| 影无邪 | 根据阵营选择 | Stage6影宗阵营 |
+| 方源 | 必定离开义天山 | Stage5/6以不同身份出现 |
+
+### 8.4 关键状态继承
+
+| 继承项 | 说明 |
+|--------|------|
+| 真传碎片/完整真传 | 关键继承，影响五转装备制作 |
+| 阵营选择（正道/魔道/影宗） | 影响Stage5/6NPC态度和可用盟友 |
+| 战功值 | 保留，可兑换义天山专属物品 |
+| 盗天迷宫进度 | 保留，可重复进入 |
+| 大同风存活标记 | 影响Stage6宿命大战初始难度 |
+
+### 8.5 技术实现注意事项
+
+- 北原冰原区域在世界边缘生成，与南疆区域分离
+- 使用新的Biome系统，包含暴风雪天气
+- 北原通行证为传送道具，首次使用触发过场动画
+- 义天山区域保留但部分崩塌（大同风后果）
+
+---
+
+## 9. 具体实现任务清单
+
+### 9.1 基础设施（优先级：🔴最高）
 
 | 编号 | 任务 | 文件 | 预估工时 |
 |------|------|------|---------|
@@ -715,7 +1031,7 @@ public class FactionAllegianceSystem : ModSystem
 | S4-06 | 战功系统扩展 | 扩展 `BountySystem.cs` | 2h |
 | S4-07 | 阵营选择系统 | `Common/Systems/FactionAllegianceSystem.cs` | 4h |
 
-### 8.2 NPC与Boss（优先级：🔴最高）
+### 9.2 NPC与Boss（优先级：🔴最高）
 
 | 编号 | 任务 | 文件 | 预估工时 |
 |------|------|------|---------|
@@ -727,7 +1043,7 @@ public class FactionAllegianceSystem : ModSystem
 | S4-13 | 义天山外围NPC（5种） | `Content/NPCs/YiTianShan/` | 8h |
 | S4-14 | 盗天迷宫守护者Boss | `Content/NPCs/YiTianShan/DaoTianPhantom.cs` | 4h |
 
-### 8.3 副本系统（优先级：🟡高）
+### 9.3 副本系统（优先级：🟡高）
 
 | 编号 | 任务 | 文件 | 预估工时 |
 |------|------|------|---------|
@@ -736,7 +1052,7 @@ public class FactionAllegianceSystem : ModSystem
 | S4-17 | 迷宫房间系统（5种房间） | `Common/SubWorlds/DaoTianMazeRooms.cs` | 8h |
 | S4-18 | 迷宫谜题系统 | `Common/SubWorlds/DaoTianMazePuzzles.cs` | 4h |
 
-### 8.4 真传系统（优先级：🟡高）
+### 9.4 真传系统（优先级：🟡高）
 
 | 编号 | 任务 | 文件 | 预估工时 |
 |------|------|------|---------|
@@ -747,7 +1063,7 @@ public class FactionAllegianceSystem : ModSystem
 | S4-23 | 真传合成配方 | 扩展 `RecipeSystem.cs` | 2h |
 | S4-24 | 真传UI界面 | `Common/UI/InheritanceUI/` | 4h |
 
-### 8.5 Buff与Debuff（优先级：🟡高）
+### 9.5 Buff与Debuff（优先级：🟡高）
 
 | 编号 | 任务 | 文件 | 预估工时 |
 |------|------|------|---------|
@@ -757,7 +1073,7 @@ public class FactionAllegianceSystem : ModSystem
 | S4-28 | 蛊虫失效Debuff | `Content/Buffs/AddToSelf/Debuff/GuSuppressedDebuff.cs` | 2h |
 | S4-29 | 影蛊隐身Buff | `Content/Buffs/AddToSelf/Pobuff/ShadowGuStealthBuff.cs` | 2h |
 
-### 8.6 剧情与对话（优先级：🟡高）
+### 9.6 剧情与对话（优先级：🟡高）
 
 | 编号 | 任务 | 文件 | 预估工时 |
 |------|------|------|---------|
@@ -766,7 +1082,7 @@ public class FactionAllegianceSystem : ModSystem
 | S4-32 | 凤九歌战前/战后对话 | `Content/NPCs/SouthBorder/FengJiuGeDialogue.cs` | 2h |
 | S4-33 | 义天山过场动画系统 | `Common/Systems/CutsceneSystem.cs` | 6h |
 
-### 8.7 音效与特效（优先级：🟢中）
+### 9.7 音效与特效（优先级：🟢中）
 
 | 编号 | 任务 | 文件 | 预估工时 |
 |------|------|------|---------|
@@ -775,7 +1091,7 @@ public class FactionAllegianceSystem : ModSystem
 | S4-36 | 义天山粒子效果 | 扩展 `Dusts/` | 3h |
 | S4-37 | 大同风全屏特效 | `Common/Systems/DaTongFengVisualSystem.cs` | 3h |
 
-### 8.8 DownBossSystem扩展
+### 9.8 DownBossSystem扩展
 
 | 编号 | 任务 | 说明 |
 |------|------|------|
@@ -785,7 +1101,7 @@ public class FactionAllegianceSystem : ModSystem
 | S4-41 | 新增 `yiTianShanCompleted` | 义天山事件完成标记 |
 | S4-42 | 新增 `daTongFengSurvived` | 大同风存活标记 |
 
-### 8.9 总工时估算
+### 9.9 总工时估算
 
 | 类别 | 工时 |
 |------|------|

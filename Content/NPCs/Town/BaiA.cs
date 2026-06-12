@@ -21,7 +21,6 @@ using VerminLordMod.Content.Items.Weapons.Three;
 
 namespace VerminLordMod.Content.NPCs.Town
 {
-	[AutoloadHead]
 	class BaiA : ModNPC
 	{
 		public const string ShopName = "Shop";

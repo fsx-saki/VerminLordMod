@@ -54,7 +54,6 @@ namespace VerminLordMod.Content.NPCs.GuMasters
         // 使用古月家族统一贴图
         // 所有古月家族NPC共享同一套贴图资源
         public override string Texture => "VerminLordMod/Content/NPCs/GuMasters/GuYuePatrolGuMaster";
-        public override string HeadTexture => "VerminLordMod/Content/NPCs/GuMasters/GuYuePatrolGuMaster_Head";
 
         public override void SetStaticDefaults()
         {

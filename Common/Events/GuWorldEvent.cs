@@ -216,6 +216,38 @@ namespace VerminLordMod.Common.Events
         public int NewStage;
     }
 
+    public class ChoiceMadeEvent : GuWorldEvent
+    {
+        public string ChoiceID;
+        public int ChoiceValue;
+    }
+
+    public class StoryPhaseAdvancedEvent : GuWorldEvent
+    {
+        public int OldPhase;
+        public int NewPhase;
+        public int PlayerID;
+    }
+
+    public class SystemUnlockedEvent : GuWorldEvent
+    {
+        public string SystemName;
+        public int PlayerID;
+    }
+
+    public class AreaUnlockedEvent : GuWorldEvent
+    {
+        public string AreaName;
+        public int WorldX;
+        public int WorldY;
+    }
+
+    public class BossDefeatedEvent : GuWorldEvent
+    {
+        public string BossName;
+        public bool FirstTime;
+    }
+
     // ============================================================
     // 辅助枚举（L2 跨域通信矩阵用）
     // ============================================================

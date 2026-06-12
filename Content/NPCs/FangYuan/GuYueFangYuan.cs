@@ -13,7 +13,6 @@ using VerminLordMod.Content.NPCs.GuMasters;
 
 namespace VerminLordMod.Content.NPCs.FangYuan
 {
-    [AutoloadHead]
     public class GuYueFangYuan : GuMasterBase
     {
         private bool _hasUsedSpringAutumnCicada;

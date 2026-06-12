@@ -12,7 +12,6 @@ using VerminLordMod.Content.NPCs.GuMasters;
 
 namespace VerminLordMod.Content.NPCs.ShadowSect
 {
-    [AutoloadHead]
     public class QinBaiSheng : GuMasterBase
     {
         private int _attackTimer;

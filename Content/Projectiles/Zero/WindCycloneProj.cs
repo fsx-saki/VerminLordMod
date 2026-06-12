@@ -1,5 +1,6 @@
 using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 using VerminLordMod.Common.BulletBehaviors;
@@ -10,51 +11,66 @@ namespace VerminLordMod.Content.Projectiles.Zero
     public class WindCycloneProj : BaseBullet
     {
         private const int Duration = 180;
+        private const float OrbitRadius = 50f;
+        private const float OrbitSpeed = 0.12f;
+
+        private Vector2 _center;
+        private float _angle;
 
         protected override void RegisterBehaviors()
         {
-            Behaviors.Add(new StationaryBehavior());
+            // 不使用StationaryBehavior — 弹幕自身绕中心旋转以产生风卷残云轨迹
 
             Behaviors.Add(new PullBehavior
             {
-                PullRange = 160f,
-                PullStrength = 0.2f,
-                TangentFactor = 0.6f,
-                MaxPullSpeed = 6f,
+                PullRange = 200f,
+                PullStrength = 0.25f,
+                TangentFactor = 0.7f,
+                MaxPullSpeed = 7f,
                 EnableLight = false,
             });
 
             Behaviors.Add(new AreaDamageBehavior
             {
-                HitRadius = 50f,
-                HitInterval = 15,
-                Knockback = 3f,
+                HitRadius = 70f,
+                HitInterval = 12,
+                Knockback = 4f,
                 DirectionalKnockback = true,
             });
 
-            Behaviors.Add(new VortexParticleBehavior
+            // 风卷残云式粒子特效 — 大旋风版
+            Behaviors.Add(new WindTrailBehavior
             {
-                UseCloudMode = true,
-                CloudParticleCount = 15,
-                CloudRadius = 55f,
-                CloudRotationSpeed = 0.08f,
-                CloudConvergenceSpeed = 0.01f,
-                CloudInnerBias = 1.5f,
-                CloudStreamerCount = 8,
-                CloudStreamerArms = 3,
-                CloudStreamerTightness = 0.04f,
-                CloudStreamerWidth = 10f,
-                CloudStreamerColor = new Color(140, 220, 200, 220),
-                CloudStreamerScale = new Vector2(0.6f, 1.1f),
-                DustType = DustID.Cloud,
-                ColorStart = new Color(160, 230, 210, 150),
-                ColorEnd = new Color(200, 250, 240, 200),
-                SpawnBubbles = false,
-                SpawnCenterGlow = true,
-                CenterGlowInterval = 4,
-                CenterGlowRange = 12f,
-                EnableLight = true,
-                LightColor = new Vector3(0.2f, 0.5f, 0.4f),
+                EnableGhostTrail = true,
+                GhostMaxPositions = 25,
+                GhostRecordInterval = 2,
+                GhostWidthScale = 0.4f,
+                GhostLengthScale = 2.0f,
+                GhostAlpha = 0.35f,
+                GhostColor = new Color(160, 240, 220, 180),
+                MaxStreaks = 60,
+                StreakLife = 25,
+                StreakSize = 0.7f,
+                StreakStretch = 3.5f,
+                StreakDrift = 0.5f,
+                StreakColor = new Color(160, 230, 210, 220),
+                MaxVortex = 45,
+                VortexLife = 35,
+                VortexSize = 0.55f,
+                VortexRotSpeed = 0.12f,
+                VortexExpandRate = 2.0f,
+                VortexDriftSpeed = 0.8f,
+                VortexColor = new Color(140, 220, 200, 200),
+                MaxMist = 25,
+                MistLife = 50,
+                MistStartSize = 0.5f,
+                MistEndSize = 2.5f,
+                MistSpawnChance = 0.22f,
+                MistDriftSpeed = 0.5f,
+                MistColor = new Color(180, 240, 230, 130),
+                InertiaFactor = 0.3f,
+                RandomSpread = 6f,
+                AutoDraw = true,
                 SuppressDefaultDraw = true,
             });
 
@@ -82,7 +98,26 @@ namespace VerminLordMod.Content.Projectiles.Zero
             Projectile.DamageType = ModContent.GetInstance<InsectDamageClass>();
             Projectile.aiStyle = -1;
             Projectile.usesLocalNPCImmunity = true;
-            Projectile.localNPCHitCooldown = 15;
+            Projectile.localNPCHitCooldown = 12;
+        }
+
+        protected override void OnSpawned(IEntitySource source)
+        {
+            base.OnSpawned(source);
+            _center = Projectile.Center;
+            _angle = Main.rand.NextFloat(MathHelper.TwoPi);
+        }
+
+        protected override void OnAI()
+        {
+            // 弹幕绕中心点旋转，产生风卷残云轨迹
+            _angle += OrbitSpeed;
+            Vector2 offset = _angle.ToRotationVector2() * OrbitRadius;
+            Projectile.Center = _center + offset;
+            Projectile.velocity = offset.RotatedBy(MathHelper.PiOver2) * OrbitSpeed;
+
+            // 中心点发光
+            Lighting.AddLight(_center, 0.25f, 0.55f, 0.45f);
         }
 
         protected override void OnHit(NPC target, NPC.HitInfo hit, int damageDone)
@@ -92,16 +127,16 @@ namespace VerminLordMod.Content.Projectiles.Zero
 
         protected override void OnKilled(int timeLeft)
         {
-            for (int i = 0; i < 15; i++)
+            for (int i = 0; i < 25; i++)
             {
                 float angle = Main.rand.NextFloat(MathHelper.TwoPi);
-                float speed = Main.rand.NextFloat(2f, 5f);
+                float speed = Main.rand.NextFloat(3f, 7f);
                 Vector2 vel = angle.ToRotationVector2() * speed;
                 Dust d = Dust.NewDustPerfect(
-                    Projectile.Center + Main.rand.NextVector2Circular(15f, 15f),
+                    _center + Main.rand.NextVector2Circular(30f, 30f),
                     DustID.Cloud, vel, 0,
                     new Color(160, 230, 210, 160),
-                    Main.rand.NextFloat(0.5f, 1.0f));
+                    Main.rand.NextFloat(0.6f, 1.2f));
                 d.noGravity = true;
             }
         }

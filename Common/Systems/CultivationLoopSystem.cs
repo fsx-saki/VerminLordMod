@@ -62,16 +62,28 @@ namespace VerminLordMod.Common.Systems
             return baseQi;
         }
 
-        public static bool HasBreakthroughBottleneck(int guLevel, int stage)
+        public static bool HasBreakthroughBottleneck(Player player, int guLevel, int stage)
         {
+            // 检查剧情阶段瓶颈
+            if (!global::VerminLordMod.Common.Systems.StoryPhaseGateSystem.CanBreakthrough(player, guLevel + 1))
+            {
+                return true;
+            }
+
             if (guLevel == 3 && stage == 3) return true;
             if (guLevel == 5 && stage == 3) return true;
             if (guLevel == 7 && stage == 3) return true;
             return false;
         }
 
-        public static string GetBottleneckRequirement(int guLevel)
+        public static string GetBottleneckRequirement(Player player, int guLevel)
         {
+            // 检查剧情阶段瓶颈描述
+            if (!global::VerminLordMod.Common.Systems.StoryPhaseGateSystem.CanBreakthrough(player, guLevel + 1))
+            {
+                return global::VerminLordMod.Common.Systems.StoryPhaseGateSystem.GetBlockReason(player, guLevel + 1);
+            }
+
             return guLevel switch
             {
                 3 => "需要成功渡过天劫并获得族长批准",
@@ -128,7 +140,7 @@ namespace VerminLordMod.Common.Systems
             {
                 for (int y = tileY - radius; y <= tileY + radius; y++)
                 {
-                    if (!WorldGen.InWorld(x, y)) continue;
+                    if (!global::Terraria.WorldGen.InWorld(x, y)) continue;
                     Tile tile = Main.tile[x, y];
                     if (tile.HasTile && tile.TileType == ModContent.TileType<Content.Tiles.CultivationPlatformTile>())
                         return true;
@@ -140,7 +152,7 @@ namespace VerminLordMod.Common.Systems
         public static bool TryBreakthroughBottleneck(Player player, int guLevel)
         {
             var qiRealm = player.GetModPlayer<QiRealmPlayer>();
-            if (!HasBreakthroughBottleneck(guLevel, qiRealm.LevelStage)) return true;
+            if (!HasBreakthroughBottleneck(player, guLevel, qiRealm.LevelStage)) return true;
 
             switch (guLevel)
             {
@@ -230,7 +242,7 @@ namespace VerminLordMod.Common.Systems
                         {
                             qiRealm.StageUp();
                         }
-                        else if (!HasBreakthroughBottleneck(qiRealm.GuLevel, qiRealm.LevelStage))
+                        else if (!HasBreakthroughBottleneck(player, qiRealm.GuLevel, qiRealm.LevelStage))
                         {
                             qiRealm.LevelUp();
                         }

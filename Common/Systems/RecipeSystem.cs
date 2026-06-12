@@ -32,6 +32,7 @@ namespace VerminLordMod.Common.Systems
             AddConsumableRecipes();
             AddAccessoryRecipes();
             AddFurnitureRecipes();
+            AddArmorRecipes();
         }
 
         private void AddBuildingRecipes()
@@ -997,6 +998,85 @@ namespace VerminLordMod.Common.Systems
             spiritSpringPlantSeed.AddIngredient(yuanS, 3);
             spiritSpringPlantSeed.AddTile(TileID.WorkBenches);
             spiritSpringPlantSeed.Register();
+        }
+
+        private void AddArmorRecipes()
+        {
+            // 一转蛊师套装
+            var guMasterHat = ModContent.ItemType<Content.Items.Equipment.GuMasterHat>();
+            var guMasterRobe = ModContent.ItemType<Content.Items.Equipment.GuMasterRobe>();
+            var guMasterPants = ModContent.ItemType<Content.Items.Equipment.GuMasterPants>();
+
+            Recipe.Create(guMasterHat).AddIngredient(ModContent.ItemType<Content.Items.Consumables.YuanS>(), 10).AddTile(TileID.Anvils).Register();
+            Recipe.Create(guMasterRobe).AddIngredient(ModContent.ItemType<Content.Items.Consumables.YuanS>(), 15).AddTile(TileID.Anvils).Register();
+            Recipe.Create(guMasterPants).AddIngredient(ModContent.ItemType<Content.Items.Consumables.YuanS>(), 12).AddTile(TileID.Anvils).Register();
+
+            // 二转蛊师套装
+            var guAdeptHood = ModContent.ItemType<Content.Items.Equipment.GuAdeptHood>();
+            var guAdeptArmor = ModContent.ItemType<Content.Items.Equipment.GuAdeptArmor>();
+            var guAdeptBoots = ModContent.ItemType<Content.Items.Equipment.GuAdeptBoots>();
+
+            Recipe.Create(guAdeptHood).AddIngredient(ModContent.ItemType<Content.Items.Consumables.YuanS>(), 25).AddTile(TileID.Anvils).Register();
+            Recipe.Create(guAdeptArmor).AddIngredient(ModContent.ItemType<Content.Items.Consumables.YuanS>(), 35).AddTile(TileID.Anvils).Register();
+            Recipe.Create(guAdeptBoots).AddIngredient(ModContent.ItemType<Content.Items.Consumables.YuanS>(), 20).AddTile(TileID.Anvils).Register();
+
+            // 三转蛊师套装
+            var guExpertCrown = ModContent.ItemType<Content.Items.Equipment.GuExpertCrown>();
+            var guExpertArmor = ModContent.ItemType<Content.Items.Equipment.GuExpertArmor>();
+            var guExpertLeggings = ModContent.ItemType<Content.Items.Equipment.GuExpertLeggings>();
+
+            Recipe.Create(guExpertCrown).AddIngredient(ModContent.ItemType<Content.Items.Consumables.YuanS>(), 50).AddIngredient(ItemID.DemoniteBar, 10).AddTile(TileID.MythrilAnvil).Register();
+            Recipe.Create(guExpertArmor).AddIngredient(ModContent.ItemType<Content.Items.Consumables.YuanS>(), 70).AddIngredient(ItemID.DemoniteBar, 15).AddTile(TileID.MythrilAnvil).Register();
+            Recipe.Create(guExpertLeggings).AddIngredient(ModContent.ItemType<Content.Items.Consumables.YuanS>(), 55).AddIngredient(ItemID.DemoniteBar, 12).AddTile(TileID.MythrilAnvil).Register();
+
+            // 四转蛊师套装
+            var guMasterWarHelm = ModContent.ItemType<Content.Items.Equipment.GuMasterWarHelm>();
+            var guMasterWarPlate = ModContent.ItemType<Content.Items.Equipment.GuMasterWarPlate>();
+            var guMasterWarGreaves = ModContent.ItemType<Content.Items.Equipment.GuMasterWarGreaves>();
+
+            Recipe.Create(guMasterWarHelm).AddIngredient(ModContent.ItemType<Content.Items.Consumables.YuanS>(), 80).AddIngredient(ItemID.HallowedBar, 12).AddTile(TileID.MythrilAnvil).Register();
+            Recipe.Create(guMasterWarPlate).AddIngredient(ModContent.ItemType<Content.Items.Consumables.YuanS>(), 100).AddIngredient(ItemID.HallowedBar, 18).AddTile(TileID.MythrilAnvil).Register();
+            Recipe.Create(guMasterWarGreaves).AddIngredient(ModContent.ItemType<Content.Items.Consumables.YuanS>(), 90).AddIngredient(ItemID.HallowedBar, 15).AddTile(TileID.MythrilAnvil).Register();
+
+            // 五转蛊师套装
+            var guLordDiadem = ModContent.ItemType<Content.Items.Equipment.GuLordDiadem>();
+            var guLordBattleArmor = ModContent.ItemType<Content.Items.Equipment.GuLordBattleArmor>();
+            var guLordBattleLeggings = ModContent.ItemType<Content.Items.Equipment.GuLordBattleLeggings>();
+
+            Recipe.Create(guLordDiadem).AddIngredient(ModContent.ItemType<Content.Items.Consumables.YuanS>(), 150).AddIngredient(ItemID.ChlorophyteBar, 15).AddTile(TileID.MythrilAnvil).Register();
+            Recipe.Create(guLordBattleArmor).AddIngredient(ModContent.ItemType<Content.Items.Consumables.YuanS>(), 200).AddIngredient(ItemID.ChlorophyteBar, 20).AddTile(TileID.MythrilAnvil).Register();
+            Recipe.Create(guLordBattleLeggings).AddIngredient(ModContent.ItemType<Content.Items.Consumables.YuanS>(), 180).AddIngredient(ItemID.ChlorophyteBar, 18).AddTile(TileID.MythrilAnvil).Register();
+
+            // 六转蛊仙套装
+            var guImmortalCrown = ModContent.ItemType<Content.Items.Equipment.GuImmortalCrown>();
+            var guImmortalRobe = ModContent.ItemType<Content.Items.Equipment.GuImmortalRobe>();
+            var guImmortalBoots = ModContent.ItemType<Content.Items.Equipment.GuImmortalBoots>();
+
+            Recipe.Create(guImmortalCrown).AddIngredient(ModContent.ItemType<Content.Items.Consumables.YuanS>(), 300).AddIngredient(ItemID.SpectreBar, 15).AddIngredient(ItemID.LunarBar, 5).AddTile(TileID.LunarCraftingStation).Register();
+            Recipe.Create(guImmortalRobe).AddIngredient(ModContent.ItemType<Content.Items.Consumables.YuanS>(), 400).AddIngredient(ItemID.SpectreBar, 20).AddIngredient(ItemID.LunarBar, 8).AddTile(TileID.LunarCraftingStation).Register();
+            Recipe.Create(guImmortalBoots).AddIngredient(ModContent.ItemType<Content.Items.Consumables.YuanS>(), 350).AddIngredient(ItemID.SpectreBar, 18).AddIngredient(ItemID.LunarBar, 6).AddTile(TileID.LunarCraftingStation).Register();
+
+            // Boss召唤物品配方
+            Recipe.Create(ModContent.ItemType<Content.Items.Consumables.TianHeSummon>())
+                .AddIngredient(ModContent.ItemType<Content.Items.Consumables.YuanS>(), 30)
+                .AddIngredient(ItemID.Feather, 5)
+                .AddTile(TileID.Anvils)
+                .Register();
+
+            Recipe.Create(ModContent.ItemType<Content.Items.Consumables.DiMaiSummon>())
+                .AddIngredient(ModContent.ItemType<Content.Items.Consumables.YuanS>(), 50)
+                .AddIngredient(ItemID.StoneBlock, 30)
+                .AddIngredient(ItemID.Obsidian, 10)
+                .AddTile(TileID.Anvils)
+                .Register();
+
+            Recipe.Create(ModContent.ItemType<Content.Items.Consumables.LongGongSummon>())
+                .AddIngredient(ModContent.ItemType<Content.Items.Consumables.YuanS>(), 100)
+                .AddIngredient(ItemID.GoldBar, 10)
+                .AddIngredient(ItemID.SoulofLight, 10)
+                .AddIngredient(ItemID.SoulofNight, 10)
+                .AddTile(TileID.MythrilAnvil)
+                .Register();
         }
     }
 }

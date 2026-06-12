@@ -35,16 +35,33 @@ namespace VerminLordMod.Content.Projectiles.Zero
                 MaxAlpha = 30,
             });
 
-            Behaviors.Add(new PeriodicDustBehavior
+            // 风卷残云式粒子特效 — 风墙版（更多雾气、更少飘带，营造墙感）
+            Behaviors.Add(new WindTrailBehavior
             {
-                SpawnChance = 0.8f,
-                DustType = DustID.Cloud,
-                SpreadRadius = 35f,
-                Speed = 1.5f,
-                ScaleMin = 0.3f,
-                ScaleMax = 0.7f,
-                Color = new Color(180, 240, 220, 130),
-                NoGravity = true,
+                EnableGhostTrail = false,
+                MaxStreaks = 25,
+                StreakLife = 28,
+                StreakSize = 0.7f,
+                StreakStretch = 2.0f,
+                StreakDrift = 0.2f,
+                StreakColor = new Color(170, 240, 225, 180),
+                MaxVortex = 20,
+                VortexLife = 40,
+                VortexSize = 0.5f,
+                VortexRotSpeed = 0.06f,
+                VortexExpandRate = 1.2f,
+                VortexDriftSpeed = 0.3f,
+                VortexColor = new Color(150, 225, 210, 160),
+                MaxMist = 25,
+                MistLife = 55,
+                MistStartSize = 0.5f,
+                MistEndSize = 2.5f,
+                MistSpawnChance = 0.25f,
+                MistDriftSpeed = 0.2f,
+                MistColor = new Color(190, 245, 235, 120),
+                InertiaFactor = 0.15f,
+                RandomSpread = 6f,
+                AutoDraw = true,
                 SuppressDefaultDraw = true,
             });
         }

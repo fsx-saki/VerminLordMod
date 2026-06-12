@@ -141,6 +141,6 @@ namespace VerminLordMod.Content.Projectiles.Zero
             }
         }
 
-        protected override bool OnTileCollided(Vector2 oldVelocity) => true;
+        protected override bool OnTileCollided(Vector2 oldVelocity) => false;
     }
 }

@@ -61,7 +61,7 @@ namespace VerminLordMod.Common.Systems
     public class PillRecipe
     {
         public PillType OutputPill;
-        public List<int> RequiredHerbTypes = new();
+        public List<string> RequiredHerbTypes = new();
         public List<int> RequiredHerbCounts = new();
         public int RequiredGuLevel;
         public float BaseSuccessRate;
@@ -93,6 +93,8 @@ namespace VerminLordMod.Common.Systems
             PillRecipes[PillType.HealingPill] = new PillRecipe
             {
                 OutputPill = PillType.HealingPill,
+                RequiredHerbTypes = new List<string> { "灵草", "元石草" },
+                RequiredHerbCounts = new List<int> { 3, 3 },
                 RequiredGuLevel = 1,
                 BaseSuccessRate = 0.7f,
                 CraftTimeTicks = 300,
@@ -101,6 +103,8 @@ namespace VerminLordMod.Common.Systems
             PillRecipes[PillType.QiRecoveryPill] = new PillRecipe
             {
                 OutputPill = PillType.QiRecoveryPill,
+                RequiredHerbTypes = new List<string> { "灵草", "月华草" },
+                RequiredHerbCounts = new List<int> { 4, 4 },
                 RequiredGuLevel = 1,
                 BaseSuccessRate = 0.7f,
                 CraftTimeTicks = 300,
@@ -109,6 +113,8 @@ namespace VerminLordMod.Common.Systems
             PillRecipes[PillType.DetoxPill] = new PillRecipe
             {
                 OutputPill = PillType.DetoxPill,
+                RequiredHerbTypes = new List<string> { "解毒草", "清心莲" },
+                RequiredHerbCounts = new List<int> { 3, 3 },
                 RequiredGuLevel = 2,
                 BaseSuccessRate = 0.6f,
                 CraftTimeTicks = 400,
@@ -117,6 +123,8 @@ namespace VerminLordMod.Common.Systems
             PillRecipes[PillType.DefensePill] = new PillRecipe
             {
                 OutputPill = PillType.DefensePill,
+                RequiredHerbTypes = new List<string> { "铁皮根", "灵草" },
+                RequiredHerbCounts = new List<int> { 4, 4 },
                 RequiredGuLevel = 2,
                 BaseSuccessRate = 0.6f,
                 CraftTimeTicks = 400,
@@ -125,6 +133,8 @@ namespace VerminLordMod.Common.Systems
             PillRecipes[PillType.StrengthPill] = new PillRecipe
             {
                 OutputPill = PillType.StrengthPill,
+                RequiredHerbTypes = new List<string> { "火果", "元石草" },
+                RequiredHerbCounts = new List<int> { 4, 4 },
                 RequiredGuLevel = 2,
                 BaseSuccessRate = 0.6f,
                 CraftTimeTicks = 400,
@@ -133,6 +143,8 @@ namespace VerminLordMod.Common.Systems
             PillRecipes[PillType.SpeedPill] = new PillRecipe
             {
                 OutputPill = PillType.SpeedPill,
+                RequiredHerbTypes = new List<string> { "风信子", "灵草" },
+                RequiredHerbCounts = new List<int> { 3, 3 },
                 RequiredGuLevel = 2,
                 BaseSuccessRate = 0.6f,
                 CraftTimeTicks = 400,
@@ -141,6 +153,8 @@ namespace VerminLordMod.Common.Systems
             PillRecipes[PillType.PerceptionPill] = new PillRecipe
             {
                 OutputPill = PillType.PerceptionPill,
+                RequiredHerbTypes = new List<string> { "灵草", "元石草", "冰莲" },
+                RequiredHerbCounts = new List<int> { 5, 5, 5 },
                 RequiredGuLevel = 3,
                 BaseSuccessRate = 0.5f,
                 CraftTimeTicks = 500,
@@ -149,6 +163,8 @@ namespace VerminLordMod.Common.Systems
             PillRecipes[PillType.VisionPill] = new PillRecipe
             {
                 OutputPill = PillType.VisionPill,
+                RequiredHerbTypes = new List<string> { "冰莲", "灵草", "月华草" },
+                RequiredHerbCounts = new List<int> { 5, 5, 5 },
                 RequiredGuLevel = 3,
                 BaseSuccessRate = 0.5f,
                 CraftTimeTicks = 500,
@@ -157,6 +173,8 @@ namespace VerminLordMod.Common.Systems
             PillRecipes[PillType.BreakthroughPill] = new PillRecipe
             {
                 OutputPill = PillType.BreakthroughPill,
+                RequiredHerbTypes = new List<string> { "元石草", "火果", "冰莲" },
+                RequiredHerbCounts = new List<int> { 5, 5, 5 },
                 RequiredGuLevel = 4,
                 BaseSuccessRate = 0.3f,
                 CraftTimeTicks = 900,
@@ -165,6 +183,8 @@ namespace VerminLordMod.Common.Systems
             PillRecipes[PillType.AwakeningPill] = new PillRecipe
             {
                 OutputPill = PillType.AwakeningPill,
+                RequiredHerbTypes = new List<string> { "灵草", "元石草", "月华草" },
+                RequiredHerbCounts = new List<int> { 8, 8, 8 },
                 RequiredGuLevel = 5,
                 BaseSuccessRate = 0.2f,
                 CraftTimeTicks = 1200,

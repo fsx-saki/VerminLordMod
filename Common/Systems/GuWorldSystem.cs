@@ -28,6 +28,7 @@ namespace VerminLordMod.Common.Systems
         ShadowSect, // 影宗
         LingYuanZhai, // 灵缘斋
         ChangShengTian, // 长生天
+        HeiLouLan,   // 黑楼兰
     }
 
     /// <summary> 声望等级 </summary>

@@ -1,4 +1,4 @@
-﻿using VerminLordMod.Common.BulletBehaviors;
+using VerminLordMod.Common.BulletBehaviors;
 using VerminLordMod.Content.DamageClasses;
 using VerminLordMod.Content.Trails;
 using Microsoft.Xna.Framework;
@@ -66,7 +66,7 @@ namespace VerminLordMod.Content.Projectiles
             Projectile.scale = 1.5f;
             Projectile.ignoreWater = true;
             Projectile.tileCollide = true;
-            Projectile.penetrate = 99;
+            Projectile.penetrate = -1;
             Projectile.timeLeft = 60;
             Projectile.alpha = 0;
             Projectile.friendly = true;
@@ -93,5 +93,8 @@ namespace VerminLordMod.Content.Projectiles
                     enableGlow: false);
             }
         }
+
+        /// <summary> 碰到物块时直接爆炸销毁 </summary>
+        protected override bool OnTileCollided(Vector2 oldVelocity) => true;
     }
 }

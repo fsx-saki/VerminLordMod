@@ -107,7 +107,7 @@ namespace VerminLordMod.Common.BulletBehaviors
                         continue;
 
                     // 喷涂物块颜色
-                    WorldGen.paintTile(x, y, PaintColor);
+                    global::Terraria.WorldGen.paintTile(x, y, PaintColor);
 
                     // 添加液体
                     if (AddLiquid && LiquidAmount > 0)
@@ -153,7 +153,7 @@ namespace VerminLordMod.Common.BulletBehaviors
                             // 标记该区域需要重绘
                             if (Main.tile[x, y].HasTile)
                             {
-                                WorldGen.SquareTileFrame(x, y);
+                                global::Terraria.WorldGen.SquareTileFrame(x, y);
                             }
                         }
                     }

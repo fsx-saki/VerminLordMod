@@ -157,6 +157,7 @@ namespace VerminLordMod.Common.Systems
 
         private void RegisterAllQuests()
         {
+            RegisterMainStoryQuests();
             RegisterGuYueFactionQuests();
             RegisterBaiFactionQuests();
             RegisterXiongFactionQuests();
@@ -167,6 +168,387 @@ namespace VerminLordMod.Common.Systems
             RegisterScatteredFactionQuests();
             RegisterDailyQuests();
             RegisterBountyQuests();
+        }
+
+        private void RegisterMainStoryQuests()
+        {
+            // === Stage1: 一转·蛊师入门 ===
+            RegisterQuest(new QuestDefinition
+            {
+                QuestID = "MQ-01",
+                Title = "开窍仪式",
+                Description = "参加古月山寨的开窍仪式，测试你的资质",
+                BriefDescription = "参加开窍仪式",
+                Type = QuestType.MainStory,
+                IssuingFaction = FactionID.GuYue,
+                RequiredGuLevel = 1,
+                RequiredStoryPhase = StoryPhase.Arrival,
+                Objectives = new List<QuestObjective>
+                {
+                    new QuestObjective { ObjectiveID = "talk_elder", Description = "与学堂家老对话", Type = ObjectiveType.TalkToNPC, TargetAmount = 1, TargetNPCName = "学堂家老" }
+                },
+                Rewards = new List<QuestReward>
+                {
+                    new QuestReward { Type = QuestRewardType.Item, Amount = 1 },
+                    new QuestReward { Type = QuestRewardType.QiExp, Amount = 100 }
+                }
+            });
+
+            RegisterQuest(new QuestDefinition
+            {
+                QuestID = "MQ-02",
+                Title = "学堂入门",
+                Description = "进入学堂，学习蛊师基础知识",
+                BriefDescription = "完成学堂训练",
+                Type = QuestType.MainStory,
+                IssuingFaction = FactionID.GuYue,
+                RequiredGuLevel = 1,
+                RequiredStoryPhase = StoryPhase.AwakeningCeremony,
+                Objectives = new List<QuestObjective>
+                {
+                    new QuestObjective { ObjectiveID = "talk_instructor", Description = "与学堂教头对话", Type = ObjectiveType.TalkToNPC, TargetAmount = 1, TargetNPCName = "学堂教头" },
+                    new QuestObjective { ObjectiveID = "collect_yuanshi", Description = "收集元石", Type = ObjectiveType.CollectItem, TargetAmount = 5, TargetItemType = ModContent.ItemType<global::VerminLordMod.Content.Items.Consumables.YuanS>() },
+                    new QuestObjective { ObjectiveID = "kill_beasts", Description = "猎杀荒兽", Type = ObjectiveType.KillNPCType, TargetAmount = 3 }
+                },
+                Rewards = new List<QuestReward>
+                {
+                    new QuestReward { Type = QuestRewardType.QiExp, Amount = 200 }
+                }
+            });
+
+            RegisterQuest(new QuestDefinition
+            {
+                QuestID = "MQ-03",
+                Title = "药堂求助",
+                Description = "药堂家老需要帮助采集药材，这是获得家族认可的机会",
+                BriefDescription = "帮助药堂采集药材",
+                Type = QuestType.MainStory,
+                IssuingFaction = FactionID.GuYue,
+                RequiredGuLevel = 1,
+                RequiredStoryPhase = StoryPhase.SchoolTraining,
+                Objectives = new List<QuestObjective>
+                {
+                    new QuestObjective { ObjectiveID = "talk_medicine", Description = "与药堂家老对话", Type = ObjectiveType.TalkToNPC, TargetAmount = 1, TargetNPCName = "药堂家老" },
+                    new QuestObjective { ObjectiveID = "collect_herbs", Description = "采集灵草", Type = ObjectiveType.CollectItem, TargetAmount = 3 }
+                },
+                Rewards = new List<QuestReward>
+                {
+                    new QuestReward { Type = QuestRewardType.Reputation, Amount = 5, TargetFaction = FactionID.GuYue },
+                    new QuestReward { Type = QuestRewardType.QiExp, Amount = 300 }
+                }
+            });
+
+            RegisterQuest(new QuestDefinition
+            {
+                QuestID = "MQ-04",
+                Title = "贾金生之死",
+                Description = "贾金生被发现死在荒野中，你需要做出选择",
+                BriefDescription = "调查贾金生之死",
+                Type = QuestType.MainStory,
+                IssuingFaction = FactionID.GuYue,
+                RequiredGuLevel = 1,
+                RequiredStoryPhase = StoryPhase.MedicineRequest,
+                Objectives = new List<QuestObjective>
+                {
+                    new QuestObjective { ObjectiveID = "talk_tiexue", Description = "与铁血冷对话", Type = ObjectiveType.TalkToNPC, TargetAmount = 1, TargetNPCName = "铁血冷" },
+                    new QuestObjective { ObjectiveID = "search_body", Description = "搜索贾金生尸体", Type = ObjectiveType.SearchNode, TargetAmount = 1 },
+                    new QuestObjective { ObjectiveID = "talk_fangyuan", Description = "与方源对话", Type = ObjectiveType.TalkToNPC, TargetAmount = 1, TargetNPCName = "方源" }
+                },
+                Rewards = new List<QuestReward>
+                {
+                    new QuestReward { Type = QuestRewardType.QiExp, Amount = 500 }
+                }
+            });
+
+            RegisterQuest(new QuestDefinition
+            {
+                QuestID = "MQ-05",
+                Title = "花酒行者传承",
+                Description = "在青茅山深处发现了花酒行者的传承",
+                BriefDescription = "获取花酒行者传承",
+                Type = QuestType.MainStory,
+                IssuingFaction = FactionID.GuYue,
+                RequiredGuLevel = 2,
+                RequiredStoryPhase = StoryPhase.JiaJinShengDeath,
+                Objectives = new List<QuestObjective>
+                {
+                    new QuestObjective { ObjectiveID = "enter_cave", Description = "进入花酒洞府", Type = ObjectiveType.EnterTerritory, TargetAmount = 1 },
+                    new QuestObjective { ObjectiveID = "defeat_will", Description = "击败花酒行者意志", Type = ObjectiveType.KillNPC, TargetAmount = 1 }
+                },
+                Rewards = new List<QuestReward>
+                {
+                    new QuestReward { Type = QuestRewardType.Item, Amount = 1 },
+                    new QuestReward { Type = QuestRewardType.QiExp, Amount = 800 }
+                }
+            });
+
+            RegisterQuest(new QuestDefinition
+            {
+                QuestID = "MQ-06",
+                Title = "家族认可",
+                Description = "获得古月家族的正式认可，成为正式蛊师",
+                BriefDescription = "获得家族认可",
+                Type = QuestType.MainStory,
+                IssuingFaction = FactionID.GuYue,
+                RequiredGuLevel = 2,
+                RequiredStoryPhase = StoryPhase.HuaJiuInheritance,
+                Objectives = new List<QuestObjective>
+                {
+                    new QuestObjective { ObjectiveID = "reach_rep", Description = "达到古月家族声望等级3", Type = ObjectiveType.ReachRepLevel, TargetAmount = 3, TargetFaction = FactionID.GuYue },
+                    new QuestObjective { ObjectiveID = "talk_chief", Description = "与古月博对话", Type = ObjectiveType.TalkToNPC, TargetAmount = 1, TargetNPCName = "古月博" }
+                },
+                Rewards = new List<QuestReward>
+                {
+                    new QuestReward { Type = QuestRewardType.Reputation, Amount = 20, TargetFaction = FactionID.GuYue },
+                    new QuestReward { Type = QuestRewardType.QiExp, Amount = 1000 }
+                }
+            });
+
+            // === Stage2: 二转·家族争锋 ===
+            RegisterQuest(new QuestDefinition
+            {
+                QuestID = "MQ-07",
+                Title = "三寨大比",
+                Description = "参加青茅山三寨大比，展示你的实力",
+                BriefDescription = "参加三寨大比",
+                Type = QuestType.MainStory,
+                IssuingFaction = FactionID.GuYue,
+                RequiredGuLevel = 2,
+                RequiredStoryPhase = StoryPhase.PreTournament,
+                Objectives = new List<QuestObjective>
+                {
+                    new QuestObjective { ObjectiveID = "talk_chief_tournament", Description = "与古月博对话", Type = ObjectiveType.TalkToNPC, TargetAmount = 1, TargetNPCName = "古月博" },
+                    new QuestObjective { ObjectiveID = "win_final", Description = "赢得决赛", Type = ObjectiveType.KillNPC, TargetAmount = 1 }
+                },
+                Rewards = new List<QuestReward>
+                {
+                    new QuestReward { Type = QuestRewardType.YuanStones, Amount = 50 },
+                    new QuestReward { Type = QuestRewardType.QiExp, Amount = 1500 }
+                }
+            });
+
+            RegisterQuest(new QuestDefinition
+            {
+                QuestID = "MQ-08",
+                Title = "天鹤来袭",
+                Description = "天鹤上人袭击青茅山，保卫家园！",
+                BriefDescription = "抵御天鹤上人",
+                Type = QuestType.MainStory,
+                IssuingFaction = FactionID.GuYue,
+                RequiredGuLevel = 2,
+                RequiredStoryPhase = StoryPhase.TournamentFinal,
+                Objectives = new List<QuestObjective>
+                {
+                    new QuestObjective { ObjectiveID = "survive_waves", Description = "抵御天鹤攻击", Type = ObjectiveType.DefendWave, TargetAmount = 3 }
+                },
+                Rewards = new List<QuestReward>
+                {
+                    new QuestReward { Type = QuestRewardType.Reputation, Amount = 10, TargetFaction = FactionID.GuYue },
+                    new QuestReward { Type = QuestRewardType.QiExp, Amount = 2000 }
+                }
+            });
+
+            RegisterQuest(new QuestDefinition
+            {
+                QuestID = "MQ-09",
+                Title = "白凝冰的抉择",
+                Description = "白凝冰的空窍无法支撑，她做出了惊人的决定",
+                BriefDescription = "面对白凝冰的抉择",
+                Type = QuestType.MainStory,
+                IssuingFaction = FactionID.GuYue,
+                RequiredGuLevel = 2,
+                RequiredStoryPhase = StoryPhase.TianHeAttack,
+                Objectives = new List<QuestObjective>
+                {
+                    new QuestObjective { ObjectiveID = "talk_bainingbing", Description = "与白凝冰对话", Type = ObjectiveType.TalkToNPC, TargetAmount = 1, TargetNPCName = "白凝冰" }
+                },
+                Rewards = new List<QuestReward>
+                {
+                    new QuestReward { Type = QuestRewardType.QiExp, Amount = 1500 }
+                }
+            });
+
+            RegisterQuest(new QuestDefinition
+            {
+                QuestID = "MQ-10",
+                Title = "血祭之夜",
+                Description = "青茅山发生了不可挽回的事件……",
+                BriefDescription = "经历血祭之夜",
+                Type = QuestType.MainStory,
+                IssuingFaction = FactionID.GuYue,
+                RequiredGuLevel = 2,
+                RequiredStoryPhase = StoryPhase.BaiNingBingIceSeal,
+                Objectives = new List<QuestObjective>
+                {
+                    new QuestObjective { ObjectiveID = "talk_fangyuan_blood", Description = "与方源对话", Type = ObjectiveType.TalkToNPC, TargetAmount = 1, TargetNPCName = "方源" },
+                    new QuestObjective { ObjectiveID = "survive_blood", Description = "在血祭中存活", Type = ObjectiveType.DefendWave, TargetAmount = 5 }
+                },
+                Rewards = new List<QuestReward>
+                {
+                    new QuestReward { Type = QuestRewardType.QiExp, Amount = 3000 }
+                }
+            });
+
+            RegisterQuest(new QuestDefinition
+            {
+                QuestID = "MQ-11",
+                Title = "地脉守护者",
+                Description = "击败地脉守护者，打破青茅山的封印",
+                BriefDescription = "击败地脉守护者",
+                Type = QuestType.MainStory,
+                IssuingFaction = FactionID.GuYue,
+                RequiredGuLevel = 2,
+                RequiredStoryPhase = StoryPhase.BloodSacrifice,
+                Objectives = new List<QuestObjective>
+                {
+                    new QuestObjective { ObjectiveID = "defeat_guardian", Description = "击败地脉守护者", Type = ObjectiveType.KillNPC, TargetAmount = 1 }
+                },
+                Rewards = new List<QuestReward>
+                {
+                    new QuestReward { Type = QuestRewardType.Item, Amount = 1 },
+                    new QuestReward { Type = QuestRewardType.QiExp, Amount = 5000 }
+                }
+            });
+
+            RegisterQuest(new QuestDefinition
+            {
+                QuestID = "MQ-12",
+                Title = "离开青茅山",
+                Description = "青茅山已不再安全，是时候踏入更广阔的世界了",
+                BriefDescription = "离开青茅山",
+                Type = QuestType.MainStory,
+                IssuingFaction = FactionID.GuYue,
+                RequiredGuLevel = 2,
+                RequiredStoryPhase = StoryPhase.LeftQingMao,
+                Objectives = new List<QuestObjective>
+                {
+                    new QuestObjective { ObjectiveID = "talk_chief_leave", Description = "与古月博告别", Type = ObjectiveType.TalkToNPC, TargetAmount = 1, TargetNPCName = "古月博" },
+                    new QuestObjective { ObjectiveID = "get_letter", Description = "获取推荐信", Type = ObjectiveType.CollectItem, TargetAmount = 1 }
+                },
+                Rewards = new List<QuestReward>
+                {
+                    new QuestReward { Type = QuestRewardType.StoryProgress, Amount = 1 }
+                }
+            });
+
+            // === Stage3: 三转·南疆流浪 ===
+            RegisterQuest(new QuestDefinition
+            {
+                QuestID = "MQ-13",
+                Title = "南疆初到",
+                Description = "到达南疆散修营地，开始新的生活",
+                BriefDescription = "到达南疆",
+                Type = QuestType.MainStory,
+                RequiredGuLevel = 3,
+                RequiredStoryPhase = StoryPhase.SouthBorderArrival,
+                Objectives = new List<QuestObjective>
+                {
+                    new QuestObjective { ObjectiveID = "enter_south", Description = "进入南疆荒野", Type = ObjectiveType.EnterTerritory, TargetAmount = 1 },
+                    new QuestObjective { ObjectiveID = "talk_taibai", Description = "与太白云生对话", Type = ObjectiveType.TalkToNPC, TargetAmount = 1, TargetNPCName = "太白云生" }
+                },
+                Rewards = new List<QuestReward>
+                {
+                    new QuestReward { Type = QuestRewardType.QiExp, Amount = 2000 }
+                }
+            });
+
+            RegisterQuest(new QuestDefinition
+            {
+                QuestID = "MQ-14",
+                Title = "商心慈",
+                Description = "与商心慈建立关系，了解南疆的局势",
+                BriefDescription = "帮助商心慈",
+                Type = QuestType.MainStory,
+                RequiredGuLevel = 3,
+                RequiredStoryPhase = StoryPhase.ShangXinCiMeet,
+                Objectives = new List<QuestObjective>
+                {
+                    new QuestObjective { ObjectiveID = "talk_shangxinci", Description = "与商心慈对话", Type = ObjectiveType.TalkToNPC, TargetAmount = 3, TargetNPCName = "商心慈" },
+                    new QuestObjective { ObjectiveID = "collect_herbs_south", Description = "采集南疆药材", Type = ObjectiveType.CollectItem, TargetAmount = 5 }
+                },
+                Rewards = new List<QuestReward>
+                {
+                    new QuestReward { Type = QuestRewardType.Item, Amount = 1 },
+                    new QuestReward { Type = QuestRewardType.QiExp, Amount = 3000 }
+                }
+            });
+
+            RegisterQuest(new QuestDefinition
+            {
+                QuestID = "MQ-15",
+                Title = "三王传承",
+                Description = "完成三王传承副本，获得真传力量",
+                BriefDescription = "完成三王传承",
+                Type = QuestType.MainStory,
+                RequiredGuLevel = 3,
+                RequiredStoryPhase = StoryPhase.ThreeKingsInheritance,
+                Objectives = new List<QuestObjective>
+                {
+                    new QuestObjective { ObjectiveID = "defeat_inheritance", Description = "击败传承守护者", Type = ObjectiveType.KillNPC, TargetAmount = 1 },
+                    new QuestObjective { ObjectiveID = "collect_fragment", Description = "获取真传碎片", Type = ObjectiveType.CollectItem, TargetAmount = 1 }
+                },
+                Rewards = new List<QuestReward>
+                {
+                    new QuestReward { Type = QuestRewardType.Item, Amount = 3 },
+                    new QuestReward { Type = QuestRewardType.QiExp, Amount = 5000 }
+                }
+            });
+
+            RegisterQuest(new QuestDefinition
+            {
+                QuestID = "MQ-16",
+                Title = "春秋蝉",
+                Description = "在三王传承深处发现了春秋蝉的残影",
+                BriefDescription = "获取春秋蝉残影",
+                Type = QuestType.MainStory,
+                RequiredGuLevel = 3,
+                RequiredStoryPhase = StoryPhase.ChunQiuChanFragment,
+                Objectives = new List<QuestObjective>
+                {
+                    new QuestObjective { ObjectiveID = "collect_cicada", Description = "获取春秋蝉残影", Type = ObjectiveType.CollectItem, TargetAmount = 1 }
+                },
+                Rewards = new List<QuestReward>
+                {
+                    new QuestReward { Type = QuestRewardType.Item, Amount = 1 },
+                    new QuestReward { Type = QuestRewardType.QiExp, Amount = 3000 }
+                }
+            });
+
+            // === Stage4~6: 简略注册 ===
+            string[] stage4to6Quests = new[]
+            {
+                "MQ-17|义天山异变|YiTianShanAppears",
+                "MQ-18|大同风|DaTongFeng",
+                "MQ-19|方源真面目|FangYuanReveal",
+                "MQ-20|义天山终战|YiTianShanComplete",
+                "MQ-21|北原初到|NorthDesertArrival",
+                "MQ-22|王庭结盟|WangTingAlly",
+                "MQ-23|长生天|ChangShengTianContact",
+                "MQ-24|太白云生|TaiBaiYunShengDeath",
+                "MQ-25|天庭前奏|HeavenPrelude",
+                "MQ-26|宿命大战|DestinyWarBegin",
+                "MQ-27|龙公之战|LongGongPhase1",
+                "MQ-28|再战龙公|LongGongPhase2",
+                "MQ-29|宿命碎裂|DestinyShattered",
+                "MQ-30|升仙|Ascension"
+            };
+
+            foreach (var entry in stage4to6Quests)
+            {
+                var parts = entry.Split('|');
+                if (parts.Length == 3 && System.Enum.TryParse<StoryPhase>(parts[2], out var sp))
+                {
+                    RegisterQuest(new QuestDefinition
+                    {
+                        QuestID = parts[0],
+                        Title = parts[1],
+                        Description = parts[1],
+                        BriefDescription = parts[1],
+                        Type = QuestType.MainStory,
+                        RequiredStoryPhase = sp
+                    });
+                }
+            }
         }
 
         private void RegisterGuYueFactionQuests()
@@ -1281,16 +1663,7 @@ namespace VerminLordMod.Common.Systems
 
         public void OnQuestCompleted(QuestCompletedEvent evt)
         {
-            var player = Main.player[evt.PlayerID];
-            if (!player.active) return;
-
-            var tracker = player.GetModPlayer<QuestTrackerPlayer>();
-            var def = GetQuestDefinition(evt.QuestID);
-            if (def == null) return;
-
-            GrantRewards(player, def);
-            tracker.RemoveActiveQuest(evt.QuestID);
-            tracker.AddCompletedQuest(evt.QuestID);
+            // 奖励已在CompleteQuest中发放，此处不再重复
         }
 
         private void OnNPCDeathForQuest(NPCDeathEvent evt)

@@ -299,15 +299,15 @@ namespace VerminLordMod.Common.Systems
                 int x = startX + tile.X;
                 int y = startY + tile.Y;
 
-                if (!WorldGen.InWorld(x, y)) continue;
+                if (!global::Terraria.WorldGen.InWorld(x, y)) continue;
 
                 if (tile.IsWall)
                 {
-                    WorldGen.PlaceWall(x, y, tile.WallID);
+                    global::Terraria.WorldGen.PlaceWall(x, y, tile.WallID);
                 }
                 else
                 {
-                    WorldGen.PlaceTile(x, y, tile.TileID);
+                    global::Terraria.WorldGen.PlaceTile(x, y, tile.TileID);
                     if (Main.tile[x, y].HasTile)
                     {
                         Main.tile[x, y].TileFrameX = tile.FrameX;

@@ -12,7 +12,6 @@ using VerminLordMod.Content.NPCs.GuMasters;
 
 namespace VerminLordMod.Content.NPCs.FangYuan
 {
-    [AutoloadHead]
     public class MengQiuZhen : GuMasterBase
     {
         private int _attackTimer;

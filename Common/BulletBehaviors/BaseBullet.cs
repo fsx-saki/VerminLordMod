@@ -117,6 +117,7 @@ namespace VerminLordMod.Common.BulletBehaviors
         /// 返回 true 表示弹幕应销毁，false 表示继续存在。
         /// 默认返回 false（不销毁）。
         /// </summary>
-        protected virtual bool OnTileCollided(Vector2 oldVelocity) => false;
+        /// <summary>碰到物块时默认销毁弹幕；需要反弹的子类应重写返回 false</summary>
+        protected virtual bool OnTileCollided(Vector2 oldVelocity) => true;
     }
 }

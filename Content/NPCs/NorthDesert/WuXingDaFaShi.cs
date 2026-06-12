@@ -12,7 +12,6 @@ using VerminLordMod.Content.NPCs.GuMasters;
 
 namespace VerminLordMod.Content.NPCs.NorthDesert
 {
-    [AutoloadHead]
     public class WuXingDaFaShi : GuMasterBase
     {
         private int _attackTimer;

@@ -125,6 +125,13 @@ namespace VerminLordMod.Common.Systems
         public bool CanTriggerTribulation(Player player)
         {
             var qiRealm = player.GetModPlayer<QiRealmPlayer>();
+
+            // 检查剧情阶段门控
+            if (!global::VerminLordMod.Common.Systems.StoryPhaseGateSystem.CanBreakthrough(player, qiRealm.GuLevel + 1))
+            {
+                return false;
+            }
+
             if (qiRealm.BreakthroughProgress < 100f) return false;
             if (qiRealm.LevelStage != 3) return false;
             foreach (var t in ActiveTribulations)

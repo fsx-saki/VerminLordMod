@@ -8,7 +8,6 @@ using VerminLordMod.Content.NPCs.GuMasters;
 
 namespace VerminLordMod.Content.NPCs.GuYue
 {
-    [AutoloadHead]
     public class GuYueSecondTurnGuMaster : GuYueNPCBase
     {
         public override GuYueNPCType GetNPCType() => GuYueNPCType.SecondTurnGuMaster;

@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
+using VerminLordMod.Common.Events;
 using VerminLordMod.Common.DialogueTree.Actions;
 using VerminLordMod.Content.Dialogues.Stories;
 using VerminLordMod.Content.NPCs.GuMasters;
@@ -49,11 +50,51 @@ namespace VerminLordMod.Common.DialogueTree
         private static readonly Dictionary<StoryPhase, string> PhaseStoryMap = new()
         {
             { StoryPhase.Arrival, "Story_GuYueVillageEntry" },
+            { StoryPhase.AwakeningCeremony, "Story_AwakeningCeremony" },
             { StoryPhase.SchoolTraining, "Story_GuYueSchoolTrial" },
             { StoryPhase.MedicineRequest, "Story_GuYueMedicineRequest" },
+            { StoryPhase.JiaJinShengDeath, "Story_JiaJinShengDeath" },
+            { StoryPhase.HuaJiuInheritance, "Story_HuaJiuInheritance" },
             { StoryPhase.FamilyRecognition, "Story_GuYueFamilyRecognition" },
-            { StoryPhase.Crisis, "Story_GuYueCrisis" },
-            { StoryPhase.Finale, "Story_GuYueFinale" },
+            { StoryPhase.PreTournament, "Story_PreTournament" },
+            { StoryPhase.TournamentBegin, "Story_TournamentBegin" },
+            { StoryPhase.TournamentFinal, "Story_TournamentFinal" },
+            { StoryPhase.TianHeAttack, "Story_TianHeAttack" },
+            { StoryPhase.BaiNingBingIceSeal, "Story_BaiNingBingIceSeal" },
+            { StoryPhase.BloodSacrifice, "Story_BloodSacrifice" },
+            { StoryPhase.LeftQingMao, "Story_LeftQingMao" },
+            { StoryPhase.SouthBorderArrival, "Story_SouthBorderArrival" },
+            { StoryPhase.ShangXinCiMeet, "Story_ShangXinCiMeet" },
+            { StoryPhase.ThreeKingsInheritance, "Story_ThreeKingsInheritance" },
+            { StoryPhase.ChunQiuChanFragment, "Story_ChunQiuChanFragment" },
+            { StoryPhase.SanXiuCampComplete, "Story_SanXiuCampComplete" },
+            { StoryPhase.YiTianShanAppears, "Story_YiTianShanAppears" },
+            { StoryPhase.YiTianShanDungeon, "Story_YiTianShanDungeon" },
+            { StoryPhase.DaTongFeng, "Story_DaTongFeng" },
+            { StoryPhase.FangYuanReveal, "Story_FangYuanReveal" },
+            { StoryPhase.YiTianShanComplete, "Story_YiTianShanComplete" },
+            { StoryPhase.NorthDesertArrival, "Story_NorthDesertArrival" },
+            { StoryPhase.WangTingAlly, "Story_WangTingAlly" },
+            { StoryPhase.ChangShengTianContact, "Story_ChangShengTianContact" },
+            { StoryPhase.TaiBaiYunShengDeath, "Story_TaiBaiYunShengDeath" },
+            { StoryPhase.ImmortalZombieChoice, "Story_ImmortalZombieChoice" },
+            { StoryPhase.HeavenPrelude, "Story_HeavenPrelude" },
+            { StoryPhase.DestinyWarBegin, "Story_DestinyWarBegin" },
+            { StoryPhase.FourPillarsDown, "Story_FourPillarsDown" },
+            { StoryPhase.FactionChoice, "Story_FactionChoice" },
+            { StoryPhase.LongGongPhase1, "Story_LongGongPhase1" },
+            { StoryPhase.ChunQiuRebirth, "Story_ChunQiuRebirth" },
+            { StoryPhase.LongGongPhase2, "Story_LongGongPhase2" },
+            { StoryPhase.DestinyShattered, "Story_DestinyShattered" },
+            { StoryPhase.Ascension, "Story_Ascension" },
+            { StoryPhase.SevenTurnBegin, "Story_SevenTurnBegin" },
+            { StoryPhase.ApertureBuilt, "Story_ApertureBuilt" },
+            { StoryPhase.EightTurnBegin, "Story_EightTurnBegin" },
+            { StoryPhase.DaoLordChallenge, "Story_DaoLordChallenge" },
+            { StoryPhase.NineTurnBegin, "Story_NineTurnBegin" },
+            { StoryPhase.VenerableBattle, "Story_VenerableBattle" },
+            { StoryPhase.TenTurnFinale, "Story_TenTurnFinale" },
+            { StoryPhase.EndingChosen, "Story_EndingChosen" },
         };
 
         // ===== 阶段顺序 =====
@@ -61,11 +102,51 @@ namespace VerminLordMod.Common.DialogueTree
         {
             StoryPhase.NotEntered,
             StoryPhase.Arrival,
+            StoryPhase.AwakeningCeremony,
             StoryPhase.SchoolTraining,
             StoryPhase.MedicineRequest,
+            StoryPhase.JiaJinShengDeath,
+            StoryPhase.HuaJiuInheritance,
             StoryPhase.FamilyRecognition,
-            StoryPhase.Crisis,
-            StoryPhase.Finale,
+            StoryPhase.PreTournament,
+            StoryPhase.TournamentBegin,
+            StoryPhase.TournamentFinal,
+            StoryPhase.TianHeAttack,
+            StoryPhase.BaiNingBingIceSeal,
+            StoryPhase.BloodSacrifice,
+            StoryPhase.LeftQingMao,
+            StoryPhase.SouthBorderArrival,
+            StoryPhase.ShangXinCiMeet,
+            StoryPhase.ThreeKingsInheritance,
+            StoryPhase.ChunQiuChanFragment,
+            StoryPhase.SanXiuCampComplete,
+            StoryPhase.YiTianShanAppears,
+            StoryPhase.YiTianShanDungeon,
+            StoryPhase.DaTongFeng,
+            StoryPhase.FangYuanReveal,
+            StoryPhase.YiTianShanComplete,
+            StoryPhase.NorthDesertArrival,
+            StoryPhase.WangTingAlly,
+            StoryPhase.ChangShengTianContact,
+            StoryPhase.TaiBaiYunShengDeath,
+            StoryPhase.ImmortalZombieChoice,
+            StoryPhase.HeavenPrelude,
+            StoryPhase.DestinyWarBegin,
+            StoryPhase.FourPillarsDown,
+            StoryPhase.FactionChoice,
+            StoryPhase.LongGongPhase1,
+            StoryPhase.ChunQiuRebirth,
+            StoryPhase.LongGongPhase2,
+            StoryPhase.DestinyShattered,
+            StoryPhase.Ascension,
+            StoryPhase.SevenTurnBegin,
+            StoryPhase.ApertureBuilt,
+            StoryPhase.EightTurnBegin,
+            StoryPhase.DaoLordChallenge,
+            StoryPhase.NineTurnBegin,
+            StoryPhase.VenerableBattle,
+            StoryPhase.TenTurnFinale,
+            StoryPhase.EndingChosen,
         };
 
         // ============================================================
@@ -122,19 +203,23 @@ namespace VerminLordMod.Common.DialogueTree
                 progress.CompleteStory(storyID);
             }
 
+            // 记录旧阶段
+            StoryPhase oldPhase = progress.CurrentPhase;
+
             // 推进到下一阶段
             progress.CurrentPhase = PhaseOrder[currentIdx + 1];
 
             // 触发阶段进入事件
-            OnPhaseEnter(player, progress.CurrentPhase);
+            OnPhaseEnter(player, progress.CurrentPhase, oldPhase);
         }
 
         /// <summary> 直接设置阶段（用于调试或特殊跳转） </summary>
         public void SetPhase(Player player, StoryPhase phase)
         {
             var progress = GetProgress(player);
+            StoryPhase oldPhase = progress.CurrentPhase;
             progress.CurrentPhase = phase;
-            OnPhaseEnter(player, phase);
+            OnPhaseEnter(player, phase, oldPhase);
         }
 
         /// <summary> 标记某个剧情为已完成 </summary>
@@ -172,29 +257,180 @@ namespace VerminLordMod.Common.DialogueTree
         /// 子类可重写此方法以添加阶段进入时的特殊逻辑
         /// （如刷出新的 NPC、解锁区域、全局通知等）。
         /// </summary>
-        protected virtual void OnPhaseEnter(Player player, StoryPhase phase)
+        protected virtual void OnPhaseEnter(Player player, StoryPhase phase, StoryPhase oldPhase)
+        {
+            // 发布阶段推进事件
+            EventBus.Publish(new StoryPhaseAdvancedEvent
+            {
+                OldPhase = (int)oldPhase,
+                NewPhase = (int)phase,
+                PlayerID = player.whoAmI
+            });
+
+            // 显示Toast通知
+            var uiSystem = ModContent.GetInstance<global::VerminLordMod.Common.UI.StoryUI.StoryUISystem>();
+            string phaseName = phase switch
+            {
+                StoryPhase.Arrival => "初入山寨",
+                StoryPhase.AwakeningCeremony => "开窍仪式",
+                StoryPhase.SchoolTraining => "学堂历练",
+                StoryPhase.MedicineRequest => "药堂求助",
+                StoryPhase.JiaJinShengDeath => "贾金生之死",
+                StoryPhase.HuaJiuInheritance => "花酒行者传承",
+                StoryPhase.FamilyRecognition => "家族认可",
+                StoryPhase.PreTournament => "三寨大比前夕",
+                StoryPhase.TournamentFinal => "三寨大比决赛",
+                StoryPhase.TianHeAttack => "天鹤来袭！",
+                StoryPhase.BaiNingBingIceSeal => "白凝冰的抉择",
+                StoryPhase.BloodSacrifice => "血祭之夜",
+                StoryPhase.LeftQingMao => "离开青茅山",
+                StoryPhase.SouthBorderArrival => "到达南疆",
+                StoryPhase.ThreeKingsInheritance => "三王传承",
+                StoryPhase.ChunQiuChanFragment => "春秋蝉残影",
+                StoryPhase.YiTianShanAppears => "义天山异变！",
+                StoryPhase.FangYuanReveal => "方源真面目！",
+                StoryPhase.NorthDesertArrival => "到达北原",
+                StoryPhase.TaiBaiYunShengDeath => "太白云生",
+                StoryPhase.DestinyWarBegin => "宿命大战！",
+                StoryPhase.FactionChoice => "阵营选择",
+                StoryPhase.LongGongPhase1 => "龙公之战",
+                StoryPhase.ChunQiuRebirth => "春秋蝉回溯！",
+                StoryPhase.DestinyShattered => "宿命碎裂！",
+                StoryPhase.Ascension => "升仙！",
+                StoryPhase.SevenTurnBegin => "七转·蛊仙之路",
+                StoryPhase.DaoLordChallenge => "道主争夺",
+                StoryPhase.VenerableBattle => "尊者之战",
+                StoryPhase.TenTurnFinale => "十转终局",
+                StoryPhase.EndingChosen => "结局",
+                _ => phase.ToString()
+            };
+
+            Color msgColor = phase switch
+            {
+                StoryPhase.TianHeAttack or StoryPhase.BloodSacrifice or StoryPhase.DestinyWarBegin
+                    => Color.Red,
+                StoryPhase.Ascension or StoryPhase.DestinyShattered or StoryPhase.ChunQiuRebirth
+                    => Color.Gold,
+                _ => Color.Gold
+            };
+
+            Main.NewText($"[蛊世界] 剧情推进——{phaseName}", msgColor);
+
+            if (uiSystem != null)
+            {
+                uiSystem.ShowToast(phaseName, msgColor, 6f);
+            }
+
+            // ==================== 阶段推进世界效果 ====================
+            ApplyPhaseWorldEffects(player, phase);
+        }
+
+        /// <summary>
+        /// 根据阶段应用世界变化效果（刷NPC、给物品、解锁系统等）
+        /// </summary>
+        private void ApplyPhaseWorldEffects(Player player, StoryPhase phase)
         {
             switch (phase)
             {
-                case StoryPhase.Arrival:
-                    Main.NewText("[古月山寨] 你来到了古月山寨的地界。", Microsoft.Xna.Framework.Color.Gold);
+                // === Stage1 ===
+                case StoryPhase.AwakeningCeremony:
+                    // 开窍仪式完成，解锁空窍系统
+                    GiveItemSafe(player, "开窍丹", 1);
                     break;
-                case StoryPhase.SchoolTraining:
-                    Main.NewText("[古月山寨] 守门蛊师放行，你进入了山寨内部。", Microsoft.Xna.Framework.Color.Gold);
+
+                case StoryPhase.HuaJiuInheritance:
+                    // 花酒传承，获得洗髓蛊
+                    GiveItemSafe(player, "洗髓蛊", 1);
                     break;
-                case StoryPhase.MedicineRequest:
-                    Main.NewText("[古月山寨] 学堂教头认可了你的实力。", Microsoft.Xna.Framework.Color.Gold);
-                    break;
+
                 case StoryPhase.FamilyRecognition:
-                    Main.NewText("[古月山寨] 你完成了药堂的委托，家族开始重视你。", Microsoft.Xna.Framework.Color.Gold);
+                    // 家族认可，获得家族令
+                    GiveItemSafe(player, "古月家族令", 1);
                     break;
-                case StoryPhase.Crisis:
-                    Main.NewText("[古月山寨] 警报！山寨遭遇袭击！", Microsoft.Xna.Framework.Color.Red);
+
+                // === Stage2 ===
+                case StoryPhase.PreTournament:
+                    // 三寨大比前夕，获得参赛资格
+                    GiveItemSafe(player, "三寨大比令", 1);
                     break;
-                case StoryPhase.Finale:
-                    Main.NewText("[古月山寨] 危机解除，你成为了古月家族的座上宾。", Microsoft.Xna.Framework.Color.Gold);
+
+                case StoryPhase.BloodSacrifice:
+                    // 血祭之夜，世界变暗
+                    // 天气联动由StoryWeatherIntegration处理
+                    break;
+
+                case StoryPhase.LeftQingMao:
+                    // 离开青茅山，获得推荐信
+                    GiveItemSafe(player, "推荐信", 1);
+                    break;
+
+                // === Stage3 ===
+                case StoryPhase.SouthBorderArrival:
+                    // 到达南疆，解锁散修声望
+                    break;
+
+                case StoryPhase.ChunQiuChanFragment:
+                    // 获得春秋蝉残影
+                    GiveItemSafe(player, "春秋蝉·残影", 1);
+                    break;
+
+                // === Stage4 ===
+                case StoryPhase.YiTianShanAppears:
+                    // 义天山异变，获得义天山令
+                    GiveItemSafe(player, "义天山令", 1);
+                    break;
+
+                case StoryPhase.FangYuanReveal:
+                    // 方源暴露，获得影宗情报
+                    break;
+
+                // === Stage5 ===
+                case StoryPhase.NorthDesertArrival:
+                    // 到达北原
+                    break;
+
+                case StoryPhase.HeavenPrelude:
+                    // 天庭前奏，获得天庭通告
+                    GiveItemSafe(player, "天庭通告", 1);
+                    break;
+
+                // === Stage6 ===
+                case StoryPhase.DestinyWarBegin:
+                    // 宿命大战开始
+                    break;
+
+                case StoryPhase.ChunQiuRebirth:
+                    // 春秋蝉回溯，获得宿命回溯Buff
+                    player.AddBuff(Terraria.ID.BuffID.IceBarrier, 18000); // 5分钟防护
+                    break;
+
+                case StoryPhase.Ascension:
+                    // 升仙完成
+                    global::VerminLordMod.Common.Systems.DownBossSystem.hasAscended = true;
+                    break;
+
+                // === Stage7 ===
+                case StoryPhase.SevenTurnBegin:
+                    // 七转开始，获得仙窍入口
+                    GiveItemSafe(player, "仙窍入口", 1);
                     break;
             }
+        }
+
+        /// <summary> 安全地给予玩家物品（通过名称查找） </summary>
+        private void GiveItemSafe(Player player, string itemName, int count)
+        {
+            // 尝试通过物品名称找到对应的ModItem
+            foreach (var modItem in ModContent.GetContent<ModItem>())
+            {
+                if (modItem.Name == itemName || modItem.Item.Name == itemName)
+                {
+                    player.QuickSpawnItem(null, modItem.Item.type, count);
+                    return;
+                }
+            }
+            // 如果找不到对应物品，只显示消息
+            Main.NewText($"[蛊世界] 获得：{itemName}×{count}", Microsoft.Xna.Framework.Color.Yellow);
         }
 
         // ============================================================
@@ -216,40 +452,131 @@ namespace VerminLordMod.Common.DialogueTree
 
                 switch (phase)
                 {
+                    // === Stage1: 一转·蛊师入门 ===
                     case StoryPhase.Arrival:
-                        // 守门蛊师触发"山寨来客"剧情
                         if (npcTypeName.Contains("PatrolGuMaster") || npcTypeName.Contains("Commoner"))
                             return CreateProvider<GuYueVillageEntry>();
                         break;
 
+                    case StoryPhase.AwakeningCeremony:
                     case StoryPhase.SchoolTraining:
-                        // 学堂教头触发"学堂考验"剧情
                         if (npcTypeName.Contains("SchoolElder") || npcTypeName.Contains("FistInstructor"))
                             return CreateProvider<GuYueSchoolTrial>();
                         break;
 
                     case StoryPhase.MedicineRequest:
-                        // 药堂家老触发"药堂秘方"剧情
                         if (npcTypeName.Contains("MedicineElder") || npcTypeName.Contains("MedicinePulseElder"))
                             return CreateProvider<GuYueMedicineRequest>();
                         break;
 
                     case StoryPhase.FamilyRecognition:
-                        // 族长触发"家族认可"剧情
                         if (npcTypeName.Contains("Chief"))
                             return CreateProvider<GuYueFamilyRecognition>();
                         break;
 
-                    case StoryPhase.Crisis:
-                        // 御堂家老触发"危机降临"剧情
+                    // === Stage2: 二转·家族争锋 ===
+                    case StoryPhase.PreTournament:
+                    case StoryPhase.TournamentBegin:
+                    case StoryPhase.TournamentFinal:
+                        if (npcTypeName.Contains("Chief") || npcTypeName.Contains("GuYueBo"))
+                            return CreateProvider<GuYueFamilyRecognition>();
+                        break;
+
+                    case StoryPhase.TianHeAttack:
+                        if (npcTypeName.Contains("DefenseElder") || npcTypeName.Contains("Chief"))
+                            return CreateProvider<Stage2TianHeAttack>();
+                        break;
+
+                    case StoryPhase.BaiNingBingIceSeal:
+                        if (npcTypeName.Contains("BaiNingBing") || npcTypeName.Contains("Bai"))
+                            return CreateProvider<Stage2BaiNingBing>();
+                        break;
+
+                    case StoryPhase.BloodSacrifice:
+                        if (npcTypeName.Contains("FangYuan") || npcTypeName.Contains("GuYueFangYuan"))
+                            return CreateProvider<Stage2BloodSacrifice>();
                         if (npcTypeName.Contains("DefenseElder") || npcTypeName.Contains("Chief"))
                             return CreateProvider<GuYueCrisis>();
                         break;
 
-                    case StoryPhase.Finale:
-                        // 族长触发终章
+                    case StoryPhase.LeftQingMao:
                         if (npcTypeName.Contains("Chief"))
                             return CreateProvider<GuYueFinale>();
+                        break;
+
+                    // === Stage3: 三转·南疆流浪 ===
+                    case StoryPhase.SouthBorderArrival:
+                        if (npcTypeName.Contains("TaiBaiYunSheng"))
+                            return CreateProvider<Stage3SouthBorderArrival>();
+                        break;
+
+                    case StoryPhase.ShangXinCiMeet:
+                        if (npcTypeName.Contains("ShangXinCi"))
+                            return CreateProvider<Stage3ShangXinCiMeet>();
+                        break;
+
+                    case StoryPhase.ThreeKingsInheritance:
+                    case StoryPhase.ChunQiuChanFragment:
+                    case StoryPhase.SanXiuCampComplete:
+                        if (npcTypeName.Contains("TaiBaiYunSheng"))
+                            return CreateProvider<Stage3SouthBorderArrival>();
+                        if (npcTypeName.Contains("ShangXinCi"))
+                            return CreateProvider<Stage3ShangXinCiMeet>();
+                        break;
+
+                    // === Stage4: 四转·义天山大战 ===
+                    case StoryPhase.YiTianShanAppears:
+                    case StoryPhase.YiTianShanDungeon:
+                        if (npcTypeName.Contains("TaiBaiYunSheng"))
+                            return CreateProvider<Stage4YiTianShanAppears>();
+                        break;
+
+                    case StoryPhase.DaTongFeng:
+                    case StoryPhase.FangYuanReveal:
+                    case StoryPhase.YiTianShanComplete:
+                        if (npcTypeName.Contains("FangYuan") || npcTypeName.Contains("GuYueFangYuan"))
+                            return CreateProvider<Stage2BloodSacrifice>();
+                        if (npcTypeName.Contains("TaiBaiYunSheng"))
+                            return CreateProvider<Stage4YiTianShanAppears>();
+                        break;
+
+                    // === Stage5: 五转·北原争霸 ===
+                    case StoryPhase.NorthDesertArrival:
+                    case StoryPhase.WangTingAlly:
+                        if (npcTypeName.Contains("HeiLouLan"))
+                            return CreateProvider<Stage5NorthDesertArrival>();
+                        break;
+
+                    case StoryPhase.ChangShengTianContact:
+                    case StoryPhase.TaiBaiYunShengDeath:
+                    case StoryPhase.ImmortalZombieChoice:
+                    case StoryPhase.HeavenPrelude:
+                        if (npcTypeName.Contains("HeiLouLan"))
+                            return CreateProvider<Stage5NorthDesertArrival>();
+                        break;
+
+                    // === Stage6: 六转·宿命大战与升仙 ===
+                    case StoryPhase.DestinyWarBegin:
+                    case StoryPhase.FourPillarsDown:
+                    case StoryPhase.FactionChoice:
+                    case StoryPhase.LongGongPhase1:
+                    case StoryPhase.ChunQiuRebirth:
+                    case StoryPhase.LongGongPhase2:
+                    case StoryPhase.DestinyShattered:
+                    case StoryPhase.Ascension:
+                        // Stage6 使用通用对话，由具体Boss/NPC触发
+                        break;
+
+                    // === Stage7: 七转以上·蛊仙之路 ===
+                    case StoryPhase.SevenTurnBegin:
+                    case StoryPhase.ApertureBuilt:
+                    case StoryPhase.EightTurnBegin:
+                    case StoryPhase.DaoLordChallenge:
+                    case StoryPhase.NineTurnBegin:
+                    case StoryPhase.VenerableBattle:
+                    case StoryPhase.TenTurnFinale:
+                    case StoryPhase.EndingChosen:
+                        // Stage7 全部原创，后续扩展
                         break;
                 }
             }

@@ -139,6 +139,14 @@ namespace VerminLordMod.Common.Players
         /// </summary>
         public void StageUp()
         {
+            // 巅峰突破时检查下一大境界门控
+            if (LevelStage >= 3 && !global::VerminLordMod.Common.Systems.StoryPhaseGateSystem.CanBreakthrough(Player, GuLevel + 1))
+            {
+                string reason = global::VerminLordMod.Common.Systems.StoryPhaseGateSystem.GetBlockReason(Player, GuLevel + 1);
+                Terraria.Main.NewText($"[蛊世界] {reason}", Microsoft.Xna.Framework.Color.OrangeRed);
+                return;
+            }
+
             if (LevelStage >= 3) return;
 
             // D-33：检查并消耗元石
@@ -180,6 +188,14 @@ namespace VerminLordMod.Common.Players
         /// </summary>
         public void LevelUp()
         {
+            // 检查剧情阶段门控
+            if (!global::VerminLordMod.Common.Systems.StoryPhaseGateSystem.CanBreakthrough(Player, GuLevel + 1))
+            {
+                string reason = global::VerminLordMod.Common.Systems.StoryPhaseGateSystem.GetBlockReason(Player, GuLevel + 1);
+                Terraria.Main.NewText($"[蛊世界] {reason}", Microsoft.Xna.Framework.Color.OrangeRed);
+                return;
+            }
+
             // D-33：检查并消耗元石
             int cost = GetBreakthroughCost();
             if (!ConsumeYuanStones(cost))

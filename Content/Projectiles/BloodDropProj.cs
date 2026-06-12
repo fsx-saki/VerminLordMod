@@ -98,5 +98,6 @@ namespace VerminLordMod.Content.Projectiles
                     sizeMultiplier: 0.35f);
             }
         }
+        protected override bool OnTileCollided(Vector2 oldVelocity) => false;
     }
 }

@@ -21,6 +21,9 @@ namespace VerminLordMod.Common.Systems
         // ===== 单例 =====
         public static NPCSocialNetwork Instance => ModContent.GetInstance<NPCSocialNetwork>();
 
+        // ===== EventBus订阅标记 =====
+        private bool _storySubscribed = false;
+
         // ===== 关系图 =====
         /// <summary> NPC type → 盟友 NPC types </summary>
         public Dictionary<int, HashSet<int>> AllyGraph = new();
@@ -269,6 +272,34 @@ namespace VerminLordMod.Common.Systems
             AllyGraph.Clear();
             RivalGraph.Clear();
             RegisterDefaultRelations();
+
+            if (!_storySubscribed)
+            {
+                global::VerminLordMod.Common.Events.EventBus.Subscribe<global::VerminLordMod.Common.Events.StoryPhaseAdvancedEvent>(OnStoryPhaseAdvanced);
+                global::VerminLordMod.Common.Events.EventBus.Subscribe<global::VerminLordMod.Common.Events.ChoiceMadeEvent>(OnChoiceMadeForNetwork);
+                _storySubscribed = true;
+            }
+        }
+
+        private void OnStoryPhaseAdvanced(global::VerminLordMod.Common.Events.StoryPhaseAdvancedEvent e)
+        {
+            // 阶段推进时向相关势力NPC传播信息
+            var phase = (global::VerminLordMod.Common.DialogueTree.StoryPhase)e.NewPhase;
+            string message = phase switch
+            {
+                global::VerminLordMod.Common.DialogueTree.StoryPhase.TianHeAttack => "外敌来袭！",
+                global::VerminLordMod.Common.DialogueTree.StoryPhase.BloodSacrifice => "血祭之夜！",
+                global::VerminLordMod.Common.DialogueTree.StoryPhase.DestinyWarBegin => "宿命大战！",
+                _ => null
+            };
+            // 传播逻辑由SpreadAlert处理
+        }
+
+        private void OnChoiceMadeForNetwork(global::VerminLordMod.Common.Events.ChoiceMadeEvent e)
+        {
+            // 选择后果通过社交网络传播
+            // ChoiceConsequenceSystem已处理NPC好感度修正
+            // 此处可添加额外的传播逻辑（如通知盟友）
         }
 
         public override void OnWorldUnload()

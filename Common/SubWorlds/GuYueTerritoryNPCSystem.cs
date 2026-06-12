@@ -39,8 +39,8 @@ namespace VerminLordMod.Common.SubWorlds
     /// - SchoolTraining: 解锁学堂区域，生成教头和学员
     /// - MedicineRequest: 解锁药堂区域，生成药老和药童
     /// - FamilyRecognition: 解锁议事厅，族长出现
-    /// - Crisis: 生成更多御堂守卫，部分NPC转为战斗状态
-    /// - Finale: 所有NPC回归和平状态
+    /// - BloodSacrifice: 生成更多御堂守卫，部分NPC转为战斗状态
+    /// - LeftQingMao: 所有NPC回归和平状态
     /// </summary>
     public class GuYueTerritoryNPCSystem : ModSystem
     {
@@ -139,7 +139,7 @@ namespace VerminLordMod.Common.SubWorlds
                 { GuYueNPCType.Servant, 10 },
                 { GuYueNPCType.Commoner, 14 },
             },
-            [StoryPhase.Crisis] = new()
+            [StoryPhase.BloodSacrifice] = new()
             {
                 { GuYueNPCType.Chief, 1 },
                 { GuYueNPCType.SchoolElder, 1 },
@@ -155,7 +155,7 @@ namespace VerminLordMod.Common.SubWorlds
                 { GuYueNPCType.Servant, 5 },
                 { GuYueNPCType.Commoner, 5 },
             },
-            [StoryPhase.Finale] = new()
+            [StoryPhase.LeftQingMao] = new()
             {
                 { GuYueNPCType.Chief, 1 },
                 { GuYueNPCType.SchoolElder, 1 },

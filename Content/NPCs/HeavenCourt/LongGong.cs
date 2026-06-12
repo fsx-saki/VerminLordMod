@@ -12,7 +12,6 @@ using VerminLordMod.Content.NPCs.GuMasters;
 
 namespace VerminLordMod.Content.NPCs.HeavenCourt
 {
-    [AutoloadHead]
     public class LongGong : GuMasterBase
     {
         private int _attackTimer;

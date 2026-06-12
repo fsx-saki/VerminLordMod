@@ -121,5 +121,6 @@ namespace VerminLordMod.Content.Projectiles.Zero
                 _explosionBehavior.KillSizeMultiplier = 0.6f * _sizeScale;
             }
         }
+        protected override bool OnTileCollided(Vector2 oldVelocity) => false;
     }
 }

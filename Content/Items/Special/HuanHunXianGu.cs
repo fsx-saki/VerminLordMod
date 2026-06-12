@@ -6,7 +6,7 @@ using VerminLordMod.Common.ImplementationTracker;
 namespace VerminLordMod.Content.Items.Special
 {
     [ImplStatus(ImplStatus.Implemented, "六转魂道仙蛊", "六转", "魂")]
-    public class HuanHunXianGu : ModItem
+    public class HuanHunXianGuSpecial : ModItem
     {
         public override void SetDefaults()
         {
