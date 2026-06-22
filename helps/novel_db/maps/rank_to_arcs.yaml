@@ -1,0 +1,51 @@
+ranks:
+- rank: 一转
+  arc: 01_qingmao_shan
+  chapter_range:
+  - 1
+  - 117
+- rank: 二转
+  arc: 02_jiazu_zhengfeng
+  chapter_range:
+  - 118
+  - 221
+- rank: 三转
+  arc: 03_nanjiang_liulang
+  chapter_range:
+  - 222
+  - 365
+- rank: 四转
+  arc: 04_yitian_shan
+  chapter_range:
+  - 366
+  - 487
+- rank: 五转
+  arc: 05_beiyuan_zhengba
+  chapter_range:
+  - 488
+  - 653
+- rank: 六转
+  arc: 06_suming_dazhan
+  chapter_range:
+  - 654
+  - 972
+- rank: 七转
+  arc: 07_guixian_zhilu
+  chapter_range:
+  - 973
+  - 1380
+- rank: 八转
+  arc: 08_daozhu_zhengduo
+  chapter_range:
+  - 1381
+  - 1700
+- rank: 九转
+  arc: 09_zunzhe_zhizhan
+  chapter_range:
+  - 1701
+  - 2100
+- rank: 十转
+  arc: 10_zhongju
+  chapter_range:
+  - 2101
+  - 2200

@@ -1,0 +1,22 @@
+# 蛊真人 · 小说知识库元信息
+version: 1
+last_updated: 2026-06-22
+data_source: /home/fsx/Documents/novel_analyzer/novel.db
+
+# 数据统计
+total_chapter_entries: 945   # 数据库中的章节条目数
+unique_chapters: 945
+total_entities: 1547
+  persons: 667
+  gu_worms: 603
+  locations: 277
+
+# 已完成篇章
+arcs_covered: 6  # 第1-6篇（青茅山～宿命大战）
+chapters_covered: "001-950"
+arc_yamls: 6
+chapter_yamls: 95
+
+# 状态
+status: active
+next_task: 实现 C# UI 加载层 (NovelDataLoader + NovelUISystem)

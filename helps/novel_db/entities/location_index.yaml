@@ -1,0 +1,3030 @@
+locations:
+- name: 青茅山
+  aliases: []
+  summary: 古月山寨所在之地，盛产青矛竹，势力格局有古月、白家、熊家三寨。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 春雨绵绵，悄无声息地滋润着青茅山。
+    - 青茅山的后山，是一道大瀑布。
+    - 青茅山太小了，装载不了他的野心...
+    background:
+    - 山中有竹林、瀑布、河滩等
+- name: 家主阁
+  aliases: []
+  summary: 古月山寨中央的建筑，高达五层，是权利中枢，内供先祖牌位。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 家主阁就处在山寨的正中央，高达五层，飞檐翘角，重兵把守。
+- name: 地下溶洞
+  aliases: []
+  summary: 古月山寨地下的天然溶洞，有钟乳石和灵泉，开窍大典在此举行。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 顺着打造好的石梯，就进入地下溶洞。少年们纷纷发出惊叹之声。
+- name: 花海
+  aliases:
+  - 月兰花海
+  summary: 地下河对岸的月兰花海，用于开窍测试，希望蛊栖息其中。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 河的对岸，是一片花海。这是古月一族有意栽培的月兰花。
+- name: 灵泉
+  aliases: []
+  summary: 古月山寨地下溶洞的灵泉，产出大量元石，是家族根基。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 古月一族从中土迁徙到南疆，在这青茅山驻扎下来。就是看中了这里地下溶洞的一口灵泉。
+- name: 白家山寨
+  aliases: []
+  summary: 青茅山另一势力，与古月山寨相邻
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 位于青茅山瀑布旁
+    source:
+    - 深潭旁，就是白家山寨，势力雄浑，和古月山寨只强不弱。
+    - 白家山寨，势力雄浑，和古月山寨只强不弱。
+- name: 客栈
+  aliases: []
+  summary: 方源暂居的客栈，位于古月山寨
+  rank: ''
+  first_appear_title: ''
+  details:
+    appearance:
+    - 两层竹楼
+    source:
+    - 他回到客栈。
+- name: 学堂
+  aliases:
+  - 家族学堂
+  - 古月学堂
+  summary: 古月一族培养年轻蛊师的机构，学员在此学习基础战斗和修行。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 就去学堂，领取头名奖励！
+    - 学堂家老眉头扬起，笑了起来...
+    - 学堂大门...
+    appearance:
+    - 位于古月山寨内，有教室和宿舍
+    background:
+    - 方源、方正等学员在此学习，家老主持考核
+- name: 山壁秘洞
+  aliases:
+  - 秘洞
+  summary: 花酒行者尸骨所在的隐秘山洞，位于山壁内
+  rank: ''
+  first_appear_title: ''
+  details:
+    appearance:
+    - 约八十平方米，红光照亮，石壁潮湿有青苔和枯藤
+    background:
+    - 花酒行者最终葬身之处
+    source:
+    - 一个大约有八十平方米的空间，展现在方源面前。
+- name: 白骨山
+  aliases: []
+  summary: 南疆一座高耸入云的山峰，山石均为骨质，呈惨白之色。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 倒是附近的白骨山，有一位正道的四转蛊师秘密立下的力量传承。
+    - 很接近白骨山了。
+    - 在他的记忆中，白骨山中藏有一个密藏传承，乃是一位正道四转蛊师所设，留待有缘人。
+- name: 贾家寨
+  aliases: []
+  summary: 贾家家族的本寨，贾家家主白手起家建立。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 贾家寨的这些破事，又不是什么机密...
+- name: 石缝秘洞
+  aliases:
+  - 金蜈洞
+  summary: 方源发现的秘密洞穴，内有甬道和密室，是花酒行者力量传承的所在地。
+  rank: ''
+  first_appear_title: ''
+  details:
+    appearance:
+    - 有赤光笼罩，甬道昏暗，底部有巨石挡路
+    background:
+    - 方源用于藏匿兽皮地图和修行白豕蛊的秘密基地
+    source:
+    - 回到赤光笼罩的秘洞中，方源随手将两个野猪牙抛在了角落里。
+    - 他径直钻进了甬道，再次来到甬道底部。
+    - 他准备再入石缝秘洞！
+- name: 地下石林
+  aliases: []
+  summary: 青茅山内的地下空间，充满石柱和玉眼石猴，面积三十多亩。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 而是一片宽敞的地下石林。
+    - 这片地下石林的面积，至少有三十多亩！
+- name: 山脚村庄
+  aliases:
+  - 村
+  summary: 江鹤所在的村庄，靠近古月山寨。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 直接来到山脚下的村庄
+- name: 北大门
+  aliases: []
+  summary: 古月山寨的北门。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 方源来到了山寨北大门
+- name: 狼巢
+  aliases: []
+  summary: 电狼的巢穴，正在壮大。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 狼巢那边闹得有点凶
+- name: 酒肆
+  aliases:
+  - 东门酒肆
+  summary: 方源继承的酒肆，位于古月山寨东门，是方源的重要产业，也是方源与各种人物会面的地点。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 方源父母留下的产业，方源在此经营，曾发生蛮石闹事事件。
+    source:
+    - 东门的酒肆。
+    - 酒肆中有些冷清。
+    - 酒肆门口。
+- name: 会盟坡
+  aliases: []
+  summary: 三族斗蛊大会举行地点，后成为三族会盟地点。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 会盟坡上，蛊师们的三大家族阵营，已经再不像之前那般泾渭分明。
+- name: 天然元泉
+  aliases:
+  - 元泉
+  - 泉眼
+  summary: 白家禁地中的天然元泉，是家族屹立的根本，可产生元石供给修行。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 这里难道就是元泉？
+    - 每一个家族屹立的根本，就是一道天然元泉，可以凭此产生的元石供给修行。
+- name: 血湖墓地
+  aliases:
+  - 血湖
+  - 血湖战场
+  summary: 地下巨大的血湖空间，古月一代的巢穴，铁血冷与古月一代激战之处。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 血湖不断地掀起滔天血浪
+    - 血湖中央，一个漩涡
+- name: 三族大比战场
+  aliases:
+  - 山坡
+  - 百里范围内
+  summary: 三族大比预选赛的野外战场，方圆百里，方源与白凝冰在此激战。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 这是三族大比武的战场！
+- name: 黄龙江
+  aliases: []
+  summary: 南疆第三江，全长八千多公里，流经青茅山、白骨山等多山。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 黄龙江，南疆第三江，全长八千多公里，发源于黄果山，流经玄冥山、龟背山、青茅山、白骨山、雷磁山等，最后流入到海。
+    - 黄龙江水流湍急，黄水滔滔。
+- name: 螺旋骨洞
+  aliases: []
+  summary: 白骨山内的山洞，壁上有螺旋骨刺，为传承入口。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 山洞壁周围长着尖锐骨刺，螺旋状，是机关入口。
+- name: 肉囊秘阁
+  aliases: []
+  summary: 传承终点密室，墙壁由肉笑蛊构成，内含藏蛊的嘴巴。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 密室上下左右皆为肉壁，肉壁上镶嵌无数张嘴，发出笑声。
+- name: 紫幽山
+  aliases: []
+  summary: 南疆山脉，方白二人逃亡中途经之地，村庄所在地。
+  rank: ''
+  first_appear_title: ''
+  details:
+    appearance:
+    - 远望一片暗紫色，幽静神秘
+    background:
+    - 常有商队途经，盛产紫枫叶
+    source:
+    - 远望，紫幽山上一片暗紫色，幽静而又神秘。
+- name: 商家城
+  aliases:
+  - 商量山
+  - 商家的山城
+  summary: 南疆第一面积的城市，建立在商量山上，分为内城和外城，有美食区、斗蛊区等众多区域。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 商家大本营，商心慈最终到达并被父亲相认之地
+    - 商家大本营，商燕飞曾在此居住小院，后传给商心慈。
+    source:
+    - 看来只有到商家城，再行采购了。
+    - 运到商家城去，能卖出高达一倍的价钱。
+    - 在他们的视野中，出现了商量山。
+    appearance:
+    - 星星石建筑，星光连绵，第三内城寸土寸金
+    ability:
+    - 无
+- name: 黄金山
+  aliases: []
+  summary: 金家寨所在的山，盛产黄金油灯等特产。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 在这黄金山，你却能卖出好价钱。
+- name: 金家寨
+  aliases: []
+  summary: 金家族的聚居地，位于黄金山。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 在金家寨停留了多日后
+- name: 啸月山
+  aliases: []
+  summary: 南疆狼群聚集的山，有各种狼群。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 我们已经进入啸月山的地段
+- name: 象牙山
+  aliases: []
+  summary: 有白羽飞象的山，山脚雨林，山腰雪林。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 象牙山高耸入云，栖息着大量的象群。
+- name: 墓碑山
+  aliases: []
+  summary: 南疆的山区，商路必经之地，多僵尸和二代僵王传承。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 墓碑山位于南疆最重要的三大商路之一
+    - 墓碑山中的一处山洞
+    - 我如果墓碑山十几次
+- name: 沼泽山
+  aliases: []
+  summary: 二代僵王所在之地，丁浩的目标地点。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 前往沼泽山，正式成为师父的弟子了！
+    - 可去沼泽山拜师
+- name: 双将山
+  aliases: []
+  summary: 双子峰，中间隔着悬壁山谷，商路中的一处险地。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 他们来到双将山。此山是双子峰，中间隔着一道悬壁山谷
+- name: 血泪山
+  aliases: []
+  summary: 山上有赵家寨，有人烟。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 过了双将山之后，就是血泪山。
+    - 血泪山上有赵家寨
+- name: 千窟山
+  aliases: []
+  summary: 商路中的一座山。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 接连越过千窟山、巨人山、绿藻山等六座大山
+- name: 巨人山
+  aliases: []
+  summary: 商路中的一座山。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 接连越过千窟山、巨人山、绿藻山等六座大山
+- name: 绿藻山
+  aliases: []
+  summary: 商路中的一座山。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 接连越过千窟山、巨人山、绿藻山等六座大山
+- name: 阴潭
+  aliases: []
+  summary: 五角星状阴潭，丁浩洞府旁，用于标记。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 那阴潭呈五角星状，十分独特。
+- name: 演武区
+  aliases: []
+  summary: 商家城中的一个区域，有数十种演武场，是商家选拔人才的途径。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 这里是演武区，有大大小小的演武场八十多所。
+    - 演武区是商家对外选拔人才的一个途径。
+- name: 第三内城
+  aliases: []
+  summary: 商家城内的区域，有大型赌石坊。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 虽然是在第三内城，但身边却形成了人流。
+- name: 第四内城
+  aliases: []
+  summary: 中档演武区所在的内城。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 在第四内城的演武区，净胜八十场，就可升入第三内城。
+- name: 楠秋苑
+  aliases: []
+  summary: 商心慈在商家城的住所，方正和白凝冰也居住于此。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 方源一路思量盘算着，走回楠秋苑。
+    - 回到楠秋苑。
+    - 楠秋苑的小广场上，星星石铺成。
+- name: 第五内城演武场
+  aliases:
+  - 演武场
+  - 演武
+  - 超大型演武场
+  summary: 商家城内供蛊师对战、切磋的场所，有主持蛊师防止死亡。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 学堂的演武场上，三个擂台都已经搭建好。
+    - 你得先从第五内城的低档演武区开始打起。
+    - 演武场的规矩中有一条，胜利者能从失败者的手上，选取一只蛊收为己用。
+- name: 平凡深渊
+  aliases: []
+  summary: 传说中从未有生物能飞跃的深渊，充满平常风和凡俗尘。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 平凡深渊可以出去，只需要得到名声蛊就好了。
+    - 从未有生物能飞跃过去。
+    - 被困在平凡深渊。
+- name: 细语密林
+  aliases: []
+  summary: 孤峰上的密林，树木无叶，但风声像树叶沙沙作响，是细语声。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 原来这片密林，是细语密林。
+    - 他曾经听到的树叶沙沙的响声，是密林中的细语声。
+- name: 湖中亭
+  aliases: []
+  summary: 楠秋苑内的亭子，方源与白凝冰下棋处
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 小亭金砖朱梁，珠帘画栋
+- name: 三叉山
+  aliases: []
+  summary: 位于左家冷颤山和车家飞来山之间，三王传承的开启之地。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 整个三叉山开始震荡起来。
+    - 三叉山的某处山腰，一场激烈的战斗，已经步入尾声。
+    - 第一百三十八节：见死不救
+- name: 火炭山
+  aliases: []
+  summary: 南疆半死不活的火山，盛产火炭石，是三叉山必经之路。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 第一百三十六节：白狐蛊仙传承
+- name: 中洲
+  aliases: []
+  summary: 中央地域，幅员辽阔，元气充裕，门派林立，实力最强。
+  rank: 域界
+  first_appear_title: ''
+  details:
+    source:
+    - 第一百三十五节：仙鹤门，方正
+    - 中洲十大古派之一的灵缘斋，他还是听过的。
+    - 狐仙福地在中洲
+    background:
+    - 中洲是十大古派所在，天庭核心区域。
+    - 天庭总部，十大古派所在。
+    - 十大古派林立，天庭主导。
+    rank:
+    - 域界
+    appearance:
+    - 大陆中心，修行文明最发达。
+- name: 飞鹤山
+  aliases: []
+  summary: 仙鹤门所在地，悬空大山，云雾缭绕，有万鹤栖息。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 第一百三十五节：仙鹤门，方正
+    - 中洲，飞鹤山。
+    - 中洲，飞鹤山，仙鹤门。
+- name: 天梯山
+  aliases: []
+  summary: 中洲山脉，白狐仙子传承出现之地，被蛊仙包围。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 第一百三十六节：白狐蛊仙传承
+    - 狐仙福地也是六转仙窍，但种于天梯山。
+    - 天梯山上，迎来了两位蛊仙。
+- name: 蛊仙福地
+  aliases:
+  - 福地
+  - 仙之福地
+  - 霸龟福地
+  - 神秘蛊仙福地
+  summary: 依托于大世界的小世界，由上古蛊仙留下，被三王改造用于布置传承。时间流速约为外界的数倍。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 三王的传承之地，就是当初他们意外发现的上古蛊师的福地。
+    - 福地就是一个单独的小世界。
+    - 方源此时置身的，已经并非是大世界。而是蛊仙福地——一个依托在大世界中的小世界。
+- name: 巫山
+  aliases: []
+  summary: 南疆十万大山中的名山，王逍的基地，有元泉和资源。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 巫山是王逍的机缘，方源十分觊觎。
+- name: 影宗福地
+  aliases: []
+  summary: 影宗的仙窍福地，紫山真君与龙公交战的场所，最终将要自毁。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 影宗的开派祖师爷，乃是太古的一位八转蛊仙，就是他搜寻到生死门，并将生死门挪移到福地中去的。
+    - 影宗福地
+    - 影宗福地也要自毁了
+- name: 光阴长河
+  aliases:
+  - 时间之河
+  summary: 天地秘境，从过去流经现在奔向未来，世间万物皆在其中。宙道蛊仙可肉身进入。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 光阴长河，就是一条细线。无数的画面，就串在这条线上。
+    - 光阴长河中，做下标记
+    - 一指流鲨平时都隐藏在光阴长河中。
+    background:
+    - 光阴长河中生存着无数宙道蛊虫，一指流鲨可在其中自由穿梭。
+    - 宙道的本源之地，在河中诸多流派手段受限，需宙道实力。
+- name: 生死门
+  aliases:
+  - 天地秘境
+  summary: 天地秘境，从开天辟地之初就已存在，汇聚无数魂魄与魂兽，幽魂魔尊曾长期蹲守。
+  rank: 天地秘境
+  first_appear_title: ''
+  details:
+    source:
+    - 这生死门，非同小可，记载于《人祖传》中，乃是上古秘禁之地。
+    - 生死门中。沉迷死境。
+    - 没有荡魂山、落魄谷拦道，我要走出生死门，可比人祖容易多了。
+    appearance:
+    - 有湖水和湖畔，阴森景象。
+    - 门户形态
+    ability:
+    - 涉及生死转换。
+    rank:
+    - 天地秘境
+    background:
+    - 星宿仙尊底蕴之一。
+- name: 青铜大殿
+  aliases:
+  - 圣殿
+  - 中枢大殿
+  - 废墟大殿
+  summary: 墟蝠尸体内的空间，东方长凡星意所在，虚化大阵布置于此。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 青铜大殿当中，方源大口地呼吸着。
+    - 大殿古朴而又恢弘，纹路和构造都散发出浓郁的上古气息。
+    - 中枢大殿的这块牌匾，极其巨大。长有二十丈，宽有八丈，上书三个大字——家天下！
+    background:
+    - 内部困住八位东方部族蛊仙。
+- name: 狐仙福地
+  aliases:
+  - 福地
+  summary: 位于天梯山荡魂山的福地，原主为狐仙，现为方源所有。拥有六百万亩草原，宙流速五倍。
+  rank: 六转福地（经五次地灾）
+  first_appear_title: ''
+  details:
+    appearance:
+    - 草原地形，青草以蓝度草、马蹄草、六神草为主，伴有七宝花、奶茶花。有荡魂山、荡魂行宫等建筑。
+    ability:
+    - 提供修行资源，有地灵守护，可抵御外敌。
+    rank:
+    - 六转福地（经五次地灾）
+    background:
+    - 狐仙死于第五次地灾，执念化为地灵；凤金煌等争夺传承，被方源夺取。
+    - 原为狐仙所有，后被方源夺取，用于胆识蛊贸易。
+    - 奴道福地，原为方源所有，后资源转移，福地被中洲攻占。
+    source:
+    - 这片福地的宇有六百万亩。宙有五倍流速。
+    - 狐仙福地就在天梯山上，如今关闭，不攻打出漏洞，我们怎么进去？
+    - 狐仙福地中，所有的青提仙元，只有七十八颗。
+- name: 荡魂山
+  aliases:
+  - 魂道圣地
+  - 天地秘境
+  summary: 天地秘境，产出胆识蛊，被方源搬入至尊仙窍，在渡劫中受损后被江山如故恢复。
+  rank: 仙级资源
+  first_appear_title: ''
+  details:
+    source:
+    - 荡魂山一直被小狐仙拘束着，此刻彻底开放，顿时整个山都氤氲朦胧起来。
+    - 粉红色的水晶山，坑洞满布，碎石遍地，狼藉不堪。
+    - 荡魂山上又长出了许许多多的胆识蛊。
+    appearance:
+    - 未知
+    - 粉红色水晶铸就的山峦，可被缩成巴掌大小。
+    - 山形秘境，有特殊道痕。
+    background:
+    - 方源拥有荡魂山
+    - 方源从影宗手中获得，配合落魄谷使用。
+    - 曾被幽魂魔尊改造，方源放置于琅琊福地，后被凤九歌夺走，又被方源自爆。
+    rank:
+    - 仙级资源
+    - 九转（类比）
+    - 天地秘境
+    ability:
+    - 凝聚海量魂道道痕，可开采胆识蛊；可被用作魂爆手段。
+    - 对魂魄有特殊作用。
+    - 产出胆识蛊，增长魂魄。
+- name: 腐毒草原
+  aliases: []
+  summary: 北原的一处草原，毒须狼群活动区域，方源从中归来。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 腐毒草原常年阴云笼罩
+    - 越到草原的深处，毒雾就越浓
+    - 奇怪，毒须狼群不是只在腐毒草原上活动么，怎么跑到外边来了？
+- name: 鬼脸葵海
+  aliases:
+  - 葵海
+  summary: 生长大量鬼脸葵的地方，寄生鬼叫蛊、鬼脸蛊
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 眼前，生长了一大片的葵花。这些葵花，有着深紫色的枝干...
+- name: 红炎谷
+  aliases: []
+  summary: 北原的一处地火喷涌的山谷，可抵御大风雪，被蛮家控制。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 尤其是这附近，有一处红炎谷，有地火喷涌。大风雪的时候，我族搬到谷内，就能捱过这道关了。
+    - 不想借住红炎谷，而是想举族迁徙，去参加英雄大会
+    - 坐拥红炎谷的蛮家部族，便是其中之一。
+    appearance:
+    - 有八口元泉，环境温暖
+    background:
+    - 蛮家部族在此生存
+- name: 宝黄天
+  aliases:
+  - 交易市场
+  summary: 天庭掌控的交易所，蛊仙在此进行交易。方源曾在此与星宿仙尊联络。仙元石流通量减少。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 宝黄天是一处十分特殊的洞天，它空荡一片，没有山川树木，也没有鸟兽虫鱼，只存珍宝。
+    - 宝黄天中有着八转仙蛊——宝光蛊。
+    - 有了通天蛊沟通宝黄天，他采集极品美酒变得极为容易。
+    background:
+    - 信息灵通但局限于六转七转层次，八转机密不在此出售。
+    - 各种资源流通，胆识蛊畅销。
+    - 心神投射之处，方源在此收购神鹿果、古墨海藻等。
+    appearance:
+    - 抽象空间
+    - 无形市场，可通过意念交易。
+- name: 月牙湖
+  aliases: []
+  summary: 北原中的湖泊，方源狼群所在地。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 月牙湖波光闪闪，一片静谧。
+    - 北原月牙湖畔的那面，却很高大，足有数丈高宽。
+- name: 三王福地
+  aliases: []
+  summary: 方源曾进入的福地，其中炼制了定仙游。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 但在三王福地中，局势所逼，将神游蛊炼成了定仙游。
+- name: 空穴
+  aliases: []
+  summary: 特殊的空间节点，贯穿福地之间，可用于传送。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 盗天魔尊曾经设下许多传承，据说最大的传承就在空穴当中。
+    - 两个杯盏在空穴中完成转换
+- name: 暖沼谷
+  aliases: []
+  summary: 北原一处山谷，有元泉，马家战败后曾在此驻留，后被黑楼兰包围。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 暖沼谷易守难攻，拥有大片的暖泥。
+    - 天川，暖沼谷。
+    - 黑家大军来到这里，包围了暖沼谷。
+- name: 葱谷
+  aliases: []
+  summary: 方源放养狼群的地方，后成为其狼群来源的借口。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - “当初我在葱谷，放养了一些狼群。没有想到，经过这些年后，竟然有这么庞大的规模。”
+- name: 书山
+  aliases:
+  - 天地秘境
+  summary: 天地秘境，位于青莲大世界中，外形奇特，信息推演能力强大。
+  rank: 天地秘境
+  first_appear_title: ''
+  details:
+    source:
+    - 墨人在《人祖传》中，早有记载。他们的家园，便是书山。
+    - 书山中，有一道墨瀑，垂落而下，砸在文泉中，激荡出的墨汁，落在山石上，便形成墨人。
+    - 这山很不寻常，不只是名山，而是一座天地秘境！
+    appearance:
+    - 书籍堆积成山
+    ability:
+    - 辅助智道推算。
+    rank:
+    - 天地秘境
+    background:
+    - 星宿仙尊底蕴之一。
+- name: 天川
+  aliases: []
+  summary: 北原地区，马家所在地，赵家欲投奔马家需经过此处。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 马家是绝对欢迎赵家的到来的。只是要跋涉道天川去，这路途可就要遥远了……
+- name: 落魄谷
+  aliases:
+  - 天地秘境
+  summary: 北原地点，孕炼仙蛊，秦百胜一方凭借地利防守，凤九歌一方久攻不下。
+  rank: 仙级资源
+  first_appear_title: ''
+  details:
+    source:
+    - 荡魂山、落魄谷并称为魂修二圣地
+    - 落魄谷与荡魂山并驾齐驱
+    - 围绕落魄谷的攻防战，不知不觉间已经持续了大半月。
+    appearance:
+    - 一片狼藉，碎石满地，像是地震之后又被飓风肆虐。
+    - 迷魂雾笼罩，落魄风切割。
+    - 山谷
+    background:
+    - 影宗曾在此布置战场杀招亿万屠杀场，后被中洲蛊仙攻破外围蛊阵。
+    - 方源在此进行每日魂修，增加魂魄底蕴。
+    - 人祖传记载。
+    rank:
+    - 仙级资源
+    - 天地秘境
+    ability:
+    - 锻炼魂魄，剔除杂质。
+    - 相关于魂魄。
+- name: 逆雨福地
+  aliases: []
+  summary: 一处福地，雨从下往上落，因此得名。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 逆雨福地。一道纤细的碧玉长廊，在湖面上延伸出去，直至一座孤亭。
+- name: 北原草府
+  aliases: []
+  summary: 五大区域之一，以雪原为主，十年暴风雪灾频发，元泉特点为喷涌猛烈、底蕴稀薄。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 北原的蛊师虽然勇悍，但并非是桀骜不驯，他们的骨子里充满了对强者的尊敬，对力量的谦卑。
+    - 北原每隔十年，都会有一场席卷整个北原的巨大风雪。
+    - 北原是五域之一，繁星点点，星光充足。
+    background:
+    - 八十八角真阳楼所在地，东方部族所在区域。
+    region:
+    - 北原
+    characteristics:
+    - 草原地貌，天地二气适宜动物修行。
+- name: 镜湖
+  aliases: []
+  summary: 马家与宋家对峙的战场。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 镜湖。马家大军，和宋家正式开战。
+- name: 刘家防线
+  aliases: []
+  summary: 刘家大军驻扎的防线，设有营帐。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 刘家防线，营帐内。
+- name: 北原战场
+  aliases:
+  - 战场
+  summary: 刘家与黑家大军对峙的战场，位于北原。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 北原的清晨，越加寒冷。
+    - 两只大军，数十万人相互对峙。
+- name: 地丘
+  aliases:
+  - 土丘
+  summary: 王庭福地中的一座山丘，上有豁口和大洞，被认为是地丘传承所在地。
+  rank: ''
+  first_appear_title: ''
+  details:
+    appearance:
+    - 高高隆起，耸立在地面之上，山丘没有强硬的峰线，上面张开一个豁口，露出一个大洞
+    background:
+    - 位于沼泽地中，西南角有河流
+    source:
+    - 只见一处山丘，高高隆起，耸立在地面之上。
+    - 地丘附近，并没有这样的小塔楼！
+    - 方源站在地丘之上，缓缓地睁开双眼。
+- name: 圣宫
+  aliases: []
+  summary: 王庭福地的中枢宫殿群，巨阳仙尊的四大地上寝宫之一，八十八角真阳楼坐落于其顶端。
+  rank: ''
+  first_appear_title: ''
+  details:
+    appearance:
+    - 分八层，高达八百余丈，雪白城墙，七彩塔楼，富丽堂皇
+    background:
+    - 包含怡乐宫、春汤殿、飘香院、画宫等众多建筑
+    source:
+    - 壮栽，圣宫！
+    - 圣宫宛若山峰，圆顶上八十八角真阳楼还在孕育当中。
+    - 圣宫中，已经是再次霞光漫空，美轮美奂。
+- name: 画宫
+  aliases: []
+  summary: 圣宫八大正宫之一，墙壁绘有八万有余的美人图，均为巨阳仙尊亲笔。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 画宫中空无一物，只有四周的巨大墙壁。这些墙壁上，绘有各式各样的美人。
+- name: 怡乐宫
+  aliases: []
+  summary: 圣宫内举办音乐庆典的宫殿。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 大人，这里是怡乐宫。伟大的巨阳先祖，如今居于圣宫，每天都会在这个宫殿中举办规模盛大的音乐庆典。
+- name: 春汤殿
+  aliases: []
+  summary: 圣宫内拥有北原最大温泉的宫殿。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 大人，这里是春汤殿，拥有北原最大的温泉。
+- name: 飘香院
+  aliases: []
+  summary: 圣宫内拥有‘酒池’、‘肉林’的宫殿。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 这里便是飘香院，巨阳先祖曾经将神话中的‘酒池’、‘肉林’，移到这里。
+- name: 秘藏阁
+  aliases: []
+  summary: 八十八角真阳楼深处，只有上等通关者才能进入，拥有无数奇珍异宝和真仙传承。
+  rank: ''
+  first_appear_title: ''
+  details:
+    ability:
+    - 可交换物品
+    background:
+    - 巨阳仙尊设立
+    source:
+    - 上等通关，不仅奖励在中等的基础上，再翻一倍，而且能将闯关者传进真阳楼深处，名为秘藏阁的地方。
+    - 利用来客令，达到上等通关，进入秘藏阁。
+    - 从秘藏阁中取走一道巨阳真传。
+- name: 近水楼台
+  aliases:
+  - 七转仙蛊屋
+  summary: 七转仙蛊屋，当年蛊仙水妮的标志，可依附水中似虚似幻，用于温养招灾蛊。
+  rank: 七转仙蛊屋
+  first_appear_title: ''
+  details:
+    source:
+    - 难不成这是失传多年的仙蛊屋——近水楼台？
+    - 神秘蛊仙在这里布置了近水楼台，就是提供给雏形仙蛊一个上佳的温养之地。
+    - 近水楼台是七转仙蛊屋，由三千多只蛊虫组成。
+    rank:
+    - 七转仙蛊屋
+    appearance:
+    - 楼阁形态，可化为水流铠甲
+    ability:
+    - 隐蔽、迁徙，化为水流铠甲保护，由三千多只蛊虫组成
+    background:
+    - 原属灵缘斋，后被墨瑶意志控制，用于保护方源和补充意志。
+- name: 中枢室
+  aliases: []
+  summary: 八十八角真阳楼的中枢要地，内有白玉圆桌沙盘，可探查全楼状况和漏洞。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 中枢室乃是八十八角真阳楼的中枢要地。
+    - 密室成圆形，闪烁星辉的墙壁围绕一圈，中央立着一张白玉圆桌。
+- name: 真传秘境
+  aliases: []
+  summary: 八十八角真阳楼内的秘境，藏有巨阳仙尊的无数真传，包括三道无上真传。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 这是八十八角真阳楼中的真传秘境。
+    - 真传秘境十分宽广。
+    - 无上真传不是在真传秘境当中
+- name: 第二关
+  aliases:
+  - 原始雨林
+  summary: 八十八角真阳楼的第二关卡，一片广袤的原始雨林，充满青藤。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 这里便是第二关卡，空气湿热，地貌是一片广袤的原始雨林。
+    - 蛊师要通过此关，须得横穿整个密林，到达另一端的石殿。
+- name: 墨人城
+  aliases: []
+  summary: 北原墨人建立的城市，由墨人王统治，与琅琊福地关系紧密。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 墨人城最擅气道
+    - 这里就是墨人城！由当年的墨人传奇蛊仙一言仙创建。
+    appearance:
+    - 正六边形城墙，周长两百里，高近十丈，有塔楼，城内繁华
+    ability:
+    - 无
+    background:
+    - 墨人传奇蛊仙一言仙创建，后被方源收入至尊仙窍。
+- name: 沙井绿洲
+  aliases: []
+  summary: 西漠中的绿洲，黄家地盘，韩家村位于其边缘。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 西漠，沙井绿洲。
+- name: 韩家村
+  aliases: []
+  summary: 沙井绿洲边缘的凡人村庄，韩立居住地。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 在这些村庄中，有一座韩家村。
+- name: 大雪山福地
+  aliases:
+  - 大雪山上
+  - 大雪山
+  summary: 北原魔道组织，拥有八转蛊仙雪胡老祖，黎山仙子为其成员。在碧潭福地事件中扮演幕后角色。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 支持马家的魔道蛊仙，已经查探出来了，是大雪山第六支峰的雪松子。
+    - 这是来自大雪山，魔道蛊仙雪松子特意为他们准备的杀招。
+    - 方源恋恋不舍地看了一眼狼藉不堪的冰原战场，最后催动定仙游。三息之后，他消失当场，回到了大雪山福地。
+    background:
+    - 雪胡老祖炼制鸿运齐天蛊，可能派遣黎山仙子搜刮资源。
+    - 与僵盟长期战争，后因雪胡老祖与焚天魔女合作而停战。
+    type:
+    - 福地
+    owner:
+    - 魔道蛊仙联合
+    features:
+    - 有十二雪峰，各峰独立并有考验。
+- name: 铁鹰福地
+  aliases: []
+  summary: 黑家公共福地，北原豢养铁冠鹰的著名地点，结构上大下小。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 黑家，铁鹰福地。这里是黑家的大本营，
+    - 雪胡老祖为了收刮炼蛊仙材，就偷偷潜入铁鹰福地，大肆抢掠。
+    - 黑家四老急忙赶回去，他已经功成身退了。
+    background:
+    - 黑家四老外出时，大本营空虚，被雪胡老祖抢掠。
+- name: 伏虎福地
+  aliases: []
+  summary: 仙鹤门的一处福地，方正在此进行血道训练。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 在伏虎福地中，方正已经进行到最后一步。
+- name: 繁星洞天
+  aliases: []
+  summary: 原七星子拥有的洞天，拥有七个子空间，后因自爆破碎，碎片坠入中洲。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 前世坠落碎裂，今世仍完好，天灵健在。
+    - 原主人七星子，因与战仙宗冲突自爆，导致碎片提前数百年坠地。
+    source:
+    - 繁星洞天的主人，是一千七百年前的八转蛊仙七星子。
+    - 天可怜见，我七星子终于成功地将七大子星空间，成功合并，形成统一的繁星洞天。
+    - 战仙宗果然秘密调集了蛊仙战力，前去攻略繁星洞天了。
+- name: 第八星殿
+  aliases: []
+  summary: 繁星洞天中的星殿，拥有三重防护（气罡飞天猪、走肉树、尸龙）
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 第八星殿阵阵颤抖。轰轰的爆炸声，野兽的嘶吼声从殿中传出。
+- name: 白晴福地
+  aliases: []
+  summary: 白晴仙子的福地洞天
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 中洲，灵缘斋，白晴福地。
+- name: 阴流巨城
+  aliases: []
+  summary: 北原僵盟的埋藏城市，位于地沟深处，藏有仙蛊和修行资源。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 北原僵盟的大本营阴流巨城，就坐落在地沟的入口上方
+    - 阴流巨城埋藏在地沟深处……
+    - 那里还埋藏着北原僵盟的阴流巨城……
+    region:
+    - 北原地沟
+    type:
+    - 地下城
+    affiliation:
+    - 僵盟（影宗下宗）
+- name: 绯红芦苇荡
+  aliases: []
+  summary: 秦百胜的福地所在，拍卖大会举办地。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 绯红芦苇荡？果然是一番好景色。
+    - 他们已经秘密潜伏在绯红芦苇荡附近
+- name: 百胜福地
+  aliases: []
+  summary: 秦百胜的福地，拍卖大会的举办场所。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 地点，就在秦百胜的百胜福地
+- name: 凤仙洞天
+  aliases: []
+  summary: 八转蛊仙凤仙太子的洞天。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 北原，凤仙洞天。
+- name: 玉露福地
+  aliases: []
+  summary: 未完全攻略的福地，有冰雨冻土和战魂沙场两个战场杀招，地灵未现。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 太白云生目前正在和鲨魔等人，共同探索玉露福地。
+    - 鲨魔大人一行，已经在攻打玉露福地了。
+    - 玉露福地是无主福地
+- name: 海市福地
+  aliases: []
+  summary: 东海中盛行的一座固定海市，位于小岛上，小半时间被淹没，方源在此有惩治奸商的任务。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 在海市福地款待了我
+    - 这一次方源来到了海市，他接到的任务就是在这海市上惩治一个奸商。
+- name: 轮回战场
+  aliases: []
+  summary: 乐土仙尊布下的战场，中洲十派竞争之地。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 轮回战场乃是世间公认的第一战场杀招
+- name: 十号密室
+  aliases: []
+  summary: 拍卖大会中的一间密室，方源所在地。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 十号密室，出价天龙完整骨骼一具，外加地煞粉三十两。
+- name: 十一号密室
+  aliases: []
+  summary: 拍卖大会中的一间密室，太白云生曾在此。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 十一号密室，也愿意竞拍
+- name: 二十三号密室
+  aliases: []
+  summary: 方源炼蛊的秘密房间，也是巨开碑、炎突商议的密室
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 密室中，一片静寂
+    - 密室中，有两人
+    - 二十三号密室第一次。
+- name: 议事堂
+  aliases: []
+  summary: 僵盟重要建筑。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 守卫议事堂大门
+- name: 太丘
+  aliases: []
+  summary: 北原十大凶地之一，长满巨人草，生活着大量荒兽，琅琊地灵拟在此布置传送蛊阵。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 太丘乃是北原十大凶地之一。
+    - 之前太丘、碧潭福地一战
+    - 琅琊地灵所指之地，正是太丘！
+- name: 墟蝠尸体
+  aliases: []
+  summary: 太古荒兽墟蝠的尸体，被东方长凡改造为尸山，作为夺舍场所。
+  rank: ''
+  first_appear_title: ''
+  details:
+    appearance:
+    - 庞大若山，后被雷劫摧毁。
+    background:
+    - 周围布满宇道道痕，后被雷道清空。
+    source:
+    - 墟蝠尸体主要位置，都覆盖进来。
+    - 太古荒兽级的墟蝠尸体，被摧毁得面目全非。
+- name: 碧潭福地
+  aliases: []
+  summary: 东方部族的大本营，公共福地，资源丰富，内有龙鱼、散文鲤、气泡鱼等诸多资源，还有嫣然海等禁地。
+  rank: ''
+  first_appear_title: ''
+  details:
+    appearance:
+    - 广阔如湖的深潭，茂密森林等
+    background:
+    - 被魔道蛊仙攻破，遭受大规模掠夺。
+    source:
+    - 碧潭福地是东方部族的大本营，东方长凡在这里战斗，自然有地利。
+    - 碧潭福地发生剧烈的震荡。天摇地动！
+    - 来到方源杀死东方长凡的现场
+- name: 石巢
+  aliases: []
+  summary: 狐仙福地中的大型炼蛊基地，有三个巨无霸建筑物，内有毛民炼蛊。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 宽阔的大地上，青草葱茏，矗立着三个巨无霸似的黑灰建筑物。这便是狐仙福地中的三座石巢。
+- name: 荡魂行宫
+  aliases: []
+  summary: 方源的住所，内有密室关押东方长凡魂魄。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 方源便回到荡魂行宫。
+- name: 地底洞窟
+  aliases: []
+  summary: 狐仙福地地底，生长着芝林，智慧蛊栖息于此。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 赶到了地底洞窟。
+    - 地底洞窟当中，生长着一小片芝林。
+- name: 五德山
+  aliases: []
+  summary: 五德门驻地，中洲东部，不高，是炼蛊大会报名点之一。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 五德山并不高，位于中洲东部，是中型门派五德门的门派驻地。
+- name: 择徒台
+  aliases: []
+  summary: 五德山半山腰的宽阔平台，用于考核入门弟子，被改造为炼蛊大会测试场地。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 沿着大道上了山，就来到半山腰。此处开辟了一个宽阔平台，山壁上刻着三个大字“择徒台”。
+- name: 怎渡丘
+  aliases: []
+  summary: 西漠七大自然奇观之一，数十万里沙丘迁徙，外围有荒兽潜沙蛛群。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 西漠最为著名的七大天然奇观之一，数十万里沙丘迁徙。
+    - 西漠中人，将这些移动的巨大沙丘群，取名为怎渡丘。
+- name: 星象福地
+  aliases: []
+  summary: 万象星君的仙窍福地，位于地渊，以星道为主，有四大经济支柱：箭竹林、陨石群坑、碎星湖、星屑草场。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 整个星象福地就是一个巨大的盆地。
+    - 七星子……万象星君意外地发现，繁星洞天联通中洲外界的空间缝隙。
+    - 星象福地。
+- name: 真阳山脉
+  aliases: []
+  summary: 中洲大型山脉，宋紫星逃亡之地，有大量荒兽和上古荒兽。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 真阳山脉中，自然生存着无数猛兽。
+    - 一场追逐战，在真阳山脉上演。
+    - 真阳山脉中的一处山头上，大风卷席，呼呼吹鼓。
+- name: 屠苏城
+  aliases: []
+  summary: 被宋紫星毁灭的城池，因屠苏城蛊仙抢夺宋紫星宝物而遭报复。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 将整个城池化为乌有，城中的两位蛊仙都杀掉。
+    - 复仇成功，宋紫星感到快意舒畅。
+- name: 鸳鸯城
+  aliases: []
+  summary: 位于真阳山脉边缘的城池，附近有宋紫星断臂遗留的血雾威胁。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 他现在的位置，位于真阳山脉边缘，鸳鸯城的附近。
+    - 鸳鸯城方面都会不断地发布任务。
+- name: 太白福地
+  aliases: []
+  summary: 太白云生的上等福地，资源丰富，时间流速为外界十二天。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 北原，太白福地。
+    - 太白福地本身就是上等福地，面积广阔，有七百余万亩。
+    - 整个太白云生开始微微的震动起来。
+- name: 双极海峡
+  aliases: []
+  summary: 东海海域，常年迷雾笼罩，宋甲丹盘坐推算之地。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 双极海峡，常年笼罩在一层浓郁的迷雾当中。
+    - 双极盘甲丹，南宫藏华安，还有龙首龟，厄海中往还。
+- name: 诗情海域
+  aliases: []
+  summary: 东海海域，宋亦诗沐浴之地，方源偷看事件发生地。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 三人划过长空，渐渐远离了诗情海域。
+    - 我是无意中进入诗情海域深处的海底火山的。
+- name: 登天野
+  aliases: []
+  summary: 东海地点，埋藏天难老怪传承，被宋家、蔡家、若来家争夺。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 登天野的具体位置，几乎已经成了东海蛊仙界公开的秘密。
+    - 这一次爷爷要亲自率领家族蛊仙，和蔡家、若来家抗衡，尽力将天难老怪的传承夺到手。
+- name: 紫沙荒地
+  aliases: []
+  summary: 地沟蛊阵中央区域，由大爆炸形成的三千多亩荒地，表面为紫色细沙，埋藏大量太古荒兽碎片仙材。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 一片荒芜之地。全是紫色的细沙。
+    - 这里便是整个蛊阵的最中央，曾经发生过一场恐怖的大爆炸！
+- name: 监天塔
+  aliases:
+  - 仙蛊屋
+  summary: 九转仙蛊屋，高塔形状，内部有螺旋白玉阶梯，顶层存放宿命仙蛊。曾被打碎，后由沙婆婆修复。
+  rank: 仙级建筑/仙蛊屋
+  first_appear_title: ''
+  details:
+    background:
+    - 塔身布满伤痕，有三百多万年历史，周围有炼道蛊阵。
+    - 位于天庭，是监天塔主掌控的核心设施。
+    - 天庭的核心仙蛊屋，由监天塔主操控。
+    source:
+    - 围绕着监天塔的，是一座巨大的炼道蛊阵。
+    - 监天塔主苍老的面庞上，皱纹更深刻了许多。
+    - 监天塔主手拄着拐杖，颤巍巍地站起身来，非常欣慰地看着蛊阵中央，悬空漂浮着的宿命仙蛊。
+    appearance:
+    - 高塔状，上有小截被斩断掉落。
+    - 塔形仙蛊屋，高耸入云。
+    - 洁白高耸的塔楼，悬浮于高空
+    ability:
+    - 配合宿命蛊使用，可发现逃脱宿命之人。
+    - 推算宿命、发动光柱攻击、干扰时间推算。
+    - 发动宿命攻击，名为‘宿命威能’，命中注定；也可用于推算和侦查
+    rank:
+    - 仙级建筑/仙蛊屋
+    - 九转
+    - 八转
+- name: 落天河
+  aliases: []
+  summary: 中洲第一长河，从天而降的巨河，源头位于高空瀑布。白天水势浩大，夜晚相对平缓。河中生存大量上古、太古荒兽。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 巨大的天河从苍空而落，斜穿整个中洲，最终流出中洲东部，流向东海。
+    - 一道巨大的瀑布，从万丈高空垂落而下。
+    - 落天河，一道从天上落下的巨河。
+    appearance:
+    - 一道巨大的瀑布，从万丈高空垂落而下。
+    background:
+    - 传说中由薄青渡劫时剑光洞穿白天和黑夜形成。近期源头发生剑光喷发异变。
+- name: 生死福地
+  aliases: []
+  summary: 幽魂魔尊的梦境消散之地，砚石老人制造纯梦求真体的地方。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 生死福地。
+    - 幽魂魔尊的梦境，已经彻底消散。
+- name: 界壁
+  aliases:
+  - 五域界壁
+  - 苍水界壁
+  - 甘草界壁
+  summary: 位于北原与东海之间的界壁空间，特殊环境排斥或吸引外来者，战斗会引发仙窍震荡。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 界壁就像是一圈栅栏，将整个东海圈住。
+    - 一道身影，穿透青绿如玉的甘草界壁，正式进入北原。
+    - 越是界壁深处，他们受到的吸摄之力就越是强大，令他们速度暴降。
+    region:
+    - 五域交界
+    characteristics:
+    - 无形的排斥或吸引之力，能见度差，易引发仙窍震荡。
+- name: 铁丝城
+  aliases: []
+  summary: 黑毛大陆上最雄伟的城池，拥有繁华的交易市场，有奴隶贩卖。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 铁丝城，还是黑毛大陆之上，最为雄伟的城池。
+    - 铁丝城中的交易市场，人声鼎沸，乃是黑毛大陆上著名的交易场所之一。
+    - 另一股则飞去铁丝城。
+- name: 罐河
+  aliases: []
+  summary: 中洲东部的河流，生长罐草，由风云府掌管，每年举行罐河祭典。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 罐河，宛若一条修长的玉带，雕缀在中洲东部之中。
+    - 十大古派的超级势力风云府，掌管罐河。
+- name: 剑断山谷
+  aliases: []
+  summary: 中洲山谷，由薄青剑光斩断山脉形成，出产野生剑道蛊虫。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 原来，义天山大战之前，仙僵薄青出世，从落天河源头河底，暴射出无穷剑光。有一道剑光，就落到这里，将这里的山脉斩成两段，形成了山谷地貌。
+- name: 至尊仙窍
+  aliases:
+  - 至尊仙体
+  - 至尊福地
+  - 方源的仙窍
+  - 至尊仙胎蛊之仙窍
+  - 至尊洞天
+  summary: 方源的仙窍小世界，具有五域九天格局，分为小赤天、小绿天等多片区域，空间辽阔，资源丰富。
+  rank: 八转层次
+  first_appear_title: ''
+  details:
+    source:
+    - 至尊仙窍广袤无比，内分五域九天的格局。
+    - 整个仙窍世界都开始了嗡嗡震动。
+    - 至尊仙体却不一样，道痕之间互不影响
+    background:
+    - 由至尊仙胎蛊炼成，方源独有，内含小南疆、小西漠等区域。
+    - 由至尊仙胎蛊炼成，方源独有。
+    - 魔尊幽魂耗费近十万年光阴打造，方源的核心修行依仗。
+    ability:
+    - 道痕不互相抵消，但易受异种道痕伤害。
+    - 吞并仙窍福地，跨越灾劫提升修为。
+    - 吞并仙窍提升修为，容纳多种流派道痕，可催动宙道杀招。
+    类别:
+    - 特殊体质
+    特点:
+    - 所有道痕可以共存，但无流派加成，容易被各类负面状态全额生效。
+    - 全流派兼容，无上限，是方源强大的基础。
+    appearance:
+    - 内含广阔天地，有条条光阴支流，多座年华池。
+    - 内含小四域、小九天，资源丰富。
+    - 广袤仙窍，内有不同环境
+    rank:
+    - 八转层次
+    - 九转
+    - 至尊级
+    等级:
+    - 发展度八成，天道道痕二十万以上
+    属性:
+    - 全流派
+    背景:
+    - 方源通过吞并两天洞天等方法不断扩张，容纳麾下蛊仙。
+    性质:
+    - 体质
+- name: 北部大冰原
+  aliases: []
+  summary: 北原一角，由狂蛮魔尊化身冰凰口吐玄冰形成，是方源渡劫之地。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 这片冰原的来历你也知道。当初狂蛮魔尊大战，打坏北原一角，
+    - 方源恋恋不舍地看了一眼狼藉不堪的冰原战场
+    - 北原，北部大冰原。
+- name: 第一云城
+  aliases: []
+  summary: 琅琊福地中的一座云城，方源和琅琊地灵会面的地方。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 到了第一云城，他见到琅琊地灵。
+    - 回到自己的云城中。
+- name: 黑毛国国都
+  aliases: []
+  summary: 黑毛国的首都，举行全国比武的地方。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 黑毛国国都。
+- name: 比武场
+  aliases: []
+  summary: 黑毛国国都内的比武场地，方正参加决赛的地方。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 比武场上，最后的两位蛊师正激烈对战。
+- name: 龙象原
+  aliases: []
+  summary: 北原的一处龙象栖息地，受超级势力掌控，方源从此地出发。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 龙象原的中心地带，凭空出现了一位少年蛊仙。
+    - 龙象原地势平缓，气概非凡。
+- name: 风伯崖
+  aliases: []
+  summary: 南疆的一处地点，有琅琊福地的传送蛊阵。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 借助了在风伯崖下的传送蛊阵。
+- name: 黑毛大陆
+  aliases: []
+  summary: 琅琊福地内的一块大陆，黑毛国所在。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 朝着地下的黑毛大陆飞去。
+- name: 北部冰原
+  aliases: []
+  summary: 狂蛮魔尊锻造的北原冰川，天地二气稀薄，是雪民一族的栖息地。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 北部冰原乃是狂蛮魔尊当年，一手锻造。
+    - 北部冰原是我雪民一族最后的世外桃源。
+    - 在北部冰原苟延残喘
+- name: 鹰巢
+  aliases:
+  - 天晶鹰巢
+  summary: 黑凡留下的传承之地，由八转仙材天晶构成，内部只有一颗死蛋。
+  rank: ''
+  first_appear_title: ''
+  details:
+    appearance:
+    - 九色光辉交替闪烁，小房间大小，地面和墙壁全是天晶。
+    background:
+    - 黑凡为后裔设下的第一道考验，需要态度蛊气息才能开启。
+    source:
+    - 九色光辉，交替闪烁，映照在“黑城”的脸上。
+    - 鹰巢中，并不大，仿佛一个小房间。房间正中央，摆放着一颗大蛋。
+    - 这座天晶鹰巢，都是八转仙材，也是具有庞大价值的。
+- name: 黑凡洞天
+  aliases: []
+  summary: 北原无灾无劫的洞天福地，原属黑家，后被楚度占据，现为百足天君攻击目标。
+  rank: ''
+  first_appear_title: ''
+  details:
+    appearance:
+    - 天空透着青色，下方有原始丛林、曲丽木等资源，广袤非凡。
+    background:
+    - 内有蛊仙居住，继仙山为传承核心。
+    - 原为黑家重要资产，方源取走大量资源后移交给楚度，楚度投入自家资源重建。
+    source:
+    - 眨眼间，上极天鹰就载着他，消失在北原上空，进入了黑凡洞天。
+    - 只见这洞天，广袤非凡，一望无际。
+    - 黑凡当年获得的是太古青天碎片，融入自家仙窍之后，形成永不退色的青天。
+- name: 继仙山
+  aliases: []
+  summary: 黑凡洞天中的传承之山，分为十层，山顶有石亭和石碑，记载黑凡真传规则。
+  rank: ''
+  first_appear_title: ''
+  details:
+    appearance:
+    - 高耸独立，上小下大，有很明显的人工雕琢痕迹，山脚有茂密森林。
+    background:
+    - 黑凡设下种种小传承，山顶为本命真传。
+    source:
+    - 继仙山高耸独立，并非名山大川。
+    - 石碑上是这样明确记载的：“（黑凡）老祖在继仙山山巅留下自己的本命真传”
+    - 向继仙山逃窜
+- name: 乱流海域
+  aliases: []
+  summary: 东海中因蛊仙大战形成的特殊海域，海水激流变幻，云雾遮盖。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 乱流海域
+    - 乱流海域的海水，十分奇特
+    - 这片海域内心必然有一片兮的碎片，因此才造成如此的乱流景象。
+- name: 青玉福地
+  aliases: []
+  summary: 刘青玉死后化成的七转光道福地，方源成为主人。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 我成了这片福地的主人
+- name: 成龙丘
+  aliases: []
+  summary: 百足家资源重地，蕴藏丰富变化道痕，曾产出大量龙蛊。
+  rank: ''
+  first_appear_title: ''
+  details:
+    appearance:
+    - 低矮平缓的小丘，实为福地。
+    background:
+    - 原为黑家所有，后被百足家占据重建。
+    source:
+    - 成龙丘中，蕴藏着丰富的变化道痕。
+- name: 疯魔窟
+  aliases: []
+  summary: 北原十大凶地之一，无极魔尊晚年居所，共九层，底层有衍化蛊和超级蛊阵，魔音能致人疯狂并改变道痕。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 疯魔窟！北原十大凶地之一。
+    - 疯魔窟乃是北原十大凶地之一。
+    - 疯魔窟中的魔音很是频繁。
+- name: 韩东福地
+  aliases: []
+  summary: 下等福地，盛产灵蛇，有粉红地灵蛇，后被方源吞并。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 韩东福地中的这些资源，不管鱼虾水草什么，都不需要再适应环境。
+- name: 玉壶山
+  aliases: []
+  summary: 南疆山脉，内有冰壁和大量冰心、冰魄仙蛊等宝藏，由影宗经营。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 玉壶山山中却有成堆的稀罕仙材！
+    - 玉壶山乃是内秀。
+- name: 血战平原
+  aliases: []
+  summary: 北原战场，当前血战武斗大会的举办地。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 天空星光璀璨，金晓大殿悬浮。
+    source:
+    - 血战平原上空。
+- name: 骨葬场
+  aliases: []
+  summary: 北原刘家资源点，白骨之地，产出骨道蛊虫。
+  rank: ''
+  first_appear_title: ''
+  details:
+    appearance:
+    - 密密麻麻的尸骨堆砌，有的骨骼巨大如小山，有的惨白色，也有奇异颜色
+    background:
+    - 形成原因说法不一，刘家把持并经营为生产基地。被方源洗劫。
+    source:
+    - 北原，骨葬场。这里是一片白骨之地。
+    - 方源迅速离开了作案现场。
+- name: 璇光坑
+  aliases: []
+  summary: 刘家资源点，盛产各类光蛊（如璇光蛊、炫光蛊等）。
+  rank: ''
+  first_appear_title: ''
+  details:
+    appearance:
+    - 巨大地坑
+    background:
+    - 刘家经营，产出流光果和光蛊，被方源劫掠一空。
+    source:
+    - 下一个地点，就是刘家的璇光坑。
+    - 他径直地搜罗这片巨大地坑中的蛊虫。
+- name: 白相洞天
+  aliases: []
+  summary: 白相遗留的洞天福地，内有三十天殿和九转仙材惊涛升龙火。
+  rank: ''
+  first_appear_title: ''
+  details:
+    appearance:
+    - 有三十层大殿，殿顶有大洞
+    background:
+    - 白凝冰进入此处，试图收服惊涛升龙火。
+    source:
+    - 白相洞天当中的白凝冰，望着眼前的地灵。
+    - 这座仙蛊屋三十天殿，最大的作用，就是保存大量仙材。
+    - 留在白相洞天中明显不智。
+- name: 万豆田园
+  aliases: []
+  summary: 田下心所在的福地。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 田下心的修行之地。
+    source:
+    - 北原的万豆田园之中，蛊仙田下心将一半的酬金退给了刘长。
+- name: 有熊山
+  aliases: []
+  summary: 武家划给武遗海的居住地，位于南疆，多熊。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 方源站在有熊山的山峰上，静静地看着日出的美好景象。
+- name: 太古黑天
+  aliases:
+  - 黑天
+  summary: 两天之一，广阔虚空，隐藏着许多洞天和魂兽，天地二气融汇引发气潮。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 太古九天——白赤橙黄绿青蓝紫黑，相互轮换，每隔一段时间，就有其中一天覆盖五大域。
+    - 太古黑天中，魂兽最多，拉乱天纲地常
+    - 黑天中飞腾。
+- name: 镇运天宫
+  aliases: []
+  summary: 蛮荒大世界中的暗金宫殿，悬浮中部高空，是冰塞川等人的议事之地。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 镇运天宫影响天地运数。
+    - 他虽然掌控两座仙蛊屋
+    - 对付镇运天宫
+- name: 广寒峰
+  aliases: []
+  summary: 南疆一座盛产冰道资源的山峰，原属武家，后经方源搜刮。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 富含寒玉、寒玉髓，产出冰道野蛊。夏家觊觎此峰。
+    source:
+    - 广寒峰上，寒气逼人，白雪皑皑。
+    - 方源将大半的寒玉，都收入囊中。
+    - 广寒峰、拜月碗还有螺母山等事情
+- name: 螺母山
+  aliases: []
+  summary: 又称山螺母，一头太古荒兽山螺母，形似山峰，蕴含丰富奴道、土道资源。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 武家边界上的太古荒兽，正在迁徙，驱山老怪企图获取。
+    source:
+    - 这座山很特别。旁边的山峦，都是或高或矮，或险或缓。而这座山峰，却是圆润有形。这就是螺母山。
+    - 他平息了螺母山的纷争。
+- name: 龙鳞海域
+  aliases: []
+  summary: 方源在至尊仙窍小东海中人工建造的海域，专用于养殖龙鱼。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 铺设龙鳞土，辅以丰年杀招，大规模养殖龙鱼。
+    source:
+    - 方源的计划是，打算建设出一个龙鳞海域。
+    - 龙鳞海域彻底成形。大量的龙鱼在这里栖息生存。
+    - 龙鳞海域。
+- name: 赤龙江
+  aliases: []
+  summary: 南疆三大江河之一，水流汹涌，与武家和乔家地盘接壤。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 南疆有三大江河，一条赤龙江。
+    - 武家、乔家都有地盘和赤龙江接壤。
+    - 赤龙江面上空，武家、夏家、巴家三方蛊仙紧张地对峙着。
+    appearance:
+    - 河水滔滔，浪花如火，时而炸响。
+    background:
+    - 巴家、夏家交界之地，火雷神君将真传藏于河底。
+- name: 玄冥山
+  aliases: []
+  summary: 武庸给方源选择的三个任务地点之一，争斗激烈，涉及野生仙蛊。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 第一项玄冥山必然是争斗最为激烈的一项任务，事关野生仙蛊。
+- name: 菇人乐土
+  aliases:
+  - 南疆乐土真传所在地
+  summary: 南疆的一片乐土，由乐土仙尊经营至少十万年，物产丰富，生活着无数菇人，是方源从陆畏因手中获得的资产。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 这里是菇人乐土。
+    - 这片福地已经被乐土仙尊改造，从此再无灾劫。
+    - 这片菇人乐土便是你的资产了
+- name: 瓜熟地洞
+  aliases: []
+  summary: 菇人乐土中的地洞，乐土仙尊曾修行之地，豢养大量脉轮瓜，内有超级蛊阵（律道仙蛊熟为核心）。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 我要让你带着他们两个，偷偷潜入瓜熟地洞，也就是乐土仙尊曾经待过的地方。
+    - 这里是我族豢养脉轮瓜的地方。
+- name: 血潮天坑
+  aliases: []
+  summary: 血道资源点，原为血海老祖真传地点，后武家经营，因武艺髯之死被攻破导致血潮喷发。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 血潮天坑原本有武艺髯镇守，但武艺髯丧失了性命之后，血潮天坑就被他人攻破。
+    - 血潮在两位蛊仙的手段下，不断退去。
+- name: 金霄峡
+  aliases: []
+  summary: 盛产金道、云道资源的峡谷，侯家试图从武家夺回。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 这就是金霄峡，盛产金道、云道资源。曾几何时，武家从我族手中硬生生抢夺过去。
+- name: 尸皇芋顶天
+  aliases:
+  - 尸山
+  summary: 由八转仙僵尸体长成的尸山，盛产僵尸蛊和尸气蛊，战略要地。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 尸皇芋顶天！这是一座非常特殊的山峰。
+    - 姚家占据尸皇芋顶天，等若是一座桥头堡，对着武家疆域虎视眈眈。
+    - 尸皇芋顶天中出现了尸皇真传
+- name: 嫁衣湖
+  aliases: []
+  summary: 乔家资源点，盛产各种衣蛊，曾三次产生野生仙蛊。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 嫁衣湖，流传着南疆的一个民间故事。
+    - 嫁衣湖盛产各种各样的衣蛊。
+- name: 人烟山
+  aliases: []
+  summary: 柴家大本营，也是贤才入瓮杀招的根基之地，柴家豢养大量凡人于此。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 人烟山！超级家族之一，柴家的大本营！
+    - 人烟山。这里是柴家的大本营。
+    背景:
+    - 柴夫创建柴家时选择的地点，山上有大量外姓凡人村寨。
+- name: 义天山遗址
+  aliases: []
+  summary: 南疆最大梦境聚集地，池曲由在此布置大阵并有暗道，方源欲通过交易获取其梦境。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 后来义天山正魔大战，他主动代替二代僵王受死
+    - 这片区域如今笼罩了义天山方圆数千里
+    - 义天山大战如火如荼地进行下去
+    appearance:
+    - 山体被浩劫地陷等破坏，灰雾弥漫。
+    background:
+    - 魔尊幽魂炼蛊渡劫之处，引发南疆蛊仙大量陨落。
+- name: 掠影地沟
+  aliases:
+  - 掠影地沟守卫大阵
+  summary: 北原地下的巨大裂隙，深达数万丈，栖息大量荒兽、上古荒兽，环境险恶。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 巨沟宛若恶兽的血盆大口，在浓郁的黑暗中静默地张开。
+    - 在沉默中，方源等仙僵，已经深入到地沟深处。
+    - 地沟中，并不仅仅是夜叉章鱼。
+    background:
+    - 北原主要有十七条地沟，由僵盟掌管，但阴流城已沉没。
+- name: 易位沙漠
+  aliases: []
+  summary: 西漠著名沙漠，地下多洞穴，僵盟分部遗藏所在地。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 因地气蝠驼死亡形成，地气涌动产生无数移动洞穴，富含土道道痕。
+    source:
+    - 这是西漠中，比较有名的沙漠之一。
+    - 易位沙漠的底下，有很多这样的底下洞穴。
+    - 地气蝠驼死后，一身道痕扩散开来，印刻在这片沙漠中，形成了易位沙漠。
+- name: 武仪山
+  aliases: []
+  summary: 南疆武家大本营所在地，建有超级蛊阵。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 整座武仪山都剧烈的震荡着。
+    - 下方正是武仪山。
+    背景:
+    - 武家实力象征，可信鸿在此与武庸会面。
+- name: 绝音戈壁
+  aliases: []
+  summary: 西漠特殊地点，音道道痕被压制，是音道蛊仙的绝境。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 西漠的绝音戈壁，是和南疆的寂静岭齐名的地方。
+    - 在绝音戈壁的战场上。
+- name: 万像沙漠
+  aliases: []
+  summary: 千变老祖掌控的沙漠区域，有万象宫殿等。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 影无邪已经将情报传达回来，他们是按照原路返回，目的地就是万像沙漠。
+    - 而在另外一处，千变老祖一方……
+    - 而如今镇守这里的八转蛊仙，就是当今的太太太上皇。
+- name: 小绿天
+  aliases: []
+  summary: 至尊仙窍中的一片天空区域，用于存放被天意侵蚀的梦境。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 小绿天中，则是盛放梦境。
+- name: 炼蛊大厅
+  aliases: []
+  summary: 方源炼制天机仙蛊的场所，充满白色光辉。
+  rank: ''
+  first_appear_title: ''
+  details:
+    appearance:
+    - 充斥着白色光辉，光芒万丈。
+    background:
+    - 用于关键炼蛊，具有镇压爆炸的装置。
+    source:
+    - 炼蛊大厅中，充斥着白色光辉。
+- name: 百合宫
+  aliases: []
+  summary: 六转仙蛊屋，秦百合建造，用于豢养后宫，后由方源拆解。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 她在白鹤海域铺建了一座六转仙蛊屋，取名为百合宫。
+- name: 盗天梦境
+  aliases: []
+  summary: 位于西漠的巨大梦境，还原盗天魔尊生平经历，会因参与而动态变化。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 盗天梦境巨大如山，仍旧散发着幽蓝的光晕。
+- name: 绿洲池塘
+  aliases: []
+  summary: 部族中心的水源，守卫森严，是少年盗天任务目标。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 池塘是绿洲中唯一的水源，看守森严。
+- name: 青鬼沙漠
+  aliases: []
+  summary: 西漠中的险地，由青家蛊仙魂道道痕刻印形成，藏有大量魂兽，是豆神宫的所在地。
+  rank: 七转-八转（区域）
+  first_appear_title: ''
+  details:
+    background:
+    - 常年阴云笼罩，有太古魂兽出没，无常石分布。
+    - 方源曾在此采集魂核，盗取魂兽令仙蛊。
+    - 方源与房家合作开拓，供应魂兽魂核。
+    source:
+    - 青鬼沙漠。
+    - 青鬼沙漠中，太古魂兽也有不少。
+    - 青鬼沙漠中藏有多少的魂兽，难以计数！
+    appearance:
+    - 沙漠
+    - 广袤沙漠，魂兽无数。
+    ability:
+    - 可能藏有魂核等资源。
+    rank:
+    - 七转-八转（区域）
+- name: 问津坞
+  aliases: []
+  summary: 房家的七转仙蛊屋，房睇长在其中的指挥中心，方源曾参与操纵。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 问津坞中，方源就站在房睇长的身边。
+- name: 烟罗暖玉田
+  aliases: []
+  summary: 北原有名的丰美草场，英雄大会的举办地，土地肥沃，水草茂盛。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 这便是北原有名的玉田，被誉为最为丰美的草场之一，如今这里人头攒动，旌旗飘扬。
+    - “原来这烟罗暖玉田下，还有一片地底寒心湖，湖水中蕴养出了一头上古水怪。”侯耀面色凝重。
+    - “防止它胡乱疯狂，破坏了这片烟罗暖玉田。”
+- name: 地底寒心湖
+  aliases: []
+  summary: 位于烟罗暖玉田下方的湖泊，孕育了上古水怪。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - “原来这烟罗暖玉田下，还有一片地底寒心湖，湖水中蕴养出了一头上古水怪。”
+- name: 秋刀原
+  aliases: []
+  summary: 位于北原蒙家势力范围，地貌平坦，寸草无生，充斥刀道道痕，盛产刃蛊。蒙屠曾在此苦修数年。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 在北部冰原的东南，墨人城以北，腐毒草原的西北方位，蒙家势力的南端，有一处地方，名为秋刀原。
+    - 秋刀原中充斥刀道道痕，自然孕育出无数刃蛊。
+- name: 云竹山脉
+  aliases: []
+  summary: 池家大型资源点，云道道痕浓郁，产云狸、荒植及成竹仙蛊，被方源劫掠。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 这就是云竹山脉了，池家掌控的大型资源点。
+    - 方源攻破云竹山脉，大肆收刮。
+    - 云竹山脉，地域广阔，乃是大型资源点，充斥浓郁的云道道痕，孕育出荒兽荒植非常正常，就算是上古荒兽也有可能。
+- name: 凤焰山
+  aliases: []
+  summary: 池家巨型资源点，盛产晚霞梧桐、火凤凰，是池家主要经济支柱。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 凤焰山！此山生长无数晚霞梧桐，枫叶如火，放眼通红一片。
+    - 这是巨型资源点，就算是超级势力也不可多得。
+- name: 白钢巨碗山谷
+  aliases:
+  - 中型资源点
+  summary: 位于小南疆的资源点，可产出七转仙材白钢汁。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 方源从商家勒索白钢汁构造法门后建成。
+    source:
+    - 白钢巨碗山谷乃是中型资源点，建成之后，便能在山谷凹地的最中心，凝聚七转仙材白钢汁。
+- name: 五界山脉
+  aliases: []
+  summary: 南疆山脉，由陶铸建造，具有五彩光气束缚，可抑制外来流派道痕，方源在此设伏。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 五界山脉特有的五彩光气，也跟着迅猛崩解，烟消云散。
+    - 整个山脉都竟开始剧烈的震荡起来。
+- name: 无名小海岛
+  aliases:
+  - 小渔村所在海岛
+  summary: 一座平凡小海岛，物产贫瘠，但海底有地沟黑油，岛上有一个小渔村。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 方源只觉视野骤变，来到了一处陌生的海岛上。
+    - 这座小岛十分普通、平凡。
+- name: 小渔村
+  aliases: []
+  summary: 无名海岛上的渔村，仅有五六位蛊师，最高三转，依赖采集黑油生存。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 小渔村人口并不多，蛊师也只有五六位。
+    - 小渔村的蛊师们几乎倾巢而动。
+    - 小渔村毁灭在即
+- name: 镇魔悔哭海
+  aliases:
+  - 悔哭海域
+  summary: 龙鲸洞天中的一片禁海，传闻镇压着绝世魔头，常年有忏悔哭声，可能与悔蛊相关。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 在这片乐土中有一片海域，乃是禁地，人称为镇魔悔哭海。
+    - 去往悔哭海，最终得到悔蛊的。
+    - 这里正是悔哭海域，而方源和庙明神等人已经深入此地多时。
+    background:
+    - 乐土仙尊镇压沈伤之地，后成为功德碑任务地点
+- name: 鲛人圣城
+  aliases:
+  - 圣城
+  summary: 鲛人圣庭的都城，海神祭举办地。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 整个鲛人圣城都为之震动
+- name: 苍蓝龙鲸洞天
+  aliases: []
+  summary: 乐土仙尊点化的洞天，成为一片乐土，内部有功德方尖碑、镇魔悔哭海等。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 这片龙鲸洞天显然也被乐土仙尊点化，成为了一片乐土。
+    - 苍蓝龙鲸洞天，鲛人圣城
+    - 龙鲸洞天中存在着乐土仙尊的布置。
+- name: 红莲石岛
+  aliases:
+  - 红莲岛
+  - 石莲岛
+  summary: 红莲魔尊建造的岛屿，位于光阴长河中，承载红莲真传，后被幽魂魔尊改造，最终在黄史一战中耗尽底蕴而毁灭。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 没错，那就是石莲岛！传说中，红莲真传的所在！
+    - 这座石莲岛可是由红莲魔尊亲手建造。
+    - 石莲岛开始漏水了。
+    background:
+    - 红莲魔尊传承地之一
+- name: 飘花江
+  aliases: []
+  summary: 洪亭奉命救人的河流，因发大水导致生灵涂炭，后因上古荒兽战斗河道改道。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 飘花江将于此刻突发大水，河流改道。
+- name: 枫叶城
+  aliases: []
+  summary: 洪亭童年生活的城池附近，与老城主城池相邻。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 这位城主的城池和枫叶城很近。
+- name: 花雾太泽
+  aliases: []
+  summary: 方源在至尊仙窍中人工创建的沼泽，用于培育太泽花以喂养悔蛊。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 就将这片沼泽命名为花雾太泽吧。
+- name: 有晴山
+  aliases: []
+  summary: 南疆名山，被地沟摧毁。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 这可是名山——有晴山！也被地沟毁了，真是可惜……
+- name: 太古白天
+  aliases: []
+  summary: 五域之外的天空，充满彩霞，环境恶劣，只有通过天罡气墙缝隙才能进入。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 进入了白天当中。
+    - 八转蛊仙，动起手来，威能浩瀚恐怖
+    - 来到白天当中。
+- name: 五相洞天
+  aliases: []
+  summary: 盗天魔尊留下的洞天，被方源获得并彻底掌控。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 五相洞天中，忽然回荡起方源的笑声。
+    - 这就是五相洞天？
+- name: 戚家气海洞天
+  aliases: []
+  summary: 巡天五相之一气相的仙窍洞天，落入白天后无法挪移，被戚家占据为大本营。
+  rank: ''
+  first_appear_title: ''
+  details:
+    appearance:
+    - 广阔，白云连绵，大风吹鼓。
+    background:
+    - 气相的仙窍，后成为戚家根据地，内有气海天灵和无量气海杀招。
+    source:
+    - 气海洞天十分广阔，白云连绵，大风吹鼓。
+    - 这气海洞天乃是当初气相的仙窍，落到白天中后，就无法挪移了。
+    - 戚平素就留守在戚家大本营气海洞天之中。
+- name: 九虚洞天
+  aliases: []
+  summary: 专修虚道的洞天，可使灾劫无效（提及）。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 九虚洞天，这个洞天中的蛊仙几乎都专修虚道。
+- name: 道阵洞天
+  aliases: []
+  summary: 极其擅长阵道的洞天（提及）。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 道阵洞天，此洞天极其擅长阵道。
+- name: 欺圣洞天
+  aliases: []
+  summary: 盗天魔尊布置过手段的洞天，可蒙蔽天意（提及）。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 欺圣洞天，这个洞天来头更大，原主人和盗天魔尊有着不俗的交情。
+- name: 不败福地
+  aliases: []
+  summary: 天庭炼制英雄命运蛊的关键所在，位于毛脚山，成功道痕的产出地。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 让我们捣毁不败福地，夺走所有的成功道痕，让天庭功败垂成！
+    - 不败福地就是我等最后的希望
+    - 不败福地战场。
+    ability:
+    - 产出成功道痕
+    background:
+    - 天庭计划的一部分
+    - 天庭与南北联军决战之地，最终天庭获胜。
+    appearance:
+    - 福地场景。
+- name: 藏龙窟
+  aliases: []
+  summary: 东海龙属之地，镇压着孽龙帝藏生，被龙宫攻破释放帝藏生。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 藏龙窟、藏龙窟，就是因为封印孽龙帝藏生而闻名天下。
+    - 中洲，藏龙窟战场。
+    - 紫薇仙子便将计就计，设下藏龙窟这个陷阱。
+    appearance:
+    - 洞窟战场。
+    background:
+    - 天庭设下的陷阱，针对龙灵和东海蛊仙。
+- name: 帝君城
+  aliases:
+  - 神帝城
+  summary: 天下第一仙蛊屋，由豆神宫和帝君城组合而成，蕴含壁画世界，具有镇压亚仙尊的威能。
+  rank: 八转（半九转）
+  first_appear_title: ''
+  details:
+    appearance:
+    - 庞大，无法飞行
+    - 碧绿玄光包裹，遮天蔽日
+    background:
+    - 中洲重地，人道手段布置
+    - 元莲仙尊所造，中洲人脉最大集结点
+    - 神帝城被视为人道圣地，有元莲仙尊的布置。
+    source:
+    - 帝君城就在地沟的前方
+    - 帝君城果然不愧是帝君城，布局严谨，构架恢弘，没有让叶凡失望。
+    - 帝君城乃是当年元始仙尊所设，经过这么多年的变迁，位置不断迁移，但至始至终都是地表上中洲人脉的最大的集结之处。
+    ability:
+    - 镇压、吸摄（螺旋青风）、壁画世界（安居乐业）、人道集结
+    - 壁画世界中可诞生人道蛊虫如驯兽师蛊
+    rank:
+    - 八转（半九转）
+- name: 毛脚山
+  aliases: []
+  summary: 不败福地所在战场，南疆蛊仙与天庭主力激战处，有五界大限阵和九九连环不绝阵。
+  rank: ''
+  first_appear_title: ''
+  details:
+    appearance:
+    - 仿佛一个土丘，毫不起眼
+    background:
+    - 作为不败福地的载体，成为大战焦点。
+    source:
+    - 寄托着不败福地的毛脚山，显露出来。
+    - 毛脚山……看着视野中越来越近的毛脚山。
+    - 毛脚山战场，南疆蛊仙入阵厮杀，连连破阵，但九九连环不绝阵最不怕的就是这个，子阵可谓无穷无尽。
+- name: 摄心河滩
+  aliases: []
+  summary: 池家掌握的中型资源点，富含智道道痕，产摄心蛊，被方源劫掠一空。
+  rank: ''
+  first_appear_title: ''
+  details:
+    appearance:
+    - 浅河滩，满布鹅卵石，有灰白巨石
+    background:
+    - 平时干涸，下大雨后有水
+    source:
+    - 环顾四周，发现这是片浅浅的河滩。
+    - 一片浅薄的深蓝湖泊，在苍翠的青山包围下，安静的宛若宝石。湖泊周围，都是洁白浑圆的石子、石块，形成河滩。正是南疆池家掌握的中型资源——摄心河滩。
+    - 五转摄心蛊有三千多只，四转则有五万，三转以下的摄心蛊规模多达百万。
+- name: 天露绿洲
+  aliases: []
+  summary: 房家控制的西漠大型资源点，以生产八转仙材天露闻名，有针灸树协防。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 方源开始视察天露绿洲。
+    - 天露绿洲中的水资源不仅量大，而且种类也比较多。
+- name: 宝月绿洲
+  aliases: []
+  summary: 董家的一处中型资源点，被房家使用偷道杀招摧毁，曾是董陆沉爱妻埋葬之地。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 房家的蛊仙们秘密潜伏进来，接近沙海中的宝月绿洲。
+    - 宝月绿洲从此除名。
+- name: 燎萤戈壁
+  aliases: []
+  summary: 房家的一处中型资源点，以燎萤蛊闻名，被方源伪装后摧毁，房家蛊仙被杀。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 方源来到燎萤戈壁，这里怪石嶙峋，植被稀少。
+    - 燻萤戈壁被摧毁的噩耗！
+- name: 小黄天
+  aliases: []
+  summary: 至尊仙窍内的一个区域，倪家血脉被转移至此，有碎金河。
+  rank: ''
+  first_appear_title: ''
+  details:
+    appearance:
+    - 杳无人烟
+    - 有碎金河，气候无常
+    background:
+    - 仙阵搭建处。
+    - 方源至尊仙窍的一部分，倪家族人生活在此十多年。
+    source:
+    - 至尊仙窍。杳无人烟的小黄天之中，一道身影电射而来。
+    - 至尊仙窍。小黄天。一群同姓的蛊师，来到碎金河旁。
+    ability:
+    - 无
+- name: 五域两天
+  aliases: []
+  summary: 原分为中洲、北原、东海、西漠、南疆，五域合一后界壁消失，天地二气融汇。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 回到五域两天中去。
+    - 大地震颤，发出一阵阵的沉闷的隆隆之音。这一刻，包裹着五域的界壁彻底消弭，地脉勾连，原本隔绝的五域彻底统合一体！
+    - 五域人族一片哀嚎，痛不欲生。
+- name: 气象洞天
+  aliases: []
+  summary: 戚家洞天
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 直奔气象洞天的位置而去。
+- name: 乐土洞天
+  aliases: []
+  summary: 苍蓝龙鲸体内的洞天，悔蛊所在
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 悔蛊仍旧在苍蓝龙鲸的乐土洞天当中。
+- name: 兽灾洞天
+  aliases: []
+  summary: 方源吞并的洞天，以变化道为主，发生过两次浩劫。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 兽灾洞天。方源分身战部渡缓步行走。
+    - 兽灾洞天
+    - 兽灾洞天中的最高战力
+- name: 山崖城
+  aliases: []
+  summary: 兽灾洞天中的城池，城主为蛊仙
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 那位老者好像就是山崖城的城主呢。
+- name: 华文洞天
+  aliases: []
+  summary: 一个以信道为主流的洞天世界，朝廷统治，资源有限，有十大才子选拔制度。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 华文洞天。一场诗会正在举行着。
+    - 华文洞天。大江东流，一艘五牙大舰正顺江而下。
+    - 在这个华文洞天当中，信道乃是当之无愧的主流。
+- name: 非议峰
+  aliases: []
+  summary: 信道奇地，由文秀打造，蕴含丰富信道道痕，几乎是小半个天地秘境。
+  rank: 八转级资源
+  first_appear_title: ''
+  details:
+    appearance:
+    - 漂浮的山峰，仿若虚影，并非真实山峰。
+    ability:
+    - 蕴含极丰富的信道道痕，可供信道修行。
+    rank:
+    - 八转级资源
+    background:
+    - 文秀的洞天破碎后暴露，被众人争夺。
+    source:
+    - 这里就是非议峰？龙人分身望着天空中漂浮着的山峰，面色带着些微奇异。
+    - 这非议峰竟是人力打造而出，蕴含着极其丰富的信道道痕，几乎是小半个天地秘境了！
+    - 范极昏迷在现场，他的魂魄底蕴炼化非议峰。
+- name: 南华岛
+  aliases: []
+  summary: 东海中的岛屿，原属风云府，后被吴帅设计夺取，成为龙人一族的领地。
+  rank: ''
+  first_appear_title: ''
+  details:
+    appearance:
+    - 海岛
+    ability:
+    - 资源丰厚，适合龙人群居。
+    background:
+    - 吴帅耗时百年经营南华岛，曾在此建造龙庭。
+    source:
+    - 南华岛本是风云府的领地，却被你作局谋算夺来。
+    - 吴帅日理万机，手段滴水不漏，让风云府始终无法得逞。
+    - 我听闻吴帅和他的那一支龙人族群，把南华岛经营得非常好。
+- name: 紫檀万雀岛
+  aliases: []
+  summary: 东海沈家的大本营，由太古荒植镇海紫檀木构成的海岛。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 沈家大本营，紫檀万雀岛
+    - 这座海岛本身就是一座超级资源点
+- name: 古族福地
+  aliases: []
+  summary: 兽人（古族）的栖息地，海底福地，底蕴雄厚。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 显露出一座海底福地来
+    - 一进入福地，便是一片苍茫的大地
+    - 古族福地。
+- name: 接引岛
+  aliases: []
+  summary: 小岛，中央有功德碑，是蛊仙进入龙鲸乐土后的初始地点。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 接引岛并不大，群仙探无可探，很快就集中到了小岛中央。
+    - 在小岛中央，他们有了震惊的大发现！一座高耸的方尖碑...
+    - 白光一闪，方源、庙明神、鬼七爷便又回到了接引岛。
+    background:
+    - 龙鲸乐土内部据点
+- name: 龙鲸乐土
+  aliases:
+  - 苍蓝龙鲸乐土
+  summary: 乐土仙尊开辟的特殊空间，位于苍蓝龙鲸体内，内有功德碑和诸多任务。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 龙鲸乐土中的水很深。
+    - 出不去龙鲸乐土
+    - 原来在这龙鲸乐土中，有一只八转仙蛊应声虫
+    background:
+    - 巨阳仙尊手笔，内有多种机缘和限制
+- name: 鱼圆岛
+  aliases: []
+  summary: 任务地点，干旱沙漠化，沈从声在此建设水井。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 鱼圆岛干旱，需要建设水井。
+- name: 金玉屋
+  aliases: []
+  summary: 凡人高档赌石坊，夏琳进入其中。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 赌石坊的牌匾写着金玉屋三个字
+- name: 海底大阵
+  aliases: []
+  summary: 乐土仙尊布置在海底的大阵，沈伤曾在此苦修人道。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 乐土大人布置的海底大阵中苦修
+- name: 天穹脊背
+  aliases: []
+  summary: 龙鲸乐土中的巨骨结构，九转骨道仙材，用于加固乐土，附着大量黑火。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 天穹脊背竟是一具九转骨道仙材
+    - 黑火汇聚如云，将巨骨覆盖了大半
+- name: 仙墓
+  aliases:
+  - 天庭仙墓
+  summary: 天庭重地，埋葬历代蛊仙，有天庭底蕴，被方源视为摧毁目标
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 仙墓损伤，虽然只是一小部分，距离全面摧毁还很早，但已经足够让天庭诸仙心疼无比。
+    - 仙墓乃是天庭辛苦积累的最大底蕴，绝不容有失！
+    - 这片天庭仙墓已被大大改造，天庭蛊仙们飞落下去，充当阵眼，竟迅速组成一座仙阵。
+- name: 壁画世界
+  aliases:
+  - 安居乐业世界
+  summary: 神帝城内的独特空间，由元莲仙尊的安居乐业杀招形成，可容纳无数居民修行。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 便在帝君城中施展画道杀招安居乐业，形成壁画世界。
+    - 壁画世界，尽是喧嚣和嘈杂。
+    - 新增的两幅壁画，带给壁画世界巨大的冲击。
+    appearance:
+    - 内有城市场景，如菜市口等
+    ability:
+    - 能自动演化出新的职业蛊如驯兽师蛊
+    background:
+    - 壁画世界是元莲仙尊填补人道根基和主干的地方，适合修行人道。
+- name: 照影海域
+  aliases: []
+  summary: 东海夏家的超级资源点，盛产暗道、律道修行资源。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 照影海域乃是超级资源点。
+- name: 大智洞天
+  aliases: []
+  summary: 大智仙母的洞天大本营，位于太古黑天，被天庭攻克。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 大智洞天被天庭攻袭。
+    - 我的大智洞天已经被天庭攻克了！
+- name: 冰晶洞天
+  aliases: []
+  summary: 冰晶仙王的洞天大本营，位于太古黑天，雪民聚居地。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 冰晶洞天已经战火纷飞。
+    - 我的冰晶洞天还在坚持，还有希望。
+- name: 小蓝天
+  aliases: []
+  summary: 至尊仙窍内的天空区域，方源在此布置了律道大阵以模仿气潮清除天意。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 这座大阵位于小蓝天之中，凭空而立，乃是由五界大限阵改良而成。
+- name: 安魂洞天
+  aliases: []
+  summary: 寒灰仙姑的八转洞天，位于两天，已被魔尊幽魂控制。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 安魂洞天。
+    - 整个安魂洞天已经落入他的手中！
+- name: 兮地
+  aliases:
+  - 兮
+  summary: 气绝魔仙掌管的天地秘境，状如凹地虚影，能吞吸一切气道手段，克制天下气道。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 天地秘境——兮！
+    - 正克天下气道，气海小辈你当然也不会例外！
+    - 气绝魔仙的头顶显露兮地。
+- name: 沙狼城
+  aliases: []
+  summary: 西漠的一座繁华城池，后被巨兽青仇毁灭，成为废墟。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 原本繁华的沙狼城，此刻已经成了一片废墟。到处是尸体，断壁残垣，燃烧的火和烟，情况惨不忍睹。
+    - 内城区——没了！
+- name: 小南疆
+  aliases: []
+  summary: 五域之一，青山葱茏，松涛阵阵。砚石老人的石亭位于此处。
+  rank: ''
+  first_appear_title: ''
+  details:
+    appearance:
+    - 青山葱茏，松涛阵阵。
+    - 多山地形，有南疆蛊仙群体。
+    background:
+    - 影宗活动区域。
+    - 南疆多山，是蛊仙内斗之地。
+    - 武家所在，正道势力强大。
+    source:
+    - 而在南疆，却是风平浪静。青山葱茏，松涛阵阵。
+    - 北原蛊仙，跑到南疆这边来，态度还如此嚣张！
+    - 南疆蛊仙大怒，你北原的外人居然如此嚣张。
+    rank:
+    - 域界
+    背景:
+    - 方源曾在此发展，逼武家交易乎地。
+- name: 地渊战场
+  aliases: []
+  summary: 中洲地下深处，影宗布置有据点，黑楼兰曾在此被关押。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 方源走出去，来到地渊。
+    - 这是地渊的深处，就算是拥有者中洲十大古派之一的古魂门，也还未探索到这里。
+    - 中洲，地渊深处。
+- name: 流银福地
+  aliases: []
+  summary: 中洲的一处福地，被紫薇仙子搜刮。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 紫薇仙子一边搜刮着流银福地
+- name: 藏地
+  aliases: []
+  summary: 十地之一，处于地脉中，蕴藏丰富仙材，白凝冰等三女困于此处。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 我们逃到这里，多么不容易
+    - 方源悠然地顶着地脉强压，将整个藏地收入仙窍之中
+- name: 池家大本营
+  aliases:
+  - 池家
+  - 南疆池家
+  - 池氏家族
+  summary: 南疆超级势力，擅长阵道，拥有多处资源点如摄心河滩、云竹山脉、凤焰山等，领袖池曲由。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 南疆超级势力中，池家绝对是阵道流派中的第一势力。
+    - 池家。
+    - 池家拥有两座仙蛊屋，均都不类凡俗，当中太宇寺更强一筹，能匹敌八转蛊仙！
+- name: 羊家
+  aliases: []
+  summary: 南疆超级势力，与池家、武家有冲突。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 南疆超级势力羊家
+    - 羊家果断出手
+- name: 悲风山脉
+  aliases: []
+  summary: 中洲的一片山脉，是方源追杀战等战斗的遗迹所在地，赵怜云计划前往调查方源实力。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 明日就启程去悲风山脉
+- name: 腐臭烂泥山
+  aliases: []
+  summary: 南疆的一座黑色高山，土壤特殊，是倪家山寨所在地，戚灾负责的分支据点。
+  rank: 名山级数，能产出仙材，有毒道荒兽。
+  first_appear_title: ''
+  details:
+    source:
+    - '''烂泥山已经不远了。这一次奔赴倪家，不如就让戚荷动手。'''
+    - 烂泥山这里土壤特殊，血还未彻底干涸，显然倪家被屠杀，只是一两天前的事情。
+    - 腐臭烂泥山也算是南疆中的名山之一。
+    appearance:
+    - 雨季形成临时沼泽，冬季有冻土。
+    rank:
+    - 名山级数，能产出仙材，有毒道荒兽。
+    background:
+    - 南疆名山之一，靠山有多个山寨，无蛊仙驻扎。
+- name: 乎地
+  aliases:
+  - 天地秘境
+  summary: 天地秘境之一，可视为准九转仙蛊，蕴含气道奥秘，被方源从武家强买。
+  rank: 天地秘境（相当于九转级）
+  first_appear_title: ''
+  details:
+    appearance:
+    - 隐藏于腐臭烂泥山地底大厅。
+    - 平地？
+    ability:
+    - 能借力施展仙道杀招，使人如流星飞射。
+    - 未知
+    rank:
+    - 天地秘境（相当于九转级）
+    - 天地秘境
+    background:
+    - 由孔升天本体发现，武家意图秘密夺取。
+    - 人祖传中记载，乎地是吸气，兮地是呼气。
+    - 方源底蕴之一。
+    source:
+    - 乎地乃是和兮地齐名，是气道的绝世秘境之一。
+    - 孔升天意志故地重游，感慨万分地道：当年我本体费了上百年的努力，从种种线索中抽丝剥茧，不断追查，千辛万苦来到这里，找到了这里的乎地。
+    - 乎地可看做准九转的仙蛊，方源却连一只八转仙蛊都不出。
+    等级:
+    - 准九转（天地秘境）
+    属性:
+    - 气道
+    背景:
+    - 曾属于武家，后被方源换取，交给气海分身。
+- name: 火雷河段
+  aliases: []
+  summary: 赤龙江的一段，因火雷神君布置而成，盛产炎道雷道蛊虫。
+  rank: ''
+  first_appear_title: ''
+  details:
+    appearance:
+    - 河水滚滚，浪花如火，时而炸响。
+    background:
+    - 火雷神君遗泽，自然演变而成，直到气潮暴露。
+    source:
+    - 火雷河段虽然盛产炎道、雷道蛊虫，但是从未有过仙蛊诞生。
+    - 新发现的一份八转真传，就藏在这河段的底层。
+- name: 万兽混彩天
+  aliases: []
+  summary: 狂蛮魔尊的仙窍，种在贪食太魔蛙体内的洞天，拥有食道环境。
+  rank: ''
+  first_appear_title: ''
+  details:
+    appearance:
+    - 有部族聚居，万族林立，与兽同居
+    background:
+    - 万兽混彩天是狂蛮魔尊的仙窍，以图腾为主要修行方式，每隔万年举办万族祭典。
+    source:
+    - 你现在已经到了万兽混彩天了。
+    - 万兽混彩天乃是狂蛮魔尊的仙窍，这位魔尊将仙窍种在了贪食太魔蛙的体内。
+- name: 田月高坡
+  aliases: []
+  summary: 万兽混彩天中举办万族祭典的场所，一片荒芜贫瘠的黄土大地。
+  rank: ''
+  first_appear_title: ''
+  details:
+    appearance:
+    - 一片荒芜贫瘠，到处都是黄土，风一吹就掀起呼呼的沙土
+    ability:
+    - 能够吞噬祭品，打开万生路
+    background:
+    - 田月高坡是万族祭典的圣地，每隔万年举办一次。
+    source:
+    - 万族都聚集在了田月高坡。
+    - 眼前一片荒芜贫瘠，到处都是黄土，除此之外，空无一物。
+- name: 碎金河
+  aliases: []
+  summary: 小黄天中的河流，水位不断上涨，威胁倪家族人。
+  rank: ''
+  first_appear_title: ''
+  details:
+    appearance:
+    - 金色河流
+    ability:
+    - 无
+    background:
+    - 可能导致洪水泛滥。
+    source:
+    - 碎金河面不断上涨，我们必须要进行分流！
+- name: 小西漠
+  aliases: []
+  summary: 天下五域之一，影宗残余资源最多，方源欲逃往之地。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 西漠是五域中，商业最为发达的地域。
+    - 方源的下一个目的地便是西漠
+    - 影宗在西漠的残余资源最多
+    appearance:
+    - 沙漠环境，有漆黑雄城
+    ability:
+    - 无
+    background:
+    - 墨人被方源挪移至此。
+- name: 皮草福地
+  aliases: []
+  summary: 南疆中部的福地，蕴藏皮草真传，因气潮显露，被超级家族争夺。
+  rank: ''
+  first_appear_title: ''
+  details:
+    appearance:
+    - 福地，具体不详
+    ability:
+    - 无
+    background:
+    - 皮草仙人遗留，木道、变化道兼修。
+    source:
+    - 事关皮草福地的争夺。
+- name: 土家寨
+  aliases: []
+  summary: 南疆人族势力，占据名山地牢，有两位四转家老。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 这里是土家寨？
+    - 土家寨以土为姓，本族人众多，而外姓的附庸也不少。
+- name: 蛮荒大世界
+  aliases:
+  - 蛮荒
+  summary: 疯魔窟第八层中的三大世界之一，荒芜广袤，后被青莲大世界吞并。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 蛮荒大世界。
+    - 蛮荒大世界中的蛊仙虽然最多，但大多数都是三心二意。
+    - 天庭不断推进，占领一处地域，便抛下一座子阵。
+- name: 黄土大世界
+  aliases:
+  - 黄土
+  summary: 三大世界之一，由乐土仙尊布置，倡导和平共存，现为方源等人基地。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 黄土大世界的蛊师大军掀起了反攻浪潮。
+    - 黄土大世界是乐土仙尊布置出来的。
+    - 黄土大世界
+- name: 青莲大世界
+  aliases:
+  - 青莲
+  summary: 疯魔窟第八层中的三大世界之一，不断扩张，最终一统三界。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 青莲大世界。
+    - 青莲一方的蛊仙们舍弃黄土蛊仙们，一起迎上了冰晶仙王等人。
+    - 青莲大世界不断扩张，将其余两大世界纳入自己的疆土领域之中！
+- name: 乐土圣墓
+  aliases: []
+  summary: 乐土仙尊的墓地，位于黄土大世界，蕴含神秘道痕，方源未能破解。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 乐土之墓奥妙非凡，我一时间还未理出头绪。
+- name: 圣山
+  aliases: []
+  summary: 青莲大世界的中心，黑白二色，由黑线白纸构成，实为书山天地秘境。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 圣山脚下。抬眼望山，就见这座山分外奇特。整座山只有黑白两色。
+    - 这杀招乃是我草创而出，以谦虚蛊为核心，名为谦谦有礼。此招能借助书山的信息。
+- name: 赤子草原
+  aliases: []
+  summary: 北原的一个草原，陈诚与黑月仙子约战之地。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 北原。赤子草原。陈诚一系青衣，背负双手，傲然站立。
+- name: 盗天真传空间
+  aliases:
+  - 盗天空间
+  summary: 盗天魔尊留下的人造秘境，内藏其真传，位于疯魔窟第八层中央，可抵挡灾劫。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 盗天真传空间既出，方源掌握着我的己运真传，定然可以察运，知晓此处便是他的机缘。
+    - 方源眼中一抹冷冽的光芒一闪即逝，旋即他身形化作一道白虹，率先进入盗天真传空间。
+- name: 元境
+  aliases: []
+  summary: 天地秘境，蕴含一切流派奥妙，进入可提升境界，但脆弱易毁。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 位于兮地、乎地之间，人祖传中曾有记载。
+    source:
+    - 元境蕴含一切流派的奥妙，只要是蛊修都能从中获益。
+    - 元境价值极大，尤其是对于方源而言。
+    - 他的手中的确还有大量元境，这些元境对他而言，价值很低了。
+- name: 安魂湖
+  aliases: []
+  summary: 生死门内的湖泊，原本卧躺有太日阳莽的魂魄，现已被幽魂魔尊吸收。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 而在安魂湖的边上，还有一座山脉。
+    - 安魂湖畔卧躺着人祖大儿子太日阳莽的魂魄。
+- name: 乐土巨墓
+  aliases: []
+  summary: 乐土仙尊的陵墓，实际为转修天道的重生手段，被星宿仙尊摧毁后反而助其复活。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 星宿仙尊目光穿越万里，仔细查看乐土之墓的废墟，最终满意点头。
+    - 乐土巨墓被撕裂开来，裂缝无数。
+- name: 星罗城
+  aliases: []
+  summary: 至尊仙窍的中枢城市，建有广场和三榜，是蛊仙活动中心。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 星罗城所在的云土并不广阔，一群蛊仙一路疾飞，很快就进入了星罗城。
+    - 星罗城中的广场，在广场中，屹立着三根巨柱，巨柱表面浮游着无数文字，形成三大榜单。
+- name: 冰流海域
+  aliases: []
+  summary: 东海西端海域，靠近中洲。巨阳仙尊停驻于此炼化运道道痕。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 巨阳仙尊选择停留在冰流海域
+- name: 小东海
+  aliases: []
+  summary: 五域之一，方源的大本营。包含冰流海域等区域，正被巨阳仙尊炼化运道道痕。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 东海中的气泡海就会因为蛊仙争斗，而被剧毒侵蚀。
+    - 东海众仙面面相觑。
+    - 界壁就像是一圈栅栏，将整个东海圈住。
+    appearance:
+    - 广阔海域，岛屿众多。
+    background:
+    - 方源以气海老祖身份在此活动，沈家、宋家等超级势力分立。
+    背景:
+    - 正气盟所在，方源经常在此行动。
+- name: 黄毛大陆
+  aliases: []
+  summary: 至尊仙窍中毛民聚集的大陆之一，毛十二居住于此。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 我现在居住之地乃是黄毛大陆，日常负责统领黄毛毛民一脉，和诸位乃是邻居呢。
+    - 连可心耗费一天多的光阴，走走停停，最终飞到了黄毛大陆。
+- name: 流苏戈壁
+  aliases: []
+  summary: 房家的超级资源点，位于西漠，盛产地须（蛊材）。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 这里是流苏戈壁，房家的超级资源点。每年到了一段时段，这里就会生长出地须。
+- name: 太阳
+  aliases: []
+  summary: 全天下最大天脉节点，由光道、炎道、天道道痕凝聚，后被幽魂魔尊毁灭。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 太阳自古长存至今
+    - 太阳——没了！
+- name: 血海
+  aliases: []
+  summary: 巨阳仙尊炼制的天地秘境雏形，由血道道痕构成，用于对抗其他尊者。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 这片血海一直隐藏在长生天中
+    - 血海本身就有复活重生的威能
+    - 血海便是他抗衡他们的底蕴！
+    background:
+    - 位于长生天内部，不断扩张，未来将成完整天地秘境。
+- name: 幽天
+  aliases: []
+  summary: 幽魂魔尊主宰的天空，由混淆两天融合而成，蓝火覆盖。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 新的天空出现了！人们将其成为——幽天。
+    - 自从方源冒然飞升到幽天当中
+    - 幽天虽大，我们身后却是天庭，退无可退！
+- name: 炼海
+  aliases:
+  - 天地秘境
+  summary: 方源炼制的天地秘境，位于小东海，用于炼蛊。
+  rank: 天地秘境
+  first_appear_title: ''
+  details:
+    background:
+    - 由方源完善，成为名副其实的天地秘境，内含漂游炼巢。
+    - 方源底蕴之一。
+    source:
+    - 如今的炼海，已经彻底被方源完善，成为了名副其实的天地秘境！
+    - 炼海帮助炼巢炼蛊。
+    - 方源有...炼海、人海、乾坤晶壁雏形
+    appearance:
+    - 海洋
+    ability:
+    - 炼道相关。
+    rank:
+    - 天地秘境
+- name: 玄玉蛇窟
+  aliases: []
+  summary: 中洲超级资源点，产出玄玉蛇等多种资源，后被方源收取。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 玄玉蛇窟乃是中洲著名的超级资源点。
+    - 整个玄玉蛇窟在滚滚烟尘中，缓缓拔升飞空。
+- name: 天庭门户
+  aliases: []
+  summary: 天庭的出入口，星宿在此阻挡方源。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 星宿仙尊堵在天庭门户之前。
+    - 天庭门户仍旧大开。

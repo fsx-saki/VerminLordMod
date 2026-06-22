@@ -1,0 +1,7660 @@
+characters:
+- name: 方源
+  aliases:
+  - 古月方源
+  - 方老魔
+  - 魔头
+  - 方源
+  - 小贼
+  summary: 人族蛊仙，六转修为，拥有多只七转仙蛊，擅长伪装、虚张声势和偷道。被东海蛊仙追杀，逃入界壁后返回琅琊福地。其意志残留在弟弟方正脑海中。正面临仙窍灾劫的威胁。
+  rank: 一转中阶
+  first_appear_title: ''
+  details:
+    background:
+    - 前世为魔道强者，纵横世间两百余年，因炼制春秋蝉而被正道围攻，自爆后重生。
+    - 古月方之一脉，父母双亡，由舅父舅母抚养。
+    - 父母双亡，被舅父舅母抚养，有弟弟方正
+    source:
+    - 方源一身残破的碧绿大袍，披头散发，浑身浴血，环顾四周。
+    - 这就是五百年前？！春秋蝉果真起作用了……
+    - 方源心中叹着，有些感慨，却并不后悔。
+    appearance:
+    - 十五岁少年
+    - 十五岁少年，黑色头发，身形偏瘦
+    - 少年模样，充满兴奋与自信
+    ability:
+    - 一转蛊师，中阶修为（实际战力利用酒虫可达高阶），擅长月刃攻击和策略布局
+    - 一转高阶蛊师，资质优异
+    - 二转蛊师，拥有双猪之力，使用铁骨蛊后骨骼坚硬若铁
+    rank:
+    - 一转中阶
+    - 一转高阶
+    - 三转
+    status:
+    - 仙僵
+    age:
+    - 年迈，寿命无多
+    gender:
+    - 男
+    cultivation_base:
+    - 七转蛊仙
+    affiliation:
+    - 散修/前世记忆
+    cultivation:
+    - 八转（至尊仙体）
+    - 八转
+- name: 古月博
+  aliases:
+  - 古月族长
+  - 族长
+  - 古月博大人
+  summary: 古月一族族长，主持家族事务，在方源晋升仪式上任命赤钟暂代药堂家老。
+  rank: 族长（三转及以上）
+  first_appear_title: ''
+  details:
+    background:
+    - 古月家族族长，主持开窍大典。
+    - 族长，甲等资质，对方源有期望。
+    - 古月山寨最高领导者，平衡各脉势力。
+    source:
+    - 古月族长中年模样，两鬓微霜，一身素白庄重的祭祀服装，跪在棕黄色的地板上，直着上身，双手合十，紧闭双目诚心祈祷。
+    - 古月族长露出慈祥的笑容，以温和的语气对方源道。
+    - 族长古月博，当权家老古月赤练、古月漠尘等人，鱼贯而入。
+    rank:
+    - 族长（三转及以上）
+- name: 古月师
+  aliases:
+  - 学堂家老
+  summary: 古月学堂的家老，负责管理学堂事务，对方源的行为持默许态度。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 古月家族学堂家老，负责少年蛊师教育。
+    source:
+    - 学堂家老他须发皆白，精神矍铄地领着少年们进入家主阁。
+    - 学堂家老早已经睡下，但是在睡梦中，模模糊糊地听到有人敲门。
+    - 学堂家老眉头扬起，笑了起来...
+- name: 古月漠北
+  aliases:
+  - 漠北
+  summary: 古月一族学员，多次被方源勒索并击败，拳脚功夫逐渐进步。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 古月漠尘的孙子。
+    source:
+    - 一个身穿麻布衣衫的马脸少年，越众而出。他身材高大，比同龄人要粗壮得多，透着一丝彪悍气息。
+    - 古月漠北怒吼一声，率先战了出来。
+    - “我苦练基本拳脚连续七天，想不到只在方源的手中支持了两招...”
+- name: 古月漠尘
+  aliases:
+  - 漠尘
+  summary: 漠脉家主，重伤后降至二转，被迫与方源联姻以稳住漠脉，能屈能伸。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 古月家族家老，马脸。
+    source:
+    - 家老古月漠尘
+    - 古月漠尘背对着她，正站在书桌前练字。
+    - 古月漠尘深深地看了孙女一眼，语重心长地道...
+- name: 古月赤练
+  aliases:
+  - 赤练老人
+  - 赤练
+  - 赤练家老
+  summary: 古月一族赤脉家主，权势极重，被方源以孙子资质作弊的秘密威胁，被迫合作。
+  rank: 三转及以上（家老）
+  first_appear_title: ''
+  details:
+    background:
+    - 古月家族家老。
+    - 赤脉首领，与药姬、漠尘等有政治斗争。
+    source:
+    - 家老古月赤练一头红发
+    - 在赤之分家，古月赤练的书房中，灯火明亮。
+    - 古月赤练摇摇头：“你这是不理解。你只代表我们赤之分脉的形象...”
+    appearance:
+    - 脸色阴沉，鹰隼般锐利的目光。
+    rank:
+    - 三转及以上（家老）
+- name: 古月赤城
+  aliases:
+  - 赤城
+  - 古月赤城
+  summary: 赤之分家孙子，乙等资质（实际作弊），被方源打劫并打伤。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 通过爷爷作弊获得乙等资质假象。
+    source:
+    - 古月赤城身材矮小，满脸麻子，捏着拳头，满脸出汗，显得特别的紧张。
+    - 古月赤城右眼黑了一圈...
+    - 古月赤城大吼一声，冲向方源。
+- name: 沈翠
+  aliases: []
+  summary: 方源的贴身丫鬟，姿容中等，爱慕虚荣，是舅母的眼线。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 舅母身边的沈嬷嬷之女。
+    - 被舅父舅母安排监视方源，后转给方正
+    source:
+    - 她姿容只能算上中等，但打扮得好，穿着一身绿衫，长袖长裤，脚下是绣花鞋，黑发上还有一个珍珠簪子，全身上下都散发出青春的活力。
+    - 沈翠亲自伺候他洗澡。
+    - 沈翠站在灯光下，含情脉脉地看着方正
+- name: 白凝冰
+  aliases:
+  - 白兄
+  - 白云
+  - 凝冰
+  - 北冥冰魄体
+  - 雪女伪装
+  summary: 青茅山第一天才，拥有北冥冰魄体，三转蛊师，性格冷漠无情，行事恣意。被方源追杀，自爆右臂逃命，后与古月青书激战，最终重伤被救活。
+  rank: 二转（当时）
+  first_appear_title: ''
+  details:
+    background:
+    - 白家寨年轻一辈中的翘楚。
+    - 白家天才，喜欢寻找对手。
+    - 原青茅山白家族人，与方源合作逃生
+    source:
+    - 白家的白凝冰，天资真是恐怖。
+    - 短短两年功夫，就已经修行到三转蛊师。
+    - 白家寨实力膨胀的很快，又出了一个甲等天才，叫做白凝冰。
+    appearance:
+    - 白衣少年，一双冷漠的眼睛。
+    - 黑不溜秋、木愣愣的样子，戴草帽，伪装成男人
+    - 白衣银发，深蓝眼眸，绝美面容，冷漠神态。
+    ability:
+    - 当时二转就能斩杀三转家老，实力强大。
+    - 三转蛊师，拥有冰肌玉骨，一鳄之力
+    - 能够转变为龙人形态；拥有未来身杀招；曾驾驭龙宫。
+    rank:
+    - 二转（当时）
+    - 三转
+    - 蛊仙（具体不明）
+    gender:
+    - 女（原为男，已转化）
+    cultivation_base:
+    - 六转蛊仙（但战力七转）
+    affiliation:
+    - 影宗/散修
+    类别:
+    - 特殊体质
+    特点:
+    - 天生拥有丰富冰雪道痕，修行冰雪流派事半功倍。
+- name: 人祖
+  aliases:
+  - 人
+  - 灵祖
+  summary: 神话传说中第一个人类，获得态度蛊、希望蛊等，后通过挖眼创造了太阳和古月阴荒。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 远古传说人物。
+    source:
+    - 传说，这个世界刚刚形成的时候，一片蛮荒，野兽横行，出现了第一个人类，名字叫人祖。
+    - 人祖道出了正确的名字之后，就降服了规矩二蛊。
+    - 话说，人祖得了态度蛊。
+- name: 花酒行者
+  aliases:
+  - 花酒大人
+  summary: 五转魔道蛊师，曾与古月一族四代族长争斗，留下影壁和力量传承，最终死在秘洞中。
+  rank: 五转
+  first_appear_title: ''
+  details:
+    appearance:
+    - 光头，粉色长袍，目细长
+    rank:
+    - 五转
+    background:
+    - 与古月四代族长战斗后受伤，死于山壁秘洞
+    - 恶名昭著的蛊师，曾迷倒女性。
+    source:
+    - 花酒行者和四代族长的角色，颠倒了一下。
+    - 我就是花酒行者。光头蛊师嘿嘿一笑，脸色狰狞可怖...
+    - 花酒行者用留影存声蛊，记录下了古月一族四代族长的丑态。
+- name: 古月英雄
+  aliases:
+  - 四代族长
+  summary: 古月一族四代族长，五转蛊师
+  rank: 五转
+  first_appear_title: ''
+  details:
+    rank:
+    - 五转
+    background:
+    - 暗算花酒行者不成被反杀
+    source:
+    - 四代族长暗算花酒行者不成，战败后又偷袭，虽然击退了后者，但是他也因此身亡。
+- name: 舅母
+  aliases: []
+  summary: 方源的舅母
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 舅母则坐在一旁，看着方正脸蛋上一边一个的鲜红掌印，很无语。
+- name: 江牙
+  aliases: []
+  summary: 商铺店主，一转蛊师，方源的合作伙伴，代理销售生机叶。对方源的财富和实力充满羡慕。
+  rank: 一转
+  first_appear_title: ''
+  details:
+    rank:
+    - 一转
+    background:
+    - 曾在客栈摔酒坛，被方源记起
+    - 江鹤的弟弟，通过贩卖生机叶赚取差价。
+    source:
+    - 江牙在摔酒坛时忿忿不平的对猎户们发泄。
+    - 江牙就坐在方源的对面，堆着满脸的笑。
+    - 江牙连忙双手接过去，打开袋口，仔细清点。
+- name: 古月漠颜
+  aliases:
+  - 漠颜
+  summary: 漠北的姐姐，二转中阶蛊师，性格强势，为弟弟出头找方源麻烦。
+  rank: 二转中阶
+  first_appear_title: ''
+  details:
+    rank:
+    - 二转中阶
+    source:
+    - 漠颜迈着大步，踏进客栈。身后跟着一群家中豪奴。
+    - “找到方源了？”就在这时，门口处传来一个清亮高傲的女音。
+    - 漠颜大小姐
+- name: 高碗
+  aliases: []
+  summary: 漠家的家奴，身材高大健壮，苦练拳脚，奉命看守方源。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 中年男子狞笑着走了过来。
+    - 高碗见了漠颜，陡然间就换了一副脸面。
+- name: 古月冻土
+  aliases:
+  - 舅父
+  summary: 方源和方正的舅父，曾收养兄弟俩，后因遗产纠纷与方源对立，雇佣蛮石等人闹事。
+  rank: ''
+  first_appear_title: ''
+  details:
+    rank:
+    - 二转
+    background:
+    - 图谋方源家产，设计阻挠方源修行
+    - 掌管方源父母遗产数年，试图利用方正夺回遗产，被方源化解。
+    source:
+    - 舅父的眉头皱得更深了，都凝成了一个川字。
+    - 舅父叹了一口气，又对方正道...
+    - 舅父冷笑一声：“斗殴打架是受到鼓励的...”
+- name: 贾金生
+  aliases:
+  - 二公子
+  - 贾公子
+  summary: 贾富同父异母的弟弟，赌石场掌柜，一转蛊师，丁等资质，心胸狭窄，善嫉好妒，被方源所杀。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 贾金生冷笑连连：你不要血口喷人。
+    - 贾金生面色一变，纠正道：贾富不过是年龄大点...
+    - 贾金生呆立在原地，满脸的震惊。
+- name: 贾富
+  aliases:
+  - 贾富大人
+  summary: 商队领袖，四转蛊师，贾金生同父异母的哥哥，以诚信示人，实则心思深沉。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 贾富沉吟半晌，终于开口：此事我已明了...
+    - 贾富笑眯眯地，向四方抱拳，谦和地道...
+    - 贾富脸色铁青，他没有料到学堂家老会忽然站出来，担保方源。
+- name: 青年蛊师
+  aliases: []
+  summary: 古月一族二转蛊师，在赌石场购买假蛊，后获贾富双倍赔偿。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 青年蛊师见贾金生矢口否认，顿时大怒...
+- name: 古月四代族长
+  aliases: []
+  summary: 古月一族四代祖先，与花酒行者争斗，留下影壁记录其丑态。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 古月一族需要一个英雄，所以四代就成了英雄。
+- name: 贾家家主
+  aliases: []
+  summary: 贾家寨创始人，白手起家，传奇人物，感到大限将至，安排子女分割家产。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 贾家家主是个传奇人物，白手起家...感到大限将至，就让几个儿女每两人领一只商队。
+- name: 贾贵
+  aliases: []
+  summary: 贾富的竞争对手，四转蛊师，被方源栽赃为杀害贾金生的真凶。
+  rank: ''
+  first_appear_title: ''
+- name: 铁血冷
+  aliases:
+  - 捕神
+  - 神捕
+  summary: 五转蛊师，铁若男之父，南疆神捕，智谋城府深不可测，带有青铜面具。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 我会重金聘用捕神铁血冷，一定会将此事调查清楚。
+    - 铁血冷高达五转，太具有威胁性了，必须得有防备。
+    - 铁血冷不置可否，没有肯定什么，也没有批评什么。
+- name: 王二
+  aliases:
+  - 王二哥
+  summary: 猎手头领，最强凡人猎手，箭术高超，拳脚凶悍，但被方源利用阳光和月刃击杀。
+  rank: 凡人武者
+  first_appear_title: ''
+  details:
+    appearance:
+    - 身材高大，狼背蜂腰，脸上横肉，眼中杀气腾腾
+    ability:
+    - 凡人箭术巅峰，近战拳脚凶狠，反应敏捷
+    rank:
+    - 凡人武者
+    background:
+    - 王家猎头之子，带领猎手在青茅山打猎，因冒犯方源遭杀身之祸
+    source:
+    - 王二非常果敢，立即丢了手中的弓箭，抡起碗口大的拳头，悍然迎上方源。
+    - 王二顿时全身汗毛一炸，感到了史无前例的危机。他慌忙把头一歪，下一刻，幽蓝色的月刃飞过。
+- name: 王老汉
+  aliases:
+  - 王猎头
+  summary: 经验丰富的老猎人，远近闻名的猎头，家中收藏兽皮地图，被方源灭门。
+  rank: 凡人猎手
+  first_appear_title: ''
+  details:
+    appearance:
+    - 头发黑白掺杂，脸上皱纹叠叠，老眼沧桑但偶有厉芒
+    ability:
+    - 凡人之躯，拥有丰富狩猎经验和陷阱知识，箭术精湛
+    rank:
+    - 凡人猎手
+    background:
+    - 继承祖业，成为猎头第一人，因儿子王二被杀而试图借助野猪王报复方源，最终被方源斩杀
+    source:
+    - 王老汉身躯再次一抖，差点瘫倒在地上。这样的打击，对于他来讲，实在太大太突然了。
+    - 方源淡淡地看了地上的少女一眼，满意地点点头。
+- name: 古月青书
+  aliases: []
+  summary: 古月家族的二转巅峰蛊师，被认为是二转蛊师第一人。乙等资质，性格温和富有亲和力，对家族忠诚，是族长的养子兼候选人。后因狼潮牺牲。
+  rank: 二转巅峰
+  first_appear_title: ''
+  details:
+    source:
+    - 青书大人是我们古月山寨的二转第一人
+    - 古月青书无奈地叹了一口气
+    - 青书微笑着，自来熟地拍开酒坛。
+    appearance:
+    - 一头青色的长发，白皙的、线条柔和的脸庞。
+    ability:
+    - 拥有青藤蛊、松针蛊、月旋蛊等多种二转蛊虫，战斗力强。
+    rank:
+    - 二转巅峰
+    background:
+    - 孤儿，由族长古月博抚养长大，担任族长候选人，对方源感兴趣，曾代表家族收购酒虫。
+- name: 古月药红
+  aliases: []
+  summary: 青书小组的女蛊师，双唇如血，性格直率。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 药红不禁啧啧称奇
+    - 古月药红的女蛊师
+    - “救我！”古月药红惊惶大叫，眼看着就要被卷入风暴中香消玉殒。
+- name: 古月金珠
+  aliases: []
+  summary: 女学员，一转中阶，基本功扎实。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 古月金珠。一名少女带着一脸的紧张越众而出
+    - 古月金珠，一转中阶。
+    - 古月金珠死了
+- name: 角三
+  aliases:
+  - 古月角三
+  - 病蛇
+  summary: 病蛇小组组长，二转蛊师，阴险自私，被方源害死。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 角三大叫起来，感到压力巨大
+    - 组长大人，等等我。
+- name: 空井
+  aliases:
+  - 古月空井
+  summary: 病蛇小组后勤蛊师，负责刀鳞网等，被电狼杀死。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 空井连忙取出大肚蛙
+    - 空井无奈之下，只得自己动手
+- name: 华欣
+  aliases: []
+  summary: 病蛇小组治疗女蛊师，使用腐血草蛊，被方源击昏后被电狼咬死。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 华欣，快去种植腐血草蛊。
+    - 窈窕的身躯，被野猪獠牙凶狠一撞
+- name: 赤舌
+  aliases: []
+  summary: 赤山小组侦察蛊师，使用蛇信蛊，能感知热量。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 赤舌开口道
+    - 赤舌嘴中的蛇信不断伸缩
+- name: 古月蛮石
+  aliases: []
+  summary: 二转蛊师，曾担任蛮石小组组长，擅长防御，有磐石蛊。两年前在白凝冰手下逃得一命，名声崛起。后败给方源，辞职。
+  rank: 二转
+  first_appear_title: ''
+  details:
+    appearance:
+    - 身躯矮小，腰板臂膀粗壮，浓密黑色胡须从两颊向下延伸在下巴汇合。
+    ability:
+    - 防御型蛊师，拥有磐石蛊可形成石皮。
+    rank:
+    - 二转
+    background:
+    - 曾败给白凝冰后逃命，此次受雇来方源酒肆闹事，被方源击败。
+    source:
+    - 古月蛮石！
+    - 古月蛮石是小有名气的二转蛊师。
+    - 蛮石大声道。
+- name: 古月鹏
+  aliases: []
+  summary: 方源的同窗，曾受方源欺压，在狼潮中被豪电狼咬死。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 古月鹏拔腿飞奔，却仍旧落在了最后面...下一秒，豪电狼张开大口，一声脆响，将古月鹏的整个脑袋都咬断了。
+- name: 熊毡
+  aliases: []
+  summary: 熊家寨蛊师，拥有强取蛊，试图强取豪电狼的蛊虫失败被电流击杀。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 熊毡咬了咬牙，'我有一只强取蛊，能强行摄取敌人身上的蛊虫出来。'
+    - 熊毡被电流打成一快焦黑的熟肉
+    - 啪。一声轻响，方源将这蛊虫接到手中。强取蛊是一只黑色的甲虫，正常大小，头部前端长有一对铁钳。背甲上有着一点点白色的斑点。
+- name: 熊力
+  aliases: []
+  summary: 熊家蛊师，被白凝冰杀死，拥有棕熊本力蛊。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 熊力挑战过方源
+    - 他不仅杀了熊力一组，还杀了我族的古月蛮石等人。
+- name: 白病已
+  aliases: []
+  summary: 白家蛊师，战功榜第一名竞争者，拥有水钻蛊。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 第一名怎么还是白家的白病已小组？
+- name: 熊姜
+  aliases: []
+  summary: 熊家蛊师，拥有影殇蛊。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 熊姜的影殇蛊的有效范围，却只有十米。
+- name: 太日阳莽
+  aliases: []
+  summary: 人祖的大儿子，魂魄被困在生死门中安魂湖畔，后被幽魂魔尊吞入腹中。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 他的左眼，落在地上，化作一个少年郎。他有一头的金发，健壮的身躯，他一出现，就拜倒在人祖的脚下，大叫：'人祖啊，我的父亲，我是您的大儿子太日阳莽。'
+    - 太日阳莽一次喝得酩酊大醉，醒来时被困孤峰。
+    - 太日阳莽走到密林中间，搬开石头，取得了名声蛊。
+- name: 古月阴荒
+  aliases: []
+  summary: 人祖的二女儿，寻找成功蛊失败，变成怪物，后被北冥冰魄用意义蛊唤醒。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 同时，人祖的右眼也化为一个少女。她搀扶住人祖的胳膊，说道：'人祖啊，我的父亲，我是您的二女儿古月阴荒。'
+    - 人祖挖下双眼，化为一儿一女。儿子为太日阳莽，女儿为古月阴荒。
+    - 人祖的二女儿古月阴荒，为了将自己的父亲从生死门中解救出来。
+- name: 白家族长
+  aliases: []
+  summary: 白家族长，失魂落魄，对白凝冰的境况感到不甘，带其至元泉禁地。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 就是在这般的夏雨当中，他正式被白家族长收养。
+    - 这是白家族长曾经交给白凝冰的，但是白凝冰并未使用它，就迅速地达到了三转修为。
+    - 白家族长就坐在一旁，此时脸上显露出失魂落魄的神色。
+- name: 古月药乐
+  aliases:
+  - 药乐
+  - 乐乐
+  summary: 古月药姬的孙女，乙等资质，一转修为，被方源设计杀害。
+  rank: 一转
+  first_appear_title: ''
+  details:
+    appearance:
+    - 长相可爱水灵，肌肤粉红若花，樱桃小嘴，一头青丝。
+    rank:
+    - 一转
+    background:
+    - 药脉继承人，在狼潮中失踪，后被方源用熊吃掉。
+    source:
+    - 古月药乐看到电狼群，如潮水般涌来，她吓得呆住。
+    - 她长得的确可爱。有着一双黑亮明丽的大眼睛，鼻子圆润，微微翘起……
+    - 古月药乐几乎全部被黑熊吞食干净。
+- name: 古月药姬
+  aliases:
+  - 药姬
+  - 古月药姬大人
+  summary: 药脉家主，独臂老妪，野心勃勃，曾卸任药堂家老，现负责守卫禁地，欲借铁家之手扳倒漠脉。
+  rank: 三转及以上（家老）
+  first_appear_title: ''
+  details:
+    appearance:
+    - 老妪，脸色苍白，满脸皱纹，耸搭眼皮。
+    rank:
+    - 三转及以上（家老）
+    background:
+    - 掌管药堂，人脉极广，药脉首脑，孙女药乐死后势力衰落。
+    source:
+    - 古月药姬更是在大发雷霆，咆哮声震得窗棂都微微颤动。
+    - 她气得浑身颤抖，手指着方源，一时间都说不出话来。
+    - 古月药姬怒极攻心，喷出一口鲜血，然而仰头而倒。
+- name: 古月定宗
+  aliases: []
+  summary: 古月一族的同窗，在酒宴上主动贿赂方源。
+  rank: ''
+  first_appear_title: ''
+- name: 古月赤钟
+  aliases: []
+  summary: 古月一族的精英，受体制压迫。
+  rank: ''
+  first_appear_title: ''
+- name: 铁若男
+  aliases:
+  - 小神捕
+  - 若男
+  - 铁家少主
+  summary: 铁血冷之女，正义感十足的少女，首次独立破案，拥有直觉蛊，行事雷厉风行。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 铁若男收起侦察蛊虫，满意地点点头。
+    - 铁若男笑了笑，忽然侧身望向窗外的月亮。
+    - 铁若男紧紧地逼视方源。
+- name: 古月江鹤
+  aliases:
+  - 江鹤大人
+  summary: 古月家族蛊师，曾隐瞒方源杀害王老汉一家之事，后被铁若男揭露。
+  rank: ''
+  first_appear_title: ''
+  details:
+    appearance:
+    - 身形瘦削，双眼细长，穿深蓝劲装，系赤色腰带，腰带上刻有‘二’字
+    ability:
+    - 二转蛊师
+    rank:
+    - 二转
+    background:
+    - 被族中派遣至村庄驻扎，与方源结识后默认其杀人行为，换取人情
+    - 曾帮助方源寻找酒虫，是江牙的哥哥。
+    source:
+    - 跳下来的这名蛊师穿着一身深蓝劲装，系着赤色腰带，腰带中央镶着铁片，铁片上刻着一个大大的‘二’字。
+    - 江鹤楞了一下，便哈哈大笑：‘杀的好！区区的一介农奴，居然敢冒犯主子，该杀！！’
+    - 江鹤亲自将方源送到村口
+- name: 王大
+  aliases: []
+  summary: 原为猎户的魔道蛊师，儿子王老汉被杀后刺杀方正（误以为方源），后被古月蛊师击杀。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 凶手是一位魔道蛊师。
+    - 真实的情况，是方正滥杀无辜，杀害了王老汉一家，引起王大的报复。
+- name: 古月一代
+  aliases:
+  - 古月飞僵
+  - 一代祖宗
+  - 一代先祖
+  - 老祖宗
+  summary: 古月山寨创始人，五转蛊师，性格残暴，企图用血颅蛊提升资质。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 古月一代，你终于忍不住了吗
+    - 呵呵呵呵呵……干涩又奇诡的声音
+    - 古月一代哈哈大笑：‘很好，不愧是我的血脉后裔，有如此孝心，令祖宗我欣慰啊！’
+- name: 熊骄嫚
+  aliases: []
+  summary: 熊家天才，能驱使百兽王黑熊，被白凝冰斩杀。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 熊骄嫚被白凝冰一刀枭首
+- name: 熊林
+  aliases: []
+  summary: 熊家天才少年，光头，参与围杀白凝冰，被冰锥洞穿全身。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 熊林被白凝冰的冰锥洞穿全身
+- name: 白重水
+  aliases: []
+  summary: 白家年轻精锐，肥胖，擅长水弹蛊，被古月熊家联手围杀。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 白重水吐出大口鲜血，脸色难看至极
+- name: 天鹤上人
+  aliases:
+  - 白毛老汉
+  - 老家伙
+  summary: 魂魄状态，寄宿在寄魂蚤中，古月方正的师傅，原为鹤风扬的下属。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 天鹤上人连忙化光而去，紧追不舍。
+    - 天鹤上人咆哮：‘好小子，敬酒不吃吃罚酒，该杀！’
+    - 天鹤上人长啸一声，再见天日，重获自由。
+- name: 陈翠花
+  aliases: []
+  summary: 魔道女蛊师，原为农妇，意外获得传承，身中绿蟒蛇毒，被方源和白凝冰设计杀死。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 陈翠花心惊胆战。
+    - 白凝冰耐心地一步步潜行近身，出手如雷霆电闪。
+- name: 鹤风扬
+  aliases:
+  - 鹤羽飞仙
+  summary: 仙鹤门六转蛊仙，碧色长眉垂腰，负责狐仙福地事务，曾为维护方源而牺牲仙蛊。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 鹤风扬，太上长老，六转蛊师，号称鹤羽飞仙！
+    - 他此刻身着白袍，系着黑腰带，大袖翩翩。
+    - 鹤风扬面如少年，温润如玉。一对碧色长眉，垂到腰间。
+- name: 百家族长
+  aliases:
+  - 百家女族长
+  summary: 百家首领，百生百花的母亲，精明强干，因方源欺骗而大怒。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 百家族长看到画面中方源挟持子女，怒吼“原来是魔道贼子！”
+- name: 铁刀苦
+  aliases: []
+  summary: 铁家蛊师，三转，擅长近战，使用铁手蛊和手刃蛊，后被白凝冰所伤失左眼。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 铁刀苦被俘后，从百家族长处得知方白二人，情绪激动，认定其为魔道蛊师。
+    - 铁刀苦也被白凝冰所伤。
+    - 铁刀苦脸上涌现出一抹尴尬之色，实话实说道：“属下的眼睛，是被白凝冰所伤。”
+- name: 百生
+  aliases: []
+  summary: 百家少主，百花的哥哥，被方源绑架，性格刚强。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 百生怒斥白凝冰，被白凝冰掌掴。
+- name: 百花
+  aliases: []
+  summary: 百家少主，百生的妹妹，胆小易哭，被方源绑架。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 百花哭泣求饶，方源威胁要割她舌头。
+- name: 灰骨才子
+  aliases:
+  - 肉骨上师
+  summary: 白骨山传承之主，正道人物，留下传承考验后人。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 灰骨巨书记载了他的生平，他留下三选择一、叩首等考验。
+- name: 铁傲天
+  aliases:
+  - 铁家四公子
+  summary: 铁家少主，资质卓越，被焦雷土豆蛊陷阱炸死。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 铁傲天被炸成骨肉碎渣，铁刀苦流泪埋葬。
+- name: 商心慈
+  aliases:
+  - 张心慈
+  - 慈儿
+  - 心慈
+  - 心慈小姐
+  - 族长
+  summary: 商家族长，五转蛊师，仁善聪慧，擅长管理，有仁厚之名。被商燕飞传位，成功处理假蛊风波。
+  rank: 无
+  first_appear_title: ''
+  details:
+    appearance:
+    - 绿衣裙，黑发披肩，眉如淡柳龙烟，眼似明月清波，肌若雪白，樱唇粉嫩
+    - 未见具体描述，但气质温婉
+    ability:
+    - 凡人，无修行资质
+    - 五转修为，拥有防御杀招和战场杀招，擅长治理家族
+    rank:
+    - 无
+    - 五转
+    background:
+    - 商家族长的私生子，母姓张，第一次行商
+    - 商燕飞的私生女，因与方源有旧识而得到支持，后成为族长。
+    source:
+    - 绿衣少女说道。
+    - 她声音温柔，音量不高，刚说出口，就淹没在人群的呼喊声中。
+    - 商心慈的经商才华渐渐得到传扬。
+- name: 老村长
+  aliases:
+  - 张村长
+  summary: 小渔村的三转蛊师，村长，被方源搜魂后热情招待方源，后接受方源馈赠。
+  rank: 一转初阶
+  first_appear_title: ''
+  details:
+    appearance:
+    - 老汉
+    ability:
+    - 一转初阶蛊师
+    rank:
+    - 一转初阶
+    background:
+    - 被陈蛊师点化成蛊师，安插在村庄的线人
+    source:
+    - 老村长就是被他点化成蛊师的。
+    - 老村长看到方源这样的表情，哈哈大笑。
+    - 老村长白发苍苍，满脸皱纹，是村中唯一三转蛊师。
+- name: 张柱
+  aliases: []
+  summary: 商心慈的护卫，三转蛊师，治疗蛊师，忠诚但被方源暗杀。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 张柱是治疗蛊师，攻击和防御并不强大。
+- name: 金家族长
+  aliases: []
+  summary: 金家寨族长，重视金簪草，派遣亲卫赎回金簪草。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 金家族长笑了笑：'区区八千块元石罢了，不必在意。'
+- name: 金家少主
+  aliases: []
+  summary: 金家族长的儿子，败家子，偷卖金簪草。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 这是我家少主偷偷拿出来卖的。
+- name: 贾龙
+  aliases: []
+  summary: 商队首领，贾家蛊师，负责指挥商队。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 贾龙首领站到高处，喊道：'大家听着...'
+- name: 丁浩
+  aliases: []
+  summary: 二代僵王的候选弟子，家奴出身，三转中阶蛊师，老实但被方源欺骗并杀害。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 丁浩隐藏在一处灌木丛中，俯视着山脚下的这支商队
+    - 丁浩这个人老实。老实人往往有个优点，那就是踏实。
+    - 他原先只是个山野村夫
+- name: 二代僵王
+  aliases: []
+  summary: 五转巅峰蛊师，来自南疆僵盟分部，擅长奴道僵尸，加入义天寨后死亡。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 那魔道蛊师只留了一个碑文，自称二代僵王。
+    - 二代僵王原本也是个家奴，两者出身相同
+    - 二代僵王来自南疆僵盟分部
+- name: 商燕飞
+  aliases:
+  - 族长
+  - 家主
+  - 父亲
+  summary: 商家族长，五转巅峰蛊师，一身黑袍，长发如血，青年模样，面容英俊。曾力排众议远征，屠戮山寨，手段狠辣。后传位给商心慈。
+  rank: 五转
+  first_appear_title: ''
+  details:
+    source:
+    - 商燕飞盘坐在虚空中，浑身都沐浴着火焰。
+    - 商燕飞睁开双眼，他瞳眸血红，目光如电
+    - 商燕飞没有这些目光放在心上，他循着血脉间的感应，犀利的眼神投到商心慈的身上。
+    appearance:
+    - 黑袍，长发如血，青年模样，面容英俊
+    ability:
+    - 五转巅峰蛊师，血道手段高超
+    rank:
+    - 五转
+    background:
+    - 商家前任族长，曾为少主，后成为族长，擅长血道，谋略深沉。
+- name: 魏央
+  aliases:
+  - 白光刀客
+  summary: 四转蛊师，飞行大师，原为商燕飞提携，后成为四大飞行大师之一，参与正道。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 魏央走到场地中央站定
+    - 魏央被方源一拳轰飞
+    - 我魏大哥虽然只是三转巅峰，但是一身战力卓绝。乃是商燕飞大人座下的第三战将，人称白光刀客。
+- name: 商睚眦
+  aliases:
+  - 商家少主
+  - 老二
+  - 睚眦
+  summary: 商燕飞次子，心胸狭隘，邀请风天语制造假蛊，失败后沦为魔道蛊师。
+  rank: 四转或五转
+  first_appear_title: ''
+  details:
+    source:
+    - 商睚眦满怀心事的走了
+    - 你居然又涨价！
+    - 商睚眦看着手中的蛊虫，眉头拧成一个疙瘩
+    appearance:
+    - 未见具体描述
+    ability:
+    - 蛊师，具体修为不详
+    rank:
+    - 四转或五转
+    background:
+    - 商燕飞次子，参与假蛊阴谋，后逃出商量山。
+- name: 萧炎
+  aliases:
+  - 小萧
+  summary: 三转中阶蛊师，擅长火类蛊虫，从演武区晋升到第三内城。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 小萧姓萧名炎，二十七岁，擅长火类蛊虫。近日修为提升一个小境界，达到了三转中阶。
+- name: 汤青
+  aliases: []
+  summary: 二转蛊师，被方源在演武场击杀。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 汤青刚刚闭关出来，对于战斗的敏锐大大降低。
+- name: 汤雄
+  aliases: []
+  summary: 汤青的哥哥，为弟报仇从第四内城降至第五内城挑战方源。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 今天是汤雄强行挑战你的日子
+- name: 李然
+  aliases: []
+  summary: 中年赌徒，传说中绊到柜台并赌出传奇蛊的人，但被方源抢了先机。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 这枚星辰石，就处于杂等区域。
+    - 李然忽然开口，叫住他。
+    - 李然是方源的意外收获，杀李然会留下证据，所以方源不取。
+- name: 掌柜
+  aliases:
+  - 掌柜的
+  summary: 赌石坊掌柜，对方源恭敬。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 掌柜的连忙点头哈腰，心中却不以为然。
+- name: 段大师
+  aliases: []
+  summary: 赌石坊解石老师傅，擅长酸液解石。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 段大师，修为最高，是赌石坊的当家解石大师。
+- name: 卫神经
+  aliases:
+  - 假大师
+  summary: 魔道蛊师，擅长造假顽石，被南疆通缉。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 卫神经最擅长造假，人称假大师。
+- name: 李好
+  aliases: []
+  summary: 三转辅助流蛊师，前力修，拥有背山蛤蟆和移形蛊，被方源击杀。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 李好以移形蛊和背山蛤蟆配合，屡战屡胜。
+    - 李好被方源活活打死。
+- name: 王汗
+  aliases: []
+  summary: 三转蛊师，挑战方源被杀死在演武场。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 连王汗都败了，死在演武场上。
+    - 蓝衣大汉胸口完全塌陷，惨白的肋骨外露出来。
+- name: 朱八
+  aliases: []
+  summary: 第四内城演武场第八号人物，体型庞大，擅长防御，杀招滚刀肉。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 朱八体型庞大，他身高足有三米，浑身长满了肥膘。
+    - 朱八的杀招很难破解，他滚的速度越快，撞击力就越强。
+- name: 巨开碑
+  aliases: []
+  summary: 四转蛊师，演武场强者，使用杀招巨灵变，被方正击败后主动认输。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 巨开碑、炎突二人同时向方源、白凝冰发动了强行挑战
+    - 巨开碑更是施展了杀招巨灵变，结果仍旧被方正给干趴下了。
+- name: 炎突
+  aliases: []
+  summary: 演武场强者，与巨开碑并称演武半边天，是方正潜在的最大敌手。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 炎突是一位老者，长着一头蓬乱枯槁的长发
+    - 炎突将是方正的最大敌手，他和巨开碑并称为演武半边天。
+- name: 安渔
+  aliases: []
+  summary: 秦艳楼头牌，方源和商睚眦曾争夺的对象
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 商睚眦曾经和方正，争夺安渔姑娘失败
+- name: 周全
+  aliases:
+  - 周老先生
+  - 周总管
+  summary: 原周家族长，四转蛊师，高傲自矜，后被商心慈招揽，忍辱负重。
+  rank: 四转或五转
+  first_appear_title: ''
+  details:
+    source:
+    - 第一百三十四节：离开商家城
+    - 周全看着商心慈，起初他只是被方源逼迫，不得不成为商心慈的麾下。
+    appearance:
+    - 未见具体描述
+    ability:
+    - 蛊师，具体修为不详，擅长管理
+    rank:
+    - 四转或五转
+    background:
+    - 原为方源安排辅佐商心慈，后来真心支持。
+- name: 商一帆
+  aliases: []
+  summary: 商燕飞的儿子之一，参与假蛊阴谋，最后放出泥怪，逃出商量山。
+  rank: 四转或五转
+  first_appear_title: ''
+  details:
+    source:
+    - 第一百三十四节：离开商家城
+    - 商一帆继续道：“商心慈势大，但并非不可匹敌。”
+    appearance:
+    - 未见具体描述
+    ability:
+    - 蛊师，拥有凡蛊屋和泥怪底牌
+    rank:
+    - 四转或五转
+    background:
+    - 商燕飞之子，不甘心商心慈上位。
+- name: 孙元化
+  aliases:
+  - 孙师兄
+  summary: 仙鹤门老牌强者，上次三年小考第一，四转修为，精通控鹤。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 第一百三十五节：仙鹤门，方正
+- name: 碧霞小仙子
+  aliases:
+  - 碧霞仙子
+  summary: 天莲派女蛊师，被四大淫贼围攻，被方正所救。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 第一百三十七节：英雄救美
+- name: 狐魅儿
+  aliases:
+  - 妖女
+  summary: 魔道妖女，四转修为，魅道高手，梅花婆婆的孙女，擅长伪装与勾引。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 第一百三十九节：狐魅儿
+    - 狐魅儿的脸色也不好看。
+- name: 焦黄
+  aliases: []
+  summary: 魔道刺客，三转巅峰，与孟土组成暗杀两人组，埋伏方白二人失败。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 第一百三十六节：白狐蛊仙传承
+- name: 孟土
+  aliases: []
+  summary: 魔道刺客，三转巅峰，与焦黄搭档，好胜心强。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 第一百三十六节：白狐蛊仙传承
+- name: 百岁童子
+  aliases: []
+  summary: 力道蛊师，薛三四的干爹，四转高阶修为，是飞天虎的靠山。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 百岁童子，也是力道蛊师，被薛三四认作干爹，可以说是飞天虎的靠山。
+    - 百岁童子没有心思来找方源算账。不过这次传承一旦关闭，他一定会找方源兴师问罪。
+    - 人走茶凉，刚刚李强还在和百岁童子亲切交谈
+- name: 韩不留
+  aliases: []
+  summary: 正道蛊师，四转中阶修为，奴道蛊师，进入犬王传承多次。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 韩不留，站立着不动，静静地看着迷雾中，走出来一个人。
+    - 韩不留已有四十八岁，正道蛊师，四转中阶修为，已经进入犬王传承多次。
+    - 韩不留，我做鬼也不会绕过……你！
+- name: 铁霸修
+  aliases:
+  - 当世霸王
+  summary: 四转高阶力道蛊师，拥有五转土霸王蛊，战力超越普通四转巅峰。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 铁霸修...四转高阶的修为...人称‘当世霸王’，有超越普通四转巅峰的强大战力！
+- name: 李闲
+  aliases: []
+  summary: 情报贩子，与方源交易物资和情报。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 李闲细小的双眼中，闪烁着阵阵精芒...
+    - 李闲面无表情，站在一旁。
+    - 李闲首先反应过来，动若脱兔。
+- name: 铁沐
+  aliases: []
+  summary: 三转巅峰蛊师，铁若男麾下，治疗蛊师。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 铁沐，三转巅峰的蛊师，长相清秀，才华横溢。
+- name: 铁傲开
+  aliases: []
+  summary: 三转高阶侦察蛊师。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 铁傲开，三转高阶，侦察能力一流。
+- name: 铁线花
+  aliases: []
+  summary: 铁家族花，防御蛊师。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 铁线花，家族中的族花之一，年轻貌美，防御方面让家族长老都赞叹不绝。
+- name: 铁慕白
+  aliases:
+  - 铁家荣耀
+  - 铁家老族长
+  summary: 铁家前任族长，五转巅峰蛊师，金道高手，曾闯信王传承至八十关后。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 铁慕白，五转巅峰！铁家上一代家主，纵横南疆，横霸一方。
+    - 铁慕白这次可是选择了信王传承啊。据说他上一次，可是闯到了八十关之后了。
+    - 铁慕白等人已经进入大殿。
+- name: 巫鬼
+  aliases: []
+  summary: 魔道五转巅峰蛊师，铁慕白的宿敌，擅长乌云和乌七蛊。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 乌云盖顶...传来一个刺耳声音：嘎嘎嘎，铁慕白...
+    - 巫鬼在许多年前，就是奴道蛊师。后来资源不足，只能转换流派。
+- name: 骷魔
+  aliases: []
+  summary: 五转魔道大蛊师，散修，骨道高手，曾闯犬王传承至六十八关。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 骷魔，想不到你也来了！
+    - 五转魔道大蛊师骷魔，看着身边数百头的铁甲狗，十分欣慰。
+- name: 武阑珊
+  aliases: []
+  summary: 武家五转蛊师，武家族长的表妹。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 武阑珊那貌美如花的容颜，像是定格了一般。
+- name: 王逍
+  aliases: []
+  summary: 巫山之主，五转高阶蛊师，魔道枭雄。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 王逍是巫山之主，五转高阶蛊师，货真价实的土皇帝。
+- name: 仇九
+  aliases:
+  - 杀人鬼医
+  - 曾阿牛
+  summary: 南疆四大医师之首，影宗门人，曾与素手医师陈九有恋情，后被商燕飞横刀夺爱。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 杀人鬼医仇九瘫倒在地上，瞪着双眼，紧紧地盯住方源，惊叹地道。
+- name: 云落天
+  aliases: []
+  summary: 云家少主，四转蛊师，走云道。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 云落天傲慢地哼了一声：“你叫做白凝冰是吧？碰到我算你倒霉”
+- name: 素手医师
+  aliases:
+  - 陈九
+  summary: 商家城的医师，仇九的师姐，后嫁给商燕飞。对美丽有极端追求。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 师姐姓陈名九，美若天仙。
+    - 素手医师回答的话，让她更加深刻的明白。
+    - 素手医师十分同情他的遭遇，决定全力助他。
+- name: 魔无天
+  aliases:
+  - 无天公子
+  summary: 五转魂道蛊师，魔道天才，用目击杀招杀死包同，指挥魔道联军。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 魔无天面色沉凝，默然半晌，这才开口。
+    - 魔无天邪笑一声，包同的这些蛊还在，你们都分了吧。
+    - 魔无天紫瞳幽芒频闪，一路冲锋过来。
+- name: 萧芒
+  aliases:
+  - 萧芒大人
+  summary: 五转光明道蛊师，正道统帅，拥有杀招荣耀吾枪和天瀑光河。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 萧芒看着眼前的迷雾，目光深沉。
+    - 萧芒浑身开始绽放出刺目的白光，杀招荣耀吾枪。
+    - 萧芒飞升上天，施展天瀑光河。
+- name: 风天语
+  aliases:
+  - 风兄
+  - 风大师
+  - 炼道大师
+  summary: 五转炼道大师，曾是少族长，山寨毁灭后成为散修。极度崇拜方源，被商心慈招揽。
+  rank: 五转
+  first_appear_title: ''
+  details:
+    source:
+    - 风天语劳苦功高，贡献极大。
+    - 风天语颤颤巍巍地向方源行礼。
+    - 风天语咬着嘴唇，立即领命退下。
+    appearance:
+    - 未见具体描述
+    ability:
+    - 五转修为，炼道大师，擅长炼制假蛊，曾以三转修为炼出五转蛊虫
+    rank:
+    - 五转
+    background:
+    - 出身风家，少族长，家族败落后成为散修，后投靠商心慈。
+- name: 包同
+  aliases:
+  - 暴火星包同
+  summary: 四转炎道蛊师，魔道，被魔无天用目击杀招杀死。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 包同的脾气更加暴躁。
+    - 暴火星包同，那是有名的四转炎道蛊师。
+    - 包同猝不及防，死命地瞪着魔无天，动弹不得。
+- name: 李强
+  aliases: []
+  summary: 魔道蛊师，参与攻打狗群。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 李强首先发难。
+- name: 炎军
+  aliases:
+  - 炎家少族长
+  summary: 四转虚道蛊师，擅长躲避，攻入青铜大殿被风天语阻挡。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 炎军却是安步当车，脚步不紧不慢。
+    - 风天语被引了出来，正应了白凝冰的算计。
+- name: 铁白棋
+  aliases: []
+  summary: 五转奴道蛊师，铁家家老，指挥狗群阻挡群雄。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 铁白棋微微带笑，俯瞰战场。
+    - 铁白棋显得更加游刃有余。
+- name: 凤金煌
+  aliases:
+  - 大梦仙尊
+  - 灵缘斋弟子
+  - 未来大梦仙尊
+  - 小煌儿
+  summary: 灵缘斋天之骄女，父母为凤九歌和白晴仙子，拥有仙蛊梦翼，在狐仙福地争夺中被方源踩脸击败。
+  rank: 未知（至少蛊仙）
+  first_appear_title: ''
+  details:
+    source:
+    - 凤金煌娇喝一声，从身后肩膀处生长出一对绚烂的羽翼。
+    - 方源抬起自己的右脚，结结实实地踩在凤金煌锦绣的容颜上。
+    - 凤金煌回到灵缘斋后，一直郁闷至极，难以抒发。
+    background:
+    - 因梦翼仙蛊陷入梦境，醒来后获得炼道感悟
+    - 因父亲凤九歌失踪而悲伤，后听母亲讲人祖传故事后振作。
+    - 灵缘斋弟子，有潜力成为灵缘斋当代仙子。
+    appearance:
+    - 生得貌美如花，皮肤白皙，鼻挺朱唇，头戴凤冠
+    - 容颜汲取了凤九歌和白晴仙子的优点。
+    ability:
+    - 借助梦翼仙蛊遨游梦境
+    - 未直接表现，但为九转存在。
+    - 梦道
+    rank:
+    - 未知（至少蛊仙）
+    - 凡人
+    - 九转
+- name: 凤九歌
+  aliases:
+  - 幽兰剑师
+  - 幽兰仙子
+  - 九歌
+  summary: 灵缘斋的七转蛊仙，无敌中洲，为门派版图扩张做出巨大贡献。擅长沙道和音道，在七转中战力最强。后陨落于北原的大同风中。
+  rank: 七转
+  first_appear_title: ''
+  details:
+    source:
+    - 凤九歌冷哼一声，狭长的双眼眯起来，冷芒一闪。
+    - 凤九歌此人，乃魔道出生。昔年，他得了奇缘，闷头苦修，不声不响到达六转蛊仙境界。
+    - 凤九歌的来信中，语气缓和，先是表达了对方源的赞赏及恭喜。
+    rank:
+    - 七转
+    - 八转（凭实力和地位推断）
+    - 七转（战力八转）
+    background:
+    - 原为魔道，后加入灵缘斋，成为高层，曾大杀四方压制中洲十大古派。
+    - 中洲千年一遇的天才，实力强大，后陷落外域，音讯全无。
+    - 灵缘斋招牌蛊仙，与白晴仙子为夫妻，育有女儿凤金煌。北原调查八十八角真阳楼倒塌时遇难。
+    ability:
+    - 掌握七首歌杀招，尤擅大风歌（可操纵大同风），拥有八转战力，曾被紫薇仙子派遣奇袭琅琊福地。
+    - 拥有离歌、一曲阳关、一曲之士、碧玉歌、天地歌、俯首歌、三绝音、大风歌等杀招，持有命甲仙蛊。
+    - 创出命运歌，破解送友风
+    appearance:
+    - 一身红白衣袍，意态风流
+- name: 岩勇
+  aliases: []
+  summary: 石人族的族长，被迫带领族人开凿运河以削弱方源的力量根基。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 岩勇捶胸顿足，低吼道：“我怎么可能不知道？我怎么可能不知道？”
+    - 岩勇面色不变，没有说话。
+- name: 小狐仙
+  aliases:
+  - 地灵
+  - 地灵小狐仙
+  - 狐仙地灵
+  - 霸龟
+  summary: 蛊仙死后执念与仙窍天地之力结合形成的存在，认死理，不知变通，拒绝认主时可能自毁。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 地灵是蛊仙死后残留的意志和魂魄的碎片，再结合福地之力，而形成的灵体！
+    - 地灵也笑了，对于方源产生了认同。
+    - 小狐仙嗖的一声，破空挪移，出现在他的面前。
+    background:
+    - 方源炼化的地灵，忠诚执行方源指令。
+- name: 剑一生
+  aliases: []
+  summary: 天梯山上的魔道蛊仙，金道，性格猥琐贪婪，被魅蓝电影攻击后向方源约战。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 剑一生也不是易于的，当即和魅蓝电影战成一团。
+    - 剑一生气得哇哇大叫，他平生还未吃过这么大的亏。
+- name: 葛谣
+  aliases: []
+  summary: 葛家大小姐，葛光的妹妹，逃婚后被方源杀害，尸体被毒须狼群分食。
+  rank: 三转中阶
+  first_appear_title: ''
+  details:
+    appearance:
+    - 俏丽少女
+    ability:
+    - 操控水系蛊虫，如螺旋水箭蛊、水甲蛊等
+    rank:
+    - 三转中阶
+    background:
+    - 葛家族长的亲生女儿，因逃婚独自进入腐毒草原
+    source:
+    - 少女立即扬起脖子：“你知不知道，腐毒草原上飘散着紫色的毒雾...”
+    - 我们的大小姐葛谣死了。搜寻队伍在腐毒草原上，发现了她的衣服碎片。她被毒须狼群杀了！
+- name: 哈突骨
+  aliases: []
+  summary: 五转蛊师，马匪头目，与常山阴同归于尽
+  rank: 五转初阶
+  first_appear_title: ''
+  details:
+    ability:
+    - 五转蛊师，拥有白骨车轮蛊
+    rank:
+    - 五转初阶
+    background:
+    - 给常山阴母亲下毒，设计埋伏，与常山阴同归于尽
+    source:
+    - 哈突骨想杀了狼王
+    - 哈突骨将剧毒骨矛射向常山阴
+- name: 蛮多
+  aliases: []
+  summary: 蛮家族长的二子，向葛谣求婚，因葛谣逃婚而逼迫葛家。
+  rank: 二转
+  first_appear_title: ''
+  details:
+    appearance:
+    - 又瘦又小，像个猴子
+    ability:
+    - 二转修为
+    rank:
+    - 二转
+    background:
+    - 仗着父亲势力欺男霸女
+    source:
+    - 人是蛮家部族的蛮多，他是蛮家族长的三儿子，人长得又瘦又小
+    - 蛮家族长的二子蛮多，就是向她求亲的人。现在妹妹逃婚，蛮多得不到人，恐怕会迁怒我们葛家啊。
+    - 蛮多大怒：'哼，你们才是卑鄙无耻，明明亲口答应的婚事，现在居然交不出人。言而无信！'
+- name: 黑楼兰
+  aliases:
+  - 黑家族长
+  - 黑皮胖子
+  - 黑暴君
+  - 小兰
+  - 楼兰仙子
+  summary: 黑家族长，身材臃肿如暴熊，好色成性，粗犷豪迈，玉田英雄大会中与刘文武对峙的一方首领。
+  rank: 王庭之主
+  first_appear_title: ''
+  details:
+    ability:
+    - 北原霸主
+    - 五转蛊师，力道流派，拥有来客令和楼主令
+    - 大力真武体，专修力道，后得到幽都力虎图腾杀招
+    rank:
+    - 王庭之主
+    - 五转
+    - 六转蛊仙（力道绝仙）
+    background:
+    - 称霸草原后广搜各部美女，但二年后被内部族人暗害
+    - 黑家族长，巨阳仙尊后裔，负责闯八十八角真阳楼
+    - 黑楼兰晋升成仙后受黎山仙子教导，拥有力道仙蛊我力
+    source:
+    - 黑楼兰此人极为好色，称霸草原后...
+    - 被自己内部的族人哄骗到王庭之外
+    - 黑楼兰身躯臃肿，宛若暴熊，一口参差不齐的雪亮牙齿，仿佛匕首利剑，给人狰狞之感。
+    appearance:
+    - 壮硕如熊罴的身躯
+    - 大美人，但在万兽混彩天中被视为丑女
+    temperament:
+    - 霸道枭雄
+    gender:
+    - 女
+    cultivation_base:
+    - 六转蛊仙（战力七转）
+    affiliation:
+    - 影宗/散修
+- name: 马鸿运
+  aliases:
+  - 费才
+  - 费鸿运
+  summary: 原为马英杰的贴身奴仆，后改名马鸿运，因发现新元泉而获赐姓，未来将在八十八角真阳楼中获得重要传承。
+  rank: 三转
+  first_appear_title: ''
+  details:
+    ability:
+    - 三转修为
+    rank:
+    - 三转
+    background:
+    - 被狼群追击时意外发现常山阴，将其救活
+    source:
+    - 马鸿运将常山阴救活之后，后者为了报答他的救命之恩
+    - 难怪马鸿运他要选择三只五转蛊。
+    - 马鸿运的尴尬，也是方源的尴尬。
+    gender:
+    - 男
+    cultivation_base:
+    - 蛊师（具体修为未明确）
+    affiliation:
+    - 散修/曾是某少族长随从
+- name: 葛光
+  aliases: []
+  summary: 葛家部族少族长，三转高阶蛊师，豪爽重义气，对妹妹逃婚恼怒但亲情深厚。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 葛光捏着双拳，看着快速接近的毒须狼群，原本绝望的眼眸中又绽放出希望的光。
+    - 葛光忽然开口：'没有关系，只要这个蛊师将毒须狼集中在一处，进行冲锋，穿透阵势，也有能将我们救下来的可能。'
+    - 葛光立即想到那一百万的元石，还有那只五转蛊蛛丝马迹。
+- name: 葛家老族长
+  aliases:
+  - 葛老哥
+  summary: 古月一族的三转家老，为保护方正而战，被白凝冰杀死。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - “说的好！”一声朗笑，现出一位蛊师老者。
+    - “家老大人。”方正连忙拜见，他认出此人，是家族中的一位资格很老的家老。
+    - 家老深吸一口气，浑身绽放出黑光，仿佛披上了一层钢铁战甲。
+- name: 石武
+  aliases: []
+  summary: 原石家外姓家老，骨道蛊师，三转巅峰，后投靠蛮家，买断所有骨竹蛊研发新秘方。
+  rank: 三转
+  first_appear_title: ''
+  details:
+    source:
+    - 蛮家最近吞并了石家，石家的家老石武，成了蛮家的外姓家老。
+    - 石武五大三粗，顶着光头，一脸横肉，狞笑着走上场。
+    - 三转外姓家老石武，跪倒在地。
+    ability:
+    - 三转蛊师
+    rank:
+    - 三转
+    background:
+    - 外姓家老，娶了蛮家妻子
+- name: 蛮图
+  aliases:
+  - 蛮家族长
+  summary: 蛮家部族的族长，励精图治，意图扩张势力。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 蛮图目光深沉，看着葛家大部队离开的背影，只说了一句
+    - 蛮图的眉头，微微皱起来。
+    - 蛮家族长蛮图则高居主位。
+    background:
+    - 蛮家部族族长，坐拥红炎谷
+- name: 蛮轰
+  aliases: []
+  summary: 蛮家大儿子，三转中阶修为，自认少族长。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 蛮轰虽然有些小聪明，但资质不足，根本不是少族长您的对手啊。
+    - 蛮轰双眼发亮
+- name: 蛮豪
+  aliases: []
+  summary: 蛮家家老，依附蛮轰，参与引狼群计划。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 家老蛮豪幸灾乐祸地笑道。
+    - 蛮豪在一旁宽慰道。
+- name: 琅琊地灵
+  aliases:
+  - 长毛老祖的执念
+  - 琅琊老仙
+  - 地灵
+  - 老夫
+  - 黑毛地灵
+  summary: 长毛老祖执念所化，性情率真，擅长炼蛊，身形瘦长，白发如雪，胡须垂胸，面目似婴儿般红润，身穿宽大衣袍，两袖飘飘。
+  rank: 八转
+  first_appear_title: ''
+  details:
+    source:
+    - 琅琊地灵做到云床旁，亲手为方源沏了一杯茶。
+    - 地灵老爷爷在地上乱滚了几圈，哭号了许久，仍旧不见方源松口。
+    - 琅琊地灵却是一口答应，出乎了方源的意料。
+    background:
+    - 本体经历了盗天、巨阳时代，成为地灵后足不出户，研究仙蛊。
+    - 源自长毛老祖，双执念之一，富有侵略性。
+    - 八转炼道大能的执念，性情刁难，对方源有意见。
+    appearance:
+    - 银色巨人形态，可变化为定真树。
+    ability:
+    - 能催动‘定真枝丫变’对抗大同风，掌控琅琊福地方源大阵，与方源有盟约。
+    - 操控天婆梭罗（银色巨人），拥有炼道杀招四海皆准。
+    rank:
+    - 八转
+    - 八转（战阵加持）
+- name: 黄沙仙子
+  aliases: []
+  summary: 被琅琊地灵俘虏的女蛊仙，曾向方源哀求但被拒绝。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 黄沙仙子又软语哀求道。
+    - 方源冷笑一声，从云床上爬起来，走到黄沙仙子的面前，又照着她的脸面抬起一脚。
+- name: 鬼王
+  aliases: []
+  summary: 进攻琅琊福地的五位蛊仙之一，魂道蛊仙。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 鬼王一行人。
+    - 鬼王等人手中没有一只仙蛊，地灵将他们诱骗到福地中后。
+    - 鬼王
+- name: 红玉散人
+  aliases: []
+  summary: 进攻琅琊福地的五位蛊仙之一。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 鬼王、红玉散人顿时无比的失望。
+    - 红玉散人
+- name: 粉梦仙子
+  aliases: []
+  summary: 进攻琅琊福地的五位蛊仙之一。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 平时和黄沙仙子情同姐妹的粉梦仙子、青索仙子，则默默无言，好像没有听见的样子。
+- name: 青索仙子
+  aliases: []
+  summary: 进攻琅琊福地的五位蛊仙之一。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 平时和黄沙仙子情同姐妹的粉梦仙子、青索仙子，则默默无言，好像没有听见的样子。
+- name: 盗天魔尊
+  aliases:
+  - 本杰孙
+  - 盗天
+  summary: 九转尊者，擅长偷道，留下八道真传，其中一道在琅琊地灵手中。委托琅琊地灵本体炼制遁空蛊。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 盗天魔尊当年能六次炼成仙蛊，一是因为长毛老祖有傲骨，不屑于故意失败。
+    - 盗天魔尊曾经设下许多传承，据说最大的传承就在空穴当中。
+    - 盗天魔尊可是九转魔尊，为了弥补他的损失，以及挽回自家声誉，长毛老祖答应为其炼仙蛊。
+    background:
+    - 上古尊者，游历五域两天，发现自然天灵并改造为天相。
+- name: 万象星君
+  aliases: []
+  summary: 星道蛊仙，在宝黄天出售星萤蛊、星芽蛊、星道杀招等。
+  rank: 六转
+  first_appear_title: ''
+  details:
+    source:
+    - 万象星君说不卖。
+    - 万象星君的宝光最强，有两丈三，这是因为他的虫群中还掺杂着不少星萤蛊。
+    - 他从万象星君、瑶光仙子等人手中交易到了星萤虫群的培养心得
+    background:
+    - 曾被打伤底蕴，与石磊合作探索繁星洞天
+    ability:
+    - 星道手段，有星云床榻等
+    rank:
+    - 六转
+- name: 摇光仙子
+  aliases: []
+  summary: 宝黄天中的女蛊仙，擅长培育星屑草和星萤虫。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 摇光仙子的虫群，宝光最弱，只有一丈八尺。
+    - 我最爱栽草，星萤虫反而是为了星屑草的繁衍，才故意迁移过来的一小群。
+- name: 帝渊
+  aliases: []
+  summary: 宝黄天中的蛊仙，拥有星萤虫。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 帝渊的虫群，则显现出两丈的宝光。
+- name: 砚石老人
+  aliases: []
+  summary: 影宗的智道大宗师，在南疆石亭中下星盘棋局。深不可测，提拔白凝冰成仙，策划对抗天意的计划。
+  rank: 蛊仙（具体不明）
+  first_appear_title: ''
+  details:
+    source:
+    - 贩卖神游蛊的蛊仙砚石老人，提出的交易要求却是不同寻常。
+    - 我要用这只神游蛊，换取第二空窍蛊的秘方。
+    - 一旦被砚石老人推算到什么
+    appearance:
+    - 老祖形象，端坐石亭。
+    ability:
+    - 智道大宗师级别，擅长推算和布局。
+    rank:
+    - 蛊仙（具体不明）
+    background:
+    - 影宗重要成员，通过星盘棋局推算。
+- name: 星宿仙尊
+  aliases:
+  - 星宿
+  - 星宿仙友
+  - 星宿仙尊大人
+  summary: 天庭领袖，智道无上大宗师，融合天意，擅长情绪操控与天道推演，是本次秘境的掌控者之一。
+  rank: 九转
+  first_appear_title: ''
+  details:
+    source:
+    - 智道的开派祖师，乃是太古时的星宿仙尊，二代天庭之主。
+    - 世号星宿仙尊，执掌天庭，为二代仙王。
+    - 一个女子身影，出现在他们的眼前。她身着深蓝长袍，一头秀发宛若灿烂银河垂下。
+    background:
+    - 历史传说中的九转蛊仙，具有极大威慑力
+    - 与无极魔尊对弈，后出手援救天庭。
+    - 元始仙尊的弟子，牺牲自己以维护人族地位，其意志持续影响天庭。
+    appearance:
+    - 身着深蓝长袍，一头秀发宛若灿烂银河
+    ability:
+    - 九转气息，能令人陷入梦境
+    - 星芒巨网，吸收转移能量。
+    - 以身合道后能影响天道运转，使宿命蛊一直显示人族当兴。
+    rank:
+    - 九转
+    - 无上大宗师
+- name: 多宝真人
+  aliases: []
+  summary: 中古时期八转蛊仙，发现了黄天碎片并创造了宝黄天。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 中古时期，有一位八转蛊仙，号称多宝真人，意外得获得一块黄天碎片。他将其融入自家的洞天之后，就形成了宝黄天。
+- name: 裴燕飞
+  aliases: []
+  summary: 裴家族长，四转巅峰猛将。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 裴家族长裴燕飞大人，更是北原著名的猛将。
+- name: 费清
+  aliases: []
+  summary: 费家蛊师，中毒后被费长追杀，临死前让儿子费才逃走。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 费清脸色青紫，中毒很深。
+- name: 费长
+  aliases: []
+  summary: 费家反派，为争夺族长之位暗算费清，使用搜魂蛊，最终费家被灭。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 费长你这个卑鄙小人！为了族长之位，居然对我这个堂弟实施暗算毒杀的手段。
+- name: 马英杰
+  aliases:
+  - 小马尊
+  - 少族长
+  - 族长
+  summary: 马家新任族长，马尚峰之子，在战败后带领残余族人逃回暖沼谷，后被迫投降黑家。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 马英杰却没有任何的骄狂，而是沉吟道
+    - 身为马家少族长的马英杰，此刻正盘坐在蒲团上，伏案垂首，帮助父亲，处理着盟军要务。
+    - 马英杰满脸苍白，他继承族长之位，马家已经彻底沦为小型部族。
+- name: 马尊
+  aliases:
+  - 马痴
+  - 马呆子
+  - 马王
+  summary: 北原三大驭兽大师之一，沉默寡言，爱马成痴，拥有庞大马群。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 临行之情叔叔叮嘱我
+    - 马尊脸色铁青，断然拒绝逃跑，最终被方源击杀。
+    - 马尊乃是奴道大师，比马英杰要重要百倍！
+- name: 泥脚仙
+  aliases: []
+  summary: 蛊仙，与方源交易和稀泥秘方和毛民。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 泥脚仙恰巧也在，立即回应道
+- name: 瑶光仙子
+  aliases: []
+  summary: 蛊仙，曾与方源交易星萤虫群培养心得。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 瑶光仙子的栽种经验，确实无误。
+- name: 刘文武
+  aliases:
+  - 刘家公子
+  - 刘家小公子
+  - 刘家盟主
+  summary: 刘家公子，玉田英雄大会中与黑楼兰对峙的一方首领，风度翩翩，善于言辞。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 刘文武一身白衣，风度翩翩，宛如浊世佳公子。
+    - 刘文武既然能和黑楼兰分庭抗礼，自然不是省油的灯，这番话连消带打，反而暗讽黑楼兰好色无志，彰显自身不迷恋红尘的英明形象。
+    - 刘家刘文武仁厚英明，宽于待人，严于利己。
+- name: 墨狮狂
+  aliases:
+  - 三弟
+  - 墨人
+  summary: 刘文武的结义三弟，九尺墨人，黑肤白发，嗜战如命，四转巅峰气道蛊师，北原第一猛将。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 身材魁梧雄健，虎背熊腰，狮口阔鼻，一声皮肤漆黑若墨，头发茂盛和胡须连成一片，洁白若雪，宛若狮鬃。
+    - 墨狮狂被这动作挑衅，立即勃然大怒，大吼一声，跃上斗台：‘死吧！’
+    - 墨狮狂雪发高扬，墨肤豹眼
+- name: 水魔浩激流
+  aliases:
+  - 水魔
+  summary: 四转蛊师，水属性，使用水壁蛊和水像蛊，曾杀死柴明之父，后投靠黑楼兰。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 水魔浩激流的心中，却是警兆大起。
+    - 水魔浩激流口吐鲜血，被柴明踩在脚下，满脸的痛苦之色。
+- name: 柴明
+  aliases:
+  - 火浪子
+  summary: 四转蛊师，火属性，使用暗藏杀招的火焰，为报父仇与水魔对决，最终被杀。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 柴明昂首站立，气喘吁吁，瞪视脚下的尸体，放声大喝：‘水魔，当年你杀死我的父亲，可想到有今天！’
+    - 哧！一声轻响，柴明惊愕地看向自己的胸膛。
+- name: 毒蛇郎君
+  aliases: []
+  summary: 黑楼兰麾下的三角眼男蛊师，被墨狮狂一击打爆。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - ‘也罢，就让我毒蛇郎君称一称你这兄弟的斤两。’
+    - 一招之下，立见分晓。
+- name: 黑绣衣
+  aliases: []
+  summary: 黑旗军三大统领之一，四转高阶防御蛊师，使用飞骨盾牌、鬼面等防御手段，被墨狮狂击败重伤。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 黑绣衣面无表情地答应一声，缓缓迈出。
+    - 黑绣衣像只死狗一样，一动不动地躺在地上，奄奄一息。
+- name: 严翠儿
+  aliases:
+  - 严家大小姐
+  summary: 严家大小姐，刘文武的未婚妻，被水魔绑架献给黑楼兰，用以打击刘文武。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 严翠儿是一位如花般貌美的年轻姑娘，身着艳丽的盛装。
+    - 严翠儿是他的未婚妻，但他可以舍弃。
+- name: 赵怜云
+  aliases:
+  - 云云
+  - 小云姑娘
+  - 小云
+  - 怜云仙子
+  summary: 原为北原千金大小姐，后因父亲战死、被迫联姻而反抗，得到马鸿运相助。她是爱情仙蛊的宿主，拥有强烈的意志和情感。
+  rank: 凡人（但被道痕丝衣保护）
+  first_appear_title: ''
+  details:
+    source:
+    - 女孩儿粉雕玉砌，一身锦衣，模样可爱至极，此刻却呜呜咽咽。
+    - 女童在心中怒吼，表面上则坐在赵家族长的臂弯上。
+    - 赵怜云自从用了“虎狼羊”三说，劝说赵家族长。
+    rank:
+    - 凡人（但被道痕丝衣保护）
+    background:
+    - 来自天外，被灵缘斋接纳，一心想要救自己的情郎。
+    gender:
+    - 女
+    cultivation_base:
+    - 蛊仙（具体修为未明确）
+    affiliation:
+    - 散修/大雪山福地
+- name: 东方余亮
+  aliases: []
+  summary: 东方家族此代族长，五转智道蛊师，擅长推演测算，在草府英雄大会中力压群雄。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 东方家族此代族长，乃是五转智道蛊师东方余亮。
+    - 他一夜不休，推演测算之后，立即改变原本强硬的态度。
+    - 东方余亮乃是五转智道蛊师
+    境界:
+    - 凡人蛊师
+    background:
+    - 作为夺舍目标，承受血能灌输，立地成仙。
+- name: 赵家族长
+  aliases: []
+  summary: 赵家族长，五转初阶蛊师，因操劳族务而白发苍苍，优柔寡断，膝下只有一女赵怜云。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 赵家族长一脸疲惫地将手中的文书放下。
+    - 这位年仅五十的五转初阶蛊师，因为长期操劳族中事务的缘故，已经白发苍苍，满脸皱纹。
+- name: 谭碧雅
+  aliases: []
+  summary: 继女蛊仙，逆雨福地的主人之一。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 继女蛊仙谭碧雅之后，福地中迎来了新的客人。
+- name: 黑柏
+  aliases: []
+  summary: 六转蛊仙，黑家的太上家老，曾多次指点太白云生。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 原来，当年黑家太上家老黑柏，看中太白云生，曾经多次指点或者搭救他。
+- name: 东方长凡
+  aliases:
+  - 北原智道第一
+  - 东方老贼
+  summary: 东方部族太上大长老，北原当代第一智道蛊仙，老谋深算，成功夺舍东方余亮但留下严重内患。掌控万星飞萤、分影仙蛊等底牌。
+  rank: 七转（可能为八转？但战力表现为七转）
+  first_appear_title: ''
+  details:
+    source:
+    - 东方长凡乃是北原有名的智道蛊仙，一生荣光战绩无数。
+    - 东方长凡生前，乃是北原公认的智道第一蛊仙。
+    - 东方长凡虽然在临死前，和各大黄金部族、超级势力达成了互不攻伐的盟约。
+    地位:
+    - 北原智道第一人
+    background:
+    - 生前得到夺舍之法，暗中与仙鹤门合作，牺牲部族蛊仙以图夺舍东方余亮。
+    - 东方部族领导者，为求重生牺牲族人，遭魔道围攻后逃遁。
+    - 正道领袖，耶律群星曾多次挑战他。
+    ability:
+    - 智道修为，擅长推算与布局，拥有万星飞萤、分影等杀招。
+    rank:
+    - 七转（可能为八转？但战力表现为七转）
+    - 七转
+- name: 太白云生
+  aliases:
+  - 太白老先生
+  - 北原第一治疗大师
+  - 老贼
+  - 老白
+  - 小太白
+  summary: 年迈白须的蛊师，原为北原第一治疗大师，后冒险升仙，成为宙道蛊仙。时有温和仁慈之色，升仙时狂笑扭曲。
+  rank: 七转（凭常识，未明说但可推断）
+  first_appear_title: ''
+  details:
+    source:
+    - 老夫太白云生，受恩人书信所托，前来助你一臂之力。
+    - 太白云生试着用信蛊相招
+    - 太白云生催动，五转人如故
+    background:
+    - 身中死期仙蛊，前往东海探索玉露福地。
+    - 身为宙道蛊仙，知晓一指流鲨口诀。
+    - 未知，但似乎与黑楼兰、方源同行。
+    rank:
+    - 七转（凭常识，未明说但可推断）
+    gender:
+    - 男
+    cultivation_base:
+    - 六转蛊仙（战力七转）
+    affiliation:
+    - 影宗/散修
+- name: 成虎
+  aliases: []
+  summary: 四转变化道蛊师，化作斑斓猛虎扑向方源，被方源撕成两半。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 成虎大喜过望，匆匆行了一礼，直奔两军阵前。
+    - 成虎不知道被哪个人，从背后袭击，被撞飞到方源的脚下。
+    - 方源一抓捏爆他的头颅。
+- name: 古国龙
+  aliases: []
+  summary: 古家盟主，擅长土道，筑山固守。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 古国龙高居山巅，俯视山脚。
+- name: 江暴牙
+  aliases:
+  - 鼠王
+  summary: 马家盟友，奴道大师，御使鼠群，在战局不利时临阵脱逃，受毒誓反噬。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 江暴牙却是大汗淋漓，面容苍白。
+    - 鼠王居然跑了！
+    - 江暴牙一边逃跑，一边七窍喷血。
+- name: 努尔图
+  aliases: []
+  summary: 奴道大师，使用豹群，击败江暴牙。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 努尔图背负双手，昂首傲立，身边异兽豹子环绕。
+- name: 高扬
+  aliases:
+  - 魔道双煞之一
+  summary: 魔道双煞之一，四转巅峰，擅长云索蛊、波云诡谲蛊，擅长牵制和防御。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 高扬、朱宰，皆有四转巅峰的修为，号称魔道双煞
+    - 高扬心系朱宰
+- name: 朱宰
+  aliases:
+  - 魔道双煞之一
+  summary: 魔道双煞之一，四转巅峰，力道蛊师，拥有帝豪猪虚影。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 朱宰冷哼一声，催动蛊虫
+    - 朱宰爆发三头帝豪猪的巨力
+    - 还有朱宰的来信吧。
+- name: 欧阳碧桑
+  aliases: []
+  summary: 刘文武的义兄，变化道蛊师，使用修罗尸蛊和修罗变杀招。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 欧阳碧桑冷哼一声，几乎同时出动。
+    - 欧阳碧桑施展杀招，战力暴涨数倍
+- name: 贝草川
+  aliases:
+  - 贝家族长
+  summary: 贝家族长，四转奴道蛊师，一体两魂，短时间获得奴道大师造诣。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 贝家族长在远处看到这一幕，惊得睚眦欲裂。
+    - 贝草川面无表情，从座位上站起来
+    - 贝草川一边操纵草兵军团，一边泪流满面。
+- name: 成龙
+  aliases: []
+  summary: 五转变化道蛊师，成虎的哥哥，能化为三爪金角巨龙，被方源轰杀。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 三爪金角巨龙，再次杀到方源的身后！
+    - 方源将巨龙的脑袋彻底轰碎。
+- name: 杨破缨
+  aliases:
+  - 鹰王
+  summary: 马家盟友，能御使雷鹰群，被方源冲杀并捏爆头颅。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 方源势如破竹地冲破雷鹰群，直取杨破缨。
+    - 鹰王杨破缨的脑袋，就好像是一个西瓜，被他轻易捏爆。
+- name: 邬夜
+  aliases: []
+  summary: 飞行大师，魔道强者，与奚雪夹击方源，被方源撞杀。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 邬夜、奚雪双双飞来，夹击方源。
+    - 一代飞行大师，魔道的强者，就此身陨！
+- name: 奚雪
+  aliases: []
+  summary: 与邬夜一同夹击方源的蛊师，被方源轻易甩开。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 邬夜、奚雪双双飞来，夹击方源。
+    - 方源双翅猛振，轻易地甩开奚雪。
+- name: 孙湿寒
+  aliases:
+  - 狈君子
+  summary: 黑楼兰的谋士，常向黑楼兰进言针对常山阴。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 黑楼兰的下属
+    source:
+    - 狈君子孙湿寒，缓步而来，轻声唤道。
+    - 孙湿寒怀着无比的失望之情，离开了中枢大殿。
+- name: 潘平
+  aliases:
+  - 单刀将
+  summary: 魔道蛊师出身，后投靠黑家成为外姓长老，因星鹫峰传承被方源夺走而怀恨，与常飚组成杀狼同盟。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 盟军中的蛊师
+    source:
+    - 这是单刀将潘平，不久前传达过来的信笺。
+    - 潘平在星鹫峰被方源夺走传承，因此暗恨不已
+    - 潘平披头散发，不顾身上的鲜血和碎肢，仰头大笑。
+- name: 黑沛
+  aliases: []
+  summary: 黑家的大家老，资格最老，常在议事时为黑楼兰出谋划策。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 资格最老的大家老黑沛。
+- name: 黑旗胜
+  aliases: []
+  summary: 黑家的奴道蛊师，在闯真阳楼第五十四关失败多次。
+  rank: ''
+  first_appear_title: ''
+  details:
+    ability:
+    - 奴道蛊师
+    background:
+    - 黑家族人
+    source:
+    - 黑旗胜已经失败了八九次。
+    - 黑旗胜更是浑身蓦地轻松下来。
+- name: 黑书
+  aliases: []
+  summary: 黑楼兰的贴身蛊师随从，负责传信。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 黑书立在大堂门外，乃是黑楼兰的贴身蛊师随从。
+- name: 北冥冰魄
+  aliases: []
+  summary: 人祖的第三子，诞生于落魄谷，外冷心热，孝心深厚，创造意义蛊。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 北冥冰魄外冷心热，虽然话不多，但对人祖十分孝顺。
+    - 北冥冰魄回到古月阴荒的身边，亲手创造出了一只意义蛊。
+- name: 常飚
+  aliases: []
+  summary: 常家长老，曾为族长，与方源（常山阴）有夺妻之恨，暗中组建杀狼同盟，设计联姻拉拢马英杰。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 常飚则和常山阴有夺妻之恨
+    - 常飚目光一转，看向席中某人。
+- name: 常丽
+  aliases: []
+  summary: 常飚的养女，被常飚用来设计联姻，与马鸿运订婚。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 常丽清秀可人
+    - 常丽躺在地上，有气无力，我见犹怜。
+- name: 常极右
+  aliases:
+  - 常家族长
+  summary: 常家少族长，被方源利用变成天尸的试蛊之人。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 第一百八十四节常极右接受方源提升资质
+    - 第一百八十五节常极右被实验变成天尸
+- name: 雪松子
+  aliases: []
+  summary: 大雪山福地的魔道蛊仙，以贩卖雪人为生，支持马家，后与黑楼兰秘密合作。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 第一百八十二节雪松子与龙胆魔君谈判
+    - 第一百八十三节黑楼兰与雪松子通信合作
+    - 雪松子身材高瘦，一身淡蓝长衫，雪白的长发垂落到脚面。
+- name: 耶律桑
+  aliases: []
+  summary: 耶律部族当代族长，五转巅峰强者，炎道修为，身携炎道辅助仙蛊。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 耶律桑乃是五转巅峰强者，超级势力耶律部族的当代族长，一身炎道修为，十分克制木道蛊虫。
+    - 耶律桑大人成功除掉青蛇藤王，已经退回。
+    - 耶律桑叫喊道
+- name: 狂蛮魔尊
+  aliases: []
+  summary: 九转力道蛊尊，变化道开创者，曾化身太古冰凰，其真意刻印在冰原。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 这是上古时代，三大魔尊之一的狂蛮魔尊！
+    - 狂蛮魔尊是力道之祖，同时也开创了变化道。
+    - 狂蛮魔尊乃是力道蛊尊，力道之祖，同时又开创了变化道。
+- name: 空绝老仙
+  aliases: []
+  summary: 远古炼道大宗师，创造了仙窍移植大法，与长毛老祖、天难老怪齐名。
+  rank: 历史悠久，境界极高
+  first_appear_title: ''
+  details:
+    source:
+    - 空绝老仙，对空窍研究最深，著有《仙窍方略》。
+    - 空绝老仙的这份传承，考验有缘人的空窍。
+    - 自称空绝，还经常杀人，解剖尸体，真的很恐怖。
+    background:
+    - 梦境中的历史人物，脾气古怪，常杀人解剖
+    appearance:
+    - 老头子
+    ability:
+    - 炼道大宗师
+    rank:
+    - 历史悠久，境界极高
+- name: 天难老怪
+  aliases: []
+  summary: 远古炼道大宗师，与空绝老仙、长毛老祖齐名，因妄图炼化太古九天失败身陨，留下传承。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 天难老怪，性情怪癖，妄图炼化天空而身败陨落。
+    - 天难老怪，乃是远古时代的炼道大宗师，历史上和空绝老仙，长毛老祖二人齐名。
+    - 登天野里，埋藏着天难老怪的传承。
+- name: 地元苍枭
+  aliases: []
+  summary: 太古荒兽，鸟首兽身，两对金瞳，头有龙角，战力可比八转蛊仙。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 这是太古荒兽——地元苍枭！
+    - 地元苍枭拥有不下于人的智慧，闻言大怒，张口一吐，九天雷动。
+- name: 霜玉孔雀
+  aliases:
+  - 王庭地灵
+  - 地灵
+  summary: 地灵，形态为霜玉孔雀，高贵骄傲，被巨阳意志囚禁十余万年，欲脱困而暴动。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 地灵霜玉孔雀引吭高歌。它这一击，效果拔群，身上覆盖的青泥直接褪到它的脖颈之下。
+    - 霜玉孔雀悲鸣声声
+    - 地灵只剩下头部还裸露在外
+- name: 巨阳意志
+  aliases:
+  - 巨阳仙尊意志
+  - 长河巨阳意志
+  - 巨阳先祖
+  - 巨阳
+  summary: 巨阳仙尊留下的特意意志，太阳般巨大，黄金洪流，智慧卓绝，统治八十八角真阳楼。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 一声梦醒时的轻喃，在真阳楼的最深处响起。何种如此大胆，将我从梦中惊醒？
+    - 巨阳意志乃是特意，当初本体凝造出它时，就赋予了它“见到天外之魔就要拼尽全力，立即斩杀”的特殊意义
+    - 巨阳意志咬牙切齿地诅咒着
+- name: 紫山真君
+  aliases:
+  - 紫大人
+  - 紫发老者
+  - 紫
+  summary: 影宗第一代分魂，八转智道蛊仙，专修智道，研究出与天意同化的方法，可打入天意内部，了解天意布局。曾传真传于太白云生，影响众多命运关键棋子。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 他还随便给老乞丐起了一个紫山真君的名号。
+    - 紫山真君浑身散发出刺眼的紫色光辉
+    - 小人蛊仙沉吟一声，随即催动某种仙道杀招，口中低呼：“大，大，大。”
+- name: 墨坦桑
+  aliases:
+  - 墨人王
+  summary: 北原墨人之王，墨人城主，枭雄，能屈能伸，擅长气道，与琅琊地灵是至交。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 墨人蛊仙抢先站出来道：'鄙人墨坦桑，身居墨人城，乃是北原墨人之王。'
+    - 多亏了北原墨人王出力相助。
+    - 墨坦桑是墨人城的城主，他来支援已经不错。
+    background:
+    - 曾提出混入北原僵盟分部的建议。
+- name: 韩立
+  aliases: []
+  summary: 年轻蛊师，初入江湖，在商队遇袭中幸存，被神秘老者传授真传。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 韩立呵呵傻笑。
+    - 韩立家中只有韩立一人，看到这里，方源已经确信此韩立就是日后成就七转蛊仙，奇遇连连的那个人！
+    - 韩立夹杂在货物之间，已经浑身是血，眉目焦黑。
+- name: 墨大夫
+  aliases: []
+  summary: 驻韩家村的二转治疗蛊师，暗中炼人药蛊。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 墨大夫笑了笑。
+    - 这个所谓的墨大夫，是要炼人药蛊啊。
+- name: 肥娘子
+  aliases: []
+  summary: 莫家女蛊仙，肥硕至极，追杀令狐虚时误认方源。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 肥娘子大吃一惊，又开口：“你……”
+    - 这是一位肥硕至极的女蛊仙，膀大腰圆，宛若水缸一般，脚踩黄沙巨浪，愤怒傲慢地俯视方源。
+- name: 令狐虚
+  aliases: []
+  summary: 小贼，偷了肥娘子的仙元石，擅长伪装变化。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 令狐虚蜷缩在沙地深处，吓得浑身冒了一层冷汗。
+- name: 洪易
+  aliases: []
+  summary: 年轻蛊师，二转高阶，曾参与炼蛊大会，屡获机缘。在蜈蚣峡谷与小人一起被金角蜈蚣追杀。
+  rank: 二转高阶（蛊师）
+  first_appear_title: ''
+  details:
+    source:
+    - 发现你了，洪易。
+    - 这洪易运气不输给韩立，也是五域大战时期，涌现出来的七转传奇。
+    - 说起来，院长的儿子洪易也有这般天赋，如今进入了决赛。
+    rank:
+    - 二转高阶（蛊师）
+    - 凡人
+    background:
+    - 修行速度远超常人，获得一个移动杀招，但熟练度不足。
+    ability:
+    - 连运
+- name: 黎山仙子
+  aliases:
+  - 三当家
+  - 黎山妹妹
+  summary: 大雪山蛊仙，本命仙蛊为山盟蛊，修行木道，七转战力。与方源、黑楼兰有盟约，隐藏身份参与碧潭福地之战。
+  rank: 七转
+  first_appear_title: ''
+  details:
+    source:
+    - 黎山仙子显得十分紧张，赶忙过去细心查看。
+    - 黎山仙子便笑：“方源啊，我也早料到这点。”
+    - 黎山仙子满脸肃容，声音越变越大，渐渐响彻天地：“黑城，今日你注定了失败。”
+    特点:
+    - 交友广泛，情报灵通
+    ability:
+    - 木道手段，擅长操控花草与盟约之术。
+    rank:
+    - 七转
+    background:
+    - 大雪山成员，曾被怀疑在此次行动中代表雪胡老祖的意志。
+    - 苏仙儿之姐，因三妹之死与焚天魔女闹翻，后接纳黑楼兰，再度与焚天魔女合作。
+- name: 秦百胜
+  aliases:
+  - 影宗首领
+  summary: 影宗成员，实力强大，拥有魂道杀招魂压和五指拳心剑，带领队伍进攻琅琊福地并收取仙蛊屋炼炉。
+  rank: 七转（凭实力推断）
+  first_appear_title: ''
+  details:
+    source:
+    - 马鸿运被北原蛊仙秦百胜捉走，秦百胜的福地就坐落在绯红芦苇荡里。
+    - 秦百胜虽是七转蛊仙，散修中的强者，木道战力强横。
+    - 秦百胜俘虏了马鸿运、赵怜云二人。
+    流派:
+    - 金道
+    rank:
+    - 七转（凭实力推断）
+    background:
+    - 拥有杀招魂压和五指拳心剑，曾是影宗在落魄谷的防守统帅。
+- name: 孔升天
+  aliases: []
+  summary: 移动杀招，打开全身毛孔喷气流，快速飞行且转向灵活。
+  rank: 八转
+  first_appear_title: ''
+  details:
+    source:
+    - 孔升天是个人名，他就是当初创造这个杀招的蛊仙。
+    - 另一件杀招，叫做“孔升天”。
+    - 孔升天的意志便直接动手，催动蛊仙手段。
+    appearance:
+    - 意志形态
+    ability:
+    - 气道八转蛊仙，擅长利用气流喷吐腾挪转移，曾找到天地秘境乎地。
+    rank:
+    - 八转
+    background:
+    - 魔道蛊仙，本体已逝，意志依附于孔日天。
+- name: 石磊
+  aliases:
+  - 仙猴王
+  summary: 战仙宗七转蛊仙，修行土道、变化道，招牌杀招为王垒山仙猴变化。被公认为中洲七转蛊仙中的第一强者。
+  rank: 七转
+  first_appear_title: ''
+  details:
+    source:
+    - 最近宝黄天中的一位蛊仙石磊，人称仙猴王，在自家的福地中研生出了石猴毫毛。
+    - 石磊乃是七转蛊仙，战力脱俗得很。
+    - 石磊却也有土道仙蛊，而且早就有了，甚至创造出了独属的仙道杀招。
+    background:
+    - 拥有仙道杀招滚石战场、石破天惊，战斗才情出众
+    appearance:
+    - 金瞳战意如火
+    ability:
+    - 土道、变化道，擅长仙道杀招
+    rank:
+    - 七转
+- name: 黑家太上大长老
+  aliases: []
+  summary: 黑家太上大长老，拥有仙蛊屋黑牢。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 太上大长老神情肃穆，
+    - 太上大长老接过仙蛊屋黑牢
+    - 黑家太上大长老沉默半晌，终于缓缓开口：“眼下局势，资源都是外物，尽数舍了又如何？”
+- name: 树止戈
+  aliases: []
+  summary: 仙鹤门蛊仙，负责治疗上古荒兽灵犀，主张采购材料炼制治疗蛊。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 蛊仙树止戈朗声道。
+- name: 樊西流
+  aliases: []
+  summary: 仙鹤门蛊仙，反对树止戈的提议，主张节省仙元石。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 樊西流也不甘示弱，大吼道。
+    - 樊西流知道之后，便交给方正一个任务
+- name: 苍郁仙子
+  aliases: []
+  summary: 仙鹤门六转水道蛊仙，与鹤风扬一同进攻狐仙福地。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 小女子苍郁，仙鹤门六转水道蛊仙。
+- name: 仙鹤门太上大长老
+  aliases: []
+  summary: 仙鹤门八转太上大长老，主持蛊仙会议。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 仙鹤门太上大长老的声音，低沉缓和。
+- name: 白晴仙子
+  aliases: []
+  summary: 灵缘斋七转蛊仙，凤九歌的妻子，凤金煌的母亲。性格坚强，深爱丈夫。接受调查薄青线索的任务，前往落天河源头。
+  rank: 蛊仙
+  first_appear_title: ''
+  details:
+    background:
+    - 白晴福地的主人，关心女儿
+    - 凤九歌失踪后，她强忍痛苦，安慰女儿并讲述人祖传故事。
+    - 原是六转巅峰，凤九歌借用宙道仙蛊助其提升至七转。擅长水道，为调查丈夫死因而奔波。
+    rank:
+    - 蛊仙
+    - 七转
+    source:
+    - 白晴仙子。看到凤金煌苏醒，她喜极而泣
+    - 一位白衣女仙，越众而出。
+    - 原来白晴仙子。
+- name: 百足天君
+  aliases:
+  - 地老传人
+  - 百足老哥
+  summary: 八转蛊仙，奴道流派，百足家创始人，因百足卫之死进攻黑凡洞天，擅长分身杀招和驱使荒兽。
+  rank: 八转
+  first_appear_title: ''
+  details:
+    source:
+    - 百足天君居于主位，呵呵淡笑，招待着殿中的两位蛊仙。
+    - 百足天君问道。
+    - 百足天君本是散修阵营，但自从拍卖大会之后，他就筹谋建立正道势力。
+    rank:
+    - 八转
+    background:
+    - 原为散修，后吞并黑家残余，建立百足家，与药皇联手过。
+    appearance:
+    - 身着白袍，毛发浓密，身材高瘦
+- name: 焚天魔女
+  aliases:
+  - 魔女
+  summary: 八转炎道仙僵，曾任北原僵盟领袖，战力卓绝，智谋深邃，拥有大杀招焚天。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 她原来是位女仙僵，号称焚天魔女，修为高达八转，行事多蛮横，气焰嚣张。
+    - 焚天魔女却非力道蛊仙，而是专修炎道。
+    - 焚天魔女还有一记大杀招，名为焚天。
+    background:
+    - 原为北原僵盟高层，曾与百足天君争夺太古九天碎片世界，失败后发动焚天烧毁世界，扬名北原。后离开北原去往东海。
+    - 曾远走东海寻找机缘，返回北原后布设连环局，为黑楼兰报仇并谋取我力仙蛊。
+- name: 凤仙太子
+  aliases: []
+  summary: 北原明面上的五大八转蛊仙之一，灵缘斋安插在北原的最高间谍，宫家太上长老，宫婉婷的丈夫。
+  rank: 八转
+  first_appear_title: ''
+  details:
+    source:
+    - 凤仙太子端坐于上，黎山仙子、秦百胜施礼请辞。
+    - 凤仙太子手中的确有这么一只。
+    - 凤仙太子忽然投靠灵缘斋
+    ability:
+    - 八转蛊仙，天资纵横，擅长隐匿身份，曾与凤九歌交手平手。
+    rank:
+    - 八转
+    background:
+    - 灵缘斋早年铺设的棋子，在北原潜伏发展数百年，成就八转。
+    - 灵缘斋安插在北原的间谍
+    appearance:
+    - 高冠凤目，金色披风
+- name: 乐瑶
+  aliases: []
+  summary: 凤仙太子的另一侍女。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 另外的女蛊仙名为乐瑶
+- name: 鲨魔
+  aliases: []
+  summary: 僵盟蛊仙，组织玉露福地攻略，有冰消仙蛊，是方源的合作者。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 鲨魔有一位双修道侣，名为苏白曼
+    - 以鲨魔为首的僵盟蛊仙，就联袂飞来。
+    - 鲨魔沉吟一番后，道：‘那么这次就先散了，下一次攻略大概是在三十天后。’
+    background:
+    - 与妻子苏白曼经营鲨海，从僵盟总部换取奴道杀招下克上，企图收服一指流鲨，但未成功。
+- name: 苏白曼
+  aliases: []
+  summary: 东海仙僵，鲨魔的道侣，拥有宙锚仙蛊。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 鲨魔有一位双修道侣，名为苏白曼
+    - 鲨魔、苏白曼夫妻目光灼灼。
+    - 苏白曼旋即点头附和。
+- name: 袁让尊
+  aliases: []
+  summary: 北原袁家太上大长老，七转蛊仙，武痴。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 袁家太上大长老乃是七转蛊仙
+- name: 袁驰
+  aliases: []
+  summary: 袁家蛊仙，负责提醒袁让尊参加拍卖会。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 袁家蛊仙袁驰匆匆赶来
+- name: 自在书生
+  aliases: []
+  summary: 律道蛊仙，掌握律道仙蛊“解”，拥有仙道杀招千解。七转战力，在魔道群仙中出力最多，性情急躁。
+  rank: 七转
+  first_appear_title: ''
+  details:
+    source:
+    - 自在书生也来了？
+    - 自在书生轻轻一笑，手掌轻弹，迅速飞出两只仙蛊。
+    - 自在书生陡然大吼。刚刚吼完，他便出手。
+    修为:
+    - 七转
+    background:
+    - 陈家衰落，只剩他一人，参与争夺东方长凡传承。
+    - 魔道蛊仙，参与碧潭福地掠夺，与东方长凡激战。
+    ability:
+    - 律道，千解能分解万物。
+    rank:
+    - 七转
+- name: 红袖仙子
+  aliases: []
+  summary: 自在书生的侍女蛊仙。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 红袖仙子
+- name: 贺狼子
+  aliases: []
+  summary: 北原变化道著名魔仙，掌握多种上古荒兽变身，性情凶残。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 仙蛊天锣之音，响彻蛊仙贺狼子心中。
+    - 贺狼子是北原著名的变化道魔仙，成长经历异于常人，生性凶残，掌握三种仙道荒狼变身，战力很强。
+- name: 慕容尽孝
+  aliases: []
+  summary: 东海教主的随从，七转蛊仙。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 慕容尽孝恭维着道。
+- name: 东海教主
+  aliases: []
+  summary: 来自东海的八转蛊仙，雄踞琉璃海。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 这位神秘教主，竟然不是北原蛊仙，而是来自东海！
+- name: 古业
+  aliases: []
+  summary: 北原僵盟成员，守护地老木的任务。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 古业想要告辞，建议方源可以去阴流巨城四处逛逛。
+- name: 雷坦
+  aliases: []
+  summary: 仙鹤门蛊仙，镇守轮回战场，身受重伤。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 镇守那里的蛊仙雷坦，因为身受重伤
+- name: 铁甲子
+  aliases: []
+  summary: 金道蛊仙，被琅琊福地俘虏。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 金道蛊仙铁甲子
+- name: 雪熊大仙
+  aliases: []
+  summary: 奴道蛊仙，被琅琊福地俘虏。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 奴道蛊仙雪熊大仙
+- name: 慕点苍
+  aliases: []
+  summary: 木道蛊仙，被琅琊福地俘虏。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 木道蛊仙慕点苍
+- name: 吴浩
+  aliases:
+  - 奔雷手
+  summary: 七转蛊仙，战力位居七转中等，被琅琊福地俘虏。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 七转蛊仙吴浩，号称奔雷手
+- name: 花海三仙
+  aliases: []
+  summary: 三位蛊仙，被琅琊福地俘虏。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 花海三仙
+- name: 逍遥四圣
+  aliases: []
+  summary: 四位北原散修蛊仙，被琅琊福地俘虏。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 逍遥四圣
+- name: 黄泉翁
+  aliases: []
+  summary: 七转仙僵，轮流看守地沟入口。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 阴六公、夜叉龙帅、黄泉翁三位七转仙僵轮流看守。
+- name: 夜叉龙帅
+  aliases: []
+  summary: 北原仙僵，团队领导者，沉稳谨慎，擅长侦查与指挥，拥有生擒夜叉章鱼的能力。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 阴六公、夜叉龙帅、黄泉翁
+    - 夜叉龙帅率领三位仙僵，飞在空中，速度之快，宛若四道闪电。
+    - 夜叉龙帅脸色铁青，主动停手。其余三位仙僵，亦是斗志衰弱几无。
+- name: 阴六公
+  aliases:
+  - 小六
+  summary: 七转仙僵，轮流看守地沟入口。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 阴六公、夜叉龙帅、黄泉翁
+    - 阴六公道：“药皇前辈，真的要买下这只鼎力仙蛊？”
+    - 阴六公冷汗涔涔
+- name: 楚度
+  aliases:
+  - 霸仙
+  - 霸仙楚度
+  - 楚老弟
+  summary: 北原力道大能，七转蛊仙，拥有霸仙之名，性格强硬，善于谋划，占据黑凡洞天，与百足天君对抗。
+  rank: 七转
+  first_appear_title: ''
+  details:
+    source:
+    - 楚度皱了皱眉头。
+    - 霸仙楚度此番来信，无疑是想得到鼎力仙蛊
+    - 霸仙楚度站在冰原上，望着被他拍出掌形深坑的地面，叹了一口气。
+    rank:
+    - 七转
+    - 八转
+    background:
+    - 北原强者，曾汲取狂蛮真意提升力道境界，后与百足天君争夺黑凡洞天。
+    - 北原霸主之一，创建楚门，与百足家联盟对抗正道。
+    - 北原正道强者，与刘家敌对，曾招纳并逐出柳贯一。
+    ability:
+    - 力道或变化道？身体力行杀招直线极速
+- name: 药皇
+  aliases:
+  - 南荒仙人药皇
+  summary: 北原正道八转蛊仙，正道第一，黄金血脉，与百足天君联手被雪胡老祖击败。
+  rank: 八转
+  first_appear_title: ''
+  details:
+    source:
+    - 药皇也来参加竞拍？
+    - 药皇对鼎力仙蛊势在必得
+    - 八转蛊仙药皇已经启程，前往大雪山福地，向雪胡老祖索要方寸山。
+    rank:
+    - 八转
+    appearance:
+    - 拄着拐杖，慈祥和气
+    background:
+    - 长生天成员
+    - 长生天成员，关注仙元石产出。
+- name: 郭荣
+  aliases: []
+  summary: 六转蛊仙，对秦百胜表示不满。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 蛊仙郭荣脸色一变
+- name: 姜钰仙子
+  aliases: []
+  summary: 影宗核心成员，女性蛊仙，在突围战中为掩护神秘黑袍蛊仙而阵亡。
+  rank: 七转（推测）
+  first_appear_title: ''
+  details:
+    source:
+    - 姜钰仙子摇摇头，苦笑：“副使大人，我们可不敢取你的性命。”
+    - 姜钰仙子说着，取出一只魂道仙蛊来。
+    - 姜钰仙子，行踪飘渺。
+    appearance:
+    - 紫色长裙
+    rank:
+    - 七转（推测）
+    background:
+    - 对影宗忠诚极高，不惜牺牲。
+- name: 老算子
+  aliases: []
+  summary: 古魂门智道蛊仙，拥有仙道杀招君子如竹，用于测谎。
+  rank: 七转
+  first_appear_title: ''
+  details:
+    source:
+    - 老算子手中的水晶无色嫩竹，随风摇曳，并无一丝变色迹象。
+    - “我这记仙道杀招君子如竹…”
+    - 老算子发出一声惨叫，从耀眼的电芒中迅速抽身
+    rank:
+    - 七转
+- name: 回风子
+  aliases: []
+  summary: 七转风道蛊仙，以风遁闻名，被秦百胜强迫加入进攻琅琊福地。
+  rank: ''
+  first_appear_title: ''
+  details:
+    流派:
+    - 风道
+    修为:
+    - 七转
+    source:
+    - 回风子打出闻名北原的招牌手段，却突破不了落魄谷的蛊阵。
+    - 两位，一位青袍风道蛊仙，行进的速度最快。
+    - '''怎么回事？！''在谷外看守的回风子，被落魄谷的景象惊动'
+- name: 天都神君
+  aliases: []
+  summary: 六转雷道蛊仙，曾与虱侯一起敲诈僵盟，在太丘争夺中受挫。
+  rank: ''
+  first_appear_title: ''
+  details:
+    流派:
+    - 雷道
+    source:
+    - 天都神君见皮水寒、何若一追一逃，觑得机会，立即催动移动杀招。
+    - 天都神君浑身缠绕电芒，大喝道：“此处的灯草，都是我的，谁敢跟我抢？”
+- name: 皮水寒
+  aliases: []
+  summary: 冰水蛊仙，七转战力，心狠手辣，参与围攻东方长凡。
+  rank: 七转
+  first_appear_title: ''
+  details:
+    流派:
+    - 冰、水双修
+    修为:
+    - 七转
+    source:
+    - 浪潮激喷，一位七转蛊仙脚踩巨浪，拦住青灰大鸟。
+    - 皮水寒大喊一声：“都闪开，让我来！”
+    - 皮水寒大吼一声，身形猛地拔高，带着全身的火焰，仿佛一道火焰流星，向外激射而去。
+    background:
+    - 参与围攻血幕，被追命火灼烧后狼狈逃离。
+    - 魔道蛊仙，对东方长凡的夺舍法门有强烈兴趣。
+    ability:
+    - 冰水系仙法。
+    rank:
+    - 七转
+- name: 监天塔主
+  aliases: []
+  summary: 天庭监天塔的掌控者，八转蛊仙，牺牲自己操纵万劫攻击魔尊幽魂。
+  rank: ''
+  first_appear_title: ''
+  details:
+    修为:
+    - 八转
+    身份:
+    - 天庭高层
+    source:
+    - 监天塔主拄着拐杖，佝偻着背，一步步拾阶而上。
+    - 监天塔主手持拐杖，借助监天塔，他的目光透射出去。
+    - 监天塔主缓缓摇头：“监天塔，已经损毁了四成。”
+    background:
+    - 天庭高层，对监天塔有深入掌控，最终与塔中蛊仙共同牺牲。
+- name: 残阳老君
+  aliases: []
+  summary: 中洲知名的强者，专修炎道，拥有仙蛊残烛，开创仙道杀招追命火。晚年深居浅出，曾与凤九歌调查八十八角真阳楼，并与张继比试得胜。
+  rank: 七转
+  first_appear_title: ''
+  details:
+    background:
+    - 受仙鹤门派遣进入北原探查八十八角真阳楼倒塌真凶，与东方长凡合作。
+    - 仙鹤门高层，为夺舍法门而助东方长凡。
+    source:
+    - 残阳老君不禁嗤笑：“让你们自乱阵脚？好笑得很，你们都一个个动弹不得，连自乱阵脚都资格都没有了。”
+    - 残阳老君嘎嘎大笑，终于在此刻出手：“且瞧我的追命火。”
+    - 残阳老君默默一念，分别为自己和东方长凡加持，随后他大袖一拂，甩出追命火。
+    ability:
+    - 炎道，追命火能追踪焚烧。
+    rank:
+    - 七转
+- name: 东方万休
+  aliases: []
+  summary: 东方部族蛊仙，被东方长凡牺牲，意志残留于仙窍本源。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 与其他七位蛊仙一同被虚化大阵抽取本源，后反噬东方长凡。
+    source:
+    - 东方万休大吼：“长凡大人，这一定不是真的！”
+    - 从东方余亮体内传来东方万休的怒吼声：“老贼，我要和你同归于尽！”
+- name: 东方一空
+  aliases: []
+  summary: 东方部族蛊仙，被东方长凡牺牲，意志残留。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 东方一空质问：“长凡大人，你倒是说句话啊！”
+    - 东方余亮怒吼咆哮，却不是先前的语调，竟类似东方一空。
+- name: 卓战
+  aliases: []
+  summary: 六转魔道蛊仙，骑飞天猪，使大锤，欺软怕硬。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 参与围攻，被星念侵蚀，误伤同伴。
+    source:
+    - 蛊仙卓战大吼着，杀下去。他骑着一头荒兽飞猪，身罩铠甲，手拿大锤
+    - 卓战面皮酱紫：“不好意思，我刚刚一击竟忽然改变了方向！”
+    - 卓战立即变了脸色，笑眯眯的，讨好地道。
+- name: 周千
+  aliases:
+  - 周平
+  summary: 六转魔道蛊仙，擅长飞遁，拥有两大仙道移动杀招。因散文鲤被方源收走而愤怒。
+  rank: 六转
+  first_appear_title: ''
+  details:
+    ability:
+    - 飞遁仙法，速度极快，连七转也难以追上。
+    rank:
+    - 六转
+    background:
+    - 魔道散修，在碧潭福地抢掠资源。
+    source:
+    - 周千怒道：‘我的散文鲤鱼群被人收走了！’
+    - 周平眼珠子转动，道：‘其实这战术并无差错，我也来配合一下！’
+- name: 郄世民
+  aliases: []
+  summary: 奴道蛊仙，俘虏大量东方族人。在追捕东方长凡时被其分影陷阱杀死。
+  rank: 六转
+  first_appear_title: ''
+  details:
+    ability:
+    - 奴道手段，可操控俘虏。
+    rank:
+    - 六转
+    background:
+    - 魔道蛊仙，参与碧潭福地掠夺。
+    source:
+    - 郄世民大吼：‘果然我坚持屠戮俘虏，还是有效果的！杀，杀掉他，再搜魂也不迟。’
+    - 郄世民的脸上，凝固着难以置信的神色。下一刻，他的脑袋轰然爆炸，战车解体，无力地坠落下去。
+- name: 小人族蛊仙方姓
+  aliases: []
+  summary: 小人族律道蛊仙，掌握七转律道仙蛊“小”，拥有杀招大而化小。依托方寸山与东方部族联盟。
+  rank: 七转
+  first_appear_title: ''
+  details:
+    ability:
+    - 律道，大而化小能削减攻击威力。
+    rank:
+    - 七转
+    background:
+    - 小人族领袖，与东方长凡有盟约。
+    source:
+    - 方寸山上的方姓小人族蛊仙，乃是律道蛊仙，掌握律道仙蛊“小”！
+    - 小人蛊仙连连喝骂，碍于盟约，只得飞起方寸山，悬浮在东方余亮的头顶，为他顶住攻击。
+- name: 雪胡老祖
+  aliases:
+  - 老祖
+  summary: 北原大雪山福地之主，八转蛊仙，战力雄浑，以一敌二击败药皇和百足天君。
+  rank: 八转
+  first_appear_title: ''
+  details:
+    rank:
+    - 八转
+    source:
+    - 一提到八转蛊仙雪胡老祖，中洲众仙都沉默下来。
+    - 雪胡老祖以一敌二，击败药皇、百足天君联手。
+    - 北原大局，经过雪胡老祖和药皇、百足天君之战后，也趋于稳定。
+    background:
+    - 与焚天魔女先战而后合作，潜入铁鹰福地掠夺炼蛊仙材。
+- name: 万寿娘子
+  aliases: []
+  summary: 大雪山福地的蛊仙，炼制鸿运齐天仙蛊的主要人物，雪胡老祖的妻子。
+  rank: 七转
+  first_appear_title: ''
+  details:
+    rank:
+    - 七转
+    source:
+    - 她号称万寿娘子，乃是雪胡老祖之妻，七转修为，北原四大炼道蛊仙之一。
+    - 万寿娘子此时也有一种开了眼界的感觉。
+    - 万寿娘子等人，还有其余幸存的峰主都震惊至极。
+- name: 厉鹏王
+  aliases: []
+  summary: 北原大雪山福地第四支峰峰主，身材高大，鹰钩鼻子，耳朵如羽翅。
+  rank: 七转
+  first_appear_title: ''
+  details:
+    rank:
+    - 七转
+    source:
+    - 他便是北原大雪山福地，第四支峰峰主——厉鹏王。
+    - 厉鹏王身材高大，浑身上下散发着彪悍之气
+- name: 龙胆魔君
+  aliases: []
+  summary: 北原大雪山福地第五支峰峰主，身材敦实厚重，带着冰寒龙威。
+  rank: 七转
+  first_appear_title: ''
+  details:
+    rank:
+    - 七转
+    source:
+    - 第五支峰峰主，坐拥冰湖宫殿的龙胆魔君。
+- name: 公子墨
+  aliases: []
+  summary: 北原大雪山福地第六支峰峰主，白袍书生打扮，比自在书生多磅礴大气。
+  rank: 七转
+  first_appear_title: ''
+  details:
+    rank:
+    - 七转
+    source:
+    - 乃是第六支峰峰主——公子墨。
+    - 一身白袍，身体欣长，也做书生打扮
+- name: 步飞烟
+  aliases: []
+  summary: 中洲蛊仙，女性，对八转战斗余波感到动摇。
+  rank: 七转
+  first_appear_title: ''
+  details:
+    rank:
+    - 七转
+    source:
+    - 步飞烟目光动摇
+- name: 陈振翅
+  aliases: []
+  summary: 中洲蛊仙，观察天空景象。
+  rank: 七转
+  first_appear_title: ''
+  details:
+    rank:
+    - 七转
+    source:
+    - 陈振翅抬头一看
+- name: 昼夜子
+  aliases: []
+  summary: 北原散修，宙道杀招“恺”的创始人，隐居散修。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 北原散修昼夜子？此人在五域大战时，大放过光彩。
+- name: 火工龙头
+  aliases:
+  - 龙头
+  summary: 万龙坞炼道宗师，实为蛊仙，曾因触犯门规被逐，后获炎道传承，参加炼蛊大会以求回归。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 火工龙头，早年触犯了门规，结果被万龙坞扫地出门。
+    - 已经有了炼道宗师的境界！这样的人物，居然也要眼巴巴地请求回归万龙坞。
+- name: 凶雷恶人
+  aliases: []
+  summary: 万龙坞六转蛊仙，战力极强，参悟仙道杀招雷神子，曾挑战多位七转蛊仙胜利，有当代中洲六转战力第一人之称。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 凶雷恶人，虽然只是六转蛊仙，但战力却极为出色。
+    - 闭关两年多，参悟出仙道杀招雷神子。
+    - 凶雷恶人为当代中洲六转战力第一人的位置。
+- name: 宋紫星
+  aliases:
+  - 血龙
+  summary: 中洲魔道蛊仙，血道高手，睚眦必报，曾创战场杀招血屠苏，叛逃万龙坞，被中洲十大派围杀。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 宋紫星一身宽大的血袍，却难掩挺拔如枪的身材。脸色苍白，鼻梁高耸，眉目阴沉狠利如鹰如鹫。
+    - 宋紫星堪称魔威浩荡，和石磊齐名，战绩赫赫。
+    - 宋紫星叛逃万龙坞，声名狼藉。
+- name: 烈魔仙丹乔
+  aliases:
+  - 烈魔仙
+  summary: 魔道蛊仙，七转修为，曾暗算宋紫星，后与凶雷恶人联手设伏，被宋紫星击杀。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 猎魔仙丹乔仰望着宋紫星，脸色苍白，一副惊怒交加，又害怕惶恐的样子。
+    - 烈魔仙丹乔已经死亡，尸体被宋紫星一手提着。
+- name: 本多一
+  aliases:
+  - 毛民本多一
+  summary: 五转毛民蛊师，炼道境界不凡，渴望学习自然炼蛊法。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 毛民本多一大叫道。
+    - 本多一一脸震惊的神色。
+    - 本多一瘫坐在地上，口中喃喃：“终于渡过灾劫了……”
+- name: 余木蠢
+  aliases:
+  - 余大师
+  summary: 毛民蛊仙，炼道大宗师，自然炼蛊法大成，年龄246岁。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 余木蠢哈哈哈一笑，双眼中爆闪出一阵精芒。
+    - 余木蠢朗笑一声：“你不要急着做决定，这其中大有风险。”
+    - 余木蠢看到这个血胎，顿时瞳孔一缩。
+- name: 白海沙陀
+  aliases:
+  - 西漠蛊仙首领
+  summary: 八转西漠蛊仙，率领西漠众仙进攻羽圣城，设计引诱羽民太上大长老。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 蛊仙老者目光深邃，望着眼前的三位羽民蛊仙。
+    - 白海沙陀淡淡地解释一句。
+    - 白海沙陀的一声命令，打破了三位羽民蛊仙的期望。
+- name: 唐嫣然
+  aliases: []
+  summary: 女蛊仙，跟随白海沙陀入侵羽圣城。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 女蛊仙唐嫣然问道。
+- name: 羽飞
+  aliases:
+  - 新晋羽民王
+  summary: 平民黑发少年，在羽民王选举中击败丹羽成为羽民王，后被方源伪装并杀死。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 羽飞满身灰土，狼狈不堪，如同老鼠一样在演武场中打滚逃窜。
+    - 羽飞忽然仰起头来，双目炯炯发亮。
+    - 羽飞高举双臂，振奋大吼。
+- name: 丹羽
+  aliases: []
+  summary: 羽圣城王子，金色头发，五转修为，在羽王之争中败给羽飞。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 丹羽慌忙后退。
+    - 丹羽挣脱不得，下意识地拼命催动防御蛊虫。
+    - 当场昏死过去。
+- name: 周中
+  aliases:
+  - 羽民蛊仙
+  summary: 六转羽民蛊仙，在羽圣城攻防战中受伤后被方源用奴隶仙蛊控制，成为方源的奴隶。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 羽民蛊仙周中涩声提议道。
+    - 周中一脸郑重的神色。
+    - 周中劝慰道。
+- name: 郑灵
+  aliases:
+  - 羽民蛊仙
+  summary: 羽民七转蛊仙，羽圣城最高战力，最终决定使用天随人愿。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 郑灵听了这番觐言，终于幡然醒悟。
+    - 郑灵皱起眉头。
+    - 郑灵大喜，羽民太上大长老的情势已经十分不妙。
+- name: 宋亦诗
+  aliases:
+  - 亦诗仙子
+  summary: 宋启元的掌上明珠，东海六大美人之一，年轻女蛊仙，性格冲动，缺乏战斗经验。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 宋亦诗也学乖了，长进了，居然懂得哄骗了。
+    - 宋亦诗是宋启元的掌上明珠，风头很盛，追求者众多。
+    - 宋亦诗修行了三个时辰，终于停止催动杀招。
+- name: 姚葛辟
+  aliases: []
+  summary: 散修蛊仙，木道，经验较丰富但无仙蛊，在追杀方源时被反杀。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 姚葛辟好歹也是蛊仙，居然连这么点功夫都没撑住！
+    - 姚葛辟的仙窍形成福地，地灵认主的条件却和我这个杀人凶手没有丝毫关系。
+- name: 宋启元
+  aliases: []
+  summary: 宋家八转蛊仙，宋亦诗的爷爷，家族掌权者，准备争夺天难老怪传承。
+  rank: 八转
+  first_appear_title: ''
+  details:
+    source:
+    - 宋启元缓缓地转过头来，脸上毫无生气的意思，反而满是慈祥的笑容：‘我的乖孙女，要爷爷怎么为你出气啊？’
+    - 万蛟飞腾，将东海八转蛊仙宋启元团团包围。
+    - 宋启元目光热切
+    rank:
+    - 八转
+    background:
+    - 宋家领袖，在东海势力强大。
+- name: 七海蛇女
+  aliases: []
+  summary: 七转魔道蛊仙，东海六大美人之一，与宋亦诗有矛盾，擅长煽风点火。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 七海蛇女是蛇蝎美人，外表貌美，心狠手辣。
+    - 七海蛇女和宋亦诗，同为东海蛊仙公认的六大美人之一。
+- name: 宋甲丹
+  aliases:
+  - 双极甲丹
+  summary: 宋家七转智道蛊仙，常年盘坐双极海峡推算，东海三大智道蛊仙之一。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 宋甲丹乃是宋家专门培养出的智道蛊仙。
+    - 在当今的东海蛊仙界中，他是公认的最出色的三位智道蛊仙之一。
+- name: 萧十让
+  aliases: []
+  summary: 萧家代表，负责与方源进行交易并授予交易令。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 萧十让道。
+    - 萧十让的脸上，也浮现出微笑。
+- name: 雷雨楼主
+  aliases: []
+  summary: 北原仙僵，对方源不满，但认可其战力后保持沉默。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 雷雨楼主不满地道。
+    - 雷雨楼主也沉默下来。
+- name: 玄阴医师
+  aliases: []
+  summary: 北原仙僵，擅长医术，在混战中策应。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 玄阴医师道。
+    - 由玄阴医师你站在外围策应吧。
+- name: 林大鸟
+  aliases: []
+  summary: 北原仙僵，擅长操控鸟群进行侦查与干扰。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 林大鸟负责外围，调动鸟群。
+    - 林大鸟忽的语气急促地汇报道。
+- name: 鼋姥姥
+  aliases: []
+  summary: 北原仙僵，负责吸引夜叉章鱼注意力。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 由鼋姥姥牵扯注意力。
+- name: 无极魔尊
+  aliases:
+  - 无极尊者
+  - 无极
+  summary: 古代魔道尊者，在律道领域成就极高，留有传承，生死转化思想影响七虹组织。
+  rank: 无上大宗师
+  first_appear_title: ''
+  details:
+    source:
+    - 无极魔尊说的没错，有生就有死，有死才有生，生死之间是可以相互转化的！
+    - 无极魔尊亲自布置的蛊阵，就被我们俩干掉了
+    - 无极魔尊信步而来，天庭蛊仙无人可与之匹敌。
+    rank:
+    - 无上大宗师
+- name: 苏仙儿
+  aliases: []
+  summary: 黑楼兰之母，化名苏仙儿接近黑城，后被害死，残留情念体。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 焚天魔女的三妹，被黑城杀害后留下一股亲情和仙元给女儿。
+    source:
+    - 当年，苏仙儿临死前，留给黑楼兰一笔仙元，还有这股亲情。
+    - 苏仙儿的身影，漂浮到黑楼兰的身后，伸出双臂，怀抱着爱女，温和地劝道：“放过他吧。”
+- name: 萧山
+  aliases: []
+  summary: 义天寨创建者，五转蛊师，魔道领袖，萧家太上长老的后辈，身上寄生仙蛊。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 萧山创建义天寨
+    - 萧山心知这样下去
+- name: 武神通
+  aliases: []
+  summary: 武家家老，四转巅峰奴道蛊师，曾攻打义天山，后被陆钻风斩杀。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 武神通。武家家老，四转巅峰，奴道蛊师。
+    - 陆钻风仗着他神出鬼没的潜行手段，斩杀了武神通
+- name: 陆钻风
+  aliases: []
+  summary: 五转蛊师，南疆第一神偷，擅长潜行，后加入义天寨，斩杀武神通。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 此人姓陆，名钻风，同样是五转蛊师，人称南疆第一神偷。
+    - 陆钻风仗着他神出鬼没的潜行手段，斩杀了武神通
+- name: 大力真武仙僵
+  aliases: []
+  summary: 八转仙僵，被镇压在惊鸿乱斗台下，后破封而出，但被监天塔光柱击杀。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 大力真武仙僵！他居然摆脱了仙蛊屋的镇压，一飞冲天，重见天日了！
+    - 八转大力真武仙僵躲避不及，只能万分不甘地怒吼一声，然后就被光柱打成齑粉。
+- name: 炎煌雷泽仙僵
+  aliases: []
+  summary: 影宗核心成员，七转仙僵，十绝体，在百日大战后突围而出，被方源追杀。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 两道身影从落魄谷中突围而出，一前一后。正是炎煌雷泽仙僵，还有黑城！
+    - 炎煌雷泽仙僵飞速逃遁，他速度极快，身形在半空中完全化作一条黑线，向前飚射。
+    - 这位炎煌雷泽，虽是仙僵，但智道造诣不俗
+- name: 墨瑶残魂
+  aliases:
+  - 墨瑶假意
+  - 墨瑶意志
+  - 灵缘斋仙子
+  - 墨瑶
+  - 墨瑶仙子
+  summary: 已故的炼道宗师，意志沉睡在近水楼台中，后被方源唤醒并潜入其脑海，对八十八角真阳楼有深刻研究。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 原来这处传承，竟然是墨瑶所立！
+    - 墨瑶在这一点上，发现了一个不是漏洞的漏洞。
+    - 墨瑶却理直气壮：“这些蛊师肯定是要死的，六臂天尸王乃是力道杀招，对蛊师身躯要求极高。”
+- name: 七星子仙僵
+  aliases:
+  - 蓝正使七星子
+  - 仙僵七星子
+  summary: 繁星洞天原主人，仙僵，因与战仙宗冲突而自爆洞天，导致碎片提前坠地。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 曾成功合并七大子星空间形成繁星洞天，后沉睡化为仙僵
+    appearance:
+    - 体格如常人，仙僵
+    ability:
+    - 星道仙道杀招星澜巨柱
+    rank:
+    - 八转（仙僵状态）
+    source:
+    - 七星子似乎察觉不到方源的存在，始终背对着方源
+    - 七星子仙僵狞笑一声，在距离黑楼兰尚有五六十步时，伸出左掌遥遥一推。
+    - 繁星洞天的主人七星子，为了延寿，转为仙僵。
+- name: 碧晨天
+  aliases: []
+  summary: 天庭蛊仙，与监天塔主一同修复监天塔，被怀疑是内奸但最终澄清。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 碧晨天开口问道。
+    - 碧晨天目光惊怒，开口分辨。
+    - 碧晨天捏紧双拳：“自从宿命蛊被红莲魔尊破坏，生死门对魂魄的吸纳能力，就降低了无数倍。”
+- name: 炼九生
+  aliases: []
+  summary: 天庭内奸，真实身份为影宗成员，潜伏千年，自杀释放大同风重创监天塔。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 炼九生却忽然大笑，他目光陡然阴沉下来。
+    - 炼九生赫然死去！
+- name: 仙僵薄青
+  aliases:
+  - 剑仙薄青
+  - 剑仙
+  - 剑劈五洲亚仙尊
+  - 亚仙尊
+  summary: 灵缘斋历史上的八转蛊仙，亚仙尊，剑道修为极高，被视作有望成为剑道仙尊。曾创出五指拳心剑杀招。后在天劫中陨落。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 剑仙薄青天才卓绝，打遍天下无有抗手。
+    - 薄青第二次冲击九转，彻底失败。
+    - 她的爱人是鼎鼎大名的剑仙薄青
+    rank:
+    - 八转
+    background:
+    - 曾是中洲巅峰，连天庭蛊仙都要退让；与伴侣墨瑶一同陨落于天劫。其陨落之地落天河源头近期发生异变。
+    - 原为幽魂魔尊分魂，在灵缘斋任务中陷入情网，后被墨瑶残魂操控的仙僵。
+- name: 兽人蛊仙
+  aliases:
+  - 龙角鳄首兽人
+  summary: 被困于地渊的八转食道大能，龙角鳄首，曾欲吞食幽魂魔尊但反被其魂魄吞噬。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 食道大能，与九烈狂人有过协议，被困地渊千年，最终被幽魂魔尊的魂道手段杀死。
+    source:
+    - 黑暗中两只眼睛，大如灯笼，骤然亮起。
+    - 兽人蛊仙很快将他的另一只胳膊，还有两条腿，都撕咬吞食下去。
+- name: 火崆峒
+  aliases: []
+  summary: 南疆柴家的客卿蛊仙，六转，使用火焰披风蛊和飞烟蛊。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 散修出身，投靠南疆柴家。
+    source:
+    - 在下火崆峒。敢问这位朋友，是从义天山那边过来的吗？
+    - 火崆峒取出蛊虫来，交到方源手中
+- name: 倪仁
+  aliases: []
+  summary: 倪家先祖，才华非凡，通过炼化将仙蛊融入后辈血脉，帮助倪家后代产出蛊仙。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 倪仁此举，是想帮助倪家后代产出蛊仙。他的确才华非凡，炼化到后辈血脉中的仙蛊，旁人都无法取出。
+- name: 戚灾
+  aliases: []
+  summary: 七转蛊仙，戚家成员，沉默寡言，擅长气道手段，能通过怨气制造泥人并询问情报。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 戚灾将目光望向前方的漫漫云涛，继续道：'倪仁此举，是想帮助倪家后代产出蛊仙。'
+    - 戚灾冷哼一声，念头频动。泥浆怪人是他一手造出，自然要归于他的控制。
+    - 当初斩杀戚灾，也是方源被戚灾一路追杀。
+- name: 戚荷
+  aliases: []
+  summary: 新晋六转蛊仙，戚灾的孙女辈，刚刚渡劫成仙，对蛊仙世界了解不多。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 戚荷连连眨眼，也对倪仁心生佩服之情：'我若是能有仙蛊帮助，说不定也能独自挨过灾劫。'
+    - 戚荷、戚荷都是新晋蛊仙。
+- name: 倪健
+  aliases:
+  - 泥怪
+  summary: 原本是倪家山寨少族长，死后被气道蛊仙复活成泥怪，有半仙战力，后实力衰退。
+  rank: 半仙（原）
+  first_appear_title: ''
+  details:
+    source:
+    - '''你叫什么名字？'' ''倪健！'''
+    - 倪健向方源望去，目光先是疑惑，旋即转为浓烈无比的仇恨之色。
+    - 这泥怪一眼看去，就知道非同寻常。它呈现模糊的人形，表面泥浆滚动，浮现出无数人脸。
+    appearance:
+    - 模糊人形，表面泥浆滚动，浮现无数人脸
+    ability:
+    - 半仙战力，几乎杀不死，恢复力极强
+    rank:
+    - 半仙（原）
+    background:
+    - 倪家山寨少族长，山寨被屠，被气道蛊仙复活。
+- name: 汤诵
+  aliases: []
+  summary: 七转蛊仙，东海超级势力汤家的成员。在东海追逃战中带头追杀方源，意图生擒活捉。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 最先反应过来的，是七转蛊仙汤诵。
+    - 汤诵暗中酝酿的仙道杀招，已可施展。他按捺住兴奋之意，加速上来，越过刘青玉，向方源逼近。
+- name: 刘青玉
+  aliases: []
+  summary: 七转散修蛊仙，擅长追踪，疑似暗中获得了真正的传承印记。曾身化青绿长虹追赶方源，后借机摆脱汤诵、周礼。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 七转蛊仙刘青玉则越过他，追向方源。
+    - 刘青玉则道：“我有手段，擅长追踪。不追到他，我绝不善罢甘休！”
+    - 刘青玉一声不吭，始终奋力直追。
+- name: 周礼
+  aliases: []
+  summary: 七转蛊仙，善于隐藏城府，表面懦弱。施展仙道杀招波涛虚影围困方源，被方源虚张声势所骗。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 七转蛊仙周礼急道：“我有一法，可携带二位一同飞行，速度颇佳。只是心神凝注，难以再分神，还望二位仙友出手牵制。”
+    - 周礼身边原本承载汤诵、刘青玉的波涛虚影，径直向前奔腾，朝着方源淹没过去。
+    - 周礼脸上忽青忽白，楞了一愣，忽然出手打了自己一个巴掌。
+- name: 紫薇仙子
+  aliases:
+  - 紫薇大人
+  - 紫薇魔仙
+  summary: 八转智道蛊仙，天庭成员，出身灵缘斋。在狐仙福地推算三个月，发现狐仙是逆组织成员。
+  rank: 八转
+  first_appear_title: ''
+  details:
+    source:
+    - 紫薇仙子缓缓睁开双眼。
+    - 她开口道：“煌儿起身，不必多礼。说起来，你母亲还和我有些血脉联系呢。”
+    - 紫薇仙子微微点头。
+    background:
+    - 天庭高层，负责推算与决策。
+    - 天庭核心成员，曾派出凤九歌突袭琅琊福地，并利用荡魂山对付幽魂魔尊。
+    - 天庭智道大能，曾参与南疆梦境战役，是此次入侵琅琊福地的领袖。
+    ability:
+    - 智道大能，擅长推算，掌握多种仙道杀招，能利用荡魂山对付幽魂魔尊。
+    - 拥有星宿棋盘（仙蛊屋）、紫檀神风、星虹、智道推算杀招，能破解阎罗战场。
+    - 统领全局，时刻关注各个方面
+    rank:
+    - 八转
+- name: 铁丝城主
+  aliases: []
+  summary: 黑毛大陆铁丝城城主，女毛民，好色，买下方正并夜夜临幸。后派方正参加炼蛊比试。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 铁丝城主面沉如水，心头沉重
+    - 铁丝城主虽然夜夜临幸方正，为她着迷，但她本质是却是个铁石心肠，权力欲望旺盛的毛民。
+    - 铁丝城主便临时撤换下那位毛民，将方正唤来，对他嘱咐一番。
+- name: 话锋城主
+  aliases: []
+  summary: 黑毛大陆话锋城城主，与铁丝城主竞争参加比武大会的名额。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 话锋城主笑了笑，指着身后站着的几位毛民蛊师道：“国主大人要召开比武大会，但每个地区只选送三人。我们这块地方，只有我们两座城池。”
+- name: 叶凡
+  aliases:
+  - 叶公子
+  summary: 南疆散修，有强运，曾为商家办事，后被白凝冰所困，被影无邪所救。
+  rank: 六转
+  first_appear_title: ''
+  details:
+    source:
+    - 叶凡紧紧咬牙，哪怕他身受重伤，站都站不稳，也要挡在商心慈的面前。
+    - 叶凡傲立，双臂怀抱在胸口，驻足在一块巨大的山石之上。
+    - 青年蛊师正是叶凡。
+    rank:
+    - 六转
+    - 凡人
+    background:
+    - 流浪散修，得到周青青授予的手段，代表商家打通日冠、静流两山。
+    - 气运浓厚
+    ability:
+    - 连运
+- name: 风禅子
+  aliases: []
+  summary: 风云府蛊仙，通过草头神与影无邪交易太古之光。
+  rank: 六转
+  first_appear_title: ''
+  details:
+    source:
+    - 这太古之光绝不是我家主人（风禅子）给你们的！
+    - 他（风禅子）不久前和浪子秋打赌输了，想要翻本。
+    - 风禅子是悲风老人的孙子
+    rank:
+    - 六转
+- name: 商青青
+  aliases:
+  - 商家仙子
+  summary: 商家先祖女仙，现身救商心慈并立她为族长。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 一个女仙显现出身形。
+    - 女仙欣赏地看着商心慈，温声宽慰道：“别怕，我是你商家先祖，商青青。”
+    - 商青青咬牙，看向铁面神：“还请铁面神大人主攻，我等二人辅助，将这头上古水怪拿下。”
+- name: 沙婆婆
+  aliases: []
+  summary: 天庭成员，炼道大宗师，八转修为，寿命将尽，因监天塔主牺牲而苏醒。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 这老婆婆佝偻后背，深深弯腰，头发枯黄，宛若稻草，满脸皱纹，老眼昏花。
+    - 如今有沙婆婆主持，就算是没有不败福地中的成功道痕，也能得到许多进展。
+    - 天庭蛊仙沙婆婆苏醒，一直在致力于炼制蛊虫，修复监天塔。
+- name: 毛十二
+  aliases: []
+  summary: 琅琊派毛民蛊仙，借出奴兽仙蛊给方源，要求方源指点其血脉后裔修行。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 毛十二死命调动手段，都无法再让这头板栗牦牛爬起来再战。
+    - 十二兄，你这仙道杀招还要多加练习才是。
+    - 毛十二虽然答应，但却没有接受方源的门派贡献。而是转而提了另外一个要求。
+    background:
+    - 曾与方源交好，但之后关系恶化。
+    - 为方源炼制我意蛊，想购买奴兽仙蛊。
+- name: 毛六
+  aliases: []
+  summary: 琅琊派内奸，魔尊幽魂分魂之一，与方源暗中交易，后主动与其他毛民蛊仙切磋以掩饰破绽。
+  rank: 七转（推测）
+  first_appear_title: ''
+  details:
+    source:
+    - 毛六乃是琅琊派内奸，魔尊幽魂分魂之一，本身就有深厚的战斗造诣。
+    - 毛六之后，又有其他毛民蛊仙来自己这里讨教切磋。
+    - 毛六乃是影宗安插在琅琊派的内奸，见缝插针，也要给方源找点麻烦。
+    background:
+    - 方源的炼蛊助手，经验丰富。
+    - 琅琊派毛民蛊仙之一。
+    ability:
+    - 能施展仙道杀招辅助天婆梭罗。
+    rank:
+    - 七转（推测）
+- name: 药橘
+  aliases: []
+  summary: 药家女蛊仙，圆圆的脸蛋，性格开朗。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 女蛊仙药橘抬眼望望，圆圆的脸蛋上浮出笑容：“今天真是好天气，让我的心情都不禁开心起来。”
+- name: 药紫涵
+  aliases: []
+  summary: 药家女蛊仙，擅长家传杀招紫璇眸，能洞察福地洞天。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 在她身旁，同样是药家的女蛊仙药紫涵，则感叹道...她的眼眸中，涌现出紫光，看着脚下空无一物的草原，却是津津有味。
+- name: 蒙疾
+  aliases: []
+  summary: 蒙家蛊仙，皮肤暗黄，性情勇悍。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 蒙疾皮肤暗黄，盯着药家两位女仙打量...
+- name: 蒙厮
+  aliases: []
+  summary: 蒙家蛊仙，皮肤焦黑，性格大大咧咧。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 另一边蒙厮抬眼看了看，大大咧咧地道：“没有什么大不了的。真要抢夺的时候，还得靠拳头说话。”
+- name: 宫迩
+  aliases: []
+  summary: 宫家七转蛊仙，一身金袍，企图领袖正道。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 宫迩站在仙蛊屋前，满以为会得到正道响应，结果好一会儿，都无人动身...
+- name: 青玄子
+  aliases: []
+  summary: 魔道蛊仙，六转修为，曾度过一次天劫。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 青玄子虽然只是六转修为，但已经度过一次天劫，竟然没有任何抵挡之力，就被廿二平之斩杀当场。
+- name: 廿二平之
+  aliases:
+  - 剑子
+  summary: 廿二家新一代剑子，六转修为，修剑道，继承了剑圣真传的一部分。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 廿二平之的剑光，继续一路向前飚射，气势惊天动地。
+    - 取你命者，廿二平之。
+    - 廿二平之乃是正道后起之秀，当代廿二一族的剑子，行动迅捷，剑光纵横间，如电似光。
+    background:
+    - 廿二一族的天才剑手，斩杀了七转魔道强者阴婆。
+- name: 廿二富
+  aliases:
+  - 吞财童子
+  summary: 廿二家七转宇道蛊仙，外形如胖男孩，性格贪财。
+  rank: 七转巅峰
+  first_appear_title: ''
+  details:
+    source:
+    - 廿二富远远眺望一眼，就收回了目光。然后他咻的一声，身影就消失在半空中...
+    - 廿二富儿童模样，七转巅峰战力
+    appearance:
+    - 儿童模样
+    ability:
+    - 宇道，擅长自保
+    rank:
+    - 七转巅峰
+- name: 刘转身
+  aliases: []
+  summary: 刘家蛊仙，在血战武斗中出面谈判。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 刘转身倏地出现在乔冬面前，浑身绽射白光...
+    - 从金晓大殿中，走出一位蛊仙。是刘家的蛊仙刘转身！
+    background:
+    - 用阴婆尸首换回刘灰尸首。
+- name: 尸毒老怪
+  aliases: []
+  summary: 魔道七转蛊仙，擅长用毒，曾加入僵盟又叛逃。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 尸毒老怪说着，身上恐怖至极的伤势，就升腾起一阵紫雾。
+- name: 何若
+  aliases:
+  - 孔雀飞仙
+  summary: 六转变化道蛊仙，可化身孔雀。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 何若化身荒兽孔雀，振奋双翼，努力和三只铁冠鹰周旋。
+- name: 努尔鼓
+  aliases: []
+  summary: 努尔家七转蛊仙，修音道，头小腹大，外观奇特。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 努尔鼓生得头小腹大，身材很不匀称，眼珠子外凸，四肢干瘦如柴，皮肤苍白，毫无血色可言。
+- name: 关丑
+  aliases: []
+  summary: 关家七转蛊仙，修变化道，猩红瞳眸，深蓝皮肤，紫发獠牙。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 关丑冷笑不已，毫无畏惧地和他对视。
+- name: 黑铁生
+  aliases: []
+  summary: 黑家七转蛊仙，身材雄阔，心存死志，战力惊人。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 黑铁生百战之人，趁此良机，立即调动手段。
+    - 黑铁生一死，众仙再无障碍，扑向黑家最后一道防线。
+- name: 黄地
+  aliases: []
+  summary: 七转魔道蛊仙，继承土道大能地老真传，能攻入福地。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 原来，此次北原争乱，引出一位七转魔道强者，名唤黄地。
+- name: 乔冬
+  aliases: []
+  summary: 乔家太上大长老，正道蛊仙，后投靠刘家。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 乔冬虽然能成仙，也是黑家扶持。黑家如今遭难，他也来攻打铁鹰福地。
+- name: 慕容青丝
+  aliases: []
+  summary: 慕容一族的蛊仙，与散修酝良相恋，因酝良被杀而仇视方源。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 慕容青丝降落下来，看着池塘中悬空生长的无根之木，双眼晶晶透亮。
+    - 慕容青丝心情正好...
+    - 慕容青丝大叫一声：'方源，我誓不饶你！'
+- name: 云公子酝良
+  aliases:
+  - 云公子
+  summary: 北原散修，人称云公子，与慕容青丝相爱，被天庭陷害杀害。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 云公子酝良行礼道，态度很是温和。
+    - 酝良诅咒道：'柳贯一，我与你无冤无仇...'
+    - 酝良的眼神渐渐涣散。
+- name: 黑凡
+  aliases:
+  - 黑凡老祖
+  summary: 八转宙道大能，北原黑家老祖，留下天晶鹰巢、上极天鹰蛋和血道真传。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 宙道八转蛊仙，曾将黑家带上鼎盛，晚年因孙女失踪设下复杂传承。
+    source:
+    - 黑凡乃是宙道大能，他留下的真传，怎么会是区区一座空荡荡的天晶鹰巢？
+    - 黑凡手段真是了得，居然抹除了这头上极天鹰的记忆，只保留前世的宇道道痕积累。
+    - 第二个从光阴长河虚影中走出来的北原蛊仙，一脸微笑。
+- name: 陈尺
+  aliases:
+  - 陈尺老仙
+  summary: 黑凡洞天中的罪仙首领，七转蛊仙，对方源表面恭敬。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 黑家罪民后代，在洞天中经营多年。
+    source:
+    - 罪仙陈尺，拜见本家上仙！
+    - 陈尺老仙道：“上仙乍临此地，当有不少疑惑在心。”
+    - 以陈尺老仙为主
+- name: 郑驮
+  aliases: []
+  summary: 黑凡洞天三仙之一，血道七转蛊仙，三仙首脑。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 主修血道，在洞天中堂而皇之存在，与其他蛊仙不合。
+    source:
+    - 郑驮飞在最前面，一看便知他为三仙首脑。
+    - 郑驮、冯军、周敏三人。
+    - 除去最强的七转血道蛊仙郑驮
+- name: 冯军
+  aliases: []
+  summary: 黑凡洞天三仙之一，运道六转蛊仙，有运道直觉，对方源怀有敌意。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 修行继仙山上的运道真传，首位继承者，道痕不亚于七转。
+    source:
+    - 冯军一脸灰黑之色：“根据继仙山上的石碑记载，钟声连响十下，说明本家有蛊仙获得了黑凡老祖真传的资格”
+    - 冯军面色阴沉，犹豫一番，终究还是道：“二弟，不是我说你…”
+    - 冯军已经打了退堂鼓
+- name: 周敏
+  aliases: []
+  summary: 黑凡洞天的六转蛊仙，擅长远目兵光杀招，性格冲动，最后被方源杀死。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 与郑驮、冯军结义，出谋划策。
+    source:
+    - 另一位蛊仙周敏，则是一位女性，容貌精致
+    - 周敏皱着细长的眉毛：“即便二哥看不起陈尺老仙…”
+    - 周敏连声吼叫
+- name: 陈乐
+  aliases: []
+  summary: 黑凡洞天的女蛊仙，被方源欺骗后杀害。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 陈乐再笨，此刻也明白了究竟是怎么回事
+    - 方源突施辣手，飞剑仙蛊！一道光轻易地洞穿陈乐的防护
+- name: 黄钟天灵
+  aliases: []
+  summary: 黑凡洞天的天灵，外形为一口黄钟，主持真传考验。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 黄钟天灵无动于衷
+    - 黄钟天灵静默了一会儿，这才晃荡一声
+- name: 蒋基
+  aliases: []
+  summary: 黑凡洞天的蛊仙散修，六转，与高米一同被冯军召唤。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 那两个蛊仙散修，平日里独居一处，一位叫做蒋基，一位名唤高米
+- name: 高米
+  aliases: []
+  summary: 黑凡洞天的蛊仙散修，六转，与蒋基一同被冯军召唤。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 一位叫做蒋基，一位名唤高米
+- name: 冰忍仙人
+  aliases: []
+  summary: 独创八转仙材的炼道大能，受黑凡邀请封印了年蛊和似水流年。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 由冰忍仙人独创。后者受到黑凡的邀请，才出手，为其封印了黑凡的两只仙蛊
+- name: 丹仙
+  aliases: []
+  summary: 与黑凡交换丰年杀招的蛊仙。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 这个仙道杀招不是他创作的，而是和一位叫做丹仙的人换来的
+- name: 冰卓
+  aliases: []
+  summary: 雪人蛊仙，双枪近战高手，曾与方源激战，后和解。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 冰卓热情地道。
+    - 那位手持双枪，擅长近战的雪人蛊仙
+- name: 石奴
+  aliases: []
+  summary: 石人族的土道蛊仙，对影无邪绝对忠诚，使用列土封疆杀招保护同伴撤离，后被方源击杀。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 七转蛊仙石奴出手
+    - 石奴面无表情
+    - 石奴对影无邪忠心耿耿，听闻这话，立即点头应是，没有丝毫的逆反和犹疑。
+    gender:
+    - 男（石人无明确性别）
+    cultivation_base:
+    - 七转蛊仙
+    affiliation:
+    - 影宗
+- name: 花蝶女仙
+  aliases:
+  - 花蝶仙子
+  - 花蝶女仙
+  summary: 东海女仙，与蜂将一同为庙明神收集年轮散，曾被葛温追杀得方源相救。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 花蝶女仙笑了一下
+    - 花蝶仙子你
+    - 花蝶女仙叹息道：'可惜了。那么多的年轮散，大部分都落入到葛温手中'
+- name: 庙明神
+  aliases:
+  - 庙明神大人
+  summary: 七转蛊仙，队伍领袖，负责带队进入乐土真传，谦让任务，推测乐土仙尊的公平布置。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 庙明神乃是东海的七转强者
+    - 庙明神恰恰是这种私人拍卖会的常客
+    - 我便是庙明神大人麾下的蜂将。
+- name: 雪儿
+  aliases:
+  - 雪民圣女
+  summary: 雪民一族第一美人，六转蛊仙，被派往与方源联姻，带来彩礼。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 雪儿便找到方源
+    - 雪人一族雪儿，参见方源大人。
+    - 雪儿紧挨着他，神情局促。
+    background:
+    - 与方源订婚，联姻纽带，但不受方源完全信任。
+- name: 不是仙
+  aliases: []
+  summary: 七转蛊仙，疯魔三怪之一，隐居疯魔窟数百年，掌握仙蛊‘不’，主张探索衍化蛊之谜。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 不是仙抚须不语，脸上微微而笑。
+    - 不是仙对方源道。
+    - 一位蛊仙，面容白皙，黑色胡须飘飘，宽松大袖，双目锐亮似星，风度不凡，他号称不是仙，专修律道。
+- name: 胖山
+  aliases: []
+  summary: 七转蛊仙，疯魔三怪之一，身形巨大（十数丈），掌握仙蛊在乎（奇蛊榜第四），擅长解除盟约。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 胖山睁开一丝眼缝，从沉睡中醒来。
+    - 胖山念头一动，从其仙窍中飞出了仙蛊在乎。
+    - 不是仙、胖山震惊地看到方源缓缓踱步。
+- name: 昊震
+  aliases: []
+  summary: 七转蛊仙，与仇老五共同掌握风雷吼杀招，参与黑凡洞天防守，后得楚度承诺分予洞天。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 昊震雄躯微颤，一脸激动。
+    - 昊震、仇老五并肩而立。
+- name: 仇老五
+  aliases: []
+  summary: 七转蛊仙，与昊震搭档，掌握风雷吼杀招，参与黑凡洞天防守。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 仇老五更是感动得双眼泛红。
+- name: 汪大仙
+  aliases: []
+  summary: 七转蛊仙，变化道，可化为落星犬，参与黑凡洞天防守，对方源有芥蒂。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 汪大仙则冷哼一声。
+    - 汪大仙已经变成了吞天犬，左冲右突，威势惊人。
+    background:
+    - 七转蛊仙，在血战武斗中被耶律群星击败。
+- name: 魏明
+  aliases: []
+  summary: 七转蛊仙，盲人，擅长替身杀招，光道流派，参与黑凡洞天防守。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 魏明冷喝一声，身形好似幻影。
+- name: 李四春
+  aliases: []
+  summary: 七转蛊仙，参与黑凡洞天防守，曾被派遣支援。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 这时，方源忽然接到楚度传来的消息，让他去支援李四春去。
+- name: 桑轻取
+  aliases: []
+  summary: 七转女蛊仙，修行偷道（盗天魔尊流派），参与黑凡洞天防守，后战死。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 这位女蛊仙桑轻取，正是其中一位。
+- name: 阴婆
+  aliases: []
+  summary: 老字辈魔道蛊仙，修行魂道，拥有仙蛊迷魂。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 北原有名的魔道强者，在血战武斗中被廿二平之斩杀。
+    source:
+    - 阴婆乃是老字辈的魔道蛊仙，修行魂道，拥有仙蛊迷魂，声名早已广传北原。
+- name: 耶律群星
+  aliases: []
+  summary: 耶律家七转蛊仙，星道强者，精通星辰碎片杀招。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 曾多次挑战东方长凡，屡败屡战，最终自创星辰碎片杀招。
+    source:
+    - 耶律群星身材又高又瘦，宛若一根竹竿。
+    - 那个斩杀了耶律群星，修行上古剑蛟变化的魔道蛊仙？
+- name: 雪无痕
+  aliases: []
+  summary: 北原新秀蛊仙，楚度一方，曾连胜三场。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 斩杀了六转蛊仙刘灰，获得仙窍。
+    source:
+    - 雪无痕虽然三战三胜，但是却只杀了六转蛊仙刘灰。
+- name: 刘灰
+  aliases: []
+  summary: 六转土道蛊仙，被雪无痕斩杀。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 刘家蛊仙，在血战武斗中战死。
+    source:
+    - 雪无痕虽然三战三胜，但是却只杀了六转蛊仙刘灰。
+- name: 刘勇
+  aliases: []
+  summary: 六转奴道蛊仙，黄金血脉刘家成员，擅长驾驭骨甲犬。
+  rank: 六转
+  first_appear_title: ''
+  details:
+    ability:
+    - 奴道，操控荒兽骨甲犬
+    rank:
+    - 六转
+    background:
+    - 刘家黄金血脉，负责骨葬场资源点，被方源斩杀。
+    source:
+    - 他是黄金血脉，刘家的一位六转奴道蛊仙。
+    - 刘勇的上半身直接飞了。
+- name: 刘萝
+  aliases: []
+  summary: 六转木道女仙，刘家蛊仙，刘长之妹，镇守璇光坑。
+  rank: 六转
+  first_appear_title: ''
+  details:
+    appearance:
+    - 年幼女孩儿模样，双眼溜圆灵动，身躯娇小
+    ability:
+    - 木道，拥有仙级战场杀招（古木森林）
+    rank:
+    - 六转
+    background:
+    - 刘家成员，得兄长刘长宠爱，拥有战场杀招护身。
+    source:
+    - 刘萝，虽然有近两百的年纪，但本身却是年幼女孩儿模样。
+    - 刘萝则隐没在森林中，已然消失不见。
+- name: 刘长
+  aliases: []
+  summary: 七转光道蛊仙，刘家强者，战力与耶律群星同级，刘萝之兄。
+  rank: 七转
+  first_appear_title: ''
+  details:
+    appearance:
+    - 鞋拔子脸，黄豆般的小眼睛
+    ability:
+    - 光道，挪移迅速，进退自如
+    rank:
+    - 七转
+    background:
+    - 刘家重要战力，奉命追杀柳贯一，但因保护妹妹延误时机。
+    source:
+    - 刘长乃是七转蛊仙，战力不弱于耶律群星。
+    - 他摸摸刘萝的脑袋，继续安慰道。
+- name: 田下心
+  aliases: []
+  summary: 北原第一智道蛊仙，擅长推算。
+  rank: 七转（推测）
+  first_appear_title: ''
+  details:
+    ability:
+    - 智道推算
+    rank:
+    - 七转（推测）
+    background:
+    - 受刘长委托推算柳贯一行踪，但失败。
+    source:
+    - 蛊仙田下心将一半的酬金退给了刘长。
+    - 连当今北原第一的智道蛊仙田下心，都无法算出那柳贯一的踪迹。
+- name: 武庸
+  aliases:
+  - 兄长
+  - 武家太上大长老
+  - 武家盟主
+  - 南联盟主
+  summary: 武家太上大长老，八转蛊仙，拥有玉清滴风小竹楼仙蛊屋。智谋深沉，恨方源入骨。
+  rank: 八转
+  first_appear_title: ''
+  details:
+    source:
+    - 武庸开口：“也好，就在母亲大人的葬礼上，为我弟认祖归宗。”
+    - 武庸重新落坐在主位上，目光深幽。
+    - 武庸坦言，此事需要时间，方源只好选择等待。
+    background:
+    - 武家实际领导者，面临各超级势力压迫，委派方源处理广寒峰和螺母山事务。
+    - 南疆正道超级势力武家领袖，智慧冷静，善于审时度势。
+    - 南疆联盟主
+    rank:
+    - 八转
+    ability:
+    - 无限风消耗万道痕，送友风，能遮掩杀招气息
+    - 风道八转蛊仙，拥有八面威风仙蛊（炼制中），擅长模拟智道。
+    appearance:
+    - 风度翩翩
+    cultivation:
+    - 八转
+- name: 武独秀
+  aliases: []
+  summary: 已故八转蛊仙，武家太上大长老，武庸和武遗海（名义上）的母亲，身化光萤而死。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 武独秀虽然死了，但是在她的葬礼上，却上演了一幕有趣的情景。
+    - 武独秀死时，身化光萤，无一丝遗骸留下。
+    - 种子早就在武独秀辞世之前，就已经埋下。武独秀临死之前，曾经留下遗言，要将身上的仙蛊交给武遗海。
+- name: 武樵
+  aliases: []
+  summary: 武家太上三长老，主持认祖归宗仪式，使用血脉仙蛊验证。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 武家的太上三长老武樵出声时，有数股目光都集中在他的脸上。
+    - 武樵站在方源的面前，手持着一只仙蛊。
+- name: 武安
+  aliases: []
+  summary: 六转蛊仙，武家驻守超级蛊阵成员，热衷仙缘生意，善于谄媚。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 武遗海大人，这边请。武安躬身弯腰，在前头领路。
+    - 武安很不安地踱步。
+    - 武家蛊仙武辽、武安，一齐向方源恭敬行礼。
+- name: 武辽
+  aliases: []
+  summary: 六转蛊仙，武家驻守超级蛊阵成员，性格古板认真，反对仙缘生意。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 武辽冷哼一声，神情不屑，很看不惯武安的献媚。
+    - 武辽并不理睬武安，他直接对着大殿的门深深一礼。
+    - 武家蛊仙武辽、武安，一齐向方源恭敬行礼。
+- name: 白兔姑娘
+  aliases:
+  - 黑莬
+  - 黑菟第二人格
+  summary: 南疆散修女仙，外貌可爱，双耳如兔，被武安利用色诱方源，后成为方源的侍妾（名义）。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 她身穿一身白色绒毛的兽衣，只围着胸脯和臀胯，露出大面积的雪白肌肤。
+    - 白兔姑娘脑海中，回忆起之前的那一幕。
+    - 白兔姑娘的双眼，猛地转变成全黑的色彩，阴冷的光芒在黑瞳中流转。
+- name: 乔家太上大长老
+  aliases: []
+  summary: 乔家高层蛊仙，与方源合作，支持武遗海回归武家。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 乔家太上大长老摊开双手：“这个着实太难了。”
+    - 乔家太上大长老也对武庸的反应，心中微微讶异了一下。
+- name: 巴圈风
+  aliases: []
+  summary: 巴家蛊仙，观察武遗海，有打压之意。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 巴圈风一边说着，一边小心翼翼地观察身旁蛊仙的神情。
+- name: 树翁巴德
+  aliases:
+  - 巴德
+  summary: 南疆蛊仙界公认的七转最强者，巴家驻守超级蛊阵的负责人，性格稳妥。
+  rank: 八转
+  first_appear_title: ''
+  details:
+    source:
+    - 巴德已经收回了目光，淡淡地道：“先看看吧。”
+    - 巴家早就对武家蠢蠢欲动，巴德觉得时机已到，向武家发难。
+    - 树翁巴德。
+    appearance:
+    - 身高九尺，相貌古朴，体格雄健，肩宽背阔，肌肤如树皮，蒙眼，墨绿胡须，翠绿长发。
+    ability:
+    - 木道八转，有压箱底杀招（未睁眼）。
+    rank:
+    - 八转
+    background:
+    - 巴家领袖，在火雷真传争夺中被武庸击败。
+- name: 徐浩
+  aliases: []
+  summary: 灵缘斋智道蛊仙，将赵怜云视为棋子对抗凤派。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 徐浩开口，他面无表情，但语气中却透露出一丝狂喜之意。
+    - 徐浩将赵怜云当做他手中的斗争武器。
+- name: 李君影
+  aliases: []
+  summary: 灵缘斋蛊仙，徐浩之妻，支持徐浩的政治行动。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 徐浩话音刚落，李君影就开口赞同。
+- name: 灵威仰
+  aliases: []
+  summary: 八转蛊仙，中洲阵营强者，驾驭角连营仙蛊屋。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 灵威仰沉声道：“看来接下来的旅途，我们都得用最坏的情形，去考虑问题了。”
+- name: 万海龙流
+  aliases: []
+  summary: 八转蛊仙，中洲阵营强者，擅长龙流遁杀招，曾陷入沉眠。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 万海龙流道：“盗天魔尊的防御杀招，和神不知齐名的——鬼不觉。”
+    - 三位八转蛊仙威灵仰、万海龙流、碧晨天，战死两位，失踪一位。
+- name: 不真子
+  aliases: []
+  summary: 灵缘斋太上长老，七转蛊仙，奉命守护赵怜云。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 不真子摇头：“多谢你的好意了，就算是站在附天菌上，我也不会摘取。”
+- name: 余艺冶子
+  aliases: []
+  summary: 炼道蛊仙，在大雪山福地第十雪峰苦战血道魔仙赵普。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 余艺冶子笑着解释道：“太古九天，各有奇特。”
+    - 一位漂亮的少年蛊仙，正在和一位大雪山的蛊仙进行苦战。正是炼道蛊仙余艺冶子！
+    - 余艺冶子双眼一亮，他猜到了真相。
+    gender:
+    - 男
+    cultivation_base:
+    - 蛊仙（具体未明）
+    affiliation:
+    - 大雪山福地
+- name: 施正义
+  aliases: []
+  summary: 大雪山福地的魔道蛊仙，使用正义之拳杀招，与赵怜云并肩作战。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 施正义大呼小叫，透过大殿的窗户，看到外界
+    - 施正义同样沐浴在光辉之中。
+    - 正——义——之——拳！
+    gender:
+    - 男
+    cultivation_base:
+    - 蛊仙（六转左右）
+    affiliation:
+    - 大雪山福地
+- name: 沐凌澜
+  aliases: []
+  summary: 灵蝶谷七转水道蛊仙，随赵怜云一同穿越到大雪山福地。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 施正义立即跑到此人身边，唤道：“沐凌澜前辈”
+- name: 发姬
+  aliases: []
+  summary: 大雪山福地第九峰主，一头青色长发如河流，躺卧云床。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 女仙躺卧在云床之上，面目普通，身着丝绸长裙，一头青色的长发
+- name: 南荒仙人
+  aliases: []
+  summary: 长生天蛊仙，深不可测，操纵镇运天宫。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 南荒仙人哈哈一笑：“这座镇运天宫，布置在这里，已经超出三十多万年。”
+- name: 静妙子
+  aliases: []
+  summary: 历史水道女仙，专修静水道，曾考验方源。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 女仙嗯了一声：“我乃静妙子，专修水道。”
+- name: 定海上人
+  aliases: []
+  summary: 历史水道大能，天庭蛊仙，曾制服太古荒兽水南无。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 历史上赫赫有名的水道大能定海上人！
+- name: 水尼
+  aliases: []
+  summary: 历史人物，静妙子的师父。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 女仙静妙子乃是水尼之徒。
+- name: 万寿仙子
+  aliases: []
+  summary: 北原炼道四能之一，与雪胡老祖合作。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 更何况还有一位当今北原炼道四能之一的万寿仙子。
+- name: 龙公
+  aliases:
+  - 天庭八转蛊仙
+  - 洪亭的师父
+  - 龙人之祖
+  - 龙公老祖
+  - 红莲魔尊的师父
+  summary: 天庭八转蛊仙，准仙尊战力，擅长变化道和气道，额头双角紫金闪闪，龙瞳冰冷，实力恐怖，为争夺龙宫而战。
+  rank: 八转（推测）
+  first_appear_title: ''
+  details:
+    source:
+    - 龙公也不了解尊者的秘辛
+    - 龙公此时，汲取了帝藏生的生命之后，早已经脱离了之前虚弱枯朽的状态。
+    - 龙公、紫薇仙子随后，一同进入监天塔的内部。
+    rank:
+    - 八转（推测）
+    - 八转巅峰
+    - 八转
+    background:
+    - 天庭高层，参与过光阴长河救凤九歌。
+    - 天庭重要成员，负责教导凤金煌，对宿命蛊抱有信念。
+    - 天庭元老，曾压制劫运坛和七极荒都，后受巨阳仙尊一击光柱影响受伤。
+    appearance:
+    - 龙角、龙鳞，双臂有力，胸骨折断。
+    - 龙角折断，龙瞳莹润，龙鳞上有伤痕，龙爪下有性命。
+    ability:
+    - 拥有杀招龙人寂灭，能杀死所有龙人；战力亚仙尊。
+    - 未知
+- name: 施阁
+  aliases: []
+  summary: 施正义之父，因黑灯瞎火全盲。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 见过他父亲施阁，因为黑灯瞎火而彻底全盲
+- name: 赵大牛
+  aliases: []
+  summary: 被施正义和赵怜云击败的敌人，死于正义之拳。
+  rank: ''
+  first_appear_title: ''
+  details:
+    gender:
+    - 男
+    cultivation_base:
+    - 蛊仙（具体未明）
+    affiliation:
+    - 未知
+    source:
+    - 赵大牛节节后退，满脸惊恐……
+    - 轰！宛若雷霆炸响，赵大牛的防御手段旋即崩溃……
+- name: 赵普
+  aliases: []
+  summary: 血道魔仙，镇守大雪山福地第十雪峰，使用血道仙级杀招。
+  rank: ''
+  first_appear_title: ''
+  details:
+    gender:
+    - 男
+    cultivation_base:
+    - 蛊仙
+    affiliation:
+    - 大雪山福地（作为镇守者）
+    source:
+    - 小心，这位是货真价实的血道魔仙！
+    - 赵普站在原地，一动不动，双臂环绕在胸，发出狞笑……
+- name: 威灵仰
+  aliases: []
+  summary: 中洲蛊仙，八转修为。与碧晨天共同领导中洲队伍。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 威灵仰咆哮一声，右手对准雪胡老祖轻轻一指，顿时一道光柱，恢弘至极，狠狠轰向雪胡老祖。
+    - 威灵仰作为本次行动的首领，面色凝重至极。
+    - 威灵仰叹息。
+- name: 玄极子
+  aliases:
+  - 孙名录
+  summary: 长生天蛊仙，七转，阵道，布置子母逆命祭炼大阵，导致大雪山福地崩溃。
+  rank: 八转？
+  first_appear_title: ''
+  details:
+    source:
+    - 玄极子摇头：“逆流河乃是天地秘境，非同凡响”
+    - 玄极子额头暴起青筋，极力操纵着子阵。
+    - 玄极子苦笑一声。
+    ability:
+    - 阵道造诣非凡
+    rank:
+    - 八转？
+    background:
+    - 长生天成员
+- name: 洪极子
+  aliases: []
+  summary: 长生天蛊仙，水道准大宗师，协助玄极子。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 洪极子恍然大悟：“原来此处，已经被你布置了蛊阵。”
+    - 洪极子不耐，好奇地问道。
+- name: 狗尾续命貂
+  aliases:
+  - 毛里球
+  - 毛爷
+  summary: 传奇太古荒兽，巨阳仙尊坐骑，战力勇猛，斩杀天庭两位八转蛊仙。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 狗尾续命貂大笑，笑声激荡风云，音浪滚滚。
+    - 吼！狗尾续命貂仰天咆哮，掀起无边音浪。
+    - 杀死八转蛊仙的，便是巨阳仙尊昔日的坐骑，传奇太古荒兽——狗尾续命貂。
+- name: 蜂将
+  aliases: []
+  summary: 庙明神麾下蛊仙，与花蝶女仙一同行动，被葛温追杀。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 我便是庙明神大人麾下的蜂将。
+    - 蜂将接着说。
+    - 最有价值的一个情报，来源于蜂将。
+- name: 葛温
+  aliases:
+  - 雷道仙僵葛温
+  summary: 七转雷道仙僵，魔道蛊仙，抢劫了年轮散。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 追杀者，只是一位七转仙僵。
+- name: 夏飞快
+  aliases: []
+  summary: 夏家七转光道蛊仙，性格急躁但战斗冷静，擅长光道杀招。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 南疆七转强者，曾与武雨伯齐名，拥有三十三天光、锯轮光等招牌杀招。
+    source:
+    - 夏飞快的话，也很有意思，他代表夏家，又把武遗海捧为武家荣耀，言语之间是说这场切磋，不仅是你我两人的交手，还是夏家和武家之间的对决。
+    - 夏飞快大吼：“那就再接我几招！！”
+    - 他战胜夏飞快，只是一场切磋。
+- name: 夏琢磨
+  aliases: []
+  summary: 夏家智道蛊仙，辅佐夏飞快，心思缜密。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 擅长智道，能识破武遗海刚背杀招本质为念头。
+    source:
+    - 夏琢磨却是有点幽怨地看向夏飞快，心道：“还不是大人你在见面的时候，送了好多茶去。”
+    - 夏琢磨皱着眉头，感觉有些不妥。
+- name: 驱山老怪
+  aliases:
+  - 秦静升
+  summary: 散修七转土道蛊仙，年岁两千余，实力强大。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 驱山老怪，名号带老，是散仙中著名高手，与树翁巴德、武雨伯同一层次。企图获取螺母山。
+    source:
+    - 驱山老怪见方源竟没有嫌弃，也不保持仙家风度，有样学样，不禁好感升起，道：“我倒是差点忘了，武遗海你出身散修...”
+    - 驱山老怪大笑：“我听说你虽然赶跑了夏家两位蛊仙，却还把广寒峰搜罗了一番。”
+    - 他平息了螺母山的纷争，但整个过程并未动武，而是最后和驱山老怪谈妥。
+- name: 武罚
+  aliases: []
+  summary: 武家赏罚长老，负责计算蛊仙功过。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 武庸心腹，管理家族功过赏罚。
+    source:
+    - 武罚长老便继续算了算，然后当堂交给方源一份清单。
+- name: 武碑
+  aliases: []
+  summary: 武家太上长老，阵道蛊仙，负责建造超级蛊阵，因地脉震动反噬昏迷。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 武碑长老居然会受此重伤。
+    - 武碑出马，却被巴德设计，不得不和巴德展开一场切磋较量。
+    - 武碑长老辛苦了。
+- name: 乔丝柳
+  aliases: []
+  summary: 南疆三大仙子之一，乔家蛊仙，七转修为，美貌与妙音仙子齐名。
+  rank: 七转
+  first_appear_title: ''
+  details:
+    source:
+    - 乔丝柳乃是南疆三大仙子之一，美貌惊人，勾人心魄。
+    - 乔丝柳的追求者众多，这池伤便是其中最主要的一位。
+    - 乔丝柳面沉如水，眉宇间笼罩一层急切的忧色。
+    appearance:
+    - 美貌容颜
+    ability:
+    - 七转，具体流派不明。
+    rank:
+    - 七转
+    background:
+    - 武家附庸乔家派遣追随武庸。
+- name: 池伤
+  aliases: []
+  summary: 池家蛊仙，阵道高手，追求乔丝柳，因武遗海与乔丝柳绯闻而来挑衅。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 池伤一身白袍，面庞英俊，目光深邃，鼻子鹰勾，让他带着一些阴鸠之气。
+    - 池伤追求乔丝柳，早已经是南疆人人皆知的事情。
+    - 池伤此行，代表的是池家。
+- name: 图事成
+  aliases: []
+  summary: 梦境中的中年蛊仙，阵道高手，教育方式严苛，以生死逼迫儿子修行阵道。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 一个缓缓的山丘上，一位中年蛊仙背对着方源：‘我儿，你知道我们图家寨，以什么称霸这片山脉的吗？’
+    - 图事成。
+- name: 左夜灰
+  aliases: []
+  summary: 太古荒兽，传奇级，八转巅峰气息，似人非人，浑身漆黑，有智慧，会说话，拥有仙道杀招夜灰。曾被困四元阵。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 这个巨人足有七八层楼的高度，浑身漆黑，一头乌黑浓密的怪发仿佛披风一样。
+    - 左夜灰大口吞食身边的蛊师尸骸。
+    - 它是人形太古荒兽，双足站立，有着两只庞大的怪爪，披头散发，浑身漆黑如墨。
+- name: 武艺髯
+  aliases: []
+  summary: 武家七转蛊仙，镇守血潮天坑，与姚耕切磋后双双被杀。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 武艺髯七转修为，战力出众，他奉命行事，本着速战速决的想法。
+    - 武艺髯和姚耕双双失踪，切磋结果不明。
+- name: 姚耕
+  aliases: []
+  summary: 姚家蛊仙，与武艺髯切磋后一同被杀，自创仙道杀招崩坏诀。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 姚家当然不会放手，派遣了重量级人物姚耕。
+    - 从现场的痕迹中，查探出仙道杀招崩坏诀的痕迹。
+- name: 武原句
+  aliases: []
+  summary: 武家六转蛊仙，与戎豪一同镇压血潮天坑，后被紫山真君控制。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 武家两位蛊仙武原句、戎豪，此时缓缓飞行在高空中。
+    - 武原句同样动弹不得，和他处境一样。
+- name: 戎豪
+  aliases: []
+  summary: 武家外姓蛊仙，六转，与武原句一同镇压血潮天坑，后被紫山真君控制。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 戎豪连忙配合。
+    - 他只有常人的手指头大小，背生双翼，宛若蝉翅，一头紫发颇为显眼。
+- name: 菇人蛊仙
+  aliases: []
+  summary: 守护瓜熟地洞的异人蛊仙，对紫山真君的要求感到无奈但答应。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 一位异人蛊仙，从薄雾中显露出身形来。
+    - 菇人蛊仙脸色越加愁苦，他沉默了一会儿，最后沉重地点头。
+- name: 帝藏生
+  aliases:
+  - 传奇太古荒兽
+  - 孽龙
+  summary: 强大的太古荒兽，天道所生，天生憎恨人族，实为龙人一族的神兽。曾受龙灵召唤，最终臣服于龙公。
+  rank: 太古传奇荒兽（八转巅峰）
+  first_appear_title: ''
+  details:
+    source:
+    - 龙公此时，汲取了帝藏生的生命之后，早已经脱离了之前虚弱枯朽的状态。
+    - 帝藏生乃是传奇太古荒兽中十分独特的一头。
+    - 帝藏生大吼连连，声浪滚滚，震撼整个地沟。
+    appearance:
+    - 龙形，存在于地沟深处
+    - 巨硕的龙头，庞大身躯。
+    ability:
+    - 不死之身，依靠地脉和消极情绪增长战力，有八转巅峰战力
+    - 强大战力，能横冲直撞，破坏防线。
+    rank:
+    - 太古传奇荒兽（八转巅峰）
+    - 八转以上（传奇太古荒兽）
+    background:
+    - 曾给天庭造成巨大麻烦，被龙公设计用龙宫收服
+    - 被天庭设计，最终被龙公炼化龙宫后，主动臣服于龙公。
+- name: 妙音仙子
+  aliases: []
+  summary: 南疆三大仙子之一，魔道蛊仙，参与影宗对超级蛊阵的袭击。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 妙音仙子虽然混迹魔道，但是实力和容貌均为上等
+    - 妙音仙子、白凝冰、黑楼兰，此时再度来到超级蛊阵面前。
+    - 妙音仙子
+- name: 池曲由
+  aliases:
+  - 池家太上大长老
+  - 池曲由大人
+  summary: 池家太上大长老，八转修为，阵道大宗师，性格悲愤郁闷，被方源算计，最终妥协与之交易。
+  rank: 八转
+  first_appear_title: ''
+  details:
+    source:
+    - 池家太上大长老池曲由长长的叹息一声。
+    - 这座由八转蛊仙池曲由亲自布置
+    - 池曲由这个老匹夫！
+    ability:
+    - 阵道造诣高
+    rank:
+    - 八转
+- name: 池规
+  aliases: []
+  summary: 池家蛊仙，超级蛊阵的之前操纵者，被巴圈风偷袭昏死。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 池规昏迷之前，早已经将整个蛊阵都借用给方源
+    - 池规沉声道
+    - 池规叹息一声
+- name: 夏家蛊仙两位
+  aliases: []
+  summary: 夏家两位蛊仙，被方源挪移出蛊阵，后被迫执行任务。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 夏家的两位蛊仙，就是方源杀鸡儆猴的倒霉鬼
+- name: 百八十奴
+  aliases: []
+  summary: 奴道杀招，由百八十奴开创，以下御上，方源用于奴役上极天鹰。
+  rank: 七转仙道杀招
+  first_appear_title: ''
+  details:
+    source:
+    - 百八十奴
+    - 他是奴道的一代鬼才
+    - 一束奇光，罩住上极天鹰
+    appearance:
+    - 一束奇光
+    - 无形冲击，影响目标意志。
+    ability:
+    - 奴役比自己强大的生物（以下御上）。
+    - 强行收服魂兽为奴，需要消耗大量魂兽基础，对太古魂兽有极限。
+    rank:
+    - 七转仙道杀招
+    - 七转（推测）
+    background:
+    - 百八十奴是东海奴道鬼才的毕生心血，后被影宗改良。
+    - 方源的奴道手段，源自影宗传承。
+- name: 柴破军
+  aliases: []
+  summary: 柴家七转炎道强者，独创废柴体防御杀招，皮肤微黑，双眼如狼似虎。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 柴家七转强者柴破军
+    - 柴破军的这招，独树一帜
+    - 我成名多年，早已经是名传南疆的七转炎道强者
+- name: 乔志材
+  aliases: []
+  summary: 乔家太上大长老，攀附武家，被武庸暗中怨恨。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 乔家太上大长老乔志材
+    - 乔志材的脸上，顿时浮现出感动和敬佩的神色
+- name: 商无界
+  aliases: []
+  summary: 商家太上大长老，八转蛊仙，秉持中立传统。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 商家的太上大长老商无界
+    - 商无界淡淡地评价了一句
+- name: 黄史上人
+  aliases:
+  - 黄史
+  summary: 天庭八转宙道蛊仙，擅长在光阴长河中战斗，奉紫薇仙子之命追击方源，最终被方源利用红莲真传击杀。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 不要挣扎啊，凤九歌，我乃天庭蛊仙，特来援助于你，你可以称呼我为——黄史上人！
+    - 黄史上人心中陡然一沉。
+    - 八转宙道，天庭蛊仙，黄史上人阵亡！
+- name: 千变老祖
+  aliases:
+  - 千变意志
+  - 夫君
+  - 老祖
+  summary: 西漠八转蛊仙，狂蛮真传继承人，拥有变异仙蛊，变化道造诣深厚，隐忍狠辣。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 千变老祖八转蛊仙各个老谋深算，即便是这里只有一股千变意志，也是功力不减。
+    - 千变老祖获得了狂蛮真传，这些年来，又经营有加。
+    - 千变老祖乃是八转蛊仙，自然不是寻常人物，敏锐地察觉到了不对劲的风气。
+- name: 红云舞娘
+  aliases: []
+  summary: 七转蛊仙，千变老祖的妻妾，被影无邪暗算困于梦境。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 红云舞娘自然不敢违逆千变意志。
+    - 红云舞娘、千变意志，尽皆困于这片梦境当中，不能自拔。
+- name: 夜煞女
+  aliases: []
+  summary: 千变老祖大房，曾伪装成千变老祖的掩护，后被卫风袭击时显露真身？实际是千变老祖伪装。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 在千变老祖所有的妻妾当中，地位最高的夜煞女，实力最强。
+    - 夜煞女、青岚仙妃两人围绕着梦境，不断地飞舞。
+    - 夜煞女全身散发着汹涌的八转气息，面貌徐徐变化，竟化为千变老祖。
+- name: 青岚仙妃
+  aliases:
+  - 青岚
+  summary: 千变老祖二房，七转蛊仙，镇守万里变通大阵，面对方源猛攻。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 青岚仙妃取出一只关键的仙蛊来。
+    - 青岚仙妃、夜煞女都松了一口气。
+    - 青岚仙妃拥有七转修为，乃是千变老祖的二房。
+- name: 幽魂意志
+  aliases: []
+  summary: 幽魂魔尊残留的意志，驻守石莲岛，掌握红莲真传，最终将幽魂真传传承给方源后消散。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 幽魂意志微笑道：'你现在是影宗之主……'
+    - 幽魂意志开始变得稀薄，'就让我消弭吧。'
+- name: 童画
+  aliases:
+  - 童画仙子
+  summary: 东海女仙，光道蛊仙，曾持有光照菌，后卖给方源。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 女仙童画一边疾飞，一边抬头望去。
+    - 童画感慨不已。
+    - 童画开口：‘那我选择第二个任务。’
+- name: 任修平
+  aliases:
+  - 任仙友
+  summary: 东海七转奴道蛊仙，借给童画仙元石，并兜售魁梧子真传。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 神秘蛊仙缓缓转身，正是东海七转，奴道蛊仙任修平。
+    - 庙明神一句话，顿时又让群仙的灼热目光都集中在了任修平的身上。
+    - 任修平心头一颤，承受着巨大压力，只得将自己所知的和盘托出。
+- name: 石宗
+  aliases:
+  - 石宗太上大长老
+  - 大族老
+  summary: 鲛人圣庭高层，以公正、律己、宽容著称，在背后支持谢晗沫。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 石宗的声音很大，声音在房间中回响。
+    - 大族老以公正、律己、宽容著称
+    - 大族老也早已明白
+    cultivation:
+    - 八转（刚晋升）
+    background:
+    - 原北原石人部族，被方源夹裹加入，后忠诚追随。
+- name: 冰媛
+  aliases:
+  - 雪民太上
+  summary: 雪民蛊仙，八转，雪儿的祖奶奶，方源麾下三大使节之一。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 冰媛笑道：冰卓你前些时候正在闭关...
+    - 冰媛等人倒吸一口冷气
+    - 冰媛乃是三者之中，最后晋升成为八转蛊仙的。
+    cultivation:
+    - 八转
+    background:
+    - 因雪儿是方源未婚妻而有特殊地位。
+- name: 华安
+  aliases:
+  - 东海智道三能之一
+  summary: 智道蛊仙，原为华家成员，后叛逃投靠南宫家。
+  rank: 七转
+  first_appear_title: ''
+  details:
+    ability:
+    - 智道推算
+    rank:
+    - 七转
+    background:
+    - 叛出华家，被南宫家接纳，为尤婵推算方源身份但失败。
+    source:
+    - 华安乃是你当今东海，智道三能之一。
+    - 那位智道蛊仙不是旁人，正是当今智道三杰之一，藏身在南宫家的智道蛊仙华安。
+- name: 石忠
+  aliases: []
+  summary: 石家蛊仙，遭受排挤的边缘人物，暗中尝试炼制财富仙蛊失败，迫不得已贩卖财富凡蛊。
+  rank: 七转
+  first_appear_title: ''
+  details:
+    appearance:
+    - 中年模样，容貌普通，给人老实巴交的印象。
+    rank:
+    - 七转
+    background:
+    - 因父亲叛变家族而受排挤，镇守万矿戈壁，用活人炼蛊。
+    source:
+    - 石忠在石家里的地位十分尴尬。
+    - 石忠乃是遭受石家排挤的边缘人物，而石抗却是石家刻意栽培的明日之星。
+- name: 秦百合
+  aliases:
+  - 百合
+  summary: 东海六大仙子之一，木道七转蛊仙，白鹤海域之主，百合宫主人，爱好女仙，被方源杀死。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 秦百合正是白鹤海域之主。
+    - 秦百合兴高采烈，一边大笑，一边望着眼前的尤婵仙子。
+    - 为那秦百合出头了。
+- name: 青岳至诚
+  aliases: []
+  summary: 青岳家族七转蛊仙，秦百合的仰慕者，发现白鹤海域被洗劫。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 青岳至诚面色一沉。
+    - 他对秦百合早有倾慕之心。
+    - 青岳至诚已经找到青岳家的太上大长老，寻求帮助。
+- name: 唐方明
+  aliases: []
+  summary: 唐家探索先锋，与方源等人合作掌控仙阵。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 黑楼兰等人连同唐方明，掌控着这座仙阵。
+- name: 少年盗天
+  aliases:
+  - 杰孙
+  summary: 盗天魔尊年轻时的化身，穿越者，在梦境中经历磨难，受沙枭胁迫。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 少年盗天在人流中行走。
+    - 少年盗天心中又狠狠一沉
+    - 少年盗天再次返老还童！
+    background:
+    - 被沙枭控制，在部族绿洲中生活，后因梦境方源附身而经历变故。
+- name: 沙枭
+  aliases: []
+  summary: 神秘魔头，修为至少四转，控制少年盗天，赠送偷生仙蛊，图谋羊皮地图。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 沙枭阴测测的声音传来。
+    - 沙枭阴笑了两声
+    - 沙枭的狂笑声在方源的耳畔回荡。
+    background:
+    - 暗中策划多年，欲借少年盗天之手达成目的。
+- name: 青岳家太上大长老
+  aliases: []
+  summary: 青岳家的八转蛊仙，为青岳至诚指点方向。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 青岳家的太上大长老看到眼前这位，自己颇为喜爱的血脉后辈。
+- name: 尤婵仙子
+  aliases:
+  - 尤婵
+  - 东海六大仙子之一
+  - 蝉儿
+  summary: 东海六大仙子之一，水道七转蛊仙，龙鱼生意巨头，被方源杀死。
+  rank: ''
+  first_appear_title: ''
+  details:
+    appearance:
+    - 娇丽面容
+    rank:
+    - 七转
+    background:
+    - 散修，控制龙鱼海域，察觉方源的威胁，寻求智道华安帮助。
+    source:
+    - 尤婵乃是宝黄天中当之无愧的第一。
+    - 尤婵居然也贩卖出铜龙鱼。
+    - 尤婵被上古剑蛟一口咬中...香消玉殒。
+- name: 败军老鬼
+  aliases: []
+  summary: 魂修蛊仙，败于方源，断肢恢复，拥有八转仙蛊魂兽令，是龟壳魂兽的奴仆。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 被方源击败后逃窜，因办事不利被主人派鹰姬捉拿。
+    source:
+    - 败军老鬼面色扭曲，一想到方源，眼中就要喷火。
+    - 败军老鬼的疗伤手段十分不俗。
+    - 败军（鹰姬）拜见主人。
+- name: 鹰姬
+  aliases: []
+  summary: 女子，紧身夜行衣，面庞苍白，阴森，是龟壳魂兽的手下。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 奉主人之命捉拿败军老鬼。
+    source:
+    - 鹰姬一身紧身的夜行衣，完美地展现出凹凸有致的身材。
+    - 鹰姬冷笑：“你以为主人就交付你一只八转仙蛊魂兽令，而没有其他的监督手段吗？”
+    - 败军老鬼、鹰姬无奈上前抵挡
+- name: 房安蕾
+  aliases: []
+  summary: 房家女蛊仙，曾在与豆神宫交手中受伤，昏迷后被送回大本营。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 房家培养的外交使者，擅长斡旋。
+    source:
+    - 房安蕾微笑道
+    - 房安蕾眼中神光顿时激闪！
+    - 房安蕾则稳定了伤势，一直处于昏迷状态，被房沉带回房家大本营修养。
+- name: 龟壳魂兽
+  aliases:
+  - 主人
+  summary: 拥有龟壳、虎爪、龙尾、蛇颈、人头的强大魂兽，是败军老鬼和鹰姬的主人，与幽魂魔尊有血海深仇。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 被幽魂魔尊灭族，幸存后隐藏于豆神宫中，伺机复仇。
+    source:
+    - 一位身躯巨大的魂兽，匍匐在殿中，他有龟一样的壳，四只虎爪，龙尾，蛇颈，人头。
+    - 魂兽披头散发，满脸狰狞之色
+    - 幽魂魔尊……屠灭我族的仇人
+- name: 陈衣
+  aliases:
+  - 天莲派太上大长老
+  - 元莲派太上大长老
+  summary: 元莲派太上大长老，八转蛊仙，外表青年但实际有数千年寿命，奉命收服豆神宫。
+  rank: 八转
+  first_appear_title: ''
+  details:
+    background:
+    - 元莲派高层，被紫薇仙子许以进天庭的条件。
+    - 元莲派太上大长老，此前在青鬼沙漠与方源交手，曾与房家太上大长老战斗。
+    - 对权势迷恋，但有人族大义
+    source:
+    - 陈衣，你是元莲派的太上大长老
+    - 陈衣这才微微动容
+    - 陈衣，中洲十大古派中的太上大长老！
+    appearance:
+    - 身躯单薄渺小
+    - 只剩下躯干和脑袋
+    ability:
+    - 拥有捆仙藤、古木囚笼、巨木神像、因果神树等杀招，不惧仙道杀招攻击。
+    rank:
+    - 八转
+- name: 房睇长
+  aliases:
+  - 房家太上二长老
+  summary: 房家智道大宗师，智道修为深厚，负责统领对豆神宫的攻略，善于计算和布局。
+  rank: 蛊仙
+  first_appear_title: ''
+  details:
+    source:
+    - 房睇长思绪清晰至极，记忆清晰，条理分明，绝没有被方源话语绕晕的可能。
+    - 因为房睇长是智道大宗师。
+    - 房睇长，你区区七转也敢……
+    ability:
+    - 智道蛊仙。
+    - 人道修行者，掌控丐帮
+    rank:
+    - 蛊仙
+    - 八转（推测）
+    background:
+    - 被方源分离肉身和魂魄，魂魄在方源手中。
+    - 房睇长正带领人道十子探索神帝城壁画世界。
+- name: 房化生
+  aliases:
+  - 房家太上三长老
+  summary: 房家七转蛊仙强者，参与豆神宫攻略，担任先锋统领。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 以房化生为首，数位房家蛊仙轰出毕生最强招数。
+- name: 房功
+  aliases:
+  - 房家太上大长老
+  - 太上大长老
+  summary: 八转蛊仙，主修力道，伪装成七转蛊仙偷袭陈衣，是房家的隐藏底牌。
+  rank: 八转
+  first_appear_title: ''
+  details:
+    source:
+    - 房功，你身为房家太上大长老，八转修为，居然伪装偷袭！
+    - 房功猛地暴射而出，气势骇人，直接杀入宝月绿洲中去。
+    - 房家太上大长老房功
+    appearance:
+    - 白须张扬，宛若狮鬃，身材雄伟魁梧，肌肉贲发。
+    ability:
+    - 八转，具体流派不明。
+    rank:
+    - 八转
+    background:
+    - 房家领袖，在方源威逼下同意交易。
+- name: 房棱
+  aliases: []
+  summary: 房家六转蛊仙精英，参与豆神宫攻略，是房家后辈。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 听得房棱、房云等人，都是目瞪口呆
+- name: 房云
+  aliases: []
+  summary: 房家六转蛊仙精英，参与豆神宫攻略。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 听得房棱、房云等人，都是目瞪口呆
+- name: 房沉
+  aliases: []
+  summary: 房家蛊仙，负责带房安蕾回大本营修养，也参与对魂兽的防御。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 房安蕾则稳定了伤势，一直处于昏迷状态，被房沉带回房家大本营修养。
+- name: 房芝
+  aliases: []
+  summary: 房家女仙，施展毒道杀招毒云箭雀攻击魂兽。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 就连房芝的毒云箭雀都是无用，毒道也没有效果
+- name: 双翅黑蟒
+  aliases: []
+  summary: 太古魂兽，曾被方源用百八十奴收服，后被杀取魂核。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 牛身豹尾的太古魂兽夺到手中来。
+- name: 牛身豹尾
+  aliases: []
+  summary: 太古魂兽，曾被方源收服后杀死。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 牛身豹尾的太古魂兽夺到手中来。
+- name: 独眼双手巨人
+  aliases: []
+  summary: 太古魂兽，曾被方源收服后杀死。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 独眼双手的巨人
+- name: 铁面神
+  aliases:
+  - 铁家蛊仙
+  summary: 七转蛊仙，铁家强者，铁面真传继承者，拥有正义之心。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 铁面神叹息一声，道：“方源啊，你纵横五域，名冠天下，一时无两，我不是你的对手。”
+    - 铁面神大喝一声，一身的蛊虫气息爆发出来，又是黑气滚滚。这是仙道杀招沙铁沉浮，攻防一体。
+- name: 侯耀
+  aliases: []
+  summary: 六转蛊仙，侯家成员。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 侯耀、商青青脑海中思绪点上，也同时出手。
+    - 侯耀面色凝重。
+- name: 陆畏因
+  aliases:
+  - 神秘蛊仙
+  - 乐土传人
+  - 陆道友
+  summary: 乐土传人，防御极强，没有攻伐杀招，但综合实力在厉煌、陈衣之上。曾叛变南疆阵营加入天庭。
+  rank: 八转
+  first_appear_title: ''
+  details:
+    source:
+    - 神秘蛊仙浑身上下一片七彩霞光，遮掩了相貌。
+    - 神秘蛊仙冷哼一声，身形猛地消散在原地。
+    - “我姓陆，名畏因。方源啊，万物生命都生存不易，何必自相残杀呢？不妨暂且罢手吧。”
+    ability:
+    - 土道，擅长仙道战场杀招，配合三生三世感化敌人。
+    - 拥有八方净土等防御杀招，能轻松挡下南北诸仙的攻势。
+    rank:
+    - 八转
+    background:
+    - 乐土仙尊的传人，留在南疆对抗方源。
+    - 原为南疆乐土传人，后因宿命蛊的影响投靠天庭，成为天庭的楷模。
+- name: 翼渔
+  aliases: []
+  summary: 六转蛊仙，翼家成员，文弱少年模样。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 翼渔大喜。
+    - 这位文弱少年模样的六转蛊仙，显然被吓得不轻，脸色苍白，魂兽颤抖。
+- name: 翼南门
+  aliases: []
+  summary: 七转蛊仙，翼家成员。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 翼南门目光阴沉：“这事情不是那么简单的，你没看清楚吗？”
+    - 翼家两位蛊仙极速商量了一下，也纷纷在心中燃起对方源的战意。
+- name: 雷鬼真君
+  aliases:
+  - 井斓
+  summary: 天庭八转蛊仙，擅长雷道和魂甲，性情勇悍，曾为难幽魂魔尊。
+  rank: 八转
+  first_appear_title: ''
+  details:
+    source:
+    - 但对手是历史上有名的八转强者雷鬼真君，那就不是一种概念了。
+    - 雷鬼真君直接向方源扑杀过来。她是恨极了方源。
+    - “让我来罢。”雷鬼真君舔舔嘴唇，斗志昂扬起来。
+    appearance:
+    - 一身铠甲
+    ability:
+    - 拥有三叉电解等雷道杀招，速度快如瞬移。
+    rank:
+    - 八转
+    background:
+    - 曾被方源陷害，肋骨被挂在宝黄天贩卖，受此奇耻大辱。
+- name: 蒙屠
+  aliases: []
+  summary: 七转巅峰刀道蛊仙，刀道准大宗师，镇守秋刀原数年后被方源逼得自爆身亡。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 蒙屠修行刀道，修为七转，战力巅峰。
+    - 蒙屠不闪不避，哈哈大笑：你真以为我蒙屠，是轻易求饶的人吗！
+- name: 蒙自在
+  aliases: []
+  summary: 七转蒙家蛊仙，蒙屠族弟，得知蒙屠死讯后悲痛。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 蒙自在板着脸，不过这时他的常态。
+    - 蒙自在不知不觉间，将自身的速度降低下来，最后整个人就这样悬停在高空中。
+- name: 蒙召
+  aliases: []
+  summary: 六转青年蛊仙，随蒙自在前往秋刀原策应蒙屠。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 一位六转青年蛊仙蒙召。
+    - 蒙召自己也知道，此行的重要意义。
+- name: 羊三目
+  aliases: []
+  summary: 南疆正道蛊仙，擅长侦查手段，实力普通，在掠影地沟被方源斩杀。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 羊三目运气真是不太好。居然连续两次，让我偷盗了杀招中的核心仙蛊。
+    - 羊三目恐怕已经凶多吉少。
+- name: 夏繁
+  aliases: []
+  summary: 南疆正道七转智道蛊仙，善于心计，被迫推算阎罗战场。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 夏繁闭目思索，似乎没有听见。
+    - 夏繁越发感到心烦意乱。
+- name: 夏槎
+  aliases:
+  - 夏槎大人
+  - 夏家太上大长老
+  summary: 南疆八转蛊仙，擅长宙道，开发了春种、夏耘、秋收、冬藏等杀招（提及）。
+  rank: 八转
+  first_appear_title: ''
+  details:
+    source:
+    - 夏槎目光越加阴冷，死死盯着方源。
+    - 夏槎乃是宙道大宗师
+    - 夏槎的魂魄上骤然亮起一道道的宙道道痕，将方源的搜魂杀招尽数遮挡。
+    background:
+    - 南疆夏家的领袖，拥有春、夏、秋、冬四大仙蛊，宙道强者。
+    - 南疆正道首脑，被方源俘虏，年华池被夺。
+    ability:
+    - 宙道
+    rank:
+    - 八转
+- name: 铁区中
+  aliases:
+  - 铁大先生
+  summary: 铁家七转蛊仙，擅长金光手段，被大盗鬼手盗走七转刃蛊而重伤。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 铁区中面色一变
+    - 铁区中沉默不语，手掌翻飞如蝶
+    - 铁区中舌绽春雷，杀气腾腾。
+- name: 商虎杖
+  aliases: []
+  summary: 商家七转蛊仙，变化道、木道双修，在年流伏诛阵中失去仙蛊。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 商虎杖大笑，木道杀招催发出来
+    - 商虎杖等人见铁区中遇袭，连忙拼命杀出一条血路
+    - 商虎杖大笑，木道杀招催发出来，陆续将周围的年兽捆绑束缚，拖进自家仙窍当中。
+- name: 刘浩
+  aliases:
+  - 天庭内间
+  summary: 天庭安插在南疆队伍中的内奸，持有定空仙蛊，被方源俘虏。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 刘浩阴测测地道
+    - 刘浩兴奋怒吼，图穷匕见，使出定空仙蛊
+    - 方源因此得知刘浩的真实身份，竟然是天庭的内间。
+    background:
+    - 被方源俘虏，搜魂后发现其真实身份。
+- name: 君神光
+  aliases: []
+  summary: 天庭八转光道蛊仙，擅长杀招日照阳神，在五界山脉被方源俘虏。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 此人名为君神光，修为高达八转，专修光道
+    - 君神光爆发了底牌杀招，全身气息衰落到了极点。
+    - 君神光根本来不及反应，一下子就沉入梦境之中。
+- name: 土基
+  aliases:
+  - 石人蛊仙
+  - 石人土基
+  summary: 梦境中的石人蛊仙，八转，专修律道，深爱若离仙子。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 为改变若离死于狂蛮之手的宿命，屡次尝试失败，最终为保护若离而牺牲。
+    source:
+    - 石人蛊仙瓮声瓮气地道：‘我土基修行律道，自然是信命的。’
+- name: 若离仙子
+  aliases:
+  - 智道女仙
+  summary: 梦境中的智道女仙，算出自己将死于狂蛮之手，利用土基改变宿命。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 智道蛊仙，为对抗宿命而找到土基，最终为其牺牲。
+    source:
+    - 若离仙子微微一笑：‘的确是这样，我们在命中注定就是一对仙侣。’
+- name: 羊枯
+  aliases:
+  - 七转魂道强者
+  summary: 南疆魂道巅峰蛊仙，被方源俘虏并搜刮仙蛊。
+  rank: 七转
+  first_appear_title: ''
+  details:
+    background:
+    - 魂魄上有魂道防御手段，但最终被方源搜魂。
+    - 南疆羊家蛊仙，魂道代表，曾独自对抗上古荒兽。
+    source:
+    - 方源从羊枯手中，获得七转搜魂仙蛊。
+    - 这是羊家的蛊仙羊枯啊。
+    ability:
+    - 魂道
+    rank:
+    - 七转
+- name: 清夜
+  aliases: []
+  summary: 八转暗道蛊仙，天庭成员，驾驭恒舟，被方源击杀。
+  rank: 八转
+  first_appear_title: ''
+  details:
+    source:
+    - 八转蛊仙清夜走了过来，面色平静地看向上旬子。
+    - 清夜附和
+    - 清夜一身白袍，不断冷笑
+    appearance:
+    - 一身白袍
+    ability:
+    - 受人中豪杰增幅
+    rank:
+    - 八转
+- name: 威猛老者
+  aliases:
+  - 阳莽背火衣
+  summary: 威猛老者的八转炎道防御杀招，灵感来源于太日阳莽的火焰长发，化为火焰披风防御。
+  rank: 八转
+  first_appear_title: ''
+  details:
+    source:
+    - 一位八转蛊仙，身躯威武雄壮，陡然出现在石莲岛上。
+    - 老夫此招名为阳莽背火衣。
+    - 老夫此招名为阳莽背火衣，乃是从人祖传中太日阳莽的火焰长发中获得灵感。
+    appearance:
+    - 头发燃烧化为巨大的火焰披风，熊熊燃烧护卫周身。
+    - 熊熊燃烧
+    ability:
+    - 强大的防御能力，可抵挡春剪、夏扇等攻击。
+    - 防御
+    rank:
+    - 八转
+    background:
+    - 威猛老者最得意的创作，自称攻势不如守势。
+- name: 陶铸
+  aliases:
+  - 陶铸老头
+  summary: 已故八转蛊仙，建造了五界山脉，留下有关五域界壁的传承。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 没错，这就是陶铸老头生前的相貌。
+    - 小辈既继承老夫传承，怎如此不懂礼貌？
+    - 五禁玄光气杀招源自陶铸
+- name: 谢晗沫
+  aliases: []
+  summary: 鲛人一族的圣女，白鳞鲛人，心地善良，曾在方源前世濒死时救了他。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 她姓谢，名晗沫，是方源一生至爱。
+    - 圣女大人您何必出手，救下这么一个凡人蛊师呢？
+    - 谢晗沫尽管准备了三首，被冬蕾截胡了第一首后
+- name: 夏琳
+  aliases: []
+  summary: 鲛人少女，蓝色鱼鳞，深入人族海域采集黑油时被黑油腐蚀，被方源所救。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 被意外救下来的鲛人小姑娘，昏迷中被方源救治。
+    - 夏琳顿时心中透亮无比
+    - 夏琳抿紧双唇
+- name: 中年蛊师
+  aliases: []
+  summary: 小渔村的二转蛊师，与方源切磋败北，后负责照顾夏琳。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 中年二转蛊师艰难站起来，拱手行礼。
+    - 中年蛊师笑着道，‘不是我，是楚大师。’
+- name: 曾落子
+  aliases: []
+  summary: 七转蛊仙，擅长信道手段，在任务选择中优先选了剿除水怪。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 曾落子叹息一声：‘我的信道手段对于这座八转仙蛊屋根本无用。’
+    - 庙明神再道：“我与土头驮、曾落子有旧”
+- name: 土头驮
+  aliases: []
+  summary: 土道蛊仙，受邀加入悔哭海任务，对仙蛊觊觎。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 土头驮大笑起来。
+    - 土头驮随即也做出了选择。
+    - 土头驮双眼充斥血丝，简直是要喷火！
+- name: 鬼七爷
+  aliases: []
+  summary: 七转蛊仙，追随庙明神，强要最后一个困难任务，被认为看轻楚瀛。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 鬼七爷这时却道：‘我第一眼时就看上这个任务了。’
+    - 鬼七爷拜道：‘还请大人恕罪。’
+    - 方源、庙明神、鬼七爷便又回到了接引岛。
+- name: 秋霜
+  aliases: []
+  summary: 寒潮族长支持的圣女候选人，因不是处子之身被处死。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 秋霜乃是寒潮族长在背后支持的圣女候选人
+    - 秋霜人头落地，身死道消
+- name: 寒潮族长
+  aliases: []
+  summary: 寒潮部族族长，谢晗沫的敌对势力，设计打压谢晗沫。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 寒潮族长阴笑一声
+    - 寒潮族长狞笑道
+- name: 赤鳞侍卫
+  aliases: []
+  summary: 谢晗沫的侍卫之一，性格冲动。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 赤鳞侍卫极为高兴
+    - 赤鳞大吼
+- name: 蓝鳞侍卫
+  aliases: []
+  summary: 谢晗沫的侍卫之一，性格沉静。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 蓝鳞侍卫则很沉静
+    - 蓝鳞、赤鳞两位侍卫对视一眼
+- name: 步素莲
+  aliases: []
+  summary: 前任族老的遗孀，与寒潮族长合作，观察海神祭。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 步素莲淡淡点头
+    - 步素莲眯起双眼
+- name: 冬蕾
+  aliases: []
+  summary: 秋霜的跟随者，顶替秋霜参加海神祭。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 冬蕾首先登上了贝壳
+    - 冬蕾施施然走下台
+- name: 苏怡
+  aliases:
+  - 苏怡姐姐
+  summary: 白鳞鲛人，竞争圣女的候选人之一，设计诬陷夏琳。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 苏怡端坐在主位上
+    - 苏怡的目光一直盯着杯中的茶水
+- name: 容嬷嬷
+  aliases: []
+  summary: 苏怡的嬷嬷，参与设计诬陷夏琳。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 容嬷嬷一脸冷漠拦住了夏琳
+    - 容嬷嬷抬起手掌
+- name: 监察使
+  aliases: []
+  summary: 圣城监察使，负责调查夏琳，实际与苏怡合作。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 监察使阴笑着
+    - 监察使抬手
+- name: 阿青
+  aliases: []
+  summary: 神话中的鲛女，向海神祈祷，连续唱歌两天两夜后劳累去世。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 鲛女阿青跪在悬崖边上，向海神祈祷
+- name: 阿雅
+  aliases: []
+  summary: 阿青的妹妹，继承姐姐遗志完成第三首歌。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 阿雅非常难怪，但愿意继承姐姐阿青的遗志
+- name: 海神
+  aliases: []
+  summary: 神话中的神，回应阿青的祈祷，考验歌声。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 海神听到了她的祈祷
+- name: 柳淑仙
+  aliases: []
+  summary: 洪亭的妻子，拥有十绝体，为助洪亭渡劫而牺牲。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 我此生最大的意义就是保护你，替你阻挡灾劫，助你登临仙尊之位！
+- name: 牛头蛮魔
+  aliases: []
+  summary: 蛊仙，劫持洪亭父母以威胁洪亭交还寿蛊。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 牛头蛮魔一手一个，抓住洪亭双亲，哈哈大笑。
+- name: 老城主
+  aliases: []
+  summary: 枫叶城附近城池的城主，请求洪亭除魔。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 老城主找上门来，跪在地上，请求洪亭出手。
+- name: 洪铸
+  aliases: []
+  summary: 洪亭之父，与夫人一同被牛头蛮魔劫持，伤重而亡。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 我儿，生死有命富贵在天。
+- name: 洪夫人
+  aliases: []
+  summary: 洪亭之母，与丈夫一同被牛头蛮魔劫持，伤重而亡。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 我的儿，好好听你师父的话，做一个好人。
+- name: 弓无花
+  aliases: []
+  summary: 西漠弓家二小姐，女仙，实力强大。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 弓家二小姐弓无花！
+- name: 薛屠刀
+  aliases: []
+  summary: 洪亭早期想除掉的恶人，龙公认为其存在有宿命意义（提及）。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 你急着铲除薛屠刀，是没有看清楚他身上的价值。
+- name: 冰塞川
+  aliases:
+  - 西荒仙人
+  summary: 长生天西荒仙人，八转宙道传奇，巨阳仙尊时代的人物，擅长静止时间的宙道杀招，战力与厉煌相若。
+  rank: 八转
+  first_appear_title: ''
+  details:
+    source:
+    - 冰塞川大笑，全身寒气四溢，双掌狠狠一拍，将整个恒舟都拍到河底离去。
+    - 冰塞川轻啸一声，双掌猛地一推，瞬时寒风呼啸，冻气汹涌，将今古亭团团罩住。
+    - 冰塞川专修宙道，最擅长静止时间，宙道杀招多能模拟出冰道的威能效果来。
+    rank:
+    - 八转
+    background:
+    - 长生天领袖
+    - 北原蛊仙，受巨阳仙尊力量增幅，与龙公对抗。
+- name: 周雄信
+  aliases: []
+  summary: 天庭八转蛊仙，与万紫红一同被派往西漠干预房家与万家的战争。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 周雄信前辈……已被方源斩杀！
+    - 天庭二仙正是周雄信、万紫红。
+    - 周雄信笑了笑：“二位放心，我等天庭蛊仙绝不会亲自插手这场讨伐房家的战争。”
+- name: 正元老人
+  aliases:
+  - 正元
+  summary: 天庭蛊仙，负责开启中洲尊者人道手段，后被魔尊幽魂魂兽改造收服。
+  rank: 七转
+  first_appear_title: ''
+  details:
+    source:
+    - 他便是正元老人。因为宿命蛊的修复，他从仙墓深处苏醒过来。
+    - 正元老人远远望见，满脸担忧之色。
+    - 正元老人只有七转修为，没有亲自参战的资格。但他的作用非常关键，他是开启元始仙尊留下的种种人道手段的钥匙！
+    appearance:
+    - 七窍流淌出鲜红血迹
+    ability:
+    - 专修人道，作为钥匙开启仙窍留下的人道手段
+    rank:
+    - 七转
+- name: 悲风老人
+  aliases: []
+  summary: 中洲蛊仙，镇守藏龙窟大阵，看守孽龙帝藏生。
+  rank: 八转
+  first_appear_title: ''
+  details:
+    source:
+    - 悲风老人操纵着超级大阵，时刻监控着东海各个蛊仙的状况。
+    - 悲风老人丧失自由
+    ability:
+    - 风道
+    rank:
+    - 八转
+    background:
+    - 被奴役前为自由身
+- name: 忘道人
+  aliases: []
+  summary: 神秘蛊仙，拥有令人遗忘的能力，曾盗取灵浒泉水。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 忘道人取走灵浒泉水，杨峰望着他渐渐远去的背影，反应过来：“你是谁？鬼鬼祟祟，给我站住！”
+- name: 五行大法师
+  aliases: []
+  summary: 散修出生，继承散仙阵道真传，八转蛊仙，曾受巨阳仙祖暗中布置影响。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 五行大法师脚踏虚空，一步步走出，虽然面目覆盖了一些烟灰，但整个人却毫无伤势。
+    - 五行大法师愣住，神色变幻，盯住冰塞川：“此言何意？”
+    - 五行大法师顿时惊疑起来。他乃是散修出生，一生的转折点就是继承了一份神秘的散仙阵道真传，因此才有了如今的成就。
+- name: 袁琼都
+  aliases: []
+  summary: 炼道蛊仙，在天庭修复宿命蛊，因监天塔受击中断修复而昏死。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 袁琼都主要主持大阵，必须时刻维系，不能脱身。
+    - 袁琼都一边炼蛊，一边分析长生天意图。
+    - 袁琼都冷静，坚持。
+    background:
+    - 师从炼道一脉，天赋惊人，曾不喜炼道，后来觉悟担责。
+- name: 张飞熊
+  aliases: []
+  summary: 天庭变化道大能，最擅长熊类变化，曾镇压劫运坛。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 一头体型比劫运坛还要盘踞的黑熊，站在劫运坛之前的地方。
+    - 张飞熊哈哈大笑，猛地扑上，乘机将劫运坛轰的一声，压倒在地，镇在身下。
+- name: 顾六如
+  aliases: []
+  summary: 天庭八转宙道大能，坐镇刹那台，在光阴长河战役中牺牲。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 顾六如对着劫运坛轻轻一指，整座八转仙蛊屋，立即动作缓慢了数倍！
+    - 顾六如目光阴沉，询问黑凡姓名。
+    - 顾六如神色犹豫。
+- name: 万紫红
+  aliases: []
+  summary: 天庭八转蛊仙，西漠历史上赫赫有名的魔道强者，被派往西漠。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 一个娇媚的身影，忽然浮现在紫薇仙子的身旁。
+    - 万紫红一头撞进张飞熊的右肩伤口中，化作花瓣治疗。
+    - 还有一位八转蛊仙，却是女子，形貌妖媚，咯咯娇笑。
+- name: 努尔暴雄
+  aliases: []
+  summary: 北原雷道蛊仙，努尔部族太上大长老，杀招昏雷。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 努尔暴雄哈哈大笑：“我努尔暴雄的杀招昏雷，可不是这么好接的。”
+    - 努尔暴雄被红光击中，浑身燃火。
+- name: 刘溜溜
+  aliases: []
+  summary: 北原蛊仙，擅长隐匿。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 第三位北原蛊仙面目白皙，一脸奸诈的样子，说着就消失不见了。
+- name: 星宿意志
+  aliases:
+  - 星宿仙尊意志
+  summary: 星宿仙尊留下的意志，与无极魔尊对弈。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 星宿意志苦笑一声，竟是让开了通往监天塔内部的路。
+    - 星宿意志回答道：“真正的天庭，不是在这里，而是在我们的心中。”
+    - 星宿目泛复杂神情，抬眼望着对面的无极：“你等的人到了？”
+- name: 巨阳仙祖
+  aliases:
+  - 巨阳仙尊
+  - 巨阳
+  - 巨阳先祖
+  - 长毛老祖
+  - 巨阳仙僵
+  summary: 九转尊者，留下三道运道真传（己运、众生运、天地运）。委托琅琊地灵本体炼制仙蛊屋八十八角真阳楼。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 长毛老祖和盗天魔尊有过交流，魔尊失踪数百年后，长毛老祖就尝试炼蛊。
+    - 长毛老祖练就‘遁空蛊’失败，反而将盗天魔尊辛辛苦苦一辈子积累的材料，糟蹋尽了。
+    - 巨阳仙尊早已仙逝
+    ability:
+    - 九转蛊仙，仙尊级战力，创立王庭之争和八十八角真阳楼
+    - 九转运道杀招，可变换性质（从攻伐变为增益）。
+    rank:
+    - 九转
+    background:
+    - 北原出身，一生福缘不断，广纳后宫，子女众多，名言包括‘兄弟如手足，女人如衣服’等
+    - 长生天创建者，死后仍留有后手。
+    - 北原最强者，开创阴阳道部分成果，善于生育之道。
+- name: 厉煌
+  aliases: []
+  summary: 天庭八转炎道蛊仙，使用阳莽背火衣防守，被方源的万一鬼蛟剑斩杀。
+  rank: 八转
+  first_appear_title: ''
+  details:
+    source:
+    - 厉煌大喝一声，身披阳莽背火衣，扑向方源。
+    - 厉煌中招，一下子被扇飞出老远去。
+    - 厉煌，不要告诉我这就是你的全部实力！
+    appearance:
+    - 身披阳莽背火衣
+    ability:
+    - 火道，受人中豪杰增幅
+    - 阳莽背火衣：火焰防御，醉意效果。
+    rank:
+    - 八转
+    background:
+    - 被方源击杀于毛脚山战场。
+- name: 房家蛊仙
+  aliases: []
+  summary: 北原房家蛊仙，操纵鸡笼犬舍
+  rank: ''
+  first_appear_title: ''
+  details:
+    appearance:
+    - 满脸狰狞之色
+    ability:
+    - 操纵鸡笼犬舍
+    source:
+    - 房家蛊仙哈哈大笑，满脸狰狞之色
+- name: 白沧水
+  aliases: []
+  summary: 天庭八转蛊仙，保护陈衣且战且退
+  rank: 八转
+  first_appear_title: ''
+  details:
+    rank:
+    - 八转
+    background:
+    - 忠心于天庭
+    source:
+    - 白沧水带着陈衣且战且退
+- name: 翼浩方
+  aliases: []
+  summary: 南疆八转蛊仙，修行变化道
+  rank: 八转
+  first_appear_title: ''
+  details:
+    ability:
+    - 变化道
+    rank:
+    - 八转
+    source:
+    - 翼浩方发问
+- name: 巴十八
+  aliases: []
+  summary: 南疆巴家前太上大长老，被方源俘虏后沦为凡人，购买第二空窍蛊。
+  rank: 八转
+  first_appear_title: ''
+  details:
+    ability:
+    - 律道
+    - 律道连击
+    rank:
+    - 八转
+    source:
+    - 巴十八沉吟
+    - 巴十八暗中传音：不，此时还不是关键时刻，巴兄且先忍耐。
+    - 巴十八的仙蛊，已经搜刮完了。
+    background:
+    - 南疆正道超级势力首脑，被方源俘虏。
+- name: 青岳安
+  aliases: []
+  summary: 东海八转蛊仙，参与炼化龙宫
+  rank: 八转
+  first_appear_title: ''
+  details:
+    rank:
+    - 八转
+    source:
+    - 青岳安大吼
+- name: 华彩云
+  aliases: []
+  summary: 华家太上大长老，八转云道蛊仙，最早赴约气海大宴。
+  rank: 八转
+  first_appear_title: ''
+  details:
+    rank:
+    - 八转
+    source:
+    - 华彩云顿时皱起眉头
+    - 华家太上大长老华彩云，拜见气海老祖。
+    - 华彩云将一份九转天气送给方源。
+- name: 沈从声
+  aliases:
+  - 沈家太上大长老
+  summary: 八转音道大能，沈家太上大长老，威严强势，被楚瀛顶撞后恼怒。
+  rank: 八转
+  first_appear_title: ''
+  details:
+    ability:
+    - 奴役悲风老人
+    rank:
+    - 八转
+    background:
+    - 沈家
+    - 沈家领袖，与宋启元关系密切，曾坏方源好事。
+    source:
+    - 沈从声面沉如水
+    - 沈从声成功地将悲风老人奴役
+    - 沈从声眉头微皱，在一片空白的天空中逡巡片刻后，眉头舒展开来。
+- name: 张阴
+  aliases:
+  - 黑魂海主
+  summary: 东海八转散修，实际是四大龙将之一，被方源控制，在气海大宴中假装挑战并败北。
+  rank: 八转
+  first_appear_title: ''
+  details:
+    appearance:
+    - 变化成龙人样貌
+    ability:
+    - 龙宫守护者
+    rank:
+    - 八转
+    background:
+    - 被龙宫奴役
+    source:
+    - 张阴等人面色微变
+    - 南边来的蛊仙，身着黑袍，看不见容貌...姓张名阴。
+    - 容婆、张阴等四大龙将
+- name: 容婆
+  aliases: []
+  summary: 四大龙将之一，东海八转蛊仙，老妪，脸上有紫色毒蟒纹路
+  rank: 八转
+  first_appear_title: ''
+  details:
+    appearance:
+    - 变化成龙人
+    rank:
+    - 八转
+    background:
+    - 被龙宫奴役
+    source:
+    - 容婆忽然开口
+    - 西边则是一位老妪，佝偻腰背...乃是容婆。
+    - 容婆、张阴等四大龙将
+- name: 石淼
+  aliases: []
+  summary: 四大龙将之一，东海八转蛊仙，体格粗壮，三角眼
+  rank: 八转
+  first_appear_title: ''
+  details:
+    appearance:
+    - 变化成龙人
+    rank:
+    - 八转
+    background:
+    - 被龙宫奴役
+    source:
+    - 石淼
+    - 北面一位蛊仙，体格粗壮，一对三角眼闪烁着寒光。正是石淼。
+- name: 扬子河
+  aliases: []
+  summary: 东海八转蛊仙，实为龙宫守护四大龙将之一
+  rank: 八转
+  first_appear_title: ''
+  details:
+    appearance:
+    - 变化成龙人
+    rank:
+    - 八转
+    background:
+    - 被龙宫奴役
+    source:
+    - 扬子河语气淡然
+    - 东边来的是位白袍青年，面容俊秀，便是扬子河。
+- name: 努尔倩
+  aliases: []
+  summary: 北原蛤蟆妖仙，七转？
+  rank: 七转
+  first_appear_title: ''
+  details:
+    rank:
+    - 七转
+    source:
+    - 努尔倩手指着廿二富
+- name: 元始仙尊
+  aliases: []
+  summary: 气道尊者，天庭初代仙王，星宿仙尊的师父，正准备被复活。
+  rank: 九转
+  first_appear_title: ''
+  details:
+    rank:
+    - 九转
+    - 无上大宗师
+    background:
+    - 远古时代人族领袖，创建天庭，立下门派传承精神。
+    source:
+    - 元始仙尊看着周围的人族蛊仙们。
+    - 有您在，就有天底下最团结的家族！
+    - 元始仙尊如此
+    appearance:
+    - 一身白袍，满脸肃容。
+- name: 龙灵
+  aliases: []
+  summary: 龙宫/龙庭之灵，童子模样，头上有角，背后有龙尾，纯真可爱。等待龙人主人出现，领导龙人崛起。
+  rank: 八转（作为龙宫之灵）
+  first_appear_title: ''
+  details:
+    appearance:
+    - 童子模样，头上有角，背后有龙尾，一双大眼睛扑闪扑闪，晶莹剔透。
+    ability:
+    - 能操纵龙宫，使出梦道攻伐杀招。
+    rank:
+    - 八转（作为龙宫之灵）
+    background:
+    - 在龙人一族被龙公所灭后许久才诞生，一直躲藏，直到白凝冰出现才认主。
+    source:
+    - 它望着白凝冰，开口道：‘福地有地灵，洞天有天灵，而在龙庭中，便有我——龙灵。’
+    - 龙灵尖叫：‘就算是死，我也不会让你如愿！’
+- name: 董陆沉
+  aliases: []
+  summary: 董家太上大长老，八转土道蛊仙，因房家袭击宝月绿洲而愤怒。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 董陆沉飞升上来，一身八转气势同样铺天盖地，他惊怒交加。
+    - 董陆沉听到这个消息后，脸都青了
+    - 董陆沉坐不住
+- name: 石狮诚
+  aliases: []
+  summary: 石人六转蛊仙，对胆识蛊极为渴望，操纵荡魂山大阵。
+  rank: 六转
+  first_appear_title: ''
+  details:
+    ability:
+    - 阵道操控
+    rank:
+    - 六转
+    background:
+    - 石人一族，依附方源，看到石人崛起希望。
+    source:
+    - 石人六转蛊仙石狮诚来到山前。
+- name: 从严
+  aliases: []
+  summary: 天庭八转律道蛊仙，负责组建恒舟。
+  rank: 八转
+  first_appear_title: ''
+  details:
+    ability:
+    - 律道
+    rank:
+    - 八转
+    background:
+    - 天庭成员，恒舟组建失败受创。
+    source:
+    - 天庭八转律道蛊仙从严，取来一只仙蛊。
+- name: 万追青
+  aliases: []
+  summary: 万良翰之子，六转蛊仙，在议事堂哭诉。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 这人便是万追青，有着六转蛊仙修为，是万良翰的亲身儿子。
+- name: 万良翰
+  aliases: []
+  summary: 万家七转智道蛊仙，被方源瞬杀，留下智障仙蛊等传承。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 万良翰被他瞬杀，实力差距太大，根本来不及摧毁仙蛊。
+- name: 四旬子
+  aliases:
+  - 上旬子
+  - 中旬子
+  - 下旬子
+  - 旬果子
+  summary: 四旬子之一，灵蝶谷宙道七转蛊仙，与中旬子、下旬子、旬果子为四胞胎兄妹，擅操纵今古亭。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 上旬子吐出一口浊气：'总算是撑过了最初阶段。'
+    - 上旬子趴在恒舟的甲板上，不断咳嗽。
+    - 这时下旬子，已然是昏死过去，伤势沉重。
+- name: 戚发
+  aliases:
+  - 戚家太上大长老
+  summary: 戚家首领，投降方源
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 戚发作为戚家的太上大长老，平素很有威望
+- name: 戚裁
+  aliases:
+  - 戚家太上二长老
+  summary: 戚家长老
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 戚裁乃是戚家的太上二长老，最是勇猛
+- name: 戚进
+  aliases:
+  - 戚家太上三长老
+  summary: 戚家长老
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 戚进是戚家太上三长老
+- name: 战部渡
+  aliases:
+  - 小渡
+  summary: 方源的力道分身，执掌自由残缺变，拥有亚仙尊战力，怪力恐怖，皮糙肉厚。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 兽灾洞天。方源分身战部渡缓步行走。
+    - 少年战部渡已经偷偷地从城主府溜出来
+    - 战部渡点了点头
+- name: 兽灾仙人
+  aliases: []
+  summary: 兽灾洞天的原主人，因万劫重伤而亡
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 兽灾仙人因为第一次万劫伤重而亡
+- name: 山崖城城主
+  aliases: []
+  summary: 山崖城城主，蛊仙老者，骑箭尾雕，收战部渡为徒
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 老者哈哈大笑：“小渡啊，你愿不愿意和我一起修行呢？”
+- name: 申大才子
+  aliases:
+  - 申兄
+  summary: 著名才子，与姜先生文斗
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 著名的大才子望着堂下端坐的学子们，笑了笑
+- name: 姜先生
+  aliases:
+  - 姜贤弟
+  summary: 李小白的老师，曾为十大才子但未被征召为官，开私塾教学，劝阻李小白参与选拔。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 私塾的姜先生谦虚道
+    - 姜先生将李小白单独叫到江边，和他私下交流，是想劝说这位学生放弃此次十大才子的选拔。
+- name: 李小白
+  aliases:
+  - 小白
+  summary: 方源的分身，姜先生的学生，才情初具，暗中已洞悉华文洞天真相，计划成仙。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 李小白摸了摸鼻子，走上了台。
+    - 李小白当然只是表演，实际上他早已知晓一切。
+    - 李小白本身才情不及本体，但经过这段时间的勤学苦练，已有很大的进展。
+- name: 秦鼎菱
+  aliases:
+  - 仙妃
+  summary: 中洲仙后，巨阳仙尊时代人物，专修金道转运道，沉眠三十多万年，运道境界至少大宗师。
+  rank: 八转
+  first_appear_title: ''
+  details:
+    source:
+    - 一旁的秦鼎菱微笑
+    - 秦鼎菱乃是巨阳仙尊时代的人物，中洲仙后，本是修行金道，而后专修运道，沉眠了三十多万年。
+    - 古月方正和秦鼎菱一起操纵诛魔榜。
+    appearance:
+    - 鼻梁高挺，唇眼细长，一身金甲，双腿健长，身挂白色披风
+    ability:
+    - 运道八转大能
+    rank:
+    - 八转
+    background:
+    - 秦鼎菱是当今天庭的领袖，负责迎回星宿仙尊等大事。
+- name: 龙人分身
+  aliases:
+  - 吴帅
+  - 小八
+  - 龙人分身
+  - 绿蚁居士
+  - 吴帅大人
+  summary: 方源的力道分身，八转蛊仙，负责至尊仙窍内的资源点建设，如建成第一圈水脉。
+  rank: 七转
+  first_appear_title: ''
+  details:
+    source:
+    - 正是方源的龙人分身。
+    - 绿蚁居士曾经和十大古派中的洪贞作赌而败，答应收得一徒
+    - 吴帅英明果断，富有远见卓识，更性情强硬。
+    appearance:
+    - 龙人身躯，头生龙角，后有龙尾。
+    rank:
+    - 七转
+    - 八转
+    background:
+    - 龙公之孙，绿蚁居士的关门弟子，书道阁主的女婿，不甘人族压迫，奋发图强。
+    - 绿蚁居士是吴帅的关门师父，但在非议峰事件中未出手相助。
+    - 绿蚁居士是远古蛊仙，与妻子易酒仙姑留下传承，防备孽徒吴帅。
+- name: 龙行天
+  aliases: []
+  summary: 龙人蛊仙，吴帅的父亲，酷似龙公，门派太上长老
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 龙人蛊仙目光阴沉，直盯着他看。
+    - “吴帅！你好大的胆子”
+- name: 易酒仙姑
+  aliases: []
+  summary: 蛊仙，易酒仙姑，绿蚁居士的夫人，擅长食道。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 易酒仙姑
+    - 前辈夫人应当就是易酒仙姑前辈了？
+    - 也有易酒仙姑的食道真传。
+    background:
+    - 易酒仙姑与绿蚁居士共同留下传承，包含食道真传。
+- name: 洪贞
+  aliases: []
+  summary: 十大古派中的蛊仙，与绿蚁居士作赌，后已渡劫而亡
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 绿蚁居士曾经和十大古派中的洪贞作赌而败
+- name: 青酸
+  aliases: []
+  summary: 龙人少年，吴帅的同族，性格高傲
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 青麟少年青酸愤愤不平
+- name: 黄维
+  aliases: []
+  summary: 龙人蛊仙，吴帅的结拜兄弟和忠实支持者。
+  rank: 七转
+  first_appear_title: ''
+  details:
+    source:
+    - 黄鳞的少年则明显性情温和许多
+    - 龙人蛊仙黄维伴随在他左右。
+    - 黄维暗自传音：兄长，待会争夺起来，还请兄长全力出手。
+    rank:
+    - 七转
+    background:
+    - 龙人，伴随吴帅左右，在非议峰争夺战中协助吴帅。
+- name: 张双
+  aliases: []
+  summary: 人族少年蛊师，三转，与吴帅赌斗失败
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 这一次，我张双一定洗刷上一次败在你手上的耻辱！
+- name: 陈副
+  aliases: []
+  summary: 人族少年蛊师，三转，张双的同伴
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 陈副可你别嚣张
+- name: 泰琴
+  aliases: []
+  summary: 女仙，暗恋吴帅，在赌斗时为吴帅担忧。
+  rank: 六转或七转
+  first_appear_title: ''
+  details:
+    source:
+    - 眉发枯黄，容貌秀美，眼中双瞳，熠熠生辉
+    - 女仙泰琴站在远处的角落，独自观战，眼眶里早已噙着泪水，担忧纠结：吴郎……
+    - 师哥，此战令你扬名天下，师妹在这里恭祝你。
+    rank:
+    - 六转或七转
+    background:
+    - 与吴帅有感情纠葛，但吴帅已有妻子。
+- name: 范极
+  aliases: []
+  summary: 与书九灵有私情的蛊仙，背景强大，其爷爷是天庭成员。
+  rank: 六转或七转
+  first_appear_title: ''
+  details:
+    rank:
+    - 六转或七转
+    background:
+    - 趁吴帅与众人激战时炼化非议峰，昏迷在现场。
+    source:
+    - 正是和吴帅夫人书九灵有着私情的范极！
+    - 范极昏迷在现场，他的魂魄底蕴炼化非议峰，实在太过勉强。
+    - 这个家伙！龙人分身咬牙切齿。
+- name: 书九灵
+  aliases: []
+  summary: 吴帅的妻子，书道阁主的女儿，与范极有私情。
+  rank: 不明
+  first_appear_title: ''
+  details:
+    rank:
+    - 不明
+    background:
+    - 书道阁主之女，名义上嫁给吴帅，但感情不和。
+    source:
+    - 正是和吴帅夫人书九灵有着私情的范极！
+    - 书道阁主将女儿书九灵留了下来。
+    - 书九灵一言不发，并无平时的不耐。
+- name: 松涛子
+  aliases: []
+  summary: 风云府顶尖七转蛊仙，中洲七转前三，擅长木道，拥有杀招绿天松涛。
+  rank: 七转
+  first_appear_title: ''
+  details:
+    rank:
+    - 七转
+    background:
+    - 风云府精英，与吴帅赌斗南华岛归属，被吴帅以龙庭碾压致死。
+    source:
+    - 松涛子浑身是伤，却气势强盛，牢牢压过吴帅一头。
+    - 松涛子仰头大吼，浑身绽射出浓绿的绿芒。
+    - 松涛子闪避不及，一声惨叫，被龙庭直接碾死！
+- name: 文秀
+  aliases: []
+  summary: 已逝的信道大能，八转散修，创建了非议峰。
+  rank: 八转
+  first_appear_title: ''
+  details:
+    rank:
+    - 八转
+    background:
+    - 一位奇女子，信道大能，散修出身，靠非议峰修成八转。
+    source:
+    - 文秀乃是一代奇女子，信道大能，早已逝去。
+    - 文秀果然是厉害，这非议峰竟是人力打造而出，蕴含着极其丰富的信道道痕，几乎是小半个天地秘境了！
+- name: 书道阁主
+  aliases: []
+  summary: 八转蛊仙，书道势力领袖，书九灵的母亲，吴帅的泰水。
+  rank: 八转
+  first_appear_title: ''
+  details:
+    rank:
+    - 八转
+    background:
+    - 书道阁主是书道势力的太上长老，为人势利，在非议峰事件中保持中立。
+    source:
+    - 书道阁主大人到！
+    - 书道阁主微微带笑，虽然只是平平淡淡的一句话，却是令在场诸人动容。
+    - 书道阁主将女儿书九灵留了下来。
+- name: 古族族长
+  aliases: []
+  summary: 东海古族首领，兽人蛊仙，掌握食道杀招‘吃鸡’，与方源分身吴帅互换传承。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 古族族长神情一震
+    - 古族族长相当客气，当前领路。
+    - 古族族长看向吴帅，微笑道：“请。”
+- name: 山崖城主
+  aliases:
+  - 爷爷
+  summary: 兽灾洞天山崖城的城主，五转蛊师左右实力。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 山崖城主摸了摸战部渡的脑袋
+    - 山崖城主轻轻点头
+- name: 秘谋人
+  aliases: []
+  summary: 疯魔三怪之首，专修智道，在疯魔窟探索数百年，对方源有所防备。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 另一位蛊仙，则身材矮小，只及方源的膝盖，一双小眼睛精芒烁烁，乃是秘谋人，专修智道。
+    - 秘谋人小心翼翼地踏出一步，脸色一白。
+    - 秘谋人叹息一声，无奈地点点头：‘好吧，是该撤了。’
+- name: 苏琪涵
+  aliases:
+  - 苏小姐
+  - 苏大小姐
+  summary: 当朝尚书之女，身姿窈窕，清秀纯美，温文尔雅，满腹诗论，通晓史籍，五转巅峰蛊师，负责十大才子选拔考核。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 她是当朝尚书之女，身姿窈窕，清秀纯美，温文尔雅，书香气质。
+    - 苏琪涵乃是当朝一品大员苏丞相的爱女，负责此次十大才子的选拔和考核。
+- name: 鲨匪
+  aliases:
+  - 恶贼
+  summary: 满脸横肉，虎背熊腰，皮肤青黑如鲨鱼皮，使用鲨皮蛊，凶恶狰狞，曾败于苏琪涵。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 来人满脸横肉，虎背熊腰，浑身皮肤青黑之色，宛若鲨鱼的皮，正是鲨皮蛊的效用。
+- name: 药魔
+  aliases:
+  - 药魔老者
+  summary: 看似老者实则二十多岁，专修毒道，导致自身反噬衰老，擅长春药，对苏琪涵下药。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 药魔看似一位老者，但实际上却只有二十多岁，他专修毒道，一味追寻力量，导致自身遭受反噬。
+- name: 卫风
+  aliases: []
+  summary: 天庭八转蛊仙，擅长风系杀招，被伪装的千变老祖斩杀。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 卫风冷冷一笑，就要拿下夜煞女。
+    - 轰！！！一声巨响，卫风大半个身躯宛若流星，飞出大阵。
+- name: 星野望
+  aliases: []
+  summary: 天庭八转蛊仙，参与围剿千变老祖和方源。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 星野望、卫风神情如铁，默不作声，飞扑过来。
+- name: 古文帝
+  aliases: []
+  summary: 华文洞天历史人物，才情卓绝，以七岁作诗闻名，后修成蛊仙统一洞天，开创十大才子选拔。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 古文帝才华之卓绝，真是难以想象。
+    - 他在晚年，又开创十大才子的选拔。
+- name: 苏丞相
+  aliases: []
+  summary: 六转蛊仙，当朝一品大员，苏琪涵之父。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 苏丞相乃是六转蛊仙，苏琪涵也是将来内定的朝廷官员。
+- name: 当朝皇帝
+  aliases:
+  - 皇帝
+  summary: 华文洞天的统治者，蛊仙。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 当朝皇帝，当然也是蛊仙。
+- name: 太太太上皇
+  aliases: []
+  summary: 八转蛊仙，华文洞天最强者，当朝皇帝的祖父级人物。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 而如今镇守这里的八转蛊仙，就是当今的太太太上皇。
+- name: 九灵仙姑
+  aliases: []
+  summary: 天庭八转奴道、变化道双修蛊仙，可变化为太古荒兽，在光阴长河战役中幸存。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 九灵仙姑跳出仙蛊屋，化为一头太古荒兽，撤离战场。
+    - 九灵仙姑容颜清丽，喜好穿大袍，往日里长袖大摆，气势沛然。
+    - 九灵仙姑沉默，动作一点都不慢，绕到万年斗飞车身后。
+- name: 溺水翁
+  aliases: []
+  summary: 东海魔道蛊仙，专修水道，在气海大宴上售卖血道仙蛊。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 溺水翁本来就是魔仙，东海谁人不知？
+    - 溺水翁杀人无算，此刻却也忐忑不安。
+- name: 巫马杨
+  aliases: []
+  summary: 东海散仙，在气海大宴上售卖鬼嘤音。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 巫马杨掏出来的小音贝，气息死寂，显然没有了生命。
+    - 巫马杨得到方源的允许，这才转身催动手段。
+- name: 沈潭
+  aliases: []
+  summary: 沈家蛊仙，曾主动接近楚瀛被骂滚。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 沈潭笑了笑，主动走过来，接近楚瀛：“楚瀛兄弟。”
+    - “滚。”方源看了沈潭一眼，便直接转身。
+- name: 沈笑
+  aliases: []
+  summary: 沈家蛊仙，尝试与楚瀛交易情报。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 沈笑无奈，只得强撑笑容，走近方源。“楚兄。”
+    - 沈笑、沈泣等人纷纷开口
+- name: 沈伤
+  aliases:
+  - 沈怀
+  - 沈伤仙友
+  - 沈前辈
+  summary: 人道准无上大宗师，伪装潜入帝君城，企图破解并逆推尊者的人道手段，最终触发众望所归杀招失败。
+  rank: 八转
+  first_appear_title: ''
+  details:
+    source:
+    - 沈从声接近神秘魔仙，一脸的激动
+    - 沈伤通红如血的眼眸杀机生出
+    - 沈伤施展一记仙道杀招——夜歌
+    ability:
+    - 人道修行者
+    rank:
+    - 八转
+    background:
+    - 沈伤受房睇长邀请，观察神帝城壁画世界中的人道发展。
+- name: 沈泣
+  aliases: []
+  summary: 沈家蛊仙，发现悔哭海线索。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 沈笑、沈泣等人纷纷开口
+- name: 秦松
+  aliases: []
+  summary: 天庭蛊仙，擅长挪移（星投），身负陈年旧伤，是施展大规模星投的关键人物。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 噗。就在这时，秦松脸色猛地一白，呕出一小口鲜血。
+    - 秦松最擅长的便是挪移。
+- name: 七皇子
+  aliases:
+  - 七次郎
+  summary: 巨阳仙尊的第七个子女，掌握暗光手段，能迅速修复劫运坛创伤，参与天庭战场。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 冰塞川身躯一震：‘七皇子！’
+    - 这位年轻蛊仙手掌一挥，顿时暗光涌动，迅速弥补了劫运坛的创伤，将长生天的败亡硬生生的挽回！
+- name: 苍玄子
+  aliases: []
+  summary: 天庭太古传奇，苍天藤化形，主修宇道，与元莲仙尊有隐秘协约
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 苍玄子叹息一声，化作一道青色流光，在万年斗飞车前拦截。
+    - 她吐出一小口青色的鲜血，又再次攻向万年斗飞车。
+- name: 狂蛮意志
+  aliases:
+  - 狂蛮魔尊意志
+  summary: 狂蛮魔尊残留的意志，话痨，在血战披风中协助方源。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 狂蛮意志在披风中大喊助威。
+    - 小子，你虽然长得丑，但这个风格像我！
+- name: 华松
+  aliases: []
+  summary: 伪装成蛊师的蛊仙，来自华文洞天，陪同安崇参加天下诗会。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 华松将楫舞着，提過尊使只管用这个五转的侦查蛊虫。
+- name: 安崇
+  aliases: []
+  summary: 伪装成蛊师的蛊仙，跟随华松来到华文洞天京都。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 安崇端跩了一番，当面用了，顿时视野就发生了变化。
+- name: 冰晶仙王
+  aliases:
+  - 副盟主
+  - 雪人八转蛊仙
+  summary: 八转雪民蛊仙，来自黑天冰晶洞天，当代冰晶仙王，野心勃勃。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 冰晶仙王看到吴帅，顿时面色大变，再无之前的惬意和闲适。
+    - 冰晶仙王这时越众而出：'启禀盟主大人，我愿镇守夏家大本营。'
+    - 冰晶仙王咬牙，带领数位蛊仙，只得回奔太古黑天。
+- name: 连可心
+  aliases: []
+  summary: 鲛人王庭太上长老，七转蛊仙，鲛人女仙首领之一，性格温和。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 连可心面沉如水，一时无法反驳。
+    - 另一位首领连可心则伸出手来，握了握鱼姿的手，表示安慰。
+    - 连可心、鱼姿以及谢凝思乃是鲛人王庭的三位当家。
+- name: 鱼姿
+  aliases: []
+  summary: 鲛人王庭太上长老，七转蛊仙，鲛人女仙首领之一，积极支持依附方源。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 鱼姿突然眼前一亮：“我想到了，有一个人说不定能帮助我们。”
+    - 鱼姿作为此次首领之一，是最主张奉献自身一切，利用美色等等紧紧依附方源的蛊仙。
+    - 鱼姿、连可心都不约而同地先看贡献榜。
+- name: 谢凝思
+  aliases: []
+  summary: 东海鲛人王庭的三位掌权女仙之一。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 谢凝思忽道：“不如我们动用那个事物？”
+- name: 夏正清
+  aliases: []
+  summary: 东海夏家蛊仙，七转修为，镇守照影海域。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 夏正清通过仙阵脱离，但已经失去了联络！
+- name: 夏瑞之
+  aliases: []
+  summary: 东海夏家太上大长老，七转修为，威望很高。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 夏瑞之面沉如水，缓缓摇头。
+- name: 大智仙母
+  aliases: []
+  summary: 老妪形象，墨人族群的首领，两天联盟成员，拥有洞天大智洞天。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 大智仙母的惊呼，让全场的异人蛊仙们都分外震惊。
+    - 大智仙母脸色阴沉，咬牙含恨地道：'是天庭！'
+- name: 安逊
+  aliases: []
+  summary: 魂道蛊仙，对影无邪忠心耿耿，带来了安魂洞天的魂道资源。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 关键时刻，安逊忽然打开仙窍门户，抛出一头太古魂兽来。
+    - 安逊心中激动：'主上，若非你的提点，我可不能阻挡住这记赤色血虹。'
+    - 安逊恭敬行礼，双手奉上一枚魂核。
+- name: 夜天狼君
+  aliases: []
+  summary: 两天联盟中的蛊仙，暗中投靠天庭，通风报信。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 夜天狼君经此一事，更加坚定投靠天庭的决心。
+    - 和众仙分别之后，他就将此番动向悄悄汇报给了天庭。
+    - 夜天狼君朝她微微点头，释放善意。
+- name: 青辉子
+  aliases: []
+  summary: 东海七转蛊仙，专修光道，擅长种植流光果，是宝黄天中三位贩卖流光果的主要蛊仙之一。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 东海七转蛊仙青辉子在漫天的光霞中飞舞，屡屡施展仙道杀招，不断地收取这些霞光。
+    - 青辉子看到了气绝魔仙之后，立即就辨认出了他，吓得呆愣在原地，宛若石像。
+    - 气绝魔仙取走这些蛊虫，一一品鉴...最后将光道仙蛊都还给了青辉子。
+- name: 气绝魔仙
+  aliases:
+  - 气绝
+  summary: 上古魔道巨擘，八转修为，重生后为童子身躯，拥有天地秘境‘兮’克制天下气道，行事霸道而冷静。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 气绝魔仙皱着眉头，看着自己的手掌。
+    - 气绝魔仙微微一笑，伸出手指一弹，顿时探出一股幽魂气流。
+    - 气绝魔仙大笑，‘你尽管记恨老夫好了，这根本无所谓。’
+- name: 寒灰仙姑
+  aliases: []
+  summary: 安魂洞天之主，八转魂道蛊仙，原两天联盟人族代表，后被魔尊幽魂夺舍。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 寒灰仙姑接过这个魂核，仔细打量，脸上神情越发奇异起来。
+    - 寒灰仙姑发出魔尊幽魂的声音：‘这副肉身还不错，暂时就先这样用着，接近吴帅去。’
+- name: 彭达
+  aliases: []
+  summary: 一个穿越到蛊世界的年轻人，后成为商队成员，继承了盗天真传却被莫利杀害。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 彭达尴尬不已：‘是这样的大叔，虽然我有了不少蛊虫，但还不能运用呢。’
+    - 彭达死了。但莫利没有停下手段，他又催动蛊虫，将彭达的魂魄拘拿了出来。
+- name: 莫利
+  aliases: []
+  summary: 沙狼城的资深蛊师，商队首领，因家园被毁、家人被杀而陷入疯狂，最终夺取盗天真传。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 莫利缓缓地抬起头，他双眼留着泪，面庞却是极为扭曲，陌生、恐怖得让彭达心头冷颤。
+    - 莫利声音嘶哑无比：‘我要报仇，我要报仇！但真传却偏偏选了你，大叔也没有办法，彭达！’
+- name: 车尾
+  aliases: []
+  summary: 天庭蛊仙，战力出众，在战斗中斩杀多位异人蛊仙，表现出惊人的战斗力。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 车尾用行动作出了回应，他宛若一道极光，直接射出仙蛊屋，直奔地面气功果。
+    - 车尾狂怒，左手如刀，右手如枪，双手并进，两道金银之光将扬子河洞穿。
+    - 车尾看了一头冷汗，龙宫的强悍他是深刻体会到的。
+- name: 青家太上二长老
+  aliases: []
+  summary: 青家七转蛊仙，开创青口杀招，被幽魂所杀。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - “由我去取了冥幽的性命吧。”青家太上二长老站了出来。
+    - 二长老亲自出马，必定是马到功成！
+- name: 武八重
+  aliases: []
+  summary: 武家蛊仙，稳重，向武庸报喜乾清一气的发现。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 武八重恭敬地请教武庸
+    - 武八重神情激动
+    - 武八重心中的激动渐渐平复下来
+- name: 钢奔勇士
+  aliases: []
+  summary: 变化道蛊仙，原为兽灾洞天中的蛊仙，方源的麾下，宿命大战后流落在外。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 那个变化道蛊仙，我若没有看错，应当是钢奔勇士。他是方源的麾下，原本兽灾洞天中的蛊仙。
+- name: 池谤
+  aliases: []
+  summary: 池家现任太上大长老，上任不久，面临羊家压力。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 池谤上位之后，却是感到和之前大不相同
+    - 池谤一拍额头
+- name: 池大霹
+  aliases: []
+  summary: 池家七转蛊仙，性情直爽，主张反击羊家。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 池大霹操着大嗓门，立即道：“当然是反攻过去”
+- name: 羊阴光
+  aliases: []
+  summary: 羊家七转蛊仙，擅长冻魄玄光。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 一位羊阴光，擅长冻魄玄光
+- name: 羊文魁
+  aliases: []
+  summary: 羊家七转蛊仙，智道、信道兼修，为羊家智囊。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 另一位羊文魁则是智道、信道兼修
+- name: 孔日天
+  aliases: []
+  summary: 南疆魔道知名人物，孔升天的血脉后人，拥有升天传承，被武家蛊仙追杀。
+  rank: 凡人蛊师（五转）
+  first_appear_title: ''
+  details:
+    rank:
+    - 凡人蛊师（五转）
+    background:
+    - 出身南疆魔道，与中洲四大淫贼联手，因升天真传被武家追杀。
+    source:
+    - 孔日天浑身是伤，躲在一处烂泥洞中，脸上一片绝望。
+    - 孔日天乃是孔升天的血脉后人。
+- name: 王小二
+  aliases: []
+  summary: 疑似失忆的仙人，与中洲四大淫贼同行，懵懂天真。
+  rank: 未知（疑似仙人）
+  first_appear_title: ''
+  details:
+    ability:
+    - 疑似拥有仙人手段，但具体不明。
+    rank:
+    - 未知（疑似仙人）
+    background:
+    - 与中洲四大淫贼一同逃亡，身份神秘。
+    source:
+    - 王小二一脸懵懂，很是好奇的样子。
+    - 王小二难道是失忆的仙人？
+- name: 陈淫道
+  aliases: []
+  summary: 中洲四大淫贼之首，与孔日天合作逃亡。
+  rank: 凡人
+  first_appear_title: ''
+  details:
+    ability:
+    - 凡人蛊师，具体修为不明。
+    rank:
+    - 凡人
+    background:
+    - 中洲魔道淫贼，因诅咒与王小二绑定。
+    source:
+    - 陈淫道和其他几人都为难了。
+    - 陈淫道开口：蛊仙大人，在下和身边的几位都是兄弟情谊...
+- name: 夏兆
+  aliases: []
+  summary: 夏家太上大长老，七转蛊仙。
+  rank: 七转
+  first_appear_title: ''
+  details:
+    ability:
+    - 七转，具体流派不明。
+    rank:
+    - 七转
+    background:
+    - 原夏家太上大长老夏槎被方源废黜后，夏兆接任。
+    source:
+    - 夏家蛊仙夏兆便开口：武庸大人，不管这里是夏家还是巴家的地盘，终究是我们两家之事。
+    - 夏兆修为只有七转，立即飞退一旁，遥遥出手，辅助巴德。
+- name: 可信鸿
+  aliases:
+  - 信使
+  summary: 菇人蛊仙，专修毒道，是方源麾下出使任务最多者，渴望证明自己。
+  rank: 蛊仙
+  first_appear_title: ''
+  details:
+    appearance:
+    - 白衣，面容普通，额头顶着大蘑菇。
+    ability:
+    - 蛊仙，具体修为流派不明。
+    rank:
+    - 蛊仙
+    background:
+    - 菇人乐土成员，投靠方源后执行任务。
+    - 任务在身，完成乎地交易。
+    source:
+    - 可信鸿身着白衣，面容普通。
+    - 可信鸿微微一笑，回应武庸。
+    - 可信鸿在云层中穿梭。
+    cultivation:
+    - 蛊仙（具体未知）
+- name: 梦求真
+  aliases: []
+  summary: 方源的分身之一，负责探索梦境，提升方源的境界。
+  rank: 蛊仙
+  first_appear_title: ''
+  details:
+    ability:
+    - 梦道蛊仙，擅长造梦等梦道杀招。
+    rank:
+    - 蛊仙
+    background:
+    - 方源在梦道方面的分身，攻克梦境提升境界。
+    source:
+    - 梦求真最近攻克了不少梦境，令方源的食道境界从一片空白，越过大师级，暴涨到了宗师级。
+    - 梦求真蓦地失去控制，扮演的人物是一个少年。
+    - 即便是全力呼唤，梦求真的声音仍旧虚弱低微。
+- name: 火雷神君
+  aliases: []
+  summary: 西漠八转散修，主修炎道兼修雷道，留下火雷真传。
+  rank: 八转
+  first_appear_title: ''
+  details:
+    ability:
+    - 炎道八转，兼修雷道，大巧不工。
+    rank:
+    - 八转
+    background:
+    - 西漠散修，大闹西漠后被追杀，死于南疆赤龙江火雷河段，留下真传。
+    source:
+    - 火雷神君，此人主修炎道，兼修雷道，虽然是散修出身，但气运不俗。
+    - 火雷神君的真传因此隐匿长久。
+- name: 钟义
+  aliases: []
+  summary: 西漠蛊师，火雷神君的血脉后人，被武庸利用获取火雷真传后加入武家。
+  rank: 凡人
+  first_appear_title: ''
+  details:
+    ability:
+    - 凡人蛊师，有蛊仙种子潜力。
+    rank:
+    - 凡人
+    background:
+    - 西漠蛊师，被武庸找到并作为火雷真传的正当继承人。
+    source:
+    - 这位西漠蛊师，便是火雷神君的血脉传人。
+    - 西漠蛊师当场跪拜，要求加入武家。
+- name: 醉仙翁
+  aliases:
+  - 红鼻子老者
+  summary: 食道蛊仙，擅长酿酒，加入正气盟的东海散仙。
+  rank: 八转蛊仙
+  first_appear_title: ''
+  details:
+    ability:
+    - 食道强者，掌握天下三池之一的酒池。
+    rank:
+    - 八转蛊仙
+    background:
+    - 醉仙翁是东海散修，为获得绿蚁居士传承而冒险，后被天庭秦鼎菱收服。
+    - 继承绿蚁居士和易酒仙姑真传，受秦鼎菱安排加入正气盟。
+    source:
+    - 实不相瞒，晚辈乃是东海蛊仙醉仙翁。
+    - 醉仙翁一颗心顿时跌落谷底。
+    - 醉仙翁硬着头皮入座。
+    cultivation:
+    - 食道蛊仙（具体未知）
+- name: 鲁桐兰
+  aliases:
+  - 蓝凤族长
+  - 荒极子
+  summary: 长生天八极子之一的荒极子，潜伏在万兽混彩天中担任蓝凤部族族长，专修炎道。
+  rank: 七转蛊仙（推测）
+  first_appear_title: ''
+  details:
+    appearance:
+    - 中年美妇，身穿皮裙皮衣，露出臂膀，胸前有蓝凤纹身
+    ability:
+    - 炎道蛊仙，拥有蓝凤图腾杀招，精通图腾修行
+    rank:
+    - 七转蛊仙（推测）
+    background:
+    - 鲁桐兰是长生天八极子之一，负责在万兽混彩天中接应黑楼兰，并助其成长。
+    source:
+    - 这是个中年美妇，身上穿得很简陋，身穿皮裙皮衣，露出臂膀、腹部和大半胸膛。在胸膛和后背上，有一个蓝凤凰的纹身。
+    - 鲁桐兰笑道：“这便是我的蓝凤图腾。”
+- name: 焦火
+  aliases:
+  - 火融族长
+  - 黄极子
+  summary: 长生天八极子之一的黄极子，潜伏在万兽混彩天中担任火融部族族长。
+  rank: 七转蛊仙（推测）
+  first_appear_title: ''
+  details:
+    ability:
+    - 与鲁桐兰合作演战争戏码，擅长图腾修行
+    rank:
+    - 七转蛊仙（推测）
+    background:
+    - 焦火是第一位来到万兽混彩天禁地的外来者，曾吃人肉求生，后混成火融族长。
+    source:
+    - 我是黄极子焦火。
+    - 焦火掏出大量的仙材。
+    - 焦火切着人肉，嘿然一笑。
+- name: 商囚牛
+  aliases:
+  - 老大
+  - 囚牛
+  summary: 商燕飞长子，老成持重，曾死而复生，后因风天语投靠而承认罪行，被商心慈策反。
+  rank: 四转或五转
+  first_appear_title: ''
+  details:
+    appearance:
+    - 未见具体描述
+    ability:
+    - 蛊师，具体修为不详，但有一定实力
+    rank:
+    - 四转或五转
+    background:
+    - 商燕飞长子，曾参与假蛊阴谋，后被商心慈收服。
+    source:
+    - 商囚牛死而复生，死亡的经历是他宝贵的财富。
+- name: 卫德馨
+  aliases:
+  - 卫姐姐
+  summary: 商心慈的得力助手，卫神经的姐姐，曾被算计卧病，后参与围捕商睚眦等人。
+  rank: 四转或五转
+  first_appear_title: ''
+  details:
+    appearance:
+    - 未见具体描述
+    ability:
+    - 蛊师，具体修为不详
+    rank:
+    - 四转或五转
+    background:
+    - 卫家人，因与商心慈关系密切而效力商家。
+    source:
+    - 卫德馨冷笑。
+- name: 神秘老者
+  aliases:
+  - 老朽
+  summary: 隐居在商量山的神秘强者，曾化身索赔老者试探商心慈，后传授行善蛊仙法和指点对付风天语。
+  rank: 蛊仙
+  first_appear_title: ''
+  details:
+    appearance:
+    - 老者形象，具体不详
+    ability:
+    - 蛊仙级别，能潜伏在蛊虫中，知晓很多秘密
+    rank:
+    - 蛊仙
+    background:
+    - 走投无路、难以公开露面的可怜人，暗中观察商心慈。
+    source:
+    - 假蛊中忽然亮起一抹光晕，迅速凝聚成一个老者影像。
+- name: 金毛仙王
+  aliases: []
+  summary: 毛民蛊仙，八转，方源麾下三大使节之一，性格暴躁。
+  rank: ''
+  first_appear_title: ''
+  details:
+    cultivation:
+    - 八转
+    background:
+    - 来自毛民，对方源狂热忠诚。
+    source:
+    - 金毛仙王则带着一抹狂热之色。
+- name: 结石勇士
+  aliases: []
+  summary: 人族蛊仙，专修变化道，开发硬肝蛊残方，后被方源完善。
+  rank: ''
+  first_appear_title: ''
+  details:
+    cultivation:
+    - 蛊仙（具体未知）
+    background:
+    - 来自兽灾洞天，因肝命大阵而闻名。
+    source:
+    - 其中一位人族蛊仙竟因此开发出了一记变化道仙蛊残方——硬肝蛊。
+- name: 顾明旭
+  aliases:
+  - 暖阳仙君
+  summary: 东海散仙，有情有义，家乡遭方源麾下屠戮。
+  rank: ''
+  first_appear_title: ''
+  details:
+    cultivation:
+    - 散仙（具体未知）
+    background:
+    - 守秩序的散仙，之前婉拒汤家招揽。
+    source:
+    - 顾明旭心中悲号。
+- name: 柴干
+  aliases:
+  - 柴家太上大长老
+  summary: 柴家现任领袖，面对方源强买压力。
+  rank: ''
+  first_appear_title: ''
+  details:
+    cultivation:
+    - 八转（推测）
+    background:
+    - 领导柴家，面临方源索取贤才入瓮杀招和人烟山的困境。
+    source:
+    - 柴家太上大长老沉吟了一番。
+- name: 柴可卿
+  aliases: []
+  summary: 柴家女仙，性情刚烈，当场怒斥方源。
+  rank: ''
+  first_appear_title: ''
+  details:
+    cultivation:
+    - 蛊仙（具体未知）
+    background:
+    - 柴家成员，维护家族尊严。
+    source:
+    - 柴家诸仙震惊不已。‘草菅人命，魔头该死！！！’
+- name: 柴夫
+  aliases:
+  - 柴家始祖
+  summary: 柴家创立者，八转散修，发明贤才入瓮杀招。
+  rank: ''
+  first_appear_title: ''
+  details:
+    cultivation:
+    - 八转（已故）
+    background:
+    - 寿命将尽时顿悟，建立柴家。
+    source:
+    - 柴夫早已在闭关的时候，回忆过一生。
+- name: 芳土
+  aliases:
+  - 凡人少女
+  - 小芳妹子
+  - 小芳姑娘
+  - 芳土丫头
+  summary: 人族凡人少女，在土家寨贩卖蘑菇，救下菇人黄小米。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 凡人少女顿时吓了一大跳。
+    - 芳土丫头，你来啦？
+- name: 黄小米
+  aliases:
+  - 菇人大哥哥
+  - 小米哥哥
+  summary: 菇人部族成员，被芳土救下，后得到黄婉救治。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 菇人黄小米包裹得严严实实。
+    - 黄小米闷声不吭地帮助梦求真摆放。
+- name: 青兽
+  aliases:
+  - 光头青年
+  - 光头
+  - 乐土
+  - 土乐
+  summary: 人族光头少年，黄婉的义子（实为亲生儿子），后来成为乐土仙尊。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 光头青年浓眉大眼，但头上却毫无一丝头发，并且还纹了一个青色的野兽头颅的图案。
+    - 诨号叫做青兽的光头青年指手画脚着。
+- name: 黄婉
+  aliases:
+  - 前代巫女
+  - 婉儿
+  - 光头青年的母亲
+  - 菇人黄婉
+  summary: 菇人部族的前任巫女，擅长毒道，潜入土家寨养子。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 这位菇人黄婉隐姓埋名，潜藏在人族势力土家寨中生活。
+    - 黄婉冷哼一声，索性撤销伪装，还原本来面貌。
+- name: 土家寨主
+  aliases:
+  - 寨主大人
+  - 寨主
+  summary: 土家寨的统治者，五转修为，青兽的生父。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 土家寨主却没有直接发动进攻，而是迈前几步，盯着黄婉神情复杂。
+    - 成大事者不拘小节！你现在才看清我，太晚了！婉儿。
+- name: 吴魈
+  aliases:
+  - 吴魈大师
+  - 吴大师
+  summary: 南疆六大医师之一，专修魂道，擅长搜魂。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 吴魈见过土家寨主。
+    - 吴魈大师，请出来罢。
+- name: 盖槑
+  aliases:
+  - 天极子
+  - 胖子
+  summary: 专修智道的蛊仙，被封为天极子，但性格慵懒，不愿认真推算。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 盖槑，你是天极子，专修智道。
+    - 胖子趴在桌案上，已然熟睡，甚至口水都从嘴角，淌到衣袖上。
+- name: 明皓仙子
+  aliases:
+  - 小女童
+  summary: 天庭的亚仙尊战力，拥有逍遥智心体，掌控谦虚蛊和骄傲蛊，擅长智道和星道。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 明皓仙子不禁流露出感兴趣的神色。
+    - 明皓仙子哈哈大笑，说道。
+    - 明皓仙子眉头皱得就越紧了。
+    background:
+    - 由童年星宿分离出的星影化身，名字意为明眸皓齿。
+- name: 萧荷尖
+  aliases:
+  - 小人蛊仙
+  summary: 方源麾下的八转蛊仙，好战凶残，曾与冰晶仙王联手进攻青莲大世界。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 萧荷尖担任头领之责，直接喝斥一声。
+    - 萧荷尖翻白眼：“贡献咱们瓜分。”
+- name: 陈诚
+  aliases:
+  - 赤诚之仙
+  summary: 北原散修，专修律道，因早年赌约与黑月仙子对战。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 陈诚一系青衣，背负双手，傲然站立。
+    - 陈诚瞳孔猛地收缩，大皱眉头。
+- name: 步天空
+  aliases:
+  - 石猴
+  summary: 疯魔窟气运之子，修变化道，战力极强，曾斩杀四位八转蛊仙，最终被方源一击击杀。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 步天空已经陷入疯狂之中，他发现了不远处的方源，竟舍弃了陆畏因，直接杀向方源！
+    - 方源微微转身，向后轻轻地挥了挥手。下一刻，步天空宛若流星一般...死了。
+- name: 聂狂风
+  aliases: []
+  summary: 疯魔窟气运之子，修风道，入魔后实力暴涨，但在目睹步天空被杀后恐惧逃离。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 聂狂风哈哈大笑，身影飘忽不定，在飞叶中灵活闪躲...
+    - 聂狂风一个激灵。下一刻，无边的恐惧攥住了他整个身心！
+- name: 殷无缺
+  aliases: []
+  summary: 月道散修，实力不俗，被黑楼兰击败后选择加入她的队伍。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 殷无缺不断飞退，同时伸出手指头，遥遥对准黑楼兰。
+    - 殷无缺苦笑道：“实不相瞒，若不和仙子同行，刘家蛊仙前来算账，必定不会放过我。”
+- name: 阮丹
+  aliases: []
+  summary: 天庭蛊仙，拥有仙道杀招救命大还丹，可复活自身。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 仙道杀招——救命大还丹！杀招之下，阮丹已经被砸破的脑壳迅速愈合，很快就又重新复活。
+- name: 煞狴九十五
+  aliases: []
+  summary: 太古传奇煞狴，由七煞元君提炼煞狴而来，曾属于七煞元君，与阮丹情谊深厚。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 煞狴九十五大吼，急忙从另一处奔赴救援。他虽然平时和阮丹不对付，经常吵架，但事实上两者情谊很深。
+- name: 毓秀仙子
+  aliases: []
+  summary: 星宿仙尊的三相之一，智道亚仙尊，拥有境界压制手段。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 由青年星宿分离出的星影化身，名字意为钟灵毓秀。
+    source:
+    - 毓秀仙子叹息一声，终于不得不出手，飞速下山，来战气海老祖。
+- name: 丰雅仙子
+  aliases: []
+  summary: 星宿仙尊的三相之一，智道亚仙尊，操纵星宿棋盘收取元境。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 由晚年星宿分离出的星影化身，名字意为丰神雅量。
+    source:
+    - 丰雅仙子望着冲上来的战部渡，微微一笑。
+- name: 眉公
+  aliases: []
+  summary: 天庭仙墓中苏醒的老年蛊仙，擅长木道杀招，双眉奇特。
+  rank: ''
+  first_appear_title: ''
+  details:
+    appearance:
+    - 老年模样，慈眉善目，一双眉毛仿佛深褐树根，垂至胸前。
+    source:
+    - 老年蛊仙眉公眯着双眼。
+    - 眉公、铜公仍旧并肩而立，拼死挡在方源本体的路上。
+    - 眉公、铜公就再次交代了性命。
+- name: 铜公
+  aliases: []
+  summary: 天庭仙墓中苏醒的中年蛊仙，体格雄壮，肌肤如黄铜，擅长铜环杀招。
+  rank: ''
+  first_appear_title: ''
+  details:
+    appearance:
+    - 中年男子，体格雄壮至极，满脸肌肤好似黄铜，散发着冰冷的金属光泽。
+    source:
+    - 中年蛊仙铜公目光穿透数万里，立即锁定住了劫运坛。
+    - 眉公、铜公仍旧并肩而立，拼死挡在方源本体的路上。
+- name: 七煞元君
+  aliases: []
+  summary: 气道名留青史的八转强者，曾提炼九十九头煞狴，擅长煞气嶙峋杀招。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 七煞元君也是气道中名留青史的强者。
+    - '''看我一招——煞气嶙峋。'''
+- name: 金箍仙王
+  aliases: []
+  summary: 天庭蛊仙，对巨阳仙尊施展金箍。
+  rank: ''
+  first_appear_title: ''
+- name: 末代战兽王
+  aliases: []
+  summary: 方源任命的星罗城主，负责至尊仙窍内务，抵御灾劫时阵亡。
+  rank: ''
+  first_appear_title: ''
+- name: 何春秋
+  aliases: []
+  summary: 方源的水道宙道分身，八转蛊仙，负责至尊仙窍内的资源点建设和宙道加速。
+  rank: 八转
+  first_appear_title: ''
+  details:
+    rank:
+    - 八转
+    source:
+    - 何春秋显露身形，低喝一声，伸手虚提。
+- name: 元莲意志
+  aliases:
+  - 元莲仙尊意志
+  - 元莲仙尊
+  summary: 三十万年前中古时代仙尊，开创因果神树杀招，留下豆神宫和安居乐业壁画世界。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 元莲仙尊凭此蛊，成为历代九转蛊仙中，仙元最充沛的人物。
+    - 那个人，便是天庭之主，元莲仙尊！
+    - 元莲仙尊也没有透露过。
+- name: 罗足
+  aliases:
+  - 罗家太上大长老
+  summary: 南疆罗家太上大长老，七转修为，忧心罗家前途。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 罗家太上大长老罗足只有七转修为，他环视一圈，开口道。
+- name: 罗然
+  aliases: []
+  summary: 罗家大将，七转巅峰战力，专修宇道，主张投靠中洲。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 此人专修宇道，乃是罗家大将罗然。
+- name: 华语老仙
+  aliases:
+  - 华语
+  summary: 华文洞天八转蛊仙，隐居幕后，曾尊崇气海老祖，后羞愤。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 华语老仙一直十分尊敬气海老祖，加入正气盟后，一直唯气海老祖马首是瞻。
+    - 华语老仙、梁晶晶以及骷髅姥姥等一批洞天蛊仙的领袖
+- name: 苏晨
+  aliases: []
+  summary: 苏家七转蛊仙，擅长治疗手段，与苏冥顽一同开采千年玄冰。
+  rank: 七转
+  first_appear_title: ''
+  details:
+    rank:
+    - 七转
+    source:
+    - 苏晨立即动手，将这块千年玄冰放入自家仙窍。
+- name: 苏冥顽
+  aliases: []
+  summary: 苏家七转蛊仙，专修暗道，与苏晨一同开采千年玄冰。
+  rank: 七转
+  first_appear_title: ''
+  details:
+    rank:
+    - 七转
+    source:
+    - 苏冥顽尽全力加快速度
+- name: 古月方想
+  aliases: []
+  summary: 毛民与人族混血蛊师，古月方正之子，被毛民势力暗中栽培为蛊仙种子。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 他叫做古月方想。
+    - 古月方想是毛民和人族的混血儿，在毛民是霸主的黑毛大陆上，他饱受鄙夷。
+- name: 石三百
+  aliases: []
+  summary: 石人蛊仙，专修土道，在至尊仙窍中参与资源点建设。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 石人蛊仙石三百便谢道：“鱼姿仙友专修水道...”
+- name: 萧七星
+  aliases: []
+  summary: 萧白虹的重孙子，人道十子之一，专修人道，计划炼制正义仙蛊作为本命蛊晋升蛊仙。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 一旦炼成正义仙蛊，我就能凭此蛊充当本命蛊，正式晋升为人道蛊仙了！
+- name: 光帝君
+  aliases:
+  - 巨阳仙尊大儿子
+  summary: 专修光道的亚仙尊，被巨阳仙尊从血海复活，自称‘天上地下我最闪耀’。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 光帝君反应过来，看向不远处的药皇
+    - 光帝君摸着自己的光头
+    - 光帝君术业有专攻，想到了唯一一个解决之法。
+- name: 佑天光
+  aliases:
+  - 太古传奇荒兽
+  summary: 人形太古传奇荒兽，曾诈死躲藏于太阳中，携带九转光蛊逃窜。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 佑天光一边吐血，一边大骂
+    - 佑天光双臂挥舞，身形如光如电
+- name: 梁晶晶
+  aliases: []
+  summary: 两天洞天蛊仙，拥有光天，曾转投天庭，但后悔失去大爱盟贡献。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 梁晶晶也在饱受考验
+    - 梁晶晶并不担心方源会不守承诺
+- name: 骷髅姥姥
+  aliases: []
+  summary: 两天洞天蛊仙，位于太古黑天，随华语老仙转投天庭。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 骷髅姥姥等一批蛊仙，他们的洞天都位于太古黑天中
+- name: 商讨饭
+  aliases: []
+  summary: 南疆商家边缘人物，被商家派作代表秘密加入天地一家大爱盟。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 商讨饭在商家乃是边缘人物，但这一次，却是被商家当做代表
+- name: 朱珠
+  aliases: []
+  summary: 巨阳仙尊回忆中的妻子，渴望生育孩子，擅长使用变化道蛊。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 曾用播种猪蛊尝试怀孕，但未成功。
+    source:
+    - 朱珠，你又给我暗中用了什么蛊？
+    - 朱珠叹息：“对不起，夫君，但我只是想要一个孩子啊。”
+- name: 费雾
+  aliases: []
+  summary: 费家末代太上大家老，七转水道蛊仙，被巨阳仙尊复活。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 曾经是费家领袖，因开拓禁地导致家族覆灭，实则对抗混元一气子。
+    source:
+    - 费家末代太上大家老——费雾？
+    - 尊祖英明！所谓费家内耗，只是我们对外的伪装。
+- name: 混元一气子
+  aliases:
+  - 一气子
+  summary: 太古传奇荒兽，由混元之气构成，能产出仙元石，被费家封印。
+  rank: ''
+  first_appear_title: ''
+  details:
+    background:
+    - 曾被元始仙尊囚禁，后自杀，又在禁地复苏。
+    source:
+    - 一气子并非他的全名，他的全名应当是混元一气子。
+    - 费家举族的成果，即便是太古传奇也要被我家封印！
+- name: 林剑行
+  aliases: []
+  summary: 天外之魔，剑道亚仙尊，被天庭利用其剑气封印气海老祖。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 星宿仙尊身为古往今来的智道第一人，在三尊对峙之间，凭借种种蛛丝马迹，推算出了林剑行乃是天外之魔。
+    - 气流形成的林剑行栩栩如生，却是面目表情。
+- name: 杨峰
+  aliases: []
+  summary: 古魂门七转蛊仙，专修变化道，能变身巨狼上古荒兽。在爆炸中腰部受伤严重。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 他是古魂门的七转蛊仙，专修变化道。
+    - 他专修变化道，这个巨狼变化已经熟练至极，仿佛刻在骨子里一样。
+- name: 赤心行者
+  aliases: []
+  summary: 天庭成员，血道蛊仙，前任诛魔榜主。
+  rank: ''
+  first_appear_title: ''
+  details:
+    source:
+    - 赤心行者乃是血道蛊仙，是诛魔榜上一任的榜主。
