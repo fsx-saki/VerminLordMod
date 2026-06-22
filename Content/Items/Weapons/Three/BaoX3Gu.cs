@@ -4,18 +4,18 @@ using Terraria.ModLoader;
 using VerminLordMod.Common.GuBehaviors;
 using VerminLordMod.Content.DamageClasses;
 using VerminLordMod.Content.Items.Weapons.Daos;
-using VerminLordMod.Content.Projectiles;
+using VerminLordMod.Content.Projectiles.Zero;
 
 namespace VerminLordMod.Content.Items.Weapons.Three
 {
     /// <summary>
-    /// 三转火道蛊虫 — 爆燃蛊
-    /// 罕见的三转攻击蛊虫，能产生爆燃效果。
+    /// 三转火道蛊虫 — 爆燃蛊·极
+    /// 爆燃蛊的极致变种，更大的爆炸范围与燃烧区域。
     /// </summary>
     public class BaoX3Gu : FireWeapon, IOnHitEffectProvider
     {
         protected override int qiCost => 20;
-        protected override int _useTime => 18;
+        protected override int _useTime => 20;
         protected override int _guLevel => 3;
         protected override int controlQiCost => 12;
         protected override float unitConntrolRate => 15;
@@ -36,7 +36,7 @@ namespace VerminLordMod.Content.Items.Weapons.Three
         {
             Item.width = 26;
             Item.height = 26;
-            Item.damage = 35;
+            Item.damage = 38;
             Item.DamageType = ModContent.GetInstance<InsectDamageClass>();
             Item.knockBack = 4f;
             Item.crit = 4;
@@ -44,12 +44,12 @@ namespace VerminLordMod.Content.Items.Weapons.Three
             Item.maxStack = 1;
             Item.value = 5000;
             Item.useStyle = ItemUseStyleID.Shoot;
-            Item.useAnimation = 18;
-            Item.useTime = 18;
-            Item.UseSound = SoundID.Item1;
+            Item.useAnimation = 20;
+            Item.useTime = 20;
+            Item.UseSound = SoundID.Item14;
             Item.scale = 1f;
-            Item.shoot = ModContent.ProjectileType<BaoXProj>();
-            Item.shootSpeed = 12f;
+            Item.shoot = ModContent.ProjectileType<BaoX3ExplosionProj>();
+            Item.shootSpeed = 10f;
             Item.noMelee = true;
             Item.noUseGraphic = false;
             Item.autoReuse = true;

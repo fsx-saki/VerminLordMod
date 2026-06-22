@@ -26,8 +26,8 @@ namespace VerminLordMod.Content.Projectiles.Zero
         /// <summary>飞行速度</summary>
         private const float FlySpeed = 8f;
 
-        /// <summary>爆炸时生成的星火弹数量</summary>
-        private const int SparkCount = 12;
+		/// <summary>爆炸时生成的星火弹数量</summary>
+		private const int SparkCount = 6;
 
         /// <summary>星火弹飞散速度</summary>
         private const float SparkSpeed = 6f;
@@ -86,9 +86,9 @@ namespace VerminLordMod.Content.Projectiles.Zero
 
         public override void SetDefaults()
         {
-            Projectile.width = 20;
-            Projectile.height = 20;
-            Projectile.scale = 1.2f;
+		Projectile.width = 10;
+		Projectile.height = 10;
+		Projectile.scale = 0.8f;
             Projectile.ignoreWater = true;
             Projectile.tileCollide = true;
             Projectile.penetrate = 99;

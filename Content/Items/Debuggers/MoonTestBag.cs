@@ -59,12 +59,12 @@ namespace VerminLordMod.Content.Items.Debuggers
 			if (player.whoAmI == Main.myPlayer)
 				Main.NewText("月道测试物品已发放！", new Color(180, 210, 255));
 		}
-
-		public override void AddRecipes()
-		{
-			CreateRecipe()
-				.AddIngredient(ModContent.ItemType<Consumables.YuanS>(), 1)
-				.Register();
-		}
+		// 配方已移除，如需重新启用请取消注释下方代码
+		//public override void AddRecipes()
+		//{
+		//	CreateRecipe()
+		//		.AddIngredient(ModContent.ItemType<Consumables.YuanS>(), 1)
+		//		.Register();
+		//}
 	}
 }

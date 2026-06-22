@@ -237,7 +237,6 @@ Projectiles: {
 	// ChouPiProj.DisplayName: Chou Pi Proj
 	// ChouPiProjGu.DisplayName: Chou Pi Proj Gu
 	// ChuiYanProj.DisplayName: Chui Yan Proj
-	// ChuiYanProjGu.DisplayName: Chui Yan Proj Gu
 	// ChunProjangWuXianGu.DisplayName: Chun Projang Wu Xian Gu
 	// ChunYuProj.DisplayName: Chun Yu Proj
 	// CunXiYuXProj.DisplayName: Cun Xi Yu X Proj
@@ -622,6 +621,14 @@ Projectiles: {
 	// MoonCutProj.DisplayName: Moon Cut Proj
 	// MoonNovaProj.DisplayName: Moon Nova Proj
 	// MoonTideProj.DisplayName: Moon Tide Proj
+	// SanQiaoHuoWuProj.DisplayName: San Qiao Huo Wu Proj
+	// ShuangQiaoHuoLuProj.DisplayName: Shuang Qiao Huo Lu Proj
+	// SiQiaoHuoLouProj.DisplayName: Si Qiao Huo Lou Proj
+	// BaoX3ExplosionProj.DisplayName: Bao X3 Explosion Proj
+	// HuoLongTwistedProj.DisplayName: Huo Long Twisted Proj
+	// FenShenHomingProj.DisplayName: Fen Shen Homing Proj
+	// FenShenFlameProj.DisplayName: Fen Shen Flame Proj
+	// BurningEffectProj.DisplayName: Burning Effect Proj
 }
 
 Prefixes: {
@@ -6449,12 +6456,48 @@ Items: {
 		Tooltip: 灵气消散后的废墟土壤
 	}
 
+	ShuangQiaoHuoLuGu: {
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 双窍火炉蛊
+		Tooltip:
+			'''
+			二转炎道蛊虫，单窍火炭蛊的进阶，拥有两个火窍，火力倍增
+			炼制自单窍火炭蛊
+			'''
+	}
+
+	SanQiaoHuoWuGu: {
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 三窍火屋蛊
+		Tooltip:
+			'''
+			三转炎道蛊虫，双窍火炉蛊的进阶，拥有三个火窍，化作火屋镇守一方
+			炼制自双窍火炉蛊
+			'''
+	}
+
+	SiQiaoHuoLouGu: {
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 四窍火楼蛊
+		Tooltip:
+			'''
+			四转炎道蛊虫，三窍火屋蛊的进阶，拥有四个火窍，化作高楼镇压八方
+			炼制自三窍火屋蛊
+			'''
+	}
+
 	BaiGuCheLunGu: {
-		// UsesXQi: Mods.VerminLordMod.Items.BaiGuCheLunGu.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.BaiGuCheLunGu.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.BaiGuCheLunGu.GuLevel
-		// DisplayName: Bai Gu Che Lun Gu
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 白骨车轮蛊
+		Tooltip: 五转火道蛊虫，以白骨为轮，烈焰为轴，碾碎一切
 	}
 
 	BaiXiangXianSheGu: {
@@ -6647,11 +6690,11 @@ Items: {
 	}
 
 	HuoYanPiFengGu: {
-		// UsesXQi: Mods.VerminLordMod.Items.HuoYanPiFengGu.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.HuoYanPiFengGu.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.HuoYanPiFengGu.GuLevel
-		// DisplayName: Huo Yan Pi Feng Gu
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 火焰披风蛊
+		Tooltip: 五转火道蛊虫，身披烈焰披风，攻防一体
 	}
 
 	JianMoGu: {
@@ -6831,11 +6874,11 @@ Items: {
 	}
 
 	WuXHuoTaGu: {
-		// UsesXQi: Mods.VerminLordMod.Items.WuXHuoTaGu.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.WuXHuoTaGu.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.WuXHuoTaGu.GuLevel
-		// DisplayName: Wu X Huo Ta Gu
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 五窍火塔蛊
+		Tooltip: 五转炎道蛊虫，窍火系列的终极形态，拥有五个火窍，火塔镇压天地
 	}
 
 	XHuaiGangZongGu: {
@@ -7039,11 +7082,11 @@ Items: {
 	}
 
 	HuoSheGu: {
-		// UsesXQi: Mods.VerminLordMod.Items.HuoSheGu.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.HuoSheGu.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.HuoSheGu.GuLevel
-		// DisplayName: Huo She Gu
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 火蛇蛊
+		Tooltip: 四转火道蛊虫，召唤火蛇缠绕焚烧敌人
 	}
 
 	JinFengSongShuangGu: {
@@ -7087,11 +7130,11 @@ Items: {
 	}
 
 	ShuiBiGu: {
-		// UsesXQi: Mods.VerminLordMod.Items.ShuiBiGu.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.ShuiBiGu.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.ShuiBiGu.GuLevel
-		// DisplayName: Shui Bi Gu
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 水壁蛊
+		Tooltip: 四转水道——炎道蛊虫，以水化壁，水火相济，攻守兼备
 	}
 
 	ShuiPuGu: {
@@ -7135,11 +7178,11 @@ Items: {
 	}
 
 	TunHuoGu: {
-		// UsesXQi: Mods.VerminLordMod.Items.TunHuoGu.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.TunHuoGu.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.TunHuoGu.GuLevel
-		// DisplayName: Tun Huo Gu
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 吞火蛊
+		Tooltip: 四转火道蛊虫，可吞噬火焰化为己用
 	}
 
 	WindFlowerGu: {
@@ -7276,19 +7319,11 @@ Items: {
 	}
 
 	ChuiYanGu: {
-		// UsesXQi: Mods.VerminLordMod.Items.ChuiYanGu.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.ChuiYanGu.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.ChuiYanGu.GuLevel
-		// DisplayName: Chui Yan Gu
-		// Tooltip: ""
-	}
-
-	ChuiYanGuGu: {
-		// UsesXQi: Mods.VerminLordMod.Items.ChuiYanGuGu.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.ChuiYanGuGu.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.ChuiYanGuGu.GuLevel
-		// DisplayName: Chui Yan Gu Gu
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 炊烟蛊
+		Tooltip: 一转火道蛊虫，可放出炊烟混淆视线，也可操控火焰攻击
 	}
 
 	DaLiGu: {
@@ -8153,11 +8188,11 @@ Items: {
 	}
 
 	BaoX3Gu: {
-		// UsesXQi: Mods.VerminLordMod.Items.BaoX3Gu.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.BaoX3Gu.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.BaoX3Gu.GuLevel
-		// DisplayName: Bao X3 Gu
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 爆燃蛊·极
+		Tooltip: 三转火道蛊虫，爆燃蛊的极致变种，更快的射速与更高的爆发
 	}
 
 	BeiShanHaMaGu: {
@@ -8249,11 +8284,11 @@ Items: {
 	}
 
 	FenShenGu: {
-		// UsesXQi: Mods.VerminLordMod.Items.FenShenGu.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.FenShenGu.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.FenShenGu.GuLevel
-		// DisplayName: Fen Shen Gu
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 焚身蛊
+		Tooltip: 三转火道蛊虫，燃烧己身化为烈焰，焚尽万物
 	}
 
 	FlyingBoneShieldGu: {
@@ -8337,11 +8372,11 @@ Items: {
 	}
 
 	HuoZhuaGu: {
-		// UsesXQi: Mods.VerminLordMod.Items.HuoZhuaGu.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.HuoZhuaGu.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.HuoZhuaGu.GuLevel
-		// DisplayName: Huo Zhua Gu
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 火爪蛊
+		Tooltip: 三转火道蛊虫，凝火成爪，撕碎前方一切敌人
 	}
 
 	IceBombGu: {
@@ -8470,11 +8505,11 @@ Items: {
 	}
 
 	RenShouXShengGu: {
-		// UsesXQi: Mods.VerminLordMod.Items.RenShouXShengGu.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.RenShouXShengGu.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.RenShouXShengGu.GuLevel
-		// DisplayName: Ren Shou X Sheng Gu
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 人兽葬生蛊
+		Tooltip: 三转火道蛊虫，以生灵为薪，燃葬生之火
 	}
 
 	RenYaoGu: {
@@ -8830,11 +8865,11 @@ Items: {
 	}
 
 	HongYanMangGu: {
-		// UsesXQi: Mods.VerminLordMod.Items.HongYanMangGu.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.HongYanMangGu.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.HongYanMangGu.GuLevel
-		// DisplayName: Hong Yan Mang Gu
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 红岩蟒
+		Tooltip: 二转火道蛊虫，化出一条红岩巨蟒吞噬敌人，灼烧一切
 	}
 
 	JinZhenGu: {
@@ -10323,11 +10358,11 @@ Items: {
 	}
 
 	YanHuaXianGu: {
-		// GuLevel: Mods.VerminLordMod.Items.YanHuaXianGu.GuLevel
-		// ControlRate: Mods.VerminLordMod.Items.YanHuaXianGu.ControlRate
-		// UsesXQi: Mods.VerminLordMod.Items.YanHuaXianGu.UsesXQi
-		// DisplayName: Yan Hua Xian Gu
-		// Tooltip: ""
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元消耗"
+		DisplayName: 烟花仙蛊
+		Tooltip: 五转炎道仙蛊，绽放璀璨烟花，焚尽夜空
 	}
 
 	XueShenZi: {
@@ -10363,11 +10398,11 @@ Items: {
 	}
 
 	XiaGu: {
-		// GuLevel: Mods.VerminLordMod.Items.XiaGu.GuLevel
-		// ControlRate: Mods.VerminLordMod.Items.XiaGu.ControlRate
-		// UsesXQi: Mods.VerminLordMod.Items.XiaGu.UsesXQi
-		// DisplayName: Xia Gu
-		// Tooltip: ""
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元消耗"
+		DisplayName: 夏蛊
+		Tooltip: 八转炎道仙蛊，盛夏之炎，焚天煮海
 	}
 
 	TuoYuXianGu: {
@@ -10393,11 +10428,11 @@ Items: {
 	}
 
 	ShuoShiDaoFei: {
-		// GuLevel: Mods.VerminLordMod.Items.ShuoShiDaoFei.GuLevel
-		// ControlRate: Mods.VerminLordMod.Items.ShuoShiDaoFei.ControlRate
-		// UsesXQi: Mods.VerminLordMod.Items.ShuoShiDaoFei.UsesXQi
-		// DisplayName: Shuo Shi Dao Fei
-		// Tooltip: ""
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元消耗"
+		DisplayName: 烁石刀飞
+		Tooltip: 三转火道攻击蛊，烁石飞刀，灼热锋锐
 	}
 
 	ShuiLianXianGu: {
@@ -10543,11 +10578,11 @@ Items: {
 	}
 
 	JiuZhuanHuoGu: {
-		// GuLevel: Mods.VerminLordMod.Items.JiuZhuanHuoGu.GuLevel
-		// ControlRate: Mods.VerminLordMod.Items.JiuZhuanHuoGu.ControlRate
-		// UsesXQi: Mods.VerminLordMod.Items.JiuZhuanHuoGu.UsesXQi
-		// DisplayName: Jiu Zhuan Huo Gu
-		// Tooltip: ""
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元消耗"
+		DisplayName: 九转火蛊
+		Tooltip: 六转炎道仙蛊，九转涅槃，火中重生
 	}
 
 	JinLvYiGu: {
@@ -10759,11 +10794,11 @@ Items: {
 	}
 
 	CanZhu: {
-		// GuLevel: Mods.VerminLordMod.Items.CanZhu.GuLevel
-		// ControlRate: Mods.VerminLordMod.Items.CanZhu.ControlRate
-		// UsesXQi: Mods.VerminLordMod.Items.CanZhu.UsesXQi
-		// DisplayName: Can Zhu
-		// Tooltip: ""
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元消耗"
+		DisplayName: 残烛
+		Tooltip: 六转炎道仙蛊，追命残烛，烛火燃尽之时便是敌殒命之日
 	}
 
 	BuGuaGuiBeiXianGu: {
@@ -11974,6 +12009,11 @@ Items: {
 
 	MoonTestBag: {
 		// DisplayName: Moon Test Bag
+		// Tooltip: ""
+	}
+
+	FireTestBag: {
+		// DisplayName: Fire Test Bag
 		// Tooltip: ""
 	}
 }
@@ -13387,6 +13427,11 @@ Buffs: {
 	ShenYouImmobilizeBuff: {
 		// DisplayName: Shen You Immobilize Buff
 		// Description: Mods.VerminLordMod.Buffs.ShenYouImmobilizeBuff.Description
+	}
+
+	FenShenBuff: {
+		// DisplayName: Fen Shen Buff
+		// Description: Mods.VerminLordMod.Buffs.FenShenBuff.Description
 	}
 }
 

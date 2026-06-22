@@ -4,17 +4,17 @@ using Terraria.ModLoader;
 using VerminLordMod.Common.GuBehaviors;
 using VerminLordMod.Content.DamageClasses;
 using VerminLordMod.Content.Items.Weapons.Daos;
-using VerminLordMod.Content.Projectiles;
+using VerminLordMod.Content.Projectiles.Zero;
 
 namespace VerminLordMod.Content.Items.Weapons.Three
 {    /// <summary>
-    /// 三转道蛊虫 — BaoRanGu
-    /// 蛊虫
+    /// 三转火道蛊虫 — 爆燃蛊
+    /// 发射爆燃弹，命中后引发大范围爆炸并施加灼烧
     /// </summary>
     public class BaoRanGu : FireWeapon, IOnHitEffectProvider
     {
         protected override int qiCost => 32;
-        protected override int _useTime => 25;
+        protected override int _useTime => 30;
         protected override int _guLevel => 3;
         protected override int controlQiCost => 16;
         protected override float unitConntrolRate => 10;
@@ -35,7 +35,7 @@ namespace VerminLordMod.Content.Items.Weapons.Three
         {
             Item.width = 26;
             Item.height = 26;
-            Item.damage = 50;
+            Item.damage = 55;
             Item.DamageType = ModContent.GetInstance<InsectDamageClass>();
             Item.knockBack = 8f;
             Item.crit = 6;
@@ -43,12 +43,12 @@ namespace VerminLordMod.Content.Items.Weapons.Three
             Item.maxStack = 1;
             Item.value = 5800;
             Item.useStyle = ItemUseStyleID.Shoot;
-            Item.useAnimation = 25;
-            Item.useTime = 25;
+            Item.useAnimation = 30;
+            Item.useTime = 30;
             Item.UseSound = SoundID.Item14;
             Item.scale = 1f;
-            Item.shoot = ModContent.ProjectileType<BaoRanProj>();
-            Item.shootSpeed = 7f;
+            Item.shoot = ModContent.ProjectileType<FireExplosionProj>();
+            Item.shootSpeed = 8f;
             Item.noMelee = true;
             Item.noUseGraphic = false;
             Item.autoReuse = true;

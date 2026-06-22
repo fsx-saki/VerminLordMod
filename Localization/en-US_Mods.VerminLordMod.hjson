@@ -237,7 +237,6 @@ Projectiles: {
 	ChouPiProj.DisplayName: Chou Pi Proj
 	ChouPiProjGu.DisplayName: Chou Pi Proj Gu
 	ChuiYanProj.DisplayName: Chui Yan Proj
-	ChuiYanProjGu.DisplayName: Chui Yan Proj Gu
 	ChunProjangWuXianGu.DisplayName: Chun Projang Wu Xian Gu
 	ChunYuProj.DisplayName: Chun Yu Proj
 	CunXiYuXProj.DisplayName: Cun Xi Yu X Proj
@@ -622,6 +621,14 @@ Projectiles: {
 	MoonCutProj.DisplayName: Moon Cut Proj
 	MoonNovaProj.DisplayName: Moon Nova Proj
 	MoonTideProj.DisplayName: Moon Tide Proj
+	SanQiaoHuoWuProj.DisplayName: San Qiao Huo Wu Proj
+	ShuangQiaoHuoLuProj.DisplayName: Shuang Qiao Huo Lu Proj
+	SiQiaoHuoLouProj.DisplayName: Si Qiao Huo Lou Proj
+	BaoX3ExplosionProj.DisplayName: Bao X3 Explosion Proj
+	HuoLongTwistedProj.DisplayName: Huo Long Twisted Proj
+	FenShenHomingProj.DisplayName: Fen Shen Homing Proj
+	FenShenFlameProj.DisplayName: Fen Shen Flame Proj
+	BurningEffectProj.DisplayName: Burning Effect Proj
 }
 
 Prefixes: {
@@ -6412,6 +6419,30 @@ Items: {
 		Tooltip: 灵气消散后的废墟土壤
 	}
 
+	ShuangQiaoHuoLuGu: {
+		UsesXQi: "{0} Qi Cost"
+		ControlRate: Refinement: {0}%
+		GuLevel: Turn: {0}
+		DisplayName: Shuang Qiao Huo Lu Gu
+		Tooltip: Second-turn fire path gu, upgraded from Stove Gu with dual orifices
+	}
+
+	SanQiaoHuoWuGu: {
+		UsesXQi: "{0} Qi Cost"
+		ControlRate: Refinement: {0}%
+		GuLevel: Turn: {0}
+		DisplayName: San Qiao Huo Wu Gu
+		Tooltip: Third-turn fire path gu, upgraded with three fire orifices
+	}
+
+	SiQiaoHuoLouGu: {
+		UsesXQi: "{0} Qi Cost"
+		ControlRate: Refinement: {0}%
+		GuLevel: Turn: {0}
+		DisplayName: Si Qiao Huo Lou Gu
+		Tooltip: Fourth-turn fire path gu, upgraded with four fire orifices
+	}
+
 	BaiGuCheLunGu: {
 		UsesXQi: Mods.VerminLordMod.Items.BaiGuCheLunGu.UsesXQi
 		ControlRate: Mods.VerminLordMod.Items.BaiGuCheLunGu.ControlRate
@@ -7233,14 +7264,6 @@ Items: {
 		ControlRate: Mods.VerminLordMod.Items.ChuiYanGu.ControlRate
 		GuLevel: Mods.VerminLordMod.Items.ChuiYanGu.GuLevel
 		DisplayName: Chui Yan Gu
-		Tooltip: ""
-	}
-
-	ChuiYanGuGu: {
-		UsesXQi: Mods.VerminLordMod.Items.ChuiYanGuGu.UsesXQi
-		ControlRate: Mods.VerminLordMod.Items.ChuiYanGuGu.ControlRate
-		GuLevel: Mods.VerminLordMod.Items.ChuiYanGuGu.GuLevel
-		DisplayName: Chui Yan Gu Gu
 		Tooltip: ""
 	}
 
@@ -11894,6 +11917,11 @@ Items: {
 		DisplayName: Moon Test Bag
 		Tooltip: ""
 	}
+
+	FireTestBag: {
+		DisplayName: Fire Test Bag
+		Tooltip: ""
+	}
 }
 
 MapObject: {
@@ -13305,6 +13333,11 @@ Buffs: {
 	ShenYouImmobilizeBuff: {
 		DisplayName: Shen You Immobilize Buff
 		Description: Mods.VerminLordMod.Buffs.ShenYouImmobilizeBuff.Description
+	}
+
+	FenShenBuff: {
+		DisplayName: Fen Shen Buff
+		Description: Mods.VerminLordMod.Buffs.FenShenBuff.Description
 	}
 }
 

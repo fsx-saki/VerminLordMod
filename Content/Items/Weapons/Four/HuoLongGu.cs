@@ -1,4 +1,6 @@
+using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 using VerminLordMod.Common.GuBehaviors;
@@ -9,7 +11,7 @@ using VerminLordMod.Content.Projectiles;
 namespace VerminLordMod.Content.Items.Weapons.Four
 {    /// <summary>
     /// 四转火道蛊虫 — 火龙蛊
-    /// 四转蛊，化作火龙，能在火海中恢复体型。
+    /// 四转蛊，射出双绞螺旋火焰索，能在火海中恢复体型。
     /// </summary>
     public class HuoLongGu : FireWeapon, IOnHitEffectProvider
     {
@@ -47,11 +49,36 @@ namespace VerminLordMod.Content.Items.Weapons.Four
             Item.useTime = 28;
             Item.UseSound = SoundID.Item20;
             Item.scale = 1f;
-            Item.shoot = ModContent.ProjectileType<HuoLongProj>();
-            Item.shootSpeed = 8f;
+            Item.shoot = ModContent.ProjectileType<HuoLongTwistedProj>();
+            Item.shootSpeed = 10f;
             Item.noMelee = true;
             Item.noUseGraphic = false;
             Item.autoReuse = true;
+        }
+
+        public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+        {
+            // 目标方向角度
+            float angle = velocity.ToRotation();
+
+            // 发射两发弹幕，相位差 π，形成双绞线
+            for (int i = 0; i < 2; i++)
+            {
+                float phase = i * MathHelper.Pi; // 0, π
+                Projectile.NewProjectile(
+                    source,
+                    position,
+                    velocity,
+                    type,
+                    damage,
+                    knockback,
+                    player.whoAmI,
+                    phase,     // ai[0] = 初始轨道相位
+                    angle      // ai[1] = 飞行方向
+                );
+            }
+
+            return false; // 阻止默认射击
         }
     }
 }
