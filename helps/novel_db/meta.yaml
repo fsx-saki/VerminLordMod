@@ -1,5 +1,5 @@
 # 蛊真人 · 小说知识库元信息
-version: 1
+version: 2
 last_updated: 2026-06-22
 data_source: /home/fsx/Documents/novel_analyzer/novel.db
 
@@ -16,6 +16,32 @@ arcs_covered: 6  # 第1-6篇（青茅山～宿命大战）
 chapters_covered: "001-950"
 arc_yamls: 6
 chapter_yamls: 95
+
+# 数据填充状态
+# entity_details 数据覆盖 chapters 1-198（chunk_id: 1-199）
+# arcs 1-2 已填充详细数据，arcs 3-6 为骨架（待后续数据库补充）
+data_completion:
+  chapters_with_entity_data: 198  # 有实体关联数据的章节数
+  arcs_with_full_data: 2         # 有完整数据的篇章数
+  maps_generated:
+    - rank_to_arcs.yaml
+    - gu_to_chapters.yaml     # 603 只蛊 → 章节映射
+    - char_to_chapters.yaml   # 662 个角色 → 章节映射
+  chapter_fields_populated:
+    - gu_mentioned    # 蛊虫提及列表
+    - char_appear     # 角色出场列表
+    - events          # 事件摘录
+    - arc_id          # 所属篇章
+  arc_fields_populated:
+    - summary         # 篇章概要
+    - major_events    # 主要事件（前20条）
+    - new_gu          # 新出现的蛊虫
+    - new_chars       # 新出现的角色
+    - key_locations   # 关键地点
+
+# 限制
+# entity_details 目前仅覆盖前 198 个章节（~20万字），
+# 后续需要扩展数据源以覆盖完整 945 章
 
 # 状态
 status: active
