@@ -6,10 +6,11 @@ data_source: /home/fsx/Documents/novel_analyzer/novel.db
 # 数据统计
 total_chapter_entries: 945   # 数据库中的章节条目数
 unique_chapters: 945
-total_entities: 1547
+total_entities:
   persons: 667
   gu_worms: 603
   locations: 277
+  total: 1547
 
 # 已完成篇章
 arcs_covered: 6  # 第1-6篇（青茅山～宿命大战）
