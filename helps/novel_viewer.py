@@ -673,11 +673,11 @@ async function loadStoryline() {
   const pg = document.getElementById('slPagination');
   if (data.total_pages <= 1) { pg.innerHTML = ''; return; }
   let html = '';
-  const p = data.page, tp = data.total_pages;
-  if (p > 1) html += `<button class="sl-pg" onclick="slState.page=1;loadStoryline()">«</button><button class="sl-pg" onclick="slState.page=${p-1};loadStoryline()">‹</button>`;
+  const pp = data.page, tp = data.total_pages;
+  if (pp > 1) html += `<button class="sl-pg" onclick="slState.page=1;loadStoryline()">«</button><button class="sl-pg" onclick="slState.page=${pp-1};loadStoryline()">‹</button>`;
   for (let i = Math.max(1, p-2); i <= Math.min(tp, p+2); i++)
     html += `<button class="sl-pg ${i===p?'active':''}" onclick="slState.page=${i};loadStoryline()">${i}</button>`;
-  if (p < tp) html += `<button class="sl-pg" onclick="slState.page=${p+1};loadStoryline()">›</button><button class="sl-pg" onclick="slState.page=${tp};loadStoryline()">»</button>`;
+  if (pp < tp) html += `<button class="sl-pg" onclick="slState.page=${pp+1};loadStoryline()">›</button><button class="sl-pg" onclick="slState.page=${tp};loadStoryline()">»</button>`;
   pg.innerHTML = html;
 }
 
@@ -759,11 +759,11 @@ async function loadTimeline() {
   const pg = document.getElementById('tlPagination');
   if (data.total_pages <= 1) { pg.innerHTML = ''; return; }
   let html = '';
-  const p = data.page, tp = data.total_pages;
-  if (p > 1) html += `<button class="sl-pg" onclick="tlState.page=1;loadTimeline()">«</button><button class="sl-pg" onclick="tlState.page=${p-1};loadTimeline()">‹</button>`;
+  const pp = data.page, tp = data.total_pages;
+  if (pp > 1) html += `<button class="sl-pg" onclick="tlState.page=1;loadTimeline()">«</button><button class="sl-pg" onclick="tlState.page=${pp-1};loadTimeline()">‹</button>`;
   for (let i = Math.max(1, p-2); i <= Math.min(tp, p+2); i++)
     html += `<button class="sl-pg ${i===p?'active':''}" onclick="tlState.page=${i};loadTimeline()">${i}</button>`;
-  if (p < tp) html += `<button class="sl-pg" onclick="tlState.page=${p+1};loadTimeline()">›</button><button class="sl-pg" onclick="tlState.page=${tp};loadTimeline()">»</button>`;
+  if (pp < tp) html += `<button class="sl-pg" onclick="tlState.page=${pp+1};loadTimeline()">›</button><button class="sl-pg" onclick="tlState.page=${tp};loadTimeline()">»</button>`;
   pg.innerHTML = html;
 }
 
@@ -806,7 +806,7 @@ function filterEntities() { const q=document.getElementById('entSearch').value.t
 // ─── Modal ────────────────────────────────────────────
 function showModal(html) { document.getElementById('modalBody').innerHTML = html; document.getElementById('entityModal').classList.add('open'); }
 function closeModal() { document.getElementById('entityModal').classList.remove('open'); }
-document.getElementById('entityModal').addEventListener('click', e => { if (e.target === this) closeModal(); });
+const modalEl = document.getElementById('entityModal'); modalEl.addEventListener('click', function(e) { if (e.target === this) closeModal(); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
 // ─── Init ─────────────────────────────────────────────
