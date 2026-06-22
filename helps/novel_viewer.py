@@ -142,23 +142,24 @@ def build_storyline():
         "SELECT id, section_num, title, content FROM sections ORDER BY id"
     ).fetchall()
     
-    # Pre-load entity data per chunk
+    # Pre-load entity data per chunk (all chunks)
     chunk_entities = {}
     for row in conn.execute(
-        "SELECT d.chunk_id, e.name, e.type, d.source_text "
+        "SELECT d.chunk_id, e.name, e.type, d.source_text, d.content "
         "FROM entity_details d JOIN entities e ON e.id = d.entity_id "
-        "WHERE d.chunk_id BETWEEN 1 AND 199"
+        "WHERE d.chunk_id > 0"
     ).fetchall():
         cid = row["chunk_id"]
         if cid not in chunk_entities:
-            chunk_entities[cid] = {"gu": set(), "persons": set(), "events": []}
+            chunk_entities[cid] = {"gu": set(), "persons": set(), "events": set()}
         if row["type"] == "gu_worm":
             chunk_entities[cid]["gu"].add(row["name"])
         elif row["type"] == "person":
             chunk_entities[cid]["persons"].add(row["name"])
-        src = (row["source_text"] or "").strip()
+        # Prefer content (has context text) over source_text (often just name)
+        src = (row["content"] or row["source_text"] or "").strip()
         if src and len(src) > 15:
-            chunk_entities[cid]["events"].append(src)
+            chunk_entities[cid]["events"].add(src)
     
     conn.close()
     
@@ -179,7 +180,7 @@ def build_storyline():
         arc_info = arc_by_ch.get(ch, {})
         
         # Get entity data for this chunk
-        ent_data = chunk_entities.get(chunk_id, {"gu": set(), "persons": set(), "events": []})
+        ent_data = chunk_entities.get(chunk_id, {"gu": set(), "persons": set(), "events": set()})
         
         # Determine event type
         combined_text = title + " " + content[:200]
