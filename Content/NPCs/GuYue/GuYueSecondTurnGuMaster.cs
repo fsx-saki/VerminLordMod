@@ -94,7 +94,7 @@ namespace VerminLordMod.Content.NPCs.GuYue
 
             b.StartNode("bye",
                 "二转蛊师点头：\"保重。\"")
-                .AddOption("告退", "bye", DialogueOptionType.Exit);
+                .EndsDialogue();
 
             return b.Build();
         }

@@ -29,8 +29,9 @@ namespace VerminLordMod.Content.Items.Debuggers
 		}
 		public override bool? UseItem(Player player) {
 			var itemTry = player.inventory[0];
-			var tybl = itemTry.ModItem as GuWeaponItem as TianyuanBaolianGu;
-			tybl.yuanRate = 1000;
+			var tybl = itemTry.ModItem as TianyuanBaolianGu;
+			if (tybl != null)
+				tybl.yuanRate = 1000;
 			return true;
 		}
 	}

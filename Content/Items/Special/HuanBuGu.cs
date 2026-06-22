@@ -12,14 +12,14 @@ using Terraria.GameContent;
 namespace VerminLordMod.Content.Items.Special
 {
     [ImplStatus(ImplStatus.Implemented, "三转泥道防御蛊", "三转", "泥")]
-    class HuanBuGu : GuAccessoryItem
+    class HuanBuGu : GuBaseItem
     {
         protected override int _guLevel => 3;
         protected override int qiCost => 15;
 
-        public static LocalizedText UsesXQiText { get; private set; }
-        public static LocalizedText ControlRateText { get; private set; }
-        public static LocalizedText GuLevelText { get; private set; }
+        public new static LocalizedText UsesXQiText { get; private set; }
+        public new static LocalizedText ControlRateText { get; private set; }
+        public new static LocalizedText GuLevelText { get; private set; }
 
         public override void SetStaticDefaults()
         {
@@ -54,7 +54,7 @@ namespace VerminLordMod.Content.Items.Special
             Item.useStyle = ItemUseStyleID.Guitar;
         }
 
-        public override void UpdateAccessory(Player player, bool hideVisual)
+        public override void OnActiveTick(Player player)
         {
             if (Main.netMode == NetmodeID.Server) return;
 

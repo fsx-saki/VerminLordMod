@@ -100,7 +100,7 @@ namespace VerminLordMod.Content.NPCs.GuYue
 
             b.StartNode("bye",
                 "药堂家老点点头：\"保重身体，莫要逞强。\"")
-                .AddOption("告退", "bye", DialogueOptionType.Exit);
+                .EndsDialogue();
 
             return b.Build();
         }

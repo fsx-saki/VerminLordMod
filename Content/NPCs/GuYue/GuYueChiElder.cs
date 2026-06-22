@@ -99,7 +99,7 @@ namespace VerminLordMod.Content.NPCs.GuYue
 
             b.StartNode("bye",
                 "赤脉家老挥手：\"去吧，别浪费我时间。\"")
-                .AddOption("告退", "bye", DialogueOptionType.Exit);
+                .EndsDialogue();
 
             return b.Build();
         }

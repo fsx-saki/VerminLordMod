@@ -11,9 +11,9 @@ using Terraria.GameContent;
 namespace VerminLordMod.Content.Items.Special
 {
     [ImplStatus(ImplStatus.Implemented, "三转金道防御蛊", "三转", "金")]
-    public class TieGuiGu : GuAccessoryItem
+    public class TieGuiGu : GuBaseItem
     {
-        public static LocalizedText UsesXQiText { get; private set; }
+        public new static LocalizedText UsesXQiText { get; private set; }
         public static LocalizedText ControlRate { get; private set; }
         public static LocalizedText GuLevel { get; private set; }
 
@@ -55,7 +55,7 @@ namespace VerminLordMod.Content.Items.Special
             Item.useStyle = ItemUseStyleID.Guitar;
         }
 
-        public override void UpdateAccessory(Player player, bool hideVisual)
+        public override void OnActiveTick(Player player)
         {
             var qiResource = player.GetModPlayer<QiResourcePlayer>();
             qiResource.QiMaxCurrent -= qiCost;

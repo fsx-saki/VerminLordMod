@@ -15,7 +15,6 @@ namespace VerminLordMod.Content.NPCs.NorthDesert
     public class HeiLouLan : GuMasterBase
     {
         private int _attackTimer;
-        private int _bruteForceTimer;
         private bool _baTiActive;
         private int _baTiCooldown;
         private bool _dialogueTreeRegistered;
@@ -74,7 +73,6 @@ namespace VerminLordMod.Content.NPCs.NorthDesert
         protected virtual void SetupGuMaster()
         {
             _attackTimer = 0;
-            _bruteForceTimer = 0;
             _baTiActive = false;
             _baTiCooldown = 0;
         }

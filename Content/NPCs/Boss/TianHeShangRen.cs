@@ -185,6 +185,7 @@ namespace VerminLordMod.Content.NPCs.Boss
 
         public override bool CheckActive() => false;
 
+        [Obsolete]
         public override void BossLoot(ref string name, ref int potionType)
         {
             potionType = ItemID.HealingPotion;

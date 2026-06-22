@@ -10,7 +10,7 @@ using Terraria.GameContent;
 namespace VerminLordMod.Content.Items.Special
 {
     [ImplStatus(ImplStatus.Implemented, "四转泥道防御蛊屋", "四转", "泥")]
-    public class 安土重山堡 : GuAccessoryItem
+    public class 安土重山堡 : GuBaseItem
     {
         protected override int _guLevel => 4;
         protected override int qiCost => 25;
@@ -25,7 +25,7 @@ namespace VerminLordMod.Content.Items.Special
             Item.accessory = true;
         }
 
-        public override void UpdateAccessory(Player player, bool hideVisual)
+        public override void OnActiveTick(Player player)
         {
             var qiRealm = player.GetModPlayer<QiRealmPlayer>();
             var qiResource = player.GetModPlayer<QiResourcePlayer>();

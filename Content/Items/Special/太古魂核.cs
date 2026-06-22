@@ -14,14 +14,14 @@ using Terraria.GameContent;
 namespace VerminLordMod.Content.Items.Special
 {
     [ImplStatus(ImplStatus.Implemented, "五转魂道防御蛊", "五转", "魂")]
-    class 太古魂核 : GuAccessoryItem
+    class 太古魂核 : GuBaseItem
     {
         protected override int _guLevel => 5;
         protected override int qiCost => 25;
 
-        public static LocalizedText UsesXQiText { get; private set; }
-        public static LocalizedText ControlRateText { get; private set; }
-        public static LocalizedText GuLevelText { get; private set; }
+        public new static LocalizedText UsesXQiText { get; private set; }
+        public new static LocalizedText ControlRateText { get; private set; }
+        public new static LocalizedText GuLevelText { get; private set; }
 
         public override void SetStaticDefaults()
         {
@@ -57,7 +57,7 @@ namespace VerminLordMod.Content.Items.Special
             Item.useStyle = ItemUseStyleID.Guitar;
         }
 
-        public override void UpdateAccessory(Player player, bool hideVisual)
+        public override void OnActiveTick(Player player)
         {
             if (Main.netMode == NetmodeID.Server) return;
 

@@ -105,7 +105,7 @@ namespace VerminLordMod.Content.NPCs.GuYue
 
             b.StartNode("bye",
                 "古月博微微点头：\"去吧，莫要辜负我的期望。\"")
-                .AddOption("告退", "bye", DialogueOptionType.Exit);
+                .EndsDialogue();
 
             return b.Build();
         }

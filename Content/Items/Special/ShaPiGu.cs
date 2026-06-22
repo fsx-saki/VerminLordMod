@@ -11,12 +11,12 @@ using Terraria.GameContent;
 namespace VerminLordMod.Content.Items.Special
 {
     [ImplStatus(ImplStatus.Implemented, "五转水道防御蛊", "五转", "水")]
-    public class ShaPiGu : GuAccessoryItem
+    public class ShaPiGu : GuBaseItem
     {
         protected override int qiCost => 25;
         protected override int _guLevel => 5;
 
-        public static LocalizedText UsesXQiText { get; private set; }
+        public new static LocalizedText UsesXQiText { get; private set; }
         public static LocalizedText ControlRate { get; private set; }
         public static LocalizedText GuLevel { get; private set; }
 
@@ -53,7 +53,7 @@ namespace VerminLordMod.Content.Items.Special
             Item.useStyle = ItemUseStyleID.Guitar;
         }
 
-        public override void UpdateAccessory(Player player, bool hideVisual)
+        public override void OnActiveTick(Player player)
         {
             var shaPiPlayer = player.GetModPlayer<ShaPiPlayer>();
             shaPiPlayer.HasShaPiEquipped = true;

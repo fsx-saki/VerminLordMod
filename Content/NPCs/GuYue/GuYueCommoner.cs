@@ -100,7 +100,7 @@ namespace VerminLordMod.Content.NPCs.GuYue
 
             b.StartNode("bye",
                 "古月族人点头：\"再见。\"")
-                .AddOption("告退", "bye", DialogueOptionType.Exit);
+                .EndsDialogue();
 
             return b.Build();
         }

@@ -4,11 +4,11 @@ using System.Linq;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using VerminLordMod.Common.Entities;
 using VerminLordMod.Common.Events;
 using VerminLordMod.Common.GuBehaviors;
 using VerminLordMod.Common.Players;
 using VerminLordMod.Common.Systems;
+using VerminLordMod.Content.Items.Consumables;
 using VerminLordMod.Content.NPCs.GuMasters;
 
 namespace VerminLordMod.Common.Systems
@@ -65,56 +65,32 @@ namespace VerminLordMod.Common.Systems
         /// 已在 KongQiaoPlayer.OnPlayerDeath 和 QiResourcePlayer.OnDeathClearQi 中处理了蛊虫休眠和真元清空。
         /// 此方法处理暴露掉落和尸体生成。
         /// </summary>
-        public void OnPlayerKilled(Player player, int? killerNPCType = null)
-        {
-            // 1. 真元清空（已由 QiResourcePlayer.OnDeathClearQi 处理）
-            // 2. 蛊虫休眠 + 忠诚度判定（已由 KongQiaoPlayer.OnPlayerDeath 处理）
+		public void OnPlayerKilled(Player player, int? killerNPCType = null)
+		{
+			// 1. 真元清空（已由 QiResourcePlayer.OnDeathClearQi 处理）
+			// 2. 蛊虫休眠 + 忠诚度判定（已由 KongQiaoPlayer.OnPlayerDeath 处理）
 
-            // 3. 计算暴露掉落（30% 基础物品散落）
-            var exposedDrops = CalculateExposedDrops(player);
-            foreach (var item in exposedDrops)
-            {
-                if (item != null && !item.IsAir)
-                    Item.NewItem(player.GetSource_Death(), player.Center, item);
-            }
+			// 3. 计算暴露掉落（30% 基础物品散落）
+			var exposedDrops = CalculateExposedDrops(player);
+			foreach (var item in exposedDrops)
+			{
+				if (item != null && !item.IsAir)
+					Item.NewItem(player.GetSource_Death(), player.Center, item);
+			}
 
-            // 4. 检查同屏尸体数量限制
-            int corpseCount = CountActiveCorpses();
-            if (corpseCount >= MaxCorpsesPerScreen)
-            {
-                // 超出限制：剩余物品直接散落，不生成尸体
-                var remaining = GetRemainingItems(player, exposedDrops);
-                foreach (var item in remaining)
-                {
-                    if (item != null && !item.IsAir)
-                        Item.NewItem(player.GetSource_Death(), player.Center, item);
-                }
-
-                if (player.whoAmI == Main.myPlayer)
-                    Main.NewText("尸体太多了，你的物品直接散落在地上。", Color.Gray);
-                return;
-            }
-
-            // 5. 创建尸体实体
-            var remainingItems = GetRemainingItems(player, exposedDrops);
-            int corpseIndex = Projectile.NewProjectile(
-                player.GetSource_Death(),
-                player.Center,
-                Vector2.Zero,
-                ModContent.ProjectileType<NpcCorpse>(),
-                0, 0, player.whoAmI);
-
-            if (corpseIndex >= 0 && corpseIndex < Main.maxProjectiles)
-            {
-                var corpseProj = Main.projectile[corpseIndex];
-                if (corpseProj.ModProjectile is NpcCorpse corpse)
-                {
-                    corpse.CorpseType = CorpseType.Player;
-                    corpse.OwnerPlayerID = player.whoAmI;
-                    corpse.OwnerName = player.name;
-                    corpse.RemainingItems = remainingItems;
-                }
-            }
+			// 4. 剩余物品放入 CorpseBag 掉落
+			var remainingItems = GetRemainingItems(player, exposedDrops);
+			if (remainingItems.Count > 0)
+			{
+				var bagItem = new Item(ModContent.ItemType<CorpseBag>());
+				var bag = bagItem.ModItem as CorpseBag;
+				if (bag != null)
+				{
+					bag.SourceNPCName = player.name;
+					bag.StoredItems = remainingItems;
+					Item.NewItem(player.GetSource_Death(), player.Center, Vector2.Zero, bagItem);
+				}
+			}
 
             // 6. 发布事件
             EventBus.Publish(new PlayerDeathEvent
@@ -212,60 +188,9 @@ namespace VerminLordMod.Common.Systems
             }
         }
 
-        // ============================================================
-        // NPC 搜尸逻辑
-        // ============================================================
-
-        /// <summary>
-        /// NPC 发现玩家尸体后搜尸。
-        /// 由 GuYuePatrolGuMaster 的 AI 触发。
-        /// </summary>
-        public void NPCLootCorpse(NPC npc, NpcCorpse corpse)
-        {
-            if (corpse.IsLootedByNPC) return;  // 已被搜过
-            if (!corpse.HasRemainingItems()) return;
-
-            // 掠夺型 NPC 搜走 50% 剩余物品
-            int lootCount = System.Math.Max(1, corpse.RemainingItems.Count / 2);
-            var looted = corpse.RemoveRandomItems(lootCount);
-
-            if (looted.Count == 0) return;
-
-            corpse.IsLootedByNPC = true;
-            corpse.LootingNPCType = npc.type;
-            corpse.LootingNPCName = npc.GivenOrTypeName;
-
-            // 被搜走的物品掉落到地上（NPC 不直接持有）
-            foreach (var item in looted)
-            {
-                if (item != null && !item.IsAir)
-                    Item.NewItem(npc.GetSource_DropAsItem(), corpse.Projectile.Center, item);
-            }
-
-            // 发布事件
-            EventBus.Publish(new NPCLootedPlayerEvent
-            {
-                NPCType = npc.type,
-                TargetPlayerID = corpse.OwnerPlayerID,
-                LootPosition = corpse.Projectile.Center,
-                LootedItemTypes = looted.Select(i => i.type).ToList()
-            });
-
-            // 死亡日志（发送给尸体原主人）
-            if (corpse.CorpseType == CorpseType.Player)
-            {
-                Player owner = Main.player[corpse.OwnerPlayerID];
-                if (owner.active && owner.whoAmI == Main.myPlayer)
-                {
-                    string itemNames = string.Join(", ", looted.Select(i => i.Name));
-                    Main.NewText($"[死亡日志] 你的尸体被 {corpse.LootingNPCName} 搜索过，失去了：{itemNames}", Color.Orange);
-                }
-            }
-        }
-
-        // ============================================================
-        // 工具方法 - 暴露掉落计算
-        // ============================================================
+	        // ============================================================
+	        // 工具方法 - 暴露掉落计算
+	        // ============================================================
 
         /// <summary>
         /// 计算暴露掉落：委托给 LootSystem。
@@ -323,59 +248,9 @@ namespace VerminLordMod.Common.Systems
             return -1; // 占位，P2 再实现具体 NPC
         }
 
-        // ============================================================
-        // 工具方法 - 尸体检测
-        // ============================================================
-
-        /// <summary>
-        /// 查找 NPC 附近的尸体
-        /// </summary>
-        public static NpcCorpse FindNearbyCorpse(NPC npc, float radius = CorpseDetectionRange)
-        {
-            foreach (Projectile proj in Main.projectile)
-            {
-                if (proj.active && proj.ModProjectile is NpcCorpse corpse)
-                {
-                    if (Vector2.Distance(npc.Center, corpse.Projectile.Center) < radius)
-                        return corpse;
-                }
-            }
-            return null;
-        }
-
-        /// <summary>
-        /// 查找指定玩家附近的尸体
-        /// </summary>
-        public static NpcCorpse FindCorpseNearPlayer(Player player, float radius = 60f)
-        {
-            foreach (Projectile proj in Main.projectile)
-            {
-                if (proj.active && proj.ModProjectile is NpcCorpse corpse)
-                {
-                    if (Vector2.Distance(player.Center, corpse.Projectile.Center) < radius)
-                        return corpse;
-                }
-            }
-            return null;
-        }
-
-        /// <summary>
-        /// 统计当前活跃的尸体数量
-        /// </summary>
-        private static int CountActiveCorpses()
-        {
-            int count = 0;
-            foreach (Projectile proj in Main.projectile)
-            {
-                if (proj.active && proj.ModProjectile is NpcCorpse)
-                    count++;
-            }
-            return count;
-        }
-
-        // ============================================================
-        // ModSystem 生命周期
-        // ============================================================
+	        // ============================================================
+	        // ModSystem 生命周期
+	        // ============================================================
 
         public override void PostUpdateWorld()
         {

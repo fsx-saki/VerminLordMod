@@ -27,8 +27,8 @@ namespace VerminLordMod.Content.Items.Weapons.Two
 		protected override int controlQiCost => 5;
 		protected override int _guLevel => 2;
 		public new static LocalizedText UsesXQiText { get; private set; }
-		public new static LocalizedText ControlRate { get; private set; }
-		public new static LocalizedText GuLevel { get; private set; }
+		public static LocalizedText ControlRate { get; private set; }
+		public static LocalizedText GuLevel { get; private set; }
 		public override void SetStaticDefaults() {
 			UsesXQiText = this.GetLocalization("UsesXQi");
 			ControlRate = this.GetLocalization("ControlRate");

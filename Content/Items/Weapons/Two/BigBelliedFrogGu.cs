@@ -19,7 +19,7 @@ namespace VerminLordMod.Content.Items.Weapons.Two
 	/// 蛊虫
 
 	/// </summary>
-	class BigBelliedFrogGu : GuWeaponItem//必要继承moditem
+		class BigBelliedFrogGu : GuWeaponItem
 	{
 		protected override int controlQiCost => 20;
 		protected override int qiCost => 10;

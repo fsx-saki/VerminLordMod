@@ -9,9 +9,9 @@ using Terraria.GameContent;
 
 namespace VerminLordMod.Content.Items.Accessories.One
 {
-	class CopperSkin : GuAccessoryItem
+	class CopperSkin : GuBaseItem
 	{
-		public static LocalizedText UsesXQiText { get; private set; }
+		public new static LocalizedText UsesXQiText { get; private set; }
 		public static LocalizedText ControlRate { get; private set; }
 		public static LocalizedText GuLevel { get; private set; }
 		public override void SetStaticDefaults() {
@@ -39,7 +39,7 @@ namespace VerminLordMod.Content.Items.Accessories.One
 			Item.defense = 16;
 			Item.useStyle = ItemUseStyleID.Guitar;
 		}
-		public override void UpdateAccessory(Player player, bool hideVisual) {
+		public override void OnActiveTick(Player player) {
 			var qiResource = player.GetModPlayer<QiResourcePlayer>();
 			qiResource.QiMaxCurrent -= qiCost;
 		}

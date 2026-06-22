@@ -109,7 +109,7 @@ namespace VerminLordMod.Content.NPCs.Town
 
             b.StartNode("bye",
                 "学堂家老点点头：\"学无止境，好自为之。\"")
-                .AddOption("告退", "bye", DialogueOptionType.Exit);
+                .EndsDialogue();
 
             return b.Build();
         }

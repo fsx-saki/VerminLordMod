@@ -54,9 +54,13 @@ namespace VerminLordMod.Common.Abstractions
                 var modItem = ItemLoader.GetItem(i);
                 if (modItem is null) continue;
 
-                bool isAbstractionsGu = modItem is IGu;
-                bool isMarkerGu = modItem is IGu;
-                if (!isAbstractionsGu && !isMarkerGu) continue;
+                // 修复：原 isAbstractionsGu/isMarkerGu 两个变量都判 "modItem is IGu"，
+                // 是同一个判断的重复，导致下方 else 分支（为未实现 IGu 但继承 GuWeaponItem
+                // 的物品兜底注册）永远不会执行。现改为单变量，else 分支正常生效。
+                bool isGu = modItem is IGu;
+                // 兜底：未实现 IGu 但继承已知蛊虫基类（历史遗留的 GuWeaponItem 子类）
+                bool isLegacyGu = modItem is Content.Items.Weapons.GuWeaponItem;
+                if (!isGu && !isLegacyGu) continue;
 
                 var entry = new GuClassificationEntry
                 {
@@ -67,17 +71,21 @@ namespace VerminLordMod.Common.Abstractions
                     IsAccessory = modItem.Item.accessory,
                 };
 
-                if (isAbstractionsGu)
+                if (isGu)
                 {
                     var gu = (IGu)modItem;
                     entry.GuLevel = gu.GuLevel;
                     entry.Category = gu.Category;
                     entry.PrimaryElement = gu.Element;
                     entry.DaoHenTagMask = gu.DaoHenTags;
-                    entry.IsMainGuCandidate = gu is IMainGu;
+                    // 原 IMainGu 子接口已删除（零实现零消费的死代码）。
+                    // 本命蛊标记现由 KongQiaoSlot.IsMainGu 在空窍层承载，
+                    // 分类系统不再需要在此判断 IsMainGuCandidate，统一置 false。
+                    entry.IsMainGuCandidate = false;
                 }
                 else
                 {
+                    // 兜底：未实现 IGu 但继承已知蛊虫基类的物品（历史遗留）
                     if (modItem is Content.Items.Weapons.GuWeaponItem weaponItem)
                     {
                         entry.GuLevel = weaponItem.GetGuLevel();

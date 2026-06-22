@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
+using VerminLordMod.Common.Abstractions;
 using VerminLordMod.Common.GuBehaviors;
 using VerminLordMod.Common.GlobalProjectiles;
 using VerminLordMod.Common.Players;
@@ -18,6 +19,50 @@ namespace VerminLordMod.Content.Items.Weapons.Daos
         // 流派标识
         // ============================================================
         public abstract DaoType DaoType { get; }
+
+        // ============================================================
+        // IGu 语义化：DaoType → Element / DaoHenTags 自动映射
+        // 所有 DaoWeapon 子类自动获得正确的元素和道痕标签，无需逐个重写
+        // ============================================================
+        protected override GuElement Element => DaoType switch
+        {
+            DaoType.Fire => GuElement.Fire,
+            DaoType.IceSnow => GuElement.Ice,
+            DaoType.Lightning => GuElement.Lightning,
+            DaoType.Water => GuElement.Water,
+            DaoType.Wind => GuElement.Wind,
+            DaoType.Moon => GuElement.Moon,
+            DaoType.Blood => GuElement.Blood,
+            DaoType.Bone => GuElement.Bone,
+            DaoType.Poison => GuElement.Poison,
+            DaoType.Soul => GuElement.Soul,
+            DaoType.Dark => GuElement.Dark,
+            DaoType.Light => GuElement.Light,
+            DaoType.Dream => GuElement.Dream,
+            DaoType.Charm => GuElement.Charm,
+            DaoType.Void => GuElement.Void,
+            _ => GuElement.None,
+        };
+
+        protected override ulong DaoHenTags => DaoType switch
+        {
+            DaoType.Fire => (ulong)DaoEffectTags.DoT,
+            DaoType.IceSnow => (ulong)DaoEffectTags.Slow,
+            DaoType.Lightning => (ulong)DaoEffectTags.Chain,
+            DaoType.Moon => (ulong)DaoEffectTags.MoonMark,
+            DaoType.Blood => (ulong)DaoEffectTags.LifeSteal,
+            DaoType.Bone => (ulong)DaoEffectTags.ArmorShred,
+            DaoType.Poison => (ulong)DaoEffectTags.StrongDoT,
+            DaoType.Soul => (ulong)DaoEffectTags.Mark,
+            DaoType.Dark => (ulong)DaoEffectTags.Fear,
+            DaoType.Light => (ulong)DaoEffectTags.Heal,
+            DaoType.Dream => (ulong)DaoEffectTags.Charm,
+            DaoType.Charm => (ulong)DaoEffectTags.Charm,
+            DaoType.Wind => (ulong)DaoEffectTags.Push,
+            DaoType.Water => (ulong)DaoEffectTags.Pull,
+            DaoType.Void => (ulong)DaoEffectTags.Silence,
+            _ => 0,
+        };
 
         // ============================================================
         // Dust 类型映射

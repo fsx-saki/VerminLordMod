@@ -68,61 +68,11 @@ namespace VerminLordMod.Common.Abstractions
         ulong DaoHenTags { get; }
     }
 
-    /// <summary>
-    /// 攻击蛊接口 — 可主动催动造成伤害的蛊虫。
-    /// 定义投射物类型、伤害倍率、攻击冷却。
-    /// </summary>
-    public interface IAttackGu : IGu
-    {
-        /// <summary>催动时发射的投射物类型ID</summary>
-        int ProjectileType { get; }
-
-        /// <summary>伤害倍率，乘以基础伤害得到最终伤害</summary>
-        float DamageMultiplier { get; }
-
-        /// <summary>攻击冷却时间（帧）</summary>
-        float AttackCooldown { get; }
-    }
-
-    /// <summary>
-    /// 防御蛊接口 — 被动提供防御和减伤的蛊虫。
-    /// </summary>
-    public interface IDefenseGu : IGu
-    {
-        /// <summary>提供的防御力加成</summary>
-        int DefenseBonus { get; }
-
-        /// <summary>伤害减免比例 [0, 1]</summary>
-        float DamageReduction { get; }
-    }
-
-    /// <summary>
-    /// 辅助蛊接口 — 提供治疗和增益效果的蛊虫。
-    /// </summary>
-    public interface ISupportGu : IGu
-    {
-        /// <summary>治疗量</summary>
-        float HealAmount { get; }
-
-        /// <summary>增益持续时间（帧）</summary>
-        float BuffDuration { get; }
-
-        /// <summary>施加的Buff类型ID</summary>
-        int BuffType { get; }
-    }
-
-    /// <summary>
-    /// 本命蛊接口 — 与蛊师灵魂绑定的核心蛊虫。
-    /// 拥有炼化度属性，可随修炼提升。
-    /// </summary>
-    public interface IMainGu : IGu
-    {
-        /// <summary>是否为本命蛊（每个蛊师只能有一只）</summary>
-        bool IsMainGu { get; }
-
-        /// <summary>炼化度 [0, 100]，随修炼提升，影响本命蛊威力</summary>
-        float Refinement { get; set; }
-    }
+    // 注：原有的 IAttackGu / IDefenseGu / ISupportGu / IMainGu 四个子接口已删除。
+    // 原因：Grep 全仓确认除定义文件与 plans 文档外零实现、零消费，属纯死代码。
+    // 攻击/防御/辅助的区分现由 GuBaseItem.Slot（出装路径）承载；
+    // 本命蛊标记由 KongQiaoSlot.IsMainGu 承载（空窍层）。
+    // 蛊虫的分类/元素/转数等通用属性已在 IGu 本体中定义，无需子接口。
 
     /// <summary>
     /// 蛊虫元素辅助工具 — 提供元素到道痕效果标签的映射和显示名称。

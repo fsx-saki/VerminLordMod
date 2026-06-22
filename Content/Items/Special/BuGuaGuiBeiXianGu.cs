@@ -12,12 +12,12 @@ using Terraria.GameContent;
 namespace VerminLordMod.Content.Items.Special
 {
     [ImplStatus(ImplStatus.Implemented, "五转智道防御仙蛊", "五转", "智")]
-    class BuGuaGuiBeiXianGu : GuAccessoryItem
+    class BuGuaGuiBeiXianGu : GuBaseItem
     {
         protected override int qiCost => 36;
         protected override int _guLevel => 5;
 
-        public static LocalizedText UsesXQiText { get; private set; }
+        public new static LocalizedText UsesXQiText { get; private set; }
         public static LocalizedText ControlRate { get; private set; }
         public static LocalizedText GuLevel { get; private set; }
 
@@ -54,7 +54,7 @@ namespace VerminLordMod.Content.Items.Special
             Item.useStyle = ItemUseStyleID.Guitar;
         }
 
-        public override void UpdateAccessory(Player player, bool hideVisual)
+        public override void OnActiveTick(Player player)
         {
             var qiResource = player.GetModPlayer<QiResourcePlayer>();
             qiResource.QiMaxCurrent -= qiCost;

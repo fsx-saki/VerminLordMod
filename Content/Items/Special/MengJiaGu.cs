@@ -13,11 +13,11 @@ using Microsoft.Xna.Framework;
 namespace VerminLordMod.Content.Items.Special
 {
     [ImplStatus(ImplStatus.Implemented, "二转暗道防御蛊", "二转", "暗")]
-    class MengJiaGu : GuAccessoryItem
+    class MengJiaGu : GuBaseItem
     {
         protected override int qiCost => 10;
         protected override int _guLevel => 2;
-        public static LocalizedText UsesXQiText { get; private set; }
+        public new static LocalizedText UsesXQiText { get; private set; }
         public static LocalizedText ControlRate { get; private set; }
         public static LocalizedText GuLevel { get; private set; }
         public override void SetStaticDefaults()
@@ -49,7 +49,7 @@ namespace VerminLordMod.Content.Items.Special
             Item.defense = 6;
             Item.useStyle = ItemUseStyleID.Guitar;
         }
-        public override void UpdateAccessory(Player player, bool hideVisual)
+        public override void OnActiveTick(Player player)
         {
             if (Main.netMode == NetmodeID.Server)
                 return;

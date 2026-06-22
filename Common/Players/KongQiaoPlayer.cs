@@ -1,4 +1,4 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -55,9 +55,6 @@ namespace VerminLordMod.Common.Players
             float refineCost = guItem.damage * 2f;
             if (!qiResource.ConsumeQi(refineCost)) return false;
 
-            // P2：使用 DaoHenConflictSystem 获取默认道痕标签
-            ulong daoHenTags = DaoHenConflictSystem.GetDefaultDaoHenTag(guItem.type);
-
             var slot = new KongQiaoSlot
             {
                 GuItem = guItem.Clone(),
@@ -65,31 +62,52 @@ namespace VerminLordMod.Common.Players
                 QiOccupation = CalculateQiOccupation(guItem),
                 GuTypeID = guItem.type,
                 IsAttackGu = guItem.damage > 0,
-                IsPassiveGu = guItem.defense > 0,
+                IsPassiveGu = guItem.defense > 0 || guItem.ModItem is Content.Items.Accessories.PassiveGuItem,
                 IsMainGu = KongQiao.Count == 0,
-                Refinement = 0f,
                 Loyalty = 50f,
-                DaoHenTags = daoHenTags,
-                ProjectileType = GetGuProjectileType(guItem),
                 BuffType = 0
             };
 
+            // 从 PassiveGuItem 读取效果数据存入槽位
+            if (guItem.ModItem is Content.Items.Accessories.PassiveGuItem passive)
+            {
+                slot.DefenseBonus = passive.DefenseBonus;
+                slot.DamageReduction = passive.DamageReduction;
+                slot.BuffType = passive.BuffType;
+                slot.MoveSpeedBonus = passive.MoveSpeedBonus;
+                slot.LifeBonus = passive.LifeBonus;
+                slot.WingCanFly = passive.WingCanFly;
+                slot.WingFlightTimeMax = passive.WingFlightTimeMax;
+                slot.WingAscentSpeed = passive.WingAscentSpeed;
+                slot.IsPassiveGu = true;
+            }
+
             KongQiao.Add(slot);
             guItem.TurnToAir();
-            Main.NewText($"炼化成功！{guItem.Name}已进入空窍", Color.Green);
+            Main.NewText($"炼化成功！{slot.GuItem.Name}已进入空窍", Color.Green);
             return true;
         }
 
         /// <summary>
-        /// 尝试从空窍取出蛊虫（本命蛊不可取出）。
+        /// 尝试从空窍取出蛊虫。
+        /// 如果取出的是本命蛊，则自动将下一个蛊虫提升为本命蛊。
         /// </summary>
         public bool TryExtractGu(int slotIndex)
         {
             if (slotIndex < 0 || slotIndex >= KongQiao.Count) return false;
-            if (KongQiao[slotIndex].IsMainGu) return false;
+
+            bool wasMainGu = KongQiao[slotIndex].IsMainGu;
 
             Player.QuickSpawnItem(Player.GetSource_GiftOrReward(), KongQiao[slotIndex].GuItem.Clone());
             KongQiao.RemoveAt(slotIndex);
+
+            // 如果取出的是本命蛊且有剩余蛊虫，自动提升第一个为本命蛊
+            if (wasMainGu && KongQiao.Count > 0)
+            {
+                KongQiao[0].IsMainGu = true;
+                Main.NewText("本命蛊已取出，" + KongQiao[0].GuItem.Name + "自动晋升为本命蛊", Color.LightBlue);
+            }
+
             RecalculateQiOccupied();
             Main.NewText("已从空窍取出蛊虫", Color.Green);
             return true;
@@ -162,27 +180,6 @@ namespace VerminLordMod.Common.Players
         private int CalculateQiOccupation(Item guItem) => 10 + (int)(guItem.damage / 10f);
 
         /// <summary>
-        /// 根据蛊虫物品类型获取对应的弹幕类型。
-        /// 优先使用蛊虫武器自身的 Item.shoot（每个蛊武器已正确设置）。
-        /// </summary>
-        private int GetGuProjectileType(Item guItem)
-        {
-            // 优先使用蛊虫武器自身的 Item.shoot
-            // 注意：Mod 弹幕的 type ID >= ProjectileID.Count，所以只检查 > 0
-            if (guItem.shoot > ProjectileID.None)
-            {
-                return guItem.shoot;
-            }
-            // 回退：使用 ModItem 类型进行匹配（兼容未设置 shoot 的旧蛊虫）
-            return guItem.ModItem switch
-            {
-                Content.Items.Weapons.One.Moonlight _ => ModContent.ProjectileType<MoonlightProj>(),
-                Content.Items.Weapons.One.BoneSpearGu _ => ModContent.ProjectileType<BoneSpear>(),
-                _ => ProjectileID.WoodenArrowFriendly  // 默认占位：木箭
-            };
-        }
-
-        /// <summary>
         /// D-20 / D-05 / D-06: 玩家死亡时处理空窍中的蛊虫。
         /// </summary>
         public void OnPlayerDeath()
@@ -227,7 +224,7 @@ namespace VerminLordMod.Common.Players
 
         public override void PostUpdate()
         {
-            // 被动蛊维护消耗 + 防御加成
+            // 被动蛊维护消耗 + 效果应用
             foreach (var gu in GetActivePassiveGus())
             {
                 var qiResource = Player.GetModPlayer<QiResourcePlayer>();
@@ -237,8 +234,24 @@ namespace VerminLordMod.Common.Players
                     RecalculateQiOccupied();
                     continue;
                 }
-                if (gu.IsPassiveGu)
-                    Player.statDefense += (int)(gu.GuItem.defense * 0.5f);
+
+                // 统一应用被动蛊效果
+                if (gu.DefenseBonus > 0)
+                    Player.statDefense += gu.DefenseBonus;
+                if (gu.DamageReduction > 0)
+                    Player.endurance += gu.DamageReduction;
+                if (gu.BuffType > 0)
+                    Player.AddBuff(gu.BuffType, 2);
+                if (gu.MoveSpeedBonus > 0)
+                    Player.moveSpeed += gu.MoveSpeedBonus;
+                if (gu.LifeBonus > 0)
+                    Player.statLifeMax2 += gu.LifeBonus;
+                if (gu.WingCanFly && gu.WingFlightTimeMax > 0)
+                {
+                    Player.wingTimeMax = Math.Max(Player.wingTimeMax, gu.WingFlightTimeMax);
+                    if (Player.wingTime < gu.WingFlightTimeMax)
+                        Player.wingTime += gu.WingAscentSpeed;
+                }
             }
 
             // 忠诚度缓慢增长
@@ -264,11 +277,15 @@ namespace VerminLordMod.Common.Players
                     ["IsAttackGu"] = slot.IsAttackGu,
                     ["IsPassiveGu"] = slot.IsPassiveGu,
                     ["IsMainGu"] = slot.IsMainGu,
-                    ["Refinement"] = slot.Refinement,
                     ["Loyalty"] = slot.Loyalty,
-                    ["DaoHenTags"] = (long)slot.DaoHenTags,
-                    ["ProjectileType"] = slot.ProjectileType,
-                    ["BuffType"] = slot.BuffType
+                    ["BuffType"] = slot.BuffType,
+                    ["DefenseBonus"] = slot.DefenseBonus,
+                    ["DamageReduction"] = slot.DamageReduction,
+                    ["MoveSpeedBonus"] = slot.MoveSpeedBonus,
+                    ["LifeBonus"] = slot.LifeBonus,
+                    ["WingCanFly"] = slot.WingCanFly,
+                    ["WingFlightTimeMax"] = slot.WingFlightTimeMax,
+                    ["WingAscentSpeed"] = slot.WingAscentSpeed
                 });
             }
             tag["KongQiao"] = list;
@@ -290,11 +307,15 @@ namespace VerminLordMod.Common.Players
                     IsAttackGu = st.GetBool("IsAttackGu"),
                     IsPassiveGu = st.GetBool("IsPassiveGu"),
                     IsMainGu = st.GetBool("IsMainGu"),
-                    Refinement = st.GetFloat("Refinement"),
                     Loyalty = st.GetFloat("Loyalty"),
-                    DaoHenTags = (ulong)st.GetLong("DaoHenTags"),
-                    ProjectileType = st.GetInt("ProjectileType"),
-                    BuffType = st.GetInt("BuffType")
+                    BuffType = st.GetInt("BuffType"),
+                    DefenseBonus = st.GetInt("DefenseBonus"),
+                    DamageReduction = st.GetFloat("DamageReduction"),
+                    MoveSpeedBonus = st.GetFloat("MoveSpeedBonus"),
+                    LifeBonus = st.GetInt("LifeBonus"),
+                    WingCanFly = st.GetBool("WingCanFly"),
+                    WingFlightTimeMax = st.GetInt("WingFlightTimeMax"),
+                    WingAscentSpeed = st.GetFloat("WingAscentSpeed")
                 });
             }
             RecalculateQiOccupied();
@@ -327,19 +348,33 @@ namespace VerminLordMod.Common.Players
         /// <summary>是否为本命蛊</summary>
         public bool IsMainGu;
 
-        /// <summary>炼化度 [0, 100]</summary>
-        public float Refinement;
-
         /// <summary>忠诚度 [0, 100]</summary>
         public float Loyalty;
 
-        /// <summary>道痕标签（位掩码，预埋字段）</summary>
-        public ulong DaoHenTags;
-
-        /// <summary>投射物类型（攻击蛊用）</summary>
-        public int ProjectileType;
-
         /// <summary>Buff类型（被动蛊用）</summary>
         public int BuffType;
+
+        // ===== 被动蛊效果字段（炼入空窍时从 PassiveGuItem 读取） =====
+
+        /// <summary>防御力加成</summary>
+        public int DefenseBonus;
+
+        /// <summary>伤害减免 [0, 1]</summary>
+        public float DamageReduction;
+
+        /// <summary>移速加成</summary>
+        public float MoveSpeedBonus;
+
+        /// <summary>生命上限加成</summary>
+        public int LifeBonus;
+
+        /// <summary>是否可飞行</summary>
+        public bool WingCanFly;
+
+        /// <summary>飞行时间上限（帧）</summary>
+        public int WingFlightTimeMax;
+
+        /// <summary>飞行上升速度</summary>
+        public float WingAscentSpeed;
     }
 }

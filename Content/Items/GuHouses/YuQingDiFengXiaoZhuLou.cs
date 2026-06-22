@@ -40,5 +40,37 @@ namespace VerminLordMod.Content.Items.GuHouses
             player.AddBuff(BuffID.Swiftness, 600);
             Main.NewText("玉清滴风小竹楼展开，清风环绕，身法如风！", Color.Cyan);
         }
+
+        private int _updateTimer = 0;
+
+        public override void OnUpdate(Player player)
+        {
+            // 每 60 帧（约 1 秒）生成风刃弹幕
+            _updateTimer++;
+            if (_updateTimer >= 60)
+            {
+                _updateTimer = 0;
+                if (Main.netMode != NetmodeID.MultiplayerClient)
+                {
+                    var source = player.GetSource_FromThis();
+                    // 向鼠标方向发射风刃（BladeOfGrass 作为风刃占位）
+                    Vector2 mouseDir = (Main.MouseWorld - player.Center).SafeNormalize(Vector2.UnitX);
+                    Vector2 velocity = mouseDir * 10f;
+                    Projectile.NewProjectile(source, player.Center, velocity, ProjectileID.BladeOfGrass, Item.damage / 4, 3f, player.whoAmI);
+                }
+            }
+
+            // 持续刷新风推与加速
+            if (player.buffTime[player.FindBuffIndex(BuffID.WindPushed)] < 60)
+                player.AddBuff(BuffID.WindPushed, 120);
+            if (player.buffTime[player.FindBuffIndex(BuffID.Swiftness)] < 60)
+                player.AddBuff(BuffID.Swiftness, 120);
+        }
+
+        public override void OnDeactivate(Player player)
+        {
+            Main.NewText("玉清滴风小竹楼收束，清风止息。", Color.Cyan);
+            _updateTimer = 0;
+        }
     }
 }

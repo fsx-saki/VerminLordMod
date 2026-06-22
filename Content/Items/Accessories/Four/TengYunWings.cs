@@ -11,12 +11,12 @@ using VerminLordMod.Content.Items.Accessories;
 namespace VerminLordMod.Content.Items.Accessories.Four
 {
 	[AutoloadEquip(EquipType.Wings)]
-	class TengYunWings : GuAccessoryItem
+	class TengYunWings : GuBaseItem
 	{
 
 		protected override int _guLevel => 3;
 		protected override int qiCost => 200;
-		public static LocalizedText UsesXQiText { get; private set; }
+		public new static LocalizedText UsesXQiText { get; private set; }
 		public static LocalizedText ControlRate { get; private set; }
 		public static LocalizedText GuLevel { get; private set; }
 		public override void SetStaticDefaults() {
@@ -62,7 +62,7 @@ namespace VerminLordMod.Content.Items.Accessories.Four
 			//是正常飞行时翅膀的爬升率；
 		}
 
-		public override void UpdateAccessory(Player player, bool hideVisual) {
+		public override void OnActiveTick(Player player) {
 			if (Main.netMode == NetmodeID.Server)
 				return;
 

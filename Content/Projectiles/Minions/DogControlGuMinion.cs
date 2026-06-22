@@ -7,6 +7,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using VerminLordMod.Content.DamageClasses;
+using VerminLordMod.Content.Items;
 using VerminLordMod.Content.Items.Weapons;
 using Terraria.GameContent;
 
@@ -40,7 +41,7 @@ namespace VerminLordMod.Content.Projectiles.Minions
 		}
 	}
 
-	class DogControlGuItem : GuWeaponItem
+	class DogControlGuItem : GuBaseItem
 	{
 		protected override int controlQiCost => 20;
 		protected override int qiCost => 50;
@@ -48,8 +49,8 @@ namespace VerminLordMod.Content.Projectiles.Minions
 		protected override int _guLevel => 1;
 
 		public new static LocalizedText UsesXQiText { get; private set; }
-		public new static LocalizedText ControlRate { get; private set; }
-		public new static LocalizedText GuLevel { get; private set; }
+		public static LocalizedText ControlRate { get; private set; }
+		public static LocalizedText GuLevel { get; private set; }
 		public override void ModifyTooltips(List<TooltipLine> tooltips) {
 			
 			tooltips.Insert(2, new TooltipLine(Mod, "QiCost", UsesXQiText.Format(qiCost)));

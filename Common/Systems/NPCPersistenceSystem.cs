@@ -287,30 +287,29 @@ namespace VerminLordMod.Common.Systems
         {
             if (npc == null || !npc.active) return;
 
-            int corpseType = ModContent.ProjectileType<Common.Entities.NpcCorpse>();
-            int projIndex = Projectile.NewProjectile(
-                Terraria.Entity.GetSource_NaturalSpawn(),
-                npc.Center, Microsoft.Xna.Framework.Vector2.Zero,
-                corpseType, 0, 0, Main.myPlayer);
+            var bagItem = new Item(ModContent.ItemType<Content.Items.Consumables.CorpseBag>());
+            var bag = bagItem.ModItem as Content.Items.Consumables.CorpseBag;
+            if (bag == null) return;
 
-            if (projIndex >= 0 && projIndex < Main.maxProjectiles)
+            bag.SourceNPCName = data.DisplayName;
+
+            // 根据 NPC 价值生成元石
+            for (int i = 0; i < npc.extraValue; i++)
             {
-                var corpse = (Common.Entities.NpcCorpse)Main.projectile[projIndex].ModProjectile;
-                corpse.CorpseType = Common.Entities.CorpseType.Monster;
-                corpse.SourceNPCType = npc.type;
-                corpse.SourceNPCName = data.DisplayName;
-                corpse.OwnerName = data.DisplayName;
-
-                for (int i = 0; i < npc.extraValue; i++)
+                if (Main.rand.NextFloat() < 0.3f)
                 {
-                    if (Main.rand.NextFloat() < 0.3f)
+                    var yuanS = new Item(ModContent.ItemType<Content.Items.Consumables.YuanS>())
                     {
-                        corpse.RemainingItems.Add(new Item(ModContent.ItemType<Content.Items.Consumables.YuanS>())
-                        {
-                            stack = Main.rand.Next(1, 5)
-                        });
-                    }
+                        stack = Main.rand.Next(1, 5)
+                    };
+                    bag.StoredItems.Add(yuanS);
                 }
+            }
+
+            // 掉落在地上
+            if (bag.StoredItems.Count > 0)
+            {
+                Item.NewItem(npc.GetSource_Death(), npc.Center, Microsoft.Xna.Framework.Vector2.Zero, bagItem);
             }
         }
 

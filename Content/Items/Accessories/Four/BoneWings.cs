@@ -5,18 +5,23 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using VerminLordMod.Common.Players;
+using VerminLordMod.Common.Abstractions;
+using VerminLordMod.Common.GuBehaviors;
 using Terraria.GameContent;
 using VerminLordMod.Content.Items.Accessories;
 
 namespace VerminLordMod.Content.Items.Accessories.Four
 {
 	[AutoloadEquip(EquipType.Wings)]
-	class BoneWings : GuAccessoryItem
+	class BoneWings : GuBaseItem
 	{
+		// IGu 语义化：骨道元素 + 破甲道痕
+		protected override GuElement Element => GuElement.Bone;
+		protected override ulong DaoHenTags => (ulong)DaoEffectTags.ArmorShred;
 
 		protected override int _guLevel => 4;
 		protected override int qiCost => 300;
-		public static LocalizedText UsesXQiText { get; private set; }
+		public new static LocalizedText UsesXQiText { get; private set; }
 		public static LocalizedText ControlRate { get; private set; }
 		public static LocalizedText GuLevel { get; private set; }
 		public override void SetStaticDefaults() {
@@ -63,7 +68,7 @@ namespace VerminLordMod.Content.Items.Accessories.Four
 			//是正常飞行时翅膀的爬升率；
 		}
 
-		public override void UpdateAccessory(Player player, bool hideVisual) {
+		public override void OnActiveTick(Player player) {
 			if (Main.netMode == NetmodeID.Server)
 				return;
 			player.wingTimeMax = 180;

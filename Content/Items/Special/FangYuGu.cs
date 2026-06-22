@@ -8,7 +8,7 @@ using VerminLordMod.Content.Items.Accessories;
 namespace VerminLordMod.Content.Items.Special
 {
     [ImplStatus(ImplStatus.Implemented, "二转金道防御蛊", "二转", "金")]
-    public class FangYuGu : GuAccessoryItem
+    public class FangYuGu : GuBaseItem
     {
         protected override int _guLevel => 2;
         protected override int qiCost => 10;
@@ -23,7 +23,7 @@ namespace VerminLordMod.Content.Items.Special
             Item.accessory = true;
         }
 
-        public override void UpdateAccessory(Player player, bool hideVisual)
+        public override void OnActiveTick(Player player)
         {
             player.statDefense += 5;
             player.endurance += 0.03f;

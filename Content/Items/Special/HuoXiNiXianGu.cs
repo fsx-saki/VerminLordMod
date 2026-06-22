@@ -11,7 +11,7 @@ using Terraria.GameContent;
 namespace VerminLordMod.Content.Items.Special
 {
     [ImplStatus(ImplStatus.Implemented, "五转泥道防御蛊", "五转", "泥")]
-    public class HuoXiNiXianGu : GuAccessoryItem
+    public class HuoXiNiXianGu : GuBaseItem
     {
         protected override int _guLevel => 5;
         protected override int qiCost => 25;
@@ -27,7 +27,7 @@ namespace VerminLordMod.Content.Items.Special
             Item.defense = 18;
         }
 
-        public override void UpdateAccessory(Player player, bool hideVisual)
+        public override void OnActiveTick(Player player)
         {
             if (Main.netMode == NetmodeID.Server)
                 return;

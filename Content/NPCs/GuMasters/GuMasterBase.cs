@@ -5,7 +5,6 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 using VerminLordMod.Common.DialogueTree;
-using VerminLordMod.Common.GuBehaviors;
 using VerminLordMod.Common.Players;
 using VerminLordMod.Common.Systems;
 using VerminLordMod.Common.UI.DialogueTreeUI;
@@ -14,25 +13,25 @@ using Terraria.GameContent;
 namespace VerminLordMod.Content.NPCs.GuMasters
 {
     // ============================================================
-    // GuMasterBase - 蛊师NPC抽象基类
+    // GuMasterBase - 蛊师NPC抽象基类（简化版）
     // 
-    // 整合了：
-    // - IGuMasterAI 智能接口（感知/信念/决策/行为）
-    // - BeliefState 信念黑箱（替代确定性态度计算）
-    // - GuWorldPlayer 声望系统（交互处理）
-    // - 修为系统（QiResourcePlayer 真元关联）
-    // - 对话/战斗双模式
-    //
-    // 子类只需重写：
-    // - SetupGuMaster() - 设置蛊师特有属性
-    // - GetPersonality() - 返回性格
-    // - GetFaction() - 返回所属势力
-    // - GetRank() - 返回修为等级
-    // ============================================================
+    // 核心设计：信任值驱动态度系统
+    // - 每个NPC对每位玩家有独立的信任值 [0, 100]
+    // - 交互事件直接影响信任值（攻击-50，交易+20，对话+10）
+    // - 信任值映射为5档态度（Hostile/Wary/Ignore/Friendly/Respectful）
+    // 
+	    // 注意：保留 IGuMasterAI 接口供对话树/效果系统使用，
+	    // 但核心AI逻辑使用信任值驱动（信念状态作为对话系统的持久化兼容层）
+	    //
+	    // 子类只需重写：
+	    // - GetFaction() - 所属势力
+	    // - GetRank() - 修为等级
+	    // - GetPersonality() - 性格
+	    // ============================================================
 
-    public abstract class GuMasterBase : ModNPC, IGuMasterAI
+	    public abstract class GuMasterBase : ModNPC, IGuMasterAI
     {
-        // ===== 蛊师属性 =====
+        // ===== 蛊师属性（子类必须/可重写）=====
         public abstract FactionID GetFaction();
         public abstract GuRank GetRank();
         public abstract GuPersonality GetPersonality();
@@ -42,33 +41,33 @@ namespace VerminLordMod.Content.NPCs.GuMasters
         public virtual int GuMasterLife => 150;
         public virtual int GuMasterDefense => 10;
 
-        // 每个子类使用独立的头部纹理路径，避免多个NPC注册同一HeadTexture导致重复键异常
         public override string HeadTexture => "VerminLordMod/" + GetType().FullName.Substring("VerminLordMod.".Length).Replace('.', '/') + "_Head";
 
         // ===== 运行时状态 =====
-        public GuMasterAIState CurrentAIState = GuMasterAIState.Idle;
         public GuAttitude CurrentAttitude = GuAttitude.Ignore;
+        public GuMasterAIState CurrentAIState = GuMasterAIState.Idle; // 兼容字段（子类/调试器引用）
         public bool HasBeenHitByPlayer = false;
         public int AggroTimer = 0;
         public int TalkCount = 0;
 
-        // ===== 首次被击中的话语标记（每个NPC一生只触发一次） =====
-        public bool HasSpokenFirstHitLine = false;
+		// ===== 信任值系统 =====
+		/// <summary>每个玩家对此NPC的信任值 [0, 100]，默认50</summary>
+		public Dictionary<string, float> TrustPerPlayer = new Dictionary<string, float>();
+		public const float DefaultTrust = 50f;
+		public const float TrustDecayPerFrame = 0.001f;
+		public const float TrustMax = 100f;
+		public const float TrustMin = 0f;
 
-        // ===== 首次目击族人被攻击的话语标记（每个NPC一生只触发一次） =====
+		// ===== 信念系统（对话系统持久化兼容层）=====
+		/// <summary>每个玩家对此NPC的信念状态（对话系统使用，由信任值初始化）</summary>
+		public Dictionary<string, BeliefState> PlayerBeliefs = new Dictionary<string, BeliefState>();
+
+        // ===== 首次被击中的话语标记 =====
+        public bool HasSpokenFirstHitLine = false;
         public bool HasSpokenWitnessLine = false;
 
         // ===== 弹幕保护系统 =====
-        /// <summary> 玩家对此NPC的弹幕保护是否开启（默认开启） </summary>
         public bool ProjectileProtectionEnabled = true;
-
-        // ===== 调查链系统（D-19） =====
-        /// <summary> 此NPC对当前目标玩家的调查状态 </summary>
-        public InvestigationState CurrentInvestigation = new();
-
-        // ===== 信念系统（黑暗森林核心） =====
-        /// <summary> 对每个玩家的信念状态（以玩家名为key） </summary>
-        public Dictionary<string, BeliefState> PlayerBeliefs = new Dictionary<string, BeliefState>();
 
         // ===== 对话相关 =====
         public const string ShopName = "GuMasterShop";
@@ -107,11 +106,10 @@ namespace VerminLordMod.Content.NPCs.GuMasters
             NPC.knockBackResist = 0.3f;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
-            NPC.aiStyle = -1; // 使用自定义AI
+            NPC.aiStyle = -1;
             NPC.value = Item.buyPrice(0, 0, 10, 0);
             AnimationType = NPCID.Guide;
 
-            // 根据修为调整属性
             ApplyRankBonuses();
         }
 
@@ -124,381 +122,176 @@ namespace VerminLordMod.Content.NPCs.GuMasters
         }
 
         // ============================================================
-        // AI 主循环（信念驱动）
+        // 信任值系统
+        // ============================================================
+
+        /// <summary>获取对指定玩家的信任值（不存在则创建默认值）</summary>
+        public float GetTrust(string playerName)
+        {
+            if (!TrustPerPlayer.ContainsKey(playerName))
+                TrustPerPlayer[playerName] = DefaultTrust;
+            return TrustPerPlayer[playerName];
+        }
+
+        /// <summary>修改信任值（自动限制在[0,100]范围内）</summary>
+        public void ModifyTrust(string playerName, float delta)
+        {
+            float current = GetTrust(playerName);
+            float next = current + delta;
+            TrustPerPlayer[playerName] = MathHelper.Clamp(next, TrustMin, TrustMax);
+        }
+
+		/// <summary>
+		/// 获取对指定玩家的信念状态（持久化对象，对话系统使用）。
+		/// 首次访问时从信任值初始化，后续修改将持久保存。
+		/// RiskThreshold = 1.0 - trust/100（信任越高→风险阈值越低→越友好）
+		/// </summary>
+		public BeliefState GetBelief(string playerName)
+		{
+			if (PlayerBeliefs.TryGetValue(playerName, out var belief))
+				return belief;
+
+			float trust = GetTrust(playerName);
+			belief = new BeliefState
+			{
+				PlayerName = playerName,
+				RiskThreshold = 1.0f - trust / 100f,
+				ConfidenceLevel = 0.1f + trust / 100f * 0.8f, // 信任越高，置信度越高
+				ObservationCount = 1,
+				EstimatedPower = 0.5f,
+				HasTraded = trust > 60,
+				HasFought = HasBeenHitByPlayer,
+				WasDefeated = false,
+				HasDefeatedPlayer = false,
+				LastInteractionDay = (int)(Main.time / 54000)
+			};
+			PlayerBeliefs[playerName] = belief;
+			return belief;
+		}
+
+        /// <summary>信任值→态度映射（透明规则）</summary>
+        public static GuAttitude TrustToAttitude(float trust, bool isHostile)
+        {
+            if (isHostile) return GuAttitude.Hostile;
+            if (trust >= 80) return GuAttitude.Friendly;
+            if (trust >= 50) return GuAttitude.Ignore;
+            if (trust >= 20) return GuAttitude.Wary;
+            return GuAttitude.Hostile;
+        }
+
+        // ============================================================
+        // AI 主循环（简化版：信任值驱动）
         // ============================================================
 
         public override void AI()
         {
             NPC.TargetClosest(true);
 
-            var context = Perceive(NPC);
-
-            UpdateBelief(NPC, context);
-
             string playerName = Main.LocalPlayer.name;
-            var belief = GetBelief(playerName);
+            float trust = GetTrust(playerName);
 
-            UpdateInvestigation(NPC, context);
+            // 信任值自然衰减
+            ModifyTrust(playerName, -TrustDecayPerFrame);
 
-            var attCtx = new AttitudeContext
-            {
-                WorldPlayer = Main.LocalPlayer.GetModPlayer<GuWorldPlayer>(),
-                NpcFaction = GetFaction(),
-                Personality = GetPersonality(),
-                Rank = GetRank(),
-                HasBeenHitByPlayer = HasBeenHitByPlayer,
-                AggroTimer = AggroTimer,
-                Belief = belief
-            };
-            CurrentAttitude = CalculateAttitude(NPC, attCtx);
+            // 更新态度（信任值映射）
+            CurrentAttitude = TrustToAttitude(trust, HasBeenHitByPlayer && AggroTimer > 0);
 
-            CurrentAttitude = ApplyInvestigationModifier(CurrentAttitude);
-
-            var decision = Decide(NPC, context);
-
-            ExecuteAI(NPC, decision);
+            // 距离驱动行为
+            float dist = Vector2.Distance(NPC.Center, Main.LocalPlayer.Center);
+            ExecuteBehaviorByAttitude(dist);
 
             if (AggroTimer > 0) AggroTimer--;
-
-            SpreadBeliefToAllies(playerName, belief);
         }
 
-        // ============================================================
-        // IGuMasterAI 实现 - 感知
-        // ============================================================
-
-        public virtual PerceptionContext Perceive(NPC npc)
+        /// <summary>根据态度和距离执行行为（替代原Decide+ExecuteAI）</summary>
+        private void ExecuteBehaviorByAttitude(float dist)
         {
-            var player = Main.LocalPlayer;
-            float dist = Vector2.Distance(npc.Center, player.Center);
-            var qiRealm = player.GetModPlayer<QiRealmPlayer>();
-
-            return new PerceptionContext
-            {
-                TargetPlayer = player,
-                DistanceToPlayer = dist,
-                PlayerLifePercent = (int)((float)player.statLife / player.statLifeMax2 * 100),
-                PlayerHasQiEnabled = qiRealm.GuLevel > 0,
-                NearbyAlliesCount = CountNearbyAllies(npc, 400f),
-                NearbyEnemiesCount = CountNearbyEnemies(npc, 400f),
-                IsInOwnTerritory = false, // 后续由小世界系统提供
-                TimeOfDay = (float)Main.time,
-                IsRaining = Main.raining,
-                PlayerInfamy = player.GetModPlayer<GuWorldPlayer>().InfamyPoints,
-                PlayerQiLevel = qiRealm.GuLevel,
-                PlayerDamage = player.HeldItem.damage
-            };
-        }
-
-        private int CountNearbyAllies(NPC npc, float range)
-        {
-            int count = 0;
-            for (int i = 0; i < Main.maxNPCs; i++)
-            {
-                var other = Main.npc[i];
-                if (other.active && other.type == npc.type && Vector2.Distance(npc.Center, other.Center) < range)
-                    count++;
-            }
-            return count;
-        }
-
-        private int CountNearbyEnemies(NPC npc, float range)
-        {
-            int count = 0;
-            for (int i = 0; i < Main.maxNPCs; i++)
-            {
-                var other = Main.npc[i];
-                if (other.active && other.friendly != npc.friendly && Vector2.Distance(npc.Center, other.Center) < range)
-                    count++;
-            }
-            return count;
-        }
-
-        // ============================================================
-        // IGuMasterAI 实现 - 信念系统
-        // ============================================================
-
-        /// <summary> 获取对指定玩家的信念状态（不存在则创建默认） </summary>
-        public BeliefState GetBelief(string playerName)
-        {
-            if (!PlayerBeliefs.ContainsKey(playerName))
-                PlayerBeliefs[playerName] = BeliefState.Default(playerName);
-            return PlayerBeliefs[playerName];
-        }
-
-        /// <summary> 更新对当前目标玩家的信念 </summary>
-        public virtual void UpdateBelief(NPC npc, PerceptionContext context)
-        {
-            string playerName = context.TargetPlayer.name;
-            var belief = GetBelief(playerName);
-
-            GuAttitudeHelper.UpdateBeliefState(belief, context, false, false);
-        }
-
-        /// <summary> 更新对当前目标玩家的调查状态（D-19 调查链集成） </summary>
-        public virtual void UpdateInvestigation(NPC npc, PerceptionContext context)
-        {
-            int currentDay = (int)(Main.time / 36000);
-            int daysSinceLastObs = currentDay - CurrentInvestigation.LastObservationDay;
-            if (daysSinceLastObs > 0)
-            {
-                CurrentInvestigation.DecayOverTime(daysSinceLastObs);
-            }
-
-            if (HasBeenHitByPlayer && AggroTimer > 0)
-            {
-                CurrentInvestigation.Observe("玩家攻击了此NPC", 0.4f);
-            }
-
-            if (context.PlayerInfamy > 50)
-            {
-                CurrentInvestigation.Observe("玩家恶名昭著", 0.15f);
-            }
-
-            var socialNetwork = NPCSocialNetwork.Instance;
-            if (socialNetwork != null)
-            {
-                var aggregatedBelief = socialNetwork.AggregateBelief(npc.type, context.TargetPlayer.name);
-                if (aggregatedBelief != null && aggregatedBelief.WasDefeated)
-                {
-                    CurrentInvestigation.Observe("盟友被该玩家击败", 0.3f);
-                }
-            }
-        }
-
-        /// <summary> 根据调查状态修正态度（D-19） </summary>
-        protected GuAttitude ApplyInvestigationModifier(GuAttitude baseAttitude)
-        {
-            if (CurrentInvestigation.IsActing)
-            {
-                return GuAttitude.Hostile;
-            }
-            if (CurrentInvestigation.IsConfirmed)
-            {
-                if (baseAttitude == GuAttitude.Friendly || baseAttitude == GuAttitude.Respectful)
-                    return GuAttitude.Wary;
-                return GuAttitude.Hostile;
-            }
-            if (CurrentInvestigation.IsSuspicious)
-            {
-                if (baseAttitude == GuAttitude.Friendly)
-                    return GuAttitude.Wary;
-                if (baseAttitude == GuAttitude.Ignore)
-                    return GuAttitude.Wary;
-            }
-            return baseAttitude;
-        }
-
-        /// <summary> 提升态度等级 </summary>
-        private GuAttitude UpgradeAttitude(GuAttitude current)
-        {
-            return current switch
-            {
-                GuAttitude.Hostile => GuAttitude.Wary,
-                GuAttitude.Wary => GuAttitude.Ignore,
-                GuAttitude.Ignore => GuAttitude.Friendly,
-                GuAttitude.Friendly => GuAttitude.Respectful,
-                _ => current
-            };
-        }
-
-        /// <summary> 降低态度等级 </summary>
-        private GuAttitude DowngradeAttitude(GuAttitude current)
-        {
-            return current switch
-            {
-                GuAttitude.Respectful => GuAttitude.Friendly,
-                GuAttitude.Friendly => GuAttitude.Ignore,
-                GuAttitude.Ignore => GuAttitude.Wary,
-                GuAttitude.Wary => GuAttitude.Hostile,
-                _ => current
-            };
-        }
-
-        /// <summary> 向盟友传播信念（D-20 社交网络集成） </summary>
-        protected void SpreadBeliefToAllies(string playerName, BeliefState belief)
-        {
-            if (belief.ObservationCount <= 1) return;
-
-            var socialNetwork = NPCSocialNetwork.Instance;
-            if (socialNetwork != null)
-            {
-                socialNetwork.SpreadBelief(NPC.type, playerName, belief, 500f);
-            }
-        }
-
-        // ============================================================
-        // IGuMasterAI 实现 - 态度计算（基于信念）
-        // ============================================================
-
-        public virtual GuAttitude CalculateAttitude(NPC npc, AttitudeContext context)
-        {
-            var attitude = GuAttitudeHelper.CalculateFromBelief(
-                context.Belief,
-                context.Personality,
-                context.HasBeenHitByPlayer
-            );
-
-            // 应用选择后果修正
-            int choiceModifier = global::VerminLordMod.Common.Systems.ChoiceConsequenceSystem.GetNPCAttitudeModifier(GetType().Name);
-            if (choiceModifier > 20) attitude = UpgradeAttitude(attitude);
-            else if (choiceModifier < -20) attitude = DowngradeAttitude(attitude);
-
-            return attitude;
-        }
-
-        // ============================================================
-        // IGuMasterAI 实现 - 决策
-        // ============================================================
-
-        public virtual Decision Decide(NPC npc, PerceptionContext context)
-        {
-            var decision = new Decision { NewState = CurrentAIState };
-
-            // ===== 强制战斗检查 =====
-            // 如果被玩家攻击过且仇恨未消，强制进入战斗模式
-            // 防止 AggroTimer 到期后 NPC 因信念漂移而突然逃跑
-            if (HasBeenHitByPlayer && AggroTimer > 0)
-            {
-                decision.NewState = GuMasterAIState.Combat;
-                decision.ShouldAttack = true;
-                return decision;
-            }
-
-            // 态度驱动决策
             switch (CurrentAttitude)
             {
                 case GuAttitude.Hostile:
-                    if (context.DistanceToPlayer < 500f)
+                    if (dist < 500f)
                     {
-                        decision.NewState = GuMasterAIState.Combat;
-                        decision.ShouldAttack = true;
-                        decision.DialogueLine = "找死！";
+                        ExecuteCombatAI(NPC);
                     }
                     else
                     {
-                        decision.NewState = GuMasterAIState.Idle;
+                        // 闲逛
+                        NPC.velocity.X *= 0.95f;
+                        if (Main.rand.NextBool(200))
+                            NPC.velocity.X = Main.rand.NextBool() ? 1 : -1;
                     }
                     break;
 
                 case GuAttitude.Wary:
-                case GuAttitude.Contemptuous:
-                    if (context.DistanceToPlayer < 300f)
+                    if (dist < 300f)
                     {
-                        decision.NewState = GuMasterAIState.Approach;
-                        decision.Interaction = InteractionType.Provoke;
+                        // 保持距离观察
+                        float dir = Main.player[NPC.target].Center.X > NPC.Center.X ? -1 : 1;
+                        NPC.velocity.X = dir * 1f;
+                        NPC.spriteDirection = (int)-dir;
                     }
                     else
                     {
-                        decision.NewState = GuMasterAIState.Idle;
-                    }
-                    break;
-
-                case GuAttitude.Fearful:
-                    // 恐惧态度不再逃跑，改为保持距离观察
-                    if (context.DistanceToPlayer < 300f)
-                    {
-                        decision.NewState = GuMasterAIState.Approach;
-                        decision.Interaction = InteractionType.Provoke;
-                    }
-                    else
-                    {
-                        decision.NewState = GuMasterAIState.Idle;
+                        NPC.velocity.X *= 0.95f;
                     }
                     break;
 
                 case GuAttitude.Friendly:
                 case GuAttitude.Respectful:
-                    if (context.DistanceToPlayer < 200f)
+                    if (dist < 200f)
                     {
-                        decision.NewState = GuMasterAIState.Talk;
-                        decision.Interaction = InteractionType.Talk;
+                        // 靠近对话
+                        NPC.velocity.X *= 0.9f;
                     }
-                    else if (context.DistanceToPlayer < 400f)
+                    else if (dist < 400f)
                     {
-                        decision.NewState = GuMasterAIState.Approach;
+                        // 走向玩家
+                        float dir = Main.player[NPC.target].Center.X > NPC.Center.X ? 1 : -1;
+                        NPC.velocity.X = dir * 1.5f;
+                        NPC.spriteDirection = (int)dir;
                     }
                     else
                     {
-                        decision.NewState = GuMasterAIState.Idle;
+                        NPC.velocity.X *= 0.95f;
                     }
                     break;
 
                 default: // Ignore
-                    decision.NewState = GuMasterAIState.Idle;
-                    break;
-            }
-
-            return decision;
-        }
-
-        // ============================================================
-        // IGuMasterAI 实现 - 行为执行
-        // ============================================================
-
-        public virtual void ExecuteAI(NPC npc, Decision decision)
-        {
-            CurrentAIState = decision.NewState;
-
-            switch (decision.NewState)
-            {
-                case GuMasterAIState.Idle:
-                    // 简单闲逛
-                    npc.velocity.X *= 0.95f;
+                    NPC.velocity.X *= 0.95f;
                     if (Main.rand.NextBool(200))
-                        npc.velocity.X = Main.rand.NextBool() ? 1 : -1;
-                    break;
-
-                case GuMasterAIState.Approach:
-                    // 走向玩家
-                    var player = Main.player[npc.target];
-                    float dir = player.Center.X > npc.Center.X ? 1 : -1;
-                    npc.velocity.X = dir * 1.5f;
-                    npc.spriteDirection = (int)dir;
-                    break;
-
-                case GuMasterAIState.Combat:
-                    if (decision.ShouldAttack)
-                        ExecuteCombatAI(npc);
-                    break;
-
-                // Flee 状态已废弃：NPC不再逃跑，恐惧态度改为保持距离观察
-
-                case GuMasterAIState.Talk:
-                    npc.velocity.X *= 0.9f;
+                        NPC.velocity.X = Main.rand.NextBool() ? 1 : -1;
                     break;
             }
         }
 
-        /// <summary> 战斗AI - 子类可重写 </summary>
+        /// <summary>战斗AI - 子类可重写</summary>
         public virtual void ExecuteCombatAI(NPC npc)
         {
             var target = Main.player[npc.target];
             float dist = Vector2.Distance(npc.Center, target.Center);
 
-            // 追逐玩家
             float dir = target.Center.X > npc.Center.X ? 1 : -1;
             npc.velocity.X = dir * 2f;
             npc.spriteDirection = (int)dir;
 
-            // 跳跃
             if (npc.collideX && npc.velocity.Y == 0)
                 npc.velocity.Y = -6f;
         }
 
         // ============================================================
-        // IGuMasterAI 实现 - 交互处理
+        // 交互处理（简化版：信任值直接影响）
         // ============================================================
 
         public virtual InteractionResult HandleInteraction(NPC npc, Player player, InteractionType interaction)
         {
             var result = new InteractionResult { Success = true };
-            var worldPlayer = player.GetModPlayer<GuWorldPlayer>();
+            string playerName = player.name;
 
             switch (interaction)
             {
                 case InteractionType.Talk:
                     result.Message = GetDialogue(npc, CurrentAttitude);
+                    ModifyTrust(playerName, +10f);
                     break;
 
                 case InteractionType.Trade:
@@ -510,53 +303,36 @@ namespace VerminLordMod.Content.NPCs.GuMasters
                     else
                     {
                         result.Message = "打开交易界面...";
-                        // 后续由NPCShop实现
+                        ModifyTrust(playerName, +20f);
                     }
                     break;
 
                 case InteractionType.Attack:
                     HasBeenHitByPlayer = true;
-                    AggroTimer = 1800; // 30秒仇恨
-                    // 注意：恶名不在攻击时增加，只在击杀且有目击者时增加（见 OnKill）
-
-                    // 进入战斗状态后自动去除弹幕保护，让玩家也能打他
+                    AggroTimer = 1800;
                     ProjectileProtectionEnabled = false;
+                    ModifyTrust(playerName, -50f);
 
-                    // 弹幕保护关闭时被攻击 → 震惊反应
-                    if (!ProjectileProtectionEnabled)
+                    SpawnShockEffect(NPC.Center);
+
+                    if (!HasSpokenFirstHitLine)
                     {
-                        // 弹出震惊感叹号特效
-                        SpawnShockEffect(NPC.Center);
-
-                        // 第一次被击中时头顶飘出随机话语（仅一次）
-                        if (!HasSpokenFirstHitLine)
+                        HasSpokenFirstHitLine = true;
+                        string[] hitLines = new string[]
                         {
-                            HasSpokenFirstHitLine = true;
-                            string[] hitLines = new string[]
-                            {
-                                "你竟敢偷袭我！",
-                                "好胆！",
-                                "找死！",
-                                "哼，早就防着你了！",
-                                "大胆！",
-                                "你找死！"
-                            };
-                            string hitLine = hitLines[Main.rand.Next(hitLines.Length)];
-                            CombatText.NewText(NPC.getRect(), Color.OrangeRed, hitLine, true);
-                        }
-
-                        // 无论自信与否，都直接反击（站定发射弹幕）
-                        result.Message = "受到攻击！";
-                        result.TriggerCombat = true;
-                    }
-                    else
-                    {
-                        // 有保护时不应该走到这里（ModifyHitByProjectile 已拦截），但近战攻击不受保护
-                        result.Message = "你攻击了" + GuMasterDisplayName + "！";
-                        result.TriggerCombat = true;
+                            "你竟敢偷袭我！",
+                            "好胆！",
+                            "找死！",
+                            "哼，早就防着你了！",
+                            "大胆！",
+                            "你找死！"
+                        };
+                        CombatText.NewText(NPC.getRect(), Color.OrangeRed, hitLines[Main.rand.Next(hitLines.Length)], true);
                     }
 
-                    // 通知附近同阵营NPC：有人被攻击了，一起参战
+                    result.Message = "受到攻击！";
+                    result.TriggerCombat = true;
+
                     AlertNearbyAllies(NPC, 500f);
                     break;
 
@@ -565,29 +341,16 @@ namespace VerminLordMod.Content.NPCs.GuMasters
                     {
                         HasBeenHitByPlayer = true;
                         AggroTimer = 300;
+                        ModifyTrust(playerName, -20f);
                         result.TriggerCombat = true;
                         result.Message = GuMasterDisplayName + "被激怒了！";
-                    }
-                    break;
-
-                case InteractionType.Ally:
-                    result.Success = worldPlayer.FormAlliance(GetFaction());
-                    break;
-
-                case InteractionType.Betray:
-                    result.Success = worldPlayer.BetrayAlly(GetFaction());
-                    if (result.Success)
-                    {
-                        HasBeenHitByPlayer = true;
-                        AggroTimer = 1200;
-                        result.TriggerCombat = true;
                     }
                     break;
 
                 case InteractionType.Bribe:
                     if (GetPersonality() == GuPersonality.Greedy)
                     {
-                        worldPlayer.AddReputation(GetFaction(), 30, "贿赂");
+                        ModifyTrust(playerName, +30f);
                         result.Message = GuMasterDisplayName + "收下了你的贿赂。";
                     }
                     else
@@ -602,7 +365,64 @@ namespace VerminLordMod.Content.NPCs.GuMasters
         }
 
         // ============================================================
-        // IGuMasterAI 实现 - 对话
+        // IGuMasterAI 接口实现（信念兼容层，核心使用信任值）
+        // ============================================================
+
+        public virtual PerceptionContext Perceive(NPC npc)
+        {
+            var player = Main.LocalPlayer;
+            float dist = Vector2.Distance(npc.Center, player.Center);
+            var qiRealm = player.GetModPlayer<QiRealmPlayer>();
+
+            return new PerceptionContext
+            {
+                TargetPlayer = player,
+                DistanceToPlayer = dist,
+                PlayerLifePercent = (int)((float)player.statLife / player.statLifeMax2 * 100),
+                PlayerHasQiEnabled = qiRealm.GuLevel > 0,
+                NearbyAlliesCount = GetNearbyFamilyCount(400f),
+                NearbyEnemiesCount = 0,
+                IsInOwnTerritory = false,
+                TimeOfDay = (float)Main.time,
+                IsRaining = Main.raining,
+                PlayerInfamy = player.GetModPlayer<GuWorldPlayer>().InfamyPoints,
+                PlayerQiLevel = qiRealm.GuLevel,
+                PlayerDamage = player.HeldItem.damage
+            };
+        }
+
+        public virtual void UpdateBelief(NPC npc, PerceptionContext context)
+        {
+            // 信念系统由对话交互更新，不由感知循环更新
+            // 信任值的自然衰减已在 AI() 中处理
+        }
+
+        public virtual Decision Decide(NPC npc, PerceptionContext context)
+        {
+            return new Decision
+            {
+                NewState = CurrentAttitude == GuAttitude.Hostile ? GuMasterAIState.Combat : GuMasterAIState.Idle,
+                Interaction = InteractionType.None,
+                DialogueLine = "",
+                ShouldAttack = CurrentAttitude == GuAttitude.Hostile,
+                ShouldFlee = CurrentAttitude == GuAttitude.Fearful,
+                ShouldCallForHelp = false,
+                MoveTarget = Vector2.Zero
+            };
+        }
+
+        public virtual GuAttitude CalculateAttitude(NPC npc, AttitudeContext context)
+        {
+            return CurrentAttitude;
+        }
+
+        public virtual void ExecuteAI(NPC npc, Decision decision)
+        {
+            // AI 已在 ExecuteBehaviorByAttitude 中实现
+        }
+
+        // ============================================================
+        // 对话系统
         // ============================================================
 
         public virtual string GetDialogue(NPC npc, GuAttitude attitude)
@@ -667,9 +487,10 @@ namespace VerminLordMod.Content.NPCs.GuMasters
                     return;
                 }
 
+                // "询问" → 诚实展示修为
                 var dialogueSystem = ModContent.GetInstance<DialogueSystem>();
                 dialogueSystem.OnDialogueChoice(Main.LocalPlayer, npc, 0);
-                Main.npcChatText = GetDialogue(npc, CurrentAttitude);
+                // 处理函数已设置 Main.npcChatText，无需覆盖
             }
             else
             {
@@ -678,21 +499,16 @@ namespace VerminLordMod.Content.NPCs.GuMasters
                     return;
                 }
 
-                var dialogueSystem = ModContent.GetInstance<DialogueSystem>();
-                dialogueSystem.OnDialogueChoice(Main.LocalPlayer, npc, 1);
-
+                // 友善时打开商店，否则执行第二对话选项
                 if (CurrentAttitude != GuAttitude.Hostile && CurrentAttitude != GuAttitude.Wary)
                 {
-                    ProjectileProtectionEnabled = !ProjectileProtectionEnabled;
-                    if (ProjectileProtectionEnabled)
-                    {
-                        Main.npcChatText = "你重新开启了弹幕保护。";
-                    }
-                    else
-                    {
-                        Main.npcChatText = "你悄悄去除了弹幕保护。";
-                    }
+                    shop = ShopName;
+                    ModifyTrust(Main.LocalPlayer.name, +20f);
+                    return;
                 }
+
+                var dialogueSystem = ModContent.GetInstance<DialogueSystem>();
+                dialogueSystem.OnDialogueChoice(Main.LocalPlayer, npc, 1);
             }
         }
 
@@ -702,7 +518,6 @@ namespace VerminLordMod.Content.NPCs.GuMasters
 
         public override bool CanChat()
         {
-            // 只有非敌对状态才能对话
             return CurrentAttitude != GuAttitude.Hostile;
         }
 
@@ -723,23 +538,16 @@ namespace VerminLordMod.Content.NPCs.GuMasters
 
         public override void ModifyHitByItem(Player player, Item item, ref NPC.HitModifiers modifiers)
         {
-            // 近战攻击不受弹幕保护影响，直接处理
             HandleInteraction(NPC, player, InteractionType.Attack);
         }
 
-        /// <summary>
-        /// 弹幕保护开启时，完全阻止弹幕击中NPC（连1点强制伤害都没有）
-        /// 保护关闭时，允许弹幕击中并触发反击
-        /// </summary>
         public override bool? CanBeHitByProjectile(Projectile projectile)
         {
-            // 只拦截玩家发射的弹幕
             if (projectile.owner >= 0 && projectile.owner < Main.maxPlayers)
             {
                 var player = Main.player[projectile.owner];
                 if (player.active && ProjectileProtectionEnabled)
                 {
-                    // 弹幕保护开启：完全免疫玩家弹幕
                     return false;
                 }
             }
@@ -753,8 +561,6 @@ namespace VerminLordMod.Content.NPCs.GuMasters
                 var player = Main.player[projectile.owner];
                 if (player.active)
                 {
-                    // 能走到这里说明保护已关闭（CanBeHitByProjectile 已拦截保护开启的情况）
-                    // 正常处理攻击：触发反击
                     HandleInteraction(NPC, player, InteractionType.Attack);
                 }
             }
@@ -762,8 +568,6 @@ namespace VerminLordMod.Content.NPCs.GuMasters
 
         public override void OnKill()
         {
-            // ===== 目击者检查 =====
-            // 检查击杀者是否是玩家
             int? killerPlayerId = WhoKilledMe();
             if (killerPlayerId.HasValue)
             {
@@ -772,7 +576,6 @@ namespace VerminLordMod.Content.NPCs.GuMasters
                 {
                     var worldPlayer = killer.GetModPlayer<GuWorldPlayer>();
 
-                    // 检查是否有目击者（同家族NPC在附近）
                     if (HasWitnesses(400f))
                     {
                         worldPlayer.AddInfamy(10);
@@ -781,21 +584,17 @@ namespace VerminLordMod.Content.NPCs.GuMasters
                     }
                     else
                     {
-                        // 无目击者：秘密击杀，不扣声望也不增加恶名
                         Main.NewText($"你秘密击杀了{GuMasterDisplayName}，无人知晓。", Color.Gray);
                     }
                 }
             }
-            // 非玩家击杀（怪物等）→ 不扣玩家声望
         }
 
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            // 基础生成条件：需要玩家是蛊师
             if (spawnInfo.Player.GetModPlayer<global::VerminLordMod.Common.Players.QiRealmPlayer>().GuLevel <= 0)
                 return 0f;
 
-            // 剧情阶段门控：根据NPC所属势力决定最低阶段要求
             var phase = global::VerminLordMod.Common.DialogueTree.StoryManager.Instance.GetPhase(spawnInfo.Player);
             var faction = GetFaction();
             int minPhaseValue = faction switch
@@ -815,24 +614,35 @@ namespace VerminLordMod.Content.NPCs.GuMasters
         }
 
         // ============================================================
-        // 商店系统（子类可重写）
+        // 商店系统
         // ============================================================
 
         public override void AddShops()
         {
-            // 子类实现具体商店内容
         }
 
         // ============================================================
-        // 持久化（信念数据）
+        // 持久化（信任值 + 信念）
         // ============================================================
 
         public override void SaveData(TagCompound tag)
         {
-            var beliefsData = new List<TagCompound>();
+            var trustData = new List<TagCompound>();
+            foreach (var (playerName, trust) in TrustPerPlayer)
+            {
+                trustData.Add(new TagCompound
+                {
+                    ["playerName"] = playerName,
+                    ["trust"] = trust
+                });
+            }
+            tag["trustPerPlayer"] = trustData;
+
+            // 保存信念状态
+            var beliefData = new List<TagCompound>();
             foreach (var (playerName, belief) in PlayerBeliefs)
             {
-                beliefsData.Add(new TagCompound
+                beliefData.Add(new TagCompound
                 {
                     ["playerName"] = playerName,
                     ["riskThreshold"] = belief.RiskThreshold,
@@ -843,22 +653,35 @@ namespace VerminLordMod.Content.NPCs.GuMasters
                     ["hasFought"] = belief.HasFought,
                     ["wasDefeated"] = belief.WasDefeated,
                     ["hasDefeatedPlayer"] = belief.HasDefeatedPlayer,
-                    ["lastInteractionDay"] = belief.LastInteractionDay
+                    ["lastInteractionDay"] = belief.LastInteractionDay,
                 });
             }
-            tag["playerBeliefs"] = beliefsData;
+            tag["playerBeliefs"] = beliefData;
         }
 
         public override void LoadData(TagCompound tag)
         {
-            PlayerBeliefs.Clear();
-            if (tag.TryGet("playerBeliefs", out List<TagCompound> beliefsData))
+            TrustPerPlayer.Clear();
+            if (tag.TryGet("trustPerPlayer", out List<TagCompound> trustData))
             {
-                foreach (var entry in beliefsData)
+                foreach (var entry in trustData)
                 {
-                    var belief = new BeliefState
+                    string playerName = entry.GetString("playerName");
+                    float trust = entry.GetFloat("trust");
+                    TrustPerPlayer[playerName] = trust;
+                }
+            }
+
+            // 加载信念状态
+            PlayerBeliefs.Clear();
+            if (tag.TryGet("playerBeliefs", out List<TagCompound> beliefData))
+            {
+                foreach (var entry in beliefData)
+                {
+                    string playerName = entry.GetString("playerName");
+                    PlayerBeliefs[playerName] = new BeliefState
                     {
-                        PlayerName = entry.GetString("playerName"),
+                        PlayerName = playerName,
                         RiskThreshold = entry.GetFloat("riskThreshold"),
                         ConfidenceLevel = entry.GetFloat("confidenceLevel"),
                         ObservationCount = entry.GetInt("observationCount"),
@@ -867,9 +690,8 @@ namespace VerminLordMod.Content.NPCs.GuMasters
                         HasFought = entry.GetBool("hasFought"),
                         WasDefeated = entry.GetBool("wasDefeated"),
                         HasDefeatedPlayer = entry.GetBool("hasDefeatedPlayer"),
-                        LastInteractionDay = entry.GetInt("lastInteractionDay")
+                        LastInteractionDay = entry.GetInt("lastInteractionDay"),
                     };
-                    PlayerBeliefs[belief.PlayerName] = belief;
                 }
             }
         }
@@ -878,24 +700,24 @@ namespace VerminLordMod.Content.NPCs.GuMasters
         // 工具方法
         // ============================================================
 
-        /// <summary> 获取附近同家族NPC数量 </summary>
         protected int GetNearbyFamilyCount(float range = 400f)
         {
-            return CountNearbyAllies(NPC, range);
+            int count = 0;
+            for (int i = 0; i < Main.maxNPCs; i++)
+            {
+                var other = Main.npc[i];
+                if (other.active && other.type == NPC.type && Vector2.Distance(NPC.Center, other.Center) < range)
+                    count++;
+            }
+            return count;
         }
 
-        /// <summary> 发送聊天消息 </summary>
         protected void Say(string message, Color? color = null)
         {
             if (Main.netMode == NetmodeID.SinglePlayer)
                 Main.NewText(message, color ?? Color.White);
         }
 
-        /// <summary>
-        /// 通知附近同阵营NPC：有人被玩家攻击了
-        /// 目击到攻击事件的同阵营NPC直接进入战斗状态（HasBeenHitByPlayer = true）
-        /// 因为亲眼看到玩家攻击同家族成员，这是明确的敌对行为
-        /// </summary>
         protected void AlertNearbyAllies(NPC npc, float range)
         {
             string[] witnessLines = new string[]
@@ -919,6 +741,9 @@ namespace VerminLordMod.Content.NPCs.GuMasters
                         ally.HasBeenHitByPlayer = true;
                         ally.AggroTimer = 1800;
                         ally.ProjectileProtectionEnabled = false;
+                        // 目击攻击，信任-30（用攻击者的玩家名）
+                        if (npc.target >= 0 && npc.target < Main.maxPlayers)
+                            ally.ModifyTrust(Main.player[npc.target].name, -30f);
 
                         if (!ally.HasSpokenWitnessLine)
                         {
@@ -929,15 +754,8 @@ namespace VerminLordMod.Content.NPCs.GuMasters
                     }
                 }
             }
-
-            var socialNetwork = NPCSocialNetwork.Instance;
-            if (socialNetwork != null)
-            {
-                socialNetwork.SpreadAlert(npc.type, Main.LocalPlayer.name, range);
-            }
         }
 
-        /// <summary> 检查是否有同家族NPC在附近（目击者） </summary>
         protected bool HasWitnesses(float range)
         {
             for (int i = 0; i < Main.maxNPCs; i++)
@@ -955,10 +773,8 @@ namespace VerminLordMod.Content.NPCs.GuMasters
             return false;
         }
 
-        /// <summary> 获取击杀此NPC的玩家ID（如果有） </summary>
         protected int? WhoKilledMe()
         {
-            // 使用 tML 提供的 lastInteraction 追踪最后交互的玩家
             if (NPC.lastInteraction >= 0 && NPC.lastInteraction < Main.maxPlayers)
             {
                 var player = Main.player[NPC.lastInteraction];
@@ -968,14 +784,8 @@ namespace VerminLordMod.Content.NPCs.GuMasters
             return null;
         }
 
-        // ============================================================
-        // 特效方法
-        // ============================================================
-
-        /// <summary> 在NPC位置生成震惊感叹号特效 </summary>
         protected void SpawnShockEffect(Vector2 position)
         {
-            // 使用 Dust 模拟感叹号爆炸效果
             for (int i = 0; i < 15; i++)
             {
                 Dust.NewDust(position, 10, 10, DustID.Torch,
@@ -983,7 +793,6 @@ namespace VerminLordMod.Content.NPCs.GuMasters
                     Main.rand.NextFloat(-4f, 4f),
                     100, Color.Yellow, 1.8f);
             }
-            // 显示感叹号战斗文本
             CombatText.NewText(NPC.getRect(), Color.Yellow, "！", true);
         }
     }

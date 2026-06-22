@@ -1,58 +1,90 @@
+using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
-using VerminLordMod.Common.GuBehaviors;
+using VerminLordMod.Common.Players;
 using VerminLordMod.Content.DamageClasses;
+using VerminLordMod.Content.Items.Accessories.One;
+using VerminLordMod.Content.Items.Accessories;
+using VerminLordMod.Content.Items.Consumables;
 using VerminLordMod.Content.Items.Weapons.Daos;
-using VerminLordMod.Content.Projectiles;
 
 namespace VerminLordMod.Content.Items.Weapons.Two
 {
-    /// <summary>
-    /// 二转月道蛊虫 — 隐鳞蛊
-    /// 隐身蛊，可隐蔽身形，克制电狼视觉。
-    /// </summary>
-    public class YinLinGu : MoonWeapon, IOnHitEffectProvider
-    {
-        protected override int qiCost => 10;
-        protected override int _useTime => 20;
-        protected override int _guLevel => 2;
-        protected override int controlQiCost => 6;
-        protected override float unitConntrolRate => 25;
+	/// <summary>
+	/// 二转月道蛊虫 — 隐鳞蛊（手持使用型）
+	/// 使用后进入隐身状态，隐蔽身形。
+	/// 由隐形石蛊 + 鳞甲蛊合成。
+	/// </summary>
+	class YinLinGu : MoonWeapon
+	{
+		protected override int qiCost => 10;
+		protected override int _useTime => 30;
+		protected override int _guLevel => 2;
+		protected override int controlQiCost => 6;
 
-        public DaoEffectTags[] OnHitEffects => new[] { DaoEffectTags.LifeSteal };
-        public float DoTDuration => 3f;
-        public float DoTDamage => 8f;
-        public float SlowPercent => 0.3f;
-        public int SlowDuration => 120;
-        public float ArmorShredAmount => 7f;
-        public int ArmorShredDuration => 120;
-        public float WeakenPercent => 0.15f;
-        public float LifeStealPercent => 0.1f;
+		public override void SetDefaults()
+		{
+			Item.width = 26;
+			Item.height = 26;
+			Item.rare = ItemRarityID.Blue;
+			Item.maxStack = 1;
+			Item.value = 1500;
+			Item.useStyle = ItemUseStyleID.HoldUp;
+			Item.useAnimation = 30;
+			Item.useTime = 30;
+			Item.UseSound = SoundID.Item4;
+			Item.scale = 1f;
+			Item.shootSpeed = 0f;
+			Item.noMelee = true;
+			Item.noUseGraphic = true;
+			Item.autoReuse = false;
+			Item.damage = 0;
+			Item.DamageType = ModContent.GetInstance<InsectDamageClass>();
+			Item.shoot = ProjectileID.None;
+		}
 
-        public void CustomOnHitNPC(NPC target, Player player, Projectile projectile, int damage) { }
+		public override bool? UseItem(Player player)
+		{
+			if (player.whoAmI != Main.myPlayer)
+				return false;
 
-        public override void SetDefaults()
-        {
-            Item.width = 26;
-            Item.height = 26;
-            Item.damage = 20;
-            Item.DamageType = ModContent.GetInstance<InsectDamageClass>();
-            Item.knockBack = 3f;
-            Item.crit = 3;
-            Item.rare = ItemRarityID.Blue;
-            Item.maxStack = 1;
-            Item.value = 1500;
-            Item.useStyle = ItemUseStyleID.HoldUp;
-            Item.useAnimation = 20;
-            Item.useTime = 20;
-            Item.UseSound = SoundID.Item4;
-            Item.scale = 1f;
-            Item.shoot = ModContent.ProjectileType<YinLinProj>();
-            Item.shootSpeed = 11f;
-            Item.noMelee = true;
-            Item.noUseGraphic = true;
-            Item.autoReuse = false;
-        }
-    }
+			// 消耗真元
+			var qiResource = player.GetModPlayer<QiResourcePlayer>();
+			if (!qiResource.ConsumeQi(qiCost))
+			{
+				Text.ShowTextRed(player, "真元不足，无法催动隐鳞蛊！");
+				return false;
+			}
+
+			// 境界压制
+			var qiRealm = player.GetModPlayer<QiRealmPlayer>();
+			if (_guLevel > qiRealm.GuLevel)
+			{
+				Text.ShowTextRed(player, "您正在强行调动高转蛊虫！！！");
+				player.Hurt(PlayerDeathReason.LegacyDefault(),
+					(_guLevel - qiRealm.GuLevel) * player.statLifeMax2 / 20, 0);
+			}
+
+			// 获得隐身效果
+			player.AddBuff(BuffID.Invisibility, 3600); // 60秒
+			player.AddBuff(BuffID.ShadowDodge, 600);   // 10秒暗影闪避
+
+			if (Main.myPlayer == player.whoAmI)
+				Main.NewText("隐鳞蛊发动，身形隐匿！", new Color(180, 180, 220));
+
+			return true;
+		}
+
+		public override void AddRecipes()
+		{
+			CreateRecipe()
+				.AddIngredient(ModContent.GetInstance<InvisibleStoneGu>(), 1)
+				.AddIngredient(ModContent.ItemType<Accessories.One.ScaleGu>(), 1)
+				.AddIngredient(ModContent.GetInstance<YuanS>(), 10)
+				.AddTile(TileID.WorkBenches)
+				.Register();
+		}
+	}
 }

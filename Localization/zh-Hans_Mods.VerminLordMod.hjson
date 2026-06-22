@@ -616,6 +616,12 @@ Projectiles: {
 	// ZhaoZaiGuProj.DisplayName: Zhao Zai Gu Proj
 	// ZhengYiProj.DisplayName: Zheng Yi Proj
 	// ZhiZunXianTaiGuProj.DisplayName: Zhi Zun Xian Tai Gu Proj
+	// MoonBladeProj.DisplayName: Moon Blade Proj
+	// MoonBurstProj.DisplayName: Moon Burst Proj
+	// MoonChaseProj.DisplayName: Moon Chase Proj
+	// MoonCutProj.DisplayName: Moon Cut Proj
+	// MoonNovaProj.DisplayName: Moon Nova Proj
+	// MoonTideProj.DisplayName: Moon Tide Proj
 }
 
 Prefixes: {
@@ -2079,6 +2085,7 @@ Items: {
 		DisplayName: 蛊饰品
 		ControlRate: 炼化进度：{0}
 		UsesXQi: "{0} 真元需求"
+		// GuLevel: Mods.VerminLordMod.Items.GuAccessoryItem.GuLevel
 	}
 
 	CopperSkin: {
@@ -2590,7 +2597,7 @@ Items: {
 
 	GoldMoon: {
 		UsesXQi: "{0} 真元需求"
-		ControlRate: 炼化进度：{0}
+		// ControlRate: Mods.VerminLordMod.Items.GoldMoon.ControlRate
 		GuLevel: 转数：{0}
 		DisplayName: 黄金月
 		Tooltip: 月光啊，闪爆他们！
@@ -6467,11 +6474,16 @@ Items: {
 	}
 
 	BaoYueGuangWangGu: {
-		// UsesXQi: Mods.VerminLordMod.Items.BaoYueGuangWangGu.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.BaoYueGuangWangGu.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.BaoYueGuangWangGu.GuLevel
-		// DisplayName: Bao Yue Guang Wang Gu
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 宝月光王蛊
+		Tooltip:
+			'''
+			五转月道强攻蛊虫，月华万丈，摧枯拉朽
+			[c/FFD700:食性：万年月灵石]
+			[c/FFD700:“月华如柱，冲天而起，方圆百丈之内尽被清辉笼罩，无可遁逃。”]
+			'''
 	}
 
 	BiKongGu: {
@@ -7203,11 +7215,16 @@ Items: {
 	}
 
 	YueYingGu: {
-		// UsesXQi: Mods.VerminLordMod.Items.YueYingGu.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.YueYingGu.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.YueYingGu.GuLevel
-		// DisplayName: Yue Ying Gu
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 月影蛊
+		Tooltip:
+			'''
+			四转月道暗杀蛊虫，月影无形，一击必中
+			[c/4B0082:食性：暗影月露]
+			[c/4B0082:“月影摇曳间，已无声无息地出现在猎物背后，月光即是杀机。”]
+			'''
 	}
 
 	ZhuJunZiGu: {
@@ -8432,11 +8449,16 @@ Items: {
 	}
 
 	QiXiangJiuChongGu: {
-		// UsesXQi: Mods.VerminLordMod.Items.QiXiangJiuChongGu.UsesXQi
-		// ControlRate: Mods.VerminLordMod.Items.QiXiangJiuChongGu.ControlRate
-		// GuLevel: Mods.VerminLordMod.Items.QiXiangJiuChongGu.GuLevel
-		// DisplayName: Qi Xiang Jiu Chong Gu
-		// Tooltip: ""
+		UsesXQi: "{0} 真元消耗"
+		ControlRate: 炼化进度：{0}
+		GuLevel: 转数：{0}
+		DisplayName: 九重劲蛊
+		Tooltip:
+			'''
+			月道多重劲道蛊虫，九重劲力叠加
+			[c/1e90ff:食性：叠月花瓣]
+			[c/1e90ff:“一重月劲如潮，九重叠加似海，一浪高过一浪，直至摧城。”]
+			'''
 	}
 
 	QuanLiXFuGu: {
@@ -8864,51 +8886,81 @@ Items: {
 	}
 
 	YueXXGu: {
-		// GuLevel: Mods.VerminLordMod.Items.YueXXGu.GuLevel
-		// ControlRate: Mods.VerminLordMod.Items.YueXXGu.ControlRate
-		// UsesXQi: Mods.VerminLordMod.Items.YueXXGu.UsesXQi
-		// DisplayName: Yue X X Gu
-		// Tooltip: ""
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元消耗"
+		DisplayName: 月月蛊
+		Tooltip:
+			'''
+			二转月道蛊虫
+			[c/1e90ff:食性：月华露水]
+			[c/1e90ff:“月光凝聚，锋芒毕露。”]
+			'''
 	}
 
 	YueXuanGu: {
-		// GuLevel: Mods.VerminLordMod.Items.YueXuanGu.GuLevel
-		// ControlRate: Mods.VerminLordMod.Items.YueXuanGu.ControlRate
-		// UsesXQi: Mods.VerminLordMod.Items.YueXuanGu.UsesXQi
-		// DisplayName: Yue Xuan Gu
-		// Tooltip: ""
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元消耗"
+		DisplayName: 月旋蛊
+		Tooltip:
+			'''
+			二转月道蛊虫，发出绿色月刃，攻击轨迹为曲线
+			[c/00FF7F:食性：翠月竹叶]
+			[c/00FF7F:“碧色月弧划破长空，如翠鸟掠影，轨迹飘忽不定。”]
+			'''
 	}
 
 	YueX2Gu: {
-		// GuLevel: Mods.VerminLordMod.Items.YueX2Gu.GuLevel
-		// ControlRate: Mods.VerminLordMod.Items.YueX2Gu.ControlRate
-		// UsesXQi: Mods.VerminLordMod.Items.YueX2Gu.UsesXQi
-		// DisplayName: Yue X2 Gu
-		// Tooltip: ""
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元消耗"
+		DisplayName: 月芒蛊
+		Tooltip:
+			'''
+			二转月道蛊虫，月光蛊进化形，银白月刃斩敌
+			[c/C0C0C0:食性：银月花粉]
+			[c/C0C0C0:“银白色的月芒如丝如缕，看似柔和，实则锋锐无匹。”]
+			'''
 	}
 
 	YueHenGu: {
-		// GuLevel: Mods.VerminLordMod.Items.YueHenGu.GuLevel
-		// ControlRate: Mods.VerminLordMod.Items.YueHenGu.ControlRate
-		// UsesXQi: Mods.VerminLordMod.Items.YueHenGu.UsesXQi
-		// DisplayName: Yue Hen Gu
-		// Tooltip: ""
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元消耗"
+		DisplayName: 月痕蛊
+		Tooltip:
+			'''
+			二转月道蛊虫，留下月痕标记猎物
+			[c/6495ED:食性：痕月花瓣]
+			[c/6495ED:“月痕所至，如影随形，猎物身上留下一道淡淡的月印，无法抹去。”]
+			'''
 	}
 
 	YinLinGu: {
-		// GuLevel: Mods.VerminLordMod.Items.YinLinGu.GuLevel
-		// ControlRate: Mods.VerminLordMod.Items.YinLinGu.ControlRate
-		// UsesXQi: Mods.VerminLordMod.Items.YinLinGu.UsesXQi
-		// DisplayName: Yin Lin Gu
-		// Tooltip: ""
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元消耗"
+		DisplayName: 隐鳞蛊
+		Tooltip:
+			'''
+			二转月道蛊虫，催动后可隐匿身形
+			[c/696969:食性：暗鳞粉]
+			[c/696969:“鳞片微张，光线扭曲，身形逐渐模糊直至完全消失。”]
+			'''
 	}
 
 	YaoYueGu: {
-		// GuLevel: Mods.VerminLordMod.Items.YaoYueGu.GuLevel
-		// ControlRate: Mods.VerminLordMod.Items.YaoYueGu.ControlRate
-		// UsesXQi: Mods.VerminLordMod.Items.YaoYueGu.UsesXQi
-		// DisplayName: Yao Yue Gu
-		// Tooltip: ""
+		GuLevel: 转数：{0}
+		ControlRate: 炼化进度：{0}
+		UsesXQi: "{0} 真元消耗"
+		DisplayName: 妖月蛊
+		Tooltip:
+			'''
+			二转月道蛊虫
+			[c/9370DB:食性：紫月兰]
+			[c/9370DB:“紫色的月光妖异而迷人。”]
+			'''
 	}
 
 	XXGu: {
@@ -9843,6 +9895,9 @@ Items: {
 	安土重山堡: {
 		// DisplayName: 安土重山堡
 		// Tooltip: ""
+		// UsesXQi: Mods.VerminLordMod.Items.安土重山堡.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.安土重山堡.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.安土重山堡.GuLevel
 	}
 
 	定真树: {
@@ -9983,6 +10038,9 @@ Items: {
 	苍蓝龙鲸: {
 		// DisplayName: 苍蓝龙鲸
 		// Tooltip: ""
+		// UsesXQi: Mods.VerminLordMod.Items.苍蓝龙鲸.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.苍蓝龙鲸.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.苍蓝龙鲸.GuLevel
 	}
 
 	茅草屋: {
@@ -10997,6 +11055,9 @@ Items: {
 	DiQiaoWoNiu: {
 		// DisplayName: Di Qiao Wo Niu
 		// Tooltip: ""
+		// UsesXQi: Mods.VerminLordMod.Items.DiQiaoWoNiu.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.DiQiaoWoNiu.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.DiQiaoWoNiu.GuLevel
 	}
 
 	DongDiGu: {
@@ -11022,6 +11083,9 @@ Items: {
 	FangBeiXianGu: {
 		// DisplayName: Fang Bei Xian Gu
 		// Tooltip: ""
+		// UsesXQi: Mods.VerminLordMod.Items.FangBeiXianGu.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.FangBeiXianGu.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.FangBeiXianGu.GuLevel
 	}
 
 	FangWeiGu: {
@@ -11032,6 +11096,9 @@ Items: {
 	FangYuGu: {
 		// DisplayName: Fang Yu Gu
 		// Tooltip: ""
+		// UsesXQi: Mods.VerminLordMod.Items.FangYuGu.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.FangYuGu.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.FangYuGu.GuLevel
 	}
 
 	FaQingGu: {
@@ -11167,6 +11234,9 @@ Items: {
 	HuoXiNiXianGu: {
 		// DisplayName: Huo Xi Ni Xian Gu
 		// Tooltip: ""
+		// UsesXQi: Mods.VerminLordMod.Items.HuoXiNiXianGu.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.HuoXiNiXianGu.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.HuoXiNiXianGu.GuLevel
 	}
 
 	JiaGu: {
@@ -11187,6 +11257,9 @@ Items: {
 	JianDunXianGu: {
 		// DisplayName: Jian Dun Xian Gu
 		// Tooltip: ""
+		// UsesXQi: Mods.VerminLordMod.Items.JianDunXianGu.UsesXQi
+		// ControlRate: Mods.VerminLordMod.Items.JianDunXianGu.ControlRate
+		// GuLevel: Mods.VerminLordMod.Items.JianDunXianGu.GuLevel
 	}
 
 	JiangRuGuGu: {
@@ -11891,6 +11964,16 @@ Items: {
 
 	ZuoMengGu: {
 		// DisplayName: Zuo Meng Gu
+		// Tooltip: ""
+	}
+
+	CorpseBag: {
+		// DisplayName: Corpse Bag
+		// Tooltip: ""
+	}
+
+	MoonTestBag: {
+		// DisplayName: Moon Test Bag
 		// Tooltip: ""
 	}
 }

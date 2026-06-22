@@ -70,31 +70,14 @@ namespace VerminLordMod.Common.Systems
                 return;
             }
 
-            var belief = guMaster.GetBelief(player.name);
-            if (belief == null)
-            {
-                button = BUTTON_ASK;
-                button2 = BUTTON_TRADE;
-                return;
-            }
-
-            // 第一层：公开交互（始终可见）
+            // 基础按钮：询问 / 交易
+            // "询问" → HandleHonestReveal（诚实展示修为，提升信念）
+            // "交易" → 打开 NPC 商店
             button = BUTTON_ASK;
             button2 = BUTTON_TRADE;
 
-            // 第二层：暗面操作（置信度 > 0.3 时解锁）
-            // D-21: 实现第二层暗面交易
-            if (belief.ConfidenceLevel > 0.3f)
-            {
-                button2 = BUTTON_DARK_DEAL;
-            }
-
-            // 第三层：杀招准备（置信度 > 0.7 + 私下相处时解锁）
-            // D-21: 实现第三层杀招准备
-            if (belief.ConfidenceLevel > 0.7f && !HasWitnesses(npc, 400f))
-            {
-                button = BUTTON_KILL_PREP;
-            }
+            // 高级交互通过对话树系统实现（由 HandleDarkDeal / HandleKillPrep 触发）
+            // 预留：当对话树完全集成后，可通过 HasTree 检查自动切换
         }
 
         // ============================================================

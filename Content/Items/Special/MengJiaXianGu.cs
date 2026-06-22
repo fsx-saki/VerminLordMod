@@ -12,11 +12,11 @@ using Terraria.GameContent;
 namespace VerminLordMod.Content.Items.Special
 {
     [ImplStatus(ImplStatus.Implemented, "五转暗道防御仙蛊", "五转", "暗")]
-    class MengJiaXianGu : GuAccessoryItem
+    class MengJiaXianGu : GuBaseItem
     {
         protected override int qiCost => 36;
         protected override int _guLevel => 5;
-        public static LocalizedText UsesXQiText { get; private set; }
+        public new static LocalizedText UsesXQiText { get; private set; }
         public static LocalizedText ControlRate { get; private set; }
         public static LocalizedText GuLevel { get; private set; }
         public override void SetStaticDefaults()
@@ -48,7 +48,7 @@ namespace VerminLordMod.Content.Items.Special
             Item.defense = 22;
             Item.useStyle = ItemUseStyleID.Guitar;
         }
-        public override void UpdateAccessory(Player player, bool hideVisual)
+        public override void OnActiveTick(Player player)
         {
             if (Main.netMode == NetmodeID.Server)
                 return;

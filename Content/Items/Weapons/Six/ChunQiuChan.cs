@@ -22,7 +22,7 @@ namespace VerminLordMod.Content.Items.Weapons.Six
 	/// <para>能量：春秋蝉拥有时光能量（0~100），缓慢恢复（约5分钟回满）</para>
 	/// <para>回溯时消耗全部能量，恢复对应百分比的生命值和真元</para>
 	/// </summary>
-	public class ChunQiuChan : GuWeaponItem
+		public class ChunQiuChan : GuWeaponItem
 	{
 		// ===== 蛊虫基础属性 =====
 		protected override int qiCost => 50;

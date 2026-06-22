@@ -14,11 +14,11 @@ using VerminLordMod.Content.Items.Accessories;
 
 namespace VerminLordMod.Content.Items.Accessories.Two
 {
-	class CopperSkinS : GuAccessoryItem
+	class CopperSkinS : GuBaseItem
 	{
 		protected override int _guLevel => 2;
 		protected override int qiCost => 20;
-		public static LocalizedText UsesXQiText { get; private set; }
+		public new static LocalizedText UsesXQiText { get; private set; }
 		public static LocalizedText ControlRate { get; private set; }
 		public static LocalizedText GuLevel { get; private set; }
 		public override void SetStaticDefaults() {
@@ -46,7 +46,7 @@ namespace VerminLordMod.Content.Items.Accessories.Two
 			Item.defense = 32;
 			Item.useStyle = ItemUseStyleID.Guitar;
 		}
-		public override void UpdateAccessory(Player player, bool hideVisual) {
+		public override void OnActiveTick(Player player) {
 			if(Main.netMode==NetmodeID.Server)return;
 			var qiRealm = player.GetModPlayer<QiRealmPlayer>();
 			var qiResource = player.GetModPlayer<QiResourcePlayer>();

@@ -91,6 +91,7 @@ namespace VerminLordMod.Content.Items
         public override bool? UseItem(Player player)
         {
             var qiPlayer = player.GetModPlayer<QiResourcePlayer>();
+            var housePlayer = player.GetModPlayer<GuHousePlayer>();
 
             // 检查真元是否足够激活
             if (qiPlayer.QiCurrent < ActivationQiCost)
@@ -99,11 +100,9 @@ namespace VerminLordMod.Content.Items
                 return false;
             }
 
-            // 消耗真元激活
+            // 消耗真元并激活（进入持续运转模式）
             qiPlayer.ConsumeQi(ActivationQiCost);
-
-            // 触发激活效果
-            OnActivate(player);
+            housePlayer.TryActivate(Item);
 
             return true;
         }

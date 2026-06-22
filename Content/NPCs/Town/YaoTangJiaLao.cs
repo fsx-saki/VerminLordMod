@@ -100,7 +100,7 @@ namespace VerminLordMod.Content.NPCs.Town
 
             b.StartNode("bye",
                 "药堂家老点头：\"保重身体。\"")
-                .AddOption("告退", "bye", DialogueOptionType.Exit);
+                .EndsDialogue();
 
             return b.Build();
         }

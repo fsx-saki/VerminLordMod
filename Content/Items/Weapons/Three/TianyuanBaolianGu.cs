@@ -26,8 +26,8 @@ namespace VerminLordMod.Content.Items.Weapons.Three
 		protected override int _useTime => 50;
 		protected override int qiCost => 40;
 		public new static LocalizedText UsesXQiText { get; private set; }
-		public new static LocalizedText ControlRate { get; private set; }
-		public new static LocalizedText GuLevel { get; private set; }
+		public static LocalizedText ControlRate { get; private set; }
+		public static LocalizedText GuLevel { get; private set; }
 		public static LocalizedText yuanRateText { get; private set; }
 		public override void SetStaticDefaults() {
 			UsesXQiText = this.GetLocalization("UsesXQi");

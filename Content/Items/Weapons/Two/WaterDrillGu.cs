@@ -30,8 +30,8 @@ namespace VerminLordMod.Content.Items.Weapons.Two
 			GuLevel = this.GetLocalization("GuLevel");
 		}
 		public new static LocalizedText UsesXQiText { get; private set; }
-		public new static LocalizedText ControlRate { get; private set; }
-		public new static LocalizedText GuLevel { get; private set; }
+		public static LocalizedText ControlRate { get; private set; }
+		public static LocalizedText GuLevel { get; private set; }
 		public override void ModifyTooltips(List<TooltipLine> tooltips) {
 			
 			tooltips.Insert(2, new TooltipLine(Mod, "QiCost", UsesXQiText.Format(qiCost)));

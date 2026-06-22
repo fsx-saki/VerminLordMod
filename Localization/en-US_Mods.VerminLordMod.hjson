@@ -616,6 +616,12 @@ Projectiles: {
 	ZhaoZaiGuProj.DisplayName: Zhao Zai Gu Proj
 	ZhengYiProj.DisplayName: Zheng Yi Proj
 	ZhiZunXianTaiGuProj.DisplayName: Zhi Zun Xian Tai Gu Proj
+	MoonBladeProj.DisplayName: Moon Blade Proj
+	MoonBurstProj.DisplayName: Moon Burst Proj
+	MoonChaseProj.DisplayName: Moon Chase Proj
+	MoonCutProj.DisplayName: Moon Cut Proj
+	MoonNovaProj.DisplayName: Moon Nova Proj
+	MoonTideProj.DisplayName: Moon Tide Proj
 }
 
 Prefixes: {
@@ -2061,6 +2067,7 @@ Items: {
 		DisplayName: Gu Accessory Item
 		ControlRate: Mods.VerminLordMod.Items.GuAccessoryItem.ControlRate
 		UsesXQi: Mods.VerminLordMod.Items.GuAccessoryItem.UsesXQi
+		GuLevel: Mods.VerminLordMod.Items.GuAccessoryItem.GuLevel
 	}
 
 	CopperSkin: {
@@ -9806,6 +9813,9 @@ Items: {
 	安土重山堡: {
 		DisplayName: 安土重山堡
 		Tooltip: ""
+		UsesXQi: Mods.VerminLordMod.Items.安土重山堡.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.安土重山堡.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.安土重山堡.GuLevel
 	}
 
 	定真树: {
@@ -9946,6 +9956,9 @@ Items: {
 	苍蓝龙鲸: {
 		DisplayName: 苍蓝龙鲸
 		Tooltip: ""
+		UsesXQi: Mods.VerminLordMod.Items.苍蓝龙鲸.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.苍蓝龙鲸.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.苍蓝龙鲸.GuLevel
 	}
 
 	茅草屋: {
@@ -10960,6 +10973,9 @@ Items: {
 	DiQiaoWoNiu: {
 		DisplayName: Di Qiao Wo Niu
 		Tooltip: ""
+		UsesXQi: Mods.VerminLordMod.Items.DiQiaoWoNiu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.DiQiaoWoNiu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.DiQiaoWoNiu.GuLevel
 	}
 
 	DongDiGu: {
@@ -10985,6 +11001,9 @@ Items: {
 	FangBeiXianGu: {
 		DisplayName: Fang Bei Xian Gu
 		Tooltip: ""
+		UsesXQi: Mods.VerminLordMod.Items.FangBeiXianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.FangBeiXianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.FangBeiXianGu.GuLevel
 	}
 
 	FangWeiGu: {
@@ -10995,6 +11014,9 @@ Items: {
 	FangYuGu: {
 		DisplayName: Fang Yu Gu
 		Tooltip: ""
+		UsesXQi: Mods.VerminLordMod.Items.FangYuGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.FangYuGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.FangYuGu.GuLevel
 	}
 
 	FaQingGu: {
@@ -11130,6 +11152,9 @@ Items: {
 	HuoXiNiXianGu: {
 		DisplayName: Huo Xi Ni Xian Gu
 		Tooltip: ""
+		UsesXQi: Mods.VerminLordMod.Items.HuoXiNiXianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.HuoXiNiXianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.HuoXiNiXianGu.GuLevel
 	}
 
 	JiaGu: {
@@ -11150,6 +11175,9 @@ Items: {
 	JianDunXianGu: {
 		DisplayName: Jian Dun Xian Gu
 		Tooltip: ""
+		UsesXQi: Mods.VerminLordMod.Items.JianDunXianGu.UsesXQi
+		ControlRate: Mods.VerminLordMod.Items.JianDunXianGu.ControlRate
+		GuLevel: Mods.VerminLordMod.Items.JianDunXianGu.GuLevel
 	}
 
 	JiangRuGuGu: {
@@ -11854,6 +11882,16 @@ Items: {
 
 	ZuoMengGu: {
 		DisplayName: Zuo Meng Gu
+		Tooltip: ""
+	}
+
+	CorpseBag: {
+		DisplayName: Corpse Bag
+		Tooltip: ""
+	}
+
+	MoonTestBag: {
+		DisplayName: Moon Test Bag
 		Tooltip: ""
 	}
 }

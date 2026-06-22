@@ -190,19 +190,16 @@ namespace VerminLordMod.Common.UI.KongQiaoUI
             toggleBtn.OnLeftClick += (evt, listener) => _onToggleActive?.Invoke(capturedIndex);
             Append(toggleBtn);
 
-            // 取出按钮
-            if (!slot.IsMainGu)
-            {
-                var extractBtn = new UITextPanel<string>("取出", 0.65f);
-                extractBtn.Width.Set(46f, 0f);
-                extractBtn.Height.Set(24f, 0f);
-                extractBtn.Left.Set(372f, 0f);
-                extractBtn.Top.Set(5f, 0f);
-                extractBtn.BackgroundColor = UIStyles.BtnSecondary;
-                extractBtn.BorderColor = UIStyles.BorderLight;
-                extractBtn.OnLeftClick += (evt, listener) => _onExtract?.Invoke(capturedIndex);
-                Append(extractBtn);
-            }
+            // 取出按钮（本命蛊取出后，下一个蛊虫自动晋升）
+            var extractBtn = new UITextPanel<string>("取出", 0.65f);
+            extractBtn.Width.Set(46f, 0f);
+            extractBtn.Height.Set(24f, 0f);
+            extractBtn.Left.Set(372f, 0f);
+            extractBtn.Top.Set(5f, 0f);
+            extractBtn.BackgroundColor = UIStyles.BtnSecondary;
+            extractBtn.BorderColor = UIStyles.BorderLight;
+            extractBtn.OnLeftClick += (evt, listener) => _onExtract?.Invoke(capturedIndex);
+            Append(extractBtn);
         }
     }
 }

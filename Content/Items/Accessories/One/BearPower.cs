@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿﻿﻿﻿﻿﻿using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
@@ -9,9 +9,9 @@ using Terraria.GameContent;
 
 namespace VerminLordMod.Content.Items.Accessories.One
 {
-	class BearPower : GuAccessoryItem
+	class BearPower : GuBaseItem
 	{
-		public static LocalizedText UsesXQiText { get; private set; }
+		public new static LocalizedText UsesXQiText { get; private set; }
 		public static LocalizedText ControlRate { get; private set; }
 		public static LocalizedText GuLevel { get; private set; }
 		public override void SetStaticDefaults() {
@@ -40,7 +40,7 @@ namespace VerminLordMod.Content.Items.Accessories.One
 			Item.useStyle = ItemUseStyleID.Guitar;
 
 		}
-		public override void UpdateAccessory(Player player, bool hideVisual) {
+		public override void OnActiveTick(Player player) {
 			player.GetDamage(DamageClass.Melee) += 1f; // 玩家全伤害增加10%
 			player.GetAttackSpeed(DamageClass.Melee) -= 0.5f; // 玩家近战攻速减少50%
 			var qiResource = player.GetModPlayer<QiResourcePlayer>();

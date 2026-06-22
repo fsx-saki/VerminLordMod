@@ -351,7 +351,12 @@ namespace VerminLordMod.Common.Systems
             {
                 if (slot.IsActive)
                 {
-                    var path = GetDaoPathFromTag(slot.DaoHenTags);
+                    // DaoHenTags 字段已从 KongQiaoSlot 删除（死代码清理）。
+                    // 改为从 GuItem 的 IGu 接口读取道痕标签。
+                    ulong daoHenTags = 0;
+                    if (slot.GuItem.ModItem is IGu gu)
+                        daoHenTags = gu.DaoHenTags;
+                    var path = GetDaoPathFromTag(daoHenTags);
                     if (path != DaoPath.None)
                         activePaths.Add(path);
                 }
