@@ -18,6 +18,7 @@ using System;
 using Terraria;
 using InnoVault;
 using InnoVault.PRT;
+using Terraria.ModLoader;
 
 namespace VerminLordMod.Common.PRTTypes
 {
@@ -32,7 +33,7 @@ namespace VerminLordMod.Common.PRTTypes
     public class PRT_LiquidTrail : BasePRT
     {
         /// <summary>纹理路径</summary>
-        public override string Texture => "InnoVault/Assets/placeholder2";
+        public override string Texture => "VerminLordMod/Assets/Textures/Glows/CircleGlow";
 
         /// <summary>起始颜色（亮黄）</summary>
         private Color _startColor;
@@ -86,7 +87,7 @@ namespace VerminLordMod.Common.PRTTypes
         // ══════════════════════════════════════════════════════
         public override bool PreDraw(SpriteBatch sb)
         {
-            var glow = VaultAsset.Light?.Value;
+            var glow = ModContent.Request<Texture2D>(Texture).Value;
             if (glow == null) return false;
 
             // ── 颜色插值 ──

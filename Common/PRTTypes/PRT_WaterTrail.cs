@@ -25,6 +25,7 @@ using System;
 using Terraria;
 using InnoVault;
 using InnoVault.PRT;
+using Terraria.ModLoader;
 
 namespace VerminLordMod.Common.PRTTypes
 {
@@ -35,7 +36,7 @@ namespace VerminLordMod.Common.PRTTypes
     public class PRT_WaterTrail : BasePRT
     {
         /// <summary>纹理路径（使用 InnoVault 内置圆形渐变图）</summary>
-        public override string Texture => "InnoVault/Assets/placeholder2";
+        public override string Texture => "VerminLordMod/Assets/Textures/Glows/CircleGlow";
 
         /// <summary>
         /// 拉伸系数。
@@ -93,7 +94,7 @@ namespace VerminLordMod.Common.PRTTypes
         public override bool PreDraw(SpriteBatch sb)
         {
             // 获取发光纹理
-            var glow = VaultAsset.Light?.Value;
+            var glow = ModContent.Request<Texture2D>(Texture).Value;
             if (glow == null) return false;
 
             // 旋转角度：沿速度方向

@@ -4,6 +4,10 @@ using Terraria.ModLoader;
 
 namespace VerminLordMod.Common.QuestSystem
 {
+    /// <summary>
+    /// QuestLog 已弃用，L 键不再打开任务界面。
+    /// 保留 Keybind 注册以防其他系统引用，但不做任何操作。
+    /// </summary>
     public class QuestKeybindSystem : ModSystem
     {
         public static ModKeybind QuestLogKey { get; private set; }
@@ -20,12 +24,7 @@ namespace VerminLordMod.Common.QuestSystem
 
         public override void PostUpdateInput()
         {
-            if (QuestLogKey?.JustPressed == true && Main.netMode != NetmodeID.Server)
-            {
-                var log = InnoVault.UIHandles.UIHandleLoader.GetUIHandleOfType<QuestLog>();
-                log.visible = !log.visible;
-                Terraria.Audio.SoundEngine.PlaySound(log.visible ? Terraria.ID.SoundID.MenuOpen : Terraria.ID.SoundID.MenuClose);
-            }
+            // QuestLog 已移除，L 键无操作
         }
     }
 }

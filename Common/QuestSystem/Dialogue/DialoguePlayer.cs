@@ -12,7 +12,7 @@ namespace VerminLordMod.Common.QuestSystem.Dialogue
         public Stack<string> History = new();
         public Item AnalysisSlot = new Item();
         public bool DialogueCompleted;
-        public List<int> VisibleTabs = [1]; // 默认仅系统(1)
+        public List<int> VisibleTabs = [0, 1]; // 默认主页(0)和系统(1)
 
         private DialogueTreeData Tree => DialogueLoader.LoadedTree;
 
@@ -73,9 +73,9 @@ namespace VerminLordMod.Common.QuestSystem.Dialogue
             if (tag.TryGet("Dlg_Unlocked", out List<string> unlocked))
                 UnlockedNodeIds = unlocked ?? [];
             if (tag.TryGet("Dlg_VisibleTabs", out List<int> tabs))
-                VisibleTabs = tabs ?? [1];
+                VisibleTabs = tabs ?? [0, 1];
             else
-                VisibleTabs = [1];
+                VisibleTabs = [0, 1];
         }
     }
 }

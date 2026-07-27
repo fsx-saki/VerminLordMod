@@ -16301,6 +16301,18 @@ QuestLogs: {
 			DisplayName: FirstQuest
 			QuestObjective.Description: 点击领取
 		}
+
+		LotusIntroQuest: {
+			DisplayName: LotusIntroQuest
+			Description: " "
+			DetailedDescription: " "
+		}
+
+		YuanHaiActivationQuest: {
+			DisplayName: YuanHaiActivationQuest
+			Description: " "
+			DetailedDescription: " "
+		}
 	}
 
 	DamageClasses.InsectDamageClass.DisplayName: Gu Damage

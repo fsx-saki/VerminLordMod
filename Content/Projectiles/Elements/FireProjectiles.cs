@@ -322,8 +322,12 @@ namespace VerminLordMod.Content.Projectiles.Elements
         {
             Behaviors.Add(new GravityBehavior { Acceleration = 0.15f, MaxFallSpeed = 10f, AutoRotate = true });
             Behaviors.Add(new BounceBehavior { MaxBounces = -1, BounceFactor = 0.1f });
+            Behaviors.Add(new DampingBehavior
+            {
+                DampingX = 0.95f,  // 水平衰减慢
+                DampingY = 1f,  // 垂直衰减快
+            });
         }
-
         // ══════════════════════════════════════════════════════
         // OnAI() — 每帧粒子效果
         // ══════════════════════════════════════════════════════

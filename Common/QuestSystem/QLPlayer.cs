@@ -6,6 +6,7 @@ using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 using VerminLordMod.Common.QuestSystem.Core;
 using VerminLordMod.Common.QuestSystem.QLNodes;
+using VerminLordMod.Common.QuestSystem.Storyline;
 
 namespace VerminLordMod.Common.QuestSystem
 {
@@ -59,9 +60,17 @@ namespace VerminLordMod.Common.QuestSystem
 
         public override void OnEnterWorld()
         {
-            var firstQuest = QuestNode.GetQuest<FirstQuest>();
-            if (firstQuest != null)
-                firstQuest.IsUnlocked = true;
+            // 新版主线系统：LotusIntroQuest 替代旧的 FirstQuest
+            var lotusQuest = QuestNode.GetQuest<LotusIntroQuest>();
+            if (lotusQuest != null)
+                lotusQuest.CheckUnlock();
+            else
+            {
+                // 兼容：新版未加载时走旧路径
+                var firstQuest = QuestNode.GetQuest<FirstQuest>();
+                if (firstQuest != null)
+                    firstQuest.IsUnlocked = true;
+            }
 
             foreach (var quest in QuestNode.AllQuests)
             {

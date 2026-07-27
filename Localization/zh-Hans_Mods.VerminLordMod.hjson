@@ -16395,6 +16395,18 @@ QuestLogs: {
 			DisplayName: 初入蛊界
 			QuestObjective.Description: 点击领取
 		}
+
+		LotusIntroQuest: {
+			// DisplayName: LotusIntroQuest
+			// Description: " "
+			// DetailedDescription: " "
+		}
+
+		YuanHaiActivationQuest: {
+			// DisplayName: YuanHaiActivationQuest
+			// Description: " "
+			// DetailedDescription: " "
+		}
 	}
 
 	DamageClasses.InsectDamageClass.DisplayName: 蛊术伤害

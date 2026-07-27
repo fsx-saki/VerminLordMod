@@ -239,12 +239,6 @@ namespace VerminLordMod.Common.QuestSystem
 
             if (hoverInMainPage) player.mouseInterface = true;
 
-            if (showDetailPanel && detailPanelAlpha > 0.5f && CurrentTab == QuestTab.Quests)
-            {
-                UpdateQuestDetail();
-                return;
-            }
-
             bool hoveredOther = false;
             var mainCloseRect = CurrentStyle.GetCloseButtonRect(panelRect);
             if (mainCloseRect.Contains(Main.MouseScreen.ToPoint()))
@@ -304,8 +298,7 @@ namespace VerminLordMod.Common.QuestSystem
             {
                 var tabs = dlgP.VisibleTabs;
                 if (!tabs.Contains((int)QuestTab.SystemChat)) tabs.Add((int)QuestTab.SystemChat);
-                if (!tabs.Contains((int)QuestTab.Quests) && QuestNode.AllQuests.Count > 0)
-                    tabs.Add((int)QuestTab.Quests);
+                // "任务"标签页已移除
                 if (!tabs.Contains((int)QuestTab.Character) && yhFlags != null && yhFlags.Activated)
                     tabs.Add((int)QuestTab.Character);
                 if (!tabs.Contains((int)QuestTab.Archive) && (dlgP.DialogueCompleted || dlgP.IsDialogueComplete))
@@ -368,8 +361,7 @@ namespace VerminLordMod.Common.QuestSystem
                 }
             }
 
-            if (CurrentTab == QuestTab.Quests && hoverInMainPage && !hoveredOther)
-                UpdateQuestMap();
+            // "任务"标签页已移除，无地图交互
         }
 
         private void UpdateQuestDetail()
@@ -511,8 +503,6 @@ namespace VerminLordMod.Common.QuestSystem
 
             if (CurrentTab == QuestTab.SystemChat)
                 DrawSystemChatPanel(spriteBatch, contentRect);
-            else if (CurrentTab == QuestTab.Quests)
-                DrawQuestMapPanel(spriteBatch, contentRect);
             else if (CurrentTab == QuestTab.Character)
                 DrawCharacterPanel(spriteBatch, contentRect);
             else if (CurrentTab == QuestTab.Archive)

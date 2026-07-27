@@ -2,10 +2,15 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using VerminLordMod.Common.QuestSystem.Core;
+using VerminLordMod.Common.QuestSystem.Storyline;
 using VerminLordMod.Content.Items.QuestItems;
 
 namespace VerminLordMod.Common.QuestSystem.QLNodes
 {
+    /// <summary>
+    /// 旧版初始引导任务 — 现在作为 LotusIntroQuest 的后续任务。
+    /// 当 LotusIntroQuest 完成后自动解锁。
+    /// </summary>
     public class FirstQuest : QuestNode
     {
         public override void SetStaticDefaults()
@@ -14,9 +19,13 @@ namespace VerminLordMod.Common.QuestSystem.QLNodes
             QuestType = QuestType.Main;
             Difficulty = QuestDifficulty.Easy;
 
+            // 前置：新版 LotusIntroQuest（莲的引导）
+            if (QuestNode.GetQuest<LotusIntroQuest>() != null)
+                AddParent<LotusIntroQuest>();
+
             Objectives.Add(new QuestObjective
             {
-                Description = this.GetLocalization("QuestObjective.Description", () => "点击领取"),
+                Description = this.GetLocalization("QuestObjective.Description", () => "在任务地图完成领取"),
                 RequiredProgress = 1
             });
 
