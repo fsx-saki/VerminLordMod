@@ -1,0 +1,18 @@
+YuanHaiBox: {
+}
+
+YuanHaiScrap: {
+}
+
+MoonlightGu: {
+}
+
+YuanShi: {
+	DisplayName: 元石
+	Tooltip: 蕴含灵气的通用能量介质
+}
+
+ElementTester: {
+	// DisplayName: Element Tester
+	// Tooltip: ""
+}

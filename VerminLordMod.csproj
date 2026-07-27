@@ -332,5 +332,8 @@
     <Reference Include="ParticleLibrary">
       <HintPath>ParticleLibrary.dll</HintPath>
     </Reference>
+    <Reference Include="InnoVault">
+      <HintPath>InnoVault.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>

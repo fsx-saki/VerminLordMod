@@ -1,5 +1,3 @@
-using VerminLordMod.Common.Players;
-using VerminLordMod.Content.NPCs;
 using System.IO;
 using Terraria;
 using Terraria.ID;

@@ -70,7 +70,7 @@ namespace VerminLordMod.Common.BulletBehaviors
         {
             BounceCount++;
 
-            if (BounceCount > MaxBounces)
+            if (BounceCount > MaxBounces&&MaxBounces!=-1)
             {
                 if (KillOnMaxBounces)
                 {

@@ -1,0 +1,17 @@
+YuanHaiBox: {
+	DisplayName: 一团金属制成的歪歪扭扭的盒子
+	Tooltip: 使用时激活元海（甲等资质）
+}
+YuanHaiScrap: {
+	DisplayName: 破金属片
+	Tooltip: 残破的金属片，勉强可作为武器使用
+}
+MoonlightGu: {
+	DisplayName: 月光蛊
+	Tooltip: 蕴含月华之力的基础蛊虫
+}
+DamageClasses: {
+	InsectDamageClass: {
+		DisplayName: 蛊术伤害
+	}
+}

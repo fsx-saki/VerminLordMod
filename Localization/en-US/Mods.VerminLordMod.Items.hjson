@@ -1,0 +1,18 @@
+YuanHaiBox: {
+}
+
+YuanHaiScrap: {
+}
+
+MoonlightGu: {
+}
+
+YuanShi: {
+	DisplayName: Yuan Stone
+	Tooltip: A universal energy medium infused with Qi
+}
+
+ElementTester: {
+	DisplayName: Element Tester
+	Tooltip: ""
+}
